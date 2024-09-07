@@ -22,4 +22,5 @@ PASSWORD=whmcs_password
 
 ![image](https://github.com/user-attachments/assets/992dea70-ada1-4723-bc51-890bcc1b886c)
 
-![image](https://github.com/user-attachments/assets/733beec1-2e1a-4d19-b904-bd4675fd6236)
+![image](https://github.com/user-attachments/assets/2ca621f2-2521-4607-8f9b-38343d38215d)
+
