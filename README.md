@@ -1,8 +1,9 @@
 # WHMCS-8.10.1-Docker
 WHMCS 8.10.1 Docker
-
-
-docker compose up -d --build
+1. apt install -y docker.io
+2. apt install docker-compose
+3. Go inide whmcs directory 
+docker-compose up -d --build
 
 http://IP:7081/install
 
