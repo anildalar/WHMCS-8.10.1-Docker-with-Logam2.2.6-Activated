@@ -12,3 +12,6 @@ Put Hostname = db2
 DATABASE=whmcs
 USER=whmcs_user
 PASSWORD=whmcs_password
+
+![image](https://github.com/user-attachments/assets/a568c5c2-9036-4e73-bdef-c6f013f296f2)
+
