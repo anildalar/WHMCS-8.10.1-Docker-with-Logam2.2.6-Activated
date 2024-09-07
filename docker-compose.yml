@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  web2:
+    build: .
+    container_name: whmcs_web2
+    volumes:
+      - ./whmcs:/var/www/html
+      - ./config/php.ini:/usr/local/etc/php/php.ini  # Mount custom php.ini
+    ports:
+      - "7081:80"
+    env_file:
+      - .env  # Load .env file for environment variables
+    networks:
+      - whmcs-network2
+    depends_on:
+      - db2
+
+  db2:
+    image: mysql:8.0
+    container_name: whmcs_db2
+    volumes:
+      - ./db_data:/var/lib/mysql
+    env_file:
+      - .env  # Load .env file for MySQL environment variables
+    networks:
+      - whmcs-network2
+
+  phpmyadmin2:
+    image: phpmyadmin/phpmyadmin
+    container_name: whmcs_phpmyadmin2
+    env_file:
+      - .env  # Load .env file for phpMyAdmin environment variables
+    ports:
+      - "7079:80"
+    depends_on:
+      - db2
+    networks:
+      - whmcs-network2
+
+volumes:
+  db_data:
+
+networks:
+  whmcs-network2:
+    driver: bridge

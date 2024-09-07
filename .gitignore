@@ -1,0 +1,5 @@
+# Ignore everything in the db_data directory
+db_data/*
+
+# But keep the .gitkeep file
+!db_data/.gitkeep
