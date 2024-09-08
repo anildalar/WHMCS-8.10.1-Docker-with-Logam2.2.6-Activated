@@ -2,7 +2,7 @@
 WHMCS 8.10.1 Docker
 1. apt install -y docker.io
 2. apt install docker-compose
-3. docker-compose up -d --build
+3. docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --build
 4. docker ps -a 
 
 
