@@ -2,6 +2,8 @@
 WHMCS 8.10.1 Docker
 1. apt install -y docker.io
 2. apt install docker-compose
+3. mkdir -p whmcs && cd whmcs
+4. git clone https://github.com/anildalar/WHMCS-8.10.1-Docker-with-Logam2.2.6-Activated.git -b master .
 3. docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --build
 4. docker ps -a 
 
