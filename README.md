@@ -10,11 +10,14 @@ WHMCS 8.10.1 Docker
 
 http://ServerIP:7081/install/install.php
 
-
-Put Hostname = db2
-DATABASE=whmcs
+<pre>
+Put 
+Hostname = db2
 USER=whmcs_user
 PASSWORD=whmcs_password
+DATABASE=whmcs
+</pre>
+
 
 ![image](https://github.com/user-attachments/assets/a568c5c2-9036-4e73-bdef-c6f013f296f2)
 
