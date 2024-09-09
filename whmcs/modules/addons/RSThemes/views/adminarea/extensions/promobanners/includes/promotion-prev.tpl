@@ -29,7 +29,7 @@
                 <a href="#" class="promo-slider-slide promo-slide-bg-image active" id="promo-slide-1">
                     <div class="promo-slider-body">
                         <div class="promo-slider-content">
-                            <h2 class="promo-slider-title">{$extension->getSlideContent()->slide_description|unescape:'html'}</h2>
+                            <h2 class="promo-slider-title" data-promo-slider-title {if $extension->getSlideConfig()->slide_options.config['color_title']}style="color: {$extension->getSlideConfig()->slide_options.config['color_title']}"{/if}>{$extension->getSlideContent()->slide_description|unescape:'html'}</h2>
                         </div>
                         <div class="promo-slider-more">{$extension->getSlideContent()->slide_text_btn}</div>
                     </div>
@@ -53,17 +53,17 @@
                 <a href="#" class="promo-slider-slide promo-slide-bg-image active" id="promo-slide-2">
                     <div class="promo-slider-body">
                         <div class="promo-slider-content">
-                            <h2 class="promo-slider-title">{$extension->getSlideContent()->slide_description|unescape:'html'}</h2>
+                            <h2 class="promo-slider-title" data-promo-slider-title {if $extension->getSlideConfig()->slide_options.config['color_title']}style="color: {$extension->getSlideConfig()->slide_options.config['color_title']}"{/if}>{$extension->getSlideContent()->slide_description|unescape:'html'}</h2>
                         </div>
                         <div class="promo-slider-more">{$extension->getSlideContent()->slide_text_btn}</div>
                     </div>
 
                     <span class="promo-slider-icons" id="promotionIconPrev">
                         {if $extension->getSlideConfig()->slide_icon_custom}
-                            <img class="promo-slider-custom-icon" src="{$whmcsURL}/templates/{$extension->template->license->templateName}/core/extensions/PromoBanners/uploads/{$extension->getSlideConfig()->slide_icon_custom}">
+                            <img class="promo-slider-custom-icon" src="{$whmcsURL}/templates/{$themeName}/core/extensions/PromoBanners/uploads/{$extension->getSlideConfig()->slide_icon_custom}">
                         {elseif $extension->getSlideContent()->id}
                             {if $extension->getSlideConfig()->slide_icon}
-                                {include file="../../../../../../../../templates/{$template->license->templateName}/assets/svg-illustrations/products/{$extension->getSlideConfig()->slide_icon}.tpl"}
+                                {include file="{$extension->assets_path()}/svg-illustrations/products/modern/{$extension->getSlideConfig()->slide_icon}.tpl"}
                             {/if}
                         {/if}
                     </span>

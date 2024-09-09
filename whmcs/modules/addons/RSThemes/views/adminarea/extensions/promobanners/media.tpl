@@ -112,12 +112,12 @@
             </div>
             <div class="row">
                 {foreach from=$extension->getDirContents() key=k item=defaultMedia}
-                    <div class="col-md-2 col-10p col--img">
+                    <div class="col-md-2 col-5p col--img">
                         <div data-icon="{$defaultMedia['filename']}" data-type="default"
                              class="widget widget--media-manager widget--inactive">
                             <div class="widget__media widget__media--lg">
-                                    {if file_exists("{$extension->assets_path()}/svg-illustrations/products/{$defaultMedia['filename']}.tpl")}
-                                        {include file="{$extension->assets_path()}/svg-illustrations/products/{$defaultMedia['filename']}.tpl"}
+                                    {if file_exists("{$extension->assets_path()}/svg-illustrations/products/modern/{$defaultMedia['filename']}.tpl")}
+                                        {include file="{$extension->assets_path()}/svg-illustrations/products/modern/{$defaultMedia['filename']}.tpl"}
                                     {/if}
                             </div>
                             <div class="widget__actions widget__actions--raised flex flex-items-xs-between">
@@ -130,7 +130,7 @@
 
             <div class="row">
                 {foreach from=$extension->getDirContents('custom') key=k item=defaultMedia}
-                    <div class="col-md-2 col-10p col--img" id="image{$k}">
+                    <div class="col-md-2 col-5p col--img" id="image{$k}">
                         <div data-src="{$defaultMedia['filename']}.{$defaultMedia['ext']}"
                              class="widget widget--media-manager widget--inactive">
                             <div class="widget__media widget__media--lg p-2x">

@@ -33,8 +33,8 @@
         }
 
         #rs-module .table .ui-sortable-helper,#rs-module .table .sortable-chosen {
-            box-shadow: 0 0 2px 0 rgba(244, 6, 36, 0.76) !important;
-            background: #ffffd7 !important;
+            box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5) !important;
+            background: #ffffff !important;
             opacity: .7;
         }
     </style>
@@ -158,15 +158,17 @@
             </div>
         </div>
     </div>
+    
+{/block}
+
+{block name="template-scripts"}
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sortable/0.8.0/js/sortable.min.js"></script>
     <script>
         {literal}
-        $(function() {
             $('.t-c__top.top.m-b-3x *[title]').tooltip('disable');
             $("#rs_drag_items").sortable({
                 update: function (event, ui){
-                    console.log('sample');
                     var order = $(this).sortable('serialize',{key:'string'});
                     // order var gives something like string=3&string=2&string=1
                     var ar = order.split('&');
@@ -185,7 +187,6 @@
                     })
                 },
             });
-        });
         {/literal}
     </script>
 {/block}

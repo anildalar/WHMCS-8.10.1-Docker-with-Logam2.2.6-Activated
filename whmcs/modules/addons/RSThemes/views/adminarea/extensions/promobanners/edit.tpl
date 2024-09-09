@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/>
         
         <link rel="stylesheet" href="{$extension->extensoin_path()}/css/slide.css">
-        <div class="block__body">
+        <div class="block__body block__body--pm">
             {*zwykły modal*}
             {include file="adminarea/extensions/promobanners/includes/mediaModal.tpl"}
             {*icon modal*}
@@ -160,6 +160,17 @@
                                                             <input class="switch__checkbox" type="checkbox"
                                                                 name="promotion[product-list]"
                                                                 {if {$extension->getSlideConfig()->slide_options.promotion['product-list'] || !$extension->getSlideConfig()->id} == '1'}checked{/if}
+                                                                value="1">
+                                                            <span class="switch__container"><span class="switch__handle"></span></span>
+                                                        </div>
+                                                    </label>
+
+                                                    <label class="justify-content-between">
+                                                        <span>Domain List</span>
+                                                        <div class="switch">
+                                                            <input class="switch__checkbox" type="checkbox"
+                                                                name="promotion[domain-list]"
+                                                                {if {$extension->getSlideConfig()->slide_options.promotion['domain-list'] || !$extension->getSlideConfig()->id} == '1'}checked{/if}
                                                                 value="1">
                                                             <span class="switch__container"><span class="switch__handle"></span></span>
                                                         </div>
@@ -331,6 +342,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.es5.min.js"></script>
+    <script src="{$extension->extensoin_path()}/js/media-search.js"></script>
+
 
      <script>
         {literal}
@@ -374,12 +387,12 @@
 
 
         // Simple example, see optional options for more configuration.
-        function initColorPickers(element) {
+        function initColorPickers(element, box) {
             var $element = $(element);
             var picker = Pickr.create({
                 el: element,
                 useAsButton: true,
-                container: '#pickerParent',
+                container: box,
                 theme: 'nano',
                 swatches: [
                     'rgba(244, 67, 54, 1)',
@@ -429,8 +442,11 @@
             });
         }
 
+        $('.color-picker-fonts').each(function () {
+            initColorPickers(this,'#pickerParentFonts');
+        });
         $('.color-picker').each(function () {
-            initColorPickers(this);
+            initColorPickers(this,'#pickerParent');
         });
 
         function updateContent(el, className) {
@@ -561,11 +577,15 @@
             const sliderBackground = {
                 start: '', stop: ''
             };
+            const sliderFonts = {
+                 title: '', desc: ''
+            };
             function cacheDOM() {
                 // general
                 refs.graphicTypes = $('[data-graphic-type]');
                 refs.settingsBox = $('[data-settings-box]');
                 refs.colorPicker = $('[data-color-picker]');
+                refs.colorPickerTitle = $('[data-color-picker-title]');
                 refs.promoSlider = $('.promo-slider');
                 refs.direction = $('#bannerTmpDirection');
 
@@ -574,6 +594,7 @@
                 sliderRefs.iconContainer = $('#rs-module #promotionIconPrev');
                 sliderRefs.bg = $('#rs-module [data-promo-slider="background"] #promo-slide-1-bg');
                 sliderRefs.gradientBg = $('[data-promo-slider-bg]');
+                sliderRefs.titleColor = $('[data-promo-slider-title]');
                 sliderRefs.bgImage = $("#rs-module #promo-slide-1-bg-image");
                 sliderRefs.icon = refs.promoSlider;
                 sliderRefs.graphic = refs.promoSlider;
@@ -589,6 +610,11 @@
                     const type = $(event.currentTarget).data('color-picker')
                     const color = $(event.currentTarget).val()
                     changeBackground(color, type)
+                });
+
+                refs.colorPickerTitle.on('change', (event) => {
+                    const color = $(event.currentTarget).val()
+                    changeColor(color)
                 });
 
                 refs.settingsBox.on('show.bs.collapse', (event) => {
@@ -618,12 +644,28 @@
                 })
             }
 
+           function changeColor(color){
+               sliderFonts.title = color;
+               sliderRefs.titleColor.css({
+                   "color": sliderFonts.title
+               })
+           }
+
             function changeGraphicType(event) {
                 enableSettings()
                 let value = event.target.value
                 if (!value) {
                     value = 'custom_icon'
                 }
+                if (value == 'custom_icon'){
+                    $('#backgroundSwitchLabel').attr('disabled', false);
+                }
+                else if(value == 'background'){
+                    $('#backgroundSwitch').prop('checked', true).trigger('change');
+                    $('#banner-style').collapse('show');
+                    $('#backgroundSwitchLabel').attr('disabled', true);
+                }
+                    
                 if(value !== 'pre_lagom_icon') {
                     $('#graphicTypeRadioContainer').show()
                 }else{
@@ -863,7 +905,7 @@
                 setStarterPromoSlider();
                 changeGraphicSettings();
             }
-
+      
             init()
         })();
         {/literal}

@@ -3,7 +3,7 @@
     <div class="graphic_type--tab {if $extension->getSlideConfig()->slide_options.config['graphic_type'] eq 'background'} is-active{/if}"
          data-graphic-tab="background">
         <h5>Graphic Settings</h5>
-        <div class="widget widget--accordion panel ">
+        <div class="widget widget--accordion panel of-visible">
             <div class="widget__body">
                 <div class="accordion" id="accordionGraphic">
                         <label class="widget__top top" data-toggle="lu-collapse" data-target="#banner-horizontal">
@@ -494,7 +494,7 @@
     <div class="graphic_type--tab {if $extension->getSlideConfig()->slide_options.config['graphic_type'] eq 'custom_icon'} is-active{/if}"
          data-graphic-tab="custom_icon">
         <h5>Graphic Settings</h5>
-        <div class="widget widget--accordion panel">
+        <div class="widget widget--accordion panel of-visible">
             <div class="widget__body">
                 <div class="accordion" id="customIcon">
                         <label class="widget__top top" data-toggle="lu-collapse" data-target="#collapseOneCustomIcon">
@@ -768,7 +768,7 @@
                                             <input class="form-control form-control--xs bannerConfigProp" type="text"
                                                    name="config[icon][index][margin-top]"
                                                    data-style-margin-top
-                                                   value="{if $extension->getSlideConfig()->slide_options.config['icon']['index']['top']}{$extension->getSlideConfig()->slide_options.config['icon']['index']['top']}{else}0{/if}">
+                                                   value="{if $extension->getSlideConfig()->slide_options.config['icon']['index']['margin-top']}{$extension->getSlideConfig()->slide_options.config['icon']['index']['margin-top']}{else}0{/if}">
                                         </div>
                                     </div>
 
@@ -778,7 +778,7 @@
                                             <input class="form-control form-control--xs bannerConfigProp" type="text"
                                                    name="config[icon][index][margin-right]"
                                                    data-style-margin-right
-                                                   value="{if $extension->getSlideConfig()->slide_options.config['icon']['index']['right']}{$extension->getSlideConfig()->slide_options.config['icon']['index']['right']}{else}0{/if}">
+                                                   value="{if $extension->getSlideConfig()->slide_options.config['icon']['index']['margin-right']}{$extension->getSlideConfig()->slide_options.config['icon']['index']['margin-right']}{else}0{/if}">
                                         </div>
                                     </div>
 
@@ -788,7 +788,7 @@
                                             <input class="form-control form-control--xs bannerConfigProp" type="text"
                                                    name="config[icon][index][margin-left]"
                                                    data-style-margin-left
-                                                   value="{if $extension->getSlideConfig()->slide_options.config['icon']['index']['left']}{$extension->getSlideConfig()->slide_options.config['icon']['index']['left']}{else}0{/if}">
+                                                   value="{if $extension->getSlideConfig()->slide_options.config['icon']['index']['margin-left']}{$extension->getSlideConfig()->slide_options.config['icon']['index']['margin-left']}{else}0{/if}">
                                         </div>
                                     </div>
 
@@ -798,7 +798,7 @@
                                             <input class="form-control form-control--xs bannerConfigProp" type="text"
                                                    name="config[icon][index][margin-bottom]"
                                                    data-style-margin-bottom
-                                                   value="{if $extension->getSlideConfig()->slide_options.config['icon']['index']['bottom']}{$extension->getSlideConfig()->slide_options.config['icon']['index']['bottom']}{else}0{/if}">
+                                                   value="{if $extension->getSlideConfig()->slide_options.config['icon']['index']['margin-bottom']}{$extension->getSlideConfig()->slide_options.config['icon']['index']['margin-bottom']}{else}0{/if}">
                                         </div>
                                     </div>
                                 </div>
@@ -934,14 +934,15 @@
                                 src="{$whmcsURL}/templates/{$extension->template->license->templateName}/core/extensions/PromoBanners/uploads/{$extension->getSlideConfig()->slide_icon_custom}"
                                 alt="">
                         {else}
-                            {include file="{$extension->assets_path()}/svg-illustrations/products/{$extension->getSlideConfig()->slide_icon}.tpl"}
-                            
+                            {if file_exists("{$extension->assets_path()}/svg-illustrations/products/modern/{$extension->getSlideConfig()->slide_icon}.tpl")}
+                                {include file="{$extension->assets_path()}/svg-illustrations/products/modern/{$extension->getSlideConfig()->slide_icon}.tpl"}
+                            {/if}
                         {/if}
                     </div>
                 </div>
                 <div class="widget__actions justify-content-between">
                     <span style="max-width: 45%;" class="truncate">{if strlen($extension->getSlideConfig()->slide_icon_custom) > 1}{$extension->getSlideConfig()->slide_icon_custom}{else}{$extension->getSlideConfig()->slide_icon}.tpl{/if}</span>
-                    <span class="btn btn--icon btn--link btn--xs m-r-1x" data-toggle="lu-modal" data-target="#mediaGallery" data-menu-item-icon-button>
+                    <span class="btn btn--icon btn--link btn--xs m-r-1x" data-toggle="lu-modal" data-target="#addGraphicModal" data-menu-item-icon-button>
                         <i class="btn__icon lm lm-pen"data-toggle="lu-tooltip" data-title="Click to change"></i>
                     </span>
                 </div>
@@ -969,10 +970,13 @@
 <div class="panel panel--collapse">
     <div class="collapse-toggle">
         <h6 class="top__title">Banner Style</h6>
-        <label>
+        <label id="backgroundSwitchLabel" {if $extension->getSlideConfig()->slide_options.config['graphic_type'] eq 'background'}disabled{/if}>
             <div class="switch" data-toggle="lu-collapse" data-target="#banner-style" aria-expanded="true">
-                <input type="hidden" name="config[banner_style_active]" value="0">
-                <input class="switch__checkbox" type="checkbox" name="config[banner_style_active]" {if $extension->getSlideConfig()->slide_options.config['banner_style_active'] == '1'}checked{/if} value="1">
+                <input type="hidden" name="config[banner_style_active]" 
+                value="0" >
+                <input id="backgroundSwitch" class="switch__checkbox" type="checkbox" name="config[banner_style_active]" 
+                {if $extension->getSlideConfig()->slide_options.config['banner_style_active'] == '1'}checked{/if} 
+                value="1">
                 <span class="switch__container"><span class="switch__handle"></span></span>
             </div>
         </label>
@@ -995,18 +999,18 @@
                                 value="{if $extension->getSlideConfig()->slide_options.config['color2']}{$extension->getSlideConfig()->slide_options.config['color2']}{else}#0940b3{/if}">
                     </div>
                 </div>
-                <div class="row row--xs m-t-2x">
+                <div class="row row--xs m-t-2x" id="pickerParentFonts">
                     <div class="col-md-6">
                         <label class="form-label">Title Color</label>
-                        <input
-                                class="form-control form-control--xs"
+                        <input  data-color-picker-title autocomplete="off"
+                                class="form-control form-control--xs color-picker-fonts"
                                 type="text" name="config[color_title]"
                                 value="{if $extension->getSlideConfig()->slide_options.config['color_title']}{$extension->getSlideConfig()->slide_options.config['color_title']}{else}{/if}">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Desc Color</label>
-                        <input
-                                class="form-control form-control--xs"
+                        <input  data-color-picker-desc autocomplete="off"
+                                class="form-control form-control--xs color-picker-fonts"
                                 type="text" name="config[color_desc]"
                                 value="{if $extension->getSlideConfig()->slide_options.config['color_desc']}{$extension->getSlideConfig()->slide_options.config['color_desc']}{else}{/if}">
                     </div>

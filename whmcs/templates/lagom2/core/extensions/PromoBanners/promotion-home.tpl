@@ -31,14 +31,14 @@
 
         {/if}
     </style>
-    <div data-promo-slider>
+    <div data-promo-slider {if $autoslideBannerDisable} class="autoPromoDisable"{/if}>
         <div class="site-banner site-slider site-slider-custom banner banner-sides">
             <div class="container">
                 <div class="slider-wrapper">
                     <div class="slider-slides" data-promo-slider-wrapper>
                         {foreach from=$homepage->getPromotionBanner() item=slide key=key_slide}
                             {if ($slide->slide_begin_time <= $smarty.now && $slide->slide_end_time >= $smarty.now) || ($slide->slide_begin_time eq 0 && $slide->slide_end_time eq 0) || ($slide->slide_begin_time <= $smarty.now && !$slide->slide_end_time)}
-                                <div class="slider-slide {if !$slide->slide_options['config']['banner_style_active']}slide-{$siteBannerStyle}{/if} {if $slide->slide_options['config']['graphic_type'] eq "background"}slider-slide-custom-bg{elseif $slide->slide_options['config']['graphic_type'] eq "custom_icon"}slider-slide-custom-icon{else}slider-slide-default{/if}{if ($slide->slide_options['config']['color'] != "transparent") && ($slide->slide_options['config']['color2'] != "transparent") || ($slide->slide_options['config']['graphic_type'] == "background")} slider-slide-transparent{/if}{if ($slide->slide_options['config']['color'] == "transparent") && ($slide->slide_options['config']['color2'] == "transparent") && ($slide->slide_options['config']['graphic_type'] == "background")} dark-font{/if}"
+                                <div class="slider-slide {if !$slide->slide_options['config']['banner_style_active']}slide-{$siteBannerStyle}{/if}{if $slide->slide_options['config']['graphic_type'] eq "custom_icon" && strlen($slide->slide_icon_custom) < 1} graphic-custom-empty{/if} {if $slide->slide_options['config']['graphic_type'] eq "background"}slider-slide-custom-bg{elseif $slide->slide_options['config']['graphic_type'] eq "custom_icon"}slider-slide-custom-icon{else}slider-slide-default{/if}{if ($slide->slide_options['config']['color'] != "transparent") && ($slide->slide_options['config']['color2'] != "transparent") || ($slide->slide_options['config']['graphic_type'] == "background")} slider-slide-transparent{/if}{if ($slide->slide_options['config']['color'] == "transparent") && ($slide->slide_options['config']['color2'] == "transparent") && ($slide->slide_options['config']['graphic_type'] == "background")} dark-font{/if}"
                                      id="slider-slide-{$slide->id}" data-animation-type="{$slide->slide_options['config']['animation']}">
                                     
                                     <div class="banner-content" data-animation-content>
@@ -59,22 +59,28 @@
                                             {/if}
                                             {if strlen($slide->getField('slide_secondary_button_text' , $activeLocale.language)) > 0}
                                                 <a href="{$slide->slide_secondary_button_url}"
-                                                    class="btn btn-lg btn-outline btn-outline-light">{$slide->getField('slide_secondary_button_text' , $activeLocale.language)}</a>
+                                                    class="btn btn-lg btn-outline btn-outline-light {if $slide->slide_options['config']['banner_style_active']}btn-light{/if}">{$slide->getField('slide_secondary_button_text' , $activeLocale.language)}</a>
                                             {/if}
                                         </div>
                                     </div>
                                     {if $slide->slide_options['config']['graphic_type'] neq "background"}
                                         <div class="banner-background">
-                                            <div class="banner-graphics">
+                                            <div class="banner-graphics {if $slide->slide_options['config']['graphic_type'] eq "custom_icon"} graphics-custom{/if}"">
                                                 <div>
-                                                    <div class="banner-graphic" style="right: -80px" data-animation-icons>
-                                                            {if strlen($slide->slide_icon_custom) < 1}
-                                                            {if file_exists("templates/$template/assets/svg-illustrations/products/{$slide->slide_icon}.tpl")}
-                                                                {include file="$template/assets/svg-illustrations/products/{$slide->slide_icon}.tpl"}
+                                                    <div class="banner-graphic {if $slide->slide_options['config']['graphic_type'] eq "custom_icon"} graphic-custom{/if}" style="justify-content: center!important;" data-animation-icons>
+                                                        {if strlen($slide->slide_icon_custom) < 1}
+                                                            {if $RSThemes.styles.name == "modern"}
+                                                                {if file_exists("templates/$template/assets/svg-illustrations/products/modern/{$slide->slide_icon}.tpl")}
+                                                                    {include file="$template/assets/svg-illustrations/products/modern/{$slide->slide_icon}.tpl"}
+                                                                {/if}
+                                                            {else}
+                                                                {if file_exists("templates/$template/assets/svg-illustrations/products/{$slide->slide_icon}.tpl")}
+                                                                    {include file="$template/assets/svg-illustrations/products/{$slide->slide_icon}.tpl"}
+                                                                {/if}
                                                             {/if}
                                                         {else}
                                                             <img style="opacity:0;" class="banner-custom-icon"
-                                                                    src="{$systemurl}/templates/{$template}/core/extensions/PromoBanners/uploads/{$slide->slide_icon_custom}"
+                                                                    src="{$systemurl}templates/{$template}/core/extensions/PromoBanners/uploads/{$slide->slide_icon_custom}"
                                                                     alt="">
                                                         {/if}
                                                     </div>
@@ -93,7 +99,7 @@
             <div class="slider-background" data-promo-slider-background>
                 {foreach from=$homepage->getPromotionBanner() item=slide key=key_slide}
                     {if ($slide->slide_begin_time <= $smarty.now && $slide->slide_end_time >= $smarty.now) || ($slide->slide_begin_time eq 0 && $slide->slide_end_time eq 0) || ($slide->slide_begin_time <= $smarty.now && !$slide->slide_end_time)}
-                        <div {if $slide->slide_options['config']['banner_style_active']}id="slider-slide-{$slide->id}-bg"{/if} class="slide {if !$slide->slide_options['config']['banner_style_active']} slide-{$siteBannerStyle}-bg{/if}" {$slide->slide_options['config']['graphic_type']}>
+                        <div {if $slide->slide_options['config']['banner_style_active']}id="slider-slide-{$slide->id}-bg"{/if} class="slide {if !$slide->slide_options['config']['banner_style_active']} slide-{$siteBannerStyle}-bg{/if}" style="overflow: hidden" {$slide->slide_options['config']['graphic_type']}>
                             {if !$slide->slide_options['config']['banner_style_active'] || (!$slide->slide_options['config']['color'] && !$slide->slide_options['config']['color2'] && $slide->slide_options['config']['graphic_type'] neq "background")}
                                 <div class="container">
                                     <div class="banner-background">
@@ -107,7 +113,7 @@
                             {/if}
                             {if $slide->slide_icon_custom && $slide->slide_options['config']['graphic_type'] eq "background"}
                                 <img id="slider-slide-{$slide->id}-bg-image"
-                                    src="{$systemurl}/templates/{$template}/core/extensions/PromoBanners/uploads/{$slide->slide_icon_custom}">
+                                    src="{$systemurl}templates/{$template}/core/extensions/PromoBanners/uploads/{$slide->slide_icon_custom}">
                             {/if}
                         </div>
                     {/if}
@@ -129,7 +135,7 @@
                                                 {if strpos($slide->slide_options.config['paginationIcon'], '.') != false}
                                                     <div class="tile-container">
                                                         <img width="64" height="64" class="img-responsive"
-                                                             src="{$systemurl}/templates/{$template}/core/extensions/PromoBanners/uploads/{$slide->slide_options.config['paginationIcon']}"
+                                                             src="{$systemurl}templates/{$template}/core/extensions/PromoBanners/uploads/{$slide->slide_options.config['paginationIcon']}"
                                                              alt="">
                                                     </div>
                                                 {else}

@@ -90,7 +90,7 @@
     {$promotionStyles}
 </style>
 
-    <div id="Promotion" class="promo-slider {if $class}{$class}{/if}" data-promo-slider>
+    <div id="Promotion" class="promo-slider {if $class}{$class}{/if} {if $autoslideBannerDisable} autoPromoDisable{/if}" data-promo-slider>
     <div class="promo-slider-header">
         <ul class="promo-slider-nav promo-slider-nav-dots" data-promo-slider-pagination>
             {foreach from=$promoSliderExtension item=slide key=k name=slideLoop}
@@ -120,11 +120,15 @@
                             <div></div>
                             <div></div>
                             <div class="promo-slider-shape">
-                                {include file="$template/includes/common/svg-illustration.tpl" illustration="site/banner-shape"}
+                                {if $absTemplate}
+                                    {include file="$absTemplate/includes/common/svg-illustration.tpl" illustration="site/banner-shape" template=$absTemplate}
+                                {else}
+                                    {include file="$template/includes/common/svg-illustration.tpl" illustration="site/banner-shape"}
+                                {/if}
                             </div>
                         {/if}
                         {if $slide->slide_icon_custom && $slide->slide_options['config']['graphic_type'] eq "background"}
-                        <img id="promo-slide-{$slide->id}-bg-image" src="{$systemurl}/templates/{$template}/core/extensions/PromoBanners/uploads/{$slide->slide_icon_custom}">
+                        <img id="promo-slide-{$slide->id}-bg-image" src="{$systemurl}templates/{$template}/core/extensions/PromoBanners/uploads/{$slide->slide_icon_custom}">
                         {/if}
                     </div>
                     {/if}
@@ -147,12 +151,20 @@
                         {if $slide->slide_options['config']['graphic_type'] != "background"}
                         <div class="promo-slider-icons" id="promo-slide-{$slide->id}-icon-wrapper" data-animation-icons>
                             {if $slide->slide_icon_custom}
-                                <img class="promo-slider-custom-icon" id="promo-slide-{$slide->id}-icon" src="{$systemurl}/templates/{$template}/core/extensions/PromoBanners/uploads/{$slide->slide_icon_custom}" alt="">
+                                <img class="promo-slider-custom-icon" id="promo-slide-{$slide->id}-icon" src="{$systemurl}templates/{$template}/core/extensions/PromoBanners/uploads/{$slide->slide_icon_custom}" alt="">
                             {else}
-                                {if $absTemplate && file_exists("$absTemplate/assets/svg-illustrations/products/{$slide->slide_icon}.tpl")}
-                                    {include file="$absTemplate/assets/svg-illustrations/products/{$slide->slide_icon}.tpl"}
-                                {elseif file_exists("templates/$template/assets/svg-illustrations/products/{$slide->slide_icon}.tpl") }
-                                    {include file="$template/assets/svg-illustrations/products/{$slide->slide_icon}.tpl"}
+                                {if $RSThemes.styles.name == "modern"}
+                                    {if $absTemplate && file_exists("$absTemplate/assets/svg-illustrations/products/modern/{$slide->slide_icon}.tpl")}
+                                        {include file="$absTemplate/assets/svg-illustrations/products/modern/{$slide->slide_icon}.tpl"}
+                                    {elseif file_exists("templates/$template/assets/svg-illustrations/products/modern/{$slide->slide_icon}.tpl") }
+                                        {include file="$template/assets/svg-illustrations/products/modern/{$slide->slide_icon}.tpl"}
+                                    {/if}
+                                {else}
+                                    {if $absTemplate && file_exists("$absTemplate/assets/svg-illustrations/products/{$slide->slide_icon}.tpl")}
+                                        {include file="$absTemplate/assets/svg-illustrations/products/{$slide->slide_icon}.tpl"}
+                                    {elseif file_exists("templates/$template/assets/svg-illustrations/products/{$slide->slide_icon}.tpl") }
+                                        {include file="$template/assets/svg-illustrations/products/{$slide->slide_icon}.tpl"}
+                                    {/if}
                                 {/if}
                             {/if}
                         </div>

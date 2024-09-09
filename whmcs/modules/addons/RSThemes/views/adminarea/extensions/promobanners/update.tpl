@@ -10,7 +10,7 @@
 
 {block name="template-content"}
     <div class="block">
-        <div class="block__body max-w-sm">
+        <div class="block__body block__body--pm max-w-sm">
             <div class="section">
                 <h3 class="section__title">
                     Extension Update

@@ -16,11 +16,6 @@
                     <span class="nav__link-text">Settings</span>
                 </a>
             </li>
-            <li class="nav__item {if $smarty.get.exaction=='info'} is-active{/if}">
-                <a class="nav__link" href="{$helper->url('Template@extension',['templateName'=>$template->getMainName(),'extension'=>$extension->getLinkName(),'exaction'=>'info'])}">
-                    <span class="nav__link-text">Info</span>
-                </a>
-            </li>
         </ul>
     </div>
 </div>

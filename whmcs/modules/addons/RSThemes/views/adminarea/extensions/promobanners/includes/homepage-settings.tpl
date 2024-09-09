@@ -41,10 +41,9 @@
                     <div class="widget__body">
                         <div class="widget__content text-center">
                             {if $extension->getSlideConfig()->slide_pagination_icon}
-                                <img style="max-width: 64px;" id="paginationIcon"
-                                    class="img-fluid"
-                                    src="{$extension->extensoin_path()}/images/thumb-{$extension->getSlideConfig()->slide_pagination_icon}.svg"
-                                    alt="">
+                                {if file_exists("{$extension->assets_path()}/svg-icon/{$extension->getSlideConfig()->slide_pagination_icon}.tpl")}
+                                    {include file="{$extension->assets_path()}/svg-icon/{$extension->getSlideConfig()->slide_pagination_icon}.tpl"}
+                                {/if}
                             {else}
                                 <img id="paginationIcon" class="img-fluid"
                                     src="{$whmcsURL}/templates/{$extension->template->license->templateName}/core/extensions/PromoBanners/uploads/{$extension->getSlideConfig()->slide_options.config['paginationIcon']}" style="max-width: 64px;"

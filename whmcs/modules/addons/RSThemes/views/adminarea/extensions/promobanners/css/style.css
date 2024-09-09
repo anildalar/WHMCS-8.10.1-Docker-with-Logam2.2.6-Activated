@@ -18,7 +18,7 @@
     width: 85%;
 }
 
-#rs-module #mediaGallery .promo-slider-icon{
+#rs-module #addGraphicModal .promo-slider-icon{
     right: unset;
     bottom: unset;
     width: unset;
@@ -38,11 +38,25 @@
     opacity: 1;
     width: unset;
 }
+#rs-module .widget--image-advanced .promo-slider-icon g{
+    clip-path: unset;
+}
+#rs-module .promo-slider .promo-slider-icons .promo-slider-icon g{
+    clip-path: unset;
+}
 
 #rs-module .widget--image-advanced .widget__content{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#rs-module #pickerParent {
+    position: relative;
+}
+
+#rs-module #pickerParentFonts {
+    position: relative;
 }
 
 #rs-module .tiles {
@@ -218,7 +232,7 @@
     max-width: unset;
 }
 
-#rs-module #mediaGallery .top__title.m-b-0x {
+#rs-module #addGraphicModal .top__title.m-b-0x {
     font-size: 20px !important;
 }
 #rs-module .modal#mediaGalleryIcon .widget.widget--media-manager.widget--media-manager-custom{
@@ -337,6 +351,24 @@
 #rs-module .promo-slider-slide {
     max-height: unset;
 }
+
+/* TODO: For new svg-illustrations (temp) */
+
+:root{
+    --svg-illustration-color-1:                     #1062fe;
+    --svg-illustration-color-2:                     #009AFF;
+    --svg-illustration-color-3:                     #76c8fe;
+    --svg-illustration-color-4:                     #8fd2fe;
+    --svg-illustration-color-5:                     #a9dcff;
+    --svg-illustration-color-6:                     #c2e6ff;
+    --svg-illustration-color-7:                     #ffffff;
+}
+
+.svg-nordvpn > [clip-path]{
+    clip-path: none;
+}
+
+
 /* .svg-weebly .svg-cup-body {
     fill: #88d3ff
 }
