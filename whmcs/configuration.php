@@ -11,6 +11,6 @@ $db_tls_cert = '';
 $db_tls_cipher = '';
 $db_tls_key = '';
 $db_tls_verify_cert = '';
-$cc_encryption_hash = 'TMce0rGi2XEpRILgcD8DoIh15qlP3AUKhnszopz5jjS0JMoomyEc6iFS0AQC1dyc';
+$cc_encryption_hash = 'VPKxiqegMzYi3dKOKOyzfuh4Af8OB6q9b7M4b5huIurlxee3QLBmcnE3XVwSSH5e';
 $templates_compiledir = 'templates_c';
 $mysql_charset = 'utf8';

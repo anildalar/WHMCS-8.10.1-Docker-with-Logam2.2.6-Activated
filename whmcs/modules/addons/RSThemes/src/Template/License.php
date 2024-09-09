@@ -28,7 +28,7 @@ class License
     /** @var array $lastRemoteCheck */
     private $activationCache = [];
     /** @var array $licenseDetails */
-    private $licenseDetails = ["status" => "Active", "service_status" => "Active", "license_status" => "Active", "nextduedate" => "2099-10-01", "version" => "1.0.0", "fullversion" => "1.0.0", "lastRemoteChecked" => "2099-10-01", "lastRemoteCheckedFail" => "", "lastRemoteCheckedSuccess" => "2099-10-01", "regdate" => "2023-10-01", "first_payment_amount" => "$0", "recuring_amount" => "$0", "payment_method" => "ShayanXtreme", "warningShowDate" => "", "deactivationDate" => "2099-10-01"];
+    private $licenseDetails = ["status" => "Active", "service_status" => "Active", "license_status" => "Active", "nextduedate" => "2099-10-01", "version" => "1.0.0", "fullversion" => "1.0.0", "lastRemoteChecked" => "2099-10-01", "lastRemoteCheckedFail" => "", "lastRemoteCheckedSuccess" => "2099-10-01", "regdate" => "2023-10-01", "first_payment_amount" => "$0", "recuring_amount" => "$0", "payment_method" => "Babiato", "warningShowDate" => "", "deactivationDate" => "2099-10-01"];
     /** @var array $rawLicenseDetails */
     private $rawLicenseDetails = NULL;
     /** @var string $licenseEncoded */
@@ -279,15 +279,15 @@ class License
             $results["status"] = "Active";
             $results["service_status"] = "Active";
             $results["license_status"] = "Active";
-            $results["registeredname"] = "ShayanXtreme";
-            $results["email"] = "ShayanXtreme";
+            $results["registeredname"] = "Babiato";
+            $results["email"] = "Babiato";
             $results["serviceid"] = "130891";
             $results["productid"] = "19";
             $results["productname"] = "Single Domain";
             $results["version"] = $version;
             $results["fullversion"] = "Lagom " . $version;
             $results["regdate"] = date("Y-m-d");
-            $results["nextduedate"] = "2924-09-16";
+            $results["nextduedate"] = "2224-09-16";
             $results["billingcycle"] = "Annually";
             $results["first_payment_amount"] = "\$129.00";
             $results["recuring_amount"] = "\$129.00";
