@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-08 05:49:04
+/* Smarty version 3.1.48, created on 2024-09-10 07:27:35
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/settings/includes/product-description-settings.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dd3ad0950a61_29623406',
+  'unifunc' => 'content_66dff4e7752c95_51615989',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 1,
   ),
 ),false)) {
-function content_66dd3ad0950a61_29623406 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66dff4e7752c95_51615989 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel panel--collapse">
     <div class="collapse-toggle">
         <h6 class="top__title"> 

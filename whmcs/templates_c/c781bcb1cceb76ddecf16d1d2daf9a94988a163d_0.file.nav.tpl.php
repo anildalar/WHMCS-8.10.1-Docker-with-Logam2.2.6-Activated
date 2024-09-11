@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-07 11:45:16
+/* Smarty version 3.1.48, created on 2024-09-10 03:18:05
   from '/var/www/html/admin/templates/blend/nav.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dc3ccc867775_52279665',
+  'unifunc' => 'content_66dfba6d9ebf73_23174512',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c781bcb1cceb76ddecf16d1d2daf9a94988a163d' => 
     array (
       0 => '/var/www/html/admin/templates/blend/nav.tpl',
-      1 => 1713947858,
+      1 => 1725773959,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dc3ccc867775_52279665 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66dfba6d9ebf73_23174512 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <a href="index.php" class="logo" title="<?php echo $_smarty_tpl->tpl_vars['_ADMINLANG']->value['home']['title'];?>

@@ -1,3 +1,97 @@
+#LagomRedirection
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^/?$ ./custom_page_template.php?cmsid=143&%{QUERY_STRING} [L] #lagom-homepage-mark
+RewriteRule ^360-monitoring/?$ ./custom_page_template.php?cmsid=90&%{QUERY_STRING} [L] #custom-page-90
+RewriteRule ^email-services/archiving/?$ ./custom_page_template.php?cmsid=91&%{QUERY_STRING} [L] #custom-page-91
+RewriteRule ^email-services/incoming-filtering/?$ ./custom_page_template.php?cmsid=92&%{QUERY_STRING} [L] #custom-page-92
+RewriteRule ^email-services/outgoing-filtering/?$ ./custom_page_template.php?cmsid=93&%{QUERY_STRING} [L] #custom-page-93
+RewriteRule ^email-services/?$ ./custom_page_template.php?cmsid=94&%{QUERY_STRING} [L] #custom-page-94
+RewriteRule ^nord-vpn/?$ ./custom_page_template.php?cmsid=95&%{QUERY_STRING} [L] #custom-page-95
+RewriteRule ^professional-email/?$ ./custom_page_template.php?cmsid=96&%{QUERY_STRING} [L] #custom-page-96
+RewriteRule ^seo-tools/?$ ./custom_page_template.php?cmsid=97&%{QUERY_STRING} [L] #custom-page-97
+RewriteRule ^ssl-certificates/domain-validation/?$ ./custom_page_template.php?cmsid=98&%{QUERY_STRING} [L] #custom-page-98
+RewriteRule ^ssl-certificates/extended-validation/?$ ./custom_page_template.php?cmsid=99&%{QUERY_STRING} [L] #custom-page-99
+RewriteRule ^ssl-certificates/organization-validation/?$ ./custom_page_template.php?cmsid=100&%{QUERY_STRING} [L] #custom-page-100
+RewriteRule ^ssl-certificates/wildcard/?$ ./custom_page_template.php?cmsid=101&%{QUERY_STRING} [L] #custom-page-101
+RewriteRule ^ssl-certificates/?$ ./custom_page_template.php?cmsid=102&%{QUERY_STRING} [L] #custom-page-102
+RewriteRule ^site-builder/?$ ./custom_page_template.php?cmsid=103&%{QUERY_STRING} [L] #custom-page-103
+RewriteRule ^sitelock-vpn/?$ ./custom_page_template.php?cmsid=104&%{QUERY_STRING} [L] #custom-page-104
+RewriteRule ^website-backup/?$ ./custom_page_template.php?cmsid=105&%{QUERY_STRING} [L] #custom-page-105
+RewriteRule ^website-builder/?$ ./custom_page_template.php?cmsid=106&%{QUERY_STRING} [L] #custom-page-106
+RewriteRule ^website-security/?$ ./custom_page_template.php?cmsid=107&%{QUERY_STRING} [L] #custom-page-107
+RewriteRule ^xovinow/?$ ./custom_page_template.php?cmsid=108&%{QUERY_STRING} [L] #custom-page-108
+RewriteRule ^svg-background/?$ ./custom_page_template.php?cmsid=109&%{QUERY_STRING} [L] #custom-page-109
+RewriteRule ^svg-cms-illustrations/?$ ./custom_page_template.php?cmsid=110&%{QUERY_STRING} [L] #custom-page-110
+RewriteRule ^svg-icons/?$ ./custom_page_template.php?cmsid=111&%{QUERY_STRING} [L] #custom-page-111
+RewriteRule ^svg-mc-illustrations/?$ ./custom_page_template.php?cmsid=112&%{QUERY_STRING} [L] #custom-page-112
+RewriteRule ^about-us/?$ ./custom_page_template.php?cmsid=113&%{QUERY_STRING} [L] #custom-page-113
+RewriteRule ^blog/article-1/?$ ./custom_page_template.php?cmsid=114&%{QUERY_STRING} [L] #custom-page-114
+RewriteRule ^blog/?$ ./custom_page_template.php?cmsid=115&%{QUERY_STRING} [L] #custom-page-115
+RewriteRule ^cloud-servers-layout-2/?$ ./custom_page_template.php?cmsid=116&%{QUERY_STRING} [L] #custom-page-116
+RewriteRule ^cloud-servers/?$ ./custom_page_template.php?cmsid=117&%{QUERY_STRING} [L] #custom-page-117
+RewriteRule ^partners/?$ ./custom_page_template.php?cmsid=118&%{QUERY_STRING} [L] #custom-page-118
+RewriteRule ^contact-us/?$ ./custom_page_template.php?cmsid=119&%{QUERY_STRING} [L] #custom-page-119
+RewriteRule ^dedicated-servers-layout-2/?$ ./custom_page_template.php?cmsid=120&%{QUERY_STRING} [L] #custom-page-120
+RewriteRule ^dedicated-servers/?$ ./custom_page_template.php?cmsid=121&%{QUERY_STRING} [L] #custom-page-121
+RewriteRule ^domain-names/?$ ./custom_page_template.php?cmsid=122&%{QUERY_STRING} [L] #custom-page-122
+RewriteRule ^domain-transfer/?$ ./custom_page_template.php?cmsid=123&%{QUERY_STRING} [L] #custom-page-123
+RewriteRule ^game-servers/7-days-to-die/?$ ./custom_page_template.php?cmsid=124&%{QUERY_STRING} [L] #custom-page-124
+RewriteRule ^game-servers/arka/?$ ./custom_page_template.php?cmsid=125&%{QUERY_STRING} [L] #custom-page-125
+RewriteRule ^game-servers/arma-3/?$ ./custom_page_template.php?cmsid=126&%{QUERY_STRING} [L] #custom-page-126
+RewriteRule ^game-servers/conan-exiles/?$ ./custom_page_template.php?cmsid=127&%{QUERY_STRING} [L] #custom-page-127
+RewriteRule ^game-servers/core-keeper/?$ ./custom_page_template.php?cmsid=128&%{QUERY_STRING} [L] #custom-page-128
+RewriteRule ^game-servers/counter-strike/?$ ./custom_page_template.php?cmsid=129&%{QUERY_STRING} [L] #custom-page-129
+RewriteRule ^game-servers/day-z/?$ ./custom_page_template.php?cmsid=130&%{QUERY_STRING} [L] #custom-page-130
+RewriteRule ^game-servers/gta-5/?$ ./custom_page_template.php?cmsid=131&%{QUERY_STRING} [L] #custom-page-131
+RewriteRule ^game-servers/games/?$ ./custom_page_template.php?cmsid=132&%{QUERY_STRING} [L] #custom-page-132
+RewriteRule ^game-servers-layout-2/?$ ./custom_page_template.php?cmsid=133&%{QUERY_STRING} [L] #custom-page-133
+RewriteRule ^game-servers/?$ ./custom_page_template.php?cmsid=134&%{QUERY_STRING} [L] #custom-page-134
+RewriteRule ^game-servers/minecraft/?$ ./custom_page_template.php?cmsid=135&%{QUERY_STRING} [L] #custom-page-135
+RewriteRule ^game-servers/project-zomboid/?$ ./custom_page_template.php?cmsid=136&%{QUERY_STRING} [L] #custom-page-136
+RewriteRule ^game-servers/rust/?$ ./custom_page_template.php?cmsid=137&%{QUERY_STRING} [L] #custom-page-137
+RewriteRule ^game-servers/space-engineers/?$ ./custom_page_template.php?cmsid=138&%{QUERY_STRING} [L] #custom-page-138
+RewriteRule ^game-servers/terraria/?$ ./custom_page_template.php?cmsid=139&%{QUERY_STRING} [L] #custom-page-139
+RewriteRule ^game-servers/the-forest/?$ ./custom_page_template.php?cmsid=140&%{QUERY_STRING} [L] #custom-page-140
+RewriteRule ^game-servers/v-rising/?$ ./custom_page_template.php?cmsid=141&%{QUERY_STRING} [L] #custom-page-141
+RewriteRule ^game-servers/valheim/?$ ./custom_page_template.php?cmsid=142&%{QUERY_STRING} [L] #custom-page-142
+#RewriteRule ^home/?$ ./custom_page_template.php?cmsid=143&%{QUERY_STRING} [L] #custom-page-143
+RewriteRule ^knowledgebase-cms/?$ ./custom_page_template.php?cmsid=144&%{QUERY_STRING} [L] #custom-page-144
+RewriteRule ^legal/acceptable-use-policy/?$ ./custom_page_template.php?cmsid=145&%{QUERY_STRING} [L] #custom-page-145
+RewriteRule ^legal/domain-registration-greement/?$ ./custom_page_template.php?cmsid=146&%{QUERY_STRING} [L] #custom-page-146
+RewriteRule ^legal/privacy-policy/?$ ./custom_page_template.php?cmsid=147&%{QUERY_STRING} [L] #custom-page-147
+RewriteRule ^legal/terms-of-services/?$ ./custom_page_template.php?cmsid=148&%{QUERY_STRING} [L] #custom-page-148
+RewriteRule ^reseller-hosting-layout-2/?$ ./custom_page_template.php?cmsid=149&%{QUERY_STRING} [L] #custom-page-149
+RewriteRule ^reseller-hosting/?$ ./custom_page_template.php?cmsid=150&%{QUERY_STRING} [L] #custom-page-150
+RewriteRule ^shared-hosting-layout-2/?$ ./custom_page_template.php?cmsid=151&%{QUERY_STRING} [L] #custom-page-151
+RewriteRule ^shared-hosting/?$ ./custom_page_template.php?cmsid=152&%{QUERY_STRING} [L] #custom-page-152
+RewriteRule ^vps-hosting-layout-2/?$ ./custom_page_template.php?cmsid=153&%{QUERY_STRING} [L] #custom-page-153
+RewriteRule ^vps-hosting/?$ ./custom_page_template.php?cmsid=154&%{QUERY_STRING} [L] #custom-page-154
+RewriteRule ^wordpress-hosting-layout-2/?$ ./custom_page_template.php?cmsid=155&%{QUERY_STRING} [L] #custom-page-155
+RewriteRule ^wordpress-hosting/?$ ./custom_page_template.php?cmsid=156&%{QUERY_STRING} [L] #custom-page-156
+RewriteRule ^section/banner-default/?$ ./custom_page_template.php?cmsid=157&%{QUERY_STRING} [L] #custom-page-157
+RewriteRule ^section/banner-domain/?$ ./custom_page_template.php?cmsid=158&%{QUERY_STRING} [L] #custom-page-158
+RewriteRule ^section/banner-form/?$ ./custom_page_template.php?cmsid=159&%{QUERY_STRING} [L] #custom-page-159
+RewriteRule ^section/cta/?$ ./custom_page_template.php?cmsid=160&%{QUERY_STRING} [L] #custom-page-160
+RewriteRule ^section/styles/?$ ./custom_page_template.php?cmsid=161&%{QUERY_STRING} [L] #custom-page-161
+RewriteRule ^section/domain-search/?$ ./custom_page_template.php?cmsid=162&%{QUERY_STRING} [L] #custom-page-162
+RewriteRule ^section/faq/?$ ./custom_page_template.php?cmsid=163&%{QUERY_STRING} [L] #custom-page-163
+RewriteRule ^section/featured-tlds/?$ ./custom_page_template.php?cmsid=164&%{QUERY_STRING} [L] #custom-page-164
+RewriteRule ^section/features-sides/?$ ./custom_page_template.php?cmsid=165&%{QUERY_STRING} [L] #custom-page-165
+RewriteRule ^section/features/?$ ./custom_page_template.php?cmsid=166&%{QUERY_STRING} [L] #custom-page-166
+RewriteRule ^section/gallery/?$ ./custom_page_template.php?cmsid=167&%{QUERY_STRING} [L] #custom-page-167
+RewriteRule ^section/graphics/?$ ./custom_page_template.php?cmsid=168&%{QUERY_STRING} [L] #custom-page-168
+RewriteRule ^section/key-features/?$ ./custom_page_template.php?cmsid=169&%{QUERY_STRING} [L] #custom-page-169
+RewriteRule ^section/location-map/?$ ./custom_page_template.php?cmsid=170&%{QUERY_STRING} [L] #custom-page-170
+RewriteRule ^section/product-comparison/?$ ./custom_page_template.php?cmsid=171&%{QUERY_STRING} [L] #custom-page-171
+RewriteRule ^section/product-groups/?$ ./custom_page_template.php?cmsid=172&%{QUERY_STRING} [L] #custom-page-172
+RewriteRule ^section/products/?$ ./custom_page_template.php?cmsid=173&%{QUERY_STRING} [L] #custom-page-173
+RewriteRule ^section/stats/?$ ./custom_page_template.php?cmsid=174&%{QUERY_STRING} [L] #custom-page-174
+RewriteRule ^section/tlds-table/?$ ./custom_page_template.php?cmsid=175&%{QUERY_STRING} [L] #custom-page-175
+RewriteRule ^section/testimonials/?$ ./custom_page_template.php?cmsid=176&%{QUERY_STRING} [L] #custom-page-176
+#LagomPagesRedirection
+</IfModule>
+#EndLagomRedirection
 
 ### BEGIN - WHMCS managed rules - DO NOT EDIT BETWEEN WHMCS MARKERS ###
 <IfModule mod_rewrite.c>
@@ -7,7 +101,7 @@ RewriteEngine on
 # installation directory is relocated.  It is imperative that
 # there is also a RewriteCond rule later that can effectively get
 # the actual value by comparison against the request URI.
-# 
+#
 # If there are _any_ other RewriteBase directives in this file,
 # the last entry will take precedence!
 RewriteBase /

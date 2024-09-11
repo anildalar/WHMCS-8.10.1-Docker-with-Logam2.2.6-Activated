@@ -1,0 +1,31 @@
+<?php
+/* Smarty version 3.1.48, created on 2024-09-10 08:01:27
+  from '/var/www/html/templates/lagom2/assets/svg-icon/templates.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.48',
+  'unifunc' => 'content_66dffcd783e570_92162818',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a5e07190dd5e26b5d871eae819f4d960856b6d38' => 
+    array (
+      0 => '/var/www/html/templates/lagom2/assets/svg-icon/templates.tpl',
+      1 => 1725773960,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_66dffcd783e570_92162818 (Smarty_Internal_Template $_smarty_tpl) {
+?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
+    <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M39.5.634a1 1 0 0 0-1.001 0l-4.25 2.463a1 1 0 0 0 1.002 1.73L38 3.236v3.14a1 1 0 1 0 2 0V1.5a1 1 0 0 0-.5-.866ZM27.114 8.386a1 1 0 0 0-1.366-.364l-8.5 4.925a1 1 0 0 0 1.002 1.73l8.5-4.924a1 1 0 0 0 .364-1.367Zm-17 9.85a1 1 0 0 0-1.366-.364l-4.25 2.463A1 1 0 0 0 4 21.2v3.788a1 1 0 1 0 2 0v-3.212l3.751-2.173a1 1 0 0 0 .364-1.367ZM5 31.562a1 1 0 0 0-1 1v7.576a1 1 0 1 0 2 0v-7.575a1 1 0 0 0-1-1Zm0 15.15a1 1 0 0 0-1 1V51.5a1 1 0 0 0 1.499.867l4.125-2.375a1 1 0 1 0-.998-1.734L6 49.77v-2.058a1 1 0 0 0-1-1Z" clip-rule="evenodd" />
+    <path fill="var(--svg-icon-color-2)" stroke="var(--svg-icon-color-2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m12 55 3 1.67 6.563-25.875L49 6.67 46 5 12 24.6V55Z" />
+    <path fill="var(--svg-icon-color-1)" stroke="var(--svg-icon-color-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M49 6.67v11.5l-24 13.5v19.242L15 56.67v-30.3l34-19.7Z" />
+    <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m58.8 21.77-33.6 19.4m-.2 21.5 34-19.6v-30.4l-34 19.6v30.4Z" />
+    <path fill="var(--svg-icon-color-2)" d="M30.323 33.968c0 .74-.52 1.642-1.161 2.012-.642.37-1.162.07-1.162-.67 0-.741.52-1.642 1.162-2.013.641-.37 1.161-.07 1.161.671Zm3-1.844c0 .741-.52 1.642-1.161 2.012-.642.37-1.162.07-1.162-.67 0-.741.52-1.642 1.162-2.012.641-.37 1.161-.07 1.161.67Zm3-1.656c0 .74-.52 1.642-1.161 2.012-.642.37-1.162.07-1.162-.67 0-.741.52-1.642 1.162-2.012.641-.371 1.161-.07 1.161.67Z" />
+</svg><?php }
+}

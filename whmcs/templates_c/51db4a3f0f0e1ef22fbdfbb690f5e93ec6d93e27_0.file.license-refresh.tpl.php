@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-08 05:48:46
+/* Smarty version 3.1.48, created on 2024-09-10 03:21:50
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/license-refresh.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dd3abee005e1_95398809',
+  'unifunc' => 'content_66dfbb4eb654c0_88400094',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dd3abee005e1_95398809 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66dfbb4eb654c0_88400094 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="refreshLicense" data-refresh-license-modal>
     <div class="modal__dialog">
         <div class="modal__content">

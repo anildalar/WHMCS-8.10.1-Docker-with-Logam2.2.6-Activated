@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-09 03:32:57
+/* Smarty version 3.1.48, created on 2024-09-10 07:53:05
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/seo-image-remove.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66de6c6995fad1_52831893',
+  'unifunc' => 'content_66dffae135bd91_64252446',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66de6c6995fad1_52831893 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66dffae135bd91_64252446 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="deleteSeoImageModal" data-delete-seo-image-modal>
     <div class="modal__dialog">
         <div class="modal__content">
