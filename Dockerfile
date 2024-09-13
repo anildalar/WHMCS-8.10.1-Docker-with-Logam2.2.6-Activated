@@ -69,6 +69,9 @@ RUN apt-get install -y libmagickwand-dev \
 # Set the Apache document root
 ENV APACHE_DOCUMENT_ROOT /var/www/html
 
+# Set up cron job for WHMCS
+RUN (crontab -l; echo "*/5 * * * * php -q /var/www/html/crons/cron.php") | crontab -
+
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
 
