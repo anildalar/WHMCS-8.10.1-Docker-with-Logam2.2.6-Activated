@@ -15,13 +15,36 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     libzip-dev \
     libicu-dev \
+    libutf8proc-dev \
     zip \
     libcurl4-openssl-dev \
     pkg-config \
     libssl-dev
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo pdo_mysql gd zip intl opcache
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
+    && docker-php-ext-install -j$(nproc) \
+        bcmath \
+        curl \
+        gd \
+        imap \
+        intl \
+        mbstring \
+        mysqli \
+        pdo \
+        pdo_mysql \
+        soap \
+        zip \
+        gmp \
+        opcache \
+        xml \
+        json \
+        iconv \
+        fileinfo \
+        exif \
+    && docker-php-ext-enable \
+        opcache
 
 # Download the latest version of IonCube Loader
 RUN wget https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
