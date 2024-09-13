@@ -7,7 +7,6 @@ services:
     volumes:
       - ./whmcs:/var/www/html
       - ./config/php.ini:/usr/local/etc/php/php.ini  # Mount custom php.ini
-      - ./config/cron:/etc/cron.d/whmcs-cron  # Mount cron file
     ports:
       - "7081:80"
     env_file:
