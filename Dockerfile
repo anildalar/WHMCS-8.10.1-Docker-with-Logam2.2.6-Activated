@@ -61,6 +61,10 @@ RUN echo "zend_extension = /usr/local/ioncube/ioncube_loader_lin_8.1.so" > /usr/
 # Clean up
 RUN rm ioncube_loaders_lin_x86-64.tar.gz
 
+# Install ImageMagick
+RUN pecl install imagick \
+    && docker-php-ext-enable imagick
+    
 # Set the Apache document root
 ENV APACHE_DOCUMENT_ROOT /var/www/html
 
