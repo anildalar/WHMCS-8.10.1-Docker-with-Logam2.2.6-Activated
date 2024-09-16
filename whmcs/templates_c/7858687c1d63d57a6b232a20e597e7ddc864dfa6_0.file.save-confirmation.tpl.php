@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:27:35
+/* Smarty version 3.1.48, created on 2024-09-13 10:05:16
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/save-confirmation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dff4e77dd284_79465376',
+  'unifunc' => 'content_66e40e5ce51005_09666548',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dff4e77dd284_79465376 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40e5ce51005_09666548 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="saveConfirmationModal" data-save-confirmation-modal>
     <div class="modal__dialog">
         <div class="modal__content">

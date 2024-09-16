@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 03:22:00
+/* Smarty version 3.1.48, created on 2024-09-13 09:37:57
   from '/var/www/html/templates/lagom2/core/layouts/footer/default/default.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dfbb586b5a65_56395297',
+  'unifunc' => 'content_66e407f59dd527_49470562',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dfbb586b5a65_56395297 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e407f59dd527_49470562 (Smarty_Internal_Template $_smarty_tpl) {
 ?>    
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/layouts-vars.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
@@ -69,7 +69,7 @@ $_smarty_tpl->tpl_vars['footerLink']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['footerLink']->value) {
 $_smarty_tpl->tpl_vars['footerLink']->do_else = false;
 $_smarty_tpl->tpl_vars['footerLink']->index++;
-$__foreach_footerLink_9_saved = $_smarty_tpl->tpl_vars['footerLink'];
+$__foreach_footerLink_20_saved = $_smarty_tpl->tpl_vars['footerLink'];
 ?>
                                     <li class="<?php if ($_smarty_tpl->tpl_vars['footerLink']->value['style'] != "icon") {?>footer-social-wide<?php }?>">
                                         <a class="<?php echo $_smarty_tpl->tpl_vars['footerLink']->value['custom_classes'];?>
@@ -92,7 +92,7 @@ $__foreach_footerLink_9_saved = $_smarty_tpl->tpl_vars['footerLink'];
                                         </a>
                                     </li>
                                 <?php
-$_smarty_tpl->tpl_vars['footerLink'] = $__foreach_footerLink_9_saved;
+$_smarty_tpl->tpl_vars['footerLink'] = $__foreach_footerLink_20_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             </ul>
@@ -108,7 +108,7 @@ $_smarty_tpl->tpl_vars['footerLink']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['footerLink']->value) {
 $_smarty_tpl->tpl_vars['footerLink']->do_else = false;
 $_smarty_tpl->tpl_vars['footerLink']->index++;
-$__foreach_footerLink_10_saved = $_smarty_tpl->tpl_vars['footerLink'];
+$__foreach_footerLink_21_saved = $_smarty_tpl->tpl_vars['footerLink'];
 ?>
                                     <div class="footer-col <?php echo $_smarty_tpl->tpl_vars['footerLink']->value['custom_classes'];?>
  col-md-<?php echo $_smarty_tpl->tpl_vars['footerPrimaryCol']->value;?>
@@ -186,7 +186,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                         <?php }?>
                                     </div>
                                 <?php
-$_smarty_tpl->tpl_vars['footerLink'] = $__foreach_footerLink_10_saved;
+$_smarty_tpl->tpl_vars['footerLink'] = $__foreach_footerLink_21_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             </div>
@@ -208,7 +208,7 @@ $_smarty_tpl->tpl_vars['footerLink']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['footerLink']->value) {
 $_smarty_tpl->tpl_vars['footerLink']->do_else = false;
 $_smarty_tpl->tpl_vars['footerLink']->index++;
-$__foreach_footerLink_12_saved = $_smarty_tpl->tpl_vars['footerLink'];
+$__foreach_footerLink_23_saved = $_smarty_tpl->tpl_vars['footerLink'];
 ?>
                                 <li <?php if ((isset($_smarty_tpl->tpl_vars['footerLink']->value['type'])) && ($_smarty_tpl->tpl_vars['footerLink']->value['type'] == "language" || $_smarty_tpl->tpl_vars['footerLink']->value['type'] == "currencies")) {?> class="dropdown dropup"<?php }?> <?php if ((isset($_smarty_tpl->tpl_vars['footerLink']->value['type'])) && $_smarty_tpl->tpl_vars['footerLink']->value['type'] == "language") {?>data-language-select<?php }?>>
                                     <a <?php if ($_smarty_tpl->tpl_vars['footerLink']->value['custom_classes']) {?>class="<?php echo $_smarty_tpl->tpl_vars['footerLink']->value['custom_classes'];?>
@@ -246,7 +246,7 @@ echo $_smarty_tpl->tpl_vars['footerLink']->value['url'];
                                     <?php }?>
                                 </li>
                             <?php
-$_smarty_tpl->tpl_vars['footerLink'] = $__foreach_footerLink_12_saved;
+$_smarty_tpl->tpl_vars['footerLink'] = $__foreach_footerLink_23_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </ul>

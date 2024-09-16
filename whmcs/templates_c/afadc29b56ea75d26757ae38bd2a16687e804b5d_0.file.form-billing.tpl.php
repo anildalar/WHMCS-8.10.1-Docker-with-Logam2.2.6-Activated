@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 08:48:02
+/* Smarty version 3.1.48, created on 2024-09-13 09:48:33
   from '/var/www/html/templates/orderforms/lagom2/includes/viewcart/form-billing.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e007c2e058d7_51018954',
+  'unifunc' => 'content_66e40a71bbeda5_04818071',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:orderforms/".((string)$_smarty_tpl->tpl_vars[\'carttpl\']->value)."/linkedaccounts.tpl' => 1,
   ),
 ),false)) {
-function content_66e007c2e058d7_51018954 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40a71bbeda5_04818071 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists("templates/orderforms/".((string)$_smarty_tpl->tpl_vars['carttpl']->value)."/includes/viewcart/overwrites/form-billing.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender("file:templates/orderforms/".((string)$_smarty_tpl->tpl_vars['carttpl']->value)."/includes/viewcart/overwrites/form-billing.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>    

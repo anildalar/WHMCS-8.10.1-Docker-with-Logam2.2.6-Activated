@@ -1,3 +1,4 @@
+
 {if isset($RSThemes['pages'][$templatefile]) && file_exists($RSThemes['pages'][$templatefile]['fullPath'])}
     {include file=$RSThemes['pages'][$templatefile]['fullPath']}
 {else}
@@ -155,9 +156,9 @@
                 {if $moduleclientarea}
                 <div class="panel panel-default panel-product-details">
                     <div class="panel-body">
-                    <div class="module-client-area module-{$module} p-0">
-                        {$moduleclientarea}
-                    </div>
+                        <div class="module-client-area module-{$module} p-0">
+                            {$moduleclientarea}
+                        </div>
                     </div>
                 </div>
                 {/if}
@@ -638,3 +639,21 @@
         {/literal}    
     </script>
 {/if}
+<h4>
+
+<form method="post" action="clientarea.php?action=productdetails&id={$smarty.get.id}">
+    {if $customfields}
+        {foreach from=$customfields item=customfield}
+            {if $customfield.name == "domain_for_pbx"}
+                <p>
+                    <strong>Domain for PBX:</strong>
+                    <input type="text" name="customfield[{$customfield.id}]" value="{$customfield.value}" />
+                </p>
+            {/if}
+        {/foreach}
+    {/if}
+    <input type="hidden" name="update" value="true" />
+    <input type="submit" value="Save Changes" />
+</form>
+
+</h4>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:53:05
+/* Smarty version 3.1.48, created on 2024-09-13 10:05:49
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/group-input.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dffae118e118_40914017',
+  'unifunc' => 'content_66e40e7d4e5bf2_94017868',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/section-group.tpl' => 2,
   ),
 ),false)) {
-function content_66dffae118e118_40914017 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40e7d4e5bf2_94017868 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 if ((isset($_smarty_tpl->tpl_vars['sectionFieldValue']->value['grouped']))) {?>
     <?php $_smarty_tpl->_assignInScope('grouped', $_smarty_tpl->tpl_vars['sectionFieldValue']->value['grouped']);

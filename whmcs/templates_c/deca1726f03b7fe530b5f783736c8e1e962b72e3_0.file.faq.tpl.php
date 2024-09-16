@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:30:23
+/* Smarty version 3.1.48, created on 2024-09-13 10:25:57
   from '/var/www/html/templates/lagom2/core/cms/sections/config/faq/faq.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dff58fb675e6_60466937',
+  'unifunc' => 'content_66e41335cab6f5_51025601',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dff58fb675e6_60466937 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e41335cab6f5_51025601 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <div class="site-section section-faq section-<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
@@ -56,7 +56,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['group']->do_else = false;
 $_smarty_tpl->tpl_vars['group']->index++;
 $_smarty_tpl->tpl_vars['group']->first = !$_smarty_tpl->tpl_vars['group']->index;
-$__foreach_group_21_saved = $_smarty_tpl->tpl_vars['group'];
+$__foreach_group_17_saved = $_smarty_tpl->tpl_vars['group'];
 ?>
                                 <li class="nav-item content-slider-item">
                                     <a class="nav-link <?php if ($_smarty_tpl->tpl_vars['group']->first) {?>active<?php }?>"
@@ -74,7 +74,7 @@ $__foreach_group_21_saved = $_smarty_tpl->tpl_vars['group'];
                                     </a>
                                 </li>
                             <?php
-$_smarty_tpl->tpl_vars['group'] = $__foreach_group_21_saved;
+$_smarty_tpl->tpl_vars['group'] = $__foreach_group_17_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </ul>
@@ -95,7 +95,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['group']->do_else = false;
 $_smarty_tpl->tpl_vars['group']->index++;
 $_smarty_tpl->tpl_vars['group']->first = !$_smarty_tpl->tpl_vars['group']->index;
-$__foreach_group_22_saved = $_smarty_tpl->tpl_vars['group'];
+$__foreach_group_18_saved = $_smarty_tpl->tpl_vars['group'];
 ?>
                     <?php if (count($_smarty_tpl->tpl_vars['group']->value) > 1) {?>
                         <?php if ($_smarty_tpl->tpl_vars['list_group']->value['grouped'] !== '0') {?>
@@ -120,7 +120,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['item']->do_else = false;
 $_smarty_tpl->tpl_vars['item']->index++;
 $_smarty_tpl->tpl_vars['item']->first = !$_smarty_tpl->tpl_vars['item']->index;
-$__foreach_item_23_saved = $_smarty_tpl->tpl_vars['item'];
+$__foreach_item_19_saved = $_smarty_tpl->tpl_vars['item'];
 ?>
                                 <div class="faq-item <?php if (!$_smarty_tpl->tpl_vars['item']->first || $_smarty_tpl->tpl_vars['list_type']->value == "expanded") {?>collapsed<?php }?> <?php if ($_smarty_tpl->tpl_vars['list_style']->value == 'divided') {?> faq-item-divided<?php }
 if ($_smarty_tpl->tpl_vars['list_type']->value == "expanded") {?> faq-item-expanded<?php }
@@ -168,7 +168,7 @@ echo $_smarty_tpl->tpl_vars['item']->value['index'];
                                     </div>
                                 </div>
                             <?php
-$_smarty_tpl->tpl_vars['item'] = $__foreach_item_23_saved;
+$_smarty_tpl->tpl_vars['item'] = $__foreach_item_19_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </div>
@@ -179,7 +179,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         <?php }?>
                     <?php }?>
                 <?php
-$_smarty_tpl->tpl_vars['group'] = $__foreach_group_22_saved;
+$_smarty_tpl->tpl_vars['group'] = $__foreach_group_18_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <?php }?>

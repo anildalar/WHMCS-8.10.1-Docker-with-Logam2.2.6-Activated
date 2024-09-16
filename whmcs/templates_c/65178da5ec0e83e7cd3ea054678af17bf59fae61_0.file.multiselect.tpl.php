@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:53:05
+/* Smarty version 3.1.48, created on 2024-09-13 10:05:49
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/multiselect.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dffae1276031_17397261',
+  'unifunc' => 'content_66e40e7d5f37f8_61354940',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 1,
   ),
 ),false)) {
-function content_66dffae1276031_17397261 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40e7d5f37f8_61354940 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['sectionGroupField']->value))) {?>
     <?php $_smarty_tpl->_assignInScope('groupMultiOptions', explode(',',$_smarty_tpl->tpl_vars['sectionGroupInputValue']->value));?>
     <div class="form-group <?php echo $_smarty_tpl->tpl_vars['sectionField']->value['container_class'];?>

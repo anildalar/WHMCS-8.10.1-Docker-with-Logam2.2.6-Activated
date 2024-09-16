@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:45:55
+/* Smarty version 3.1.48, created on 2024-09-13 10:07:17
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/common-translations.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dff933e2a749_10711847',
+  'unifunc' => 'content_66e40ed56166c6_35105522',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dff933e2a749_10711847 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40ed56166c6_35105522 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="translationCommonModal" data-common-translations-modal>
     <div class="modal__dialog">
         <div class="modal__content">

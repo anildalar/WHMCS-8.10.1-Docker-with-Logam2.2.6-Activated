@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:45:55
+/* Smarty version 3.1.48, created on 2024-09-13 10:07:17
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/modals/delete-menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dff933e352f3_25916512',
+  'unifunc' => 'content_66e40ed561e8f2_51856073',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dff933e352f3_25916512 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40ed561e8f2_51856073 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="deleteMenuModal" data-delete-menu-modal>
     <div class="modal__dialog">
         <div class="modal__content">

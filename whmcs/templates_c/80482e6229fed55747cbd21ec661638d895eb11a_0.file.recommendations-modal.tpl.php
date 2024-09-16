@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:39:53
+/* Smarty version 3.1.48, created on 2024-09-13 09:43:26
   from '/var/www/html/templates/orderforms/lagom2/includes/recommendations-modal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dff7c96ac701_66297234',
+  'unifunc' => 'content_66e4093ec24a85_33031595',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/orderforms/".((string)$_smarty_tpl->tpl_vars[\'carttpl\']->value)."/includes/product-recommendations.tpl' => 1,
   ),
 ),false)) {
-function content_66dff7c96ac701_66297234 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e4093ec24a85_33031595 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists("templates/orderforms/".((string)$_smarty_tpl->tpl_vars['carttpl']->value)."/includes/overwrites/recommendations-modal.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender("file:templates/orderforms/".((string)$_smarty_tpl->tpl_vars['carttpl']->value)."/includes/overwrites/recommendations-modal.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>

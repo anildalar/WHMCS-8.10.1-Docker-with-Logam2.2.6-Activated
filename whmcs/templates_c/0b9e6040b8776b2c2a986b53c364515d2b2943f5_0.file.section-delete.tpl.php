@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:53:05
+/* Smarty version 3.1.48, created on 2024-09-13 10:05:49
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/section/section-delete.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dffae150d425_83772285',
+  'unifunc' => 'content_66e40e7ddd3b09_32209494',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dffae150d425_83772285 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40e7ddd3b09_32209494 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal modal--hero" id="modalRemoveSection" data-modal-delete-section>
     <div class="modal__dialog">
         <div class="modal__content">

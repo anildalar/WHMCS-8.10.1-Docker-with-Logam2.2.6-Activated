@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 03:22:19
+/* Smarty version 3.1.48, created on 2024-09-13 10:05:49
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/checkbox.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dfbb6b6b54d3_83339804',
+  'unifunc' => 'content_66e40e7d4c9ef0_19514159',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 1,
   ),
 ),false)) {
-function content_66dfbb6b6b54d3_83339804 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40e7d4c9ef0_19514159 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['sectionGroupField']->value))) {?>
     <div class="form-group <?php echo $_smarty_tpl->tpl_vars['sectionField']->value['container_class'];?>
 " <?php
@@ -119,10 +119,10 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['attrValue']->val
 $_smarty_tpl->tpl_vars['attrValue']->do_else = false;
 $_smarty_tpl->tpl_vars['attrValue']->iteration++;
 $_smarty_tpl->tpl_vars['attrValue']->last = $_smarty_tpl->tpl_vars['attrValue']->iteration === $_smarty_tpl->tpl_vars['attrValue']->total;
-$__foreach_attrValue_39_saved = $_smarty_tpl->tpl_vars['attrValue'];
+$__foreach_attrValue_43_saved = $_smarty_tpl->tpl_vars['attrValue'];
 echo $_smarty_tpl->tpl_vars['attrValue']->value;
 if (!$_smarty_tpl->tpl_vars['attrValue']->last) {?>,<?php }
-$_smarty_tpl->tpl_vars['attrValue'] = $__foreach_attrValue_39_saved;
+$_smarty_tpl->tpl_vars['attrValue'] = $__foreach_attrValue_43_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
 } else {

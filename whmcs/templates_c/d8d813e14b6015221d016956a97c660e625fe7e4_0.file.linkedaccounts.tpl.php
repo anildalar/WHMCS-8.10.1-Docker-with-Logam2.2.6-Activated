@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 08:48:02
+/* Smarty version 3.1.48, created on 2024-09-13 09:48:33
   from '/var/www/html/templates/orderforms/lagom2/linkedaccounts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e007c2e1a9b3_68682523',
+  'unifunc' => 'content_66e40a71c19c97_10069312',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e007c2e1a9b3_68682523 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40a71c19c97_10069312 (Smarty_Internal_Template $_smarty_tpl) {
 if (($_smarty_tpl->tpl_vars['linkableProviders']->value || $_smarty_tpl->tpl_vars['hasLinkedProvidersEnabled']->value) && $_smarty_tpl->tpl_vars['linkContext']->value == 'linktable') {?>
     <table id="tableLinkedAccounts" class="table display w-100 data-driven m-b-0" data-ajax-url="<?php echo $_smarty_tpl->tpl_vars['linkedAccountsUrl']->value;?>
 " data-on-draw-rebind-confirmation-modal="true" data-lang-empty-table="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['lang'][0], array( array('key'=>'remoteAuthn.noLinkedAccounts'),$_smarty_tpl ) );?>

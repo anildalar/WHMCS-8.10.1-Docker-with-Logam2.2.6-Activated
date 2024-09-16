@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 03:22:00
+/* Smarty version 3.1.48, created on 2024-09-13 09:37:57
   from '/var/www/html/templates/lagom2/includes/network-issues-notifications.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dfbb5863cb33_39185725',
+  'unifunc' => 'content_66e407f586dff4_40386861',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,6 +20,6 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dfbb5863cb33_39185725 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e407f586dff4_40386861 (Smarty_Internal_Template $_smarty_tpl) {
 }
 }

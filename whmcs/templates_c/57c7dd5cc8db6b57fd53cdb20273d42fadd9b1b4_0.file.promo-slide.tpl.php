@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 08:48:02
+/* Smarty version 3.1.48, created on 2024-09-13 09:37:57
   from '/var/www/html/templates/lagom2/core/extensions/PromoBanners/promo-slide.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e007c2ddf098_01830627',
+  'unifunc' => 'content_66e407f597f684_33413029',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e007c2ddf098_01830627 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e407f597f684_33413029 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.truncate.php','function'=>'smarty_modifier_truncate',),));
 $_smarty_tpl->_assignInScope('sliderCounter', false);
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['promoSliderExtension']->value, 'slide', false, 'k', 'slideLoop', array (

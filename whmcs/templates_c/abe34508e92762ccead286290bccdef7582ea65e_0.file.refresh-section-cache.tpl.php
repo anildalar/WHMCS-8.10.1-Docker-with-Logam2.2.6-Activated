@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:43:13
+/* Smarty version 3.1.48, created on 2024-09-13 09:40:15
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/refresh-section-cache.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dff89173c419_25801858',
+  'unifunc' => 'content_66e4087f55e311_50335206',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dff89173c419_25801858 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e4087f55e311_50335206 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div 
     class="modal" 
     id="refresh-section-cache" 

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 08:48:02
+/* Smarty version 3.1.48, created on 2024-09-13 09:48:33
   from '/var/www/html/templates/orderforms/lagom2/includes/viewcart/modal/remove-addon.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e007c2f1c8f7_67165931',
+  'unifunc' => 'content_66e40a71d44ff4_63052200',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e007c2f1c8f7_67165931 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40a71d44ff4_63052200 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal fade modal-remove-item" id="modalRemoveAddon" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">

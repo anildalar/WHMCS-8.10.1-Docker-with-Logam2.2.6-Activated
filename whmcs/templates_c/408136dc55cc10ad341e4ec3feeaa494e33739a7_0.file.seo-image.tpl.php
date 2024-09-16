@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:53:05
+/* Smarty version 3.1.48, created on 2024-09-13 10:05:49
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/seo-image.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dffae1357cb4_97217255',
+  'unifunc' => 'content_66e40e7dc1ee71_87020746',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/modal/tabs.tpl' => 1,
   ),
 ),false)) {
-function content_66dffae1357cb4_97217255 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40e7dc1ee71_87020746 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="seoImageModal" data-seo-image-modal>
     <div class="modal__dialog">
         <div class="modal__content">

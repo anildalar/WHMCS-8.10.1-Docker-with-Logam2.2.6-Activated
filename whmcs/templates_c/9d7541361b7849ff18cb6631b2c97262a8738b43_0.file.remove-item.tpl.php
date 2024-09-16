@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 08:48:02
+/* Smarty version 3.1.48, created on 2024-09-13 09:48:33
   from '/var/www/html/templates/orderforms/lagom2/includes/viewcart/modal/remove-item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e007c2f12303_04553120',
+  'unifunc' => 'content_66e40a71d3e808_58771484',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e007c2f12303_04553120 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40a71d3e808_58771484 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form method="post" action="<?php echo $_smarty_tpl->tpl_vars['WEB_ROOT']->value;?>
 /cart.php">
     <input type="hidden" name="a" value="remove" />

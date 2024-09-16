@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 03:22:19
+/* Smarty version 3.1.48, created on 2024-09-13 10:05:49
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/language-change.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dfbb6b91e712_82257376',
+  'unifunc' => 'content_66e40e7d87bd17_67665733',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dfbb6b91e712_82257376 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40e7d87bd17_67665733 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="changeLanguageModal" data-language-modal>
     <div class="modal__dialog">
         <div class="modal__content">

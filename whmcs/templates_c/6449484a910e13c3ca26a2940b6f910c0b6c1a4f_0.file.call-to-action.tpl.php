@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:30:23
+/* Smarty version 3.1.48, created on 2024-09-13 10:25:57
   from '/var/www/html/templates/lagom2/core/cms/sections/config/call-to-action/call-to-action.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dff58fbd48f5_57997862',
+  'unifunc' => 'content_66e41335d64f32_00229398',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66dff58fbd48f5_57997862 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e41335d64f32_00229398 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <div class="site-section section-<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>

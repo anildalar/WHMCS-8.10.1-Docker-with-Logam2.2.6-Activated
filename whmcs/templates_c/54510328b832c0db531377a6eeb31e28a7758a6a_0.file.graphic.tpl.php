@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-10 07:53:05
+/* Smarty version 3.1.48, created on 2024-09-13 10:05:49
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/graphic.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66dffae115cd03_62788400',
+  'unifunc' => 'content_66e40e7d4a2e81_34351904',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 2,
   ),
 ),false)) {
-function content_66dffae115cd03_62788400 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66e40e7d4a2e81_34351904 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('iconsPath', "./../../../../../../../../../templates/".((string)$_smarty_tpl->tpl_vars['themeName']->value)."/assets/svg-icon");
 $_smarty_tpl->_assignInScope('illustrationsPath', "./../../../../../../../../../templates/".((string)$_smarty_tpl->tpl_vars['themeName']->value)."/assets/svg-illustrations");?>
 

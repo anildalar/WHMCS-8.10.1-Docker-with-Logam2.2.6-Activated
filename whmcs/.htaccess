@@ -1,6 +1,11 @@
 #LagomRedirection
 <IfModule mod_rewrite.c>
 RewriteEngine on
+
+# Redirect HTTP to HTTPS
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 RewriteRule ^/?$ ./custom_page_template.php?cmsid=143&%{QUERY_STRING} [L] #lagom-homepage-mark
 RewriteRule ^360-monitoring/?$ ./custom_page_template.php?cmsid=90&%{QUERY_STRING} [L] #custom-page-90
 RewriteRule ^email-services/archiving/?$ ./custom_page_template.php?cmsid=91&%{QUERY_STRING} [L] #custom-page-91
