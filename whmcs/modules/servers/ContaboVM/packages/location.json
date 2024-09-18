@@ -1,0 +1,36 @@
+{
+  "regions": [
+    {
+      "region": "EU",
+      "name": "European Union (Germany)"
+    },
+    {
+      "region": "US-central",
+      "name": "United States (Central)"
+    },
+    {
+      "region": "US-east",
+      "name": "United States (East)"
+    },
+    {
+      "region": "US-west",
+      "name": "United States (West)"
+    },
+    {
+      "region": "SIN",
+      "name": "Asia (Singapore)"
+    },
+    {
+      "region": "UK",
+      "name": "United Kingdom"
+    },
+    {
+      "region": "AUS",
+      "name": "Australia (Sydney)"
+    },
+    {
+      "region": "JPN",
+      "name": "Japan"
+    }
+  ]
+}

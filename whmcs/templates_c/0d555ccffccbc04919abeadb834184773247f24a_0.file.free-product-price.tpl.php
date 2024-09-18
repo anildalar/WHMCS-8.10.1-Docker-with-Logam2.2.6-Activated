@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 10:05:16
+/* Smarty version 3.1.48, created on 2024-09-18 05:21:29
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/settings/includes/free-product-price.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e40e5cd1c341_84397232',
+  'unifunc' => 'content_66ea6359ad4777_25850227',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 1,
   ),
 ),false)) {
-function content_66e40e5cd1c341_84397232 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea6359ad4777_25850227 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel panel--collapse">
     <div class="collapse-toggle">
         <h6 class="top__title">

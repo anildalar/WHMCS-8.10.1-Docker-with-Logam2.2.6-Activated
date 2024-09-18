@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 10:05:43
+/* Smarty version 3.1.48, created on 2024-09-18 05:21:37
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/includes/tab-website.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e40e777f6eb2_55741155',
+  'unifunc' => 'content_66ea636146ebb6_10761219',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/docs.tpl' => 1,
   ),
 ),false)) {
-function content_66e40e777f6eb2_55741155 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea636146ebb6_10761219 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="tab-pane <?php if (($_smarty_tpl->tpl_vars['template']->value->getActiveDisplay()->name == 'CMS' && !$_GET['tab']) || ($_smarty_tpl->tpl_vars['template']->value->getActiveDisplay()->name == 'CMS' && $_GET['tab'] == 'website')) {?> is-active <?php }?>" id="pages-website">
     <div class="t-c__top top m-b-3x" data-top-search data-toggler-options="toggleClass: is-open;">
         <div class="top__toolbar">

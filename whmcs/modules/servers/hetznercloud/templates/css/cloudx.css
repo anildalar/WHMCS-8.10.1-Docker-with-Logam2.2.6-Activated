@@ -1,0 +1,82 @@
+.modal .modal-header {
+    background-color: #004fac !important;
+    padding: 20px 30px;
+}
+
+.modal .modal-header h4 {
+    color: #fff !important;
+}
+
+.modal .modal-header h3 {
+    color: #fff !important;
+}
+
+#reverse_dns_modal_IPV6 .reverse_ipv6,
+#create_ipv6_modal .reverse_ipv6 {
+    height: 3.7em !important;
+}
+
+#liveToastModal {
+    z-index: 121;
+}
+.bk-snp-wrapper.snapshot_backup .btn-info {
+    color: #fff;
+    background-color: #673DE6 !important;
+    font-size: 1rem !important;
+    line-height: 1 !important;
+    padding: .375rem .75rem !important;
+}
+.bk-snp-wrapper.snapshot_backup .btn-info:hover {
+    border-color: #673DE6 !important;
+    background-color: #e1f0ff63 !important;
+    color: #673DE6 !important;
+    border: 1px solid #673DE6 !important;
+}
+.right-btn-bk .btn-primary:hover{
+    border-color: #673DE6 !important;
+    background-color: #e1f0ff63;
+    color: #673DE6 !important;
+    border: 1px solid #673DE6 !important;
+}
+
+ .modal {
+    margin-top: 10px !important;
+}
+
+#mount_form .mount-btn{
+    color: #fff;
+    background-color: #673DE6 !important;
+    border: 1px solid #673DE6 !important;
+}
+#mount_form .btn-primary:hover{
+    border-color: #673DE6 !important;
+    background-color: #e1f0ff63 !important;
+    color: #673DE6 !important;
+    border: 1px solid #673DE6 !important;
+}
+.paginate_button.page-item  .page-link {
+    margin-left: 0px !important;
+}
+.btn-primary:focus{
+    border: 1px solid #673DE6 !important;
+}
+#backup-btn {
+    border-radius: 50px;
+}
+#rebuild_form .btn:disabled {
+    background-color: #673DE6 !important;
+}
+#rebuild_form .btn:not(:disabled):not(.disabled) {
+    color: #fff;
+    background-color: #673DE6 !important;
+    border: 1px solid #673DE6;
+}
+#rebuild_form .btn:not(:disabled):not(.disabled):hover{
+    border-color: #673DE6 !important;
+    background-color: #e1f0ff63 !important;
+    color: #673DE6 !important;
+    border: 1px solid #673DE6 !important;
+}
+#rebuild_form .btn:not(:disabled):not(.disabled):focus{
+    color: #fff;
+}

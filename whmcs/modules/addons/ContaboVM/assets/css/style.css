@@ -1,0 +1,30 @@
+/*
+// *************************************************************************
+// * Contabo Cloud Automation                                              *
+// * Copyright (c) WHMCSModule Networks. All Rights Reserved.              *
+// * Version: 2024.1                                                       *
+// * Build Date: 20 January 2024                                           *
+// *************************************************************************
+// * Email: sales@whmcsmodule.net                                          *
+// * Website: https://www.whmcsmodule.net                                  *
+// *************************************************************************
+*/
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-weight: 700;
+}
+div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: .5em;
+    margin-right: 5px;
+    display: inline-block;
+    width: auto;
+}
+div.dataTables_wrapper div.dataTables_paginate {
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+    margin-right: 5px;
+}

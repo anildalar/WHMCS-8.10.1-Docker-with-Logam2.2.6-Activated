@@ -1,0 +1,534 @@
+/*
+// *************************************************************************
+// * Contabo Cloud Automation                                              *
+// * Copyright (c) WHMCSModule Networks. All Rights Reserved.              *
+// * Version: 2024.1                                                       *
+// * Build Date: 20 January 2024                                           *
+// *************************************************************************
+// * Email: sales@whmcsmodule.net                                          *
+// * Website: https://www.whmcsmodule.net                                  *
+// *************************************************************************
+*/
+
+.btn-box .btn-style {
+    font-size: 14px;
+    color: #ffffff;
+    border-radius: 3px;
+    border: 0px;
+    height: 40px;
+   padding: 0px 14px;
+	margin-right:6px;
+	font-weight:600;
+}
+.btn-box i {
+    font-size: 18px;
+    margin-right: 6px;
+	color:#fff;
+}
+.btn-box {
+	margin-top: 34px;
+}
+.btn-box .btn-style {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.primary-content .card-title{
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-color-cyan{background-color: #68bbd1;}
+.btn-color-red-oranges{background-color: #97442e;}
+.btn-color-pink-red{background-color: #fe4e5b;}
+.btn-color-green-cyan{background-color: #36b883;}
+.btn-color-deep-blue{background-color: #0e8259;}
+.btn-color-blue{background-color: #00c3e3;}
+.btn-color-red-orange{background-color: #ff3800;}
+.btn-color-red-green{background-color: #cc2d00;}
+.btn-color-yellow-green{background-color: #8fd400;}
+.btn-color-blue2{background-color: #2e5090;}
+.btn-color-snap{background-color: #f0885c;}
+.btn-color-pink{background-color: #bb3385;}
+.btn-color-purple{background-color: #800080;}
+.btn-color-blue-magenta{background-color: #7954ff;}
+/*New Upside*/
+
+.btn-icon {
+font-size: 12px;
+margin-right: 6px;
+font-family: "Font Awesome 5 Pro";
+font-weight: 900;
+display: inline-block;
+font-style: normal;
+font-variant: normal;
+text-rendering: auto;
+line-height: 1;
+box-sizing: border-box;
+color: #fff;
+text-align: center;
+cursor: pointer;
+white-space: nowrap;
+height: 14px;
+width: 14px;
+}
+.hcloudgraph {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    min-height: 178px;
+}
+
+.hcloudgraph-card-no-padding {
+    padding: 0;
+}
+.hcloudgraph-card-no-headline {
+    grid-row-gap: 0;
+}
+.hcloudgraph-card {
+    position: relative;
+    display: grid;
+    padding: 30px;
+    background-color: var(--color-text--background);
+    box-shadow: 0 1px 1px
+    rgba(0,0,0,.15);
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "headline headline-right" "content content";
+    grid-row-gap: 15px;
+}
+
+span.status-field.completed {
+  color: #117F65;
+  border-color: #21ce93;
+}
+span.status-field.pending {
+  color: #d20000;
+  border-color: #d20000;
+}
+span.status-field {
+border: 1px solid #999;
+        border-top-color: rgb(153, 153, 153);
+        border-right-color: rgb(153, 153, 153);
+        border-bottom-color: rgb(153, 153, 153);
+        border-left-color: rgb(153, 153, 153);
+    padding: 2px 5px;
+    font-size: 10px;
+    margin-left: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+.hcloud{margin: 6px 0;}
+.hcloud-img-thumbnail{
+     padding:4px;
+     background-color:#fff;
+     border:1px solid #ddd;
+     border-radius:4px;
+     -webkit-transition:all .2s ease-in-out;
+     -o-transition:all .2s ease-in-out;
+     transition:all .2s ease-in-out;
+     display:inline-block;
+    }
+
+    .hcloud-feature-row {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .hcloud-feature-row img {
+        display: block;
+        margin: 0 auto 5px auto;
+        height: 32px;
+        width: 32px;
+    }
+    .hcloud-feature-row a {
+    text-decoration: none;
+}
+    div.dataTables_wrapper div.dataTables_info {
+        padding: 8px 8px !important;
+        font-weight: 300;
+    }
+    .panel-default > .panel-heading {
+    color: #333;
+    background-color: #ffffff;
+    border-color:#ddd;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+    .dataTables_wrapper .dataTables_filter label .form-control {
+      border: 1.5px solid #ddd;
+    }
+
+    .btn-label {
+      position: relative;
+      left: -12px;
+      display: inline-block;
+      padding: 6px 12px;
+      background: rgba(0,0,0,0.15);
+      border-radius: 3px 0 0 3px;
+    }
+    .btn-labeled {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+
+.fldestxtedit, .flrdnstxtedit, .iprdnstxteditv6, .iprdnstxteditv4, .voltxtedit, .apikeytxtedit, .apiprojecttxtedit{
+ display: none;
+ width: 100%;
+ height: 34px;
+ padding: 6px 12px;
+ font-size: 14px;
+ line-height: 1.42857143;
+ color: #555;
+ background-color: #fff;
+background-image: none;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+.fldesedit, .flrdnsedit, .iprdnseditv6, .iprdnseditv4, .voledit, .apikeyedit, .apiprojectedit{
+  border-bottom: 1px dashed #999;
+  text-decoration: none;
+}
+
+.dropdown-left-manual {
+  right: 0;
+  left: auto;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.hcloudorange{
+  color: orange;
+}
+
+.hcloudgreen{
+  color: green;
+}
+
+.hcloud-loader {
+  position:fixed;
+        width:100%;
+        left:0;right:0;top:0;bottom:0;
+        background-color: rgba(255,255,255,0.7);
+        z-index:9999;
+        display:none;
+}
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+
+.hcloud-loader::after {
+  content:'';
+  display:block;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-style:solid;
+  border-radius:50%;
+  border: 5px solid rgba(192,192,192,0.3);
+  border-top-color: rgba(255,0,0,0.7);
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+.hcloud-portlet.hcloud-portlet--height-fluid {
+    height: calc(100% - 20px);
+}
+.hcloud-portlet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-shadow: 0 0 13px 0 rgba(82,63,105,.05);
+    box-shadow: 0 0 13px 0 rgba(82,63,105,.05);
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+.hcloud-portlet.hcloud-portlet--height-fluid .hcloud-portlet__body {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.hcloud-portlet .hcloud-portlet__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: url('../img/waves.png') no-repeat;
+    padding: 30px 20px;
+    border-radius: 4px;
+}
+.hcloud-widget-12 .hcloud-widget-12__body .hcloud-widget-12__head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.hcloud-widget-12 .hcloud-widget-12__body .hcloud-widget-12__head .hcloud-widget-12__date.hcloud-widget-12__date--focus {
+    background-color: rgba(152,22,244,.1);
+    color: #9816f4;
+}
+.hcloud-widget-12 .hcloud-widget-12__body .hcloud-widget-12__head .hcloud-widget-12__date {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(93,120,255,.1);
+    color: #5d78ff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 5rem;
+    flex: 0 0 5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 1.25rem;
+    text-transform: uppercase;
+    line-height: 1.3rem;
+}
+.hcloud-widget-12 .hcloud-widget-12__body .hcloud-widget-12__head .hcloud-widget-12__label {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.hcloud-widget-12 .hcloud-widget-12__body .hcloud-widget-12__head .hcloud-widget-12__label .hcloud-widget-12__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #48465b;
+}
+.hcloud-widget-12 .hcloud-widget-12__body .hcloud-widget-12__head .hcloud-widget-12__label .hcloud-widget-12__desc {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #74788d;
+}
+.hcloud-widget-12 .hcloud-widget-12__body .hcloud-widget-12__info {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #74788d;
+}
+.hcloud-portlet .hcloud-portlet__foot.hcloud-portlet__foot--md {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.hcloud-portlet .hcloud-portlet__foot {
+    padding: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid #ebedf2;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.hcloud-portlet .hcloud-portlet__foot .hcloud-portlet__foot-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+button.btn.suspend::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f28d\00a0";
+  position: relative;
+  left: -12px;
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 3px 0 0 3px;
+}
+button.btn.terminate::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f057\00a0";
+  position: relative;
+  left: -12px;
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 3px 0 0 3px;
+}
+button.btn.package::before {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f49c\00a0";
+  position: relative;
+  left: -12px;
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 3px 0 0 3px;
+}
+
+.prtbl tr td,
+.prtbl tr th{text-align:center;}
+.prtbl th{background-color:lightblue;
+font-size:12px;
+font-weight:bold;}
+.prtbl{text-align:center!important;}
+.dsl{background:white;border:1px solid #c3c3c3;border-radius:5px;border-spacing:0px;border-collapse:separate;}
+.hcloud-highcharts-figure, .highcharts-data-table table {
+  min-width: 320px;
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+/*2021.1*/
+.footer-bg-sm{
+    background: url('../img/footer-bg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.footer-bg{
+    background: url('../img/footer.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.footer-bg-lg{
+    background: url('../img/footer-lg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+
+.vnotify-container {
+  position: fixed; }
+  .vnotify-container.vn-top-right {
+    right: 10px;
+    top: 10px; }
+  .vnotify-container.vn-top-left {
+    top: 10px;
+    left: 10px; }
+  .vnotify-container.vn-bottom-right {
+    bottom: 10px;
+    right: 10px; }
+  .vnotify-container.vn-bottom-left {
+    bottom: 10px;
+    left: 10px; }
+  .vnotify-container.vn-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .vnotify-container .vn-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    cursor: pointer; }
+    .vnotify-container .vn-close:before, .vnotify-container .vn-close:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      height: 2px;
+      background: #fff; }
+    .vnotify-container .vn-close:before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .vnotify-container .vn-close:after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+
+.vnotify-item {
+  width: 20em;
+  padding: 15px;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  opacity: 0.75;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  filter: alpha(opacity=75); }
+  .vnotify-item:hover {
+    opacity: 1; }
+
+.vnotify-title {
+  font-weight: bold; }
+
+.vnotify-info {
+  background: #3498db;
+  color: #fff; }
+
+.vnotify-success {
+  background: #2ecc71;
+  color: #fff; }
+
+.vnotify-error {
+  background: #e74c3c;
+  color: #fff; }
+
+.vnotify-warning {
+  background: #f39c12;
+  color: #fff; }
+
+.vnotify-notify {
+  background: #333;
+  color: #fff; }
+
+
+
+/*====== Ready to use Css End ======*/

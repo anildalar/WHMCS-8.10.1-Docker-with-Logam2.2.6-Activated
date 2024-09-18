@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 10:05:43
+/* Smarty version 3.1.48, created on 2024-09-18 05:21:37
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/delete-media-img.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e40e779c8e39_02975093',
+  'unifunc' => 'content_66ea63616d6659_04678113',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e40e779c8e39_02975093 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea63616d6659_04678113 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <div class="modal" id="deleteImgModal" data-media-remove-modal>
     <div class="modal__dialog">
         <div class="modal__content">

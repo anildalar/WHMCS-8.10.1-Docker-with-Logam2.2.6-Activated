@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 10:25:57
+/* Smarty version 3.1.48, created on 2024-09-18 03:59:44
   from '/var/www/html/templates/lagom2/core/cms/sections/config/features/features.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e413359ac241_56200110',
+  'unifunc' => 'content_66ea5030c28499_70710578',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e413359ac241_56200110 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea5030c28499_70710578 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 $_smarty_tpl->_assignInScope('darkIcons', false);
 if (($_smarty_tpl->tpl_vars['theme']->value == "primary" || $_smarty_tpl->tpl_vars['theme']->value == "secondary") && $_smarty_tpl->tpl_vars['features_style']->value != "boxed") {?>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 09:37:24
+/* Smarty version 3.1.48, created on 2024-09-18 04:00:58
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e407d44a7845_65113534',
+  'unifunc' => 'content_66ea507a953163_62494746',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e407d44a7845_65113534 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea507a953163_62494746 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="app-navbar navbar navbar--main navbar--h">
     <div class="container">
         <a class="navbar__brand brand" href="<?php echo $_smarty_tpl->tpl_vars['helper']->value->url('Templates@index');?>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 09:46:32
+/* Smarty version 3.1.48, created on 2024-09-18 03:51:41
   from '/var/www/html/templates/lagom2/lagompage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e409f86837a9_47623564',
+  'unifunc' => 'content_66ea4e4d7dd737_36549312',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e409f86837a9_47623564 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea4e4d7dd737_36549312 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 if ($_smarty_tpl->tpl_vars['templatefile']->value == "homepage") {?>
     <?php $_smarty_tpl->_assignInScope('pageClass', $_smarty_tpl->tpl_vars['templatefile']->value);

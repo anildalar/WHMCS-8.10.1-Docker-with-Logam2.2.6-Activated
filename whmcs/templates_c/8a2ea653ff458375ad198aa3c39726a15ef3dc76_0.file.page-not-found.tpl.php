@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-15 07:15:30
+/* Smarty version 3.1.48, created on 2024-09-18 03:51:42
   from '/var/www/html/templates/lagom2/error/page-not-found.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e6899294e0b6_71644953',
+  'unifunc' => 'content_66ea4e4ecfe747_91137982',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e6899294e0b6_71644953 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea4e4ecfe747_91137982 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['activeDisplay']->value == "CMS" && $_smarty_tpl->tpl_vars['pageType']->value == "website" && file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/lagompage.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/lagompage.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } elseif (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/error/overwrites/page-not-found.tpl")) {?>

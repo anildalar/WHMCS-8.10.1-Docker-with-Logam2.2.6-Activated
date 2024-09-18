@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 10:05:43
+/* Smarty version 3.1.48, created on 2024-09-18 05:21:37
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/section/section-add.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e40e779ac900_99725454',
+  'unifunc' => 'content_66ea63616c12a6_99087943',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/media/no-data.tpl' => 3,
   ),
 ),false)) {
-function content_66e40e779ac900_99725454 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea63616c12a6_99087943 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div 
     class="modal modal--lg modal--media" 
     id="modalAddNewSection" 

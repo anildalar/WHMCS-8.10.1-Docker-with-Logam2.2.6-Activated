@@ -18,7 +18,10 @@ class License
 	private $useInternalLicensingMirror = false;
 	private $debuglog = array();
 	private $lastCurlError = NULL;
-
+	
+	public function getRegistrationDate(){
+        
+    }
 	public function checkFile($value)
 	{
 		if ($value != 'a896faf2c31f2acd47b0eda0b3fd6070958f1161') {

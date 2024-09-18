@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 10:25:57
+/* Smarty version 3.1.48, created on 2024-09-18 03:59:44
   from '/var/www/html/templates/lagom2/core/cms/sections/config/testimonials/testimonial-item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e41335c2a3c8_72673566',
+  'unifunc' => 'content_66ea5030eed158_86103073',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e41335c2a3c8_72673566 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea5030eed158_86103073 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div
     class="testimonials-item<?php if ($_smarty_tpl->tpl_vars['type']->value == "type-3") {?> testimonials-single<?php }
 if ($_smarty_tpl->tpl_vars['style']->value == "boxed") {?> is-boxed<?php } elseif ($_smarty_tpl->tpl_vars['style']->value == "bordered") {?> is-bordered<?php } elseif ($_smarty_tpl->tpl_vars['style']->value == "default") {?> testimonials-item-default<?php }?>">

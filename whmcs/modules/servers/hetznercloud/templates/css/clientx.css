@@ -1,0 +1,103 @@
+/* .dropdown-menu.show {
+    right: auto;
+    animation-name: none;
+    animation-duration: unset;
+    animation-iteration-count: unset;
+    animation-timing-function: ease;
+    animation-fill-mode: unset;
+    margin: .125rem 0 0;
+} */
+.modal.show .modal-dialog {
+    margin-top: 200px;
+}
+.dropdown-menu.show {
+    right: auto;
+    animation-fill-mode: unset;
+    margin: .125rem 0 0;
+    animation-name: none;
+    animation-duration: unset;
+    animation-iteration-count: unset;
+    animation-timing-function: ease;
+
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 0px !important;
+}
+
+.createfirewall {
+    padding: 11px;
+}
+.theme-client-service-detail-page div#tabOverview{
+    background: none;
+    padding: 0px;
+}
+
+.modal-body input.form-control {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da !important;
+    border-radius: .25rem;
+}
+
+#liveToastModal {
+    top: 93px !important;
+    z-index: 102;
+}
+
+#reverse_dns_modal_IPV6 .reverse_ipv6,
+#create_ipv6_modal .reverse_ipv6 {
+    height: 3.45em !important;
+}
+
+.page-link {
+    line-height: 1.5 !important;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: #e9ecef;
+}
+button.snapshot-btn {
+    color: #fff;
+    background-color: #369;
+    border-color: #369;
+}
+button.snapshot-btn:hover {
+    color: #fff;
+    background-color: #29537c;
+    border-color: #264d73;
+}
+#backup-btn {
+    color: #fff;
+    background-color: #369;
+    border-color: #369;
+}
+#backup-btn:hover {
+color: #fff;
+background-color: #29537c;
+border-color: #264d73;
+}
+.dataTables_wrapper div.dataTables_paginate ul.pagination .active a.page-link {
+    color: #fff;
+    background-color: #369;
+    border-color: #369;
+}
+.theme-main-inner-page-section {
+    margin-top: 20px;
+}
+select.custom-select.custom-select-sm.form-control.form-control-sm {
+    width: 70px !important;
+    margin: 0 5px;
+}
+.btn-primary:disabled {
+    color: #fff;
+    background-color: #369 !important;
+    border-color: #369;
+}
+.btn.btn-primary.rebuild-btn{
+    background-color: #369 !important;
+}
+.modal.show .modal-dialog {
+    margin-top: 200px !important;
+}

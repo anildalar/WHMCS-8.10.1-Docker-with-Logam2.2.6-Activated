@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 10:05:16
+/* Smarty version 3.1.48, created on 2024-09-18 05:21:29
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/settings/includes/display-rule.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e40e5cc18da2_10701223',
+  'unifunc' => 'content_66ea63599e24f1_19367659',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/docs.tpl' => 1,
   ),
 ),false)) {
-function content_66e40e5cc18da2_10701223 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea63599e24f1_19367659 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="tab-pane <?php if ($_GET['settingsTab'] == 'display' || !(isset($_GET['settingsTab']))) {?> is-active <?php }?>" id="settings-display">
     <div class="t-c__top top" data-top-search
          data-toggler-options="toggleClass: is-open;">

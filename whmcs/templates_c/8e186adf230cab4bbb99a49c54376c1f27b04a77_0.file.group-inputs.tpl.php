@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 10:05:16
+/* Smarty version 3.1.48, created on 2024-09-18 05:21:29
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/settings/includes/group-inputs.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e40e5ce18e21_34312043',
+  'unifunc' => 'content_66ea6359b86c66_95150756',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 7,
   ),
 ),false)) {
-function content_66e40e5ce18e21_34312043 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea6359b86c66_95150756 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class=" collapse-toggle d-flex">
     <h6 class="top__title">
         <?php echo $_smarty_tpl->tpl_vars['label']->value;?>

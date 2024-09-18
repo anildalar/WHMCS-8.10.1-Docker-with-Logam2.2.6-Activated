@@ -1,0 +1,122 @@
+.snapshot_backup .nav-tabs li a:hover {
+    border-left: 1px solid #dee2e6 !important;
+    border-top: 1px solid #dee2e6 !important;
+    border-right: 1px solid #dee2e6 !important;
+    box-shadow: unset !important;
+    color: #000 !important;
+    background-color: #fff;
+}
+
+.snapshot_backup .nav-tabs li a {
+    padding: 10px 30px;
+    box-shadow: unset !important;
+}
+
+.snapshot_backup .nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.snapshot_backup .nav-item {
+    margin-right: 0px;
+}
+
+.server-satus-running,
+.graphs-wrapper,
+.bk-snp-wrapper,
+.wandwidth-container,
+.server-details-container,
+.snapshot-container-right,
+.rescue-container-right {
+    box-shadow: 0px 48px 81px rgba(0, 0, 1, 0.06) !important;
+}
+
+#reverse_dns_modal_IPV6 .reverse_ipv6,
+#create_ipv6_modal .reverse_ipv6 {
+    height: 3.4em !important;
+}
+
+#liveToastModal {
+    z-index: 11;
+}
+
+#liveToast {
+    background-color: white !important;
+}
+
+.graphs-wrapper select.graph-select,
+.graphs-wrapper select#graph-selection {
+    width: auto !important;
+    height: 35px !important;
+}
+
+
+.server-status-wrapper li button.btn {
+    padding-left: 8px !important;
+}
+
+#CreatefirewallModal .modal-dialog,
+#updatefirewallModal .modal-dialog {
+    min-width: 47%;
+}
+
+.modal-header .close {
+    padding: var(--modal-btn-close-padding);
+    margin-right: -8px;
+    margin-top: -42px !important;
+}
+
+#showSSHPublicKey .modal-dialog,
+#content_modal_network .modal-dialog,
+#route_modal_network .modal-dialog,
+#CreatenetworkModal .modal-dialog,
+#create_ipv6_modal .modal-dialog,
+#reverse_dns_modal_IPV4 .modal-dialog,
+#reverse_dns_modal_IPV4 .modal-dialog {
+    min-width: 45% !important;
+}
+
+#content_modal_network .server-satus-title .resourcestableHeader h3 {
+    float: unset !important;
+}
+
+.rebuild-btn {
+    background-color: #1062fe !important;
+}
+.rebuild-btn:hover {
+    background-color: #009aff !important;
+}
+
+.server-satus-wrapper .server-satus-running,
+.server-satus-wrapper .wandwidth-container,
+.server-satus-wrapper .server-details-container,
+.server-satus-wrapper .rescue_section,
+.server-satus-wrapper .snapshot-container-right,
+.server-satus-wrapper .snapshot_backup,
+.server-satus-wrapper .firewall_section,
+.server-satus-wrapper .firewall_rule_section,
+.server-satus-wrapper .network_section,
+.server-satus-wrapper .reverseDns_section,
+.server-satus-wrapper .floatingIps_section,
+.server-satus-wrapper .ISOImage_section,
+.server-satus-wrapper .SSHKey_section,
+.server-satus-wrapper .graph_section,
+.server-satus-wrapper .taskHistory_section {
+    border: 1px solid #e9eaec;
+}
+
+#backup-btn {
+    background: #1062fe;
+    border-color: #015abe;
+    border:1px solid #015abe;
+}
+button.snapshot-btn {
+    background: #1062fe;
+    border-color: #015abe;
+    border:1px solid #015abe;
+}
+button.snapshot-btn:hover {
+    background: #009aff;
+}
+#backup-btn:hover {
+    background: #009aff;
+}

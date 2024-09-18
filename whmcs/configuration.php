@@ -14,3 +14,7 @@ $db_tls_verify_cert = '';
 $cc_encryption_hash = 'VPKxiqegMzYi3dKOKOyzfuh4Af8OB6q9b7M4b5huIurlxee3QLBmcnE3XVwSSH5e';
 $templates_compiledir = 'templates_c';
 $mysql_charset = 'utf8';
+
+$_SERVER['HTTPS'] = 'on';
+$_SERVER['HTTP_X_FORWARDED_PROTO'] = 'https';
+$WEB_ROOT = '/';

@@ -1,0 +1,31 @@
+{
+  "schema": "1.0",
+  "type": "whmcs-servers",
+  "name": "ContaboVM",
+  "license": "proprietary",
+  "category": "provisioning",
+  "description": {
+    "name": "Contabo Cloud",
+    "tagline": "Contabo Cloud Automation By WHMCSModule Networks",
+    "short": "Contabo Cloud module enables bridge between your WHMCS instane with Contabo portal for ease of use and automation of cloud instances.",
+    "long": "This module can be used to auto provisioning of Contabo Cloud instances. \n\nThis module supports the following actions at provisioning time:\n\n* Instant Activation of Cloud Server on Payment received\n* Automatic Suspension/ Unsuspension/ Termination of the VM\n* Power On/Power Off/Reboot of Instance\n* IP/ OS Rebuild Management\n\nIn all cases, in addition to the itemised action.\r\n\r\n[Learn more &raquo;](https:\/\/www.whmcsmodule.net\/contabo-cloud-automation)"
+  },
+  "logo": {
+    "filename": "logo.png"
+  },
+  "support": {
+    "homepage": "https://www.whmcsmodule.net",
+    "support_url": "https:\/\/secure.whmcsmodule.net"
+  },
+  "authors": [
+    {
+      "name": "WHMCSModule Networks",
+      "homepage": "https:\/\/www.whmcsmodule.net\/"
+    }
+  ],
+  "tags": [
+    "contabo",
+    "cloud",
+    "contabovps"
+  ]
+}

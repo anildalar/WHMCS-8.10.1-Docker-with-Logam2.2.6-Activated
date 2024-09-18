@@ -1,0 +1,50 @@
+{
+  "name": "modulesgarden/hetznervps",
+  "description": "",
+  "version": "1.1.0",
+  "type": "project",
+  "license": "EULA",
+  "homepage": "http://www.modulesgarden.com",
+  "support": {
+    "email": "contact@modulesgarden.com",
+    "issues": "http://www.modulesgarden.com/customers/support",
+    "forum": "http://www.forum.modulesgarden.com/"
+  },
+  "authors": [],
+  "require": {
+    "php": ">=7.1",
+    "piwik/ini": "1.0.6",
+    "rappasoft/laravel-helpers": "^1.0",
+    "netresearch/jsonmapper": "^4.0",
+    "lkdevelopment/hetzner-cloud-php-sdk": "2.6.2"
+  },
+  "replace": {
+    "symfony/http-foundation": "*",
+    "symfony/yaml": "*",
+    "symfony/dependency-injection": "*",
+    "psr/log": "*",
+    "psr/cache": "*",
+    "psr/simple-cache": " *",
+    "psr/container": "*",
+    "symfony/polyfill-mbstring": "*",
+    "symfony/polyfill-php70": "*",
+    "paragonie/random_compat": "*",
+    "symfony/console": "*",
+    "guzzlehttp/guzzle": "*",
+    "symfony/cache": "*",
+    "monolog/monolog": "*",
+    "symfony/var-dumper": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "ModulesGarden\\Servers\\HetznerVps\\App\\": "./app",
+      "ModulesGarden\\Servers\\HetznerVps\\Core\\": "./core",
+      "ModulesGarden\\Servers\\HetznerVps\\Packages\\": "./packages"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.4.0"
+    }
+  }
+}

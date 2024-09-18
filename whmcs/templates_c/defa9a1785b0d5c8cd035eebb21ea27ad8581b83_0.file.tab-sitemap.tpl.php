@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 10:05:43
+/* Smarty version 3.1.48, created on 2024-09-18 05:21:37
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/includes/tab-sitemap.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e40e778b7d74_03238900',
+  'unifunc' => 'content_66ea6361591248_79984288',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 5,
   ),
 ),false)) {
-function content_66e40e778b7d74_03238900 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea6361591248_79984288 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="tab-pane <?php if ($_GET['tab'] == 'sitemap') {?>is-active<?php }?>" id="settings-sitemap">
     <form id="sitemapForm" method="post" action="<?php echo $_smarty_tpl->tpl_vars['helper']->value->url("Template@sitemapSave",array('templateName'=>$_smarty_tpl->tpl_vars['template']->value->getMainName()));?>
 ">

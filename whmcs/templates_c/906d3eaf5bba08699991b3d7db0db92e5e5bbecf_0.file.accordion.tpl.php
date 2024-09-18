@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-13 10:25:57
+/* Smarty version 3.1.48, created on 2024-09-18 03:59:45
   from '/var/www/html/templates/lagom2/assets/img/cms/accordion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66e41335cb99d6_16172878',
+  'unifunc' => 'content_66ea5031041436_57450140',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66e41335cb99d6_16172878 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea5031041436_57450140 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
 fill="none">
 <g clip-path="url(#clip0_1015_66215)">
