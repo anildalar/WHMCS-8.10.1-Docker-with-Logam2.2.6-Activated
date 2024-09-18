@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-18 04:00:58
+/* Smarty version 3.1.48, created on 2024-09-18 05:50:45
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ea507aa61501_11746123',
+  'unifunc' => 'content_66ea6a354d6460_52758683',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/modals/mismatch-system-url.tpl' => 1,
   ),
 ),false)) {
-function content_66ea507aa61501_11746123 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea6a354d6460_52758683 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['extension']->value)) && $_smarty_tpl->tpl_vars['extension']->value) {?>
     <div class="modal modal--xlg" id="emailPrev">
         <div class="modal__dialog">

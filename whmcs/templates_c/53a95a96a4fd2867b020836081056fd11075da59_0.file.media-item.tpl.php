@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-18 05:21:37
+/* Smarty version 3.1.48, created on 2024-09-18 05:50:51
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/section/media-item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ea63616ced95_60876573',
+  'unifunc' => 'content_66ea6a3b9f8fc9_16915487',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ea63616ced95_60876573 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea6a3b9f8fc9_16915487 (Smarty_Internal_Template $_smarty_tpl) {
 ?><label class="media__item media__item--thumb <?php if ((isset($_smarty_tpl->tpl_vars['type']->value)) && $_smarty_tpl->tpl_vars['type']->value == "predefined") {?>media__item--horizontal<?php }
 if ((isset($_smarty_tpl->tpl_vars['comingsoon']->value)) && $_smarty_tpl->tpl_vars['comingsoon']->value) {?>media__item--comingsoon<?php }?>" data-media-item="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
 ">

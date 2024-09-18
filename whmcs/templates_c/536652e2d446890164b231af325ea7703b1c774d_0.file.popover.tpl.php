@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-18 05:21:29
+/* Smarty version 3.1.48, created on 2024-09-18 05:50:51
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/helpers/popover.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ea6359a516a3_19931387',
+  'unifunc' => 'content_66ea6a3b8ed277_11861683',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ea6359a516a3_19931387 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ea6a3b8ed277_11861683 (Smarty_Internal_Template $_smarty_tpl) {
 ?><span class="<?php echo $_smarty_tpl->tpl_vars['popoverClasses']->value;?>
  popover-container" data-popover-container>
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" data-popover-open="hover">

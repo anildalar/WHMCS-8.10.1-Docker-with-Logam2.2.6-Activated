@@ -1,0 +1,3 @@
+#cloud-config
+runcmd:
+- [touch, /root/cloud-init-worked]
