@@ -1,0 +1,1 @@
+UPDATE `tblemailtemplates` SET `message` = '<p>Hi {$contact.name},</p>\n<p>Now, we have new webform. Remember this.</p>' WHERE `tblemailtemplates`.`name` = 'Modulesgarden CRM - webform template';

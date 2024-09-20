@@ -1,0 +1,29 @@
+{
+  "schema": "1.0",
+  "type": "whmcs-addons",
+  "name": "AI Assistant",
+  "license": "proprietary",
+  "category": "support tools",
+  "description": {
+    "name": "AI Assistant",
+    "tagline": "Revolutionize Your WHMCS Experience with ChatGPT: Your Ultimate Assistant for Ticket Management and More.",
+    "long": "Revolutionize Your WHMCS Experience with ChatGPT: Your Ultimate Assistant for Ticket Management and More.",
+    "features": [
+      "AI Assistant"
+    ]
+  },
+  "logo": {
+    "filename": "logo.png"
+  },
+  "support": {
+    "homepage": "https:\/\/99modules.com\/",
+    "learn_more": "https:\/\/99modules.com\/",
+    "email": "support@99modules.com"
+  },
+  "authors": [
+    {
+      "name": "99modules",
+      "homepage": "https:\/\/99modules.com\/"
+    }
+  ]
+}

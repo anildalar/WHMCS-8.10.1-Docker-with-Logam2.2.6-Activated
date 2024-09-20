@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-18 05:50:51
+/* Smarty version 3.1.48, created on 2024-09-20 07:04:55
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/add-new-page-requirements.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ea6a3b9d4584_84503581',
+  'unifunc' => 'content_66ed1e9700a7d2_20883042',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ea6a3b9d4584_84503581 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ed1e9700a7d2_20883042 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal modal--hero" id="pagePermissionsModal" data-page-permissions-modal>
     <div class="modal__dialog">
         <div class="modal__content">

@@ -1,1 +1,0 @@
-<script>window.open(window.location.href + "&mg-action=consoleInNewWindow", "_blank"); window.history.back();</script>

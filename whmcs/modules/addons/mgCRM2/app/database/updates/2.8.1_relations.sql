@@ -1,0 +1,1 @@
+ALTER TABLE `crm_email_logs` ADD COLUMN `bcc` VARCHAR(255) NULL AFTER `cc`;

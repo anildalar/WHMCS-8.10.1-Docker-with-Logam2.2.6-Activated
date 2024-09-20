@@ -1,0 +1,117 @@
+<div style="position: fixed; right: 50px; z-index: 999; min-width: 300px;">
+    <note ng-repeat="m in scopeMessages" type="{{m.type}}" dismiss="true" close="{{$index}}"><h4 class="note-title">{{m.title}}</h4>{{m.content}}</note>
+</div>
+
+
+<div class="box light bordered">
+    <div class="box-title">
+        <div class="caption">
+            <span class="bold font-red-thunderbird uppercase">
+                {{ ::('settings.automations.edit.edit' | translate) }}
+            </span>
+        </div>
+
+        <div class="actions">
+            <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only fullscreen">
+                <i class="icon-size-fullscreen"></i>
+            </a>
+        </div>
+    </div>
+    <div class="box-body"  block-ui="editAutomationFormBox" style="min-height: 100px;">
+        
+            <form class="form-horizontal" novalidate role="form" name="automationForms" id="automationForms"  ng-submit="automationsFormSubmit()" >
+                <fieldset>
+                    <div class="form-group col-md-12" ng-class="{'ng-invalid': (submitted && automationForms.name.$invalid), 'ng-valid': (submitted && automationForms.name.$valid)}">
+                        <label for="name" class="col-sm-2 control-label primary-font thin">
+                            {{ 'settings.automations.edit.form.name' | translate }}
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="name" ng-model="automation.name" id="name" placeholder="{{ 'settings.automations.edit.form.name.placeholder' | translate }}" required>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="status" class="col-sm-2 control-label primary-font thin">{{ 'settings.automations.edit.form.status' | translate }}</label>
+                        <div class="col-sm-10">
+                            <div class="picek-switch">
+                                <input id="status" name="status" class="switch-rounded" type="checkbox" string-to-number ng-model="automation.status">
+                                <label for="status"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12 text-center">
+                            <button 
+                                    ng-disabled="automationForms.$invalid"
+                                    type="submit"
+                                    class="btn btn-success btn-inverse">
+                                {{ ::('settings.automations.edit.form.button.update' | translate) }}
+                            </button>   
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="clearfix"></div>
+    </div>
+</div>
+
+<div>
+    <div class="box light">
+        <div class="box-title">
+            <div class="caption">
+                <div id="tableSearchContainer" style="width: 300px; margin-right: 35px;">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="background: none;"><i class="font-red bold icon-magnifier"></i></span>
+                        <input ng-model="query" ng-change="findNodes()" placeholder="{{ 'form.search.placeholder' | translate }}" id="main-table-global-search" class="form-control" type="search" style="border-color: #e5e5e5;" />
+                    </div>
+                </div>
+            </div>
+            <div class="actions" style="padding-right: 11px; top: 17px;">
+                <a href class="btn btn-inverse " ng-class="(editable === true ? 'btn-success' : 'btn-danger')" ng-click="editable = !editable">
+                    {{ (editable === true ? 'settings.automations.edit.btn.edtiable.off' : 'settings.automations.edit.btn.edtiable.on') | translate }}
+                </a>
+                <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only fullscreen">
+                    <i class="icon-size-fullscreen"></i>
+                </a>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class='row'>
+                <div class='col-md-12 col-sm-12'>
+                    <div ng-if='rules && rules.length > 0' ui-tree='treeOptions' id="tree-root">
+                        <ol ui-tree-nodes ng-model="rules" id="tree-root" ng-class="{hidden: collapsed}">
+                            <li ng-repeat="rules in rules" ui-tree-node ng-include="'nodes_renderer.html'" ng-show="visible(rules)"></li>
+                        </ol>
+                    </div>
+                    <div ng-show="editable" style="margin-top: 40px;">
+                        <div class="tree-node tree-node-content ng-scope ng-binding angular-ui-tree-handle" style='height: 53px;'>
+                            <button type="button" style='margin-right: 8px;' class="pull-center btn btn-primary btn-md btn-block" data-nodrag ng-click="creatRootRule()"><span class="glyphicon glyphicon-plus"></span>&nbsp;{{ 'settings.automations.edit.rule.add' | translate }}</button>
+                        </div>
+                    </div>
+                    <div  ng-if='!editable && (rules && rules.length == 0 || !rules)' >
+                        <p class="text-center">{{ ::('settings.automations.edit.rules.empty' | translate) }}</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+          <script type="text/ng-template" id="nodes_renderer.html">
+            <div ui-tree-handle class="tree-node tree-node-content" style='height: 53px;' ng-class="{'tree-node-invalid':  rules.isSuccessForm}">
+                <select data-nodrag ng-model="rules.rule" ng-change="changeRule(rules)" placeholder="{{ 'settings.automations.edit.rule.select.placeholder' | translate }}" ng-show="editable" ng-options="rule.rule as rule.title for rule in rulesType"></select>
+                <button type="button" style='margin-right: 8px;' class="pull-left  btn btn-success btn-md" ng-show="rules.rules && rules.rules.length > 0" data-nodrag ng-click="toggle(this)"><span class="glyphicon glyphicon-chevron-right" ng-class="{'glyphicon-chevron-right': collapsed, 'glyphicon-chevron-down': !collapsed}"></span></button>
+                <div class="pull-left title-contect" ng-show="editable === false">{{getRuleTitle(rules.rule)}}</div>
+                <button type="button" style='margin-right: 8px;' class="pull-right btn btn-danger  btn-md" ng-show="editable" data-nodrag ng-click="removeRule(this)"><span class="glyphicon glyphicon-remove"></span></button>
+                <button type="button" style='margin-right: 8px;' class="pull-right btn btn-primary btn-md" ng-show="editable" data-nodrag ng-click="newSubItem(this)" style="margin-right: 8px;"><span class="glyphicon glyphicon-plus"></span>&nbsp;{{ 'settings.automations.edit.subrule.add' | translate }}</button>
+                <button type="button" style='margin-right: 8px;' ng-class='{"btn-success": rules.show, "btn-danger": !rules.show}' class="pull-right btn btn-md" ng-show="editable" data-nodrag ng-click="rules.show = !rules.show"><span ng-show="rules.show" class="glyphicon glyphicon-triangle-top"></span><span ng-hide="rules.show" class="glyphicon glyphicon-triangle-bottom"></span>&nbsp;{{ (!rules.show?'settings.automations.edit.rule.show.form':'settings.automations.edit.rule.hide.form') | translate }}</button>
+            </div>
+            
+            <div ng-show="editable && rules.show" style='margin-bottom: 0px;' class="tree-node tree-node-content" data-nodrag ng-include="roodDirParent + '/app/settings/automations/edit/templates/forms/' + rules.rule + '.html'"></div>
+            <ol ui-tree-nodes ng-model="rules.rules" ng-class="{hidden: collapsed}">
+                <li ng-repeat="rules in rules.rules" ui-tree-node ng-include="'nodes_renderer.html'" ng-show="visible(rules)">
+                </li>
+            </ol>
+          </script>
+
+        </div>
+    </div>
+</div>

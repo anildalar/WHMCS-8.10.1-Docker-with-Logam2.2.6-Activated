@@ -1,0 +1,66 @@
+<div class='box light' style='margin-bottom: 0px;' >
+    <div class="box-title">
+        <div class="caption">
+            <span class="bold font-red-thunderbird uppercase">
+                {{ 'settings.automations.rule.edit.form.addFollowUp.title' | translate }}
+            </span>
+        </div>
+    </div>
+    <div class="box-body">
+        <form class="form-horizontal" name="saveAutomationRuleItems[{{rules.id}}]" ng-submit="saveAutomationRule(rules)" >
+            <fieldset>
+                <div class="form-group">
+                    
+                    <div class="form-group col-md-6" ng-class="{'ng-invalid':  saveAutomationRuleItems[{{rules.id}}].admin.$invalid, 'ng-valid': saveAutomationRuleItems[{{rules.id}}].admin.$valid}">
+                        <label class="col-sm-4 control-label primary-font thin">{{ ::('settings.automations.rule.edit.form.addFollowUp.admin' | translate) }}</label>
+                        <div class="col-sm-8">
+                            <ui-select name="admin" ng-model="rules.data.target_id" ng-required="true">
+                                <ui-select-match placeholder="{{ 'settings.automations.rule.edit.form.addFollowUp.admin.placeholder' | translate }}">{{ $select.selected.firstname + ' ' + $select.selected.lastname }}</ui-select-match>
+                                <ui-select-choices repeat="admin.id as admin in formRuleData.admins | filter: $select.search">
+                                      <div ng-bind-html="('<b>#' + admin.id + '</b> ' + admin.firstname + ' ' + admin.lastname) | highlight: $select.search"></div>
+                                      <small ng-bind-html="('<i>' + admin.email + '</i>') | highlight: $select.search"></small>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group col-md-6" ng-class="{'ng-invalid':  saveAutomationRuleItems[{{rules.id}}].after.$invalid, 'ng-valid': saveAutomationRuleItems[{{rules.id}}].after.$valid}">
+                        <label class="col-sm-4 control-label primary-font thin">{{ ::('settings.automations.rule.edit.form.addFollowUp.after' | translate) }}</label>
+                        <div class="col-sm-8">
+                            <input type="number" class='form-control' name="after" ng-model="rules.data.after" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group col-md-6" ng-class="{'ng-invalid':  saveAutomationRuleItems[{{rules.id}}].admin.$invalid, 'ng-valid': saveAutomationRuleItems[{{rules.id}}].admin.$valid}">
+                        <label class="col-sm-4 control-label primary-font thin">{{ ::('settings.automations.rule.edit.form.addFollowUp.followUpType' | translate) }}</label>
+                        <div class="col-sm-8">
+                            <ui-select name="followUpType" ng-model="rules.data.followUpType" ng-required="true">
+                                <ui-select-match placeholder="{{ 'settings.automations.rule.edit.form.addFollowUp.followUpType.placeholder' | translate }}">{{ $select.selected.name }}</ui-select-match>
+                                <ui-select-choices repeat="followupType.id as followupType in formRuleData.followupType | filter:{active:true}">
+                                      <div class='label label-default label-sm'ng-style='{"background-color": followupType.color}' ng-bind-html="( followupType.name ) | highlight: $select.search"></div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group col-md-6" ng-class="{'ng-invalid':  saveAutomationRuleItems[{{rules.id}}].description.$invalid, 'ng-valid': saveAutomationRuleItems[{{rules.id}}].description.$valid}">
+                        <label class="col-sm-4 control-label primary-font thin">{{ ::('settings.automations.rule.edit.form.addFollowUp.description' | translate) }}</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" name='description' ng-model='rules.data.description'></textarea>
+                        </div>
+                    </div>
+                  
+                    
+                    <div class="col-sm-12 text-center">
+                        <button 
+                            ng-class="{'disabled':  rules.isSuccessForm = saveAutomationRuleItems[{{rules.id}}].$invalid}"
+                            type="submit"
+                            class="btn btn-success btn-inverse">
+                            {{ ::('settings.automations.rule.edit.form.btn.upload'| translate) }}
+                        </button>   
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

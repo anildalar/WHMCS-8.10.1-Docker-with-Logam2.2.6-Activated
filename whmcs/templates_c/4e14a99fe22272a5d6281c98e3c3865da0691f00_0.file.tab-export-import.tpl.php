@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-18 05:50:51
+/* Smarty version 3.1.48, created on 2024-09-20 07:04:54
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/includes/tab-export-import.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ea6a3b9bfc99_62432389',
+  'unifunc' => 'content_66ed1e96f2a048_31610201',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 3,
   ),
 ),false)) {
-function content_66ea6a3b9bfc99_62432389 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ed1e96f2a048_31610201 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="tab-pane <?php if ($_GET['tab'] == 'export-import') {?>is-active<?php }?>" id="settings-export-import">
     <div class="section">
         <div class="section__header">

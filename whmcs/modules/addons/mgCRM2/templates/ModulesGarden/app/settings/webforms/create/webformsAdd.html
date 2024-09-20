@@ -1,0 +1,445 @@
+<style type="text/css">
+    .webFormFieldName {
+        background-color: rgba(0, 0, 0, 0.01);
+        border: none;
+    }
+</style>
+<div class="box light">
+    <div class="box-title">
+        <div class="caption bold">
+            {{ 'settings.webforms.create.title' | translate }}
+        </div>
+        <div class="actions" ng-show="newWebForm.$invalid && newWebForm.$dirty">
+            <i class="fa font-red fa-warning" tooltip="{{ 'form.add' | translate }}"></i>&nbsp;
+        </div>
+    </div>
+
+    <div class="box-body">
+
+        <note ng-repeat="m in scopeMessages" type="{{m.type}}" dismiss="true" close="{{$index}}"><h4 class="note-title">
+            {{m.title}}</h4>{{m.content}}
+        </note>
+
+        <form name="newWebForm" valid-submit="createWebFormSubmit()" novalidate role="form" class="form-horizontal">
+
+            <div class="container-fluid raw">
+                <div class="col-lg-12">
+                    <div class="box light bordered">
+                        <div class="box-title">
+                            <span class="bold font-red-thunderbird uppercase pull-left">
+                                {{ 'settings.webforms.details.title' | translate }}
+                            </span>
+                        </div>
+                        <div class="box-body">
+
+                            <fieldset class="row-fluid">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="form-group col-md-6"
+                                             ng-class="{'ng-invalid': (submitted && newWebForm.name.$invalid), 'ng-valid': (submitted && newWebForm.name.$valid)}">
+                                            <label for="name" class="col-sm-4 control-label primary-font thin">
+                                                {{ 'settings.webforms.create.name' | translate }}
+                                                <i class="fa fa-question-circle" tooltip-placement="top"
+                                                   tooltip="{{ 'settings.webforms.create.name.tooltip' | translate }}"></i>
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="name" ng-required="true" ng-model="webform.static.name"
+                                                       class="form-control" id="name"
+                                                       placeholder="{{ 'settings.webforms.create.name.placeholder' | translate }}"/>
+
+                                                <small class="help-block error"
+                                                       ng-show="submitted && webform.static.name.$invalid">
+                                                    {{ 'form.validator.text.required' | translate }}
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6"
+                                             ng-class="{'ng-invalid': (submitted && newWebForm.url.$invalid), 'ng-valid': (submitted && newWebForm.url.$valid)}">
+                                            <label for="url" class="col-sm-4 control-label primary-font thin">
+                                                {{ 'settings.webforms.create.url' | translate }}
+                                                <i class="fa fa-question-circle" tooltip-placement="top"
+                                                   tooltip="{{ 'settings.webforms.create.url.tooltip' | translate }}"></i>
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <textarea name="url" ng-required="true" ng-model="webform.static.url"
+                                                       class="form-control" id="url"
+                                                       placeholder="{{ 'settings.webforms.create.url.placeholder' | translate }}"></textarea>
+
+                                                <small class="help-block error"
+                                                       ng-show="submitted && webform.static.url.$invalid">
+                                                    {{ 'form.validator.text.required' | translate }}
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6"
+                                             ng-class="{'ng-invalid': (submitted && newWebForm.contact_type.$invalid), 'ng-valid': (submitted && newWebForm.contact_type.$valid)}">
+                                            <label for="contact_type" class="col-sm-4 control-label primary-font thin">
+                                                {{ 'settings.webforms.create.contact_type' | translate }}
+                                                <i class="fa fa-question-circle" tooltip-placement="top"
+                                                   tooltip="{{ 'settings.webforms.create.contact_type.tooltip' | translate }}"></i>
+                                            </label>
+                                            <div class="col-sm-8">
+
+                                                <ui-select ng-model="webform.contact_type" focus-on='setFocusType'>
+                                                    <ui-select-match
+                                                            placeholder="{{ 'resource.create.select.type.placeholder' | translate }}">
+                                                        {{ $select.selected.name }}
+                                                    </ui-select-match>
+                                                    <ui-select-choices
+                                                            repeat="t in contactTypes | filter:{active:true}:true | filter: $select.search">
+                                                        <div ng-show="t.active">
+                                                            <p>
+                                                                <i ng-class="t.icon" ng-show="t.icon"
+                                                                   ng-style="t.color && {'color':t.color}"></i>
+                                                                {{ ::t.name }}
+                                                            </p>
+                                                        </div>
+                                                    </ui-select-choices>
+                                                </ui-select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6"
+                                             ng-class="{'ng-invalid': (submitted && newWebForm.status.$invalid), 'ng-valid': (submitted && newWebForm.status.$valid)}">
+                                            <label for="status" class="col-sm-4 control-label primary-font thin">
+                                                {{ 'settings.webforms.create.status' | translate }}
+                                                <i class="fa fa-question-circle" tooltip-placement="top"
+                                                   tooltip="{{ 'settings.webforms.create.status.tooltip' | translate }}"></i>
+                                            </label>
+                                            <div class="col-sm-8">
+
+                                                <ui-select ng-model="webform.status" focus-on='setFocusType'>
+                                                    <ui-select-match
+                                                            placeholder="{{ 'settings.webforms.create.select.placeholder' | translate }}">
+                                                        {{ $select.selected.name }}
+                                                    </ui-select-match>
+                                                    <ui-select-choices
+                                                            repeat="t in params.statuses | filter:{active:true}:true | filter: $select.search">
+                                                        <div ng-show="t.active">
+                                                            <p>
+                                                                <i ng-class="t.icon" ng-show="t.icon"
+                                                                   ng-style="t.color && {'color':t.color}"></i>
+                                                                {{ ::t.name }}
+                                                            </p>
+                                                        </div>
+                                                    </ui-select-choices>
+                                                </ui-select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label class="col-sm-4 control-label primary-font thin" ng-click="setFocusAdmin()">{{ ::('resource.create.select.admin' | translate)
+                                                }}</label>
+                                            <div class="col-sm-8">
+
+                                                <ui-select ng-model="webform.assignedAdmin" focus-on='setFocusAdmin'>
+                                                    <ui-select-match
+                                                            placeholder="{{ 'resource.create.select.admin.placeholder' | translate }}">
+                                                        {{ $select.selected.firstname + ' ' + $select.selected.lastname }}
+                                                    </ui-select-match>
+                                                    <ui-select-choices repeat="admin in params.admins | filter: $select.search">
+                                                        <div ng-bind-html="('<b>#' + admin.id + '</b> ' + admin.firstname + ' ' + admin.lastname) | highlight: $select.search"></div>
+                                                        <small ng-bind-html="('<i>' + admin.email + '</i>') | highlight: $select.search"></small>
+                                                    </ui-select-choices>
+                                                </ui-select>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6"
+                                             ng-class="{'ng-invalid': (submitted && newWebForm.admins.$invalid), 'ng-valid': (submitted && newWebForm.admins.$valid)}">
+                                            <label for="admins" class="col-sm-4 control-label primary-font thin">
+                                                {{ 'settings.webforms.create.admins' | translate }}
+                                                <i class="fa fa-question-circle" tooltip-placement="top"
+                                                   tooltip="{{ 'settings.webforms.create.admins.tooltip' | translate }}"></i>
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <ui-select name="admins"
+                                                           ng-style="{'height':'34px','padding-left':'12px','padding-top':'5px'}"
+                                                           ng-model="webform.admins" multiple focus-on='setFocusType'>
+                                                    <ui-select-match class=""
+                                                                     placeholder="{{ 'settings.webforms.create.admins.placeholder' | translate }}">
+                                                        {{ $item.firstname + ' ' + $item.lastname }}
+                                                    </ui-select-match>
+                                                    <ui-select-choices repeat="ad in params.admins | filter: $select.search">
+                                                        <div ng-bind-html="('<b>#' + ad.id + '</b> ' + ad.firstname + ' ' + ad.lastname) | highlight: $select.search"></div>
+                                                        <small ng-bind-html="('<i>' + ad.email + '</i>') | highlight: $select.search"></small>
+                                                    </ui-select-choices>
+                                                </ui-select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6"
+                                             ng-class="{'ng-invalid': (submitted && newWebForm.timeout.$invalid), 'ng-valid': (submitted && newWebForm.timeout.$valid)}">
+                                            <label class="col-sm-4 control-label primary-font thin">
+                                                {{ 'settings.webforms.create.timeout' | translate }}
+                                                <i class="fa fa-question-circle" tooltip-placement="top"
+                                                   tooltip="{{ 'settings.webforms.create.timeout.tooltip' | translate }}"></i>
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <p class="input-group">
+                                                    <input type="text"
+                                                           name="timeout"
+                                                           id="timeout"
+                                                           class="form-control"
+                                                           datetime-picker="HH:mm:ss"
+                                                           ng-model="webform.static.timeout"
+                                                           is-open="timeoutDataOpen"
+                                                           enable-time="1"
+                                                           enable-date="0"
+                                                           close-on-selection="true"
+                                                           close-on-time-now="false"
+                                                           timepicker-options="{readonlyInput: false, showMeridian: false, mousewheel: false, meridians: null}"/>
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-default"
+                                                                ng-click="timeoutDataOpenClick(true)"><i class="fa fa-clock-o"></i></button>
+                                                    </span>
+                                                </p>
+
+                                                <!--                                        <small class="help-block error"-->
+                                                <!--                                               ng-show="submitted && webform.static.timeout.$invalid">-->
+                                                <!--                                            {{ 'form.validator.text.required' | translate }}-->
+                                                <!--                                        </small>-->
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="labels" class="col-sm-4 control-label primary-font thin">
+                                                {{ 'resource.create.main.labels' | translate }}
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <ui-select class='form-control' ng-model="webform.static.labels" multiple>
+                                                    <ui-select-match class=''
+                                                                     placeholder="{{ 'resource.summary.main.labels.search' | translate }}">
+                                                        {{ $item.name }}
+                                                    </ui-select-match>
+                                                    <ui-select-choices repeat="label in params.labels | filter: $select.search">
+                                                        <p>
+                                                            <small ng-bind-html="label.name | highlight: $select.search"
+                                                                   class='label label-lg label-default'
+                                                                   ng-style="{'background-color': ('#' + label.color), 'color' : label.labelColor}"></small>
+                                                        </p>
+                                                    </ui-select-choices>
+                                                </ui-select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="labels" class="col-sm-4 control-label primary-font thin">
+                                                {{ 'resource.create.followup.add' | translate }}
+                                                <i class="fa fa-question-circle" tooltip-placement="top"
+                                                   tooltip="{{ 'settings.webforms.followup.tooltip' | translate }}"></i>
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <input type="checkbox" ng-model="webform.static.createFollowup"
+                                                       style="margin-top: 12px;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="labels" class="col-sm-4 control-label primary-font thin">
+                                                {{ 'resource.create.main.duplicateEmails' | translate }}
+                                                <i class="fa fa-question-circle" tooltip-placement="top"
+                                                   tooltip="{{ 'settings.webforms.duplicate_email.tooltip' | translate }}"></i>
+                                            </label>
+                                            <div class="col-sm-8">
+                                                <input type="checkbox" ng-model="webform.static.duplicate_email"
+                                                       style="margin-top: 12px;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6" ng-show="webform.static.createFollowup">
+                                            <div class="add-follow-up-input">
+                                                <label class="col-sm-4 control-label primary-font thin">
+                                                    {{ 'resource.create.followup.setLabel' | translate }}
+                                                </label>
+                                                <div class="col-sm-8">
+                                                    <ui-select ng-model="webform.static.followupLabel" focus-on='setFocusType'>
+                                                        <ui-select-match
+                                                                placeholder="{{ 'resource.summary.main.followups.search' | translate }}">
+                                                            {{ $select.selected.name }}
+
+                                                        </ui-select-match>
+                                                        <ui-select-choices
+                                                                repeat="followupLabel in params.followups | filter:{active:true}:true | filter: $select.search">
+                                                            <p>
+                                                                <small ng-bind-html="followupLabel.name | highlight: $select.search"
+                                                                       class='label label-lg label-default'
+                                                                       ng-style="{'background-color': ('#' + followupLabel.color)}"></small>
+                                                            </p>
+                                                        </ui-select-choices>
+                                                    </ui-select>
+                                                </div>
+                                            </div>
+                                            <div class="add-follow-up-input">
+                                                <label class="col-sm-4 control-label primary-font thin">
+                                                    {{ 'resource.create.followup.setStatus' | translate }}
+                                                </label>
+                                                <div class="col-sm-8">
+                                                    <ui-select ng-model="webform.static.followupStatus" focus-on='setFocusType'>
+                                                        <ui-select-match
+                                                                placeholder="{{ 'resource.summary.main.followups.search' | translate }}">
+                                                            {{ $select.selected.name }}
+
+                                                        </ui-select-match>
+                                                        <ui-select-choices
+                                                                repeat="status in params.followupStatus | filter:{active:true}:true | filter: $select.search">
+                                                            <p>
+                                                                <small ng-bind-html="status.name | highlight: $select.search"
+                                                                       class='label label-lg label-default'
+                                                                       ng-style="{'background-color': ('#' + status.color)}"></small>
+                                                            </p>
+                                                        </ui-select-choices>
+                                                    </ui-select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid raw">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+
+                    <div class="box light bordered">
+                        <div class="box-title">
+                            <span class="bold font-red-thunderbird uppercase pull-left">
+                                {{ 'settings.webforms.fields.title' | translate }}
+                            </span>
+                        </div>
+                        <div class="box-body">
+
+                            <div class="row" vertilize-container ng-repeat="grpcounter in fieldGroups"
+                                 ng-if="$index % 2 == 0">
+                                <div ng-repeat="group in fieldGroups.slice($index, $index+2)">
+                                    <div class="col-lg-6">
+                                        <div class="box light bordered" vertilize>
+                                            <div class="box-title">
+                                                <div class="caption">
+                                                    <span class="caption-subject bold uppercase"
+                                                          ng-style="{'color': group.color }">{{ group.name }}</span>
+                                                </div>
+
+                                                <div class="actions" ng-hide="group.active">
+                                                    <i class="fa fa-warning font-red" tooltip-placement="left"
+                                                       tooltip-append-to-body="true"
+                                                       tooltip="{{ 'settings.fields.tooltip.disabled' | translate }}"></i>
+                                                </div>
+                                            </div>
+                                            <div class="box-body no-padding">
+
+                                                <div class="container-fluid margin-bottom-20"
+                                                     ui-sortable="sortableOptions" ng-model="group.fields">
+
+
+                                                    <div class="row single-field sortableItem"
+                                                         ng-show="field.active==true" ng-repeat="field in group.fields">
+                                                        <div class="col-md-8 tex-left mySortableHandler"
+                                                             style="padding-left: 0;">
+                                                            <a href="#" class="margin-right-10">
+                                                                <i class="fa fa-reorder"></i>
+                                                            </a>
+                                                            <div style="display: inline-block;">
+                                                                <a href="#" style="overflow: hidden">
+                                                                    #{{ field.id }} {{ field.name }}
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <small>{{ field.type }}</small>
+                                                        </div>
+                                                    </div>
+
+                                                    <h5 class="text-center" ng-hide="group.fields.length">
+                                                        {{ 'settings.fields.no.in.group' | translate }}
+                                                    </h5>
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+
+                    <div class="box light bordered">
+                        <div class="box-title">
+                            <span class="bold font-red-thunderbird uppercase pull-left">
+                                {{ 'settings.webforms.webform.title' | translate }}
+                            </span>
+                        </div>
+                        <div class="box-body">
+
+
+                            <div class="container-fluid margin-bottom-20 sortableContainer"
+                                 ui-sortable="sortableOptions" ng-model="webform.fields">
+                                <div class='item sortable' ng-repeat="field in webform.fields">
+                                    <div class="row sortableItem">
+                                        <div class="col-md-4 tex-left" style="padding-left: 0;">
+                                            <a href="#" class="margin-right-10 mySortableHandler">
+                                                <i class="fa fa-reorder"></i>
+                                            </a>
+                                            <div style="display: inline-block;">
+                                                <a href="#">
+                                                    #{{ field.id }} {{ field.name }}
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-md-2">
+                                            <input class="webFormFieldName bold" type="text"
+                                                   name="custom_name_{{ $index }}" ng-required="true"
+                                                   ng-model="webform.fields[ $index ].custom_name"
+                                                   value="{{ field.name }}"/>
+                                            <small class="help-block error"
+                                                   ng-show="newWebForm['custom_name_' + $index].$invalid && newWebForm['custom_name_' + $index].$dirty"
+                                                   style="color: rgb(132, 53, 52);">
+                                                {{ 'form.validator.text.required' | translate }}
+                                            </small>
+                                        </div>
+
+                                        <div class="col-md-4 text-center">
+                                            <small>{{ field.type }}</small>
+                                        </div>
+                                        <div class="col-md-2 text-right">
+                                            <a href="#" ng-click="removeFromForm(field.id)">X</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Placeholder-->
+                                <div ng-hide="webform.fields.length" id="webFormFieldsPlaceholder"
+                                     class="row sortableItem">
+                                    <div class="col-md-12 text-center" style="padding-left: 0;">
+                                        {{ 'settings.webform.new.fieldplaceholder' | translate }}
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="container-fluid raw">
+                <div class="form-group col-md-12 text-center">
+                    <button type="submit" ng-click="submitted=true" class="btn btn-success btn-inverse">
+                        {{ 'form.add' | translate }}
+                    </button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>

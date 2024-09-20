@@ -1,0 +1,210 @@
+{% extends template_from_string(whmcs.templateContent) %}
+
+{% block root %}
+
+    <!-- START main angular app wrapper -->
+    <div class="mg-wrapper body full-screen-module-container" data-target=".body" data-spy="scroll" data-twttr-rendered="true" ng-controller="AppController">
+
+        <!-- START GLOBALS -->
+
+            <!-- Header External Includes-->
+            {# font! #}
+            <link href="{{ settings.url_scheme }}://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=all" rel="stylesheet" type="text/css"/>
+
+            {# fucking awesome icons #}
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+
+            <!-- Header Include Libs -->
+
+{#            <link href="templates/blend/style.css" rel="stylesheet" type="text/css">#}
+
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/jquery-ui/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+                
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/angularjs/ng-dialog/css/ngDialog.min.css" rel="stylesheet" type="text/css" />
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/angularjs/ng-dialog/css/ngDialog-theme-default.min.css" rel="stylesheet" type="text/css" />
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/angularjs/angular-xeditable/css/xeditable.css" rel="stylesheet" type="text/css" />
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/angularjs/block-ui/angular-block-ui.css" rel="stylesheet" type="text/css" />
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/angularjs/ui-select/dist/select.css" rel="stylesheet" type="text/css" />
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/angularjs/textAngular/dist/textAngular.css" rel="stylesheet" type="text/css" />
+            <link href="{{ settings.templates.rootDir }}/assets/plugins/angularjs/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.min.css" rel="stylesheet" type="text/css" />
+            
+
+        <!-- END GLOBALS -->
+
+        <!-- START DYMANICLY LOADED CSS FILES -->
+        <!-- here is a place where angular will put css/js files needed to load dynamically NEEDS TO BE AFTER GLOBALS -->
+        <link id="ng_load_plugins_before" />
+        <!-- END DYMANICLY LOADED CSS FILES -->
+
+
+        <!-- Header Include General Style -->
+        <link href="{{ settings.templates.rootDir }}/assets/css/global-components.css" rel="stylesheet" type="text/css" />
+        <!-- Header Include Layout specific colors theme  -->
+        <link href="{{ settings.templates.rootDir }}/assets/css/layout.css" rel="stylesheet" type="text/css" />
+        {# <link href="{{ settings.templates.rootDir }}/assets/css/default.css" rel="stylesheet" type="text/css" /> #}
+        <!-- Header Include Layout plugins custom styles -->
+        <link href="{{ settings.templates.rootDir }}/assets/css/plugins.css" rel="stylesheet" type="text/css" />
+        <!-- CUSTOM DEFINED !? just for module purpose -->
+        <link href="{{ settings.templates.rootDir }}/assets/css/custom.css" rel="stylesheet" type="text/css" />
+        <!-- possible to mergo above -->
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- CSS DIRECTIVES TO PUT IMAGES URL ETC -->
+        
+        <style>
+            .mg-wrapper .mg-loader-flow {
+                background: url({{ settings.templates.rootDir }}/assets/img/mg-loader-flow.png) no-repeat;
+            }
+        </style>
+        
+
+        <!-- PAGE SPINNER will be here -->
+
+        <!-- END PAGE SPINNER -->
+
+        <!-- BEGIN HEADER -->
+        <div class="page-header">
+           {% include 'partials/header.twig' %}
+        </div>
+        <!-- END HEADER -->
+
+        <div class="clearfix">
+        </div>
+
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+
+            <div class="container-fluid fade-in-up" style="background-color: white;height: 250px;">
+                    
+                    <div class="clearfix"></div>               
+                    
+                    
+        
+                    <div class="ng-scope" >
+                        <div class="row-fluid ng-scope" >
+                            <div class="ng-scope" >
+                                <div class="box light ng-scope" >
+                                    <div class="alert alert-warning" style="margin-top: 100px;margin-bottom: 100px;">
+                                    {{message_error}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BEGIN FOOTER -->
+            <div class="page-footer">
+                <div class="container">
+                     {{ lang.translate( 'CRM' ) }} - {{ lang.translate( 'Customer Relationship Manager' ) }}. &copy; <a href="http://www.modulesgarden.com" class="mgBanner" target="_blank">ModulesGarden</a>
+                </div>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+            <!-- END FOOTER -->
+
+        </div>
+        <!-- END CONTAINER -->
+
+
+        <!-- BEGIN CORE JQUERY PLUGINS -->
+        <!--[if lt IE 9]>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/respond.min.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/excanvas.min.js"></script>
+        <![endif]-->
+
+        {# {% if not whmcs.isVersion6 %} #}
+            <!-- jQuery required styles - all of them are required to keep compatibility with WHMCS one (fucking old ones....) -->
+{#            <script src="{{ settings.templates.rootDir }}/assets/plugins/jquery/jquery-1.11.2.min.js" type="text/javascript"></script>#}
+{#            <script src="{{ settings.templates.rootDir }}/assets/plugins/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>#}
+{#            <script src="{{ settings.templates.rootDir }}/assets/plugins/jquery/jquery-1.11.2.min.js" type="text/javascript"></script>#}
+{#            <script src="{{ settings.templates.rootDir }}/assets/plugins/jquery-migrate/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>#}
+{#            <script src="{{ settings.templates.rootDir }}/assets/plugins/jquery-ui/js/jquery-ui.min.js" type="text/javascript"></script>#}
+        {# {% endif %} #}
+
+        <!-- CORE JQUERY PLUGINS -->
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/jquery-blockui/jquery.blockui.min.js" type="text/javascript"></script>
+{#        <script src="{{ settings.templates.rootDir }}/assets/plugins/jquery-cokie/jquery.cokie.min.js" type="text/javascript"></script>#}
+{#        <script src="{{ settings.templates.rootDir }}/assets/plugins/jquery-uniform/jquery.uniform.min.js" type="text/javascript"></script>#}
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <!-- END CORE JQUERY PLUGINS -->
+
+        
+        {# APLICATION #}
+        <script src="{{ settings.templates.rootDir }}/app/app.mgCRM.js" type="text/javascript"></script>
+        
+
+        <!-- BEGIN CORE ANGULARJS PLUGINS -->
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/angular.min.js" type="text/javascript"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/angular-sanitize.js" type="text/javascript"></script> 
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/angular-animate.min.js" type="text/javascript"></script> 
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/ui-router/angular-ui-router.min.js" type="text/javascript"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/angular-resource.js" type="text/javascript"></script> 
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/ocLazyLoad/dist/ocLazyLoad.min.js" type="text/javascript"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/angular-translate/angular-translate.min.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/ui-bootstrap/ui-bootstrap-tpls-0.13.4.min.js" type="text/javascript"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/ui.bootstrap.datetimepicker/dist/datetime-picker.min.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/ng-dialog/js/ngDialog.min.js" type="text/javascript"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/angular-xeditable/js/xeditable.min.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/block-ui/angular-block-ui.min.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/ui-sortable/sortable.min.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/ui-select/dist/select.min.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/Smart-Table/dist/smart-table.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/textAngular/dist/textAngular-rangy.min.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/textAngular/dist/textAngular-sanitize.min.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/textAngular/dist/textAngular.min.js"></script>
+        <script src="{{ settings.templates.rootDir }}/assets/plugins/moment/moment.min.js"></script>
+{#        <script src="{{ settings.templates.rootDir }}/assets/plugins/angularjs/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.min.js"></script>#}
+        <!-- END CORE ANGULARJS PLUGINS -->
+
+        <!-- BEGIN APP LEVEL ANGULARJS SCRIPTS -->
+        <!-- load CRM module for angular -->
+            {# In this way we can push twig wariables directly to angular script initializations #}
+
+        <!-- END APP LEVEL ANGULARJS SCRIPTS -->
+
+        <script type="text/javascript">
+        {% autoescape false %}
+            
+            // maybe will be usefull string escape
+            function jqescape(str) { return str.replace(/[#;&,\.\+\*~':"!\^\$\[\]\(\)=>|\/\\]/g, '\\$&'); }
+
+            // init JavaScript app
+            $(document).ready(function() 
+            {
+                // js template wrapper for some nesesary actions
+                // related only with template, nothing more
+                mgCRM.init(false);
+                // fix for V4 template!
+                $('#content_container > #sidebar').prev().attr('class', 'col-lg-12 col-md-12');
+            });
+        
+        {% endautoescape %}
+        </script>
+        <!-- END JAVASCRIPTS -->
+
+        <!-- ASTERISK WIDGET TO CALL -->
+        {% if settings.templates.integrations.asterisk %}
+            {% include 'partials/asteriskjs.twig' %}
+        {% endif %}
+        
+
+    </div><!-- END main angular app wrapper -->
+
+
+
+{% endblock %}
+

@@ -1,0 +1,41 @@
+<script type="text/javascript">
+    $("#crm-message").dialog({
+        modal: false,
+        autoOpen: false,
+        width: 600,
+        buttons: {
+            "Open in new window": function (e) {
+                window.open("crm.php#!/contacts/{$contact_id}/summary", "_blank");
+            },
+            "Close": function () {
+                $(this).dialog("close");
+            },
+        },
+        position: {
+            my: "left middle",
+            at: "right top",
+            of: "#crm-popupdetails-btn"
+        },
+        title: "Details",
+    }).load("crm.php/api/helpers/popup/summary/{$contact_id}/json");
+
+    $("#crm-popupdetails-btn").on("click", function () {
+        $("#crm-message").dialog("open");
+    });
+
+    function convertTo() {
+        var params = {};
+        params['ajax_action'] = 'convertType';
+        params['contact_id'] = {$contact_id};
+        params['type_id'] = $('#crm2-convert-type-id').find(":selected").val();
+
+        $('#ajax_loader').show();
+        $('#ajax_results').html('');
+        $.post("", params, function (data) {
+            $('#ajax_loader').hide();
+            $('#ajax_results').html(data);
+        }).fail(function (xhr, textStatus, errorThrown) {
+            alert("Ajax failure: " + xhr.responseText);
+        });
+    }
+</script>

@@ -1,0 +1,68 @@
+<h2>{{ 'text.change.label.title' | translate }}</h2>
+
+<br>
+
+
+<form name="reassignForm" class="form-horizontal" novalidate ng-submit="FormSubmit()" role="form">
+
+    <div class="form-group margin-top-5">
+        <div class="col-sm-2 text-right">
+            <label class="control-label primary-font">
+                {{ 'text.select.labels.action' | translate }}
+            </label>
+        </div>
+        <div class="col-sm-10">
+            <ui-select name="actions"
+                       ng-model="$parent.selectedAction"
+                       ng-required="true"
+            >
+                <ui-select-match style="width: 100%;"  placeholder="{{ 'text.select.action.search' | translate }}">
+                    <span>{{ $select.selected.name }}</span>
+                </ui-select-match>
+
+                <ui-select-choices repeat="action in actionLists | filter: $select.search">
+                    <span ng-bind-html="action.name | highlight: $select.search"></span>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+    </div>
+
+    <div class="form-group no-margin">
+        <div class="col-sm-2 text-right">
+            <label class="control-label primary-font">
+                {{ 'text.select.labels.title' | translate }}
+            </label>
+        </div>
+        <div class="col-sm-10">
+            <ui-select id="labels-multi-select"
+                       name="labels"
+                       ng-required="true"
+                       ng-model="$parent.selectedLabels"
+                       multiple
+            >
+                <ui-select-match style="width: 100%;"  placeholder="{{ 'resource.summary.main.labels.search' | translate }}">
+                    <span>{{ $item.name }}</span>
+                </ui-select-match>
+
+                <ui-select-choices repeat="label in labelLists | filter: $select.search">
+                    <span class="label label-sm"
+                          ng-style="{'background-color': ('#' + label.color), 'color' : label.labelColor, 'margin-right' : '5px'}"
+                          ng-bind-html="label.name | highlight: $select.search"></span>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="ngdialog-buttons">
+        <button type="submit" class="ngdialog-button ngdialog-button-primary">{{ 'form.update' | translate }}</button>
+        <button type="button" class="ngdialog-button ngdialog-button-secondary" ng-click="closeThisDialog(0)">{{ 'form.close' | translate }}</button>
+    </div>
+
+</form>
+
+
+
+
+

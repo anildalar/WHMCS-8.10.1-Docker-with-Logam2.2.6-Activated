@@ -1,0 +1,23 @@
+<div ng-if="allowChangeAdmin" class="pull-right form-group" style="position: absolute; top: 6px; right: 15px;">
+    <div class="pull-left control-label" style="padding-top: 5px; padding-right: 10px;">
+        <label for="select-admin-to-preview" class="primary-font font-sm thin">            
+            {{ 'statistics.previewfor' | translate }}
+        </label>
+    </div>
+    <div class="pull-left">
+        <ui-select ng-model="$parent.$parent.requestForAdmin" style="width: 300px" theme='selectize'>
+            <ui-select-match placeholder="{{ 'resource.create.select.admin.placeholder' | translate }}">{{ $select.selected.full }}</ui-select-match>
+            <ui-select-choices repeat="admin.id as admin in admins | filter: $select.search">
+                  <div ng-bind-html="admin.full | highlight: $select.search"></div>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+</div>
+
+<div class="row">
+    <div ui-view="perStatus"></div>
+    <div ui-view="lastTen"></div>
+    <div ng-if="allowAllAdmin" ui-view="totalPerAdmin"></div>
+    <div ui-view="newPerMonth"></div>
+    <div ui-view="newPerDay"></div>
+</div>

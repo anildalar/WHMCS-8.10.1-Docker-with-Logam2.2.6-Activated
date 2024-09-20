@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div id="crm-details-inline" class="successbox row"
+         style="background-image: none; padding-left: 10px;padding-bottom: 0px;">
+        <p style="margin: 0; position: relative;">
+            <div class="list-inline">
+                <span class="title" style="margin-top: 5px; display: inline-block;">
+                    CRM<sub class="small" style="opacity: .5;font-weight: 100;color: #000;">v2</sub>
+                </span>
+                <span class="btn-group">
+                    {$detailsBtn}{$showContact}{$createBtn}
+                </span>
+                {$convert}
+                {$crmInlineBarText}
+                <span style="margin-right:10px; display: inline-block; float: right; line-height: 22px;">
+                    <img style="display:none;" id="ajax_loader" src="images/loading.gif" alt="loading"/>
+                    <span style="display: inline-block;" id="ajax_results">{$ajaxResults}</span>
+                </span>
+            <div id="crm-message" title="{$title}">
+                <div style="float: left;width: 50%;">{$leftside}</div>
+                <div style="float: left;width: 50%;">{$rightside}</div>
+            </div>
+            </div>
+        </p>
+    </div>
+</div>

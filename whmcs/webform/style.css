@@ -1,0 +1,147 @@
+.mgcrm_webform .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.mgcrm_webform .form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.mgcrm_webform .form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.mgcrm_webform .form-control:-ms-input-placeholder {
+  color: #999;
+}
+.mgcrm_webform .form-control::-webkit-input-placeholder {
+  color: #999;
+}
+.mgcrm_webform .form-control[disabled],
+.mgcrm_webform .form-control[readonly],
+.mgcrm_webform fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eee;
+  opacity: 1;
+}
+.mgcrm_webform textarea.form-control {
+  height: auto;
+}
+.mgcrm_webform .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.mgcrm_webform .btn:focus,
+.mgcrm_webform .btn:active:focus,
+.mgcrm_webform .btn.active:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.mgcrm_webform .btn:hover,
+.mgcrm_webform .btn:focus {
+  color: #333;
+  text-decoration: none;
+}
+.mgcrm_webform .btn:active,
+.mgcrm_webform .btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.mgcrm_webform .btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.mgcrm_webform .btn-success:hover,
+.mgcrm_webform .btn-success:focus,
+.mgcrm_webform .btn-success:active,
+.mgcrm_webform .btn-success.active,
+.mgcrm_webform .open .dropdown-toggle.btn-success {
+  color: #fff;
+  background-color: #47a447;
+  border-color: #398439;
+}
+.mgcrm_webform .btn-success:active,
+.mgcrm_webform .btn-success.active,
+.mgcrm_webform .open .dropdown-toggle.btn-success {
+  background-image: none;
+}
+.mgcrm_webform .btn-success .badge {
+  color: #5cb85c;
+  background-color: #fff;
+}
+
+.mgcrm_webform .alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.mgcrm_webform .alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.mgcrm_webform .pull-right {
+  float: right !important;
+}
+
+.mgcrm_webform .clearfix:after
+{
+  display: table;
+  content: " ";
+}
+.mgcrm_webform .clearfix:after
+{
+    clear: both;
+}
+.mgcrm_webform .MGCRM_WebForm
+{
+    overflow: hidden;
+    transition: height 0.8s ease;   
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.mgcrm_webform .formSubmit 
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.mgcrm_webform
+{
+  padding: 5px;
+}

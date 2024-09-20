@@ -1,0 +1,556 @@
+
+
+                    <div class="container-fluid raw">
+
+                        <div class="box light bordered">
+                            <div class="box-title">
+                                <div class="caption">
+                                    <span class="bold uppercase">
+                                        {{ 'settings.general.update.btn' | translate }}
+                                    </span>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only fullscreen">
+                                        <i class="icon-size-fullscreen"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="box-body">
+
+                                <form class="form-horizontal" novalidate role="form">
+
+                                    <fieldset class="col-md-12 margin-top-10">
+
+                                        <div class="form-group margin-bottom-5">
+                                            <div class="col-sm-2 text-right">
+                                                <label for="settings.followups_synch_provider">
+                                                    <h5 class="text-right no-margin margin-top-5">
+                                                        {{ 'settings.general.followups.synch_whmcs' | translate }}
+                                                    </h5>
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <multiselect show-select-all="true" id-prop="id" display-prop="name" show-unselect-all="true" id="settings.followups_synch_provider" ng-model="settings.followups_synch_provider" options="options_synch_provider"></multiselect>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <p class="help-block no-margin-bottom" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                    {{ 'settings.general.followups.synch_whmcs.descr' | translate }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group margin-bottom-5" style="display: none;" ng-style="googleCalendarStyle">
+                                            <div class="col-sm-2 text-right">
+                                                <label class="primary-font font-sm thin"
+                                                       for="authGoogle.client_id">{{ 'form.calendar_select' | translate
+                                                    }}</label>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <select class="form-control input-sm pull-left ng-pristine ng-valid ng-touched"
+                                                        ng-model="settings.selected_calendar"
+                                                        ng-options='key as value for (key , value) in settings.calendar_list'>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group margin-bottom-5">
+                                            <div class="col-sm-2 text-right">
+                                                <label for="settings.active_alarm_followups">
+                                                    <h5 class="text-right no-margin margin-top-5">
+                                                        {{ 'settings.general.followups.active_alarm' | translate }}
+                                                    </h5>
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <input type="checkbox" id="settings.active_alarm_followups" ng-model="settings.active_alarm_followups" />
+
+                                                <p class="help-block no-margin-bottom" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                    {{ 'settings.general.followups.active_alarm.descr' | translate }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group margin-bottom-5">
+                                            <div class="col-sm-2 text-right">
+                                                <label for="settings.followups_per_day">
+                                                    <h5 class="text-right no-margin margin-top-5">
+                                                        {{ 'settings.general.followups.day' | translate }}
+                                                    </h5>
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <input type="checkbox" id="settings.followups_per_day" ng-model="settings.followups_per_day" />
+
+                                                <p class="help-block no-margin-bottom" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                    {{ 'settings.general.followups.day.descr' | translate }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr class="no-margin" />
+                                        <div class="form-group margin-top-5 margin-bottom-5">
+                                            <div class="col-sm-2 text-right">
+                                                <label for="settings.followups.followups_reschedule_template">
+                                                    <h5 class="text-right no-margin margin-top-5">
+                                                        {{ 'settings.followups.notif' | translate }}
+                                                    </h5>
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <select class="form-control input-sm pull-left" ng-options="convertToInt(f.id) as f.full for f in templates" ng-model="settings.followups_reschedule_template" style="width: 300px;">
+                                                </select>
+
+                                                <p class="help-block no-margin-bottom pull-left" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                    {{ 'settings.followups.notif.descr' | translate }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group margin-top-5 margin-bottom-5">
+                                            <div class="col-sm-2 text-right">
+                                                <label for="settings.followups.create.lead.followup.type">
+                                                    <h5 class="text-right no-margin margin-top-5">
+                                                        {{ 'settings.followups.create.lead.followup.type' | translate }}
+                                                    </h5>
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <select class="form-control input-sm pull-left" ng-options="convertToInt(f.id) as f.name for f in followupTypes" ng-model="settings.followups_create_lead_followup_type" style="width: 300px;">
+                                                </select>
+
+                                                <p class="help-block no-margin-bottom pull-left" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                    {{ 'settings.followups.create.lead.followup.type.descr' | translate }}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr class="no-margin" />
+                                        <div class="form-group margin-top-5">
+                                            <div class="col-sm-12 text-center">
+                                                <button ng-click="submitGeneralSettings()" type="button" class="btn btn-success btn-inverse">
+                                                    {{ 'settings.general.update.btn' | translate }}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="container-fluid raw" style="display: none;" ng-style="googleAuthStyle">
+
+                        <div class="box light bordered" ng-class="{'toogled': formHiddenAuthGoogle }">
+                            <div class="box-title">
+                                <div class="caption">
+                                    <span class="bold font-green uppercase">
+                                        {{ 'settings.general.followup.widget.authGoogle' | translate }}
+                                    </span>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" ng-show="formHiddenAuthGoogle" ng-click="formHiddenAuthGoogle=false" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                    <a href="javascript:;" ng-hide="formHiddenAuthGoogle" ng-click="formHiddenAuthGoogle=true" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                                        <i class="fa fa-compress"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="box-body" block-ui="formSubmitAuthGoogle" style="min-height: 100;">
+                                <form ng-submit="authGoogleSubmit()" name="authGoogleForm" novalidate role="form" blank-target class="form-horizontal">
+                                    <fieldset>
+                                        <div class="col-sm-12">
+                                            <div class="alert alert-info alert-dismissable">
+                                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                {{ 'auth.information.to.connect' | translate }} <a href="//www.docs.modulesgarden.com/CRM_For_WHMCS#Google_Calendar" target="_blank">{{ 'auth.information.to.connect.here' | translate }}</a>.
+                                                <br>
+                                            </div>
+
+                                            <!--<div class="form-group col-sm-6">
+                                                <div class="col-sm-2 control-label">
+                                                    <label class="primary-font font-sm thin" for="authGoogle.google_radio">{{ 'form.radio' | translate }}</label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" value="global" name="authGoogle.google_radio" ng-model="authGoogle.google_radio"/>{{ 'form.radio.global.label' | translate }}
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" value="private" name="authGoogle.google_radio" ng-model="authGoogle.google_radio"/>{{ 'form.radio.private.label' | translate }}
+                                                    </label>
+                                                </div>
+
+                                            </div>-->
+                                        </div>
+                                        <div class="col-sm-12" ng-show="authGoogle.google_radio == 'private'">
+                                            <div class="form-group col-sm-6" ng-class="{'ng-invalid': (submitted && authGoogle.client_id.$invalid), 'ng-valid': (submitted && authGoogle.client_id.$valid)}">
+                                                <div class="col-sm-2 control-label">
+                                                    <label class="primary-font font-sm thin" for="authGoogle.client_id">{{ 'form.auth_client_id' | translate }}</label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="authGoogle.client_id" ng-model="authGoogle.client_id" required class="form-control" id="authGoogle.client_id" placeholder="{{'settings.general.authGoogle.client_id.placeholder' | translate}}">
+                                                    <small class="help-block error" ng-show="submitted && authGoogle.client_id.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-6" ng-class="{'ng-invalid': (submitted && authGoogle.client_secret.$invalid), 'ng-valid': (submitted && authGoogle.client_secret.$valid)}">
+                                                <div class="col-sm-2 control-label">
+                                                    <label class="primary-font font-sm thin" for="authGoogle.client_secret">{{ 'form.auth_client_secret' | translate }}</label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="authGoogle.client_secret" ng-model="authGoogle.client_secret" required class="form-control" id="authGoogle.client_secret" placeholder="{{'settings.general.authGoogle.client_secret.placeholder' | translate}}">
+                                                    <small class="help-block error" ng-show="submitted && authGoogle.client_secret.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group no-margin-bottom">
+                                            <div class="col-sm-12 text-center">
+                                                <button type="submit" ng-disabled="authGoogle.google_radio == 'private' && authGoogleForm.$invalid"  ng-click="$parent.$parent.submitted=true" class="btn btn-success btn-inverse">
+                                                    <span>{{ 'form.auth' | translate }}</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                                <div class="clearfix"></div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    </div>
+
+                    <div class="container-fluid raw">
+
+                        <div class="box light bordered" ng-class="{'toogled': formHidden }">
+                            <div class="box-title">
+                                <div class="caption">
+                                    <span class="bold font-green uppercase">
+                                        {{ 'settings.general.followup.widget.newtype' | translate }}
+                                    </span>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" ng-show="formHidden" ng-click="formHidden=false" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                    <a href="javascript:;" ng-hide="formHidden" ng-click="formHidden=true" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                                        <i class="fa fa-compress"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="box-body" block-ui="formSubmitNewBlock" style="min-height: 100;">
+
+                                <div ng-show="formSubmitDone" class="note note-success">
+                                    <button type="button" class="close" ng-click="closeNote()">
+                                        <span aria-hidden="true">×</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h5 class="note-title no-margin">
+                                        {{ 'settings.general.followup.newtype.success' | translate }}
+                                    </h5>
+                                </div>
+
+                                <form name="$parent.$parent.addFollowupTypeForm" novalidate valid-submit="addFollowupTypeFormSubmit()" role="form" class="form-horizontal">
+                                    <fieldset>
+                                        <div class="col-sm-12">
+                                            <div class="form-group col-sm-6" ng-class="{'ng-invalid': (submitted && addFollowupTypeForm.name.$invalid), 'ng-valid': (submitted && addFollowupTypeForm.name.$valid)}">
+                                                <div class="col-sm-2 control-label">
+                                                    <label class="primary-font font-sm thin" for="name">{{ 'form.name' | translate }}</label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="name" ng-model="newFollowupType.name" required class="form-control" id="name" placeholder="{{'settings.general.newFollowupType.placeholder' | translate}}">
+                                                    <small class="help-block error" ng-show="submitted && addFollowupTypeForm.name.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-6 margin-bottom-10" ng-class="{'ng-invalid': (submitted && addFollowupTypeForm.color.$invalid), 'ng-valid': (submitted && addFollowupTypeForm.color.$valid)}">
+                                                <div class="col-sm-2 control-label">
+                                                    <label class="primary-font font-sm thin" for="color">{{ 'form.color' | translate }}</label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input type="color" name="color" id="color" class="form-control" ng-model="newFollowupType.color" id="color">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group margin-bottom-10" ng-class="{'ng-invalid': (submitted && addFollowupTypeForm.active.$invalid), 'ng-valid': (submitted && addFollowupTypeForm.active.$valid)}">
+                                                <div class="col-sm-12">
+                                                    <div class="col-sm-2 control-label">
+                                                        <label class="primary-font font-sm thin" for="active">{{ 'form.enabled' | translate }}</label>
+                                                    </div>
+                                                    <div class="col-sm-10 control-label" style="text-align: left;">
+                                                        <input type="checkbox" id="active" ng-model="newFollowupType.active" value="1" name="active">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group no-margin-bottom">
+                                            <div class="col-sm-12 text-center">
+                                                <button type="submit" ng-click="$parent.$parent.submitted=true" class="btn btn-success btn-inverse">
+                                                    {{ 'form.add' | translate }}
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid raw">
+
+                        <div class="box light bordered" ng-class="{'toogled': formHidden }">
+                            <div class="box-title">
+                                <div class="caption">
+                                    <span class="bold font-green uppercase">
+                                        {{ 'settings.general.followup.widget.newstatus' | translate }}
+                                    </span>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" ng-show="formHidden" ng-click="formHidden=false" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                                        <i class="fa fa-expand"></i>
+                                    </a>
+                                    <a href="javascript:;" ng-hide="formHidden" ng-click="formHidden=true" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                                        <i class="fa fa-compress"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="box-body" block-ui="formSubmitNewBlock" style="min-height: 100;">
+
+                                <div ng-show="formSubmitStatusDone" class="note note-success">
+                                    <button type="button" class="close" ng-click="closeStatusNote()">
+                                        <span aria-hidden="true">×</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h5 class="note-title no-margin">
+                                        {{ 'settings.general.followup.newstatus.success' | translate }}
+                                    </h5>
+                                </div>
+
+                                <form name="$parent.$parent.addFollowupStatusForm" novalidate valid-submit="addFollowupStatusFormSubmit()" role="form" class="form-horizontal">
+                                    <fieldset>
+                                        <div class="col-sm-12">
+                                            <div class="form-group col-sm-6" ng-class="{'ng-invalid': (submitted && addFollowupStatusForm.name.$invalid), 'ng-valid': (submitted && addFollowupStatusForm.name.$valid)}">
+                                                <div class="col-sm-2 control-label">
+                                                    <label class="primary-font font-sm thin" for="name">{{ 'form.name' | translate }}</label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="name" ng-model="newFollowupStatus.name" required class="form-control" id="name" placeholder="{{'settings.general.newFollowupStatus.placeholder' | translate}}">
+                                                    <small class="help-block error" ng-show="submitted && addFollowupStatusForm.name.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-sm-6 margin-bottom-10" ng-class="{'ng-invalid': (submitted && addFollowupStatusForm.color.$invalid), 'ng-valid': (submitted && addFollowupStatusForm.color.$valid)}">
+                                                <div class="col-sm-2 control-label">
+                                                    <label class="primary-font font-sm thin" for="color">{{ 'form.color' | translate }}</label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input type="color" name="color" id="color" class="form-control" ng-model="newFollowupStatus.color" id="color">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group margin-bottom-10" ng-class="{'ng-invalid': (submitted && addFollowupStatusForm.active.$invalid), 'ng-valid': (submitted && addFollowupStatusForm.active.$valid)}">
+                                                <div class="col-sm-12">
+                                                    <div class="col-sm-2 control-label">
+                                                        <label class="primary-font font-sm thin" for="active">{{ 'form.enabled' | translate }}</label>
+                                                    </div>
+                                                    <div class="col-sm-10 control-label" style="text-align: left;">
+                                                        <input type="checkbox" id="active" ng-model="newFollowupStatus.active" value="1" name="active">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group no-margin-bottom">
+                                            <div class="col-sm-12 text-center">
+                                                <button type="submit" ng-click="$parent.$parent.submitted=true" class="btn btn-success btn-inverse">
+                                                    {{ 'form.add' | translate }}
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid raw">
+
+                        <div class="box light bordered">
+                            <div class="box-title">
+                                <div class="caption">
+                                    <span class="bold font-red-thunderbird uppercase">
+                                        {{ 'settings.general.followup.types' | translate }}
+                                    </span>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only fullscreen">
+                                        <i class="icon-size-fullscreen"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div ng-show="followupDeleteDone" class="note note-success">
+                                    <button type="button" class="close" ng-click="closeFollowupDeletedNote()">
+                                        <span aria-hidden="true">×</span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <h5 class="note-title no-margin">
+                                        {{ 'settings.general.followup.delete.success' | translate }}
+                                    </h5>
+                                </div>
+
+                            <div class="box-body" block-ui="followupTypesBlock" style="min-height: 100px;">
+                                <table class="table table-hover align-vertical table-light table-striped table-height-input-sm">
+                                    <colgroup>
+                                       <col style="width: 50px;">
+                                       <col style="width: 50px;">
+                                       <col>
+                                       <col style="width: 150px;">
+                                       <col style="width: 150px;">
+                                       <col style="width: 150px;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>{{ 'table.th.id' | translate }}</th>
+                                            <th>{{ 'table.th.name' | translate }}</th>
+                                            <th>{{ 'settings.general.followup.th.color' | translate }}</th>
+                                            <th>{{ 'settings.general.followup.th.active' | translate }}</th>
+                                            <th>{{ 'table.th.actions' | translate }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody ui-sortable="sortableOptions" ng-model="followupTypes">
+                                        <tr ng-repeat="type in followupTypes">
+                                            <td class="mySortableHandler text-center">
+                                                <a href="#">
+                                                    <i class="fa fa-reorder"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                {{ type.id }}
+                                            </td>
+                                            <td>
+                                                <a href="#" editable-text="type.name"  ng-model="type.name" onaftersave="sentFollowupTypeToUpdate($index, 'name', $data)">
+                                                    <span style="color: {{ type.color || "#000000" }}">{{ type.name || ('text.empty' | translate) }}</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" editable-color="type.color" ng-model="type.color" onaftersave="sentFollowupTypeToUpdate($index, 'color', $data)">{{ type.color || "#000000" }}</a>
+                                            </td>
+                                            <td class="text-left">
+                                                <span ng-show="type.active" class="label label-success">{{ 'text.enabled' | translate }}</span>
+                                                <span ng-hide="type.active" class="label label-danger">{{ 'text.disabled' | translate }}</span>
+                                            </td>
+                                            <td class="text-left">
+
+                                                <div class="btn-group btn-group-sm">
+                                                    <button class="btn btn-inverse btn-icon-only" ng-class="type.active === true ? 'btn-danger' : 'btn-success'" ng-click="type.active = !type.active; sentFollowupTypeToUpdate($index, 'active', type.active);">
+                                                        <i class="fa" ng-class="type.active === true ? 'fa-square-o' : 'fa-check-square-o'"></i>
+                                                    </button>
+                                                    <button class="btn btn-danger btn-icon-only" ng-click="confirmFollowupTypeDelete($index)">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr ng-hide="followupTypes.length">
+                                            <td colspan="6" class="text-center">{{ 'table.empty.msg' | translate }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid raw">
+                        <div class="box light bordered">
+                            <div class="box-title">
+                                <div class="caption">
+                                    <span class="bold font-red-thunderbird uppercase">
+                                        {{ 'settings.general.followup.statuses' | translate }}
+                                    </span>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only fullscreen">
+                                        <i class="icon-size-fullscreen"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div ng-show="followupStatusDeleteDone" class="note note-success">
+                                <button type="button" class="close" ng-click="closeFollowupStatusDeletedNote()">
+                                    <span aria-hidden="true">×</span>
+                                    <span class="sr-only">Close</span>
+                                </button>
+                                <h5 class="note-title no-margin">
+                                    {{ 'settings.general.followup.deleteStatus.success' | translate }}
+                                </h5>
+                            </div>
+                            <div class="box-body" block-ui="followupStatusesBlock" style="min-height: 100px;">
+                                <table class="table table-hover align-vertical table-light table-striped table-height-input-sm">
+                                    <colgroup>
+                                        <col style="width: 50px;">
+                                        <col style="width: 50px;">
+                                        <col>
+                                        <col style="width: 150px;">
+                                        <col style="width: 150px;">
+                                        <col style="width: 150px;">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>{{ 'table.th.id' | translate }}</th>
+                                        <th>{{ 'table.th.name' | translate }}</th>
+                                        <th>{{ 'settings.general.followup.th.color' | translate }}</th>
+                                        <th>{{ 'settings.general.followup.th.active' | translate }}</th>
+                                        <th>{{ 'table.th.actions' | translate }}</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody ui-sortable="sortableOptions" ng-model="followupStatuses">
+                                    <tr ng-repeat="status in followupStatuses">
+                                        <td class="mySortableHandler text-center">
+                                            <a href="#">
+                                                <i class="fa fa-reorder"></i>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            {{ status.id }}
+                                        </td>
+                                        <td>
+                                            <a href="#" editable-text="status.name"  ng-model="status.name" onaftersave="sentFollowupStatusToUpdate($index, 'name', $data)">
+                                                <span style="color: {{ status.color || "#000000" }}">{{ status.name || ('text.empty' | translate) }}</span>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="#" editable-color="status.color" ng-model="status.color" onaftersave="sentFollowupStatusToUpdate($index, 'color', $data)">{{ status.color || "#000000" }}</a>
+                                        </td>
+                                        <td class="text-left">
+                                            <span ng-show="status.active" class="label label-success">{{ 'text.enabled' | translate }}</span>
+                                            <span ng-hide="status.active" class="label label-danger">{{ 'text.disabled' | translate }}</span>
+                                        </td>
+                                        <td class="text-left">
+
+                                            <div class="btn-group btn-group-sm">
+                                                <button class="btn btn-inverse btn-icon-only" ng-class="status.active === true ? 'btn-danger' : 'btn-success'" ng-click="status.active = !status.active; sentFollowupStatusToUpdate($index, 'active', status.active);">
+                                                    <i class="fa" ng-class="status.active === true ? 'fa-square-o' : 'fa-check-square-o'"></i>
+                                                </button>
+                                                <button class="btn btn-danger btn-icon-only" ng-click="confirmFollowupStatusDelete($index)">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr ng-hide="followupStatuses.length">
+                                        <td colspan="6" class="text-center">{{ 'table.empty.msg' | translate }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>

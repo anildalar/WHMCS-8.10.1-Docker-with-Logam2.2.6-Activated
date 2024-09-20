@@ -1,0 +1,145 @@
+<div class="mgcrm_webform">
+
+    <link rel="stylesheet" href="#ADDRESS#/webform/style.css"/>
+
+
+    <div id="MGCRM_WebForm_AfterSendMessage_#WEBFORMID#" class="MGCRM_WebForm" style="display: none">
+        Your request has been saved. Please wait for contact now.
+    </div>
+
+    <form id='MGCRM_WebForm_#WEBFORMID#' class="MGCRM_WebForm">
+        <div id="MGCRM_WebForm_ErrorMessage_#WEBFORMID#" class="alert alert-danger" style="display: none"></div>
+
+        <input hidden name="MGCRM_webform_id" value="#WEBFORMID#" style="display: none" />
+        #INPUTS#
+        <button class='btn btn-success pull-right formSubmit' onclick='MGCRM_sendRequest_#WEBFORMID#(); return false;'>Submit</button>
+    </form>
+    <script type='text/javascript'>
+
+        function initCss(id, href) {
+            if (!document.getElementById(id))
+            {
+                var head  = document.getElementsByTagName('head')[0];
+                var link  = document.createElement('link');
+                link.id   = id;
+                link.rel  = 'stylesheet';
+                link.type = 'text/css';
+                link.href = href;
+                link.media = 'all';
+                head.appendChild(link);
+            }
+        };
+
+        initCss("iconMG", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+        function MGCRM_sendRequest_#WEBFORMID#(){
+            var url = '#ADDRESS#/webform/CRMWebFormProcess.php';
+            var params = '';
+            var form = document.getElementById('MGCRM_WebForm_#WEBFORMID#');
+            for(var i=0; i < form.length; i++)
+            {
+                if(form[i].type === 'checkbox'){
+                    params += form[i].name.split('').map( function (a) {return a.charCodeAt(0);}).join("_") +'='+form[i].checked+'&';
+                }else
+                {
+                    params += form[i].name.split('').map( function (a) {return a.charCodeAt(0);}).join("_") +'='+form[i].value+'&';
+                }
+            }
+            var request = new XMLHttpRequest();
+
+            request.open('POST', url, true);
+            request.onreadystatechange = function()
+            {
+                if(request.readyState == 4 && request.status == 200) {
+                    var json = JSON.parse(request.responseText);
+
+                    if(json.status === 'success')
+                    {
+                        document.getElementById('MGCRM_WebForm_ErrorMessage_#WEBFORMID#').style.display = 'none';
+                        var message = document.getElementById('MGCRM_WebForm_AfterSendMessage_#WEBFORMID#');
+                        message.style.display = "block";
+
+                        slideUp(form, 0.1, 0, function(){
+                            slideDown(message, 1, 60, function(){});
+                        });
+
+                        form.style.display = "none";
+                    }
+                    else
+                    {
+                        document.getElementById('MGCRM_WebForm_ErrorMessage_#WEBFORMID#').style.display = 'block';
+                        document.getElementById('MGCRM_WebForm_ErrorMessage_#WEBFORMID#').innerHTML = json.msg;
+                    }
+                    //if server returns status 500
+                }else if(request.response !== undefined){
+                    try {
+                        var json = JSON.parse(request.responseText);
+                    } catch (e) {
+
+                    }
+                    if (json && json.msg){
+                        document.getElementById('MGCRM_WebForm_ErrorMessage_#WEBFORMID#').style.display = 'block';
+                        document.getElementById('MGCRM_WebForm_ErrorMessage_#WEBFORMID#').innerHTML = json.msg;
+                    } else {
+                        document.getElementById('MGCRM_WebForm_ErrorMessage_#WEBFORMID#').style.display = 'block';
+                        document.getElementById('MGCRM_WebForm_ErrorMessage_#WEBFORMID#').innerHTML = 'Something went wrong. Please contact the administrator.';
+                    }
+                };
+            };
+
+            request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            request.send(params);
+        }
+
+        function slideDown (element, duration, finalheight, callback) {
+            var s = element.style;
+            s.height = '0px';
+
+            var y = 0;
+            var framerate = 10;
+            var one_second = 1000;
+            var interval = one_second*duration/framerate;
+            var totalframes = one_second*duration/interval;
+            var heightincrement = finalheight/totalframes;
+            var tween = function () {
+                y += heightincrement;
+                s.height = y+'px';
+                if (y<finalheight) {
+                    setTimeout(tween,interval);
+                }
+                else
+                {
+                    s.height = finalheight+'px';
+                    callback();
+                }
+            }
+            tween();
+
+        }
+
+        function slideUp (element, duration, finalheight, callback) {
+            var s = element.style;
+
+            var y = element.offsetHeight;
+            var framerate = 10;
+            var one_second = 1000;
+            var interval = one_second*duration/framerate;
+            var totalframes = one_second*duration/interval;
+            var heightdecreese = y/totalframes;
+            var tween = function () {
+                y -= heightdecreese;
+                s.height = y+'px';
+                if (y>finalheight) {
+                    setTimeout(tween,interval);
+                }
+                else
+                {
+                    s.height = finalheight+'px';
+                    callback();
+                }
+            }
+            tween();
+        }
+    </script>
+
+</div>

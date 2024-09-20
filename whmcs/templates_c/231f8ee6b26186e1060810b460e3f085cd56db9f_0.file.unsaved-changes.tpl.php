@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-18 05:50:47
+/* Smarty version 3.1.48, created on 2024-09-20 07:17:57
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/unsaved-changes.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ea6a379051d6_43156462',
+  'unifunc' => 'content_66ed21a51d3466_04861194',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ea6a379051d6_43156462 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ed21a51d3466_04861194 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="unsavedChanges" data-unsaved-changes-modal>
     <div class="modal__dialog">
         <div class="modal__content">

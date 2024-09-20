@@ -1,0 +1,9 @@
+ALTER TABLE `crm_labels`                MODIFY COLUMN `order` int(10) unsigned NOT NULL DEFAULT 0;
+ALTER TABLE `crm_fields`                MODIFY COLUMN `order` int(10) unsigned NOT NULL DEFAULT 0;
+ALTER TABLE `crm_automations`           MODIFY COLUMN `order` int(10) unsigned NOT NULL DEFAULT 0;
+ALTER TABLE `crm_fields_groups`         MODIFY COLUMN `order` int(10) unsigned NOT NULL DEFAULT 0;
+ALTER TABLE `crm_labels_clients`        MODIFY COLUMN `order` int(10) unsigned NOT NULL DEFAULT 0;
+ALTER TABLE `crm_followup_types`        MODIFY COLUMN `order` int(10) unsigned NOT NULL DEFAULT 0;
+ALTER TABLE `crm_resources_types`       MODIFY COLUMN `order` int(10) unsigned NOT NULL DEFAULT 0;
+ALTER TABLE `crm_webforms_contents`     MODIFY COLUMN `order` int(10) unsigned NOT NULL DEFAULT 0;
+ALTER TABLE `crm_resources_statuses`    MODIFY COLUMN `order` int(10) unsigned NOT NULL DEFAULT 0;

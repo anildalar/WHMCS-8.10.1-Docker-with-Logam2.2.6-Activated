@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-18 05:50:51
+/* Smarty version 3.1.48, created on 2024-09-20 07:04:54
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/includes/tab-media.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ea6a3b8ae059_79588680',
+  'unifunc' => 'content_66ed1e96e105d2_02116005',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/media/no-data.tpl' => 1,
   ),
 ),false)) {
-function content_66ea6a3b8ae059_79588680 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ed1e96e105d2_02116005 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="tab-pane <?php if ($_GET['tab'] == 'media') {?> is-active <?php }?>" id="settings-media">
     <div class="section__header top">
         <div class="top__toolbar">

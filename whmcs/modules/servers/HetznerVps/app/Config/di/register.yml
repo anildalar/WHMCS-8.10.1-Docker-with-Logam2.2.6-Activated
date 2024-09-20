@@ -1,2 +1,0 @@
-class:
-  - {namespace: '\\ModulesGarden\\WordpressManager\\Core\\UI\\Widget\\Sidebar\\SidebarService',                               alias: "sidebar", singleton: true ,auto: false}

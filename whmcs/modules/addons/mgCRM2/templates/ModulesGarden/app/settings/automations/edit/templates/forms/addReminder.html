@@ -1,0 +1,77 @@
+<div class='box light' style='margin-bottom: 0px;' >
+    <div class="box-title">
+        <div class="caption">
+            <span class="bold font-red-thunderbird uppercase">
+                {{ 'settings.automations.rule.edit.form.addReminder.title' | translate }}
+            </span>
+        </div>
+    </div>
+    <div class="box-body">
+        <form class="form-horizontal" name="saveAutomationRuleItems[{{rules.id}}]" ng-submit="saveAutomationRule(rules)" >
+            <fieldset>
+                <div class="form-group">
+                    <div class="form-group col-md-6" ng-class="{'ng-invalid':  saveAutomationRuleItems[{{rules.id}}].template.$invalid, 'ng-valid': saveAutomationRuleItems[{{rules.id}}].template.$valid}">
+                        <label class="col-sm-4 control-label primary-font thin">{{ ::('settings.automations.rule.edit.form.addReminder.template' | translate) }}</label>
+                        <div ng-if="rules.data.type === 'email'" class="col-sm-8">
+                            <ui-select name="template" ng-model="rules.data.template_id" ng-required="true">
+                                <ui-select-match placeholder="{{ 'settings.automations.rule.edit.form.addReminder.template.placeholder' | translate }}">{{ $select.selected.full }}</ui-select-match>
+                                <ui-select-choices repeat="template.id as template in formRuleData.templates.admin | filter: $select.search">
+                                      <div ng-bind-html="('<b>#' + template.id + '</b> ' + template.name) | highlight: $select.search"></div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                        <div ng-if="rules.data.type === 'sms'" class="col-sm-8">
+                            <ui-select name="template" ng-model="rules.data.template_id" ng-required="true">
+                                <ui-select-match placeholder="{{ 'settings.automations.rule.edit.form.addReminder.template.placeholder' | translate }}">{{ $select.selected.full }}</ui-select-match>
+                                <ui-select-choices repeat="template.id as template in formRuleData.templates.sms | filter: $select.search">
+                                      <div ng-bind-html="('<b>#' + template.id + '</b> ' + template.name) | highlight: $select.search"></div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                        <div ng-if="!rules.data.type" class="col-sm-8">
+                            <ui-select name="template" ng-model="rules.data.template_id" ng-required="true" ng-disabled="true">
+                                <ui-select-match placeholder="{{ 'settings.automations.rule.edit.form.addReminder.template.placeholder' | translate }}">{{ $select.selected.full }}</ui-select-match>
+                                <ui-select-choices repeat="choice in ['PLACEHOLDER']">
+                                    <div></div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6" ng-class="{'ng-invalid':  saveAutomationRuleItems[{{rules.id}}].admin.$invalid, 'ng-valid': saveAutomationRuleItems[{{rules.id}}].admin.$valid}">
+                        <label class="col-sm-4 control-label primary-font thin">{{ ::('settings.automations.rule.edit.form.addReminder.admin' | translate) }}</label>
+                        <div class="col-sm-8">
+                            <ui-select name="admin" ng-model="rules.data.target_id" ng-required="true">
+                                <ui-select-match placeholder="{{ 'settings.automations.rule.edit.form.addReminder.admin.placeholder' | translate }}">{{ $select.selected.firstname + ' ' + $select.selected.lastname }}</ui-select-match>
+                                <ui-select-choices repeat="admin.id as admin in formRuleData.admins | filter: $select.search">
+                                      <div ng-bind-html="('<b>#' + admin.id + '</b> ' + admin.firstname + ' ' + admin.lastname) | highlight: $select.search"></div>
+                                      <small ng-bind-html="('<i>' + admin.email + '</i>') | highlight: $select.search"></small>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6" ng-class="{'ng-invalid':  saveAutomationRuleItems[{{rules.id}}].remindermethod.$invalid, 'ng-valid': saveAutomationRuleItems[{{rules.id}}].remindermethod.$valid}">
+                        <label class="col-sm-4 control-label primary-font thin">{{ ::('settings.automations.rule.edit.form.addReminder.type' | translate) }}</label>
+                        <div class="col-sm-8" style="padding-top: 7px;">
+                            <label>
+                                <input type="radio" required name="remindermethod" ng-change="rules.data.template_id = null" ng-model="rules.data.type" value="email">
+                                {{ ::('settings.automations.rule.edit.form.addReminder.type.email' | translate) }}
+                            </label>
+                            <label ng-if="settings.config.integrations.sms_center" >
+                                <input type="radio" class="margin-left-10" required name="remindermethod" ng-change="rules.data.template_id = null" ng-model="rules.data.type" value="sms">
+                                {{ ::('settings.automations.rule.edit.form.addReminder.type.sms' | translate) }}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 text-center">
+                        <button 
+                            ng-class="{'disabled':  rules.isSuccessForm = saveAutomationRuleItems[{{rules.id}}].$invalid}"
+                            type="submit"
+                            class="btn btn-success btn-inverse">
+                            {{ ::('settings.automations.rule.edit.form.btn.upload'| translate) }}
+                        </button>   
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

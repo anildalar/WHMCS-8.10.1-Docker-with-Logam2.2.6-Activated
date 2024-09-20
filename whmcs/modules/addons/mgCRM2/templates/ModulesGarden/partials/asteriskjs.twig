@@ -1,0 +1,162 @@
+<div id="calloutwidget" style="display:none;" title="{{ lang.t('asterisk.calloutwidget.title') }}">
+    <div class="clear"></div>
+    <style type="text/css">
+        #inputExtension {
+            width: 450px;
+            padding: 10px;
+        }
+        #keyboard-wrapper {
+            width: 300px;
+            margin: 10px auto;
+        }
+        .pullKeyButton {
+            margin: 5px 0;
+            width: 40px;
+            height: 25px;
+        }
+        div.cursor {
+            display: inline-block;
+            background: #111;
+            margin-left: 1px;
+            padding: 5px;
+            color: #fff;
+            font-weight: bold;
+
+            -webkit-animation: blink 2s linear 0s infinite;
+            -moz-animation: blink 2s linear 0s infinite;
+            -ms-animation: blink 2s linear 0s infinite;
+            -o-animation: blink 2s linear 0s infinite;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 4px 12px;
+            margin-bottom: 0px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #333;
+            text-align: center;
+            text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+            vertical-align: middle;
+            cursor: pointer;
+            background-color: #F5F5F5;
+            background-image: linear-gradient(to bottom, #FFF, #E6E6E6);
+            background-repeat: repeat-x;
+            border-width: 1px;
+            border-style: solid;
+            -moz-border-top-colors: none;
+            -moz-border-right-colors: none;
+            -moz-border-bottom-colors: none;
+            -moz-border-left-colors: none;
+            border-image: none;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) #B3B3B3;
+            border-radius: 4px;
+            box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .btn:hover {
+            color: #333;
+            text-decoration: none;
+            background-position: 0px -15px;
+            transition: background-position 0.1s linear 0s;
+        }
+
+        .btn:active {
+            background-image: none;
+            outline: 0px none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset, 0px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        input[type="text"] {
+            width: 90%;
+        }
+
+    </style>
+
+{# <form method="post" action="{$config.SystemURL}/modules/addons/asteriskVoipCenter/originateCall.php?modpage=originate&modsubpage=process" id="originateCallForm">#}
+{#using this browser/server sometimes think its cross domain request #}
+{#fix for XMLHttpRequest cannot load url No 'Access-Control-Allow-Origin' header is present on the requested resource. #}
+
+    <form method="post" action="../modules/addons/asteriskVoipCenter/originateCall.php?modpage=originate&modsubpage=process" id="originateCallForm">
+        <div id="keyboard-wrapper">
+            <div class="control-group">
+                <h4>{{ lang.t('asterisk.current.call') }}</h4>
+            </div>
+            <div class="control-group">
+                <div class="statusHolder">
+                    <p>{{ lang.t('asterisk.current.call.status') }} </p>
+                    <div class="cursor" id="statusResponse">{{ lang.t('asterisk.waiting.input') }}</div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label>{{ lang.t('asterisk.destination.number') }}</label>
+                <div class="controls">
+                    <input type="text" class="inputKeyboard extensionAutocomplete" name="destination">
+                </div>
+            </div>
+            <div class="control-group">
+                <label>{{ lang.t('asterisk.oryginal.extension') }}</label>
+                <div class="controls">
+                    <input type="text" class="inputKeyboard extensionAutocomplete" name="number">
+                </div>
+            </div>
+            <div style="margin-left: 40px; margin-top: 10px; margin-bottom: 15px;">
+                <a class="btn rightMargin pullKeyButton">1</a>
+                <a class="btn rightMargin pullKeyButton">2</a>
+                <a class="btn rightMargin pullKeyButton">3</a>
+                <div class="clear"></div>
+                <a class="btn rightMargin pullKeyButton">4</a>
+                <a class="btn rightMargin pullKeyButton">5</a>
+                <a class="btn rightMargin pullKeyButton">6</a>
+                <div class="clear"></div>
+                <a class="btn rightMargin pullKeyButton">7</a>
+                <a class="btn rightMargin pullKeyButton">8</a>
+                <a class="btn rightMargin pullKeyButton">9</a>
+                <div class="clear"></div>
+                <a class="btn rightMargin pullKeyButton">*</a>
+                <a class="btn rightMargin pullKeyButton">0</a>
+                <a class="btn rightMargin pullKeyButton">#</a>
+            </div>
+            <div class="clear"></div>
+            <div class="form-actions">
+                <button type="submit" class="btn pull-right" id="originateCallButton">{{ lang.t('asterisk.oryginal.try.call') }}</button>
+            </div>
+        </div>
+    </form>
+            
+    <script type="text/javascript">
+
+        var running = false;
+        $('#originateCallButton').on('click', function(e) {
+            {# PREVENT FROM RUNNING TWICE IN WHMCS v5 #}
+            {% if not whmcs.isVersion6 %}
+            if(running === true) {
+                running = false;
+                return false;
+            };
+            running = true;
+            {% endif %}
+
+            var form = $('#originateCallForm');
+
+            $('#statusResponse').css('background', 'white').html('<img src="images/loading.gif"> <span style="color: #000">{{ lang.t('asterisk.call.originating') }}</span>');
+
+            $.getJSON(form.attr('action'), form.serialize(), function(result)
+            {
+                if(result.status == 'success')
+                {
+                    $('#statusResponse').css('background', 'green').text(result.message);
+                }
+                else if(result.status == 'error')
+                {
+                    $('#statusResponse').css('background', 'red').text(result.message);
+                }
+            });
+
+            setTimeout(function() {
+                $('#statusResponse').css('background', 'black').text('Waiting for an input...');
+            }, 5000);
+
+            e.preventDefault();
+        });
+
+    </script>
+</div>

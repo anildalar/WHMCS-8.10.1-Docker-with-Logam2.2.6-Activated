@@ -1,0 +1,229 @@
+<div class="box light bordered" ng-class="{'toogled': toogled.wholeform }">
+    <div class="box-title">
+        <div class="caption">
+            <span class="bold font-red-thunderbird uppercase">
+                {{ ::('mailbox.widget.add.main'| translate) }}
+            </span>
+        </div>
+        <div class="actions">
+            <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only" tooltip="Click to show guide for this page"   tooltip-placement="left">
+                <i class="fa fa-question"></i>
+            </a>
+            <a href="#" ng-show="toogled.wholeform" ng-click="toogled.wholeform = !toogled.wholeform" class="btn btn-sm btn-danger btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                <i class="fa fa-expand"></i>
+            </a>
+            <a href="#" ng-hide="toogled.wholeform" ng-click="toogled.wholeform = !toogled.wholeform" class="btn btn-sm btn-danger btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                <i class="fa fa-compress"></i>
+            </a>
+            <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only fullscreen">
+                <i class="icon-size-fullscreen"></i>
+            </a>
+        </div>
+    </div>
+    <div class="box-body" block-ui="mailboxForm">
+
+
+        <form class="form-horizontal" role="form" name="mailboxForm" ng-submit="addMailboxFormSubmit()">
+
+            <div class="container-fluid raw">
+                <div class="box light bordered" ng-class="{'toogled': toogled.mainform }">
+                    <div class="box-title">
+                        <div class="caption">
+                            <span class="bold">
+                                {{ ::('mailbox.widget.add.mailbox'| translate) }}
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <a href="#" ng-show="toogled.mainform" ng-click="toogled.mainform = !toogled.mainform" class="btn btn-sm btn-danger btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                                <i class="fa fa-expand"></i>
+                            </a>
+                            <a href="#" ng-hide="toogled.mainform" ng-click="toogled.mainform = !toogled.mainform" class="btn btn-sm btn-danger btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                                <i class="fa fa-compress"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box-body">
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.name.$invalid, 'ng-valid': submitted && mailboxForm.name.$valid}">
+                                <label for="name" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.name' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <input type="text" class="form-control" name="name" id="name" ng-model="model.name" placeholder="{{ 'mailbox.form.name.placeholder' | translate }}" required>
+                                    <small class="help-block error" ng-show="submitted && mailboxForm.name.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.admin_id.$invalid, 'ng-valid': submitted && mailboxForm.admin_id.$valid}">
+                                <label class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin" ng-click="setFocusAdmin()">{{ ('mailbox.form.admin' | translate)}}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <ui-select ng-model="model.admin_id" focus-on='setFocusAdmin'>
+                                        <ui-select-match placeholder="{{ 'mailbox.form.admin.placeholder' | translate }}">{{ $select.selected.firstname + ' ' + $select.selected.lastname}}</ui-select-match>
+                                        <ui-select-choices repeat="admin in params.admins | filter: $select.search">
+                                            <div ng-bind-html="('<b>#' + admin.id + '</b> ' + admin.firstname + ' ' + admin.lastname) | highlight: $select.search"></div>
+                                            <small ng-bind-html="('<i>' + admin.email + '</i>') | highlight: $select.search"></small>
+                                        </ui-select-choices>
+                                    </ui-select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group col-lg-12 col-md-12" ng-class="{'ng-invalid': mailboxForm.description.$invalid, 'ng-valid': mailboxForm.description.$valid}">
+                                <label for="description" class="col-lg-1 col-md-1 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.description' | translate }}</label>
+                                <div class="col-lg-11 col-md-11 col-sm-10">
+                                    <textarea class="form-control" 
+                                              ame="description" 
+                                              placeholder="{{ 'mailbox.form.description.placeholder' | translate }}" i
+                                              d="description" 
+                                              rows="3" 
+                                              ng-model="model.description" ></textarea>
+                                    <small class="help-block">{{ 'mailbox.form.description.descr' | translate }}</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.email.$invalid || emailInUse, 'ng-valid': submitted && ailboxForm.email.$valid}">
+                                <label for="email" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.email' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <input type="email" class="form-control" name="email" id="email" ng-model="model.email" placeholder="{{ 'mailbox.form.email.placeholder' | translate }}" required>
+                                    <small class="help-block error" ng-show="submitted && mailboxForm.email.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                    <small class="help-block error text-danger" ng-show="submitted && emailInUse">{{ 'form.validator.email.in.use' | translate }}</small>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.server.$invalid, 'ng-valid': submitted && mailboxForm.server.$valid}">
+                                <label for="server" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.server' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <input type="text" class="form-control" name="server" id="server" ng-model="model.server" placeholder="{{ 'mailbox.form.server.placeholder' | translate }}" required>
+                                    <small class="help-block error" ng-show="submitted && mailboxForm.server.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12">
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.username.$invalid, 'ng-valid': submitted && mailboxForm.username.$valid}">
+                                <label for="username" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.username' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <input type="text" class="form-control" name="username" id="username" ng-model="model.username" placeholder="{{ 'mailbox.form.username.placeholder' | translate }}" required>
+                                    <small class="help-block error" ng-show="submitted && mailboxForm.username.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.password.$invalid, 'ng-valid': mailboxForm.password.$valid}">
+                                <label for="password" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.password' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <input type="password" class="form-control" name="password" id="password" autocomplete="new-password" ng-model="model.password" required>
+                                    <small class="help-block error" ng-show="submitted && mailboxForm.password.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12">
+
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.encryption.$invalid, 'ng-valid': submitted && mailboxForm.encryption.$valid}">
+                                <label for="encryption" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.encryption' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                    <select class="form-control input-sm" name="encryption" id="encryption" ng-model="model.encryption">
+                                        <option value="0">-</option>
+                                        <option value="tls">TLS</option>
+                                        <option value="ssl">SSL</option>
+                                    </select>
+                                    <small class="help-block">{{ 'mailbox.form.encryption.descr' | translate }}</small>
+                                    <small class="help-block error" ng-show="submitted && mailboxForm.encryption.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.port.$invalid, 'ng-valid': submitted && mailboxForm.port.$valid}">
+                                <label for="port" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.port' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <input type="number" class="form-control" name="port" id="port" ng-model="model.port" placeholder="{{ 'mailbox.form.port.placeholder' | translate }}" required>
+                                    <small class="help-block error" ng-show="submitted && mailboxForm.port.$invalid">{{ 'form.validator.text.required_digits' | translate }}</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.receive_server.$invalid, 'ng-valid': submitted && mailboxForm.receive_server.$valid}">
+                                <label for="server" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.receive_server' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <input type="text" class="form-control" name="receive_server" id="receive_server" ng-model="model.receive_server" placeholder="{{ 'mailbox.form.receive_server.placeholder' | translate }}">
+                                    <small class="help-block error" ng-show="submitted && mailboxForm.receive_server.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.receive_method.$invalid, 'ng-valid': submitted && mailboxForm.receive_method.$valid}">
+                                <label for="receive_method" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.receive_method' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                    <select class="form-control input-sm" name="receive_method" id="receive_method" ng-model="model.receive_method">
+                                        <option value="pop3">POP3</option>
+                                        <option value="imap">IMAP</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.receive_port.$invalid, 'ng-valid': submitted && mailboxForm.receive_port.$valid}">
+                                <label for="receive_port" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.receive_port' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <input type="number" class="form-control" name="receive_port" id="receive_port" string-to-number ng-model="model.receive_port" placeholder="{{ 'mailbox.form.receive_port.placeholder' | translate }}">
+                                    <small class="help-block error" ng-show="submitted && mailboxForm.receive_port.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.receive_ssl.$invalid, 'ng-valid': submitted && mailboxForm.receive_ssl.$valid}">
+                                <label for="receive_folder" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.receive_ssl' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+
+                                    <select class="form-control input-sm" name="receive_ssl" id="receive_ssl" ng-model="model.receive_ssl" multiple>
+                                        <option value="tls">TLS</option>
+                                        <option value="notls">No TLS</option>
+                                        <option value="ssl">SSL</option>
+                                        <option value="validate-cert">Validate certificates</option>
+                                        <option value="novalidate-cert">Not validate certificates</option>
+                                        <option value="readonly">Readonly</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6 col-md-6" ng-class="{'ng-invalid': submitted && mailboxForm.receive_folder.$invalid, 'ng-valid': submitted && mailboxForm.receive_folder.$valid}">
+                                <label for="receive_port" class="col-lg-2 col-md-2 col-sm-2 control-label primary-font thin">{{ 'mailbox.form.receive_folder' | translate }}</label>
+                                <div class="col-lg-10 col-md-10 col-sm-10">
+                                    <input type="text" class="form-control" name="receive_folder" id="receive_folder" ng- ng-model="model.receive_folder" placeholder="{{ 'mailbox.form.receive_folder.placeholder' | translate }}">
+                                    <small class="help-block error" ng-show="submitted && mailboxForm.receive_folder.$invalid">{{ 'form.validator.text.required' | translate }}</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group col-lg-12">
+                <div class="text-center no-margin-top">
+                    <button 
+                        type="submit" 
+                        ng-disabled="submitted && mailboxForm.$invalid" 
+                        ng-click="submitted = true"
+                        class="btn btn-success btn-inverse"
+                        >{{ ::('mailbox.button.add.new'| translate) }}</button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </form>
+
+
+        <div class="clearfix"></div>
+    </div>
+</div>

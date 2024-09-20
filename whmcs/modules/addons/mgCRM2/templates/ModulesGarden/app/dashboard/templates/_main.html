@@ -1,0 +1,45 @@
+<div ng-show="campaigns.length || allowChangeAdmin" class="pull-right form-group" style="position: absolute; top: 6px; right: 15px;">
+
+    <div ng-show="campaigns.length" class="pull-right form-group" style="margin-left: 15px;">
+        <div class="pull-left control-label" style="padding-top: 5px; padding-right: 10px;">
+            <label for="select-admin-to-preview" class="primary-font font-sm thin">
+                {{ ::('campaigns.changable.in.header' | translate) }}
+            </label>
+        </div>
+        <div class="pull-left">
+            <ui-select ng-model="$parent.requestCampaign" style="width: 300px" theme='selectize'>
+                <ui-select-match placeholder="{{ 'dashboard.campanings.select.placeholder' | translate }}">{{ $select.selected.name }}</ui-select-match>
+                <ui-select-choices repeat="c.id as c in campaigns | filter: $select.search">
+                      <div ng-bind-html="c.name | highlight: $select.search"></div>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+    </div>
+    <div ng-show="allowChangeAdmin" class="pull-right form-group" style="">
+        <div class="pull-left control-label" style="padding-top: 5px; padding-right: 10px;">
+            <label for="select-admin-to-preview" class="primary-font font-sm thin">
+                {{ 'dashboard.preview.for' | translate }}
+            </label>
+        </div>
+        <div class="pull-left">
+            <ui-select ng-model="$parent.requestForAdmin" style="width: 300px" theme='selectize'>
+                <ui-select-match placeholder="{{ 'resource.create.select.admin.placeholder' | translate }}">{{ $select.selected.full }}</ui-select-match>
+                <ui-select-choices repeat="admin.id as admin in admins | filter: $select.search">
+                      <div ng-bind-html="admin.full | highlight: $select.search"></div>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+    </div>
+    
+</div>
+
+<div class="row-fluid">
+    
+    <div ui-view="topWidgets"></div>
+    <div ui-view="followups"></div>
+    <div ui-view="resources"></div>
+    <div ui-view="emails"></div>
+    <div ui-view="history"></div>
+    
+    
+</div>

@@ -15,11 +15,9 @@
 
     if ($action === 'updateCustomField') {
         // Get parameters
-        $orderId = isset($_REQUEST['orderid']) ? intval($_REQUEST['orderid']) : 0;
-        $customFieldId = isset($_REQUEST['customfieldid']) ? intval($_REQUEST['customfieldid']) : 0;
+        $orderId =  $_REQUEST['orderid'];
+        $customFieldId = $_REQUEST['customfieldid'];
         $value = isset($_REQUEST['value']) ? $_REQUEST['value'] : '';
-
-        if ($orderId > 0 && $customFieldId > 0 && $value !== '') {
             try {
                 // Check if the custom field value exists
                 $existing = Capsule::table('tblcustomfieldsvalues')
@@ -33,7 +31,7 @@
                         ->where('id', $existing->id)
                         ->update(['value' => $value, 'updated_at' => Capsule::raw('NOW()')]);
 
-                    $response = ['result' => 'success', 'message' => 'Custom field updated successfully'];
+                    $response = ['result' => 'success', 'message' => 'Custom field updated successfully1'];
                 } else {
                     // Insert a new entry
                     Capsule::table('tblcustomfieldsvalues')
@@ -45,16 +43,13 @@
                             'updated_at' => Capsule::raw('NOW()')
                         ]);
 
-                    $response = ['result' => 'success', 'message' => 'Custom field created successfully'];
+                    $response = ['result' => 'success', 'message' => 'Custom field created successfully2'];
                 }
 
                 echo json_encode($response);
             } catch (Exception $e) {
                 echo json_encode(['result' => 'error', 'message' => 'Error updating or creating custom field: ' . $e->getMessage()]);
             }
-        } else {
-            echo json_encode(['result' => 'error', 'message' => 'Invalid parameters']);
-        }
     } else {
         echo json_encode(['result' => 'error', 'message' => 'Invalid API action']);
     }

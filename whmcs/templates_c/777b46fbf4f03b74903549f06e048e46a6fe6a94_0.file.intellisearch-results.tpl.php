@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-18 05:50:37
+/* Smarty version 3.1.48, created on 2024-09-20 03:51:48
   from '/var/www/html/admin/templates/blend/intellisearch-results.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ea6a2dac4914_90145583',
+  'unifunc' => 'content_66ecf1545cd689_27124635',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ea6a2dac4914_90145583 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66ecf1545cd689_27124635 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="intellisearchresults" id="intelligentSearchResults">
     <div class="search-header">
         <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['lang'][0], array( array('key'=>"global.numSearchResultsFound",'number'=>'<span class="search-result-count">0</span>'),$_smarty_tpl ) );?>

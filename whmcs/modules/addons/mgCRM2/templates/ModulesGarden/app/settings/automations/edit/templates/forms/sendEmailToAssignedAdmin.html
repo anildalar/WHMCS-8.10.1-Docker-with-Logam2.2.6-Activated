@@ -1,0 +1,45 @@
+<div class='box light' style='margin-bottom: 0px;' >
+  <div class="box-title">
+    <div class="caption">
+            <span class="bold font-red-thunderbird uppercase">
+                {{ 'settings.automations.rule.edit.form.sendEmailToAdmin.title' | translate }}
+            </span>
+    </div>
+  </div>
+    <div class="box-body">
+        <form class="form-horizontal" name="saveAutomationRuleItems[{{rules.id}}]" ng-submit="saveAutomationRule(rules)" >
+            <fieldset>
+                <div class="form-group">
+
+                    <div class="form-group col-md-6" ng-class="{'ng-invalid':  saveAutomationRuleItems[{{rules.id}}].description.$invalid, 'ng-valid': saveAutomationRuleItems[{{rules.id}}].description.$valid}">
+                        <label class="col-sm-4 control-label primary-font thin">
+                            {{ ::('settings.automations.rule.edit.form.sendEmail.subject' | translate) }}
+                            <i class="fa fa-question-circle" tooltip-placement="right" tooltip="{{ 'settings.automations.rule.edit.form.sendEmail.subject.tooltip' | translate }}"></i>
+                        </label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" name='subject' ng-model='rules.data.subject'></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-6" ng-class="{'ng-invalid':  saveAutomationRuleItems[{{rules.id}}].description.$invalid, 'ng-valid': saveAutomationRuleItems[{{rules.id}}].description.$valid}">
+                        <label class="col-sm-4 control-label primary-font thin">
+                            {{ ::('settings.automations.rule.edit.form.sendEmail.message' | translate) }}
+                            <i class="fa fa-question-circle" tooltip-placement="right" tooltip="{{ 'settings.automations.rule.edit.form.sendEmail.message.tooltip' | translate }}"></i>
+                        </label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" name='message' ng-model='rules.data.message'></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 text-center">
+                        <button
+                                ng-class="{'disabled':  rules.isSuccessForm = saveAutomationRuleItems[{{rules.id}}].$invalid}"
+                                type="submit"
+                                class="btn btn-success btn-inverse">
+                            {{ ::('settings.automations.rule.edit.form.btn.upload'| translate) }}
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

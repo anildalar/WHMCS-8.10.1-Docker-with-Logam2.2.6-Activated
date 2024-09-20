@@ -1,0 +1,143 @@
+<style>
+    .modal-dialog {
+        width: 75%;
+    }
+</style>
+
+<div class="box light" style="width: 100%">
+    <div class="box-title" style="margin: 20px">
+        <h2>
+            <strong>{{ 'settings.webforms.html.title' | translate }}</strong>
+            <div style="float: right">
+                <button type="button" class="btn btn-primary btn-icon-only" ng-click="copyToClipBoard()" style="height: 26px; line-height: 0px;">
+                    <i class="fa fa-copy"></i>
+                </button>
+             </div>
+        </h2>
+    </div>
+    
+    <hr>
+    
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <note ng-repeat="m in scopeMessages" type="{{m.type}}" dismiss="true">
+                <div class="alert alert-{{m.type}}">{{m.content}}</div>
+            </note>
+        </div>
+    </div>
+    
+    <div class="box-body">
+        <div class="row">
+            <div block-ui="webformHtmlBlock">
+                <pre id="webformHtmlContent" class="col-md-offset-1 col-md-10">{{ formHtml }}</pre>
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+
+    <div class="box-footer">
+        <div class="row" style="margin: 20px">
+            <div style="float: right">
+                <button type="button" class="btn btn-default" ng-click="closeThisDialog(0)" style="height: 26px; line-height: 0px;">
+                    {{ 'settings.webforms.html.close' | translate }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+    
+    
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.alert .alert-link {
+  font-weight: bold;
+}
+.alert > p,
+.alert > ul {
+  margin-bottom: 0;
+}
+.alert > p + p {
+  margin-top: 5px;
+}
+.alert-dismissable {
+  padding-right: 35px;
+}
+.alert-dismissable .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+.alert-success hr {
+  border-top-color: #c9e2b3;
+}
+.alert-success .alert-link {
+  color: #2b542c;
+}
+
+</style>

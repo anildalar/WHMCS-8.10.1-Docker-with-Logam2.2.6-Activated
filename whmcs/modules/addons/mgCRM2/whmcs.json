@@ -1,0 +1,26 @@
+{
+  "schema": "1.0",
+  "type": "whmcs-addons",
+  "license": "proprietary",
+  "category": "notifications",
+  "description": {
+    "name": "CRM",
+    "tagline": "Manage contacts, follow-ups, campaigns and other aspects of your customer relationships.",
+    "short": "Manage contacts, follow-ups, campaigns and other aspects of your customer relationships.",
+    "long": "CRM For WHMCS is a revelatory module created for complex customer relationship management including the leads, potentials and any other contact type you wish to create as well as the follow-ups. With its help, all contact details of prospective clients will be organized in a transparent list directly in your system. Along with that, you will be able to add new contacts, convert their status at any time or even create accounts for them without the need to leave the addon page. Of no less substance is the fact that you will be given the possibility to set up your own labels and assign to them clients on the Kanban board through the convenient drag & drop functionality. \nFurthermore, the module includes a wide spectrum of advanced features to facilitate your business management. You will be allowed to define permissions for each administrator role, send automated emails, issue announcements, add notes, create campaigns, generate quotes as well as view logs and other details of your tasks. Another component worth mentioning is the capability to manage automation groups and construct rules in order to automatically create follow-ups, send notifications, and add reminders. There is even an option to add custom fields for your contacts in order to gather every required information in one place as well as possibility to access complete conversation history directly from the contact view. All the data can be imported/exported so you will be enabled to migrate them between WHMCS systems or simply make a backup whenever you need to."},
+  "logo": {
+    "filename": "logo.png"
+  },
+  "support": {
+    "docs_url": "https://www.docs.modulesgarden.com/CRM_For_WHMCS",
+    "homepage": "https://www.modulesgarden.com/products/whmcs/crm",
+    "learn_more": "https://www.modulesgarden.com/products/whmcs/crm#features",
+    "support_url": "https://www.modulesgarden.com/support"
+  },
+  "authors": [
+    {
+      "name": "ModulesGarden",
+      "homepage": "https://www.modulesgarden.com/"
+    }
+  ]
+}

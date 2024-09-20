@@ -1,0 +1,232 @@
+
+                    <div class="container-fluid raw">
+
+                        <div class="box light bordered">
+                            <div class="box-title">
+                                <div class="caption">
+                                    <span class="bold uppercase">
+                                        {{ 'settings.general.widget' | translate }}
+                                    </span>
+                                </div>
+                                <div class="actions">
+                                    <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only fullscreen">
+                                        <i class="icon-size-fullscreen"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="box-body">
+                                
+                                    <form class="form-horizontal" novalidate role="form">
+
+                                        <fieldset class="col-md-12">
+                                            <div class="form-group margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label for="general.quotations_enable">
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            {{ 'settings.general.enable.quotation' | translate }}
+                                                        </h5>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input type="checkbox" id="general.quotations_enable" ng-model="settings.quotations_enable" />
+
+                                                    <p class="help-block" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                        {{ 'settings.general.enable.quotation.descr' | translate }}
+                                                    </p>
+                                                </div>
+                                            </div>
+            <!--                                <hr class="no-margin" />
+                                            <div class="form-group margin-top-5 margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label for="general.potentials_enable">
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            Enable Potentials
+                                                        </h5>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input type="checkbox" id="general.potentials_enable" ng-model="settings.potentials_enable" />
+
+                                                    <p class="help-block" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                        If enabled, gives the possibility to convert Leads into Potentials.
+                                                    </p>
+                                                </div>
+                                            </div>-->
+                                            <hr class="no-margin" />
+                                            <div class="form-group margin-top-5 margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label for="general.assign_admin">
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            {{ 'settings.general.enable.adminassign' | translate }}
+                                                        </h5>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input type="checkbox" id="general.assign_admin" ng-model="settings.assign_admin" />
+
+                                                    <p class="help-block" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                        {{ 'settings.general.enable.adminassign.descr' | translate }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            
+                                            <hr class="no-margin" />
+                                            <div class="form-group margin-top-5 margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label for="general.disable_email_duplicate">
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            {{ 'settings.general.disable.email_duplicate' | translate }}
+                                                        </h5>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input id="general.disable_email_duplicate" type="checkbox" ng-model="settings.disable_email_duplicate" />
+
+                                                    <p class="help-block" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                        {{ 'settings.general.disable.email_duplicate.descr' | translate }}
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <hr class="no-margin" />
+                                            <div class="form-group margin-top-5 margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label for="general.require_contact_email">
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            {{ 'settings.general.disable.require_contact_email' | translate }}
+                                                        </h5>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input id="general.require_contact_email" type="checkbox" ng-model="settings.require_contact_email" />
+
+                                                    <p class="help-block" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                        {{ 'settings.general.disable.require_contact_email.descr' | translate }}
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <hr class="no-margin" />
+                                            <div class="form-group margin-top-5 margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label for="">
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            {{ 'settings.general.select.defaultWeekDay' | translate }}
+                                                        </h5>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control input-sm pull-left" ng-options="convertToInt(f.id) as f.name for f in weekDays" id="settings.general.defaultWeekDay" ng-model="settings.defaultWeekDay" style="width: 300px;"></select>
+
+                                                </div>
+                                            </div>
+
+                                            <hr class="no-margin" />
+
+                                            <div class="form-group margin-top-5 margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label for="">
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            {{ 'settings.general.select.syncContact' | translate }}
+                                                        </h5>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control input-sm pull-left" ng-options="convertToInt(f.id) as f.name for f in syncContact" id="settings.general.syncContact" ng-model="settings.syncContact" style="width: 300px;"></select>
+
+                                                </div>
+                                            </div>
+
+                                            <hr class="no-margin" />
+
+                                            <div class="form-group margin-top-5 margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label>
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            {{ 'settings.general.input.emailNotificationDuration' | translate }}
+                                                        </h5>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control input-sm pull-left" type="number" step="1" id="settings.general.emailNotificationDuration" ng-model="settings.email_notification_duration" style="width: 300px;">
+                                                </div>
+                                            </div>
+
+                                            <hr class="no-margin" />
+
+                                            <div class="form-group margin-top-5 margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label>
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            {{ 'settings.general.enable.emailNotificationConfirmation' | translate }}
+                                                        </h5>
+                                                    </label>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input id="settings.general.enable.emailNotificationConfirmation" type="checkbox" ng-model="settings.enable_email_notification_confirmation" />
+
+                                                    <p class="help-block" style="display: inline-block; margin-top: 5px; margin-left: 5px; color: #999;">
+                                                        {{ 'settings.general.enable.emailNotificationConfirmation.descr' | translate }}
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <hr class="no-margin" />
+
+                                            <div class="form-group margin-top-5 margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label>
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            {{ 'settings.general.enable.adminMentionsContent' | translate }}
+                                                        </h5>
+                                                    </label>
+                                                    <i class="fa fa-question-circle"  tooltip-placement="left" tooltip="{{ 'settings.general.enable.tooltip' | translate }}"></i>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" id="settings.general.enable.adminMentionsContent" type="text" ng-model="settings.admin_mentions_content" />
+                                                </div>
+                                            </div>
+
+                                            <hr class="no-margin" />
+
+                                            <div class="form-group margin-top-5 margin-bottom-5">
+                                                <div class="col-sm-2 text-right">
+                                                    <label for="settings.general.email_import_type">
+                                                        <h5 class="text-right no-margin margin-top-5">
+                                                            {{ 'settings.general.select.email_import_type' | translate }}
+                                                        </h5>
+                                                    </label>
+                                                    <i class="fa fa-question-circle"
+                                                       tooltip-html-unsafe="{{ 'settings.general.select.email_import_type.tooltip' | translate }}"
+                                                       tooltip-placement="left">
+
+                                                    </i>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control input-sm pull-left"
+                                                            ng-options="convertToInt(f.id) as f.name for f in email_import_type"
+                                                            id="settings.general.email_import_type"
+                                                            ng-model="settings.email_import_type"
+                                                            style="width: 300px;">
+                                                    </select>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group margin-top-5">
+                                                <div class="col-sm-12 text-center">
+                                                    <button ng-click="submitGeneralSettings()" type="button" class="btn btn-success btn-inverse">
+                                                        {{ 'settings.general.update.btn' | translate }}
+                                                    </button>   
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    

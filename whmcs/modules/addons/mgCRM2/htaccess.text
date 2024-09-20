@@ -1,0 +1,16 @@
+#This file is only an example
+
+#Redirect all request when file and directory is not found.
+#this will redirect CRM queries like: /admin/crm.php/api/dashboard/followups/get/json to crm.php file.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)crm.php(.*)$ /admin/crm.php [QSA, L]
+
+
+#CRM in addition to standard http request uses PUT DELETE OPTIONS
+#and we need to allow them on server
+<Limit PUT DELETE OPTIONS>
+    Order allow,deny
+    Allow from all
+</Limit>
+

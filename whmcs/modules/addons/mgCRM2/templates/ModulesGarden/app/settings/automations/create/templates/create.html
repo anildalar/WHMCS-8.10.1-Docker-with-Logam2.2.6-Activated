@@ -1,0 +1,56 @@
+<note ng-repeat="m in scopeMessages" type="{{m.type}}" dismiss="true" close="{{$index}}"><h4 class="note-title">{{m.title}}</h4>{{m.content}}</note>
+
+
+<div class="box light bordered">
+    <div class="box-title">
+        <div class="caption">
+            <span class="bold font-red-thunderbird uppercase">
+                {{ ::('settings.automations.list.btn.create' | translate) }}
+            </span>
+        </div>
+
+        <div class="actions">
+            <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only fullscreen">
+                <i class="icon-size-fullscreen"></i>
+            </a>
+        </div>
+    </div>
+    <div class="box-body"  block-ui="createAutomationFormBox" style="min-height: 100px;">
+        
+            <form class="form-horizontal" novalidate role="form" name="automationsForms" id="automationsForms"  ng-submit="automationsFormSubmit()" >
+                <fieldset>
+                    <div class="form-group col-md-12" ng-class="{'ng-invalid': (submitted && automationsForms.name.$invalid), 'ng-valid': (submitted && automationsForms.name.$valid)}">
+                        <label for="name" class="col-sm-2 control-label primary-font thin">
+                            {{ 'settings.automations.create.form.name' | translate }}
+                        </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="name" ng-model="automations.name" id="name" placeholder="{{ 'settings.automations.create.form.name.placeholder' | translate }}" required>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="status" class="col-sm-2 control-label primary-font thin">{{ 'settings.automations.create.form.status' | translate }}</label>
+                        <div class="col-sm-10">
+                            <div class="picek-switch">
+                                <input id="status" name="status" class="switch-rounded" type="checkbox" ng-model="automations.status">
+                                <label for="status"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12 text-center">
+                            <button 
+                                    ng-disabled="automationsForms.$invalid"
+                                    type="submit"
+                                    class="btn btn-success btn-inverse">
+                                {{ ::('settings.automations.create.form.button.add' | translate) }}
+                            </button>   
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="clearfix"></div>
+
+
+    </div>
+</div>

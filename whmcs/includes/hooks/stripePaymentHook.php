@@ -23,6 +23,9 @@ add_hook('InvoicePaid', 1, function($vars) {
     $customFields = Capsule::table('tblcustomfieldsvalues')
         ->where('relid', $invoiceData->userid)
         ->get();
+    $customHostingId = Capsule::table('tblhosting')
+        ->where('orderid', $invoiceData->id)
+        ->get();
     $customFieldValues = [];
     foreach ($customFields as $field) {
         $customFieldValues[$field->fieldid] = $field->value;
@@ -150,47 +153,49 @@ add_hook('InvoicePaid', 1, function($vars) {
     $timezone = isset($timezoneMapping[$clientData->country]) ? $timezoneMapping[$clientData->country] : 'UTC';
 
     if ($invoiceData && $invoiceData->paymentmethod == 'stripe') {
-        print("Pyment Successfull");
-        
-        $newSubDomainName = $pbxString; // Replace with logic to generate subdomain
-        $paymentIntent = $invoiceData->id; // Example, you might have another field for Stripe payment intent
-        $userInfo = Capsule::table('tblclients')->where('id', $invoiceData->userid)->first(); // Get user info from WHMCS
-        $jenkinsUrl = "https://jenkins.oceanpbx.club";
-        $apiUrl = "{$jenkinsUrl}/job/PBXDeploye/buildWithParameters";
-        $planValueSipUser = intval($invoiceData->total);
-        $apiParams = http_build_query([
-            'pbxname' => $newSubDomainName,
-            'Environment' => "Production",
-            'plan_value_sipuser' =>$planValueSipUser,
-            'stripeId' => $paymentIntent,
-            'ClinetId' => $invoiceData->userid,
-            'country_code' => $clientData->country, // Adjust according to your database schema
-            'country_state' => "MP",//$clientData->state,
-            'TZ' => $timezone,//$userInfo->timezone,           // Adjust according to your database schema
-        ]);
-        echo $apiParams;
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $apiUrl . '?' . $apiParams);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, [
-            'Content-Type: application/json',
-            'Authorization: Basic ' . base64_encode('admin:11545aa3dbd28e2db07bdb02a22fe15a55'), // Jenkins authentication (replace with your credentials)
-        ]);
-        $response = curl_exec($ch);
-        echo $response;
-        if (curl_errno($ch)) { 
-            $curlError = curl_error($ch);
-            echo $curlError;
-            logActivity("cURL error for Invoice ID #{$invoiceId}: {$curlError}");
-        }
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        logActivity("Jenkins API Response for Invoice ID #{$invoiceId}: HTTP Code - {$httpCode}, Response - {$response}");
-        curl_close($ch);
-        if ($httpCode == 201) {
-            logActivity("Jenkins Deployment Successful for Invoice ID #{$invoiceId}: Subdomain - {$newSubDomainName}");
-        } else {
-            logActivity("Jenkins Deployment Failed for Invoice ID #{$invoiceId}: Response - {$response}");
-        }
+         print("Pyment Successfull");
+
+        // print($customHostingId[0]->id);
+
+        // $newSubDomainName = $pbxString; // Replace with logic to generate subdomain
+        // $paymentIntent = $invoiceData->id; // Example, you might have another field for Stripe payment intent
+        // $userInfo = Capsule::table('tblclients')->where('id', $invoiceData->userid)->first(); // Get user info from WHMCS
+        // $jenkinsUrl = "https://jenkins.oceanpbx.club";
+        // $apiUrl = "{$jenkinsUrl}/job/PBXDeploye/buildWithParameters";
+        // $planValueSipUser = intval($invoiceData->total);
+        // $apiParams = http_build_query([
+        //     'pbxname' => $newSubDomainName,
+        //     'Environment' => "Production",
+        //     'plan_value_sipuser' =>$planValueSipUser,
+        //     'stripeId' => $paymentIntent,
+        //     'ClinetId' => $customHostingId[0]->id,
+        //     'country_code' => $clientData->country, // Adjust according to your database schema
+        //     'country_state' => "MP",//$clientData->state,
+        //     'TZ' => $timezone,//$userInfo->timezone,           // Adjust according to your database schema
+        // ]);
+        // echo $apiParams;
+        // $ch = curl_init();
+        // curl_setopt($ch, CURLOPT_URL, $apiUrl . '?' . $apiParams);
+        // curl_setopt($ch, CURLOPT_POST, 1);
+        // curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        //     'Content-Type: application/json',
+        //     'Authorization: Basic ' . base64_encode('admin:11545aa3dbd28e2db07bdb02a22fe15a55'), // Jenkins authentication (replace with your credentials)
+        // ]);
+        // $response = curl_exec($ch);
+        // echo $response;
+        // if (curl_errno($ch)) { 
+        //     $curlError = curl_error($ch);
+        //     echo $curlError;
+        //     logActivity("cURL error for Invoice ID #{$invoiceId}: {$curlError}");
+        // }
+        // $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        // logActivity("Jenkins API Response for Invoice ID #{$invoiceId}: HTTP Code - {$httpCode}, Response - {$response}");
+        // curl_close($ch);
+        // if ($httpCode == 201) {
+        //     logActivity("Jenkins Deployment Successful for Invoice ID #{$invoiceId}: Subdomain - {$newSubDomainName}");
+        // } else {
+        //     logActivity("Jenkins Deployment Failed for Invoice ID #{$invoiceId}: Response - {$response}");
+        // }
     }
 });

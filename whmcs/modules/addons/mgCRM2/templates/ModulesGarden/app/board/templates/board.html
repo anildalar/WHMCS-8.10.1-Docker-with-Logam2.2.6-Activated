@@ -1,0 +1,65 @@
+<div class="row-fluid">
+    <div class="box light bordered">
+        <div class="box-title">
+            <div class="caption">
+                <span class="bold font-red-thunderbird uppercase pull-left">
+                    {{ 'board.add.labels' | translate }}
+                </span>
+            </div>
+            <div class="actions">
+                <a href ng-click="addLabelModal()" class="btn btn-inverse btn-success" ng-disabled="selectLabels.length == 0">
+                    <i class="glyphicon glyphicon-plus"></i><span>{{ ::('board.add.labels.button' | translate) }}</span>
+                </a>
+                <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only fullscreen">
+                    <i class="icon-size-fullscreen"></i>
+                </a>
+            </div>
+        </div>
+        <div class="box-body">
+            
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div id="label-list-{{label.id}}" class="col-md-3 col-sm-6 col-lg-2" ng-repeat="label in dataLabels">
+                    <div class="box light board-labels">
+                        <div class="box-title">
+                            <div class="caption">
+                                <span class="bold font-red-thunderbird uppercase pull-left">
+                                    {{ label.name}}
+                                </span>
+                                <span style="margin-left: 5px;" class="pull-left badge" ng-style="{'background-color': label.color ? ('#' + label.color) : '#000000', 'color' : label.labelColor ? label.labelColor : '#000000' }">
+                                    <b>{{ label.count}}</b>
+                                </span>
+                            </div>
+                            <div class="actions" ng-if="label.id">
+                                <a href="#" ng-click="removeLable(label.id)" class="btn btn-sm btn-danger btn-circle btn-outline btn-inverse btn-transparent btn-icon-only">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="box-body" style="min-height: 200px; max-height: 400px; overflow: auto;">
+                            <div class='sortableContainer board-sortable-container' ui-sortable="sortableOptionsLabel"
+                                 ng-model="label.recources" labelname='{{$index}}' style="min-height: 200px;">
+                                <div class='sortableItem board-sortable-item' ng-repeat="recource in label.recources">
+                                    <div class="mySortableHandler text-left">
+                                        <a ui-sref="contacts.details.summary({id: recource.id })">
+                                            <i class="fa fa-reorder"></i>
+                                            <span title='{{recource.email}}'> #{{ recource.id}} {{ recource.name}} {{ recource.lastname}}</span>
+                                            <p>{{recource.short_description}}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div ng-hide="label.recources.length" style="height: 150px;">
+                                    <div class="text-center">{{ 'board.labels.drag' | translate }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

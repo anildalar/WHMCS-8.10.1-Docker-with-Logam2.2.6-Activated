@@ -1,0 +1,68 @@
+<div class='box light' style='margin-bottom: 0px;' >
+    <div class="box-title">
+        <div class="caption">
+            <span class="bold font-red-thunderbird uppercase">
+                {{ 'settings.automations.rule.edit.form.conditionIfNot.title' | translate }}
+            </span>
+        </div>
+    </div>
+    <div class="box-body">
+        <form class="form-horizontal" name="saveAutomationRuleItems[{{rules.id}}]" ng-submit="saveAutomationRule(rules)" >
+            <fieldset>
+                <div class="form-group">
+                    <div class="form-group col-md-6">
+                        <label class="col-sm-4 control-label primary-font thin">{{ ::('settings.automations.rule.edit.form.conditionIfNot.field' | translate) }}</label>
+                        <div class="col-sm-8">
+                            <ui-select ng-model="rules.data.field">
+                                <ui-select-match placeholder="{{ 'settings.automations.rule.edit.form.conditionIfNot.field.placeholder' | translate }}">{{ $select.selected.name }}</ui-select-match>
+                                <ui-select-choices repeat="field.id as field in formRuleData.fields | filter: $select.search">
+                                      <div ng-bind-html="((field.isStatic ? '' : '<b>#' + field.id + '</b> ') + field.name ) | highlight: $select.search"></div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6" ng-show='rules.data.field' ng-switch="getTypeFormFieldById(rules.data.field).type">
+                        <label class="col-sm-4 control-label primary-font thin">{{ getTypeFormFieldById(rules.data.field).name }}</label>
+                        
+                        <div class="col-sm-8" ng-switch-when="select">
+                            <ui-select ng-model="rules.data.value">
+                                <ui-select-match placeholder="{{ 'settings.automations.rule.edit.form.conditionIfNot.value.placeholder' | translate }}">{{ $select.selected.value }}</ui-select-match>
+                                <ui-select-choices repeat="option.id as option in getTypeFormFieldById(rules.data.field).options | filter: $select.search" >
+                                    <div ng-bind-html="(option.value) | highlight: $select.search"></div>
+                                </ui-select-choices>
+                            </ui-select>
+                        </div>
+
+                        <div class="col-sm-8" ng-switch-when="radio">
+                            <label ng-repeat="option in getTypeFormFieldById(rules.data.field).options" class="radio-inline"><input type="radio" ng-model="rules.data.value" name="optradio-{{rules.id}}-{{rules.data.field}}" ng-value="option.id">{{option.value}}</label>
+                        </div>
+
+                        <div class="col-sm-8" ng-switch-when="checkbox">
+                            <div class="picek-switch" style='margin-top: 4px;' >
+                                <input id="onlyToDay" name="value{{rules.id}}" class="switch-rounded" type="checkbox" ng-model="rules.data.value">
+                                <label for="value{{rules.id}}"></label>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-8" ng-switch-when="textarea">
+                            <textarea class="form-control" ng-model='rules.data.value'></textarea>
+                        </div>
+                        
+                        <div class="col-sm-8" ng-switch-default>
+                            <input class="form-control" ng-model='rules.data.value' type='{{getTypeFormFieldById(rules.data.field).type}}'>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-12 text-center">
+                        <button 
+                            ng-class="{'disabled':  rules.isSuccessForm = saveAutomationRuleItems[{{rules.id}}].$invalid}" 
+                            type="submit"
+                            class="btn btn-success btn-inverse">
+                            {{ ::('settings.automations.rule.edit.form.btn.upload'| translate) }}
+                        </button>   
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+{
+    "name"       : "modulesgarden/crm",
+    "description": "Customer Relationship Management built for WMHCS",
+    "version"    : "2.6.0",
+    "type"       : "project",
+    "license"    : "EULA",
+    "homepage"   : "http://www.modulesgarden.com",
+    "support"    :
+    {
+        "email" : "contact@modulesgarden.com",
+        "issues": "http://www.modulesgarden.com/customers/support",
+        "forum" : "http://www.forum.modulesgarden.com/",
+        "wiki"  : "http://www.docs.modulesgarden.com/CRM_For_WHMCS"
+    },
+    "autoload": {
+        "psr-4": {
+            "mgCRM2\\": ""
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "extra": {
+        "mg-app-dir": "app"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.0"
+        }
+    },
+    "require":
+    {
+        "php"                           : ">=7.1.0",
+        "slim/slim"                     : "2.*",
+        "slim/views"                    : "*",
+        "maximebf/debugbar"             : ">=1.0.0",
+        "illuminate/config"             : "5.2.*",
+        "twig/twig"                     : "1.*",
+        "phpoffice/phpspreadsheet"      : "^1.23",
+        "dompdf/dompdf"                 : "0.6.*",
+        "adbario/php-dot-notation"      : "^2.2",
+        "rappasoft/laravel-helpers"     : "^1.0",
+        "php-imap/php-imap"             : "*"
+    },
+    "replace":
+    {
+        "illuminate/contracts": "*",
+        "illuminate/filesystem": "*",
+        "illuminate/support": "*",
+        "monolog/monolog": "*",
+        "symfony/translation": "*",
+        "nesbot/carbon"    : "*",
+        "google/apiclient": "*",
+        "psr/log" : "*",
+        "psr/simple-cache" : " *",
+        "psr/http-message" : " *",
+        "psr/http-factory" : " *",
+        "psr/http-client" : " *"
+    }
+}

@@ -1,0 +1,119 @@
+{%- spaceless -%}
+<style>
+    li.field-details {
+        list-style-type: none; 
+    }
+</style>
+<div style="float: left;width: 50%;">
+
+    {# left side - static informations, etc#}
+    <ul style="padding-left: 20px;">
+        <li class="field-details">
+            <span class="ui-icon ui-icon-bullet" style="float:left; margin-left: -18px; margin-top: 3px;"></span>
+            <b>First Name:</b>&nbsp;{{- resource.name -}}
+        </li>
+        <li class="field-details">
+            <span class="ui-icon ui-icon-bullet" style="float:left; margin-left: -18px; margin-top: 3px;"></span>
+            <b>Last Name:</b>&nbsp;{{- resource.lastname -}}
+        </li>
+        <li class="field-details">
+            <span class="ui-icon ui-icon-bullet" style="float:left; margin-left: -18px; margin-top: 3px;"></span>
+            <b>Country:</b>&nbsp;{{- resource.country -}}
+        </li>
+        <li class="field-details">
+            <span class="ui-icon ui-icon-bullet" style="float:left; margin-left: -18px; margin-top: 3px;"></span>
+            <b>Email:</b>
+            <br />
+            {{- resource.email -}}
+        </li>
+        <li class="field-details">
+            <span class="ui-icon ui-icon-bullet" style="float:left; margin-left: -18px; margin-top: 3px;"></span>
+            <b>Phone Number:</b>&nbsp;{{- resource.phone -}}
+        </li>
+        <li class="field-details">
+            <span class="ui-icon ui-icon-bullet" style="float:left; margin-left: -18px; margin-top: 3px;"></span>
+            <b>Status</b>:&nbsp;<span class="label" style="background-color: {{ resource.status.color }}">{{ resource.status.name }}</span>
+        </li>
+        <li class="field-details">
+            <span class="ui-icon ui-icon-bullet" style="float:left; margin-left: -18px; margin-top: 3px;"></span>
+            <b>Priority:</b>&nbsp;
+            {%- if resource.priority == 2 -%}
+                <span class="label" style="background-color: #f0ad4e;">Medium</span>
+            {%- elseif resource.priority == 3 -%}
+                <span class="label" style="background-color: #5bc0de;">Important</span>
+            {%- elseif resource.priority == 4 -%}
+                <span class="label" style="background-color: #d9534f;">Urgent</span>
+            {%- else -%}
+                <span class="label" style="background-colod: #777;">Low</span>
+            {%- endif -%}
+        </li>
+        {%- if resource.client.id -%}
+            <li class="field-details">
+                <span class="ui-icon ui-icon-bullet" style="float:left; margin-left: -18px; margin-top: 3px;"></span>
+                <b>Client:</b>
+                <br />
+                <a href="clientssummary.php?userid={{ resource.client.id }}">{{ resource.name }} {{ resource.lastname }}</a>
+            </li>
+        {%- endif -%}
+        {%- if resource.client.id -%}
+            <li class="field-details">
+                <span class="ui-icon ui-icon-bullet" style="float:left; margin-left: -18px; margin-top: 3px;"></span>
+                <b>Assigned Admin:</b>
+                <br />
+                <a href="mailto:{{ resource.admin.email }}">{{ resource.admin.firstname }} {{ resource.admin.lastname }}</a>
+            </li>
+        {%- endif -%}
+    </ul>
+
+</div>
+
+<div style="float: left;width: 50%;">
+    {# right side - custom fields #}
+
+    <ul style="padding-left: 20px;">
+        {%- for group in groups if group.active -%}
+            <li class="field-details"><h4 style="color: {{- group.color -}};">{{- group.name -}}</h4></li>
+
+            {%- for field in group.fields if field.active -%}
+                <li class="field-details">
+                    <span class="ui-icon ui-icon-bullet" style="float:left; margin-left: -18px; margin-top: 3px;"></span>
+                    <b>{{- field.name -}}:</b>
+                    <br />
+
+                    {%- for fieldData in fields -%}
+
+                        {%- if fieldData.field_id == field.id -%}
+                            {%- if fieldData.options -%}
+                                {%- for selected in fieldData.options -%}
+
+                                    {%- for possible in field.options -%}
+                                        {%- if selected.option_id == possible.id -%}
+                                            {{- possible.value -}}
+                                        {%- endif -%}
+                                    {%- endfor -%}
+
+
+                                    {%- if not loop.last -%}
+                                        <br />
+                                    {%- endif -%}
+
+
+                                {%- endfor -%}
+
+                            {%- elseif fieldData.data -%}
+                                {{- fieldData.data -}}
+                            {%- else -%}
+                                not set
+                            {%- endif -%}
+                        {%- endif -%}
+
+                    {%- endfor -%}
+
+                </li>
+            {%- endfor -%}
+        {%- endfor -%}
+    </ul>
+
+</div>
+
+{%- endspaceless -%}

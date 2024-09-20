@@ -1,0 +1,150 @@
+<note ng-repeat="m in scopeMessages" type="{{m.type}}" close="{{$index}}"><h4 class="note-title">{{m.title}}</h4>{{m.content}}</note>
+
+<div  st-pipe="callServer" st-table="displayed">
+    <div class="box light">
+        <div class="box-title">
+            <div class="caption">
+                <span class="bold font-red-thunderbird uppercase pull-left" style="padding-top: 9px;">
+                    {{ ::('resource.quotes.widget.name' | translate) }}
+                </span>
+                <div id="tableSearchContainer pull-left" style="width: 300px;" class="col-xs-3">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="background: none;"><i class="font-red bold icon-magnifier"></i></span>
+                        <input st-search="subject" placeholder="{{ ::('form.search.placeholder' | translate) }}"  class="form-control" id="quotes-main-search" type="search" style="border-color: #e5e5e5;" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-flat" ng-class="{'active': displayFilters == true}" ng-click="displayFilters = !displayFilters" type="button" style="height: 34px;"><i class="fa fa-filter"></i></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="actions" style="padding-right: 11px; top: 17px;">
+                <a ng-show="!isArchive() && mainData.client_id" ng-click="syncQuotes()" target="_blank" class="btn btn-info btn-inverse btn-sm">
+                    {{ ::('resource.quotes.form.sync' | translate) }}
+                </a>
+                <a ng-show="!isArchive()" href="quotes.php?action=manage&crm_resource={{ ::resource_id }}" target="_blank" class="btn btn-success btn-inverse btn-sm">
+                    {{ ::('resource.quotes.form.new' | translate) }}
+                </a>
+                <a href="javascript:;" class="btn btn-sm btn-circle btn-outline btn-inverse btn-transparent btn-danger btn-icon-only fullscreen">
+                    <i class="icon-size-fullscreen"></i>
+                </a>
+            </div>
+        </div>
+        <div class="box-body">
+            <table class="table table-striped table-hover align-vertical" id="leadsTable" highlight-active-table-header="border-bottom-red">
+                <colgroup>
+                    <col width="80" />
+                    <col width="150" />
+                    <col />
+                    <col width="150" />
+                    <col width="150" />
+                    <col width="150" />
+                    <col width="100" />
+                    <col ng-if="!isArchive()" width="150"/>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th st-sort="id" st-sort-default="id">{{ ::('table.th.id' | translate) }}</th>
+                        <th st-sort="stage">{{ ::('resource.quotes.th.stage' | translate) }}</th>
+                        <th st-sort="subject">{{ ::('resource.quotes.th.subject' | translate) }}</th>
+                        <th st-sort="lastmodified">{{ ::('resource.quotes.th.datemodified' | translate) }}</th>
+                        <th st-sort="datesent">{{ ::('resource.quotes.th.datesent' | translate) }}</th>
+                        <th st-sort="dateaccepted">{{ ::('resource.quotes.th.dateacc' | translate) }}</th>
+                        <th st-sort="total">{{ ::('resource.quotes.th.total' | translate) }}</th>
+                        <th ng-if="!isArchive()">{{ ::('table.th.actions' | translate) }}</th>
+                    </tr>
+                    <tr ng-show="displayFilters">
+                        <th>
+                            <input st-search="id" class="form-control input-sm"/>
+                        </th>
+                        <th>
+                            <select st-search="stage" st-input-event="change" class="form-control input-sm">
+                                <option value="">{{ ::('form.any' | translate) }}</option>
+                                <option>{{ ::('resource.quotes.stage.draft' | translate) }}</option>
+                                <option>{{ ::('resource.quotes.stage.delivered' | translate) }}</option>
+                                <option>{{ ::('resource.quotes.stage.accepted' | translate) }}</option>
+                                <option>{{ ::('resource.quotes.stage.lost' | translate) }}</option>
+                                <option>{{ ::('resource.quotes.stage.dead' | translate) }}</option>
+                            </select>                        
+                        </th>
+                        <th>
+                            <input st-search="subject" class="form-control input-sm"/>
+                        </th>
+                        <th>
+                            <input st-search="lastmodified" class="form-control input-sm"/>
+                        </th>
+                        <th>
+                            <input st-search="datesent" class="form-control input-sm"/>
+                        </th>
+                        <th>
+                            <input st-search="dateaccepted" class="form-control input-sm"/>
+                        </th>
+                        <th>
+                            <input st-search="total" class="form-control input-sm"/>
+                        </th>
+                        <th ng-if="!isArchive()"></th>
+                    </tr>
+                </thead>
+                <tbody block-ui="quotesTable">
+                    <tr ng-repeat="row in displayed">
+                        <td class="">{{ ::row.id }}</td>
+                        <td class="">
+                            {{ ::row.stage || 'Draft' }}
+                        </td>
+                        <td class="">
+                            {{ ::row.subject }}</td>
+                        <td class="">
+                            {{ ::row.lastmodified }}
+                        </td>
+                        <td class="">
+                            {{ ::row.datesent }}
+                        </td>
+                        <td class="">
+                            {{ ::row.dateaccepted }}
+                        </td>
+                        <td class="">
+                            {{ ::row.total }}
+                        </td>
+                        <td class="text-center" ng-if="!isArchive()">
+                            <a href="quotes.php?action=manage&id={{ ::row.id }}" target="_blank" class="btn btn-sm btn-icon-only btn-primary">
+                                <i class="icon icon-pencil"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr ng-hide="displayed.length">
+                        <td colspan="{{ isArchive() ? '7':'8' }}" class="text-center">
+                            <h4>{{ ::('table.empty.msg' | translate) }}</h4>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="{{ isArchive() ? '7':'8' }}" class="text-left">
+
+                            <span ng-hide="itemsLastNr == 0">
+                                {{ 'table.pagination.display' | translate }} 
+
+                                <div class="btn-group btn-group-xs btn-group-solid">
+                                    <button type="button" class="btn" ng-class="{'active': itemsByPage == 10}" ng-click="itemsByPage = 10">10</button>
+                                    <button type="button" class="btn" ng-class="{'active': itemsByPage == 25}" ng-click="itemsByPage = 25">25</button>
+                                    <button type="button" class="btn" ng-class="{'active': itemsByPage == 50}" ng-click="itemsByPage = 50">50</button>
+                                    <button type="button" class="btn" ng-class="{'active': itemsByPage == 100}" ng-click="itemsByPage = 100">100</button>
+                                </div>
+
+                                {{ 'table.pagination.perpage' | translate }} {{ 'table.pagination.showing' | translate }} {{ itemsFirstNr }} {{ 'table.pagination.to' | translate }} {{ itemsLastNr }} {{ 'table.pagination.of' | translate }} {{ itemsTotal }} {{ 'table.pagination.entries' | translate }}
+
+                            </span>
+
+                            <div class="pull-right" st-pagination="" st-items-by-page="itemsByPage">
+
+                            </div>
+
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>	
+
+        </div>
+    </div>
+</div>
+
+
