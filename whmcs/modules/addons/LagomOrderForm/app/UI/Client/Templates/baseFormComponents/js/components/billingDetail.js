@@ -93,8 +93,8 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-billing-details', {
         this.$nextTick(() => {
             this.setMarketingEmail()
             this.moveGoogleButtons()
-            if (($('script[src="https://js.hcaptcha.com/1/api.js"]').length === 0
-            && this.layoutSettings.captchaType === "hCaptcha") && (this.layoutSettings.captchaFormProtection ===  'on' || (!this.userDetails.id && this.layoutSettings.captchaFormProtection ===  "offloggedin")) ) {
+            if ($('script[src="https://js.hcaptcha.com/1/api.js"]').length === 0 && this.layoutSettings.captchaFormProtection
+            && this.layoutSettings.captchaType === "hCaptcha") {
                 this.createScript('https://js.hcaptcha.com/1/api.js')
             }
 
@@ -965,12 +965,11 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-billing-details', {
         },
         getBillingAddressFields()
         {
-            let defaultOptions = ['companyname', 'country', 'address1', 'address2', 'city', 'state', 'postcode']
+            const defaultOptions = ['companyname', 'country', 'address1', 'address2', 'city', 'state', 'postcode']
             if (this.taxEnabled) {
                 defaultOptions.push('tax_id')
-                return this.getAllFields(defaultOptions, 'billingAddressOrder')
             }
-            return this.getAllFields(defaultOptions, 'billingAddressOrder').filter(opt => opt !== 'tax_id')
+            return this.getAllFields(defaultOptions, 'billingAddressOrder')
         },
         getAllFields(defaultOptions, sectionName)
         {

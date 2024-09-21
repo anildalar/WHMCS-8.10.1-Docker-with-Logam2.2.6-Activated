@@ -61,7 +61,7 @@ const captchaHelper ={
                 var n = jQuery(e),
                     i = n.closest("form"),
                     r = i.find(".btn-recaptcha"),
-                    o = n.attr("id") ?  n.attr("id").substring(1) : null;
+                    o = n.attr("id").substring(1);
                 let callbackName = o + "Callback";
                 //override callback function
                 window[callbackName] = self.callbackEvent;
@@ -133,23 +133,12 @@ const captchaComponent = {
                 return this.$store.getters['cartStore/getClient']()
             }
         },
-        orderSettings: {
-            get(){
-                return this.$store.getters['cartStore/getWhmcsOrderSettings']();
-            }
-        },
         captchaType:{
             get(){
                 let self = this
                 if(this.captcha.type) {
                     self.$nextTick(() => {
-                        setTimeout(() => {
-                            if (self.orderSettings.CaptchaForms && (self.orderSettings.CaptchaForms.domainChecker ||
-                                self.orderSettings.CaptchaForms.checkoutCompletion)) {
-                                self.initCaptcha()
-                            }
-                        }, 1)
-
+                        self.initCaptcha()
                     })
                     return this.captcha.type;
                 }

@@ -79,7 +79,7 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-order-fields', {
         },
         isVisible: {
             get() {
-                return this.$store.getters['cartStore/getOrderFields']().length && this.$store.getters['cartStore/isVisible']('cart');
+                return this.$store.getters['cartStore/getOrderFields']().length
             }
         },
         showNumber: {

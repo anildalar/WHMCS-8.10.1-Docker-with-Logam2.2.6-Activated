@@ -39,7 +39,6 @@ const cartStore = {
             domainToSearch: null,
             account_id: null,
             requestedConfigOption : false,
-            domainRegType: ''
         },
         localStorage: {
             billingDetails: {},
@@ -529,6 +528,7 @@ const cartStore = {
                 }).join('&');
             }
             const url = baseUrl + (urlParams ? '?' + urlParams : '');
+            
             window.history.pushState({page: 'singlePage'}, 'sing page redirect', url);
         },
         async changeProduct({state, commit, dispatch, getters}, productId)
@@ -545,7 +545,7 @@ const cartStore = {
             await commit('popSpinner', {spinner: 'productButton'});
             await commit('popSpinner', {spinner: 'cart'});
             await dispatch('checkSinglePage');
-            // renderNavScroll();
+            renderNavScroll();
         },
         async changeBillingCycle({state, commit, dispatch, getters}, cycle)
         {
@@ -991,7 +991,6 @@ const cartStore = {
                     .then((resp) => {
                         if (state.validateErrors.length > 0)
                         {
-                            console.log(state.validateErrors)
                             throw Error(state.validateErrors);
                         }
                         });
@@ -1419,24 +1418,7 @@ const cartStore = {
             return info ? info[type] : false;
         },
         getDomainForm: state => function () {
-            return state.app.domainForm ? state.app.domainForm : {
-                "addons": {
-                    "dnsmanagement": null,
-                    "emailforwarding": null,
-                    "idprotection": null
-                },
-                "servers": {
-                    "ns1": "",
-                    "ns2": "",
-                    "ns3": "",
-                    "ns4": "",
-                    "ns5": ""
-                },
-                "customFields": {},
-                "registerFields": {
-                    "eppCode": "",
-                }
-            };
+            return state.app.domainForm;
         },
         getDomainToSearch: state => function () {
             return state.app.domainToSearch;

@@ -1167,9 +1167,7 @@ const LagomOrderFormApi = {
                                 }
                             }
                         }
-
-                        if ((selectedGateway.charge && selectedGateway.charge.isChargeable && selectedGateway.type === 'CC')
-                        || selectedGateway.gatewayKey === 'paypal_acdc') {
+                        if (selectedGateway.charge && selectedGateway.charge.isChargeable && selectedGateway.type === 'CC') {
 
                             axios.post(url, params)
                                 .then(async function (response) {

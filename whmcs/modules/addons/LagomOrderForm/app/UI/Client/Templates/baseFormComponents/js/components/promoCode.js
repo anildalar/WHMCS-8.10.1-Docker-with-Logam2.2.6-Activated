@@ -105,12 +105,16 @@
                             this.promoDescription = this.cart.promo.value + '% ' + this.cart.promo.recurring
                         } else
                         {
-                            this.promoDescription = this.currency.prefix + this.getFormattedPrice(this.cart.promo.discount.numeric) + ' ' + this.currency.suffix + promoType + ' ' + this.cart.promo.recurring
+                            this.promoDescription = this.currency.prefix + this.cart.promo.discount.numeric + ' ' + this.currency.suffix + promoType + ' ' + this.cart.promo.recurring
                         }
                         
                     } else
                     {
-                        this.promoDescription = this.currency.prefix + this.getFormattedPrice(this.cart.promo.discount.numeric)
+                        if (this.cart.promo.type == 'Percentage')
+                        {
+                            this.promoDescription = this.cart.promo.value + '% ' + this.cart.promo.recurring
+                        }
+                        this.promoDescription = this.currency.prefix + this.cart.promo.discount.numeric
                     }
                 }
                 return (this.cart.promo && this.cart.promo.code) ? this.cart.promo : false;
@@ -168,9 +172,6 @@
                 this.$store.dispatch('cartStore/addPromocode', {code: this.requestedPromoCode})
                 this.code = this.requestedPromoCode
             }
-        },
-        getFormattedPrice(price) {
-            return formatPrice.getFormattedPrice(price, this.currency.format)
-        },
+        }
     }
 });

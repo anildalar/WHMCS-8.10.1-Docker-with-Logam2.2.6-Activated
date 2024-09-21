@@ -56,14 +56,7 @@
                             </td>
                             <td>
                                 <span class="tld-label">{$MGLANG->absoluteT('LagomOrderForm','domains','tlds','register')}</span>
-                                <span v-if="getDiscountPrice(tld, 'domainregister')" class="tld-price">
-                                    <span class="price-savings d-inline">
-                                        <span v-html="getTldFirstPeriod(tld, 'domainregister', 'price')"></span>
-                                    </span>
-                                    <span v-html="getDiscountPrice(tld, 'domainregister')"></span>
-                                    <small v-if="/\d/.test(getTldFirstPeriod(tld, 'domainregister', 'price'))" class="text-lighter" v-html="getTldFirstPeriod(tld, 'domainregister', 'period')"></small>
-                                </span>
-                                <span class="tld-price" v-else-if="getTldFirstPeriod(tld, 'domainregister', 'price')">
+                                <span class="tld-price" v-if="getTldFirstPeriod(tld, 'domainregister', 'price')">
                                     <span v-html="getTldFirstPeriod(tld, 'domainregister', 'price')"></span>
                                     <small v-if="/\d/.test(getTldFirstPeriod(tld, 'domainregister', 'price'))" class="text-lighter" v-html="getTldFirstPeriod(tld, 'domainregister', 'period')"></small>
                                 </span>
@@ -71,14 +64,7 @@
                             </td>
                             <td>
                                 <span class="tld-label">{$MGLANG->absoluteT('LagomOrderForm','domains','tlds','transfer')}</span>
-                                <span v-if="getDiscountPrice(tld, 'domaintransfer')" class="tld-price">
-                                    <span class="price-savings d-inline">
-                                        <span v-html="getTldFirstPeriod(tld, 'domaintransfer', 'price')"></span>
-                                    </span>
-                                    <span v-html="getDiscountPrice(tld, 'domaintransfer')"></span>
-                                     <small v-if="/\d/.test(getTldFirstPeriod(tld, 'domaintransfer', 'price'))" class="text-lighter" v-html="getTldFirstPeriod(tld, 'domaintransfer', 'period')"></small>
-                                </span>
-                                <span class="tld-price" v-else-if="getTldFirstPeriod(tld, 'domaintransfer', 'price')">
+                                <span class="tld-price" v-if="getTldFirstPeriod(tld, 'domaintransfer', 'price')">
                                     <span v-html="getTldFirstPeriod(tld, 'domaintransfer', 'price')"></span>
                                     <small v-if="/\d/.test(getTldFirstPeriod(tld, 'domaintransfer', 'price'))" class="text-lighter" v-html="getTldFirstPeriod(tld, 'domaintransfer', 'period')"></small>
                                 </span>

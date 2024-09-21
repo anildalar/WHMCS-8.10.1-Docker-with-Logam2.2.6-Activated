@@ -54,6 +54,7 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-domain-tlds', {
 
             this.selectedGroup = this.defaultSelectedGroups
             this.tldToShow = this.defaultTldsToShow
+
             this.$nextTick(function () {
                 if(this.showNumber == true){
                     renderSectionIndex();
@@ -114,8 +115,7 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-domain-tlds', {
         },
         isVisible: {
             get () {
-                return this.$store.getters['cartStore/isVisible']('domains')
-                    && !this.$store.getters['cartStore/getSelectedProductId']();
+                return this.$store.getters['cartStore/isVisible']('domains') && this.$store.getters['cartStore/isDomainSectionAvailableComponent']('suggestions');
             }
         },
         groups: {
@@ -433,6 +433,7 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-domain-tlds', {
             return cat.length;
         },
         getTldFirstPeriod(tld, name, prop) {
+
             if (!tld['pricing'][this.currencyId]) {
                 return false;
             }
@@ -457,17 +458,6 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-domain-tlds', {
                 return this.$store.getters['cartStore/getZeroPrice']('domainsPrices')
             }
             return tld['pricing'][this.currencyId][name][periods[0]][prop];
-        },
-        getDiscountPrice(tld, name) {
-            let periods = Object.keys(tld['pricing'][this.currencyId]['domainregister']);
-            if (tld['pricing'][this.currencyId][name]) {
-                const firstPrice = tld['pricing'][this.currencyId][name][periods[0]]
-                return firstPrice.discountPrice > 0 ? this.currency.prefix + this.getFormattedPrice(firstPrice.discountPrice) + (this.layoutSettings.displayPriceSuffix ? (' ' + this.currency.suffix) : ''): false
-            }
-            return false
-        },
-        getFormattedPrice(price) {
-            return formatPrice.getFormattedPrice(price, this.currency.format)
         },
         updateCounter() {
             $('#tldGroupCounter').remove();

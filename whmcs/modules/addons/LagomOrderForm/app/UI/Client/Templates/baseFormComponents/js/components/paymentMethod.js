@@ -317,16 +317,9 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-payment-methods', {
         getDisabledGateways() {
             return this.group.disabledgateways ? this.group.disabledgateways.split(',') : []
         },
-        formatLastFour(num) {
-            return num.toString().padStart(4, '0');
-        },
         getGatewayCreditCards: function(name){
             if(Array.isArray(this.availableCreditCards)){
-                let creditCards = this.availableCreditCards.filter(card => card.gateway === name)
-                return creditCards.map(card => ({
-                    ...card,
-                    lastFour: this.formatLastFour(card.lastFour)
-                }));
+                return this.availableCreditCards.filter(card => card.gateway === name);
             }
             return null;
         },

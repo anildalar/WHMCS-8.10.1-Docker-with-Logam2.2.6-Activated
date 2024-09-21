@@ -1,5 +1,5 @@
 <script type="text/x-template" id="t-mg-one-page-standalone-addon-field">
-    <div :class="[field.image ? 'col-12':'col-md-6']" v-if="visible">
+    <div class="col-md-6" v-if="visible">
         <div class="panel panel-addon" :class="[
             { 'checked': (selected && !loader)},
             { 'panel-addon--has-image has-icon': field.image}

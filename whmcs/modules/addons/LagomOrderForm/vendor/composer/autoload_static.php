@@ -32,21 +32,10 @@ class ComposerStaticInitlosof
             'Mso\\IdnaConvert\\' => 16,
             'ModulesGarden\\LagomOrderForm\\Core\\' => 34,
             'ModulesGarden\\LagomOrderForm\\App\\' => 33,
-            'MaxMind\\WebService\\' => 19,
-            'MaxMind\\Exception\\' => 18,
-            'MaxMind\\Db\\' => 11,
-        ),
-        'G' => 
-        array (
-            'GeoIp2\\' => 7,
         ),
         'D' => 
         array (
             'Doctrine\\Common\\Annotations\\' => 28,
-        ),
-        'C' => 
-        array (
-            'Composer\\CaBundle\\' => 18,
         ),
         'A' => 
         array (
@@ -79,29 +68,9 @@ class ComposerStaticInitlosof
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
-        'MaxMind\\WebService\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/WebService',
-        ),
-        'MaxMind\\Exception\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maxmind/web-service-common/src/Exception',
-        ),
-        'MaxMind\\Db\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/maxmind-db/reader/src/MaxMind/Db',
-        ),
-        'GeoIp2\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/geoip2/geoip2/src',
-        ),
         'Doctrine\\Common\\Annotations\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
-        ),
-        'Composer\\CaBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
         ),
         'Adbar\\' => 
         array (
@@ -109,20 +78,9 @@ class ComposerStaticInitlosof
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'D' => 
-        array (
-            'Detection' => 
-            array (
-                0 => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced',
-            ),
-        ),
-    );
-
     public static $classMap = array (
         'AltoRouter' => __DIR__ . '/..' . '/altorouter/altorouter/AltoRouter.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Mobile_Detect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/Mobile_Detect.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -130,7 +88,6 @@ class ComposerStaticInitlosof
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitlosof::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitlosof::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitlosof::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitlosof::$classMap;
 
         }, null, ClassLoader::class);

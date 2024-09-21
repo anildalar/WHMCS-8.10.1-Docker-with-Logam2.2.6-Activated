@@ -14,15 +14,15 @@
 
             {*USER WITH SUB ACCOUNTS *}
             <div class="panel-group panel-group-condensed m-b-0"  id="customerBillingAccounts" data-inputs-container v-if="showCustTypeDetails" :class="[{ 'panel-group-condensed-full-width' : showNumber}]">
-                <div class="panel panel-check panel-default panel--no-border panel--billing" data-virtual-input v-for="(user) in userAccounts" v-if="user.email" :class="[{ 'checked' : user.id == accountId}, { 'disabled' : user.permissions.length && !user.permissions.includes('orders') }]" >
-                    <div class="panel-heading check" :style="[ user.permissions.length && !user.permissions.includes('orders') ? { 'pointer-events': 'none'} : '' ]">
+                <div class="panel panel-check panel-default panel--no-border panel--billing" data-virtual-input v-for="(user) in userAccounts" v-if="user.email" :class="[{ 'checked' : user.id == accountId}, { 'disabled' : user.permissions.length && !user.permissions.includes('order') }]" >
+                    <div class="panel-heading check" :style="[ user.permissions.length && !user.permissions.includes('order') ? { 'pointer-events': 'none'} : '' ]">
                         <label v-on:click="initUpdateRequest()">
                             <input class="icheck-control" type="radio" name="account_id" id="account_id"
                                    v-model="accountId" :value="user.id">
                             <div class="check-content d-flex align-center">
                                 <span v-html="user.firstname + ' ' + user.lastname"></span>
                             </div>
-                            <div class="label label-default account-select-label" v-if="user.permissions.length && !user.permissions.includes('orders')">
+                            <div class="label label-default account-select-label" v-if="user.permissions.length && !user.permissions.includes('order')">
                                 {$MGLANG->absoluteT('LagomOrderForm','noPermission')}
                             </div>
                             <span class="check-icon" v-else>

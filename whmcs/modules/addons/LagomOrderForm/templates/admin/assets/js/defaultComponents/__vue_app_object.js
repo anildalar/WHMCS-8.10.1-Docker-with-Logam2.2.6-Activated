@@ -389,10 +389,9 @@ var mgDefauleVueObject = {
                     if (self.appActionBlockingState) {
                         return true;
                     }
-
                     self.appActionBlockingState = true;
-                    var formTargetId = ($('#' + targetId)[0].tagName === 'FORM') ? targetId : $('#' + targetId).find('form').attr('id');
-                    if (formTargetId) {
+                    var formTargetId = ($('#'+targetId)[0].tagName === 'FORM') ? targetId : $('#'+targetId).find('form').attr('id');
+                    if(formTargetId){
                         self.showSpinner(event);
                         var formCont = new mgFormControler(formTargetId);
                         var formData = formCont.getFieldsData();
@@ -402,60 +401,44 @@ var mgDefauleVueObject = {
                         self.addUrlComponent('namespace', getItemNamespace(formTargetId));
                         self.addUrlComponent('index', getItemIndex(formTargetId));
                         self.addUrlComponent('ajax', '1');
-                        self.addUrlComponent('mgformtype', $('#' + formTargetId).attr('mgformtype'));
-
-                        axios.post(self.targetUrl, formData, {
-                            headers: {
-                                'Content-Type': 'multipart/form-data'
-                            }
-                        })
-                            .then(function(response) {
-                                let data = response.data;
-
-                                if (typeof data === 'string') {
-                                    data = data.replace(/<[^>]*>/g, '');
-                                    try {
-                                        data = JSON.parse(data);
-                                    } catch (error) {
-                                        console.error('Failed to parse JSON:', error);
-                                        return;
-                                    }
+                        self.addUrlComponent('mgformtype', $('#'+formTargetId).attr('mgformtype'));
+                        $.ajax({
+                            type: "POST",
+                            url: self.targetUrl,
+                            data: formData,
+                            processData: false,
+                            contentType: false})
+                        .done(function( data ) {
+                            data = data.data;
+                            self.hideSpinner(event);
+                            self.$nextTick(function() {
+                                if (data.callBackFunction && typeof window[data.callBackFunction] === "function") {
+                                    window[data.callBackFunction](data, targetId, event);
                                 }
-
-                                data = data.data;
-                                self.hideSpinner(event);
-                                self.$nextTick(function() {
-                                    if (data.callBackFunction && typeof window[data.callBackFunction] === "function") {
-                                        window[data.callBackFunction](data, targetId, event);
-                                    }
-                                });
-                                if (data.status === 'success') {
-                                    self.showModal = false;
-                                    if (data.callbackEvent && data.callbackEvent.name) {
-                                        mgEventHandler.runCallback(data.callbackEvent.name, targetId, data.callbackEvent.params);
-                                    }
-                                    self.runRefreshActions((data && typeof data.refreshIds !== undefined) ? data.refreshIds : null, data);
-                                    self.cleanMassActions();
-                                    self.addAlert(data.status, data.message);
-                                    formCont.updateFieldsValidationMessages([]);
-                                } else if (data.rawData !== undefined && data.rawData.FormValidationErrors !== undefined) {
-                                    formCont.updateFieldsValidationMessages(data.rawData.FormValidationErrors);
-                                } else {
-                                    formCont.updateFieldsValidationMessages([]);
-                                    self.handleErrorMessage(data);
-                                }
-                                self.appActionBlockingState = false;
-                            })
-                            .catch(function(error) {
-                                self.hideSpinner(event);
-                                if (error.response) {
-                                    self.handleServerError(error.response, error.response.statusText, error.response.status);
-                                } else {
-                                    console.error('Error', error.message);
-                                }
-                                self.appActionBlockingState = false;
                             });
-                    } else {
+                            if(data.status === 'success'){
+                                self.showModal = false;
+                                if(data.callbackEvent && data.callbackEvent.name){
+                                    mgEventHandler.runCallback(data.callbackEvent.name, targetId, data.callbackEvent.params);
+                                }
+                                self.runRefreshActions((data && typeof data.refreshIds !== undefined) ? data.refreshIds : null, data);
+                                self.cleanMassActions();
+                                self.addAlert(data.status, data.message);
+                                formCont.updateFieldsValidationMessages([]);
+                            } else if (data.rawData !== undefined && data.rawData.FormValidationErrors !== undefined) {
+                                formCont.updateFieldsValidationMessages(data.rawData.FormValidationErrors);
+                            } else {
+                                formCont.updateFieldsValidationMessages([]);
+                                self.handleErrorMessage(data);
+                            }
+                            self.appActionBlockingState = false;
+                        }).fail(function(jqXHR, textStatus, errorThrown) {
+                            self.hideSpinner(event);
+                            self.handleServerError(jqXHR, textStatus, errorThrown);
+                            self.appActionBlockingState = false;
+                        });
+                    }
+                    else {
                         //todo error reporting
                     }
                 },

@@ -3,7 +3,7 @@
         :component_namespace="component_namespace"
         :component_index="component_index"
 >
-    <div class="section" v-if="isVisible" :class="[{ 'section--full-width': !showNumber}]">
+    <div class="section section--server-fields" v-if="isVisible" :class="[{ 'section--full-width': !showNumber}]">
         <div class="section-number" v-if="showNumber">X</div>
         <div class="section-header">
             <h2 class="section-title">{$MGLANG->absoluteT('LagomOrderForm','serverFields','section','title')}</h2>

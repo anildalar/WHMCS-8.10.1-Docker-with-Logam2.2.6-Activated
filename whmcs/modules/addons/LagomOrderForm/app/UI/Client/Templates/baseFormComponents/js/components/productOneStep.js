@@ -24,7 +24,6 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-products', {
             slideWidths: [],
             chosenItem: 0,
             pricing: false,
-            changeProductFlag: true,
         }
     },
     watch:{
@@ -70,7 +69,7 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-products', {
                 if (!selectedProduct && this.products[0]) {
                     return this.products[0].id
                 }
-                return selectedProduct;
+                return this.$store.getters['cartStore/getSelectedProductId']();
             }
         },
         currency: {
@@ -498,8 +497,7 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-products', {
 
                         this.selectedMode = singleButton.textContent;
                         if(!this.sliderEnabled) {
-                            // swiper.translateTo(0, 0, false); 
-                            $(".swiper-steps").css('transform', 'translate3d(0,0,0)'); 
+                            swiper.translateTo(0, 0, false)
                             // swiper.cleanupStyles();
                             swiper.detachEvents();
                         }
@@ -545,7 +543,7 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-products', {
             }
         },
         isMarketConnectProductWithDomain() {
-            if (this.cart.products && this.cart.products[0]) {
+            if (this.cart.products[0]) {
                 return this.cart.products[0].productinfo.type === 'other' && this.cart.products[0].domain
             }
             return false

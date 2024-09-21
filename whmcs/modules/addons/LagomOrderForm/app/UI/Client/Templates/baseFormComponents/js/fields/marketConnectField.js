@@ -241,17 +241,15 @@ const marketConnect = {
         },
         getOptionPriceWithCycle: function(option){
             let selectedOption = option.pricing.billingCycles[this.billingCycle];
-            const desiredOrder = ['monthly', 'quarterly', 'semiannually', 'annually', 'biennially', 'triennially'];
-            if (typeof selectedOption == 'undefined' || selectedOption.rawPrice == -1) {
-                for (const cycle of desiredOrder) {
-                    if (option.pricing.billingCycles[cycle] && option.pricing.billingCycles[cycle].rawPrice != -1) {
-                        selectedOption = option.pricing.billingCycles[cycle];
-                        break;
+            if (typeof selectedOption == 'undefined' || selectedOption.rawPrice === -1) {
+                Object.values(option.pricing.billingCycles).forEach(item => {
+                    if (item.rawPrice !== -1) {
+                        selectedOption = item
                     }
-                }
+                })
             }
-            return selectedOption ? selectedOption.price
-                + '/' + selectedOption.shortbillingcyclefriendlylower : this.currency.prefix
+            return selectedOption ?  selectedOption.price
+                +  '/' + selectedOption.shortbillingcyclefriendlylower : this.currency.prefix
                 + formatPrice.getFormattedPrice(0, this.currency.format)
                 + (this.layoutSettings.displayPriceSuffix ? (' ' + this.currency.suffix) : '');
         },

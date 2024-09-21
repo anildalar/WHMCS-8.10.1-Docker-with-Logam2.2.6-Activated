@@ -7,7 +7,7 @@ const captchaPlugin = {
         Vue.prototype.$captchaCheck = function(type){
             return new Promise((resolve, reject) => {
                 const settings = this.$store.getters['cartStore/getCaptchaSettings']();
-
+                
                 if (!settings.setting || (settings.setting == 'offloggedin' && this.$store.getters['cartStore/getClient']()['id'])) {
                     resolve();
                     return;

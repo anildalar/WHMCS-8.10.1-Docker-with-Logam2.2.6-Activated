@@ -1,9 +1,8 @@
 const formatPrice = {
         getFormattedPrice: function (price,format) {
-            price = price + ''
             switch (format) {
                 case 2:
-                    if (price && price.includes(',')) {
+                    if (price >= 1000) {
                         return price.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})
                     }
                     return parseFloat(price).toFixed(2)

@@ -22,7 +22,7 @@
                         <button type="button" class="btn btn-sm btn-primary btn-icon" @click="removeAddon()"><i class="ls ls-close"></i></button>
                     </div>
                     <div class="panel-actions-price">
-                        <span class="price price-row price-domain-addon">
+                        <span class="price price-row">
                             <span class="price-value" v-if="field.pricing.numeric == 0" v-html="$store.getters['cartStore/getZeroPrice']('domainsPrices')"></span>
                             <span class="price-value" v-else v-html="field.prefixed_price + (layoutSettings.displayPriceSuffix ? (' ' + currency.suffix) : '')"></span>
                             <span class="price-cycle" v-if="field.pricing.numeric > 0 || /\d/.test($store.getters['cartStore/getZeroPrice']('domainsPrices'))" v-html="field.period_string"></span>

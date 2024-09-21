@@ -41,7 +41,7 @@ function mgVuePageControler(controlerId)
                         $(slider).on('mousedown', (e) => {
                             e.preventDefault()
                             isDown = true;
-                            navItemsWidth = 0;
+
                             $(slider).find('.nav-item').each((index, item) => {
                                 navItemsWidth += $(item).outerWidth(true)
                             })
@@ -61,14 +61,9 @@ function mgVuePageControler(controlerId)
                             }
                         });
                         $(slider).on('mousemove', (e) => {
-                            if(!isDown){
-                                this.isSliderMoving = false;
-                                return;
-                            } 
+                            if(!isDown) return;
                             if(navItemsWidth > $(container).width()) {
-                                setTimeout(() => {
-                                    this.isSliderMoving = true
-                                }, 100)
+                                this.isSliderMoving = true
                                 e.preventDefault();
                                 const x = e.pageX - $(slider).scrollLeft();
                                 $(slider).scrollLeft(startX - e.pageX);

@@ -11,11 +11,6 @@
         {* Tab Options *}
         <div class="section-body" v-if="!isDomainSelected">
             <div class="tab-nav tab-nav--section tab-nav--domain" data-nav-tabs-container ref="tabSliderContainer">
-                <div class="nav-arrow nav-arrow--left nav-arrow--hidden">
-                    <a href="#" class="nav-link" data-scrollnav="-250">
-                        <i class="ls ls-arrow-left"></i>
-                    </a>
-                </div>   
                 <ul class="nav nav-tabs nav-lg  m-b-3x" data-nav ref="tabSlider">
                     <li class="nav-item"  :class="{ active: type.id === selectedRegType}"   v-on:click="changeType($event, type.id)" v-for="type in regTypes" :href="'#'+type.href" :key="type.id">
                         <a class="nav-link" href="nav-link" >
@@ -24,11 +19,6 @@
                         </a>
                     </li>
                 </ul>
-                <div class="nav-arrow nav-arrow--right nav-arrow--hidden">
-                    <a href="#" class="nav-link" data-scrollnav="250">
-                        <i class="ls ls-arrow-right"></i>
-                    </a>
-                </div>
             </div>
             {* Search Component *}
             <div class="tab-content">
@@ -178,13 +168,12 @@
                                         <span v-html="`{$MGLANG->absoluteT('LagomOrderForm','domain', 'freeProductDomain')}`" v-if="isFreeForSelectedProduct"></span>
                                         <span v-else-if="domainDiscountPrice">
                                             <span class="price-savings">
-                                                <span class="search-result-period" v-if="!isFreeForSelectedProduct && period == 1" v-html="currency.prefix + getFormattedPrice(periodPrice) + (layoutSettings.displayPriceSuffix ? (' ' + currency.suffix) : '') + `/{$MGLANG->absoluteT('LagomOrderForm','domain', 'firstPeriodShort')}`"></span>
+                                                <span class="search-result-period" v-if="!isFreeForSelectedProduct && period == 1" v-html="periodPrice + `/{$MGLANG->absoluteT('LagomOrderForm','domain', 'firstPeriodShort')}`"></span>
                                                 <span class="search-result-period" v-else v-html="currency.prefix + periodPrice + (layoutSettings.displayPriceSuffix ? (' ' + currency.suffix) : '') + `/` + period + `{$MGLANG->absoluteT('LagomOrderForm','domain', 'periodShort')}`"></span>
                                             </span>
                                             <span v-html="currency.prefix + domainDiscountPrice + (layoutSettings.displayPriceSuffix ? (' ' + currency.suffix) : '') + `/{$MGLANG->absoluteT('LagomOrderForm','domain', 'firstPeriodShort')}`"></span>
                                         </span>
-                                        <span v-html="periodPrice" v-else-if="currency.prefix && periodPrice.includes(currency.prefix)"></span>
-                                        <span v-html="currency.prefix + getFormattedPrice(periodPrice) + (layoutSettings.displayPriceSuffix ? (' ' + currency.suffix) : '')" v-else></span>
+                                        <span v-html="periodPrice" v-else></span>
                                         <span class="search-result-period" v-if="!isFreeForSelectedProduct && period == 1 && !domainDiscountPrice" v-html="`/{$MGLANG->absoluteT('LagomOrderForm','domain', 'firstPeriodShort')}`"></span>
                                         <span class="search-result-period" v-else-if="!isFreeForSelectedProduct && !domainDiscountPrice" v-html="`/` + period + `{$MGLANG->absoluteT('LagomOrderForm','domain', 'periodShort')}`"></span>
                                     </div>

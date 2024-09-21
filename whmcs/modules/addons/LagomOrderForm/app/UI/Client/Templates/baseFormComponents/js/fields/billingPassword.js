@@ -59,20 +59,12 @@ const billingPassword = {
     destroyed() {
         this.isDestructed = true;
     },
-    mounted() {
-        const password =  document.querySelector('input#password');
-        password.addEventListener('input', () => {
-            this.password = password.value;
-            this.isMatched = !(this.field.name === 'password2' && this.password !== document.getElementById('inputNewPassword2').value)
-        });
-
-    },
     methods: {
         updateValue(value, valid) {
             if (valid === true) {
                 this.validateField(value);
             }
-            this.password = document.querySelector('input#password').value;
+            this.password = $('#password').val();
             this.isMatched = !(this.field.name === 'password2' && this.password !== value);
             this.$set(this.data, this.field.name, this.value)
         },

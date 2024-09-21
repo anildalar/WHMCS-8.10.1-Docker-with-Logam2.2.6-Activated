@@ -171,4 +171,3 @@ CREATE TABLE IF NOT EXISTS `#prefix#countries_settings` (
     PRIMARY KEY (`id`)
     )   ENGINE=InnoDB       DEFAULT
     CHARSET=#charset#   DEFAULT COLLATE #collation#;
-

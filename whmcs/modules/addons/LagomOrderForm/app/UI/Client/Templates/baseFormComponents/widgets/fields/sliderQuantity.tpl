@@ -40,28 +40,28 @@
         </div>
 
         <div class="range-slider-container" v-if="visible && dataOptions.maxValue > 1 && !dataOptions.isUnlimited" :class="[
-            { 'range-slider-container--no-price' : dataOptions.pricePerOne == 0 && (field.hideZeroPrices || layoutSettings.configurableOptionsPrices == 'hide') && details.options[0].setupFee == 0}
+            { 'range-slider-container--no-price' : dataOptions.pricePerOne == '0.00' && (field.hideZeroPrices || layoutSettings.configurableOptionsPrices == 'hide') && details.options[0].setupFee == '0.00'}
         ]">
-            <div class="range-slider-container-left" :class="[{ 'range-slider-container-left--setup-fee': details.options[0].setupFee > 0 && ((currencyPrefix || currencyPrefix == '') && (dataOptions.pricePerOne == 0 && !field.hideZeroPrices) || dataOptions.pricePerOne != 0) },{ 'mb-5' : field.hideZeroPrices || layoutSettings.configurableOptionsPrices == 'hide'}]">
+            <div class="range-slider-container-left" :class="[{ 'range-slider-container-left--setup-fee': details.options[0].setupFee > 0 && ((currencyPrefix || currencyPrefix == '') && (dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices) || dataOptions.pricePerOne != '0.00') },{ 'mb-5' : field.hideZeroPrices || layoutSettings.configurableOptionsPrices == 'hide'}]">
                 <div class="range-slider-container-slider" data-range-slider :id="fieldId+'-slider'"></div>
             </div>
-            <div class="range-slider-container-right" v-show="(dataOptions.pricePerOne == 0 && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide') || dataOptions.pricePerOne != 0 || details.options[0].setupFee > 0">
-                <div class="range-slider-container-price" v-if="dataOptions.pricePerOne || !dataOptions.pricePerOne && !field.hideZeroPrices">
-                    <span class="range-slider-container-prefix" v-if="getPrice() && (dataOptions.pricePerOne != 0 || (dataOptions.pricePerOne == 0 && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))">
+            <div class="range-slider-container-right" v-show="(dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide') || dataOptions.pricePerOne != '0.00' || details.options[0].setupFee > 0">
+                <div class="range-slider-container-price">
+                    <span class="range-slider-container-prefix" v-if="getPrice() && (dataOptions.pricePerOne != '0.00' || (dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))">
                         {$MGLANG->absoluteT('LagomOrderForm','configurableOptions','quantity','price')}
                     </span>
                     <span class="range-slider-container-prefix" v-else-if="getSetupFee(true)">
                         {$MGLANG->absoluteT('LagomOrderForm','product', 'setupFee')}
                     </span>
                     <input type="hidden" :name="field.name" data-range-input :value='inputValue'>
-                    <span class="range-slider-container-value" v-show="(currencyPrefix || currencyPrefix == '') && (dataOptions.pricePerOne == 0 && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide') || dataOptions.pricePerOne != 0 || details.options[0].setupFee > 0">
+                    <span class="range-slider-container-value" v-show="(currencyPrefix || currencyPrefix == '') && (dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide') || dataOptions.pricePerOne != '0.00' || details.options[0].setupFee > 0">
                         <span v-if="product.paytype === 'free'" v-html="`{$MGLANG->absoluteT('LagomOrderForm','Free')}`"></span>
                         <div v-else>
-                            <span v-html="getPrice()" v-if="getPrice() && (dataOptions.pricePerOne != 0 || (dataOptions.pricePerOne == 0 && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))"></span>
+                            <span v-html="getPrice()" v-if="getPrice() && (dataOptions.pricePerOne != '0.00' || (dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))"></span>
                             <span v-html="getSetupFee(true)" v-else-if="getSetupFee(true)"></span>
                         </div>
                     </span>
-                    <span v-if="product.paytype !== 'free' && getPrice() && (dataOptions.pricePerOne != 0 || (dataOptions.pricePerOne == 0 && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))">
+                    <span v-if="product.paytype !== 'free' && getPrice() && (dataOptions.pricePerOne != '0.00' || (dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))">
                         <span class="text-wrap" v-if="details.options[0].setupFee > 0" v-html="getSetupFee()"></span>
                         <span class="text-wrap" v-if="getSetupFee()" v-html="' {$MGLANG->absoluteT('LagomOrderForm','product', 'setupFee')}'"></span>
                     </span>
@@ -82,19 +82,19 @@
                             <inline-svg :src="sysURL + '/modules/addons/LagomOrderForm/templates/client/default/assets/img/templates/12x12-plus.svg'"/>
                         </button>
                     </div>
-                    <div class="range-slider-container-right" :class="[{ 'mt-2': details.selectedoption.length < 117 === false}]" v-show="(dataOptions.pricePerOne == 0 && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide') || dataOptions.pricePerOne != 0 || details.options[0].setupFee > 0">
+                    <div class="range-slider-container-right" :class="[{ 'mt-2': details.selectedoption.length < 117 === false}]" v-show="(dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide') || dataOptions.pricePerOne != '0.00' || details.options[0].setupFee > 0">
                         <div class="range-slider-container-price">
-                            <span class="range-slider-container-prefix" v-if="getPrice() && (dataOptions.pricePerOne != 0 || (dataOptions.pricePerOne == 0 && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))">
+                            <span class="range-slider-container-prefix" v-if="getPrice() && (dataOptions.pricePerOne != '0.00' || (dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))">
                                 {$MGLANG->absoluteT('LagomOrderForm','configurableOptions','quantity','price')}
                             </span>
                             <span class="range-slider-container-prefix" v-else-if="getSetupFee(true)">
                                 {$MGLANG->absoluteT('LagomOrderForm','product', 'setupFee')}
                             </span>
                             <input type="hidden" :name="field.name" data-range-input :value='inputValue'>
-                            <span class="range-slider-container-value" v-show="(currencyPrefix || currencyPrefix == '') && (dataOptions.pricePerOne == 0 && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide') || dataOptions.pricePerOne != 0 || details.options[0].setupFee > 0">
+                            <span class="range-slider-container-value" v-show="(currencyPrefix || currencyPrefix == '') && (dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide') || dataOptions.pricePerOne != '0.00' || details.options[0].setupFee > 0">
                                 <span v-if="product.paytype === 'free'" v-html="`{$MGLANG->absoluteT('LagomOrderForm','Free')}`"></span>
                                 <div v-else>
-                                    <span v-html="getPrice()" v-if="getPrice() && (dataOptions.pricePerOne != 0 || (dataOptions.pricePerOne == 0 && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))"></span>
+                                    <span v-html="getPrice()" v-if="getPrice() && (dataOptions.pricePerOne != '0.00' || (dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))"></span>
                                     <span v-html="getSetupFee(true)" v-else-if="getSetupFee(true)"></span>
                                     {* <span v-if="details.options[0].recurring == 0 && field.hideZeroPrices"></span> *}
                                     {* <span v-else-if="details.options[0].recurring == 0" v-html="$store.getters['cartStore/getZeroPrice']('configurableOptionsPrices')" class="text-wrap"></span> *}
@@ -102,7 +102,7 @@
                                     {* <span v-else-if="getPrice() == false && details.options[0].setupFee" v-html="getSetupFee(true)"></span> *}
                                 </div>
                             </span>
-                            <span v-if="product.paytype !== 'free' && getPrice() && (dataOptions.pricePerOne != 0 || (dataOptions.pricePerOne == 0 && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))">
+                            <span v-if="product.paytype !== 'free' && getPrice() && (dataOptions.pricePerOne != '0.00' || (dataOptions.pricePerOne == '0.00' && !field.hideZeroPrices && layoutSettings.configurableOptionsPrices != 'hide'))">
                                 <span class="text-wrap" v-if="details.options[0].setupFee > 0" v-html="getSetupFee()"></span>
                                 <span class="text-wrap" v-if="getSetupFee()" v-html="' {$MGLANG->absoluteT('LagomOrderForm','product', 'setupFee')}'"></span>
                             </span>

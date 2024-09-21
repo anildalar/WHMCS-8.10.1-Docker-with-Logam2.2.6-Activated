@@ -6,7 +6,7 @@
                 <span class="control-label-info" v-if="!field.required" v-html="'{$MGLANG->absoluteT('LagomOrderForm','orderForm','optional')}'"></span>
                 <span class="control-label-info" v-else-if="layoutSettings.customFieldsRequired" v-html="'{$MGLANG->absoluteT('LagomOrderForm','orderForm','required')}'"></span>
             </label>
-            <input class="form-control" type="password" autocomplete="new-password" v-model="value" :placeholder="field.placeholder" :id="field.id" @change="updateDataValue()">
+            <input class="form-control" type="password" autocomplete="off" v-model="value" :placeholder="field.placeholder" :id="field.id" @change="updateDataValue()">
             <span class="help-block" v-html="getTranslatedMessage(field.description)"></span>
             <div class="alert alert-danger alert-sm" v-if="!isValidField" v-html="getValidationMessage()"></div>
         </div>

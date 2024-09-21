@@ -123,9 +123,7 @@ const dropdownInput = {
         activeGroup: function(value) {
             let self = this;
             if(this.field.groups.length) {
-                const filteredGroup = this.field.groups.filter(group => group.id == value)
-                if (!filteredGroup.length) return;
-                this.filteredGroup = filteredGroup
+                this.filteredGroup = this.field.groups.filter(group => group.id == value)
             }
 
             if(self.field.displayType != 'osBox' && self.filteredGroup.length) {
@@ -205,13 +203,18 @@ const dropdownInput = {
                 }
                 this.activeGroup = group.id;
             }
+
+            // this.$nextTick(() => {
+            //     this.activeGroup = group.id;
+            // })
         },
         changeOption(event, option,  group = null){
             this.selectedOption = option
             this.value = option.id
-            if (this.checkIfSuboptionExists(group, option.id)) {
+            if(group) {
                 this.activeGroup = group
             }
+
         },
         getNameRows(name) {
             const separator = ','
@@ -235,28 +238,24 @@ const dropdownInput = {
         },
         selectURLConfigOption()
         {
-            const requestedOption = this.selectedConfigOptions.filter(item => item !== 0);
+            const requestedOption = this.selectedConfigOptions.filter(item => item !== 0)
             if (requestedOption.length) {
-                requestedOption.forEach(val => {
-                    if (this.field.groups && this.field.groups.length) {
-                        let groupId = null;
-                        this.field.groups.forEach(group => {
-                            if (Object.values(group.suboptions).some(suboption => suboption.id === val)) {
-                                groupId = group.id;
-                            }
-                        });
-                        const opt = this.field.details.options.find(option => option.id === val)
-                        if (opt) {
-                            this.changeOption(null, opt, groupId);
-                        }
-
-                    } else {
-                        const opt = this.field.details.options.find(option => option.id === val)
-                        if (opt) {
-                            this.changeOption(null, opt);
+                Object.values(this.field.details.options).forEach(val => {
+                    if (requestedOption.includes(val.id)) {
+                        if (this.field.groups && this.field.groups.length) {
+                            let groupIndex = 0
+                            this.field.groups.forEach(group => {
+                                if (Object.values(group.suboptions).filter(e => e.id === val.id).length < 1) {
+                                    groupIndex++
+                                }
+                            })
+                            this.changeOption(null,val, this.field.groups[groupIndex].id)
+                            this.selectedValue = val.id
+                        } else {
+                            this.changeOption(null,val)
                         }
                     }
-                });
+                })
             }
         },
         getOptionPrice(opt) {
@@ -282,16 +281,5 @@ const dropdownInput = {
                 + (this.layoutSettings.displayPriceSuffix ? (' ' + this.currency.suffix) : '')
                 : this.$store.getters['cartStore/getZeroPrice']('configurableOptionsPrices')
         },
-        checkIfSuboptionExists(groupId, suboptionId) {
-            if (Array.isArray(this.field.groups)) {
-                const group = this.field.groups.find(group => group.id === groupId);
-                if (group) {
-                    // Sprawdzenie czy suboptions istnieje i jest przekształcalne do tablicy
-                    const suboptionsArray = Array.isArray(group.suboptions) ? group.suboptions : Object.values(group.suboptions);
-                    return suboptionsArray.some(suboption => suboption.id === suboptionId);
-                }
-            }
-            return false;
-        }
     }
 };

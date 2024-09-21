@@ -167,7 +167,7 @@
                         <div class="summary-list summary-list-subtotals" v-if="(cart.taxname || cart.taxname2 || cart.promo && promo && cart.promo.isApplied) && cart.subtotal.numeric != undefined">
                             <div class="list-item">
                                 <span class="item-name">{$MGLANG->absoluteT('LagomOrderForm','cart','ordersubtotalduetoday')}</span>
-                                <span class="item-value" v-html="cart.subtotal.prefixed + (layoutSettings.displayPriceSuffix ? (' ' + currency.suffix) : '')"></span>
+                                <span class="item-value" v-html="currency.prefix + getFormattedPrice(cart.subtotal.numeric) + (layoutSettings.displayPriceSuffix ? (' ' + currency.suffix) : '')"></span>
                             </div>
                         </div>
                         <div class="summary-list summary-list-taxes" v-if="(cart.taxname || cart.taxname2 || cart.promo && promo && cart.promo.isApplied) && !isButtonBlocked">

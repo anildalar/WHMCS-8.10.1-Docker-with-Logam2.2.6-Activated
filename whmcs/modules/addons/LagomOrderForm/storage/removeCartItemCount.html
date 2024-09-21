@@ -1,15 +1,6 @@
 <style>.nav-item-cart .nav-badge, .cart-btn .badge{display:none;}</style>
 <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        var navBadge = document.querySelector('.nav-item-cart .nav-badge');
-        var cartBadge = document.querySelector('.cart-btn .badge');
-
-        if (navBadge) {
-            navBadge.parentNode.removeChild(navBadge);
-        }
-
-        if (cartBadge) {
-            cartBadge.parentNode.removeChild(cartBadge);
-        }
-    });
+    $(document).ready(function(){
+        $('.nav-item-cart .nav-badge, .cart-btn .badge').remove();
+    })
 </script>

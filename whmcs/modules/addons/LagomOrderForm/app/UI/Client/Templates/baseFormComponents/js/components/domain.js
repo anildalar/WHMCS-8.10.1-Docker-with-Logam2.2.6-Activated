@@ -103,11 +103,7 @@
             this.searchDomain();
         },
         group: function() {
-            if (!this.tlds.includes(this.selectedTld)) {
-                this.selectedTld = this.tlds[0] ? this.tlds[0].extension : null
-            }
             if (this.searchDetails) {
-
                 this.ownDomainFlag = true;
             }
 
@@ -247,11 +243,6 @@
                 return this.$store.getters['cartStore/getSelectedCurrencyId']()
             }
         },
-        orderSettings: {
-            get(){
-                return this.$store.getters['cartStore/getWhmcsOrderSettings']();
-            }
-        },
         getSPage: {
             get(){
                 return this.$store.getters['cartStore/getSPage']();
@@ -303,10 +294,6 @@
                 }
                 if (this.userDetails.id) {
                     this.layoutSettings.domainElements = this.layoutSettings.domainElementsForUser
-                }
-                if (this.orderSettings.EnableDomainRenewalOrders !== undefined &&
-                    this.orderSettings.EnableDomainRenewalOrders !== 'on') {
-                    delete domainsRegTypes.renew
                 }
                 return this.layoutSettings.domainElements && this.layoutSettings.domainElements.length
                     ? this.getSortedElementsBySettings(domainsRegTypes) : domainsRegTypes;
@@ -464,9 +451,8 @@
                     return true
                 }
                 if (!this.shortestPeriod) return null
-
                 this.period = this.shortestPeriod.period
-                return this.getOnlyPrice(this.decodeHtml(this.shortestPeriod[this.selectedRegType])  + '')
+                return this.shortestPeriod[this.selectedRegType]
             }
         },
         isFreeForSelectedProduct: {
@@ -584,13 +570,13 @@
         isDomainSelected: {
             get()
             {
-                return this.$store.getters['cartStore/isDomainSelected']()
+                return this.$store.getters['cartStore/isDomainSelected']();
             },
         },
         selectedDomain: {
             get()
             {
-                return  this.$store.getters['cartStore/getDomainName']()
+                return this.$store.getters['cartStore/getDomainName']();
             }
         },
         availablePeriods: {
@@ -679,19 +665,19 @@
         domainServerNamespacesFormData: {
             get()
             {
-                return this.formData && this.formData.servers ? this.formData.servers : {};
+                return this.formData.servers ? this.formData.servers : {};
             }
         },
         customFieldsFormData: {
             get()
             {
-                return this.formData && this.formData.customFields ? this.formData.customFields : {};
+                return this.formData.customFields ? this.formData.customFields : {};
             }
         },
         registerFieldsFormData: {
             get()
             {
-                return this.formData && this.formData.registerFields ? this.formData.registerFields : {};
+                return this.formData.registerFields ? this.formData.registerFields : {};
             }
         },
         isBlockedPage: {
@@ -792,9 +778,6 @@
                 this.searchedWord = ''
                 this.selectedTld = this.tlds[0] ? this.tlds[0].extension : null
                 this.setType(type);
-                if (type === 'renew') {
-                    this.$store.dispatch('cartStore/changeGroup', 'domain-renew');
-                }
             }
         },
         setType(type)
@@ -909,9 +892,6 @@
             this.$store.dispatch('cartStore/loadDomainInformation', data)
         },
         convertDomainName: function () {//prepareAndGetDomainName
-            if (!this.domainTld) {
-                this.domainTld = this.tlds[0].extension
-            }
             let glue = (this.domainTld.indexOf('.') === 0) ? '' : '.';
 
             return this.domainSld + glue + this.domainTld;
@@ -1085,14 +1065,15 @@
         {
             let domain = this.domainSearched[0] ? this.domainSearched[0].domainName : this.domainName
 
-            if (!this.layoutSettings.showDropdownWithTLDs && this.domainSearched[0] && typeof this.domainSearched[0].originalUnavailableDomain != undefined && this.domainSearched[0].originalUnavailableDomain) {
+            if (!this.layoutSettings.showDropdownWithTLDs && this.domainSearched[0].originalUnavailableDomain) {
                 domain = this.domainSearched[0].originalUnavailableDomain
             }
-            if (this.domainSearched[0] === undefined || (this.domainSearched[0] && toString(this.domainSearched[0].shortestPeriod.transfer).includes("-1"))) {
+
+            if (this.domainSearched[0] === undefined || (this.domainSearched[0] && this.domainSearched[0].shortestPeriod.transfer.includes("-1"))) {
                 return '<p></p>' + mgPageLang.sprintf(mgPageLang.translate(['orderForm', 'searchResult', 'domainIsNotAvailable'], {}), '<b>' + domain + '</b>');
             }
 
-            if (this.domainTransfer === undefined || this.domainTransfer[0] === undefined || this.domainTransfer[0].isValidDomain == 'false' || !this.domainTransfer[0].shortestPeriod || (!this.domainTransfer[0].shortestPeriod.transfer && this.domainTransfer[0].shortestPeriod.transfer !== 0))
+            if (this.domainTransfer === undefined || this.domainTransfer[0] === undefined || this.domainTransfer[0].isValidDomain == 'false' || !this.domainTransfer[0].shortestPeriod || !this.domainTransfer[0].shortestPeriod.transfer)
             {
                 return mgPageLang.sprintf(mgPageLang.translate(['orderForm', 'searchResult', 'domainIsNotValid'], {}), '<b>' + domain + '</b>');
             }
@@ -1179,9 +1160,7 @@
             this.formData.customFields[field.id] = field.value;
         },
         registerFieldUpdated(field){
-            if(this.formData && this.formData.registerFields[field.id]){
-                this.formData.registerFields[field.id] = field.value;
-            }
+            this.formData.registerFields[field.id] = field.value;
         },
         changeTld(tld) {
             this.selectedTld = tld
@@ -1273,14 +1252,7 @@
         },
         getZeroValue() {
             return this.$store.getters['cartStore/getZeroPrice']('domainsPrices')
-        },
-        getOnlyPrice(txt) {
-            var regex = /[0-9.,]/g;
-            var results = txt.match(regex);
-            return results ? results.join('') : '';
-        },
-
-
+        }
 
     }
 });

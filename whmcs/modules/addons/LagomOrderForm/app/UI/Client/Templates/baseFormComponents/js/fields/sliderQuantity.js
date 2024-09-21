@@ -11,6 +11,13 @@ const sliderInput = {
             get() {
                 let details = this.field.billingCycles[Object.keys(this.field.billingCycles)[0]]
                 if (this.product && this.oldProduct.id !== this.product.id) {
+                    this.inputValue = 0
+                    if(this.slider) {
+                        $('.range-slider-current-value').text(0)
+                        // $('[data-range-price]').text(this.getFormattedPrice(0))
+                        $('.range-slider-origin').css('transform', 'translateX(-100%)')
+                        $('.range-slider-connect').css('transform', 'translate(0,0) scale(0,0)')
+                    }
                     this.oldProduct = this.product
                 }
                 return details
@@ -201,9 +208,8 @@ const sliderInput = {
                 connect: [true, false],
                 snap: false,
                 range: {
-                    'min': parseInt(self.dataOptions.minValue),
-                    'max': parseInt(self.dataOptions.maxValue)
-
+                    'min': self.dataOptions.minValue,
+                    'max': self.dataOptions.maxValue
                 },
                 behaviour: 'tap-drag',
                 direction: self.isPageRTL() ? 'rtl' : 'ltr',
@@ -340,20 +346,13 @@ const sliderInput = {
             document.querySelector('#' + self.fieldId + ' .range-slider-pips').innerHTML = templateFirst + templateLast
         },
         onUpdate(values, handle, rangeInput) {
-            if (rangeInput[0]) {
-                rangeInput[0].value = values[0].toFixed(0);
-            }
-
+            rangeInput[0].value = values[0].toFixed(0);
         },
         onSet(values, handle, rangeInput) {
-            if(rangeInput[0]) {
-                rangeInput[0].value = values[0].toFixed(0);
-            }
+            rangeInput[0].value = values[0].toFixed(0);
         },
         onSlide(values, handle, rangeInput) {
-            if (rangeInput[0]) {
-                rangeInput[0].value = values[0].toFixed(0);
-            }
+            rangeInput[0].value = values[0].toFixed(0);
         },
         setViewValue(values, handle, rangeInput, viewValue) {
             if (viewValue[0]){

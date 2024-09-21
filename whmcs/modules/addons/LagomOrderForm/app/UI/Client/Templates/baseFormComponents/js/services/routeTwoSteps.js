@@ -43,7 +43,7 @@ const routeTwoSteps = {
             arrayParams.forEach(param => {
                 const item = param.split('=')
                 const key = item[0]
-                if (key === 'pid'){
+                if (key == 'pid'){
                     productId = item[1];
                 }
             })
@@ -51,8 +51,9 @@ const routeTwoSteps = {
             if (productId == null) {
                 productId = rootState.cartStore.app.cart.products[0] ? rootState.cartStore.app.cart.products[0].pid : null;
             }
-            let productDetails = await this.getters['cartStore/getSelectedProductDetails']();
-            if (productId !== null && productDetails) {
+
+            let urlArray = window.location.href.split('/')
+            if (!isNaN(parseInt(urlArray[urlArray.length - 1])) || productId !== null) {
                 domainDetails = await this.getters['cartStore/getSelectedProductDetails']();
                 if(domainDetails && domainDetails.showdomainoptions == 1) {
                     await commit('cartStore/showComponent', 'domains',{root: true})
@@ -94,7 +95,6 @@ const routeTwoSteps = {
         async configurations({state, commit, dispatch, rootState}){
             $('.section.section--full-width').show()
             let productDetails = await this.getters['cartStore/getSelectedProductDetails']();
-
             if( productDetails && productDetails.showdomainoptions == 1 )
             {
                 await commit('cartStore/showComponent', 'domains', { root: true });

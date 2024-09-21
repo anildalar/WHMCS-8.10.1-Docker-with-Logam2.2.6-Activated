@@ -19,7 +19,7 @@
                                 <span class="check-sign"><i class="ls ls-check"></i></span>
                                 <h3 class="package-title package-name" :class="[{ 'h5': isOneStep}]">
                                     <span v-html="product.name"></span>
-                                    <span v-if="product.is_featured === 1" class="label label-primary label-product-horizontal">{$MGLANG->absoluteT('LagomOrderForm','labels','featured')}</span>
+                                    <span v-if="product.is_featured === 1" class="label label-primary">{$MGLANG->absoluteT('LagomOrderForm','labels','featured')}</span>
                                 </h3>
                                 <div class="package-price">
                                 </div>

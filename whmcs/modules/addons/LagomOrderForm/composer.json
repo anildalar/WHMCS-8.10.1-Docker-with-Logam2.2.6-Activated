@@ -19,9 +19,7 @@
     "symfony/polyfill-apcu": "1.10.0",
     "altorouter/altorouter": "1.1.0",
     "rappasoft/laravel-helpers": "^1.0",
-    "zircote/swagger-php": "^3.1",
-    "mobiledetect/mobiledetectlib": "2.8.33",
-    "geoip2/geoip2": "~2.0"
+    "zircote/swagger-php": "^3.1"
   },
   "replace": {
     "symfony/http-foundation": "*",

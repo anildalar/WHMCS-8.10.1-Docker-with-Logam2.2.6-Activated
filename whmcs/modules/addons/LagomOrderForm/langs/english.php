@@ -366,8 +366,7 @@ $_LANG['state']     = $_LANG['LagomOrderForm']['orderForm']['state'];
 $_LANG['postcode']   = $_LANG['LagomOrderForm']['orderForm']['postcode'];
 $_LANG['phonenumber'] = $_LANG['LagomOrderForm']['orderForm']['phoneNumber']   ;
 $_LANG['companyname'] = $_LANG['LagomOrderForm']['orderForm']['companyName']    ;
-$_LANG['country'] = $_LANG['orderForm']['country'];
-$_LANG['tax_id'] = $_LANG['tax']['taxLabel'];
+$_LANG['country'] = 'country';
 $_LANG['LagomOrderForm']['orderForm']['passwordTooltip']     = "<strong>Tips for a good password</strong><br />Use both upper and lowercase characters<br />Include at least one symbol (# $ ! % &amp; etc.)<br />Do not use dictionary words";
 $_LANG['LagomOrderForm']['orderForm']['optional']            = '(' . $_LANG['orderForm']['optional'] . ')';
 $_LANG['LagomOrderForm']['orderForm']['required']            = '(' . $_LANG['orderForm']['required'] . ')';
@@ -576,7 +575,7 @@ $_LANG['LagomOrderForm']['payments']['card']['status']['active']        = "Activ
 $_LANG['LagomOrderForm']['payments']['card']['status']['expired']       = "Expired";
 $_LANG['LagomOrderForm']['payments']['card']['status']['ccvisNotValid'] = 'CVV/CVC2 is not valid.';//$_LANG['customfieldvalidationerror'];
 
-$_LANG['invalidCustomFieldLink'] = "Link/URL is an Invalid URL";
+
 //addons
 $_LANG['LagomOrderForm']['adons']['section']['title'] = $_LANG['cartavailableaddons'];
 
@@ -749,6 +748,7 @@ $_LANG['shortBillingCycle']['se'] = 'se';
 $_LANG['shortBillingCycle']['tr'] = 'tr';
 $_LANG['shortBillingCycle']['bi'] = 'bi';
 $_LANG['shortBillingCycle']['yr'] = 'yr';
+
 $_LANG['addonCA']['order']['mainContainer']['LagomOrderForm']['clientArea']['scripts']['cycle'] = '%s';
 $_LANG['addonCA']['order']['mainContainer']['LagomOrderForm']['clientArea']['scripts']['mo'] = $_LANG['shortBillingCycle']['mo'];
 $_LANG['addonCA']['order']['mainContainer']['LagomOrderForm']['clientArea']['scripts']['qu'] = $_LANG['shortBillingCycle']['qu'];
@@ -1281,7 +1281,3 @@ $_LANG['addonAA']['settings']['mainContainer']['domainSettingsForm']['baseSectio
 
 $_LANG['addonAA']['settings']['mainContainer']['generalSettingsForm']['baseSection']['removeHiddenDataFromJson']['removeHiddenDataFromJson'] = 'Remove Hidden Data from JSON';
 $_LANG['addonAA']['settings']['mainContainer']['generalSettingsForm']['baseSection']['removeHiddenDataFromJson']['description'] = "This option is for admins only and is set to disabled by default. Once enabled, products with product groups marked as \"Hidden\" in WHMCS will not be visible in the browser's developer tool.";
-
-
-$_LANG['unlimitedFreeTrial'] = 'Unlimited Free Trial';
-$_LANG['limitedFreeTrial'] = 'Free :period: Days Trial';

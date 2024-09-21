@@ -151,12 +151,16 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-cart', {
                             this.promoDescription = this.cart.promo.value + '% ' + this.cart.promo.recurring
                         } else
                         {
-                            this.promoDescription = this.currency.prefix + this.getFormattedPrice(this.cart.promo.discount.numeric) + ' ' + this.currency.suffix + promoType + ' ' + this.cart.promo.recurring
+                            this.promoDescription = this.currency.prefix + this.cart.promo.discount.numeric + ' ' + this.currency.suffix + promoType + ' ' + this.cart.promo.recurring
                         }
                         
                     } else
                     {
-                        this.promoDescription = this.currency.prefix + this.getFormattedPrice(this.cart.promo.discount.numeric)
+                        if (this.cart.promo.type == 'Percentage')
+                        {
+                            this.promoDescription = this.cart.promo.value + '% ' + this.cart.promo.recurring
+                        }
+                        this.promoDescription = this.currency.prefix + this.cart.promo.discount.numeric
                     }
                 }
                 return (this.cart.promo && this.cart.promo.code) ? this.cart.promo : false;
@@ -170,7 +174,6 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-cart', {
         },
         promoCodeErrorMessage:{
             get(){
-                console.log(this.$store.getters['cartStore/getPromoCodeErrorMessage']())
                 return this.$store.getters['cartStore/getPromoCodeErrorMessage']();
             }
         },
@@ -528,7 +531,7 @@ mgJsComponentHandler.addDefaultComponent('mg-one-page-cart', {
         getCartPrice() {
             let price = parseFloat(this.cart.subtotal.numeric) + parseFloat(this.cart.taxtotal.numeric) + parseFloat(this.cart.taxtotal2.numeric)
             if (this.cart.gatewayCharge) {
-                price += parseFloat(this.cart.gatewayCharge.numeric)
+                price += this.cart.gatewayCharge.numeric
             }
             return this.getFormattedPrice(price)
         },

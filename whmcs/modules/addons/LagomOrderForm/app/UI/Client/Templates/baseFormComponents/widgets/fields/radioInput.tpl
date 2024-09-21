@@ -41,7 +41,7 @@
                         <img class="nav-img" :src="group.image" v-if="group.image"/>
                         <input type="radio" :name="'group.name' + group.id" :id="'group.id' + group.id">
                         <span v-html="group.name"></span>
-                        <i data-toggle="tooltip" :title="`<div class='tooltip-inner--lg'>` + group.description + `</div>`" data-container="body" data-html="true" class="lm lm-info section-tooltip section-tooltip--sm" v-if="group.description"></i>
+                        <i data-toggle="tooltip" :title="`<div class='tooltip-inner--lg'>` + group.description + `</div>`" data-html="true" class="lm lm-info section-tooltip section-tooltip--sm" v-if="group.description"></i>
                     </a>
                 </li>
             </ul>
@@ -90,15 +90,11 @@
                                             <div class="radio-styled">
                                                 <ins class="iCheck-helper"></ins>
                                             </div>
-                                            <div class="d-flex flex-row radio-text-content">
-                                                <div class="radio-name-content">
-                                                    <div class="radio-text">
-                                                        <div class="text" v-if="suboption.nameonly" v-html="suboption.nameonly"></div>
-                                                        <div class="text" v-else v-html="getNameBySuboptionRawName(suboption.rawName)"></div>
-                                                    </div>
-                                                    <div class="radio-price" v-html="getOptionPrice(suboption)"></div>
-                                                </div>
-                                                <span class="w-100 text-right radio-setupfee" v-if="suboption.setup" v-html="getOptionSetupFee(suboption) +' {$MGLANG->absoluteT('LagomOrderForm','product', 'setupFee')}'"></span>
+                                            <div class="d-flex flex-row">
+                                                <div class="text" v-if="suboption.nameonly" v-html="suboption.nameonly"></div>
+                                                <div class="text" v-else v-html="getNameBySuboptionRawName(suboption.rawName)"></div>
+                                                <span class="ml-1" v-html="getOptionPrice(suboption)"></span>
+                                                <span class="w-100 text-right" v-if="suboption.setup" v-html="getOptionSetupFee(suboption) + ' {$MGLANG->absoluteT('LagomOrderForm','product', 'setupFee')}'"></span>
                                             </div>
 
                                         </label>

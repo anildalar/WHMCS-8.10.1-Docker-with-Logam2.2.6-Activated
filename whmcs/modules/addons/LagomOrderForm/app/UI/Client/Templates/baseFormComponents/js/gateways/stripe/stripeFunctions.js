@@ -126,8 +126,7 @@ const mgStripe = {
                 if (input && input.value !== "false") {
                     stripe.createPaymentMethod("card", card).then(function (e) {
                         if (e.error) {
-                            e.validation_feedback = e.error.message;
-                            resolve(e);
+                            reject(e);
                         } else {
                             WHMCS.http.jqClient.jsonPost({
                                 url: WHMCS.utils.getRouteUrl("/stripe/payment/intent"),
@@ -141,15 +140,9 @@ const mgStripe = {
                                                 billing_details: e.billing_details,
                                                 metadata: e.metadata
                                             }
-                                        }).then(resp => {
-                                            if (resp.error) {
-                                                e.validation_feedback = resp.error.message;
-                                                resolve(e);
-                                            } else {
-                                                resolve(1)
-                                            }
                                         })
                                     }
+                                    resolve(1);
                                 },
                                 warning: function (e) {
                                     reject(e);
