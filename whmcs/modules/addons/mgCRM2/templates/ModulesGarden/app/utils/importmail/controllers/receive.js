@@ -136,7 +136,6 @@ function( $rootScope,   $scope,   $stateParams,   importmailData,   ngDialog,   
                     $scope.$emit('loadingNotification', {type: 'progress'});
                     
                     var params = $scope.sendMail;
-                    params.message = "{literal}" + params.message + '{/literal}';
                     $http.post($rootScope.settings.config.apiURL + '/settings/statuses/importmail/send/json', params).then(function(result) {
                         $scope.$emit('loadingNotification', {type: 'finished'}); 
                         addMassege(result.data.status, result.data.msg);                                               

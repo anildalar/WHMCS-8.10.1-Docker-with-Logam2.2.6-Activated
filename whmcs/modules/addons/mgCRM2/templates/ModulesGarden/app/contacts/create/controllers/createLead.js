@@ -122,26 +122,10 @@ function( $scope,   $rootScope,   ngDialog,   blockUI,   createLeadService,   cr
             }
         }
         $scope.newLead.static.lastname = $data.lastname;
-
-        for(var i in $scope.newLead.static)
-        {
-            if($.isNumeric(i))
-            {
-                $scope.newLead.dynamic[i] = $scope.newLead.static[i];
-            }
-        }
         if($data.customFields){
             for(var i in $scope.mappings.custom)
             {
-                if($.isNumeric($scope.mappings.custom[i]))
-                {
-                    $scope.newLead.dynamic[$scope.mappings.custom[i]] = $data.customFields[i];
-                }
-
-                if(!$.isNumeric($scope.mappings.custom[i]))
-                {
-                    $scope.newLead.static[$scope.mappings.custom[i]] = $data.customFields[i];
-                }
+                $scope.newLead.dynamic[$scope.mappings.custom[i]] = $data.customFields[i];
             }
         }
 

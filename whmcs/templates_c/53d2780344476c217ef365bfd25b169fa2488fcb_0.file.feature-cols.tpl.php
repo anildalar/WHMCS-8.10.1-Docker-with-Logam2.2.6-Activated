@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-20 04:52:27
+/* Smarty version 3.1.48, created on 2024-09-23 04:53:13
   from '/var/www/html/templates/lagom2/core/cms/sections/common/feature-cols.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ecff8bda4953_69716604',
+  'unifunc' => 'content_66f0f43919b825_43567206',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ecff8bda4953_69716604 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f0f43919b825_43567206 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/feature-cols.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/feature-cols.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>  

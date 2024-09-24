@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-20 11:22:56
+/* Smarty version 3.1.48, created on 2024-09-23 05:19:00
   from '/var/www/html/templates/lagom2/includes/flashmessage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ed5b10228236_68691466',
+  'unifunc' => 'content_66f0fa4442ab28_12923701',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,10 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ed5b10228236_68691466 (Smarty_Internal_Template $_smarty_tpl) {
-$_prefixVariable2 = get_flash_message();
-$_smarty_tpl->_assignInScope('message', $_prefixVariable2);
-if ($_prefixVariable2) {?>
+function content_66f0fa4442ab28_12923701 (Smarty_Internal_Template $_smarty_tpl) {
+$_prefixVariable1 = get_flash_message();
+$_smarty_tpl->_assignInScope('message', $_prefixVariable1);
+if ($_prefixVariable1) {?>
     <div class="alert alert-lagom alert-<?php if ($_smarty_tpl->tpl_vars['message']->value['type'] == "error") {?>danger<?php } elseif ($_smarty_tpl->tpl_vars['message']->value['type'] == 'success') {?>success<?php } elseif ($_smarty_tpl->tpl_vars['message']->value['type'] == 'warning') {?>warning<?php } else { ?>info<?php }?>">
         <div class="alert-body">
             <?php echo $_smarty_tpl->tpl_vars['message']->value['text'];?>

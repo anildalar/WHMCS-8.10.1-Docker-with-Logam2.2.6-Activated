@@ -1,0 +1,87 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-03-12, 10:04:02
+    Author     : Artugam
+*/
+
+.bootstrap-switch-container
+{
+    display: inline-flex !important;
+}
+
+.limitFriendlyNameOverFlow {
+    padding-top: 6px;
+}
+
+.alertMessage{
+    display: none;
+    
+    /*margin: 25px;*/
+}
+hr.limiterhr{
+    padding: 5px !important;
+    margin: 5px !important;
+}
+.modal-ownForm{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.limiterModal{
+    width: 45%;
+}
+
+.notificationsInfo{
+    margin: 10px 10px 10px 10px !important;
+    width: auto !important;
+}
+
+@media only screen and (max-width: 1500px) {
+    .limiterModal{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .limiterModal{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .limiterModal{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .limiterModal{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .limiterModal{
+        width: 95%;
+    }
+    .limiterFriendlyName{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .limiterValue{
+        width: 100%;
+        text-align: center;
+    }
+    .limiterCondition{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.periodFrequency:hover , .mailFrequency:hover{
+    cursor: pointer !important;
+}

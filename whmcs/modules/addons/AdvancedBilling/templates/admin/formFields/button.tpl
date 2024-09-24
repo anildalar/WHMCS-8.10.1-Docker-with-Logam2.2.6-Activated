@@ -1,0 +1,3 @@
+<div class="{if $style.colWidth}col-sm-{$style.colWidth}{/if} {$style.additionalClass}" {if $style.dysplay}{$style.dysplay}{/if}>
+    <button id="{$id}" type="{$type}" name="{$name}" value="{$name}" class="btn btn-{$color}" {foreach from=$data key=dataKey item=dataValue}data-{$dataKey}="{$dataValue}"{/foreach}>{if $icon}<i class="glyphicon glyphicon-{$icon}"></i>{/if}{if $label}{$MGLANG->T($label)}{/if}</button>
+</div>

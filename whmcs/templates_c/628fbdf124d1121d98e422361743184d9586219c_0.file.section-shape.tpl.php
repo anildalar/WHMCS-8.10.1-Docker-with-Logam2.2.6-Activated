@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-20 04:52:27
+/* Smarty version 3.1.48, created on 2024-09-23 12:37:48
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/cms/section-shape.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ecff8bf146f3_90007859',
+  'unifunc' => 'content_66f1611c127b94_45184211',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ecff8bf146f3_90007859 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f1611c127b94_45184211 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg viewBox="0 0 2544 876" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g opacity="0.32">
         <path d="M1033 876L1271.99 737.562L0 0L1033 876Z" fill="url(#paint0_linear_874_123584)" fill-opacity="0.1"/>

@@ -1,0 +1,26 @@
+.graphs-date-label
+{
+    margin-top: 8px !important;
+}
+
+.graph-input
+{
+    top: 2px;
+    position: relative;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}

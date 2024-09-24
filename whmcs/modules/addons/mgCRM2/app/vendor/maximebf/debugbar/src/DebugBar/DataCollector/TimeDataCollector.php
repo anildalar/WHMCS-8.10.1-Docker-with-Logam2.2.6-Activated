@@ -56,7 +56,6 @@ class TimeDataCollector extends DataCollector implements Renderable
             }
         }
         $this->requestStartTime = (float)$requestStartTime;
-        static::getDefaultDataFormatter(); // initializes formatter for lineal timeline
     }
 
     /**

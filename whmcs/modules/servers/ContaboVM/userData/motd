@@ -1,3 +1,0 @@
-#cloud-config
-runcmd:
-  - echo "This Instance Hosted By - OceanPBX" > /etc/motd

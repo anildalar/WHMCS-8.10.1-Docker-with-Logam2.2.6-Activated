@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-20 04:52:28
+/* Smarty version 3.1.48, created on 2024-09-23 04:53:13
   from '/var/www/html/templates/lagom2/core/cms/sections/config/testimonials/testimonials.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ecff8c154a47_19466015',
+  'unifunc' => 'content_66f0f4393e2085_28363530',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ecff8c154a47_19466015 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f0f4393e2085_28363530 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div
     class="site-section section-<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
  section-testimonials <?php if ($_smarty_tpl->tpl_vars['overlay']->value) {?> section-overlay<?php }?> <?php if ($_smarty_tpl->tpl_vars['combined']->value) {?>section-combined<?php }?> <?php if ($_smarty_tpl->tpl_vars['custom_class']->value) {?> <?php echo $_smarty_tpl->tpl_vars['custom_class']->value;
@@ -52,7 +52,7 @@ $_smarty_tpl->tpl_vars['testimonial']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['testimonial']->value) {
 $_smarty_tpl->tpl_vars['testimonial']->do_else = false;
 $_smarty_tpl->tpl_vars['testimonial']->iteration++;
-$__foreach_testimonial_18_saved = $_smarty_tpl->tpl_vars['testimonial'];
+$__foreach_testimonial_11_saved = $_smarty_tpl->tpl_vars['testimonial'];
 ?>
                     <?php $_tmp_array = isset($_smarty_tpl->tpl_vars['imgs']) ? $_smarty_tpl->tpl_vars['imgs']->value : array();
 if (!(is_array($_tmp_array) || $_tmp_array instanceof ArrayAccess)) {
@@ -61,7 +61,7 @@ settype($_tmp_array, 'array');
 $_tmp_array[] = ((string)$_smarty_tpl->tpl_vars['WEB_ROOT']->value)."/templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/assets/img/page-manager/".((string)$_smarty_tpl->tpl_vars['testimonial']->value['media']);
 $_smarty_tpl->_assignInScope('imgs', $_tmp_array);?>
                 <?php
-$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_18_saved;
+$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_11_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
@@ -77,14 +77,14 @@ $_smarty_tpl->tpl_vars['testimonial']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['testimonial']->value) {
 $_smarty_tpl->tpl_vars['testimonial']->do_else = false;
 $_smarty_tpl->tpl_vars['testimonial']->iteration++;
-$__foreach_testimonial_19_saved = $_smarty_tpl->tpl_vars['testimonial'];
+$__foreach_testimonial_12_saved = $_smarty_tpl->tpl_vars['testimonial'];
 ?> 
                             <div class="swiper-slide">
                                 <?php $_smarty_tpl->_subTemplateRender(((string)dirname($_smarty_tpl->source->filepath))."/testimonial-item.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('type'=>$_smarty_tpl->tpl_vars['type']->value), 0, true);
 ?>
                             </div>
                         <?php
-$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_19_saved;
+$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_12_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </div>
@@ -120,7 +120,7 @@ $_smarty_tpl->tpl_vars['testimonial']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['testimonial']->value) {
 $_smarty_tpl->tpl_vars['testimonial']->do_else = false;
 $_smarty_tpl->tpl_vars['testimonial']->iteration++;
-$__foreach_testimonial_20_saved = $_smarty_tpl->tpl_vars['testimonial'];
+$__foreach_testimonial_13_saved = $_smarty_tpl->tpl_vars['testimonial'];
 ?>
                         <div <?php if ($_smarty_tpl->tpl_vars['type']->value == "type-4") {?>class="testimonials-grid-item"<?php }
 if ($_smarty_tpl->tpl_vars['type']->value != "type-4") {?>class="<?php if ($_smarty_tpl->tpl_vars['type']->value != "type-3") {?>col-lg-4 col-md-6 col-12 <?php }?>content-slider-item<?php if ($_smarty_tpl->tpl_vars['type']->value == "type-1" || $_smarty_tpl->tpl_vars['type']->value == "type-2") {?> col-custom<?php }?>"<?php }?>>
@@ -128,7 +128,7 @@ if ($_smarty_tpl->tpl_vars['type']->value != "type-4") {?>class="<?php if ($_sma
 ?>
                         </div>
                     <?php
-$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_20_saved;
+$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_13_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <?php
@@ -138,7 +138,7 @@ $_smarty_tpl->tpl_vars['testimonial']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['testimonial']->value) {
 $_smarty_tpl->tpl_vars['testimonial']->do_else = false;
 $_smarty_tpl->tpl_vars['testimonial']->iteration++;
-$__foreach_testimonial_21_saved = $_smarty_tpl->tpl_vars['testimonial'];
+$__foreach_testimonial_14_saved = $_smarty_tpl->tpl_vars['testimonial'];
 ?>
                         <div <?php if ($_smarty_tpl->tpl_vars['type']->value == "type-4") {?>class="testimonials-grid-item"<?php }
 if ($_smarty_tpl->tpl_vars['type']->value != "type-4") {?>class="<?php if ($_smarty_tpl->tpl_vars['type']->value != "type-3") {?>col-lg-4 col-md-6 col-12 <?php }?>content-slider-item<?php if ($_smarty_tpl->tpl_vars['type']->value == "type-1" || $_smarty_tpl->tpl_vars['type']->value == "type-2") {?> col-custom<?php }?>"<?php }?>>
@@ -146,7 +146,7 @@ if ($_smarty_tpl->tpl_vars['type']->value != "type-4") {?>class="<?php if ($_sma
 ?>
                         </div>
                     <?php
-$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_21_saved;
+$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_14_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <?php }?>
@@ -157,7 +157,7 @@ $_smarty_tpl->tpl_vars['testimonial']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['testimonial']->value) {
 $_smarty_tpl->tpl_vars['testimonial']->do_else = false;
 $_smarty_tpl->tpl_vars['testimonial']->iteration++;
-$__foreach_testimonial_22_saved = $_smarty_tpl->tpl_vars['testimonial'];
+$__foreach_testimonial_15_saved = $_smarty_tpl->tpl_vars['testimonial'];
 ?>
                         <div <?php if ($_smarty_tpl->tpl_vars['type']->value == "type-4") {?>class="testimonials-grid-item"<?php }
 if ($_smarty_tpl->tpl_vars['type']->value != "type-4") {?>class="<?php if ($_smarty_tpl->tpl_vars['type']->value != "type-3") {?>col-lg-4 col-md-6 col-12 <?php }?>content-slider-item<?php if ($_smarty_tpl->tpl_vars['type']->value == "type-1" || $_smarty_tpl->tpl_vars['type']->value == "type-2") {?> col-custom<?php }?>"<?php }?>>
@@ -165,7 +165,7 @@ if ($_smarty_tpl->tpl_vars['type']->value != "type-4") {?>class="<?php if ($_sma
 ?>
                         </div>
                     <?php
-$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_22_saved;
+$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_15_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
@@ -189,7 +189,7 @@ $_smarty_tpl->tpl_vars['testimonial']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['testimonial']->value) {
 $_smarty_tpl->tpl_vars['testimonial']->do_else = false;
 $_smarty_tpl->tpl_vars['testimonial']->iteration++;
-$__foreach_testimonial_23_saved = $_smarty_tpl->tpl_vars['testimonial'];
+$__foreach_testimonial_16_saved = $_smarty_tpl->tpl_vars['testimonial'];
 ?>
                                                                 <div class="testimonials-avatar">
                                     <?php if ((isset($_smarty_tpl->tpl_vars['testimonial']->value['media']))) {?>
@@ -198,7 +198,7 @@ $__foreach_testimonial_23_saved = $_smarty_tpl->tpl_vars['testimonial'];
                                     <?php }?>
                                 </div>
                             <?php
-$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_23_saved;
+$_smarty_tpl->tpl_vars['testimonial'] = $__foreach_testimonial_16_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </div>

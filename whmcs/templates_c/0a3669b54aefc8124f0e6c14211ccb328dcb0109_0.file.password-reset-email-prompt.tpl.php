@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-20 13:16:27
+/* Smarty version 3.1.48, created on 2024-09-23 15:29:10
   from '/var/www/html/templates/lagom2/password-reset-email-prompt.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ed75ab413201_56935878',
+  'unifunc' => 'content_66f18946c00280_52829289',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ed75ab413201_56935878 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f18946c00280_52829289 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/overwrites/password-reset-email-prompt.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/overwrites/password-reset-email-prompt.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>  

@@ -153,10 +153,9 @@ add_hook('InvoicePaid', 1, function($vars) {
     $timezone = isset($timezoneMapping[$clientData->country]) ? $timezoneMapping[$clientData->country] : 'UTC';
 
     if ($invoiceData && $invoiceData->paymentmethod == 'stripe') {
-         print("Pyment Successfull");
+        print("Pyment Successfull");
 
         // print($customHostingId[0]->id);
-
         // $newSubDomainName = $pbxString; // Replace with logic to generate subdomain
         // $paymentIntent = $invoiceData->id; // Example, you might have another field for Stripe payment intent
         // $userInfo = Capsule::table('tblclients')->where('id', $invoiceData->userid)->first(); // Get user info from WHMCS

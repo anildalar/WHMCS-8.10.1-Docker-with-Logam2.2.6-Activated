@@ -223,7 +223,7 @@ class Stream implements StreamInterface
         if (!$this->isReadable()) {
             throw new RuntimeException();
         }
-        $result = fread($this->stream, (int)$length);
+        $result = fread($this->stream, $length);
         if ($result === false) {
             throw new RuntimeException();
         }

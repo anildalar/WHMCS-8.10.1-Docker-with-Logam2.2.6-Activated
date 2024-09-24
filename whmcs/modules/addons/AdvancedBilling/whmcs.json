@@ -1,0 +1,33 @@
+{
+    "schema": "1.0",
+    "type": "whmcs-addons",
+    "name": "AdvancedBilling",
+    "license": "proprietary",
+    "category": "payments",
+    "description": {
+        "name": "Advanced Billing",
+        "tagline": "Extend billing models and customize invoice delivery to charge your clients for actual server resource usage, opened tickets, and more.",
+        "long": "Advanced Billing For WHMCS will allow you to dynamically bill your clients for the actual usage of such server resources as disk space, bandwidth, or CPU. The module will also automatically generate and deliver invoices to customers in a preferred manner.\nEquipped with multi-currency support, the module provides a variety of billing variants, including hourly and ticket billing, resource usage billing, credit billing, fixed pricing or even entirely modifiable recurring billing. You will be able to adjust all basic invoicing properties, as well as define supplemental features, such as the minimum charge for invoices to be generated. At the same time, your customers will be allowed to create multiple email reminders about reaching or exceeding the specified limits of resources. Additionally, both you and your clientele will be welcome to view and customize dynamic graphs showing the consumption of resources for each service.\nWhat is more, Advanced Billing For WHMCS supports nearly 20 renowned modules, including cPanel, Plesk, Proxmox, and SolusVM – both those built in WHMCS, and created by ModulesGarden! If installed together with Product Auto Upgrade For WHMCS extension, our module will let you automatically upgrade or downgrade products along with configurable options based on the used server resources. Proxmox Cloud Autoscaling For WHMCS, in a like manner, will boost the server scaling possibilities offered to all users of Proxmox Cloud For WHMCS module.",
+        "features": [
+
+        ]
+    },
+    "logo": {
+        "filename": "logo.png"
+    },
+    "support": {
+        "homepage": "https://www.modulesgarden.com/products/whmcs/advanced-billing",
+        "learn_more": "https://www.modulesgarden.com/products/whmcs/advanced-billing#features",
+        "support_url": "https://www.modulesgarden.com/support",
+        "docs_url": "https://www.docs.modulesgarden.com/Advanced_Billing_For_WHMCS"
+    },
+    "marketplace": {
+        "url": "https:\/\/marketplace.whmcs.com\/product\/1278"
+    },
+    "authors": [
+        {
+            "name": "ModulesGarden",
+            "homepage": "https:\/\/www.modulesgarden.com\/"
+        }
+    ]
+}

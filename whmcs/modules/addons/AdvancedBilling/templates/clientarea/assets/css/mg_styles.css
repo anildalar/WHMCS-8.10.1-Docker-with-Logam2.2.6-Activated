@@ -1,0 +1,453 @@
+.advanced-billing-integration body, 
+.advanced-billing-integration button, 
+.advanced-billing-integration input, 
+.advanced-billing-integration select, 
+.advanced-billing-integration textarea {
+    font-family: "Open Sans",Verdana,Tahoma,serif;
+    color: #333;
+}
+
+.advanced-billing-integration fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-style: groove;
+    border-color: threedface;
+    border-image: initial;
+}
+
+.advanced-billing-integration label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.advanced-billing-integration h1,
+.advanced-billing-integration h2,
+.advanced-billing-integration h3,
+.advanced-billing-integration h4,
+.advanced-billing-integration h5,
+.advanced-billing-integration h6 {
+    font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+
+.advanced-billing-integration .h4,
+.advanced-billing-integration h4 {
+    font-size: 18px;
+}
+
+.advanced-billing-integration input[type=checkbox],
+.advanced-billing-integration input[type=radio] {
+    margin: 4px 0 0;
+    line-height: normal;
+}
+
+.advanced-billing-integration input[type=checkbox],
+.advanced-billing-integration input[type=radio] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.advanced-billing-integration .panel {
+    font-size: 12px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #0000;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+
+.advanced-billing-integration .panel-default {
+    border-color: #ddd;
+}
+
+.advanced-billing-integration .panel-default > .panel-heading {
+    color: #333;
+    background-color: #f5f5f5;
+    border-color: #ddd;
+}
+
+.advanced-billing-integration .panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid #0000;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.advanced-billing-integration .panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+
+.advanced-billing-integration .panel-body {
+    padding: 10px 15px;
+}
+
+.advanced-billing-integration .btn-success {
+    color: #fff;
+}
+.advanced-billing-integration .btn-danger {
+    color: #fff;
+}
+
+.advanced-billing-integration .deleteReminder,
+.advanced-billing-integration .makeLimits,
+.advanced-billing-integration .editReminder
+{
+    color: rgba(10, 15, 17, 0.75);
+}
+
+.advanced-billing-integration .btn,
+.advanced-billing-integration .alert
+{
+    font-size: 14px;
+}
+.advanced-billing-integration .alert
+{
+    margin: 1rem;
+}
+
+.advanced-billing-integration .form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+.advanced-billing-integration .form-inline {
+    display: inline-block;
+}
+
+.advanced-billing-integration .small,
+.advanced-billing-integration small {
+    font-size: 85%;
+}
+
+.advanced-billing-integration :after,
+.advanced-billing-integration :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.advanced-billing-integration .input-group {
+    flex-wrap: nowrap !important;
+}
+
+.advanced-billing-integration .input-group.date .input-group-addon {
+    cursor: pointer;
+}
+.advanced-billing-integration .input-group-addon:last-child {
+    border-left: 0;
+}
+.advanced-billing-integration .input-group .form-control:last-child,
+.advanced-billing-integration .input-group-addon:last-child,
+.advanced-billing-integration .input-group-btn:first-child>.btn-group:not(:first-child)>.btn,
+.advanced-billing-integration .input-group-btn:first-child>.btn:not(:first-child),
+.advanced-billing-integration .input-group-btn:last-child>.btn,
+.advanced-billing-integration .input-group-btn:last-child>.btn-group>.btn,
+.advanced-billing-integration .input-group-btn:last-child>.dropdown-toggle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.advanced-billing-integration .input-group-addon {
+    padding: 10px 12px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: auto;
+}
+.advanced-billing-integration .input-group-addon,
+.advanced-billing-integration .input-group-btn {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.advanced-billing-integration .input-group .form-control,
+.advanced-billing-integration .input-group-addon,
+.advanced-billing-integration .input-group-btn {
+    display: table-cell;
+}
+
+.advanced-billing-integration .pull-right {
+    float: right!important;
+}
+
+.advanced-billing-integration .pull-left {
+    float: left!important;
+}
+
+.advanced-billing-integration .text-center {
+    text-align: center;
+    flex-direction: column;
+}
+
+.advanced-billing-integration .graph-input {
+    top: 2px;
+    position: relative;
+}
+
+.advanced-billing-integration .modal .modal-dialog {
+    max-width: 900px;
+}
+
+.advanced-billing-integration .modal-title {
+    display: inline-block;
+}
+
+.advanced-billing-integration svg:not(:root) {
+    overflow: hidden;
+}
+
+.advanced-billing-integration .row {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.advanced-billing-integration .glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.advanced-billing-integration .glyphicon-calendar:before {
+    content: "\f133";
+}
+
+.advanced-billing-integration .tooltip {
+    white-space: nowrap;
+}
+.advanced-billing-integration .tooltip-inner {
+    max-width: 100%;
+}
+
+div[role=tooltip] {
+    font-size: 13px;
+}
+
+.advanced-billing-integration .fa-calendar:before {
+    content: "\f133";
+}
+
+.advanced-billing-integration .chart {
+    width: 100%;
+}
+
+.advanced-billing-integration .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-off, 
+.advanced-billing-integration .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-handle-on, 
+.advanced-billing-integration .bootstrap-switch.bootstrap-switch-mini .bootstrap-switch-label {
+    padding: .25rem .5rem;
+    font-size: 10px;
+}
+.advanced-billing-integration .advanced-billing-integration .bootstrap-switch-handle-off,
+
+.advanced-billing-integration .bootstrap-switch.bootstrap-switch-mini {
+    min-width: 60px !important;
+}
+
+.advanced-billing-integration .col-xs-6 {
+    width: 50%;
+}
+
+.advanced-billing-integration .col-xs-1,
+.advanced-billing-integration .col-xs-10,
+.advanced-billing-integration .col-xs-11,
+.advanced-billing-integration .col-xs-12,
+.advanced-billing-integration .col-xs-2,
+.advanced-billing-integration .col-xs-3,
+.advanced-billing-integration .col-xs-4,
+.advanced-billing-integration .col-xs-5,
+.advanced-billing-integration .col-xs-6,
+.advanced-billing-integration .col-xs-7,
+.advanced-billing-integration .col-xs-8,
+.advanced-billing-integration .col-xs-9 {
+    float: left;
+}
+
+.advanced-billing-integration .col-md-3 {
+    width: 25%;
+}
+
+.advanced-billing-integration .col-md-1,
+.advanced-billing-integration .col-md-10,
+.advanced-billing-integration .col-md-11,
+.advanced-billing-integration .col-md-12,
+.advanced-billing-integration .col-md-2,
+.advanced-billing-integration .col-md-3,
+.advanced-billing-integration .col-md-4,
+.advanced-billing-integration .col-md-5,
+.advanced-billing-integration .col-md-6,
+.advanced-billing-integration .col-md-7,
+.advanced-billing-integration .col-md-8,
+.advanced-billing-integration .col-md-9 {
+    float: left;
+}
+.advanced-billing-integration .col-lg-1,
+.advanced-billing-integration .col-lg-10,
+.advanced-billing-integration .col-lg-11,
+.advanced-billing-integration .col-lg-12,
+.advanced-billing-integration .col-lg-2,
+.advanced-billing-integration .col-lg-3,
+.advanced-billing-integration .col-lg-4,
+.advanced-billing-integration .col-lg-5,
+.advanced-billing-integration .col-lg-6,
+.advanced-billing-integration .col-lg-7,
+.advanced-billing-integration .col-lg-8,
+.advanced-billing-integration .col-lg-9,
+.advanced-billing-integration .col-md-1,
+.advanced-billing-integration .col-md-10,
+.advanced-billing-integration .col-md-11,
+.advanced-billing-integration .col-md-12,
+.advanced-billing-integration .col-md-2,
+.advanced-billing-integration .col-md-3,
+.advanced-billing-integration .col-md-4,
+.advanced-billing-integration .col-md-5,
+.advanced-billing-integration .col-md-6,
+.advanced-billing-integration .col-md-7,
+.advanced-billing-integration .col-md-8,
+.advanced-billing-integration .col-md-9,
+.advanced-billing-integration .col-sm-1,
+.advanced-billing-integration .col-sm-10,
+.advanced-billing-integration .col-sm-11,
+.advanced-billing-integration .col-sm-12,
+.advanced-billing-integration .col-sm-2,
+.advanced-billing-integration .col-sm-3,
+.advanced-billing-integration .col-sm-4,
+.advanced-billing-integration .col-sm-5,
+.advanced-billing-integration .col-sm-6,
+.advanced-billing-integration .col-sm-7,
+.advanced-billing-integration .col-sm-8,
+.advanced-billing-integration .col-sm-9,
+.advanced-billing-integration .col-xs-1,
+.advanced-billing-integration .col-xs-10,
+.advanced-billing-integration .col-xs-11,
+.advanced-billing-integration .col-xs-12,
+.advanced-billing-integration .col-xs-2,
+.advanced-billing-integration .col-xs-3,
+.advanced-billing-integration .col-xs-4,
+.advanced-billing-integration .col-xs-5,
+.advanced-billing-integration .col-xs-6,
+.advanced-billing-integration .col-xs-7,
+.advanced-billing-integration .col-xs-8,
+.advanced-billing-integration .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.advanced-billing-integration .col-xs-1,
+.advanced-billing-integration .col-xs-10,
+.advanced-billing-integration .col-xs-11,
+.advanced-billing-integration .col-xs-12,
+.advanced-billing-integration .col-xs-2,
+.advanced-billing-integration .col-xs-3,
+.advanced-billing-integration .col-xs-4,
+.advanced-billing-integration .col-xs-5,
+.advanced-billing-integration .col-xs-6,
+.advanced-billing-integration .col-xs-7,
+.advanced-billing-integration .col-xs-8,
+.advanced-billing-integration .col-xs-9 {
+    float: left;
+}
+
+.advanced-billing-integration .col-xs-2 {
+    width: 16.66666667%;
+}
+
+.advanced-billing-integration .col-xs-5 {
+    width: 41.66666667%;
+}
+
+.advanced-billing-integration #resources {
+    width: 90%;
+    margin: 0 30px;
+}
+
+.advanced-billing-integration #resources label {
+    display: inline !important;
+    font-weight: normal;
+}
+
+.no-margin{
+    margin: 0 0 0 0 !important;
+}
+
+.no-padding{
+    padding: 0 0 0 0 !important;
+}
+.vertical-align-bottom{
+    vertical-align: bottom;
+}
+.flex-direction-reverse
+{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.row-margin-left-0{
+    margin-right: 15px;
+}
+
+.intervalConfiguration{
+    margin-left: 0 !important;
+}
+
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+.margin-left-0{
+    margin-left: 0 !important;
+}
+.padding-left-0{
+    padding-left: 0 !important;
+}
+.padding-right-5{
+    padding-right: 5px !important;
+}
+.width-max{
+    width: 100%;
+}
+.help-block{
+    margin-top: 5px;
+}

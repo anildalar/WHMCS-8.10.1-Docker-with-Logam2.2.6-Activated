@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-20 04:01:27
+/* Smarty version 3.1.48, created on 2024-09-23 04:46:35
   from '/var/www/html/admin/templates/blend/homepage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ecf3977fbe42_42569197',
+  'unifunc' => 'content_66f0f2ab5fb1c6_09969741',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ecf3977fbe42_42569197 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f0f2ab5fb1c6_09969741 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="clearfix"></div>
 
 <?php echo $_smarty_tpl->tpl_vars['infobox']->value;?>

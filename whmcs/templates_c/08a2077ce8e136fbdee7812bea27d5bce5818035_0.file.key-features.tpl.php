@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-20 04:52:27
+/* Smarty version 3.1.48, created on 2024-09-23 12:37:48
   from '/var/www/html/templates/lagom2/core/cms/sections/config/key-features/key-features.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ecff8bef1755_15335949',
+  'unifunc' => 'content_66f1611c1165e0_61822028',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ecff8bef1755_15335949 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f1611c1165e0_61822028 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="site-section section-sides section-key-features section-graphic section-graphic-title-above section-graphic-<?php echo $_smarty_tpl->tpl_vars['features_graphic_type']->value;?>
  section-graphic-<?php echo $_smarty_tpl->tpl_vars['features_graphic_position']->value;?>
  section-<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
@@ -52,7 +52,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['feature']->do_else = false;
 $_smarty_tpl->tpl_vars['feature']->index++;
 $_smarty_tpl->tpl_vars['feature']->first = !$_smarty_tpl->tpl_vars['feature']->index;
-$__foreach_feature_6_saved = $_smarty_tpl->tpl_vars['feature'];
+$__foreach_feature_25_saved = $_smarty_tpl->tpl_vars['feature'];
 ?>
                             <li class="nav-item content-slider-item">
                                 <a class="nav-link multitab-link <?php if ($_smarty_tpl->tpl_vars['feature']->first) {?> active<?php }?>"
@@ -70,7 +70,7 @@ $__foreach_feature_6_saved = $_smarty_tpl->tpl_vars['feature'];
                                 </a>
                             </li>
                         <?php
-$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_6_saved;
+$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_25_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     </ul>
@@ -93,7 +93,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['feature']->do_else = false;
 $_smarty_tpl->tpl_vars['feature']->index++;
 $_smarty_tpl->tpl_vars['feature']->first = !$_smarty_tpl->tpl_vars['feature']->index;
-$__foreach_feature_7_saved = $_smarty_tpl->tpl_vars['feature'];
+$__foreach_feature_26_saved = $_smarty_tpl->tpl_vars['feature'];
 ?>
                         <div class="list-group-cms-item <?php if ($_smarty_tpl->tpl_vars['feature']->first) {?> active<?php }?>"
                             id="tab-feature-<?php echo $_smarty_tpl->tpl_vars['sectionId']->value;?>
@@ -142,7 +142,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             </div>
                         </div>
                     <?php
-$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_7_saved;
+$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_26_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
@@ -176,7 +176,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['feature']->do_else = false;
 $_smarty_tpl->tpl_vars['feature']->index++;
 $_smarty_tpl->tpl_vars['feature']->first = !$_smarty_tpl->tpl_vars['feature']->index;
-$__foreach_feature_10_saved = $_smarty_tpl->tpl_vars['feature'];
+$__foreach_feature_29_saved = $_smarty_tpl->tpl_vars['feature'];
 ?>
                         <li class="nav-item content-slider-item">
                             <a class="nav-link <?php if ($_smarty_tpl->tpl_vars['feature']->first) {?> active<?php }?>"
@@ -198,7 +198,7 @@ $__foreach_feature_10_saved = $_smarty_tpl->tpl_vars['feature'];
                             </a>
                         </li>
                     <?php
-$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_10_saved;
+$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_29_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </ul>
@@ -212,7 +212,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['feature']->do_else = false;
 $_smarty_tpl->tpl_vars['feature']->index++;
 $_smarty_tpl->tpl_vars['feature']->first = !$_smarty_tpl->tpl_vars['feature']->index;
-$__foreach_feature_11_saved = $_smarty_tpl->tpl_vars['feature'];
+$__foreach_feature_30_saved = $_smarty_tpl->tpl_vars['feature'];
 ?>
                         <div class="list-group-cms-item tab-pane <?php if ($_smarty_tpl->tpl_vars['feature']->first) {?> active<?php }?>"
                         >
@@ -280,7 +280,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             </div>
                         </div>
                     <?php
-$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_11_saved;
+$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_30_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
@@ -313,7 +313,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['feature']->do_else = false;
 $_smarty_tpl->tpl_vars['feature']->index++;
 $_smarty_tpl->tpl_vars['feature']->first = !$_smarty_tpl->tpl_vars['feature']->index;
-$__foreach_feature_14_saved = $_smarty_tpl->tpl_vars['feature'];
+$__foreach_feature_33_saved = $_smarty_tpl->tpl_vars['feature'];
 ?>
                         <div class="tab-pane <?php if ($_smarty_tpl->tpl_vars['feature']->first) {?> active<?php }?>"
                             id="feature-<?php echo $_smarty_tpl->tpl_vars['sectionId']->value;?>
@@ -350,7 +350,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                             <?php }?>
                         </div>
                     <?php
-$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_14_saved;
+$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_33_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
@@ -384,7 +384,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['feature']->do_else = false;
 $_smarty_tpl->tpl_vars['feature']->index++;
 $_smarty_tpl->tpl_vars['feature']->first = !$_smarty_tpl->tpl_vars['feature']->index;
-$__foreach_feature_17_saved = $_smarty_tpl->tpl_vars['feature'];
+$__foreach_feature_36_saved = $_smarty_tpl->tpl_vars['feature'];
 ?>
                     <?php if ($_smarty_tpl->tpl_vars['feature']->value['fields']['graphic']['graphic']) {?>
                         <div class="section-graphic tab-pane <?php if ($_smarty_tpl->tpl_vars['feature']->first) {?> show active<?php } else { ?>is-animated<?php }?>"
@@ -402,7 +402,7 @@ $__foreach_feature_17_saved = $_smarty_tpl->tpl_vars['feature'];
                         </div>
                     <?php }?> 
                 <?php
-$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_17_saved;
+$_smarty_tpl->tpl_vars['feature'] = $__foreach_feature_36_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>

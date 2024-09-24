@@ -5,7 +5,6 @@ namespace DebugBar\Bridge\Symfony;
 use DebugBar\DataCollector\AssetProvider;
 use DebugBar\DataCollector\DataCollector;
 use DebugBar\DataCollector\Renderable;
-use Symfony\Component\Mime\Part\AbstractPart;
 
 /**
  * Collects data about sent mail events
@@ -20,26 +19,15 @@ class SymfonyMailCollector extends DataCollector implements Renderable, AssetPro
     /** @var bool */
     private $showDetailed = false;
 
-    /** @var bool */
-    private $showBody = false;
-
     /** @param \Symfony\Component\Mailer\SentMessage $message */
     public function addSymfonyMessage($message)
     {
         $this->messages[] = $message->getOriginalMessage();
     }
 
-    /**
-     * @deprecated use showMessageBody()
-     */
     public function showMessageDetail()
     {
-        $this->showMessageBody(true);
-    }
-
-    public function showMessageBody($show = true)
-    {
-        $this->showBody = $show;
+        $this->showDetailed = true;
     }
 
     public function collect()
@@ -48,28 +36,14 @@ class SymfonyMailCollector extends DataCollector implements Renderable, AssetPro
 
         foreach ($this->messages as $message) {
             /* @var \Symfony\Component\Mime\Message $message */
-            $mail = [
+            $mails[] = array(
                 'to' => array_map(function ($address) {
                     /* @var \Symfony\Component\Mime\Address $address */
                     return $address->toString();
                 }, $message->getTo()),
                 'subject' => $message->getSubject(),
-                'headers' => $message->getHeaders()->toString(),
-                'body' => null,
-                'html' => null,
-            ];
-
-            if ($this->showBody) {
-                $body = $message->getBody();
-                if ($body instanceof AbstractPart) {
-                    $mail['html'] = $message->getHtmlBody();
-                    $mail['body'] = $message->getTextBody();
-                } else {
-                    $mail['body'] = $body->bodyToString();
-                }
-            }
-
-            $mails[] = $mail;
+                'headers' => ($this->showDetailed ? $message : $message->getHeaders())->toString(),
+            );;
         }
 
         return array(

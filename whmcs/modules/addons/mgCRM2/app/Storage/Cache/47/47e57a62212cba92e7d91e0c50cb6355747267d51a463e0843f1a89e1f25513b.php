@@ -1,0 +1,706 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* app/app.angular.js.twig */
+class __TwigTemplate_30cc4f918df206dcfd0923039a22841c9ce2f3d8cd9cbb4170d612ca34a85a6b extends \Twig\Template
+{
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        // line 1
+        echo "<script type=\"text/javascript\">
+
+
+/**
+ * Polyfill for IE8
+ *
+ * http://stackoverflow.com/a/1181586
+ */
+if (!Array.prototype.indexOf) {
+  Array.prototype.indexOf = function (needle) {
+    var l = this.length;
+    for (; l--;) {
+      if (this[l] === needle) {
+        return l;
+      }
+    }
+    return -1;
+  };
+};
+
+// remove from array
+if (!Array.prototype.remove) {
+    Array.prototype.remove = function() {
+        var what, a = arguments, L = a.length, ax;
+        while (L && this.length) {
+            what = a[--L];
+            while ((ax = this.indexOf(what)) !== -1) {
+                this.splice(ax, 1);
+            }
+        }
+        return this;
+    };
+};
+
+// insert in array at certain index
+if (!Array.prototype.insert) {
+    Array.prototype.insert = function (index, item) {
+        this.splice(index, 0, item);
+    };
+};
+
+
+
+/**
+ * Angular App
+ * With main dependiences for angular
+ */
+
+var mgCRMapp = angular.module(\"mgCRMapp\", [
+    \"oc.lazyLoad\",      // dymanic load files
+    \"ui.router\",        // obliviously 
+    \"ngResource\",       // manage with data objects and DI
+    \"pascalprecht.translate\",      // translation library
+    \"ui.bootstrap\",
+    \"ui.bootstrap.datetimepicker\",
+    'btorfs.multiselect', // special multiselect
+    \"ngDialog\",
+    //\"mwl.calendar\",
+    \"moment-picker\",
+    \"xeditable\",
+    \"blockUI\",
+    \"ngSanitize\",
+    \"ui.sortable\",
+    \"ui.select\",
+    'ui.tree',
+    \"smart-table\",
+    \"textAngular\",
+    \"ngCookies\",
+    // App lever modules
+    \"CRM\",
+]);
+
+
+
+
+/////////////////////////////////////////////
+// PROVIDER
+// 
+// This handle things related to dynamic contact types
+// and provide nesesary operations for routing (since provider can be accesed here)
+/////////////////////////////////////////////
+mgCRMapp.provider('ContactTypes', [ function () 
+{
+    // keep here all possible contact types
+    var types = ";
+        // line 85
+        echo twig_jsonencode_filter($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "dynamicTypes", []), "routing", []));
+        echo ";
+
+    /**
+     * Get single role by ID
+     */
+    var getById = function(id) 
+    {
+        for(i=0; i < types.length; i++) {
+            if(types[i].id == id) {
+                return types[i];
+            }
+        }
+        
+        return null;
+    };
+
+
+    var ContactTypes = {};
+
+    ContactTypes.getById = getById;
+    /**
+     * Return me all types
+     *
+     * @param array
+     */
+    ContactTypes.get = function() {
+        return types;
+    };
+
+    return {
+        all: function() {
+            return types;
+        },
+        getById: getById,
+        \$get: function () {
+            return ContactTypes;
+        }
+    };
+
+}]);
+
+
+    
+
+
+
+/** 
+ * Setup global settings 
+ */
+mgCRMapp.factory('settings', ['\$rootScope', function(\$rootScope) {
+    
+    // set config
+    mgCRM.setConfig(";
+        // line 137
+        echo twig_jsonencode_filter($this->getAttribute(($context["settings"] ?? null), "templates", []));
+        echo ");
+    
+    // global scope settings
+    var settings = 
+    {
+        frontend: 
+        {
+            pageAutoScrollOnLoad: 1000,  // auto scroll to top on page load
+            dismissNotesAfter:    8000,     // ms after when dismiss note
+        },
+        config: mgCRM.getConfig(),
+    };
+
+    // assign this settings for global scoope
+    \$rootScope.settings = settings;
+    
+    var acl = 
+    {
+        currentAdmin: ";
+        // line 155
+        echo twig_jsonencode_filter($this->getAttribute(($context["acl"] ?? null), "getCurrentAdminRulesFlat", [], "method"));
+        echo ",       // currently logged admin all defined rules with flags allowed/not (as bolean)
+        parsedRules:  ";
+        // line 156
+        echo twig_jsonencode_filter($this->getAttribute(($context["acl"] ?? null), "getRules", [], "method"));
+        echo ",       // all possible rules
+        flattenRules: ";
+        // line 157
+        echo twig_jsonencode_filter($this->getAttribute(($context["acl"] ?? null), "getRulesFlat", [], "method"));
+        echo ",       // all possible rules
+        rulesConfig:  ";
+        // line 158
+        echo twig_jsonencode_filter($this->getAttribute(($context["acl"] ?? null), "getRulesConfig", [], "method"));
+        echo ",       // copnfig rules
+        isFullAdmin:  ";
+        // line 159
+        echo twig_jsonencode_filter($this->getAttribute(($context["acl"] ?? null), "isFullAdmin", [], "method"));
+        echo ",       // if full admin
+    };
+    
+    // assing acl settings for global scope
+    \$rootScope.acl              = acl;
+    \$rootScope.currentAdminID   = ";
+        // line 164
+        echo twig_escape_filter($this->env, ($context["currentAdmin"] ?? null), "html", null, true);
+        echo ";
+    moment.updateLocale('en', {
+        week : {
+            dow : (\$rootScope.settings.config.app.defaultWeekDay !== undefined ? Number(\$rootScope.settings.config.app.defaultWeekDay) : 1)
+        }
+    });
+    
+    return settings;
+}]);
+
+//Http Intercpetor to check auth failures for xhr requests
+mgCRMapp.config(['\$httpProvider',function(\$httpProvider) {
+    \$httpProvider.interceptors.push('httpResponseInterceptor');
+    
+    //initialize get if not there
+    if (!\$httpProvider.defaults.headers.get) {
+        \$httpProvider.defaults.headers.get = {};    
+    }    
+
+    // Answer edited to include suggestions from comments
+    // because previous version of code introduced browser-related errors
+
+    //disable IE ajax request caching
+    \$httpProvider.defaults.headers.get['If-Modified-Since'] = 'Mon, 26 Jul 1997 05:00:00 GMT';
+    \$httpProvider.defaults.headers.common[\"If-Modified-Since\"] = \"0\";
+    // extra
+    \$httpProvider.defaults.headers.get['Cache-Control'] = 'no-cache';
+    \$httpProvider.defaults.headers.common[\"Cache-Control\"] = \"no-cache\";
+    \$httpProvider.defaults.headers.get['Pragma'] = 'no-cache';
+    \$httpProvider.defaults.headers.common.Pragma = \"no-cache\";
+}]);
+
+
+/**
+ * 
+ *  Setup Rounting For All Pages 
+ */
+mgCRMapp.config([
+            '\$stateProvider', '\$urlRouterProvider', '\$locationProvider', 'blockUIConfig', 'uiSelectConfig', '\$provide',
+    function(\$stateProvider,   \$urlRouterProvider,   \$locationProvider,   blockUIConfig,   uiSelectConfig,   \$provide) {
+        
+    // configure block ui module
+    blockUIConfig.message =  '<img src=\"";
+        // line 206
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["settings"] ?? null), "templates", []), "rootDir", []), "html", null, true);
+        echo "/assets/img/mg-loader.gif\" />';
+    blockUIConfig.delay = 100;
+    blockUIConfig.template = \"<div class=\\\"block-ui-overlay\\\"></div><div class=\\\"block-ui-message-container\\\" aria-live=\\\"assertive\\\" aria-atomic=\\\"true\\\"><div class=\\\"block-ui-message\\\" ng-class=\\\"\$_blockUiMessageClass\\\" ng-bind-html=\\\"state.message\\\"></div></div>\";
+    blockUIConfig.autoBlock = false;
+
+    // basic providers
+    \$locationProvider.html5Mode(false);
+    \$locationProvider.hashPrefix('!');
+    
+    // ui-select theme
+    uiSelectConfig.theme = 'bootstrap';
+
+
+    // this demonstrates how to register a new tool and add it to the default toolbar
+    \$provide.decorator('taOptions', ['taRegisterTool', '\$delegate', function(taRegisterTool, taOptions) { // \$delegate is the taOptions we are decorating
+        taOptions.toolbar = [
+            ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'quote'],
+            ['bold', 'italics', 'underline', 'strikeThrough', 'ul', 'ol', 'redo', 'undo', 'clear'],
+            ['justifyLeft', 'justifyCenter', 'justifyRight', 'indent', 'outdent'],
+            ['html', 'insertImage','insertLink']
+        ];
+        return taOptions;
+    }]);
+    ";
+        // line 229
+        if (($context["searchContactByPhone"] ?? null)) {
+            // line 230
+            echo "        if (window.location.toString().indexOf('?searchContactByPhone=') !== -1) {
+            var replaceUrl = window.location.toString().substring(window.location.toString().indexOf('?searchContactByPhone='));
+            var url = window.location.toString();
+            history.pushState({}, null, url.replace(replaceUrl, ''));
+        }
+    ";
+        }
+        // line 236
+        echo "    
+    // load all states and routes for it from other file to not mess here
+    ";
+        // line 238
+        $this->loadTemplate("app/app.routes.js", "app/app.angular.js.twig", 238)->display($context);
+        // line 239
+        echo "}]);
+
+
+// 
+/**
+ * register the http interceptor as a service
+ * basically it is a wrapper to hangle ajax queries :D
+ * 
+ * @docs https://code.angularjs.org/1.3.16/docs/api/ng/service/\$http
+ */
+mgCRMapp.factory(
+    'httpResponseInterceptor', 
+           ['\$q','\$location',
+    function(\$q,\$location)
+    {
+        return {
+            ";
+        // line 271
+        echo "
+
+            // optional method
+            'response': function(response) 
+            {
+                // console.log('httpResponseInterceptor: success');
+                // console.log(response);
+                // do something on success
+                return response;
+            },
+
+            // optional method
+            'responseError': function(rejection) 
+            {
+                console.log('HTTP STATUS: ' + rejection.status + ' - ' + rejection.statusText + ' - ' + rejection.config.url);
+
+                // do something on error
+";
+        // line 291
+        echo "                return \$q.reject(rejection);
+            }
+        };
+
+        
+        
+        
+        
+        
+    }
+]);
+
+
+
+/* Configure ocLazyLoader(refer: https://github.com/ocombe/ocLazyLoad) */
+mgCRMapp.config(['\$ocLazyLoadProvider', function(\$ocLazyLoadProvider) {
+    \$ocLazyLoadProvider.config({
+        // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+        cssFilesInsertBefore: 'ng_load_plugins_before', 
+        debug: false,
+        events: true,
+    });
+}]);
+
+
+// Configuring \$translateProvider
+// Bascally we will put here translations from PHP, etc
+mgCRMapp.config(['\$translateProvider', function (\$translateProvider) {
+
+    // Simply register translation table as object hash
+    \$translateProvider
+        .translations('";
+        // line 322
+        echo $this->getAttribute(($context["lang"] ?? null), "getLang", [], "method");
+        echo "', ";
+        echo twig_jsonencode_filter($this->getAttribute(($context["lang"] ?? null), "getTranslations", [], "method"));
+        echo ")
+        .preferredLanguage('";
+        // line 323
+        echo $this->getAttribute(($context["lang"] ?? null), "getLang", [], "method");
+        echo "')
+        .useSanitizeValueStrategy('sanitize');
+}]);
+
+/**
+ * Main Controller
+ */
+mgCRMapp.controller(
+        'AppController',
+        ['\$rootScope', '\$scope', 'ContactTypes', '\$timeout', '\$state',
+function( \$rootScope ,  \$scope,   ContactTypes,   \$timeout,   \$state)
+{
+    \$scope.contactTypes = [];
+    var type = ContactTypes.get();
+    for (var i = 0; i < type.length; i++) {
+        if (\$rootScope.hasAccess(\"leads.\" + \$rootScope.convertToCode(type[i].name))) {
+            \$scope.contactTypes.push(type[i]);
+        }
+    }
+    
+    \$scope.convertMessages = [];
+    
+    \$scope.addConvertMessages = function(type, title, content) {
+        
+        // show message
+        \$scope.convertMessages.push({
+            type: type,
+            title: title,
+            content: content,
+        });
+        
+        \$timeout(function() {
+            \$scope.convertMessages.splice(\$scope.convertMessages.length-1, 1);
+        }, 8000);
+    };
+   
+    ";
+        // line 359
+        if (($context["searchContactByPhone"] ?? null)) {
+            // line 360
+            echo "        console.log(\$rootScope.\$root.searchContactByPhoneGlobal);
+        if (\$rootScope.\$root.searchContactByPhoneGlobal == undefined) {
+            \$rootScope.\$root.searchContactByPhoneGlobal = \"";
+            // line 362
+            echo twig_escape_filter($this->env, ($context["searchContactByPhone"] ?? null), "html", null, true);
+            echo "\";
+        }
+    ";
+        }
+        // line 365
+        echo "}]);
+
+mgCRMapp.controller(
+        'FollowUpsActiveAlarmController',
+        ['\$rootScope', '\$scope', 'ContactTypes', '\$timeout', '\$http',
+function( \$rootScope,   \$scope,   ContactTypes,   \$timeout,   \$http)
+{
+    \$scope.followupList = [];
+    \$scope.followupListShow = [];
+    \$scope.showDisplay = 'inline-block';
+    \$scope.refreshIntervalId = null;
+    
+    \$scope.close = function (event,index) {
+        var target = angular.element(event.currentTarget);
+        \$(target).parent().delay(1000).hide();
+        \$timeout(function() {
+                \$(target).parent().remove();
+                \$scope.followupList.splice(index,1);
+        }, 1000);
+    }
+    
+    var tirmString = function (string) {
+        return string.replace(/\\s+/g, '');
+    };
+    
+    var showFollowUp = function(followUp) {
+        if (tirmString(followUp.resource.name) == \"\") followUp.resource.name = followUp.resource.email;
+        followUp.date = moment(followUp.date).format('D MMM YYYY, h:mm');
+        followUp.stopTime = function () {
+            \$timeout(function() {
+                \$('.button-close-alarm-'+followUp.id).trigger('click');
+            }, 30*1000);
+        };
+        \$scope.followupList.push(followUp);
+        \$scope.followupList[\$scope.followupList.length - 1].stopTime();
+    };
+    
+    var getFollowups = function () {
+            if (!\$rootScope.settings.config.app.active_alarm_followups) clearInterval(\$scope.refreshIntervalId);
+            var params = {
+                admin: \$rootScope.currentAdminID,
+                startDate: moment().add(-1,'minutes').format('YYYY-MM-DD HH-mm-ss'),
+                endDate: moment().add(1,'minutes').format('YYYY-MM-DD HH-mm-ss'),
+            };
+
+            \$http.post(\$rootScope.settings.config.apiURL + '/dashboard/followups/get/json', params).then(function(result) 
+            {
+                for(i=0; i< result.data.data.length; i++) {
+                    if (\$.inArray(result.data.data[i].id,\$scope.followupListShow) === -1) {
+                        showFollowUp(result.data.data[i]);
+                        \$scope.followupListShow.push(result.data.data[i].id);
+                    }
+                }
+                
+            }, function(error) {
+
+                // show message just in case
+                \$scope.scopeMessages.push({
+                    type:   'danger',
+                    title:   \"Error!\",
+                    content: error.data.msg ? error.data.msg : error.statusText,
+                });
+
+            });
+
+        };
+        
+        if (\$rootScope.settings.config.app.active_alarm_followups) {
+            \$scope.refreshIntervalId = setInterval(getFollowups,1000*60);
+        }
+    
+}]);
+
+/**
+ * Main Content Controller
+ */
+mgCRMapp.controller(
+        'ContentController',
+        ['\$scope',
+function( \$scope )
+{
+    \$scope.updating  = false;
+    // can we provide to do sth here
+}]);
+
+
+/**
+ * Navigation Controller
+ */
+mgCRMapp.controller(
+        'NotificationsController',
+        ['\$scope', '\$rootScope', '\$http', '\$interval',
+function( \$scope,   \$rootScope,   \$http,   \$interval )
+{
+    \$scope.interval = 60000; // 10 sek za szybko, niech bedzie minuta
+    \$scope.notifications = [];
+    \$scope.showNotifications = false;
+    
+    \$scope.loadNotifications = function()
+    {
+        \$http.get(\$rootScope.settings.config.apiURL + '/notifications/mine/json', {cache: false, isArray: true}).then(function(response) {
+            \$scope.notifications = response.data;
+            if(\$scope.notifications.length > 0) {
+                \$scope.showNotifications = true;
+            } else {
+                \$scope.showNotifications = false;
+            }
+        });
+    };
+    
+    \$scope.acceptNote = function(id)
+    {
+        \$http.post(\$rootScope.settings.config.apiURL + '/notifications/accept/json', {note: id}).then(function(response) {
+            \$scope.loadNotifications();
+        });
+    };
+   
+    //Put in interval, first trigger after 1 seconds 
+    \$interval(function(){
+       \$scope.loadNotifications();
+    }.bind(this), \$scope.interval);     
+
+    //invoke initialy
+    \$scope.loadNotifications();
+    
+    
+    
+}]);
+
+
+/**
+ * Main Models/resources
+ */
+
+mgCRMapp.factory(
+        \"leadResource\", 
+       ['\$resource', '\$rootScope',
+function(\$resource, \$rootScope) 
+{
+    return \$resource(\$rootScope.settings.config.apiURL + '/lead/:id/getLeadHeaderData/json', {}, 
+    {
+        getLeadHeaderData: { 
+            method: \"GET\",
+            isArray: false,
+            cache: false,
+            responseType: 'json',
+        }
+    });
+  
+}]);
+
+
+
+
+/**
+ * Init global settings and run the app 
+ */
+mgCRMapp.run(
+  [          '\$rootScope', 'settings', '\$state', '\$stateParams', 'editableOptions', 'editableThemes',  'blockUIConfig', '\$templateCache', 'AclService', '\$location',
+    function (\$rootScope,   \$settings,  \$state,   \$stateParams,   editableOptions,   editableThemes,    blockUIConfig,  \$templateCache,    AclService,   \$location) {
+        
+
+        // It's very handy to add references to \$state and \$stateParams to the \$rootScope
+        // so that you can access them from any scope within your applications.For example,
+        // <li ng-class=\"{ active: \$state.includes('contacts.list') }\"> will set the <li>
+        // to active whenever 'contacts.list' or one of its decendents is active.
+        \$rootScope.\$state       = \$state;
+        \$rootScope.\$stateParams = \$stateParams;
+        
+        
+        // set up xeditable template
+        editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+        editableOptions.icon_set = 'font-awesome'; // bootstrap3 theme. Can be also 'bs2', 'default'
+        editableThemes.bs3.inputClass = 'input-sm';
+        editableThemes.bs3.buttonsClass = 'btn-sm';
+        
+        
+        // Set the ACL data. Normally, you'd fetch this from an API or something.
+        // The data should have the roles as the property names,
+        // with arrays listing their permissions as their value.
+        var aclData = {
+            admin: ";
+        // line 546
+        echo twig_jsonencode_filter($this->getAttribute(($context["acl"] ?? null), "getCurrentAdminRulesFlatRules", [], "method"));
+        echo ",
+        }
+        AclService.setAbilities(aclData);
+        // Attach the member role to the current user
+        AclService.attachRole('admin');
+        
+        
+        \$rootScope.hasAccess = function(role) {
+            return AclService.can(role);
+        };
+        
+        \$rootScope.convertToCode = function(name) {
+            return name.toLowerCase().split(' ').join('_');
+        };
+        
+        \$rootScope.page = {
+            setTitle: function(title) {
+                this.title = '";
+        // line 563
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["lang"] ?? null), "t", [0 => "window_prefix"], "method"), "html", null, true);
+        echo "' + title;
+            }
+        }
+        
+        
+        \$rootScope.openAsterishWidget = function(destination) {
+            mgCRM.openAsterishWidget(destination);
+        }
+        
+        \$rootScope.whatsappGetURL = function(phone) {
+            if (phone !== undefined && phone !== null) {
+                var href = \"https://wa.me/\"+phone.replace(/[^\\d]/g, \"\");
+                window.open(href);         
+            }
+            return false;
+        }
+
+        // handle errors
+        \$rootScope.\$on('\$stateNotFound', function() {
+            // to implement later
+            // when something went wrong on state change = not found
+            console.log('state change = not found');
+        });
+
+        ";
+        // line 595
+        echo "                    
+        \$rootScope.\$on('\$routeChangeSuccess', function(event, current, previous) {
+            \$rootScope.settings.setTitle(current.\$\$route.data.pageTitle || '');
+        });
+        
+        \$rootScope.\$on('\$stateChangeError', function(event, toState, toParams, fromState, fromParams, rejection) {
+            if(rejection === 'Unauthorized') {
+                console.log(rejection);
+                return \$state.go('dashboard');
+            }
+        });
+        
+    }
+  ]
+);
+
+</script>";
+    }
+
+    public function getTemplateName()
+    {
+        return "app/app.angular.js.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  660 => 595,  633 => 563,  613 => 546,  430 => 365,  424 => 362,  420 => 360,  418 => 359,  379 => 323,  373 => 322,  340 => 291,  321 => 271,  303 => 239,  301 => 238,  297 => 236,  289 => 230,  287 => 229,  261 => 206,  216 => 164,  208 => 159,  204 => 158,  200 => 157,  196 => 156,  192 => 155,  171 => 137,  116 => 85,  30 => 1,);
+    }
+
+    /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
+    public function getSource()
+    {
+        @trigger_error('The '.__METHOD__.' method is deprecated since version 1.27 and will be removed in 2.0. Use getSourceContext() instead.', E_USER_DEPRECATED);
+
+        return $this->getSourceContext()->getCode();
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("", "app/app.angular.js.twig", "/var/www/html/modules/addons/mgCRM2/templates/ModulesGarden/app/app.angular.js.twig");
+    }
+}

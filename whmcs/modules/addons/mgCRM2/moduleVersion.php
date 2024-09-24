@@ -5,6 +5,6 @@
  * Below you can find current version & revision of this module
  */
 
-$moduleVersion = '2.10.3';
-$moduleRevision = 'bfd36df27233da68c246f2365f1e1685b98a57f5';
+$moduleVersion = '2.10.2';
+$moduleRevision = 'b51062935e3891c2f6dafcd6341cdb29b673726b';
 $moduleWikiUrl = 'http://www.docs.modulesgarden.com/CRM_For_WHMCS';

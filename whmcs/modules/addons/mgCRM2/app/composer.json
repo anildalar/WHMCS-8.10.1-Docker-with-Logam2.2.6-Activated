@@ -23,11 +23,6 @@
     "extra": {
         "mg-app-dir": "app"
     },
-    "config": {
-        "platform": {
-            "php": "7.4.0"
-        }
-    },
     "require":
     {
         "php"                           : ">=7.1.0",
@@ -50,11 +45,6 @@
         "monolog/monolog": "*",
         "symfony/translation": "*",
         "nesbot/carbon"    : "*",
-        "google/apiclient": "*",
-        "psr/log" : "*",
-        "psr/simple-cache" : " *",
-        "psr/http-message" : " *",
-        "psr/http-factory" : " *",
-        "psr/http-client" : " *"
+        "google/apiclient": "*"
     }
 }
