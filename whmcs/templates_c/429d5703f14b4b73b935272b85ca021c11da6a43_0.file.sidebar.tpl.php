@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-23 04:46:29
+/* Smarty version 3.1.48, created on 2024-09-27 10:16:38
   from '/var/www/html/admin/templates/blend/sidebar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f0f2a5f29737_15997121',
+  'unifunc' => 'content_66f686063957f0_73127117',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f0f2a5f29737_15997121 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f686063957f0_73127117 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['sidebar']->value == "home") {?>
 
 <div class="sidebar-header">

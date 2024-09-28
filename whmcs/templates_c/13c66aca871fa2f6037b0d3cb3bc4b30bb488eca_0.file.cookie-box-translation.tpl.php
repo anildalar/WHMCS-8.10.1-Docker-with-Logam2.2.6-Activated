@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-24 05:48:31
+/* Smarty version 3.1.48, created on 2024-09-28 03:20:23
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/cookie-box-translation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f252af516875_70598229',
+  'unifunc' => 'content_66f775f75fce30_06740844',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f252af516875_70598229 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f775f75fce30_06740844 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="cookieBoxTranslationsModal" data-cookiebox-translation-modal>
     <div class="modal__dialog">
         <div class="modal__content">

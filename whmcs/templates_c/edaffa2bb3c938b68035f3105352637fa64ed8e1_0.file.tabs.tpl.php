@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-24 05:48:31
+/* Smarty version 3.1.48, created on 2024-09-28 03:20:23
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/settings/includes/tabs.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f252af37c1c2_71302480',
+  'unifunc' => 'content_66f775f73e99c3_61512206',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f252af37c1c2_71302480 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f775f73e99c3_61512206 (Smarty_Internal_Template $_smarty_tpl) {
 ?><ul class="nav nav--tabs custom-nav-styles" data-form-tabs="settings_tab">
     <div class="nav__header p-0x">
     <?php echo $_smarty_tpl->tpl_vars['lang']->value['settings']['sidebar']['categories'];?>

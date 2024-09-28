@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-23 05:19:00
+/* Smarty version 3.1.48, created on 2024-09-27 12:27:02
   from '/var/www/html/templates/lagom2/includes/flashmessage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f0fa4442ab28_12923701',
+  'unifunc' => 'content_66f6a49699a9d8_78080131',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f0fa4442ab28_12923701 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f6a49699a9d8_78080131 (Smarty_Internal_Template $_smarty_tpl) {
 $_prefixVariable1 = get_flash_message();
 $_smarty_tpl->_assignInScope('message', $_prefixVariable1);
 if ($_prefixVariable1) {?>

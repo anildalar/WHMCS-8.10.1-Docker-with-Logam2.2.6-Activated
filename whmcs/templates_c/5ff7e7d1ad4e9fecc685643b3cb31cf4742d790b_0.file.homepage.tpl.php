@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-23 05:49:01
+/* Smarty version 3.1.48, created on 2024-09-27 18:25:55
   from '/var/www/html/templates/lagom2/homepage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f1014d93ac58_49164281',
+  'unifunc' => 'content_66f6f8b345de62_70666388',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5ff7e7d1ad4e9fecc685643b3cb31cf4742d790b' => 
     array (
       0 => '/var/www/html/templates/lagom2/homepage.tpl',
-      1 => 1725773960,
+      1 => 1727159030,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f1014d93ac58_49164281 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f6f8b345de62_70666388 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
     <?php $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'], $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>
@@ -28,6 +28,7 @@ if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_
 ">
         <div class="container">
             <div class="banner-content">
+        
             <?php if ($_smarty_tpl->tpl_vars['registerdomainenabled']->value || $_smarty_tpl->tpl_vars['transferdomainenabled']->value) {?>
                 <h1 class="banner-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['findyourdomain'];?>
 </h1>

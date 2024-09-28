@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-24 05:48:31
+/* Smarty version 3.1.48, created on 2024-09-27 10:43:47
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/helpers/docs.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f252af3b8f98_28062591',
+  'unifunc' => 'content_66f68c635bd771_94723090',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f252af3b8f98_28062591 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f68c635bd771_94723090 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['link']->value) {?>
     <span class="form-label__counter label-docs">
         <a href="<?php echo $_smarty_tpl->tpl_vars['link']->value;?>

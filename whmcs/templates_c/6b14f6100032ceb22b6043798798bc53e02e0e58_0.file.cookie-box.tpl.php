@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-24 05:48:31
+/* Smarty version 3.1.48, created on 2024-09-28 03:20:23
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/settings/includes/cookie-box.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f252af448237_43955732',
+  'unifunc' => 'content_66f775f74dd356_78447497',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 1,
   ),
 ),false)) {
-function content_66f252af448237_43955732 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f775f74dd356_78447497 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel panel--collapse" data-cookiebox>
     <div class="collapse-toggle">
         <h6 class="top__title">
