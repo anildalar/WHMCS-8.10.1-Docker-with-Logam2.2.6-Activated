@@ -1,0 +1,3 @@
+#cloud-config
+runcmd:
+  - echo "This Instance Hosted By - TJWI Services" > /etc/motd

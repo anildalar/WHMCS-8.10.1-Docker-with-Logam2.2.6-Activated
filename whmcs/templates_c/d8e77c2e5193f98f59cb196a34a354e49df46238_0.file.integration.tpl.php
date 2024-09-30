@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 03:10:39
+/* Smarty version 3.1.48, created on 2024-09-30 11:45:50
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/pageControllers/integration.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f773af626b50_42582165',
+  'unifunc' => 'content_66fa8f6ee15379_89439777',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f773af626b50_42582165 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66fa8f6ee15379_89439777 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="layers">
     <div class="lu-app">

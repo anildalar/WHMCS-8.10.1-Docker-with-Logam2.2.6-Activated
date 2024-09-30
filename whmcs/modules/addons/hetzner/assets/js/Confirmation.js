@@ -1,13 +1,17 @@
 /*!
-// *************************************************************************
-// * Hetzner Server Automation                                             *
-// * Copyright (c) WHMCSModule Networks. All Rights Reserved.              *
-// * Version: 2022.4                                                       *
-// * Build Date: 19 November 2022                                          *
-// *************************************************************************
-// * Email: sales@whmcsmodule.net                                          *
-// * Website: https://www.whmcsmodule.net                                  *
-// *************************************************************************
+ * jquery-confirm v3.3.4 (http://craftpip.github.io/jquery-confirm/)
+ * Author: Boniface Pereira
+ * Website: www.craftpip.com
+ * Contact: hey@craftpip.com
+ *
+ * Copyright 2013-2019 jquery-confirm
+ * Licensed under MIT (https://github.com/craftpip/jquery-confirm/blob/master/LICENSE)
+ */
+
+
+/**
+ * UMD (Universal Module Definition) to support CommonJS, AMD and browser
+ * Thanks to https://github.com/umdjs/umd
  */
 (function(factory){
     if(typeof define === 'function' && define.amd){

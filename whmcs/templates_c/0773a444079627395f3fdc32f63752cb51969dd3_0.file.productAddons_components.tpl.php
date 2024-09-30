@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 03:10:39
+/* Smarty version 3.1.48, created on 2024-09-30 11:45:50
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/productAddons_components.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f773af488c73_10560471',
+  'unifunc' => 'content_66fa8f6eb85b93_70151783',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f773af488c73_10560471 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66fa8f6eb85b93_70151783 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-one-page-product-addons-<?php echo strtolower($_smarty_tpl->tpl_vars['elementId']->value);?>
 "

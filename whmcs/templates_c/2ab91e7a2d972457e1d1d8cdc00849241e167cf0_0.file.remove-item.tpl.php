@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-27 10:43:52
+/* Smarty version 3.1.48, created on 2024-09-28 10:51:56
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/extensions/customcode/includes/modal/remove-item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f68c68af9a20_78850828',
+  'unifunc' => 'content_66f7dfcc262ba9_94293096',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f68c68af9a20_78850828 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f7dfcc262ba9_94293096 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="modal-delete-item" class="modal" data-custom-code-modal-remove>
     <div class="modal__dialog">
         <div class="modal__content">

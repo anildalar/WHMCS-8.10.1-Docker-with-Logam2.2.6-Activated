@@ -1,0 +1,29 @@
+#lagom sitemap generator start
+Sitemap: https://oceanpbx.club/sitemap.xml
+User-agent: *
+Disallow: /email-services/archiving
+Disallow: /nord-vpn
+Disallow: /svg-icons
+Disallow: /svg-mc-illustrations
+Disallow: /cloud-servers-layout-2
+Disallow: /partners
+Disallow: /dedicated-servers-layout-2
+Disallow: /domain-transfer
+Disallow: /game-servers-layout-2
+Disallow: /legal/domain-registration-greement
+Disallow: /reseller-hosting-layout-2
+Disallow: /shared-hosting-layout-2
+Disallow: /vps-hosting-layout-2
+Disallow: /wordpress-hosting-layout-2
+Disallow: /section/banner-default
+Disallow: /section/banner-domain
+Disallow: /section/banner-form
+Disallow: /section/cta
+Disallow: /section/domain-search
+Disallow: /section/faq
+Disallow: /section/features
+Disallow: /section/graphics
+Disallow: /section/product-groups
+Disallow: /section/products
+Disallow: /section/testimonials
+#lagom sitemap generator end

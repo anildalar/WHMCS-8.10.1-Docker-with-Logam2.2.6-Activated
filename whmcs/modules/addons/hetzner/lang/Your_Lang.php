@@ -1,13 +1,5 @@
 <?php
-// *************************************************************************
-// * Hetzner Server Automation                                             *
-// * Copyright (c) WHMCSModule Networks. All Rights Reserved.              *
-// * Version: 2022.4                                                       *
-// * Build Date: 19 November 2022                                          *
-// *************************************************************************
-// * Email: sales@whmcsmodule.net                                          *
-// * Website: https://www.whmcsmodule.net                                  *
-// *************************************************************************
+
 $_ADDONLANG["Unknown_OS"] = "Unknown OS";
 $_ADDONLANG["WakeonLanError"] = "An error occured due to server IP mismatch";
 $_ADDONLANG["Wake_On_Lan"] = "Wake On Lan";
@@ -310,12 +302,12 @@ $_ADDONLANG['Settings']['AclTitle'] = "Service ACL Configuration";
 $_ADDONLANG['Settings']['MrkTitle'] = "Marketing Servers Configuration";
 $_ADDONLANG['Settings']['ProdTitle'] = "Product Configuration";
 $_ADDONLANG["WHMCSProd"] = "Product/Services";
-$_ADDONLANG["ProdName"] = "Product Name";
-$_ADDONLANG["ProdDesc"] = "Description";
-$_ADDONLANG["ProdPrice"] = "Price";
-$_ADDONLANG["ProdType"] = "Type";
-$_ADDONLANG["ProdACL"] = "Product/Service - Acccess control to exculde from Out of Stock";
-$_ADDONLANG["ProdMessage"] = "The selected products will be excluded from cron job out of stock and shopping cart hidden list execution";
+$_ADDONLANG["Prod"]["Name"] = "Product Name";
+$_ADDONLANG["Prod"]["Desc"] = "Description";
+$_ADDONLANG["Prod"]["Price"] = "Price";
+$_ADDONLANG["Prod"]["Type"] = "Type";
+$_ADDONLANG["Prod"]["ACL"] = "Product/Service - Acccess control to exculde from Out of Stock";
+$_ADDONLANG["Prod"]["Message"] = "The selected products will be excluded from cron job out of stock and shopping cart hidden list execution";
 $_ADDONLANG["ConfigProdImport"] = "Auto Import";
 $_ADDONLANG["ConfigProdImportDesc"] = "Enable Product Auto Import into your WHMCS Shopping cart during cron job execution";
 $_ADDONLANG["ConfigProdMin"] = "Min Value";
@@ -376,4 +368,4 @@ $_ADDONLANG["DnsValueDesc"] = "eg. yourdomain.com";
 
 //2021.2
 $_ADDONLANG["ConfigPrice"] = "Conversation Price";
-$_ADDONLANG["ConfigPriceDesc"] = "Currency conversation default price, it will help in converting EURO (Hetzner Product) price to your default (primary) currency, For default put 0 (It will calculate based on WHMCS currency conversation rate) else put your desired amount conversation rage";
+$_ADDONLANG["ConfigPriceDesc"] = "Currency conversation default price, it will help in converting EURO price to your default (primary) currency ";

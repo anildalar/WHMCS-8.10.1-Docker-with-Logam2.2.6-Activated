@@ -1,8 +1,8 @@
 // *************************************************************************
 // * Hetzner Server Automation                                             *
 // * Copyright (c) WHMCSModule Networks. All Rights Reserved.              *
-// * Version: 2022.4                                                       *
-// * Build Date: 19 November 2022                                          *
+// * Version: 2022.1                                                       *
+// * Build Date: 17 June 2022                                              *
 // *************************************************************************
 // * Email: sales@whmcsmodule.net                                          *
 // * Website: https://www.whmcsmodule.net                                  *

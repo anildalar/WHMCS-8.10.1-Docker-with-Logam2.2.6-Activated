@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-27 11:49:33
+/* Smarty version 3.1.48, created on 2024-09-28 11:03:10
   from '/var/www/html/modules/addons/LagomOrderForm/templates/client/default/pages/custom/order.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f69bcd0e0594_74965188',
+  'unifunc' => 'content_66f7e26e217c75_82996737',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f69bcd0e0594_74965188 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f7e26e217c75_82996737 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="lagom-one-step-order">
     <div class="message message-lg message-no-data message-fullscreen" id="one-page-order-init-loader" data-order-loader>
         <div id="lottie">

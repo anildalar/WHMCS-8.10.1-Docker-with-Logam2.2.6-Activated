@@ -1,0 +1,119 @@
+{
+    "plans": [
+        {
+            "ProductId": "V45",
+            "Product": "VPS 1 SSD",
+            "Disk Size": "400 GB SSD"
+        },
+        {
+            "ProductId": "V47",
+            "Product": "VPS 1 Storage",
+            "Disk Size": "800 GB SSD"
+        },
+        {
+            "ProductId": "V46",
+            "Product": "VPS 1 NVMe",
+            "Disk Size": "100 GB NVMe"
+        },
+        {
+            "ProductId": "V48",
+            "Product": "VPS 2 SSD",
+            "Disk Size": "400 GB SSD"
+        },
+        {
+            "ProductId": "V50",
+            "Product": "VPS 2 Storage",
+            "Disk Size": "800 GB SSD"
+        },
+        {
+            "ProductId": "V49",
+            "Product": "VPS 2 NVMe",
+            "Disk Size": "200 GB NVMe"
+        },
+        {
+            "ProductId": "V51",
+            "Product": "VPS 3 SSD",
+            "Disk Size": "1200 GB SSD"
+        },
+        {
+            "ProductId": "V53",
+            "Product": "VPS 3 Storage",
+            "Disk Size": "2400 GB SSD"
+        },
+        {
+            "ProductId": "V52",
+            "Product": "VPS 3 NVMe",
+            "Disk Size": "300 GB NVMe"
+        },
+        {
+            "ProductId": "V54",
+            "Product": "VPS 4 SSD",
+            "Disk Size": "1600 GB SSD"
+        },
+        {
+            "ProductId": "V56",
+            "Product": "VPS 4 Storage",
+            "Disk Size": "3200 GB SSD"
+        },
+        {
+            "ProductId": "V55",
+            "Product": "VPS 4 NVMe",
+            "Disk Size": "400 GB NVMe"
+        },
+        {
+            "ProductId": "V57",
+            "Product": "VPS 5 SSD",
+            "Disk Size": "2000 GB SSD"
+        },
+        {
+            "ProductId": "V59",
+            "Product": "VPS 5 Storage",
+            "Disk Size": "4000 GB SSD"
+        },
+        {
+            "ProductId": "V58",
+            "Product": "VPS 5 NVMe",
+            "Disk Size": "500 GB NVMe"
+        },
+        {
+            "ProductId": "V60",
+            "Product": "VPS 6 SSD",
+            "Disk Size": "2400 GB SSD"
+        },
+        {
+            "ProductId": "V62",
+            "Product": "VPS 6 Storage",
+            "Disk Size": "4800 GB SSD"
+        },
+        {
+            "ProductId": "V61",
+            "Product": "VPS 6 NVMe",
+            "Disk Size": "600 GB NVMe"
+        },
+        {
+            "ProductId": "V8",
+            "Product": "VDS S",
+            "Disk Size": "180 GB NVMe"
+        },
+        {
+            "ProductId": "V9",
+            "Product": "VDS M",
+            "Disk Size": "240 GB NVMe"
+        },
+        {
+            "ProductId": "V10",
+            "Product": "VDS L",
+            "Disk Size": "360 GB NVMe"
+        },
+        {
+            "ProductId": "V11",
+            "Product": "VDS XL",
+            "Disk Size": "480 GB NVMe"
+        },
+        {
+            "ProductId": "V16",
+            "Product": "VDS XXL",
+            "Disk Size": "720 GB NVMe"
+        }
+    ]
+}

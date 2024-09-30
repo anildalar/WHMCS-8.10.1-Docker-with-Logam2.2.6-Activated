@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-27 18:25:55
+/* Smarty version 3.1.48, created on 2024-09-28 11:19:18
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/site/banner-bg.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f6f8b3487b14_23096897',
+  'unifunc' => 'content_66f7e6366c7108_30053208',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f6f8b3487b14_23096897 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f7e6366c7108_30053208 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="banner-background banner-bg">
     <svg class="banner-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1918 621" style="enable-background:new 0 0 1918 621;" xml:space="preserve">
         <g class="svg-banner-lines banner-lines" data-banner-lines-animation>

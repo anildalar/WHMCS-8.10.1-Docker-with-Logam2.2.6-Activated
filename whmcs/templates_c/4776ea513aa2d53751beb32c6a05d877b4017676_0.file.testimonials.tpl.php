@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-27 12:26:56
+/* Smarty version 3.1.48, created on 2024-09-28 10:45:15
   from '/var/www/html/templates/lagom2/core/cms/sections/config/testimonials/testimonials.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f6a4908077e3_56702249',
+  'unifunc' => 'content_66f7de3b9df959_65673724',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f6a4908077e3_56702249 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66f7de3b9df959_65673724 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div
     class="site-section section-<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
  section-testimonials <?php if ($_smarty_tpl->tpl_vars['overlay']->value) {?> section-overlay<?php }?> <?php if ($_smarty_tpl->tpl_vars['combined']->value) {?>section-combined<?php }?> <?php if ($_smarty_tpl->tpl_vars['custom_class']->value) {?> <?php echo $_smarty_tpl->tpl_vars['custom_class']->value;

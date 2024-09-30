@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 03:10:39
+/* Smarty version 3.1.48, created on 2024-09-30 11:45:50
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/productCustomFields.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f773af494f74_56724262',
+  'unifunc' => 'content_66fa8f6ec02171_03786410',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f773af494f74_56724262 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66fa8f6ec02171_03786410 (Smarty_Internal_Template $_smarty_tpl) {
 ?><mg-component-body-<?php echo strtolower($_smarty_tpl->tpl_vars['elementId']->value);?>
 
         component_id='<?php echo $_smarty_tpl->tpl_vars['elementId']->value;?>
