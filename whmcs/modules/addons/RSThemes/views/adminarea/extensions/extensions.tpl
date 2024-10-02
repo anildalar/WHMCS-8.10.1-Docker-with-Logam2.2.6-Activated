@@ -182,7 +182,7 @@ RSThemes - Extensions
                                                     file="adminarea/includes/helpers/popover.tpl" 
                                                     popoverClasses="notification__popover"
                                                     popoverBody="<b>{$extension->getName()} {$extension->getVersion()}</b> {$lang.info.theme_information.incompatible_version_desc_1} <b>Lagom WHMCS Client Theme {$template->getVersion()}</b> {$lang.info.theme_information.incompatible_version_desc_2} "
-                                                    popoverFooter="<a class='btn btn--secondary btn--xs' href='https://lagom.rsstudio.net/docs/extensions/common-problems.html#i-m-using-incompatible-extension-version' target='_blank'>{$lang.general.learn_more}</a>"
+                                                    popoverFooter="<a class='btn btn--secondary btn--xs' href='https://lagom.rsstudio.net/docs/extensions/common-problems/#i-m-using-incompatible-extension-version' target='_blank'>{$lang.general.learn_more}</a>"
                                                 }
                                             </span>
                                         {/if}

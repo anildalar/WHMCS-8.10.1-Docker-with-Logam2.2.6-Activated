@@ -2,7 +2,7 @@
     {include file="{$template}/includes/overwrites/head.tpl"}
 {else}
     {* Favicon *}
-    {if $RSThemes.faviconDir}
+    {if isset($RSThemes.faviconDir) && $RSThemes.faviconDir}
         <link rel="shortcut icon" href="{$WEB_ROOT}{$RSThemes.faviconDir}/favicon.ico">
         <link rel="icon" sizes="16x16 32x32 64x64" href="{$WEB_ROOT}{$RSThemes.faviconDir}/favicon.ico">
         <link rel="icon" type="image/png" sizes="196x196" href="{$WEB_ROOT}{$RSThemes.faviconDir}/favicon-192.png">
@@ -24,45 +24,55 @@
         <meta name="msapplication-TileImage" content="{$WEB_ROOT}{$RSThemes.faviconDir}/favicon-144.png">
         <meta name="msapplication-config" content="{$WEB_ROOT}{$RSThemes.faviconDir}/browserconfig.xml">
     {/if}
-    
+
     {* CSS Vars *}
-    {$RSThemes['styles']['colors']->cssInjector(!$adminLoggedIn)}
+    {if $RSThemes['styles']['colors'] && is_object($RSThemes['styles']['colors']) && method_exists($RSThemes['styles']['colors'],"cssInjector")}
+        {$RSThemes['styles']['colors']->cssInjector(!$adminLoggedIn)}
+    {else}
+        <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/core/styles/default/assets/css/vars/minified.css?v={$RSThemes['templateVersion']}">     
+    {/if}
     
     {* Main Styles *}
     {if ($language == 'arabic' || $language == 'hebrew' || $language == 'farsi') && file_exists("templates/{$template}/assets/css/theme-rtl.css")}
         <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/theme-rtl.css?v={$RSThemes['templateVersion']}">
-        {if ($isSite || $custompage || (isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website")) && file_exists("templates/{$template}/assets/css/site-rtl.css")}
-            <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/site-rtl.css?v={$RSThemes['templateVersion']}">
-        {/if}
+        {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}
+        {else}
+            {if ($isSite || isset($custompage)) && file_exists("templates/{$template}/assets/css/site-rtl.css")}
+                <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/site-rtl.css?v={$RSThemes['templateVersion']}">
+            {/if}
+        {/if}    
     {else}
         <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/theme.css?v={$RSThemes['templateVersion']}">
-        {if $isSite || $custompage || (isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website")}
-            <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/site.css?v={$RSThemes['templateVersion']}">
+        {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}
+        {else}
+             {if ($isSite || isset($custompage))}
+                <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/site.css?v={$RSThemes['templateVersion']}">
+            {/if}
         {/if}
     {/if}
     
+    {$moveDirUpInFileChecker = ""}
+    {if $moveDirUp}
+        {$moveDirUpInFileChecker = "../"}
+    {/if}
+
     {* Custom *}
-    {if ($language == 'arabic' || $language == 'hebrew' || $language == 'farsi') && file_exists("templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom-rtl.css")} 
+    {if ($language == 'arabic' || $language == 'hebrew' || $language == 'farsi') && file_exists("{$moveDirUpInFileChecker}templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom-rtl.css")} 
         <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom-rtl.css?v={$RSThemes['templateVersion']}" rel="stylesheet">
-    {elseif file_exists("templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom.css")}
+    {elseif file_exists("{$moveDirUpInFileChecker}templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom.css")}
         <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom.css?v={$RSThemes['templateVersion']}" rel="stylesheet">
     {/if}
 
     {* Theme Custom *}
-    {if ($language == 'arabic' || $language == 'hebrew' || $language == 'farsi') && file_exists("templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom-rtl.css")} 
+    {if ($language == 'arabic' || $language == 'hebrew' || $language == 'farsi') && file_exists("{$moveDirUpInFileChecker}templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom-rtl.css")} 
         <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom-rtl.css?v={$RSThemes['templateVersion']}" rel="stylesheet">
-    {elseif file_exists("templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom.css")}
+    {elseif file_exists("{$moveDirUpInFileChecker}templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom.css")}
         <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom.css?v={$RSThemes['templateVersion']}" rel="stylesheet">
     {/if}
 
-    {if $isOnePageOrder}        
+    {if isset($isOnePageOrder) && $isOnePageOrder}
         <link href="{$WEB_ROOT}/modules/addons/LagomOrderForm/app/UI/Client/Templates/assets/css/order/lagom2/index.css?v={$RSThemes['templateVersion']}" rel="stylesheet">
     {/if}
-    
-    {if $templatefile == 'viewinvoice' || $templatefile == 'viewquote'}
-        <link href="/assets/css/fontawesome-all.min.css" rel="stylesheet">
-    {/if}
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -77,14 +87,15 @@
             locale = '{if !empty($mdeLocale)}{$mdeLocale}{else}en{/if}',
             saved = '{lang|addslashes key="markdown.saved"}',
             saving = '{lang|addslashes key="markdown.saving"}',
-            whmcsBaseUrl = "{\WHMCS\Utility\Environment\WebHelper::getBaseUrl()}",
-            requiredText = '{lang|addslashes key="orderForm.required"}',
-            recaptchaSiteKey = "{if $captcha}{$captcha->recaptcha->getSiteKey()}{/if}";
+            whmcsBaseUrl = "{\WHMCS\Utility\Environment\WebHelper::getBaseUrl()}";
+            {if $captcha}{$captcha->getPageJs()}{/if}
     </script>
-    
+    {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}
+        <script>disableInternalTabSelection = true</script>
+    {/if}
     {* Main Scripts *}
-    <script src="{$WEB_ROOT}/templates/{$template}/assets/js/scripts.min.js?v={$RSThemes['templateVersion']}"></script>
-    <script src="{$WEB_ROOT}/templates/{$template}/assets/js/core.min.js?v={$RSThemes['templateVersion']}"></script>
+    <script {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}defer{/if} src="{$WEB_ROOT}/templates/{$template}/assets/js/scripts.min.js?v={$RSThemes['templateVersion']}"></script>
+    <script {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}defer{/if} src="{$WEB_ROOT}/templates/{$template}/assets/js/core.min.js?v={$RSThemes['templateVersion']}"></script>
 
     {* Custom Head *}
     {if file_exists("templates/$template/core/layouts/{$RSThemes.layouts.name}/head.tpl")}

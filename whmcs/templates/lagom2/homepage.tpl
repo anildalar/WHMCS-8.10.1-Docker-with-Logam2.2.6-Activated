@@ -4,7 +4,6 @@
     <div class="main-banner banner-center banner-home banner-{$siteBannerStyle}">
         <div class="container">
             <div class="banner-content">
-        
             {if $registerdomainenabled || $transferdomainenabled}
                 <h1 class="banner-title">{$LANG.findyourdomain}</h1>
                 <form method="post" action="domainchecker.php" id="frmDomainHomepage">

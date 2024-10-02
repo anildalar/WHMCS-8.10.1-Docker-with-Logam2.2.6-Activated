@@ -27,7 +27,8 @@ return [
         'no_file_selected'              => 'No file selected',
         'sensitive_data'                => 'Sensitive Data',
         'sensitive_data_ticket'         => 'Ticket Sensitive Data',
-        'sensitive_data_ticket_desc'    => 'Use this field to post sensitive data like SFTP/FTP access, WHMCS admin area login details, etc. <strong> Data posted in this field will be securely stored and encrypted.</strong> You’ll be able to edit and remove this field in the ticket page.'
+        'sensitive_data_ticket_desc'    => 'Use this field to post sensitive data like SFTP/FTP access, WHMCS admin area login details, etc. <strong> Data posted in this field will be securely stored and encrypted.</strong> You’ll be able to edit and remove this field in the ticket page.',
+        'sensitive_data_tooltip'        => 'Sensitive Data assigned to this ticket'
     ],
 
     'billing' => [
@@ -71,6 +72,11 @@ return [
         'use_own_domain'                => 'Use Own Domain',
         'servername_example'            => 'servername.example.com',
         'product_selected'              => 'Selected Product',
+        'free_domain_terms' => [
+            'title'                     => 'Free Domain Registration Details',
+            'available_for_cycles'      => 'Available for selected product billing cycles',
+            'one_type_product'          => 'Available only with the first product of this category in your order.'
+        ]
     ],
 
     'market_connect' => [

@@ -14,7 +14,7 @@
 		<div class="col-md-12">
 			<h1>Style Settings 
 				<span class="label-docs">
-					<a href="https://lagom.rsstudio.net/docs/style-manager.html#custom-css" class="btn--doc btn btn--link btn--xs" target="_blank" rel="noopener noreferrer">docs</a>
+					<a href="https://lagom.rsstudio.net/docs/style-manager.html#style-settings" class="btn--doc btn btn--link btn--xs" target="_blank" rel="noopener noreferrer">docs</a>
 				</span>
 			</h1> 
 			<form id="cssStyleCustomSettingsForm" action="{$helper->url('Template@styleCustomSettingsSave',['templateName'=>$template->getMainName(), 'styleName'=>$styleName])}" method="POST">

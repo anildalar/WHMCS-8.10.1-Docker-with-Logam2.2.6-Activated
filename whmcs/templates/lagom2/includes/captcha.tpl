@@ -7,7 +7,7 @@
                 <div class="panel panel-default panel-form">
                     <div class="panel-body">
         {/if}
-        {if $captcha == "recaptcha"}
+        {if $captcha->recaptcha->isEnabled() && !$captcha->recaptcha->isInvisible()}
             {if $templatefile == "homepage"}
                 <div class="domain-search-captcha">
             {/if}    
@@ -18,7 +18,7 @@
             {if $templatefile == "homepage"}
                 </div>
             {/if}
-        {elseif !in_array($captcha, ['invisible', 'recaptcha'])}
+        {elseif !$captcha->recaptcha->isEnabled()}
             <div class="{if $templatefile !='clientregister' &&  $templatefile !='contact'}text-center{/if} captcha captcha-centered m-a form-group" id="captchaContainer">
                 <div id="default-captcha-domainchecker" class="{if $filename == 'domainchecker'}input-group input-group-box {/if}{if $templatefile !='contact'}text-center{else}section{/if}">
                     <div class="captchatext text-light">{lang key="captchaverify"}</div>

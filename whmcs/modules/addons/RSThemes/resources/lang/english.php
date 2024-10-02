@@ -244,6 +244,9 @@ return [
                 ],
                 'tld_cycle_switcher' => [
                     'title' => 'Show TLD Cycle Switcher'
+                ],
+                'product_domain_free_price' => [
+                    'title' => 'Display Free Domain Pricing'
                 ]
             ]
         ],  

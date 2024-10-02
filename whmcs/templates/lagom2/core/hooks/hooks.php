@@ -27,6 +27,8 @@
    22. Product - show clear description
    23. Services List - show end of trial period
    24. Required Company name - client register & checkout 
+   25. Configure Product Domain & Configure Domains - Product Free Domain
+   26. WordPress Managment icon on the cPanel page
  * ******************************************
  */
 
@@ -943,7 +945,7 @@ add_hook('ClientAreaPageSubmitTicket', 1, function($vars) {
  * **************************************************************
 */
 
-add_hook('ClientAreaPage', 999, function($vars) {
+add_hook('ClientAreaPage', 99999999999, function($vars) {
     if ($vars['templatefile'] == "products" || $vars['templatefile'] == "configureproduct"){
         $descriptionStyle = \RSThemes\Models\Settings::where('setting', 'product_description_style')->first();
         $descriptionStyleEnabledOption = "clear";
@@ -1054,6 +1056,110 @@ add_hook('ClientDetailsValidation', 2, function($vars) {
                     return $errors;
                 }
             }
+        }
+    }
+});
+
+/*
+ * ***********************************************************************
+    25. Configure Product Domain & Configure Domains - Product Free Domain
+ * ***********************************************************************
+*/
+
+add_hook('ClientAreaPage', 2, function($vars) {
+    if ($vars['templatefile'] == "configureproductdomain"){
+        $productPid = $vars['productinfo']['pid'];
+        $searchKey = 'pid';
+        $searchValue = $productPid;
+        if (isset($_SESSION['cart']['products']) && is_array($_SESSION['cart']['products'])){
+            $result = array_filter($_SESSION['cart']['products'], function ($subarray) use ($searchKey, $searchValue) {
+                return isset($subarray[$searchKey]) && $subarray[$searchKey] === $searchValue;
+            });
+            if (count($result) > 0){
+                return [
+                    'freeDomainNotAllowed' => true
+                ];
+            }
+        }
+    }
+
+    if ($vars['templatefile'] == "configureproduct" && isset($vars['productinfo']['freedomaintlds']) && !empty($vars['productinfo']['freedomaintlds']) && is_array($vars['productinfo']['freedomaintlds'])){
+        $freeProductDomainOption = \RSThemes\Models\Settings::where('setting', 'product_domain_free_price')->first();
+        if (isset($freeProductDomainOption) && $freeProductDomainOption){
+            $freeProductDomainOptionValue = $freeProductDomainOption->value;
+        }
+        if ($freeProductDomainOptionValue == "true"){
+            $productPid = $vars['productinfo']['pid'];
+            $searchKey = 'pid';
+            $searchValue = $productPid;
+            if (isset($_SESSION['cart']['products']) && is_array($_SESSION['cart']['products'])){
+                $result = array_filter($_SESSION['cart']['products'], function ($subarray) use ($searchKey, $searchValue) {
+                    return isset($subarray[$searchKey]) && $subarray[$searchKey] === $searchValue;
+                });
+                $result = reset($result);
+                $freeDomainAssignedToProduct = false;
+                if (!empty($result) && (!isset($result['qty']) || $result['qty'] == 1)) {
+                    if (isset($result['domain'])){
+                        $domain =  explode('.',$result['domain'], 2);
+                        $tld = '.'.last($domain);
+                        if (in_array($tld, $vars['productinfo']['freedomaintlds'])){
+                            $freeDomainAssignedToProduct = true;
+                        }
+                    }
+                }
+                return [
+                    'freeDomainAssignedToProduct' => $freeDomainAssignedToProduct
+                ];
+            }
+        }  
+    }
+    if ($vars['templatefile'] == "configuredomains" && isset($vars['domains']) && is_array($vars['domains']) && !empty($vars['domains'])){
+        $freeProductDomainOption = \RSThemes\Models\Settings::where('setting', 'product_domain_free_price')->first();
+        if (isset($freeProductDomainOption) && $freeProductDomainOption){
+            $freeProductDomainOptionValue = $freeProductDomainOption->value;
+        }
+        if ($freeProductDomainOptionValue == "true"){
+            foreach ($vars['domains'] as $key => $domain){
+                if ($domain['hosting']){
+                    $searchKey = 'domain';
+                    $searchValue = $domain['domain'];
+                    $result = array_filter($_SESSION['cart']['products'], function ($subarray) use ($searchKey, $searchValue) {
+                        return isset($subarray[$searchKey]) && $subarray[$searchKey] === $searchValue;
+                    });
+                   
+                    $result = reset($result);
+                    $product = WHMCS\Product\Product::where('id', $result['pid'])->first();
+                    if (isset($product['freedomaintlds']) && !empty($product['freedomaintlds']) && isset($product['freedomain']) && $product['freedomain'] != ""){
+                        $productFreeDomainTlds = explode(',',$product['freedomaintlds']);
+                        if (is_array($productFreeDomainTlds) && !empty($productFreeDomainTlds)){
+                            $domainArray =  explode('.',$domain['domain'], 2);
+                            $tld = '.'.last($domainArray);
+                            if (in_array($tld, $productFreeDomainTlds)){
+                                $vars['domains'][$key]['freeDomainAssignedToProduct'] = true;
+                            }
+                        }
+                    }
+                }
+            }
+            return $vars;
+        }
+    }
+});
+
+/*
+ * **************************************************************
+    26. WordPress Managment icon on the cPanel page
+ * **************************************************************
+*/
+
+add_hook('ClientAreaPrimarySidebar', 9999, function($vars) {
+
+    $primarySidebar = Menu::primarySidebar();
+
+    if ($primarySidebar && !is_null($primarySidebar->getChild('Service Details Actions'))) {
+        $wpManager = $primarySidebar->getChild('Service Details Actions');
+        if (!is_null($wpManager->getChild('mg-wp-manager'))){
+            $wpManager->getChild('mg-wp-manager')->setIcon('fab fa-wordpress');
         }
     }
 });

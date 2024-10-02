@@ -1471,7 +1471,7 @@
                             data: $(form).serialize(),
                             success: function(response) {
                                 var isHostUp = !response.result['down_now'];
-                                console.log(response);
+                                //console.log(response);
                                 jQuery('.modal-url-value').text(
                                     "https://" + url.val()
                                 );

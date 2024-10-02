@@ -4,9 +4,9 @@
     {if $captcha->isEnabled() && $captcha->isEnabledForForm($captchaForm) && !$captcha->recaptcha->isInvisible()}
         <div class="domain-search-captcha domainchecker-homepage-captcha {if $pageClass}{$pageClass}{/if}">
             <div class="captcha-container captcha captcha-centered text-center m-a form-group" id="captchaContainer">
-                    {if $captcha == "recaptcha"} 
-                        <div class="recaptcha-container"></div>
-                    {elseif $captcha != "recaptcha"}
+                {if $captcha->recaptcha->isEnabled()}
+                    <div class="recaptcha-container"></div>
+                {elseif !$captcha->recaptcha->isEnabled()}
                     <div class="captchatext text-light">{lang key="cartSimpleCaptcha"}</div>
                     <div class="input-group">                                 
                         <div class="input-group-addon">

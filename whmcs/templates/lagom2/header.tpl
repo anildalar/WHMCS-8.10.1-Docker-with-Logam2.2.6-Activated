@@ -7,9 +7,6 @@
         <meta charset="{$charset}" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
         {include file="$template/includes/common/seo.tpl"}
         {include file="$template/includes/head.tpl"}
         {$headoutput}
@@ -25,12 +22,13 @@
     {if isset($lagomClientAlerts) && $lagomClientAlerts->header} 
         {$lagomClientAlerts->header}
     {/if}
+
+    {if $captcha}{$captcha->getMarkup()|replace:'href=':'target="_blank" href='}{/if}
     {$headeroutput}
 
     {if isset($RSThemes.layouts)}
         {include file=$RSThemes['layouts']['mediumPath']}
     {else}
         {include file="templates/{$template}/core/layouts/main-menu/default/default.tpl"}
-
     {/if}
 {/if}

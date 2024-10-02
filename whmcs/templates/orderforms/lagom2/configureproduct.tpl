@@ -93,7 +93,8 @@
                         {if $check_discount_quarterly > 0 || $check_discount_semiannually > 0 || $check_discount_annually > 0 || $check_discount_biennially > 0 || $check_discount_triennially > 0}
                             {assign var="show_discount" value=true}
                         {/if}  
-                    {/if}                          
+                    {/if}         
+           
                     <div class="section {if $recurringCount == 1}hidden{/if}" id="sectionCycles">
                         <div class="section-header">
                             <h2 class="section-title">{$LANG.cartchoosecycle}</h2>
@@ -106,7 +107,8 @@
                                             <label data-update-config data-config-i={$i} data-config-val="monthly">
                                                 <input class="icheck-control" type="radio" value="monthly" name="billingcycle" {if $billingcycle eq "monthly"} checked{/if}>
                                                 <div class="check-content">
-                                                    {if $pricing.monthly|strstr:$LANG.orderpaymentterm1month && !$pricing.monthly|strstr:$LANG.orderpaymenttermmonthly}                                                     
+                                                    {$monthlyArrayLang = ["arabic", "turkish"]}                                                    
+                                                    {if $pricing.monthly|strstr:$LANG.orderpaymentterm1month && (!$pricing.monthly|strstr:$LANG.orderpaymenttermmonthly || $language|in_array:$monthlyArrayLang)}                                                  
                                                         <h6 class="check-title">{$LANG.orderpaymenttermmonthly} 
                                                             <br> 
                                                             {if (
@@ -126,18 +128,28 @@
                                                                     {assign var="monthlyDiscount" value=', '|explode:$monthlyPrice[1]}
                                                                     {assign var="monthlyOldPrice" value=': '|explode:$monthlyDiscount[1]}
 
-                                                                    {if $pricing.cycles.monthly|strstr:$LANG.orderfreedomainonly}{$freeDomainMonthly = true}{/if}
-                                                                            {if $pricing.monthly|strstr:'(' && !$pricing.monthly|strstr:$LANG.orderfreedomainonly}
-                                                                                {$monthlyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if}{if $freeDomainMonthly} ({$LANG.orderfreedomainonly}){/if}
-                                                                                <br>
-                                                                                <p class="check-subtitle"><span class="label label-info label-save label-xs save">{$monthlyDiscount[0]|replace:'(':""}</span> <span class="cycle-full-price line-through m-t-1x">{$monthlyOldPrice[1]|replace:')':""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}</span></p>
-                                                                            {else}
-                                                                                {$monthlyPrice[0]|replace:"- ":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}/{$LANG.pricingCycleShort.monthly}{if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
-                                                                                <br>
-                                                                                <div>-</div>
-                                                                            {/if}
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.cycles.monthly|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainMonthly = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.cycles.monthly|strstr:$LANG.orderfreedomainonly}{$freeDomainMonthly = true}{/if}
+                                                                    {/if}
+
+                                                                    {if $pricing.monthly|strstr:'(' && !$pricing.monthly|strstr:$LANG.orderfreedomainonly}
+                                                                        {$monthlyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if}{if $freeDomainMonthly} ({$LANG.orderfreedomainonly}){/if}
+                                                                        <br>
+                                                                        <p class="check-subtitle"><span class="label label-info label-save label-xs save">{$monthlyDiscount[0]|replace:'(':""}</span> <span class="cycle-full-price line-through m-t-1x">{$monthlyOldPrice[1]|replace:')':""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}</span></p>
+                                                                    {else}
+                                                                        {$monthlyPrice[0]|replace:"- ":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}/{$LANG.pricingCycleShort.monthly}{if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
+                                                                        <br>
+                                                                        <div>-</div>
+                                                                    {/if}
                                                                 {else}
-                                                                    {if $pricing.monthly|strstr:$LANG.orderfreedomainonly}{$freeDomainMonthly = true}{/if}
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.monthly|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainMonthly = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.monthly|strstr:$LANG.orderfreedomainonly}{$freeDomainMonthly = true}{/if}
+                                                                    {/if}
+                                                                    
                                                                     {if $display_billing_monthly_price == "on" && $pricing.rawpricing.msetupfee != "0.00" && $pricing.rawpricing.msetupfee != "0,00"}
                                                                         {$pricing.monthly|replace:$LANG.orderpaymentterm1month:""|replace:"-":""|replace:" (`$LANG.orderfreedomainonly`)":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" +":"/`$LANG.pricingCycleShort.monthly` +"}{if $freeDomainMonthly} ({$LANG.orderfreedomainonly}){/if}
                                                                     {else}
@@ -162,7 +174,12 @@
                                                             }
                                                                 {$LANG.orderfree}
                                                             {else}
-                                                                {$pricing.monthly|replace:$LANG.orderpaymenttermmonthly:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}
+                                                                {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                    {if $pricing.monthly|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainMonthly = true}{/if}
+                                                                {else}
+                                                                    {if $pricing.monthly|strstr:$LANG.orderfreedomainonly}{$freeDomainMonthly = true}{/if}
+                                                                {/if}
+                                                                {$pricing.monthly|replace:$LANG.orderpaymenttermmonthly:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" (`$LANG.orderfreedomainonly`)":""}{if $freeDomainMonthly} ({$LANG.orderfreedomainonly}){/if}  
                                                             {/if}
                                                         </h6>
                                                     {/if}
@@ -204,18 +221,28 @@
                                                                     {assign var="quarterlyDiscount" value=', '|explode:$quarterlyPrice[1]}
                                                                     {assign var="quarterlyOldPrice" value=': '|explode:$quarterlyDiscount[1]}
 
-                                                                    {if $pricing.cycles.quarterly|strstr:$LANG.orderfreedomainonly}{$freeDomainQuarterly = true}{/if}
-                                                                        {if $pricing.quarterly|strstr:'(' && !$pricing.semiannually|strstr:$LANG.orderfreedomainonly}
-                                                                        {$quarterlyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if}{if $freeDomainQuarterly} ({$LANG.orderfreedomainonly}){/if}
-                                                                            <br>
-                                                                            <p class="check-subtitle"><span class="label label-info label-save label-xs save">{$quarterlyDiscount[0]|replace:'(':""}</span> <span class="cycle-full-price line-through m-t-1x">{$quarterlyOldPrice[1]|replace:')':""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}</span></p>
-                                                                        {else}
-                                                                            {$quarterlyPrice[0]|replace:"- ":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}/{$LANG.pricingCycleShort.monthly}{if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
-                                                                            <br>
-                                                                            <div>-</div>
-                                                                        {/if}
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.cycles.quarterly|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainQuarterly = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.cycles.quarterly|strstr:$LANG.orderfreedomainonly}{$freeDomainQuarterly = true}{/if}
+                                                                    {/if}
+                                                               
+                                                                    {if $pricing.quarterly|strstr:'(' && !$pricing.semiannually|strstr:$LANG.orderfreedomainonly}
+                                                                    {$quarterlyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if}{if $freeDomainQuarterly} ({$LANG.orderfreedomainonly}){/if}
+                                                                        <br>
+                                                                        <p class="check-subtitle"><span class="label label-info label-save label-xs save">{$quarterlyDiscount[0]|replace:'(':""}</span> <span class="cycle-full-price line-through m-t-1x">{$quarterlyOldPrice[1]|replace:')':""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}</span></p>
+                                                                    {else}
+                                                                        {$quarterlyPrice[0]|replace:"- ":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}/{$LANG.pricingCycleShort.monthly}{if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
+                                                                        <br>
+                                                                        <div>-</div>
+                                                                    {/if}
                                                                 {else}
-                                                                    {if $pricing.quarterly|strstr:$LANG.orderfreedomainonly}{$freeDomainQuarterly = true}{/if}
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.quarterly|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainQuarterly = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.quarterly|strstr:$LANG.orderfreedomainonly}{$freeDomainQuarterly = true}{/if}
+                                                                    {/if}
+                                                                    
                                                                     {if $display_billing_monthly_price == "on" && $pricing.rawpricing.qsetupfee != "0.00" && $pricing.rawpricing.qsetupfee != "0,00"}
                                                                         {$pricing.quarterly|replace:$LANG.orderpaymentterm3month:""|replace:"-":""|replace:" (`$LANG.orderfreedomainonly`)":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" +":"/`$LANG.pricingCycleShort.monthly` +"}{if $freeDomainQuarterly} ({$LANG.orderfreedomainonly}){/if}
                                                                     {else}
@@ -240,7 +267,12 @@
                                                             }
                                                                 {$LANG.orderfree}
                                                             {else}
-                                                                {$pricing.quarterly|replace:$LANG.orderpaymenttermquarterly:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}
+                                                                {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                    {if $pricing.quarterly|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainQuarterly = true}{/if}
+                                                                {else}
+                                                                    {if $pricing.quarterly|strstr:$LANG.orderfreedomainonly}{$freeDomainQuarterly = true}{/if}
+                                                                {/if}   
+                                                                {$pricing.quarterly|replace:$LANG.orderpaymenttermquarterly:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" (`$LANG.orderfreedomainonly`)":""}{if $freeDomainQuarterly} ({$LANG.orderfreedomainonly}){/if}  
                                                             {/if}
                                                         </h6>
                                                     {/if}
@@ -304,19 +336,30 @@
                                                                     {assign var="semiannuallyPrice" value=' ('|explode:$pricing.semiannually|replace:$LANG.orderpaymentterm6month:""}
                                                                     {assign var="semiannuallyDiscount" value=', '|explode:$semiannuallyPrice[1]}
                                                                     {assign var="semiannuallyOldPrice" value=': '|explode:$semiannuallyDiscount[1]}
-                                                                    {if $pricing.cycles.semiannually|strstr:$LANG.orderfreedomainonly}{$freeDomainSemiAnnually = true}{/if}
-                                                                     {if $pricing.semiannually|strstr:'(' && !$pricing.semiannually|strstr:$LANG.orderfreedomainonly}
-                                                                            {$semiannuallyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if}{if $freeDomainSemiAnnually} ({$LANG.orderfreedomainonly}){/if}
-                                                                            <br>
-                                                                            <p class="check-subtitle"><span class="label label-info label-save label-xs save">{$semiannuallyDiscount[0]|replace:'(':""}</span> <span class="cycle-full-price line-through m-t-1x">{$semiannuallyOldPrice[1]|replace:")":''|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}</span></p>
-                                                                        {else}
-                                                                            {$semiannuallyPrice[0]|replace:"- ":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}/{$LANG.pricingCycleShort.monthly}{if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
-                                                                            <br>
-                                                                            <div>-</div>
-                                                                        {/if}
+                                                                    
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.cycles.semiannually|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainSemiAnnually = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.cycles.semiannually|strstr:$LANG.orderfreedomainonly}{$freeDomainSemiAnnually = true}{/if}
+                                                                    {/if}
+                                                                    
+                                                                    {if $pricing.semiannually|strstr:'(' && !$pricing.semiannually|strstr:$LANG.orderfreedomainonly}
+                                                                        {$semiannuallyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if}{if $freeDomainSemiAnnually} ({$LANG.orderfreedomainonly}){/if}
+                                                                        <br>
+                                                                        <p class="check-subtitle"><span class="label label-info label-save label-xs save">{$semiannuallyDiscount[0]|replace:'(':""}</span> <span class="cycle-full-price line-through m-t-1x">{$semiannuallyOldPrice[1]|replace:")":''|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}</span></p>
+                                                                    {else}
+                                                                        {$semiannuallyPrice[0]|replace:"- ":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}/{$LANG.pricingCycleShort.monthly}{if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
+                                                                        <br>
+                                                                        <div>-</div>
+                                                                    {/if}
 
                                                                 {else}
-                                                                    {if $pricing.semiannually|strstr:$LANG.orderfreedomainonly}{$freeDomainSemiannually = true}{/if}
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.semiannually|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainSemiAnnually = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.semiannually|strstr:$LANG.orderfreedomainonly}{$freeDomainSemiannually = true}{/if}
+                                                                    {/if}
+                                                                    
                                                                     {if $display_billing_monthly_price == "on" && $pricing.rawpricing.ssetupfee != "0.00" && $pricing.rawpricing.ssetupfee != "0,00"}
                                                                         {$pricing.semiannually|replace:$LANG.orderpaymentterm6month:""|replace:"-":""|replace:" (`$LANG.orderfreedomainonly`)":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" +":"/`$LANG.pricingCycleShort.monthly` +"}{if $freeDomainSemiannually} ({$LANG.orderfreedomainonly}){/if}
                                                                     {else}
@@ -341,7 +384,12 @@
                                                             }
                                                                 {$LANG.orderfree}
                                                             {else}
-                                                                {$pricing.semiannually|replace:$LANG.orderpaymenttermsemiannually:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}
+                                                                {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                    {if $pricing.semiannually|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainSemiAnnually = true}{/if}
+                                                                {else}
+                                                                    {if $pricing.semiannually|strstr:$LANG.orderfreedomainonly}{$freeDomainSemiannually = true}{/if}
+                                                                {/if}
+                                                                {$pricing.semiannually|replace:$LANG.orderpaymenttermsemiannually:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" (`$LANG.orderfreedomainonly`)":""}{if $freeDomainSemiannually} ({$LANG.orderfreedomainonly}){/if}  
                                                             {/if}
                                                         </h6>
                                                     {/if}
@@ -405,18 +453,29 @@
                                                                     {assign var="annuallyPrice" value=' ('|explode:$pricing.annually|replace:$LANG.orderpaymentterm12month:""}
                                                                     {assign var="annuallyDiscount" value=', '|explode:$annuallyPrice[1]}
                                                                     {assign var="annuallyOldPrice" value=': '|explode:$annuallyDiscount[1]}
-                                                                    {if $pricing.cycles.annually|strstr:$LANG.orderfreedomainonly}{$freeDomainAnnually = true}{/if}
-                                                                        {if $pricing.annually|strstr:'(' && !$pricing.annually|strstr:$LANG.orderfreedomainonly}
-                                                                            {$annuallyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if} {if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
-                                                                            <br>
-                                                                            <p class="check-subtitle"><span class="label label-info label-save label-xs save">{$annuallyDiscount[0]}</span> <span class="cycle-full-price line-through m-t-1x">{$annuallyOldPrice[1]|replace:')':""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}</span></p>
-                                                                        {else}
-                                                                            {$annuallyPrice[0]|replace:"- ":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}/{$LANG.pricingCycleShort.monthly} {if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
-                                                                            <br>
-                                                                            <div>-</div>
-                                                                        {/if}
+
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.cycles.annually|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainAnnually = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.cycles.annually|strstr:$LANG.orderfreedomainonly}{$freeDomainAnnually = true}{/if}
+                                                                    {/if}
+
+                                                                    {if $pricing.annually|strstr:'(' && !$pricing.annually|strstr:$LANG.orderfreedomainonly}
+                                                                        {$annuallyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if} {if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
+                                                                        <br>
+                                                                        <p class="check-subtitle"><span class="label label-info label-save label-xs save">{$annuallyDiscount[0]}</span> <span class="cycle-full-price line-through m-t-1x">{$annuallyOldPrice[1]|replace:')':""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}</span></p>
+                                                                    {else}
+                                                                        {$annuallyPrice[0]|replace:"- ":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}/{$LANG.pricingCycleShort.monthly} {if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
+                                                                        <br>
+                                                                        <div>-</div>
+                                                                    {/if}
                                                                 {else}
-                                                                    {if $pricing.annually|strstr:$LANG.orderfreedomainonly}{$freeDomainAnnually = true}{/if}
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.annually|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainAnnually = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.annually|strstr:$LANG.orderfreedomainonly}{$freeDomainAnnually = true}{/if}
+                                                                    {/if}
+                                                                    
                                                                     {if $display_billing_monthly_price == "on" && $pricing.rawpricing.asetupfee != "0.00" && $pricing.rawpricing.asetupfee != "0,00"}
                                                                         {$pricing.annually|replace:$LANG.orderpaymentterm12month:""|replace:"-":""|replace:" (`$LANG.orderfreedomainonly`)":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" +":"/`$LANG.pricingCycleShort.monthly` +"}{if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
                                                                     {else}
@@ -440,8 +499,13 @@
                                                                 )
                                                             }
                                                                 {$LANG.orderfree}
-                                                            {else}
-                                                                {$pricing.annually|replace:$LANG.orderpaymenttermannually:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}
+                                                            {else}                                                          
+                                                                {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                    {if $pricing.cycles.annually|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainAnnually = true}{/if}
+                                                                {else}
+                                                                    {if $pricing.cycles.annually|strstr:$LANG.orderfreedomainonly}{$freeDomainAnnually = true}{/if}
+                                                                {/if}
+                                                                {$pricing.annually|replace:$LANG.orderpaymenttermannually:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" (`$LANG.orderfreedomainonly`)":""}{if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
                                                             {/if}  
                                                         </h6>
                                                     {/if}
@@ -504,19 +568,29 @@
                                                                     {assign var="bienniallyPrice" value=' ('|explode:$pricing.biennially|replace:$LANG.orderpaymentterm24month:""}
                                                                     {assign var="bienniallyDiscount" value=', '|explode:$bienniallyPrice[1]}
                                                                     {assign var="bienniallyOldPrice" value=': '|explode:$bienniallyDiscount[1]}
-                                                                    {if $pricing.cycles.biennially|strstr:$LANG.orderfreedomainonly}{$freeDomainBiennially = true}{/if}
 
-                                                                        {if $pricing.biennially|strstr:'(' && !$pricing.biennially|strstr:$LANG.orderfreedomainonly}
-                                                                            {$bienniallyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if}{if $freeDomainBiennially} ({$LANG.orderfreedomainonly}){/if}
-                                                                            <br>
-                                                                            <p class="check-subtitle"><span class="label label-info label-save label-xs save">{$bienniallyDiscount[0]|replace:'(':""}</span> <span class="cycle-full-price line-through m-t-1x">{$bienniallyOldPrice[1]|replace:')':""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}</span></p>
-                                                                        {else}
-                                                                            {$bienniallyPrice[0]|replace:"- ":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}/{$LANG.pricingCycleShort.monthly} {if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
-                                                                            <br>
-                                                                            <div>-</div>
-                                                                        {/if}
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.cycles.biennially|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainBiennially = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.cycles.biennially|strstr:$LANG.orderfreedomainonly}{$freeDomainBiennially = true}{/if}
+                                                                    {/if}
+                                                                    
+                                                                    {if $pricing.biennially|strstr:'(' && !$pricing.biennially|strstr:$LANG.orderfreedomainonly}
+                                                                        {$bienniallyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if}{if $freeDomainBiennially} ({$LANG.orderfreedomainonly}){/if}
+                                                                        <br>
+                                                                        <p class="check-subtitle"><span class="label label-info label-save label-xs save">{$bienniallyDiscount[0]|replace:'(':""}</span> <span class="cycle-full-price line-through m-t-1x">{$bienniallyOldPrice[1]|replace:')':""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}</span></p>
+                                                                    {else}
+                                                                        {$bienniallyPrice[0]|replace:"- ":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}/{$LANG.pricingCycleShort.monthly} {if $freeDomainAnnually} ({$LANG.orderfreedomainonly}){/if}
+                                                                        <br>
+                                                                        <div>-</div>
+                                                                    {/if}
                                                                 {else}
-                                                                    {if $pricing.biennially|strstr:$LANG.orderfreedomainonly}{$freeDomainBiennially = true}{/if}
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.biennially|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainBiennially = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.biennially|strstr:$LANG.orderfreedomainonly}{$freeDomainBiennially = true}{/if}
+                                                                    {/if}
+                                                                    
                                                                     {if $display_billing_monthly_price == "on" && $pricing.rawpricing.bsetupfee != "0.00" && $pricing.rawpricing.bsetupfee != "0,00"}
                                                                         {$pricing.biennially|replace:$LANG.orderpaymentterm24month:""|replace:"-":""|replace:" (`$LANG.orderfreedomainonly`)":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" +":"/`$LANG.pricingCycleShort.monthly` +"}{if $freeDomainBiennially} ({$LANG.orderfreedomainonly}){/if}
                                                                     {else}
@@ -541,7 +615,12 @@
                                                             }
                                                                 {$LANG.orderfree}
                                                             {else}
-                                                                {$pricing.biennially|replace:$LANG.orderpaymenttermbiennially:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}
+                                                                {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                    {if $pricing.biennially|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainBiennially = true}{/if}
+                                                                {else}
+                                                                    {if $pricing.biennially|strstr:$LANG.orderfreedomainonly}{$freeDomainBiennially = true}{/if}
+                                                                {/if}
+                                                                {$pricing.biennially|replace:$LANG.orderpaymenttermbiennially:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" (`$LANG.orderfreedomainonly`)":""}{if $freeDomainBiennially} ({$LANG.orderfreedomainonly}){/if}
                                                             {/if} 
                                                         </h6>
                                                     {/if}
@@ -605,8 +684,13 @@
                                                                     {assign var="trienniallyPrice" value=' ('|explode:$pricing.triennially|replace:$LANG.orderpaymentterm36month:""}                                                                  
                                                                     {assign var="trienniallyDiscount" value=', '|explode:$trienniallyPrice[1]}
                                                                     {assign var="trienniallyOldPrice" value=': '|explode:$trienniallyDiscount[1]}
-                                                                    {if $pricing.cycles.triennially|strstr:$LANG.orderfreedomainonly}{$freeDomainTriennially = true}{/if}
                                                                     
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.cycles.triennially|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainTriennially = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.cycles.triennially|strstr:$LANG.orderfreedomainonly}{$freeDomainTriennially = true}{/if}
+                                                                    {/if}
+
                                                                     {if $pricing.triennially|strstr:'(' && !$pricing.triennially|strstr:$LANG.orderfreedomainonly} 
                                                                         {$trienniallyPrice[0]|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}{if $display_billing_monthly_price == "on"}/{$LANG.pricingCycleShort.monthly}{/if}{if $freeDomainTriennially} ({$LANG.orderfreedomainonly}){/if}
                                                                         <br>
@@ -617,7 +701,12 @@
                                                                         <div>-</div>
                                                                     {/if}
                                                                 {else}
-                                                                    {if $pricing.triennially|strstr:$LANG.orderfreedomainonly}{$freeDomainTriennially = true}{/if}
+                                                                    {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                        {if $pricing.triennially|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainTriennially = true}{/if}
+                                                                    {else}
+                                                                        {if $pricing.triennially|strstr:$LANG.orderfreedomainonly}{$freeDomainTriennially = true}{/if}
+                                                                    {/if}
+                                                                    
                                                                     {if $display_billing_monthly_price == "on" && $pricing.rawpricing.tsetupfee != "0.00" && $pricing.rawpricing.tsetupfee != "0,00"}
                                                                         {$pricing.triennially|replace:$LANG.orderpaymentterm36month:""|replace:"-":""|replace:" (`$LANG.orderfreedomainonly`)":""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" +":"/`$LANG.pricingCycleShort.monthly` +"}{if $freeDomainTriennially} ({$LANG.orderfreedomainonly}){/if}
                                                                     {else}
@@ -642,7 +731,12 @@
                                                             }
                                                                 {$LANG.orderfree}
                                                             {else}
-                                                                {$pricing.triennially|replace:$LANG.orderpaymenttermtriennially:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}
+                                                                {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                                                                    {if $pricing.triennially|strstr:$LANG.orderfreedomainonly && $freeDomainAssignedToProduct}{$freeDomainTriennially = true}{/if}
+                                                                {else}
+                                                                    {if $pricing.triennially|strstr:$LANG.orderfreedomainonly}{$freeDomainTriennially = true}{/if}
+                                                                {/if}
+                                                                {$pricing.triennially|replace:$LANG.orderpaymenttermtriennially:""|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"|replace:" (`$LANG.orderfreedomainonly`)":""}{if $freeDomainTriennially} ({$LANG.orderfreedomainonly}){/if}
                                                             {/if} 
                                                         </h6>
                                                     {/if}

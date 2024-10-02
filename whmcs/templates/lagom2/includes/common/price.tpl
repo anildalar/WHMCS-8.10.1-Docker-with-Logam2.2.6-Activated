@@ -28,6 +28,8 @@
         {if isset($priceSetupFee) && $priceSetupFee} + {$priceSetupFee->toPrefixed()} {$LANG.ordersetupfee}{/if}
         {if isset($priceSetupFeeLowest) && $priceSetupFeeLowest} + {$priceSetupFeeLowest|replace:$activeCurrency.suffix:""} {$LANG.ordersetupfee}{/if}
         </div>
+    {else if isset($priceType) && $priceType =="onetime" && isset($showOneTime) && $showOneTime}
+        <div class="price-cycle {if $priceCycleShort}price-cycle-inline{/if}">{$LANG.orderpaymenttermonetime}</div>    
     {else if isset($priceSetupFee) && $priceSetupFee}
         <div class="price-cycle">+ {$priceSetupFee->toPrefixed()} {$LANG.ordersetupfee}</div>
     {else if isset($priceSetupFeeLowest) && $priceSetupFeeLowest}

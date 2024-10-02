@@ -100,7 +100,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="bottom-action-anchor" class="bottom-action-anchor"></div>
                 <div class="bottom-action-sticky hidden" data-fixed-actions href="#bottom-action-anchor">
                     <div class="container">
                         <div class="sticky-content">

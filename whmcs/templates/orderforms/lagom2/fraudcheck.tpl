@@ -7,7 +7,7 @@
                 <i class="lm lm-close"></i>
             </div>
             <h2 class="message-text">{$errortitle}</h2>
-            {if !$userValidation.submittedAt && $userValidation.token eq true}
+            {if $userValidation && !$userValidation.submittedAt && $userValidation.token eq true}
                 <p class="message-desc">{lang key='fraud.furtherVal'}</p>
                 <div class="message-actions">
                     <a href="#" class="btn btn-default" data-url="{$userValidationUrl}" onclick="openValidationSubmitModal(this);return false;">

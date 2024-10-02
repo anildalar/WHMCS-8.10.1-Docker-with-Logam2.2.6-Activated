@@ -119,7 +119,22 @@
                                 {$ticket.department}
                             </td>
                             <td>
-                                <div class="text-primary">#{$ticket.tid}</div>
+                                <div class="text-primary">#{$ticket.tid}
+                                    {if $ticket.sensitiveData === true}
+                                        <span class="" data-toggle="tooltip" data-placement="top" title="{$rslang->trans('support.sensitive_data_tooltip')}">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_9219_3103)">
+                                            <path d="M10.6875 0.000244141H1.3125C1.1375 0.000244141 1 0.146911 1 0.333577V6.66691C1 9.60691 3.24375 12.0002 6 12.0002C8.75625 12.0002 11 9.60691 11 6.66691V0.333577C11 0.146911 10.8625 0.000244141 10.6875 0.000244141ZM7 1.52691L2.49375 6.00024H2V1.00024H7V1.52691Z" fill="var(--brand-success)"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_9219_3103">
+                                            <rect width="12" height="12" fill="white" transform="translate(0 0.000244141)"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>
+                                        </span>
+                                    {/if}
+                                </div>
                                 <span class="small">{$ticket.subject}</span>
                             </td>
                             <td>

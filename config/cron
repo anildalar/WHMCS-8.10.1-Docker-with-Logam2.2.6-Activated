@@ -1,1 +1,2 @@
 */5 * * * * /usr/local/bin/php -q /var/www/html/crons/cron.php
+*/5 * * * * /usr/local/bin/php -q /var/www/html/modules/servers/HetznerVps/cron/cron.php Tasks

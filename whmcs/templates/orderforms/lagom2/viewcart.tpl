@@ -87,8 +87,8 @@
                 window.langPasswordTooShort = "{$rslang->trans('login.at_least_pass')}";
             </script>
             <form method="post" action="{$smarty.server.PHP_SELF}?a=checkout" name="orderfrm" class="billing-details-form" id="frmCheckout">
-                <input type="hidden" name="submit" value="true" />
-                
+                <input type="hidden" name="checkout" value="true" />
+                               
                 {include file="orderforms/$carttpl/includes/viewcart/form-billing.tpl"}
                 {include file="orderforms/$carttpl/includes/viewcart/form-domain-details.tpl"}
                 {include file="orderforms/$carttpl/includes/viewcart/form-payment-gateway.tpl"}

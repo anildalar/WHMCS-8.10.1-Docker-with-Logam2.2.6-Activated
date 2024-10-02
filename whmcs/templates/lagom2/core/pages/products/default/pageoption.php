@@ -27,5 +27,11 @@ return [
             'default' => '3',
             'tooltip' => "Choose whether you would like to show or hide the content sidebar available on this page."    
         ],
+        'showOneTime' => [
+            'type' => 'checkbox',
+            'name' => 'showOneTime',
+            'label' => 'Show "One Time" cycle',
+            'tooltip' => 'Choose whether you would like to show "One Time" cycle text under product price.'    
+        ]
     ]
 ];

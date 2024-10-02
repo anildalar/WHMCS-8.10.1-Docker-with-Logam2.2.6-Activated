@@ -7,7 +7,6 @@
 {block name="template-tabs"}
     {include file="adminarea/includes/tabs.tpl"}
 {/block}
-<h1>Hwloo</h1>
 
 {block name="template-content"}
     <div class="section">

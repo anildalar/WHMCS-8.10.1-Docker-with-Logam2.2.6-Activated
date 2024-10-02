@@ -1284,7 +1284,7 @@ function () {
         if (typeof window.whmcsBaseUrl === 'undefined') {
             console.log('Warning: The WHMCS Base URL definition is missing '
                 + 'from your active template. Please refer to '
-                + 'https://docs.whmcs.com/WHMCS_Base_URL_Template_Variable '
+                + 'https://go.whmcs.com/1961/base-url '
                 + 'for more information and details of how to resolve this '
                 + 'warning.');
             window.whmcsBaseUrl = this.autoDetermineBaseUrl();
@@ -1622,6 +1622,11 @@ jQuery(document).ready(function () {
     if ($('#frmProductDomain')[0].hasAttribute("data-show-tld-cycle-switcher") && $('#frmProductDomain')[0].hasAttribute("data-period")){
         presetPeriod = $('#frmProductDomain').data('period');
     }
+    var freeProductDomainArray = false;
+    if ($('#frmProductDomain')[0].hasAttribute("data-product-domain-free-price")){
+        freeProductDomainArray = $('#frmProductDomain').data('product-domain-free-price');
+        var freePriceFormat = $('#frmProductDomain').data('whmcs-free-format');
+    }
 
     jQuery('.field-error-msg').hide();
     if (!idnLanguage.hasClass('hidden')) {
@@ -1791,7 +1796,12 @@ jQuery(document).ready(function () {
                             unavailableTld.show().find('strong').html(domain.originalUnavailableTld);
                         }
                         available.show().find('strong').html(domain.domainName);
-                        availablePrice.show().find('.price').html(pricing[Object.keys(pricing)[0]].register).end();
+                        var currentPrice = pricing[Object.keys(pricing)[0]].register;
+                        if (freeProductDomainArray && freeProductDomainArray.includes('.'+domain.tld)){                                                     
+                            currentPrice = '<span>'+freePriceFormat + '<span class="line-through text-lighter m-l-1x">'+currentPrice+'</span></span>';
+                        }
+                       
+                        availablePrice.show().find('.price').html(currentPrice).end();
                         available.find('button').attr('data-domain', domain.domainName);
                         
                         var isAutomaticAddToCart = $('#primaryLookupResult').attr('data-add-to-cart-on-search');
@@ -1811,6 +1821,8 @@ jQuery(document).ready(function () {
                                 langYears = tldCycleSwitcher.attr('data-lang-years'),
                                 registerPeriod = "";
                             tldCycleSwitcher.empty();    
+                            tldCycleSwitcherPrice.removeClass('btn-readonly');
+                           
                             Object.entries(pricing).forEach(entry => {
                                 const [key, value] = entry;
                                 if (key > 1){
@@ -1823,7 +1835,7 @@ jQuery(document).ready(function () {
                                 tldCycleSwitcher.append(option);
                             });
                             let text = tldCycleSwitcherPrice.find('.btn-text');
-                            if (presetPeriod){
+                            if (presetPeriod && (!freeProductDomainArray || (freeProductDomainArray && !freeProductDomainArray.includes('.'+domain.tld)))){
                                 if (presetPeriod > 1){
                                     registerPeriod = '<small>/' + presetPeriod + langYears + '</small>';
                                 }
@@ -1861,9 +1873,15 @@ jQuery(document).ready(function () {
                                     registerPeriod = '<small>/' + 1 + langYear + '</small>';
                                 }
                                 tldCycleSwitcher.attr('data-value', firstAvaliablePeriod);
-                                text.html(pricing[Object.keys(pricing)[0]].register + registerPeriod);
+                                
+                                if (freeProductDomainArray && freeProductDomainArray.includes('.'+domain.tld)){
+                                    tldCycleSwitcherPrice.addClass('btn-readonly');
+                                    text.html(currentPrice);
+                                }
+                                else {
+                                    text.html(currentPrice + registerPeriod);
+                                }
                             }
-                            
                         }
                         
                         if (typeof isAutomaticAddToCart !== 'undefined' && isAutomaticAddToCart !== false){
@@ -1983,18 +2001,24 @@ jQuery(document).ready(function () {
                         if (domain.domainName !== domain.idnDomainName && idnLanguage.hasClass('hidden')) {
                             idnLanguage.removeClass('hidden');
                         }
+                        var currentPrice = pricing[Object.keys(pricing)[0]].register;
+                        if (freeProductDomainArray && freeProductDomainArray.includes('.'+domain.tld)){                 
+                            currentPrice = '<span>' + freePriceFormat + '<span class="line-through text-lighter m-l-1x">'+currentPrice+'</span></span>';
+                        } 
                         result
-                            .find('span.available').html(pricing[Object.keys(pricing)[0]].register).removeClass('hidden').end()
+                            .find('.spotlight-footer_price').html(currentPrice).removeClass('hidden').end()
                             .find('button.btn-add-to-cart')
                             .attr('data-domain', domain.domainName)
                             .removeClass('hidden');
                         result.find('.btn-loading').addClass('hidden');    
                         result.find('button.btn-remove-domain').attr('data-domain', domain.domainName);    
-                        if (tldCycleSwitcher.length){
+                        if (tldCycleSwitcher.length && (!freeProductDomainArray || (freeProductDomainArray && !freeProductDomainArray.includes('.'+domain.tld)))){
                             let langYear = tldCycleSwitcher.attr('data-lang-year'),
                                 langYears = tldCycleSwitcher.attr('data-lang-years'),
                                 registerPeriod = "";
-                            tldCycleSwitcher.prop('disabled', false);    
+                            tldCycleSwitcher.prop('disabled', false);  
+                            tldCycleSwitcher.parent().removeClass('hidden');
+                            tldCycleSwitcher.parent().parent().find('.spotlight-footer_price').remove();
                             tldCycleSwitcher.empty();    
                             Object.entries(pricing).forEach(entry => {
                                 const [key, value] = entry;
@@ -2007,7 +2031,7 @@ jQuery(document).ready(function () {
                                 let option = `<option value="${key}">${value['register']}${registerPeriod}</option>`;
                                 tldCycleSwitcher.append(option);
                             });
-                            if (presetPeriod){
+                            if (presetPeriod && (!freeProductDomainArray || (freeProductDomainArray && !freeProductDomainArray.includes('.'+domain.tld)))){
                                 var periodExists = tldCycleSwitcher.find('option[value='+presetPeriod+']');
                                 if (periodExists.length){
                                     tldCycleSwitcher.val(presetPeriod);
@@ -2022,7 +2046,12 @@ jQuery(document).ready(function () {
                                     }
                                 }
                             }
-                        } 
+                        } else if (tldCycleSwitcher.length && freeProductDomainArray && freeProductDomainArray.includes('.'+domain.tld)) {
+                            tldCycleSwitcher.parent().addClass('hidden');
+                            tldCycleSwitcher.parent().parent().find('.spotlight-footer_price').remove();
+                            let container = `<span class="spotlight-footer_price spotlight-footer_price-bordered">${currentPrice}</span>`;
+                            tldCycleSwitcher.parent().parent().prepend(container);
+                        }
 
                     } else {
                         if (typeof pricing === 'string') {
@@ -2113,15 +2142,20 @@ jQuery(document).ready(function () {
                         newSuggestion.remove();
                     }
                 } else {
+                    var currentPrice = pricing[Object.keys(pricing)[0]].register;
+                    if (freeProductDomainArray && freeProductDomainArray.includes('.'+domain.tld)){            
+                        currentPrice = '<span>' + freePriceFormat + '<span class="line-through text-lighter m-l-1x">'+currentPrice+'</span></span>';
+                    }
                     newSuggestion.find('button.btn-add-to-cart').attr('data-domain', domain.domainName).end()
-                        .find('span.price').html(pricing[Object.keys(pricing)[0]].register).end();
+                        .find('span.price').html(currentPrice).end();
                     newSuggestion.find('button.btn-remove-domain').attr('data-domain', domain.domainName);
                     newSuggestion.find('button.btn-remove-domain').tooltip('enable'); 
-                    if (tldCycleSwitcher.length){
+                    if (tldCycleSwitcher.length && (!freeProductDomainArray || (freeProductDomainArray && !freeProductDomainArray.includes('.'+domain.tld)))){
                         let langYear = tldCycleSwitcher.attr('data-lang-year'),
                             langYears = tldCycleSwitcher.attr('data-lang-years'),
                             registerPeriod = "";
-                            
+                        tldCycleSwitcher.removeClass('hidden');
+                        tldCycleSwitcher.parent().find('actions-control').remove();                        
                         Object.entries(pricing).forEach(entry => {
                             const [key, value] = entry;
                             if (key > 1){
@@ -2148,7 +2182,12 @@ jQuery(document).ready(function () {
                                 }
                             }
                         }
-                    }  
+                    } else if (tldCycleSwitcher.length && freeProductDomainArray && freeProductDomainArray.includes('.'+domain.tld)) {
+                        tldCycleSwitcher.addClass('hidden');
+                        tldCycleSwitcher.parent().find('actions-control').remove();         
+                        let container = `<span class="actions-control form-control input-sm">${currentPrice}</span>`;
+                        tldCycleSwitcher.parent().prepend(container);
+                    }
                 }
                 if (suggestionCount <= 10) {
                     newSuggestion.removeClass('hidden');
@@ -3316,10 +3355,10 @@ jQuery(document).ready(function () {
             ).done(function (data) {
                 self.find('span.to-add').hide();
                 self.find('.loader').css("display", "flex").show();
-                console.log('done');
+                //console.log('done');
                 if (data.result === 'added') {
-                    console.log('added');
-                    console.log(self.closest('.panel').find('.btn-remove-renewal'));
+                    //console.log('added');
+                    //console.log(self.closest('.panel').find('.btn-remove-renewal'));
                     setTimeout(function () {
                         self.find('.loader').hide().end().find('span.added').css("display", "flex");
                         self.closest('.panel').addClass('border-primary domain-renewal-added');

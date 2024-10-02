@@ -1,4 +1,4 @@
-    
+
     {include file="$template/includes/common/layouts-vars.tpl"}
     {if (
             !isset($skipMainBody) || !$skipMainBody
@@ -35,7 +35,7 @@
                 <div class="container">
                     <div class="footer-company">
                         <div class="footer-company-intro">
-                            {include file="$template/includes/common/logo.tpl" customClass="footer-company-logo" ignoreMobileVersion="true" footerLogo=true}  
+                            {include file="$template/includes/common/logo.tpl" customClass="footer-company-logo" ignoreMobileVersion="true" footerLogo=true}
                             <p class="footer-company-desc">{$rslang->trans('footer_extended.footer_desc')}</p>
                         </div>
                         {if $rsFooter.social}
@@ -100,19 +100,19 @@
                                             <a class="footer-title {$footerLink.custom_classes}" href="{$footerLink.url}" {if isset($footerLink.target_blank) && $footerLink.target_blank}target="_blank"{/if}>
                                                 {if $footerLink.icon}
                                                     <i class="{$footerLink.icon}"></i>
-                                                {elseif $footerLink.predefined_icon}  
+                                                {elseif $footerLink.predefined_icon}
                                                     {$footerLink.predefined_icon}
                                                 {elseif isset($footerLink.media) && $footerLink.media}
                                                     {$footerLink.media}
                                                 {/if}
                                                 {if $footerLink.name}<span>{$footerLink.name}</span>{/if}
-                                            </a> 
+                                            </a>
                                         {/if}
                                     </div>
                                 {/foreach}
                             </div>
                         </div>
-                    {/if}  
+                    {/if}
                 </div>
             </div>
             {/if}
@@ -154,12 +154,12 @@
             </div>
         </div>
     {/if}
-</div> {* close app main *}    
-    {if $RSThemes.addonSettings.show_cookie_box == 'displayed'} 
+</div> {* close app main *}
+    {if $RSThemes.addonSettings.show_cookie_box == 'displayed'}
         <div class="cookie-bar cookie-bar--{$RSThemes.addonSettings.cookie_box_position} {if $RSThemes.addonSettings.cookie_box_position == 'bottom'}container{/if}" data-cookie data-cookie-name="cookie_bar" data-cookie-exp-time="365" data-delay="2000">
             <div class="cookie-bar__content">
                 <div class="cookie-bar__icon">
-                    {include file="$template/includes/common/svg-icon.tpl" icon="cookie_bites"}  
+                    {include file="$template/includes/common/svg-icon.tpl" icon="cookie_bites"}
                 </div>
                 <div class="cookie-bar__desc">
                     {if empty($RSThemes.addonSettings.cookie_box_message[$activeLocale.language])}

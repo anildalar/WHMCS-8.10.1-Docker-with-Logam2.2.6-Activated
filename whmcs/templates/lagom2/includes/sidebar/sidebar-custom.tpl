@@ -67,9 +67,12 @@
                     <i class="ls ls-bank-note"></i> {$LANG.affiliatesrequestwithdrawal}
                 </button>            
                 {else}
-                <a href="{$smarty.server.PHP_SELF}?action=withdrawrequest" class="btn btn-primary-faded btn-block {if !$withdrawlevel || $withdrawrequestsent}disabled" disabled="disabled"{/if}>
-                    <i class="ls ls-bank-note"></i> {$LANG.affiliatesrequestwithdrawal}
-                </a>
+                <form method="POST" action="{$smarty.server.PHP_SELF}">
+                    <input type="hidden" name="action" value="withdrawrequest" />
+                    <button type="submit" href="{$smarty.server.PHP_SELF}?action=withdrawrequest" class="btn btn-primary-faded btn-block {if !$withdrawlevel || $withdrawrequestsent}disabled" disabled="disabled"{/if}>
+                        <i class="ls ls-bank-note"></i> {$LANG.affiliatesrequestwithdrawal}
+                    </button>
+                </form>
                 {/if}
             </div>
         </div>

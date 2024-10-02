@@ -263,7 +263,7 @@
                                         {if $configoption.optiontype eq 1 || $configoption.optiontype eq 2}	
                                             <select name="configoption[{$configoption.id}]" class="form-control">
                                                 {foreach key=num item=option from=$configoption.options}
-                                                    {if $option.selected}
+                                                    {if !empty($option.selected)}
                                                         <option value="{$option.id}" selected>{$LANG.upgradenochange}</option>
                                                     {else}
                                                         <option value="{$option.id}">

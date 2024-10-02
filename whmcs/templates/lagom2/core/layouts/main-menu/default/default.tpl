@@ -39,7 +39,7 @@
 {/if}
 {include file="$template/includes/network-issues-notifications.tpl"}
 <div class="app-main {if $isOnePageOrder}app-main-order{/if}">
-    {if $pageType != "website" && $activeDisplay != "CMS"}
+    {if $pageType != "website"}
         {include file="$template/includes/validateuser.tpl"}
         {include file="$template/includes/verifyemail.tpl"}
     {/if}

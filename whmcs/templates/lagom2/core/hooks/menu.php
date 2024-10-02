@@ -999,7 +999,7 @@ function generateRsMenu($navbar, $menu, $language, $layout, $vars, $navbarType) 
                         $navbar
                             ->getChild($parentName)
                             ->addChild("Alert_{$navigationOffset}", [
-                                'bodyHtml' => '<li class="none"><div class="none-icon">'.file_get_contents('templates/'.$vars['template'].'/assets/svg-icon/notification.tpl').'</div><span class="text-light">'.Lang::trans('notificationsnone', [], null, $language).'</span></li>'
+                                'bodyHtml' => '<li class="none"><div class="none-icon">'.file_get_contents('templates/'.$vars['template'].'/assets/svg-icon/notification.tpl').'</div><span class="text-light">'.Lang::trans('notificationsnone').'</span></li>'
                             ]);
                     }
                 }

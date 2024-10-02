@@ -12,7 +12,7 @@
             {$groupname}
         {else}
             {$displayTitle}
-        {/if} - {$companyname}
+        {/if} {if $templatefile == "knowledgebasecat" && $catname}- {$catname} {/if}{if $templatefile == "knowledgebasecat" && $tag}- {$tag} {/if}{if $templatefile == "knowledgebasecat" && $catname}- {$catname} {/if}{if $templatefile == "announcements" && $view}- {$view} {/if}- {$companyname}
     </title>
     {if $templatefile == "knowledgebasearticle" || $templatefile == "viewannouncement" || $templatefile == "knowledgebasecat"}
         <meta name="description" content="{if $templatefile == "viewannouncement"}{$summary|replace:'"':''|strip:" "|truncate:155:"..."}{elseif $templatefile == "knowledgebasearticle"}{$kbarticle.text|strip_tags|replace:'"':''|strip:" "|truncate:155:"..."}{elseif $templatefile == "knowledgebasecat"}{$catname|strip_tags|replace:'"':''|strip:" "|truncate:155:"..."}{/if}">
@@ -44,14 +44,12 @@
     {/if}
     {if isset($pageSeo['enabled']) && $pageSeo['enabled']}
         {if isset($pageSeo['description'][$language])}<meta name="description" content="{$pageSeo['description'][$language]}">{/if}
-        {if isset($activeDisplay) && $activeDisplay == 'CMS'}
-            <meta name="robots" content="{if $pageSeo['robots'] == 0}noindex nofollow{else}index follow{/if}">
-        {/if}
-        <meta name="og:type" content="{if $templatefile == 'homepage'}website{else}article{/if}">
-        <meta name="og:title" content="{if isset($pageSeo['title'][$language])}{$pageSeo['title'][$language]}{else}{$displayTitle}{/if}">
-        {if isset($pageSeo['description'][$language])}<meta name="og:description" content="{$pageSeo['description'][$language]}">{/if}
+        <meta name="robots" content="{if $pageSeo['robots'] == 0}noindex nofollow{else}index follow{/if}">
+        <meta property="og:type" content="{if $templatefile == 'homepage'}website{else}article{/if}">
+        <meta property="og:title" content="{if isset($pageSeo['title'][$language])}{$pageSeo['title'][$language]}{else}{$displayTitle}{/if} - {$companyname}">
+        {if isset($pageSeo['description'][$language])}<meta property="og:description" content="{$pageSeo['description'][$language]}">{/if}
         {if isset($pageSeo['image'])}<meta property="og:image" content="{$systemurl}templates/{$template}/assets/img/page-manager/{$pageSeo['image']}">{/if}
-        <meta name="og:url" content="{$systemurl}{$smarty.server.REQUEST_URI|ltrim:'/'}">
+        <meta property="og:url" content="{$systemurl}{$smarty.server.REQUEST_URI|ltrim:'/'}">
         <meta name="twitter:title" content="{if isset($pageSeo['title'][$language])}{$pageSeo['title'][$language]}{else}{$displayTitle}{/if}">
         {if isset($pageSeo['description'][$language])}<meta name="twitter:description" content="{$pageSeo['description'][$language]}">{/if}
         {if isset($pageSeo['image'])}<meta property="twitter:image" content="{$systemurl}templates/{$template}/assets/img/page-manager/{$pageSeo['image']}">{/if}

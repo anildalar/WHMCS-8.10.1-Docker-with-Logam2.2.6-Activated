@@ -19674,7 +19674,7 @@ function () {
 });
 
 /**
- * reCaptcha module
+ * reCaptcha module - used for captcha apis compatible with the google recaptcha api
  *
  * @copyright Copyright (c) WHMCS Limited 2005-2020
  * @license http://www.whmcs.com/license/ WHMCS Eula
@@ -19699,14 +19699,24 @@ var recaptchaLoadComplete = false,
                 recaptchaForms = jQuery(".btn-recaptcha").parents('form'),
                 isInvisible = false;
             recaptchaForms.each(function (i, el){
-                if (typeof recaptchaSiteKey === 'undefined') {
-                    console.log('Recaptcha site key not defined');
+                if (typeof recaptcha.siteKey === 'undefined') {
+                    console.error('Recaptcha site key not defined');
+                    return;
+                }
+                if (typeof recaptcha.libUrl === 'undefined') {
+                    console.error('Recaptcha client js url not defined');
+                    return;
+                }
+                if (typeof recaptcha.apiObject === 'undefined') {
+                    console.error('Recaptcha client js api object name not defined');
                     return;
                 }
                 recaptchaCount += 1;
                 var frm = jQuery(el),
                     btnRecaptcha = frm.find(".btn-recaptcha"),
-                    required = (typeof requiredText !== 'undefined') ? requiredText : 'Required',
+                    required = (typeof recaptcha.requiredText !== 'undefined')
+                        ? recaptcha.requiredText
+                        : 'Required',
                     recaptchaId = 'divDynamicRecaptcha' + recaptchaCount;
 
                 isInvisible = btnRecaptcha.hasClass('btn-recaptcha-invisible')
@@ -19733,16 +19743,6 @@ var recaptchaLoadComplete = false,
                         .hide();
                 }
 
-
-                // alter form to work around JS behavior on .submit() when there
-                // there is an input with the name 'submit'
-                var btnSubmit = frm.find("input[name='submit']");
-                if (btnSubmit.length) {
-                    var action = frm.prop('action');
-                    frm.prop('action', action + '&submit=1');
-                    btnSubmit.remove();
-                }
-
                 // make callback for grecaptcha to invoke after
                 // injecting token & make it known via data-callback
                 var funcName = recaptchaId + 'Callback';
@@ -19759,9 +19759,9 @@ var recaptchaLoadComplete = false,
                     recaptchaType = 'invisible';
                     frm.on('submit.recaptcha', function (event) {
                         var recaptchaId = frm.find('.g-recaptcha').data('recaptcha-id');
-                        if (!grecaptcha.getResponse(recaptchaId).trim()) {
+                        if (!window[recaptcha.apiObject].getResponse(recaptchaId).trim()) {
                             event.preventDefault();
-                            grecaptcha.execute(recaptchaId);
+                            window[recaptcha.apiObject].execute(recaptchaId);
                             recaptchaValidationComplete = false;
                         } else {
                             recaptchaValidationComplete = true;
@@ -19789,7 +19789,7 @@ var recaptchaLoadComplete = false,
                     var recaptchaId = grecaptcha.render(
                         el,
                         {
-                            sitekey: recaptchaSiteKey,
+                            sitekey: recaptcha.siteKey,
                             size: (btn.hasClass('btn-recaptcha-invisible')) ? 'invisible' : 'normal',
                             callback: idToUse + 'Callback'
                         }
@@ -19798,14 +19798,48 @@ var recaptchaLoadComplete = false,
                 });
             }
 
-            // fetch/invoke the grecaptcha lib
+            // fetch/invoke the remote library
             if (recaptchaForms.length) {
-                var gUrl = "https://www.google.com/recaptcha/api.js?onload=recaptchaLoadCallback&render=explicit";
-                jQuery.getScript(gUrl, function () {
+                    jQuery.getScript(recaptcha.libUrl, function () {
                     for(var i = postLoad.length - 1; i >= 0 ; i--){
                         postLoad[i]();
                     }
                 });
+            }
+            
+            // captcha overlay badge
+            let captchaOverlayBadge = jQuery('.captcha-overlay-badge'),
+                captchaOverlayPopup = jQuery('.captcha-overlay-popup');
+            if (recaptchaForms.length && captchaOverlayBadge.length) {
+                captchaOverlayBadge.show();
+                if (captchaOverlayPopup.length) {
+                    let captchaOverlayTimer;
+                    function captchaPopupHide() {
+                        captchaOverlayPopup.hide();
+                    }
+                    function debounce(func, delay) {
+                        return function() {
+                            const context = this;
+                            const args = arguments;
+                            clearTimeout(captchaOverlayTimer);
+                            captchaOverlayTimer = setTimeout(function() {
+                                func.apply(context, args);
+                            }, delay);
+                        };
+                    }
+                    const debouncedCaptchaPopupHide = debounce(captchaPopupHide, 3000);
+                    captchaOverlayBadge.bind('mouseenter', function() {
+                        captchaOverlayPopup.show();
+                        clearTimeout(captchaOverlayTimer);
+                    });
+                    captchaOverlayBadge.bind('mouseleave', debouncedCaptchaPopupHide);
+                    captchaOverlayBadge.bind('touchstart', function() {
+                        captchaOverlayPopup.show();
+                        clearTimeout(captchaOverlayTimer);
+                        captchaOverlayTimer = setTimeout(captchaPopupHide, 3000);
+                    });
+
+                }
             }
             recaptchaLoadComplete = true;
         };
@@ -20939,7 +20973,7 @@ function () {
         if (typeof window.whmcsBaseUrl === 'undefined') {
             console.log('Warning: The WHMCS Base URL definition is missing '
                 + 'from your active template. Please refer to '
-                + 'https://docs.whmcs.com/WHMCS_Base_URL_Template_Variable '
+                + 'https://go.whmcs.com/1961/base-url '
                 + 'for more information and details of how to resolve this '
                 + 'warning.');
             window.whmcsBaseUrl = this.autoDetermineBaseUrl();
@@ -44139,6 +44173,25 @@ v("intlTelInputUtils.numberType",{FIXED_LINE:0,MOBILE:1,FIXED_LINE_OR_MOBILE:2,T
  * @license https://www.whmcs.com/license/ WHMCS Eula
  */
 
+const telephoneSharedCountries = new Map([
+    ['um', 'us'], // United States Outlying Islands shares dialing code with the US
+    ['ic', 'es'], // Canary Islands shares dialing code with Spain
+    ['gs', 'fk'], // South Georgia and Sandwich Islands shares dialing code with Falkland Islands
+    ['aq', 'nf'], // Antarctica shares dialing code with Norfolk Island
+    ['tf', 're'], // French Southern Territories shares dialing code with Réunion (La Réunion)
+    ['hm', 'nf'], // Heard Island and Mcdonald Islands shares dialing code with Norfolk Island
+    ['an', 'bq'], // Netherlands Antilles shares dialing code with Caribbean Netherlands
+    ['pn', 'nz'], // Pitcairn shares dialing code with New Zealand
+]);
+
+function assertTelephoneCountry(country) {
+    country = country.toLowerCase();
+    if (telephoneSharedCountries.has(country)) {
+        return telephoneSharedCountries.get(country);
+    }
+    return country;
+}
+
 jQuery(document).ready(function() {
     if (typeof customCountryData !== "undefined") {
         var teleCountryData = $.fn['intlTelInput'].getCountryData();
@@ -44174,10 +44227,7 @@ jQuery(document).ready(function() {
             var countryInput = jQuery('[name^="country"], [name$="country"]'),
                 initialCountry = 'us';
             if (countryInput.length) {
-                initialCountry = countryInput.val().toLowerCase();
-                if (initialCountry === 'um') {
-                    initialCountry = 'us';
-                }
+                initialCountry = assertTelephoneCountry(countryInput.val());
             }
 
             phoneInput.each(function(){
@@ -44189,14 +44239,19 @@ jQuery(document).ready(function() {
                 jQuery(this).before(
                     '<input id="populatedCountryCode' + inputName + '" type="hidden" name="country-calling-code-' + inputName + '" value="" />'
                 );
-                thisInput.intlTelInput({
-                    preferredCountries: [initialCountry, "us", "gb"].filter(function(value, index, self) {
-                        return self.indexOf(value) === index;
-                    }),
-                    initialCountry: initialCountry,
-                    autoPlaceholder: 'polite', //always show the helper placeholder
-                    separateDialCode: true
-                });
+                try {
+                    thisInput.intlTelInput({
+                        preferredCountries: [initialCountry, "us", "gb"].filter(function (value, index, self) {
+                            return self.indexOf(value) === index;
+                        }),
+                        initialCountry: initialCountry,
+                        autoPlaceholder: 'polite', //always show the helper placeholder
+                        separateDialCode: true
+                    });
+                } catch (error) {
+                    console.log(error.message);
+                    return false;
+                }
 
                 thisInput.on('countrychange', function (e, countryData) {
                     jQuery('#populatedCountryCode' + inputName).val(countryData.dialCode);
@@ -44220,11 +44275,13 @@ jQuery(document).ready(function() {
 
                 countryInput.on('change', function() {
                     if (thisInput.val() === '') {
-                        var country = jQuery(this).val().toLowerCase();
-                        if (country === 'um') {
-                            country = 'us';
+                        var country = assertTelephoneCountry(jQuery(this).val());
+                        try {
+                            phoneInput.intlTelInput('setCountry', country);
+                        } catch (error) {
+                            console.log(error.message);
+                            return false;
                         }
-                        phoneInput.intlTelInput('setCountry', country);
                     }
                 });
 
@@ -44273,10 +44330,8 @@ jQuery(document).ready(function() {
                 inputName = inputName.replace('contactdetails[', '').replace('][Phone Number]', '').replace('][Phone]', '');
 
                 var countryInput = jQuery('[name$="' + inputName + '][Country]"]'),
-                    initialCountry = countryInput.val().toLowerCase();
-                if (initialCountry === 'um') {
-                    initialCountry = 'us';
-                }
+
+                initialCountry = assertTelephoneCountry(countryInput.val());
 
                 thisInput.before('<input id="populated' + inputName + 'CountryCode" class="' + inputName + 'customwhois" type="hidden" name="contactdetails[' + inputName + '][Phone Country Code]" value="" />');
                 
@@ -44311,10 +44366,7 @@ jQuery(document).ready(function() {
 
                 countryInput.on('blur', function() {
                     if (thisInput.val() === '') {
-                        var country = jQuery(this).val().toLowerCase();
-                        if (country === 'um') {
-                            country = 'us';
-                        }
+                        var country = assertTelephoneCountry(jQuery(this).val());
                         thisInput.intlTelInput('setCountry', country);
                     }
                 });

@@ -1,0 +1,10 @@
+{
+   "database":{
+      "tables":[
+         "HetznerVps_Logger",
+         "HetznerVps_ModuleSettings",
+		 "MG_HetznerVps_cron_task",
+		 "MG_HetznerVps_product_configuration"
+      ]
+   }
+}

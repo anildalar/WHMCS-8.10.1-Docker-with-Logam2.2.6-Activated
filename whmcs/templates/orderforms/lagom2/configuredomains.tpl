@@ -47,15 +47,21 @@
                                                 <div class="domain-info-title">{$domain.domain}</div>
                                                 {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
                                                     <div class="form-group">
-                                                        <select class="form-control input-sm" data-configuredomains-tld-cycle-switcher data-domain="{$domain.domain}">
-                                                            {foreach from=$tldPricing[$currentTld] key=$key item=$tldPrice}
-                                                                <option 
-                                                                    {if $domain.regperiod == $key}selected{/if} 
-                                                                    value="{$key}"
-                                                                >
-                                                                    {formatCurrency($tldPrice.register)} {$key}/{if $key == 1}{$rslang->trans('order.period.short.annually')}{else}{$rslang->trans('order.period.short.annually_multi')}{/if}
+                                                        <select class="form-control input-sm" data-configuredomains-tld-cycle-switcher data-domain="{$domain.domain}" {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true' && (isset($domain.freeDomainAssignedToProduct) && $domain.freeDomainAssignedToProduct)}disabled{/if}>
+                                                            {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true' && (isset($domain.freeDomainAssignedToProduct) && $domain.freeDomainAssignedToProduct)}  
+                                                                <option value="1" selected>
+                                                                    {formatCurrency('0.00')}
                                                                 </option>
-                                                            {/foreach}
+                                                            {else}
+                                                                {foreach from=$tldPricing[$currentTld] key=$key item=$tldPrice}
+                                                                    <option 
+                                                                        {if $domain.regperiod == $key}selected{/if} 
+                                                                        value="{$key}"
+                                                                    >
+                                                                        {formatCurrency($tldPrice.register)} {$key}/{if $key == 1}{$rslang->trans('order.period.short.annually')}{else}{$rslang->trans('order.period.short.annually_multi')}{/if}
+                                                                    </option>
+                                                                {/foreach}
+                                                            {/if}
                                                         </select> 
                                                     </div>
                                                 {/if}

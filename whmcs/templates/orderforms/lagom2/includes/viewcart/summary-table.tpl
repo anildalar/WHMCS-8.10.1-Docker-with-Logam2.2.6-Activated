@@ -217,8 +217,8 @@
                                                 <ul class="dropdown-menu" aria-labelledby="{$domain.domain}Pricing" data-domain-lang-year="{lang key='orderForm.year'}" data-domain-lang-years="{lang key='orderForm.years'}">
                                                     {foreach $domain.pricing as $years => $price}
                                                         <li>
-                                                            <a href="#" onclick="selectDomainPeriodInCart('{$domain.domain}', '{$price.register}', {$years}, '{if $years == 1}{lang key='orderForm.year'}{else}{lang key='orderForm.years'}{/if}');return false;">
-                                                                {$years} {if $years == 1}{lang key='orderForm.year'}{else}{lang key='orderForm.years'}{/if} @ {$price.register}
+                                                            <a href="#" onclick="selectDomainPeriodInCart('{$domain.domain}', '{if isset($price.register)}{$price.register}{else}{$price}{/if}', {$years}, '{if $years == 1}{lang key='orderForm.year'}{else}{lang key='orderForm.years'}{/if}');return false;">
+                                                                {$years} {if $years == 1}{lang key='orderForm.year'}{else}{lang key='orderForm.years'}{/if} @ {if isset($price.register)}{$price.register}{else}{$price}{/if}
                                                             </a>
                                                         </li>
                                                     {/foreach}

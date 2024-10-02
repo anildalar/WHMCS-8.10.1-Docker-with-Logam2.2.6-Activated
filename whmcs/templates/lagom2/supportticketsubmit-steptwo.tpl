@@ -136,6 +136,9 @@
                 </div>
             </div>
         </div>
+        {if isset($sensitiveDataEnabled) && $sensitiveDataEnabled}
+            {include file="$template/core/extensions/SensitiveDataManager/sensitive_data_ticket_open.tpl"}
+        {/if}
         <div class="section">
             <div class="section-header">
                 <h2 class="section-title">{$LANG.supportticketsticketattachments}</h2>
@@ -167,9 +170,6 @@
                 </div>
             </div>
         </div>
-        {if isset($sensitiveDataEnabled) && $sensitiveDataEnabled}
-            {include file="$template/core/extensions/SensitiveDataManager/sensitive_data_ticket_open.tpl"}
-        {/if}
         <div id="customFieldsContainer">
             {include file="$template/supportticketsubmit-customfields.tpl"}
         </div>

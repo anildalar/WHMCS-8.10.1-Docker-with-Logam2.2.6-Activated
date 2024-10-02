@@ -218,15 +218,36 @@ $(document).ready(function(){
     $('#modalAjax, #modalGeneratePassword').removeAttr('style');
     
 
-    $('[data-fixed-actions]').luScrollTo({
+    /*$('[data-fixed-actions]').luScrollTo({
         onScreen: function onScreen(element, target) {
             $(element).stop().removeClass('is-fixed');
         },
         outScreen: function outScreen(element, target) {
             $(element).stop().addClass('is-fixed');
         }
-    });
+    });*/
 
+
+
+    function checkScroll() {
+        const actionAnchorHref = document.querySelector('[data-fixed-actions]').getAttribute('href');
+        const actionAnchor = document.querySelector(`${actionAnchorHref}`);
+        const rect = actionAnchor.getBoundingClientRect();
+        const actionAnchorPosition = (rect.top + window.scrollY);
+        const scrollPosition = (window.scrollY + window.innerHeight);
+        const actionSticky = document.querySelector('[data-fixed-actions]');
+
+        if (scrollPosition > actionAnchorPosition) {
+            actionSticky.classList.remove('is-fixed');
+        } else {
+            actionSticky.classList.add('is-fixed');
+        }
+    }
+    
+    if (document.querySelector('[data-fixed-actions]') != null){
+        checkScroll();
+        window.addEventListener('scroll', checkScroll);
+    }
 
     if ($('#domain-filter').length && $('#tableDomainPricing').length){
         let selectize = $('#domain-filter')[0].selectize;
@@ -314,7 +335,7 @@ $(document).ready(function(){
 
 
     jQuery(document).on('click', '.dropdown-menu[data-service-id], div[menuitemname="Service Details Actions"] a[data-identifier][data-serviceid][data-active="1"]', function (event) {
-        console.log(event)
+        //console.log(event)
         var element = jQuery(event.target);
         if (element.is('.dropdown-menu')) {
             return false;

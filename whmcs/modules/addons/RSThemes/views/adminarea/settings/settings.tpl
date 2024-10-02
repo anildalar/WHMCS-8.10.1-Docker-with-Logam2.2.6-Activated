@@ -154,6 +154,9 @@
 
                                                     {* TLD Cycle Switcher*}
                                                     {include file="adminarea/settings/includes/tld-cycle-switcher.tpl"}
+
+                                                    {* Product Domain Free Price *}
+                                                    {include file="adminarea/settings/includes/product-domain-free-price.tpl"}
                                                 </div>   
                                             </div>
                                         </div>

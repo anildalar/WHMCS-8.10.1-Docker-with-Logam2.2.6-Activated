@@ -138,30 +138,28 @@
                                 </label>
                                 <div class="widget__body widget__body--seo {if !isset($page) || !$page->seo_enabled}is-hidden{/if}" data-seo-section>
                                     <div class="widget__content">
-                                        {if $template->getActiveDisplay()->name == 'CMS'}
-                                            <div class="form-group" data-form-counter>
-                                                <label class="form-label">
-                                                    Robots
-                                                    {if $tooltips['page']['settings']['seo']['robots']['content']}
-                                                        {if isset($tooltips['page']['settings']['seo']['robots']['url']) && $tooltips['page']['settings']['seo']['robots']['url'] != ""}
-                                                            {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$tooltips['page']['settings']['seo']['robots']['url']}' target='_blank'>Learn More</a>"}
-                                                        {else}
-                                                            {assign var="popoverFooter" value=false}
-                                                        {/if}
-                                                        {include 
-                                                            file="adminarea/includes/helpers/popover.tpl" 
-                                                            popoverClasses="notification__popover popover__top"
-                                                            popoverBody="{$tooltips['page']['settings']['seo']['robots']['content']}"
-                                                            popoverFooter="{$popoverFooter}"
-                                                        }
+                                        <div class="form-group" data-form-counter>
+                                            <label class="form-label">
+                                                Robots
+                                                {if $tooltips['page']['settings']['seo']['robots']['content']}
+                                                    {if isset($tooltips['page']['settings']['seo']['robots']['url']) && $tooltips['page']['settings']['seo']['robots']['url'] != ""}
+                                                        {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$tooltips['page']['settings']['seo']['robots']['url']}' target='_blank'>Learn More</a>"}
+                                                    {else}
+                                                        {assign var="popoverFooter" value=false}
                                                     {/if}
-                                                </label>
-                                                <select class="form-control selectized m-w-250" name="seoRobots" tabindex="-1">
-                                                    <option value="1" {if $page->seo_robots} selected{/if}>Allow</option>
-                                                    <option value="0" {if !$page->seo_robots} selected {/if}>Disallow</option>
-                                                </select>
-                                            </div>
-                                        {/if}
+                                                    {include 
+                                                        file="adminarea/includes/helpers/popover.tpl" 
+                                                        popoverClasses="notification__popover popover__top"
+                                                        popoverBody="{$tooltips['page']['settings']['seo']['robots']['content']}"
+                                                        popoverFooter="{$popoverFooter}"
+                                                    }
+                                                {/if}
+                                            </label>
+                                            <select class="form-control selectized m-w-250" name="seoRobots" tabindex="-1">
+                                                <option value="1" {if $page->seo_robots} selected{/if}>Allow</option>
+                                                <option value="0" {if !$page->seo_robots} selected {/if}>Disallow</option>
+                                            </select>
+                                        </div>
                                         <div class="form-group" data-form-counter>
                                             <label class="form-label">
                                                 Seo Title 

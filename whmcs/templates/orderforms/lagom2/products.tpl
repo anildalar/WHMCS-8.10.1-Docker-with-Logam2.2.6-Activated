@@ -52,7 +52,10 @@
                                                         {if $product.pricing.hasconfigoptions}
                                                             <div class="price-starting-from">{$LANG.startingfrom}</div>
                                                         {/if}
-                                                        
+                                                        {$showOneTime = false}
+                                                        {if isset($RSThemes['pages'][$templatefile]['config']['showOneTime']) && $RSThemes['pages'][$templatefile]['config']['showOneTime'] == "1"}
+                                                            {$showOneTime = true}
+                                                        {/if}
                                                         {if isset($RSThemes['addonSettings']['price_calculation']) && $RSThemes['addonSettings']['price_calculation'] == "lowest"}
                                                             {if $display_billing_monthly_price}
                                                                 {include file="$template/includes/common/price.tpl" 
@@ -96,6 +99,7 @@
                                                                     priceCycle=$productsPricing[$product.pid]->cycle
                                                                     priceType=$productsPricing[$product.pid]->billing
                                                                     priceSetupFeeLowest=$setupFeePrice
+                                                                    showOneTime=$showOneTime
                                                                 }
                                                                 
                                                             {/if} 
@@ -105,6 +109,7 @@
                                                                     price=$product.pricing.minprice.price 
                                                                     priceCycle=$product.pricing.minprice.cycle
                                                                     priceType=$product.pricing.type
+                                                                    showOneTime=$showOneTime
                                                                 }
                                                             {else}
                                                                 {include file="$template/includes/common/price.tpl" 
@@ -112,6 +117,7 @@
                                                                     priceCycle=$product.pricing.minprice.cycle
                                                                     priceType=$product.pricing.type
                                                                     priceSetupFee=$product.pricing.minprice.setupFee
+                                                                    showOneTime=$showOneTime
                                                                 }
                                                             {/if}    
                                                         {/if}

@@ -21,7 +21,21 @@
 
     {include file="orderforms/$carttpl/common.tpl"}
     <div class="main-content {if $mainContentClasses}{$mainContentClasses}{/if}">
-        <form id="frmProductDomain">
+        <form 
+            id="frmProductDomain"
+            {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true'}
+                action="{$WEB_ROOT}/cart.php" data-show-tld-cycle-switcher 
+                {if isset($smarty.get.period)}
+                    data-period="{$smarty.get.period}"
+                {/if}
+            {/if} 
+            {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true' && !isset($freeDomainNotAllowed) && !$freeDomainNotAllowed}
+                {if isset($productinfo.freedomaintlds) && is_array($productinfo.freedomaintlds) && !empty($productinfo.freedomaintlds) && $productinfo.freedomain != ""}
+                    data-product-domain-free-price='{$productinfo.freedomaintlds|json_encode}'
+                    data-whmcs-free-format="{formatCurrency(0)}"
+                {/if}
+            {/if}
+        >
             <input type="hidden" id="frmProductDomainPid" value="{$pid}" />
             <div class="panel panel-choose-domain panel-choose-domain-boxed">
                 <div class="panel-body panel-domain-option">
@@ -306,7 +320,18 @@
                 </div>
             </div>
             {if $freedomaintlds}
-                <p class="domain-suggestions-warning">* {$LANG.orderfreedomainregistration} {$LANG.orderfreedomainappliesto}: {$freedomaintlds}</p>
+                {if isset($RSThemes['addonSettings']['product_domain_free_price']) && $RSThemes['addonSettings']['product_domain_free_price'] == 'true'}
+                    <div class="message message-free-domain">
+                        <h4 class="message-title"><i class="lm lm-globe-alt"></i>{$rslang->trans('order.free_domain_terms.title')}</h4>                    
+                        <ul class="message-desc">
+                            {if is_array($productinfo.freedomaintlds) && !empty($productinfo.freedomaintlds)}<li><span>{$LANG.orderfreedomainappliesto|@ucfirst}:</span>{foreach $productinfo.freedomaintlds as $freeTld}<span class="label label-sm label-default">{$freeTld}</span>{/foreach}</li>{/if}
+                            {if is_array($productinfo.freedomainpaymentterms) && !empty($productinfo.freedomainpaymentterms)}<li><span>{$rslang->trans('order.free_domain_terms.available_for_cycles')}:</span>{foreach $productinfo.freedomainpaymentterms as $paymentterm}{$langkey = "orderpaymentterm`$paymentterm`"}<span class="label label-sm label-default">{$LANG.$langkey}</span>{/foreach}</li>{/if}
+                            <li>{$rslang->trans('order.free_domain_terms.one_type_product')}</li>
+                       </ul> 
+                    </div>
+                {else}
+                    <p class="domain-suggestions-warning">* {$LANG.orderfreedomainregistration} {$LANG.orderfreedomainappliesto}: {$freedomaintlds}</p>
+                {/if}
             {/if}
         </form>
         {* <div id="primaryLookupSearching" class="domain-lookup-loader message message-lg message-no-data hidden">
