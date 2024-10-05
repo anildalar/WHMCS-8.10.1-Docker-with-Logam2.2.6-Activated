@@ -1,3 +1,81 @@
+
+{if $product eq 'Ocean VoIP Agent Topup'}
+    
+    <div style="text-align: center;" style="padding:0px">
+        <img src="https://oceanpbx.club/templates/lagom2/assets/img/page-manager/humanoid.png" alt="AI Graphic" style="max-width: 100%; height: 300px; margin-bottom: 20px;">
+        <h4 style="font-family: Orbitron, sans-serif; font-weight: var(--font-weight-h4); line-height: var(--line-height-h4); color: var(--text-heading-color); margin-bottom: var(--headings-margin-bottom); font-size: var(--font-size-h4); text-align: center;">
+            Enter your Text or Upload Audio File<br/>Our AI will Call on this no and Play it
+        </h4>
+    </div>
+    
+    <div class="content">
+    <div class="row text-align-center justify-content-center">
+        <div class="col-3">
+        <label class="radio">
+            <div class="radio-styled checked">
+            <input type="radio" class="icheck-control" name="domainoption" value="text" id="selregister" checked="">
+            </div>
+            <span>Enter Text</span>
+        </label>
+        </div>
+        <div class="col-3">
+        <label class="radio">
+            <div class="radio-styled">
+            <input type="radio" class="icheck-control" name="domainoption" value="audio" id="seltransfer">
+            </div>
+            <span>Upload Audio</span>
+        </label>
+        </div>
+    </div>
+    </div>
+
+    <!-- Text input section -->
+    <div class="a_textbox orbitron row mb-3" id="textInputSection">
+        <div class="col-12 mb-2 p-0">
+            <textarea class="form-control ocean_textarea" rows="4" placeholder="Enter your Text"></textarea>
+        </div>
+        <div class="col-6 p-0 p-0 pe-1">
+            <select class="pe-2 ocean_language" id="languageDropdown" name="language">
+            <option value="" selected="">Select Language</option>
+            <!-- Add your language options here -->
+            </select>
+        </div>
+        <div class="col-6 p-0 ps-1">
+            <select class="ocean_accent" name="accent">
+            <option value="" selected="">Select Accent</option>
+            <!-- Add your accent options here -->
+            </select>
+        </div>
+    </div>
+
+    <!-- File input section (hidden by default) -->
+    <div class="row orbitron mb-3" id="fileInputSection" style="display: none;">
+        <div class="col-12 mb-2 p-0">
+            <input type="file" class="form-control ocean_file" id="audioFileInput" accept="audio/*">
+            <p class="error_class" id="fileErrorMessage" style="color: red; display: none;">Please upload a valid audio file (.mp3, .wav).</p>
+        </div>
+    </div>
+
+    <!-- Phone number input -->
+    <div class="row orbitron">
+    <div class="col-12 p-0">
+        <textarea class="form-control ocean_number_bulk" rows="4" placeholder="Enter numbers you want to call like -  44123446646,1245789952,445266478"></textarea>
+    </div>
+    </div>
+    <div id="newMessage" style="color: red; font-weight: bold;text-align:center; font-size: 17px;"></div>
+    <p class="error_class" style="color: red;"></p>
+    <!-- Call Button with Icon -->
+    <div class="text-center mt-4">
+        <button type="button" class="btn btn-primary btn-lg calling_btn_bulk" id="callButton">
+            <i class="fas fa-phone-alt"></i> Call Now
+        </button>
+    </div>
+    <br></br>
+
+
+
+
+{/if}
 {if isset($RSThemes['pages'][$templatefile]) && file_exists($RSThemes['pages'][$templatefile]['fullPath'])}
     {include file=$RSThemes['pages'][$templatefile]['fullPath']}
 {else}

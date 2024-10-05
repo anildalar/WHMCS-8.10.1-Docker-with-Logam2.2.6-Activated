@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 05:37:11
+/* Smarty version 3.1.48, created on 2024-10-05 09:03:50
   from '/var/www/html/templates/lagom2/clientareaproductdetails.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fcdc075e21c6_24255903',
+  'unifunc' => 'content_670100f631f612_10485150',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '984fedfdf1248f97c9e080684c832ec5775d02a6' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareaproductdetails.tpl',
-      1 => 1726063634,
+      1 => 1728119023,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,87 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fcdc075e21c6_24255903 (Smarty_Internal_Template $_smarty_tpl) {
+function content_670100f631f612_10485150 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
+?>
+
+<?php if ($_smarty_tpl->tpl_vars['product']->value == 'Ocean VoIP Agent Topup') {?>
+    
+    <div style="text-align: center;" style="padding:0px">
+        <img src="https://oceanpbx.club/templates/lagom2/assets/img/page-manager/humanoid.png" alt="AI Graphic" style="max-width: 100%; height: 300px; margin-bottom: 20px;">
+        <h4 style="font-family: Orbitron, sans-serif; font-weight: var(--font-weight-h4); line-height: var(--line-height-h4); color: var(--text-heading-color); margin-bottom: var(--headings-margin-bottom); font-size: var(--font-size-h4); text-align: center;">
+            Enter your Text or Upload Audio File<br/>Our AI will Call on this no and Play it
+        </h4>
+    </div>
+    
+    <div class="content">
+    <div class="row text-align-center justify-content-center">
+        <div class="col-3">
+        <label class="radio">
+            <div class="radio-styled checked">
+            <input type="radio" class="icheck-control" name="domainoption" value="text" id="selregister" checked="">
+            </div>
+            <span>Enter Text</span>
+        </label>
+        </div>
+        <div class="col-3">
+        <label class="radio">
+            <div class="radio-styled">
+            <input type="radio" class="icheck-control" name="domainoption" value="audio" id="seltransfer">
+            </div>
+            <span>Upload Audio</span>
+        </label>
+        </div>
+    </div>
+    </div>
+
+    <!-- Text input section -->
+    <div class="a_textbox orbitron row mb-3" id="textInputSection">
+        <div class="col-12 mb-2 p-0">
+            <textarea class="form-control ocean_textarea" rows="4" placeholder="Enter your Text"></textarea>
+        </div>
+        <div class="col-6 p-0 p-0 pe-1">
+            <select class="pe-2 ocean_language" id="languageDropdown" name="language">
+            <option value="" selected="">Select Language</option>
+            <!-- Add your language options here -->
+            </select>
+        </div>
+        <div class="col-6 p-0 ps-1">
+            <select class="ocean_accent" name="accent">
+            <option value="" selected="">Select Accent</option>
+            <!-- Add your accent options here -->
+            </select>
+        </div>
+    </div>
+
+    <!-- File input section (hidden by default) -->
+    <div class="row orbitron mb-3" id="fileInputSection" style="display: none;">
+        <div class="col-12 mb-2 p-0">
+            <input type="file" class="form-control ocean_file" id="audioFileInput" accept="audio/*">
+            <p class="error_class" id="fileErrorMessage" style="color: red; display: none;">Please upload a valid audio file (.mp3, .wav).</p>
+        </div>
+    </div>
+
+    <!-- Phone number input -->
+    <div class="row orbitron">
+    <div class="col-12 p-0">
+        <textarea class="form-control ocean_number_bulk" rows="4" placeholder="Enter numbers you want to call like -  44123446646,1245789952,445266478"></textarea>
+    </div>
+    </div>
+    <div id="newMessage" style="color: red; font-weight: bold;text-align:center; font-size: 17px;"></div>
+    <p class="error_class" style="color: red;"></p>
+    <!-- Call Button with Icon -->
+    <div class="text-center mt-4">
+        <button type="button" class="btn btn-primary btn-lg calling_btn_bulk" id="callButton">
+            <i class="fas fa-phone-alt"></i> Call Now
+        </button>
+    </div>
+    <br></br>
+
+
+
+
+<?php }
 if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
     <?php $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'], $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>

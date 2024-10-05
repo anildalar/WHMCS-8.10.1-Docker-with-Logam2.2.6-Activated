@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 06:57:46
+/* Smarty version 3.1.48, created on 2024-10-02 07:31:17
   from 'mailMessage:subject' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fceeea418909_37057370',
+  'unifunc' => 'content_66fcf6c5127e16_18441814',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3658c8804036d8e01de31155025e7476dc5a36b3' => 
     array (
       0 => 'mailMessage:subject',
-      1 => 1727852266,
+      1 => 1727854277,
       2 => 'mailMessage',
     ),
   ),
@@ -20,6 +20,6 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fceeea418909_37057370 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66fcf6c5127e16_18441814 (Smarty_Internal_Template $_smarty_tpl) {
 ?>New Dedicated Server Information<?php }
 }

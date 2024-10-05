@@ -1,0 +1,55 @@
+<?php
+/* Smarty version 3.1.48, created on 2024-10-05 05:40:24
+  from '/var/www/html/modules/addons/RSThemes/views/adminarea/ajax/lagommedium.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.48',
+  'unifunc' => 'content_6700d148736c16_95456378',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'f21dfbe581aafde46c78b7b2d41a312b54190e3c' => 
+    array (
+      0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/ajax/lagommedium.tpl',
+      1 => 1726757106,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:./../includes/media/no-data.tpl' => 1,
+  ),
+),false)) {
+function content_6700d148736c16_95456378 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_assignInScope('iconLocation', "./../../../assets/svg-icons");
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['icons']->value['lagomMedium'], 'lagomMediumIcon');
+$_smarty_tpl->tpl_vars['lagomMediumIcon']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['lagomMediumIcon']->value) {
+$_smarty_tpl->tpl_vars['lagomMediumIcon']->do_else = false;
+?>
+    <label class="media__item" data-toggle="lu-tooltip" data-title="<?php echo $_smarty_tpl->tpl_vars['lagomMediumIcon']->value['name'];?>
+" data-media-item="<?php echo $_smarty_tpl->tpl_vars['lagomMediumIcon']->value['name'];?>
+ <?php echo $_smarty_tpl->tpl_vars['lagomMediumIcon']->value['class'];
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['lagomMediumIcon']->value['searchTerms'], 'searchTerm');
+$_smarty_tpl->tpl_vars['searchTerm']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['searchTerm']->value) {
+$_smarty_tpl->tpl_vars['searchTerm']->do_else = false;
+?> <?php echo $_smarty_tpl->tpl_vars['searchTerm']->value;
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>">
+        <div class="media__item-icon">
+            <i class="<?php echo $_smarty_tpl->tpl_vars['lagomMediumIcon']->value['class'];?>
+"></i>
+        </div>
+        <input class="media__item-input lagom-icon" type="radio" name="item[font-icon]" value="<?php echo $_smarty_tpl->tpl_vars['lagomMediumIcon']->value['class'];?>
+">
+        <span class="media__item-border"></span>
+        <span class="media__item-label"></span>
+    </label>
+<?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);
+$_smarty_tpl->_subTemplateRender("file:./../includes/media/no-data.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

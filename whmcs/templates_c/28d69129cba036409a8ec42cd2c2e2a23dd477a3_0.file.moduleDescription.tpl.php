@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 06:59:07
+/* Smarty version 3.1.48, created on 2024-10-02 10:09:33
   from '/var/www/html/modules/servers/HetznerVps/templates/admin/ui/core/default/widget/others/moduleDescription.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fcef3b0ddf97_16696877',
+  'unifunc' => 'content_66fd1bddc75ce5_70203255',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fcef3b0ddf97_16696877 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66fd1bddc75ce5_70203255 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="lu-alert alert-<?php echo $_smarty_tpl->tpl_vars['rawObject']->value->getClasses();?>
 ">
     <?php if ($_smarty_tpl->tpl_vars['rawObject']->value->isRaw()) {?>

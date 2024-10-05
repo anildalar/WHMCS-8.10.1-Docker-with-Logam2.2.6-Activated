@@ -102,82 +102,106 @@ if ($action === 'AITEXTTOCALL') {
         $fileTmpPath = $audioFile['tmp_name'];
         $fileType = $audioFile['type'];
 
+        $whmcsRoot = __DIR__ . '/../../'; 
+        $uploadDir = $whmcsRoot . 'assets/webfonts/';;
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+        $timestamp = time(); 
+        $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION); 
+        $newFileName = "audio_{$timestamp}.$fileExtension"; 
+        $destinationPath = $uploadDir . $newFileName; 
 
-        // Example: Send uploaded file to a remote server via SCP
+        if (move_uploaded_file($fileTmpPath, $destinationPath)) {
+            
+            // File moved successfully, now call the Express API
+            $apiUrl = 'http://31.220.78.8:3000/upload';
 
-        // $remoteServerUser = 'admin'; // Remote server username
-        // $remoteServerHost = '31.220.78.8'; // Remote server hostname or IP
-        // $remoteServerPath = '/path/to/destination/folder/'; // Destination path on the remote server
-
-        // $localFilePath = $audioFile['tmp_name']; // Temporary local path of the uploaded file
-        // $destinationFileName = basename($fileName); // File name
-
-        // // Command to send the file via SCP
-        // $scpCommand = "scp $localFilePath $remoteServerUser@$remoteServerHost:$remoteServerPath$destinationFileName";
-
-
-        // $scpResult = shell_exec($scpCommand);
-
-        // if ($scpResult === null) {
-        if (true) {
-
-            // Prepare data for external API call
-            $apiUrl = 'https://pbx7.oceanpbx.club/apicall/index.php';
-            $apiToken = 'c5b30b648a53d6e57dc4d857dad26189';
-            $postData = [
-                "tocall" => $phone_number,
-                "message" => "AUDIO_CALL_OCEANGROUP", // Placeholder message for the audio call
-                "accent" => "custome", // You can include the file URL/path if needed by the API
-                "maxretires" => "30",
-                "callerid" => "898989898"
-            ];
-
-            // Initialize cURL session
+            // Initialize cURL
             $ch = curl_init();
-
+            
+            // Prepare the file for upload
+            $fileData = [
+                'file' => new CURLFile($destinationPath, $fileType, $newFileName)
+            ];
+            
             // Set cURL options
             curl_setopt($ch, CURLOPT_URL, $apiUrl);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                'Content-Type: application/json',
-                "token: $apiToken"
-            ]);
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+            curl_setopt($ch, CURLOPT_POST, true);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $fileData);
             
-            // Execute the API call
-            $apiResponse = curl_exec($ch);
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            // Execute cURL request
+            $response = curl_exec($ch);
             
-            // Check for errors in the API call
+            // Check for errors
             if (curl_errno($ch)) {
-                $errorMsg = curl_error($ch);
-                curl_close($ch);
-                echo json_encode(['result' => 'error', 'message' => 'API call failed: ' . $errorMsg]);
-                exit;
-            }
-            
-            // Close the cURL session
-            curl_close($ch);
-            
-            // Check the HTTP response code
-            if ($httpCode == 200) {
-                // Prepare the response for the client
-                $responseData = [
-                    'file_name' => $fileName,
-                    'phone_number' => $phone_number,
-                    'incoming_req_ip' => $clientIpAddress,
-                    'api_response' => json_decode($apiResponse, true)
-                ];
-                echo json_encode(['result' => 'success', 'data' => $responseData]);
+                $errorMessage = curl_error($ch);
+                echo "cURL Error: $errorMessage";
             } else {
-                // Handle the failure case for the external API
-                echo json_encode(['result' => 'error', 'message' => 'External API returned an error.', 'api_response' => $apiResponse]);
+                // remove file 
+                unlink($destinationPath);
+
+                
+                // Prepare data for external API call
+                $apiUrl = 'https://pbx7.oceanpbx.club/apicall/index.php';
+                $apiToken = 'c5b30b648a53d6e57dc4d857dad26189';
+                $postData = [
+                    "tocall" => $phone_number,
+                    "typeOfAudio" => "AUDIO_CALL_OCEANGROUP", // Placeholder message for the audio call
+                    "audioFilename" => "audio_{$timestamp}", // You can include the file URL/path if needed by the API
+                    "maxretires" => "30",
+                    "callerid" => "898989898"
+                ];
+    
+                // Initialize cURL session
+                $ch = curl_init();
+    
+                // Set cURL options
+                curl_setopt($ch, CURLOPT_URL, $apiUrl);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                    'Content-Type: application/json',
+                    "token: $apiToken"
+                ]);
+                curl_setopt($ch, CURLOPT_POST, 1);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                
+                // Execute the API call
+                $apiResponse = curl_exec($ch);
+                $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                
+                // Check for errors in the API call
+                if (curl_errno($ch)) {
+                    $errorMsg = curl_error($ch);
+                    curl_close($ch);
+                    echo json_encode(['result' => 'error', 'message' => 'API call failed: ' . $errorMsg]);
+                    exit;
+                }
+                
+                // Close the cURL session
+                curl_close($ch);
+                
+                // Check the HTTP response code
+                if ($httpCode == 200) {
+                    // Prepare the response for the client
+                    $responseData = [
+                        'file_name' => $newFileName,
+                        'phone_number' => $phone_number,
+                        'incoming_req_ip' => $clientIpAddress,
+                        'api_response' => json_decode($apiResponse, true)
+                    ];
+                    echo json_encode(['result' => 'success', 'data' => $responseData]);
+                } else {
+                    // Handle the failure case for the external API
+                    echo json_encode(['result' => 'error', 'message' => 'External API returned an error.', 'api_response' => $apiResponse]);
+                }
+               
             }
 
-        } else {
-            echo json_encode(['result' => 'error', 'message' => 'Failed to transfer the audio file via SCP.']);
-        }
+            curl_close($ch);
+           
+        }    
     } else {
         echo json_encode(['result' => 'error', 'message' => 'No file uploaded or file upload error.']);
     }

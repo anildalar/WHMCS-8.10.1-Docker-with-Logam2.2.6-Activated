@@ -18,7 +18,20 @@ if ($action == 'TableActionGet') {
             ->first();
 
         if ($existing) {
-            $response = ['result' => 'success', 'message' => 'IP exists', 'data' => $existing];
+            if ($existing->is_ip_allowed === 0) {
+                $response = [
+                    'result' => 'error',
+                    'message' => 'IP is blacklisted and not allowed',
+                    'data' => $existing
+                ];
+            } elseif ($existing->is_ip_allowed === 1) {
+                $response = [
+                    'result' => 'success',
+                    'message' => 'IP exists',
+                    'data' => $existing
+                ];
+            }
+            
         } else {
             // If IP doesn't exist
             $response = ['result' => 'error', 'message' => 'IP not found'];
@@ -41,12 +54,14 @@ if ($action == 'TableActionGet') {
             ->first();
 
         if (!$existing) {
-            // Insert the new IP address
-            Capsule::table('BlacklistIp_tbl')->insert(['ip' => $IpAdd]);
-
-            $response = ['result' => 'success', 'message' => 'IP added successfully'];
+            if($existing->is_ip_allowed === 1){
+                $response = ['result' => 'success', 'message' => 'Done'];
+            }else{
+                Capsule::table('BlacklistIp_tbl')->insert(['ip' => $IpAdd]);
+                $response = ['result' => 'success', 'message' => 'IP added successfully'];
+            }
         } else {
-            $response = ['result' => 'error', 'message' => 'IP already exists'];
+            $response = ['result' => 'success', 'message' => 'IP already exists With Whitlist'];
         }
 
         echo json_encode($response);

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 05:51:29
+/* Smarty version 3.1.48, created on 2024-10-02 10:10:06
   from '/var/www/html/modules/servers/HetznerVps/templates/admin/ui/core/default/widget/buttons/modalActionButtons/baseCancelButton.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fcdf6116b2f7_52394370',
+  'unifunc' => 'content_66fd1bfeccd3b5_91591337',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fcdf6116b2f7_52394370 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66fd1bfeccd3b5_91591337 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <button class="<?php echo $_smarty_tpl->tpl_vars['rawObject']->value->getClasses();?>

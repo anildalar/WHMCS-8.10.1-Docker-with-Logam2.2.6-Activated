@@ -1,4 +1,6 @@
+
 {if $modulecustombuttonresult}
+
     {if $modulecustombuttonresult == "success"}
         {include file="$template/includes/alert.tpl" type="success" msg=$LANG.moduleactionsuccess textcenter=true idname="alertModuleCustomButtonSuccess"}
     {else}

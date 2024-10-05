@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 05:51:29
+/* Smarty version 3.1.48, created on 2024-10-02 10:10:06
   from '/var/www/html/modules/servers/HetznerVps/templates/admin/ui/core/default/widget/modals/baseEditModal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fcdf61088ec7_11282658',
+  'unifunc' => 'content_66fd1bfeb942d2_54810986',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fcdf61088ec7_11282658 (Smarty_Internal_Template $_smarty_tpl) {
+function content_66fd1bfeb942d2_54810986 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="lu-modal show lu-modal--<?php echo $_smarty_tpl->tpl_vars['rawObject']->value->getModalSize();?>

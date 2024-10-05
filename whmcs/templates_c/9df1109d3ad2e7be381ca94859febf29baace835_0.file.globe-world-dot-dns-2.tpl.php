@@ -1,0 +1,29 @@
+<?php
+/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+  from '/var/www/html/templates/lagom2/assets/svg-icon/globe-world-dot-dns-2.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.48',
+  'unifunc' => 'content_6700d146e412c6_25546656',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '9df1109d3ad2e7be381ca94859febf29baace835' => 
+    array (
+      0 => '/var/www/html/templates/lagom2/assets/svg-icon/globe-world-dot-dns-2.tpl',
+      1 => 1725455020,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6700d146e412c6_25546656 (Smarty_Internal_Template $_smarty_tpl) {
+?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
+    <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M53.4 20.7c1.2.8 2.3 1.6 3.2 2.5m-14.5-6.9c1.4.3 2.7.6 3.9 1m-16-2h4m-16 2c1.3-.4 2.6-.8 3.9-1M7.4 23.2c.9-.9 2-1.7 3.2-2.5" />
+    <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 32c0 7.4 2.8 14.8 8.5 20.5C17.2 58.2 24.6 61 32 61s14.8-2.8 20.5-8.5C58.2 46.8 61 39.4 61 32M3 32c0-7.4 2.8-14.8 8.5-20.5C17.2 5.8 24.6 3 32 3s14.8 2.8 20.5 8.5C58.2 17.2 61 24.6 61 32M3 32c0 4.6 3.2 8.8 8.5 11.8 5.2 3 12.5 4.9 20.5 4.9s15.3-1.9 20.5-4.9c5.3-3 8.5-7.2 8.5-11.8" />
+    <path fill="var(--svg-icon-color-2)" stroke="var(--svg-icon-color-2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32 39a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" />
+</svg><?php }
+}

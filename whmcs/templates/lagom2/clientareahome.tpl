@@ -1,3 +1,4 @@
+
 {if isset($RSThemes['pages'][$templatefile]) && file_exists($RSThemes['pages'][$templatefile]['fullPath'])}
     {include file=$RSThemes['pages'][$templatefile]['fullPath']}
 {else}
@@ -6,6 +7,7 @@
             {assign var=clienthomealerts value=true}
         {/if}
     {/foreach}
+    
     {if $clienthomealerts && $RSThemes['pages']['clientareahome']['config']['hideDefaultAlerts'] != '1'}
         <div class="client-home-alerts alert-group">
             {foreach $panels as $item}
@@ -55,6 +57,7 @@
             {assign var="hasDashboardPrormo" value=true}
         {/if}
     {/foreach}
+    
     {if $promoSliderExtension && $promoBannerStatus eq '1'}
         {include file="$template/core/extensions/PromoBanners/promo-slide.tpl" setting="client-home"}
     {elseif $hasDashboardPrormo}
@@ -118,7 +121,240 @@
         </div>
         <div class="swiper-pagination"></div>
     </div>
+
+    {if $product == "Ocean VOIP PBX" && $item->isActive()}
+                <!-- Custom content for Ocean VOIP PBX if active -->
+                <div class="panel-body">
+                    <p>Ocean VOIP PBX is active and ready for use.</p>
+                    <!-- Add additional Ocean VOIP PBX specific content here -->
+                </div>
+            {else}
+                <p>Ocean VOIP PBX is Noactive and ready for use.</p>
+                <!-- Content for other items or Ocean VOIP PBX if not active -->
+            {/if}
+
+    <div class="table-container">
+        <div class="table-top">
+            <div class="d-flex">
+              <h5><b>Call Details</b></h5>
+            </div>
+        </div>
+        <div id="tableServicesList_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+            <div class="listtable">
+                <div id="tableServicesList_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tableServicesList"></label></div>
+                <table id="tableServicesList" class="table table-list dataTable no-footer dtr-inline" role="grid">
+                    <thead>
+                    <tr role="row">
+                        <th data-priority="1" class="sorting_asc" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Product/Service: activate to sort column descending" aria-sort="ascending"><button type="button" class="btn-table-collapse"></button>Caller<span class="sorting-arrows"></span></th>
+                        <th data-priority="5" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Receiver<span class="sorting-arrows"></span></th>
+                        <th data-priority="4" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Next Due Date: activate to sort column ascending">DateTime<span class="sorting-arrows"></span></th>
+                        <th data-priority="2" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr role="row" class="odd">
+                        <td class="dtr-control sorting_1" tabindex="0">
+                            <button type="button" class="btn-table-collapse"></button>
+                            <b>+45134587911</b>                                                             
+                        </td>
+                        <td class="text-nowrap" data-order="150.00">
+                            <b>+9789665151</b>    
+                        </td>
+                        <td>
+                            <span class="text-nowrap">
+                            <span class="hidden">
+                            2024-10-02
+                            </span>
+                            02/10/2024
+                            </span>
+                        </td>
+                        <td class="cell-action">
+                            <div class="dropdown">
+                                <a href="#" class="btn btn-icon dropdown-toggle" data-toggle="dropdown">
+                                <i class="lm lm-more"></i>
+                                </a>
+                                <ul class="dropdown-menu  pull-right" role="menu">
+                                <li>View Details
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr  role="row" class="even">
+                        <td class="dtr-control sorting_1" tabindex="0">
+                            <button type="button" class="btn-table-collapse"></button>
+                            <b>+4145484848</b>                                                            
+                        </td>
+                        <td class="text-nowrap" data-order="50.00">
+                           <b>+8451454848</b>
+                        </td>
+                        <td>
+                            <span class="text-nowrap">
+                            <span class="hidden">
+                            2024-10-02
+                            </span>
+                            02/10/2024
+                            </span>
+                        </td>
+                        <td class="cell-action">
+                            <div class="dropdown">
+                                <a href="#" class="btn btn-icon dropdown-toggle" data-toggle="dropdown">
+                                <i class="lm lm-more"></i>
+                                </a>
+                                <ul class="dropdown-menu  pull-right" role="menu">
+                                <li>View Details
+                                </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="dataTables_paginate  paging_simple_numbers" id="tableServicesList_paginate">
+                <ul class="pagination">
+                    <li class="paginate_button page-item previous disabled" id="tableServicesList_previous"><a href="#" aria-controls="tableServicesList" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                    <li class="paginate_button page-item active"><a href="#" aria-controls="tableServicesList" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                    <li class="paginate_button page-item next disabled" id="tableServicesList_next"><a href="#" aria-controls="tableServicesList" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
+                </ul>
+            </div>
+            <div class="dataTables_length" id="tableServicesList_length">
+                <label>
+                    Show 
+                    <select name="tableServicesList_length" aria-controls="tableServicesList" class="custom-select custom-select-sm form-control form-control-sm">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="-1">All</option>
+                    </select>
+                    entries
+                </label>
+            </div>
+        </div>
+        <div class="loader loader-table hidden" id="tableLoading">
+            <div class="spinner ">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+    </div>
+    <br></br>
+    <!-- Large Modal Structure -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document" style="width:1100px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsModalLabel">Call Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Table for displaying call details -->
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Caller</th>
+                                <th>Receiver</th>
+                                <th>Date</th>
+                                <th>Call Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="modalCaller">+451248752</td>
+                                <td id="modalReceiver">+84955425</td>
+                                <td id="modalDate">02/10/2024</td>
+                                <td id="modalDuration">1min</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                     <!-- Call Recorder Button and Playback -->
+                    <div class="call-recorder">
+                        <button id="playCallRecording" class="btn btn-primary">
+                            <i class="fa fa-play"></i> Play Call Recording
+                        </button>
+                        <audio id="callRecordingAudio" controls style="display: none; margin-top: 10px; width: 100%;">
+                            <source id="audioSource" src="" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+
+                    <!-- Call Transcript Section -->
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label for="callTranscript">Call Transcript</label>
+                        <textarea id="callTranscript" class="form-control" rows="6" placeholder="Call transcript will appear here..." readonly></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // Handle row click event
+            $('#tableServicesList tbody tr').click(function() {
+                // Get data from the clicked row
+                var caller = $(this).data('caller');
+                var receiver = $(this).data('receiver');
+                var date = $(this).data('date');
+                var time = $(this).data('time');
+                var duration = $(this).data('duration');
+                
+                // Set the data in the modal
+                $('#modalCaller').text(caller);
+                $('#modalReceiver').text(receiver);
+                $('#modalDate').text(date);
+                $('#modalTime').text(time);
+                $('#modalDuration').text(duration);
+                
+                // Show the modal
+                $('#detailsModal').modal('show');
+            });
+            $('#detailsModal').on('show.bs.modal', function (event) {
+                // Fetch the relevant data for the call
+                var caller = 'John Doe';
+                var receiver = 'Jane Smith';
+                var date = '2024-10-03';
+                var time = '14:35';
+                var duration = '5 mins';
+                var recordingUrl = 'path/to/recording.mp3'; // The URL to the call recording
+
+                // Construct the formatted transcript
+                var transcript = `Caller: Hi\n` +
+                                `Receiver: Hello\n` +
+                                `Caller: How are you?\n` +
+                                `Receiver: I'm fine, thank you!`;
+
+                // Update the modal content with fetched data
+                $('#modalCaller').text(caller);
+                $('#modalReceiver').text(receiver);
+                $('#modalDate').text(date);
+                $('#modalTime').text(time);
+                $('#modalDuration').text(duration);
+
+                // Set up the call recording
+                $('#audioSource').attr('src', recordingUrl);
+                $('#callRecordingAudio')[0].load();
+                $('#callRecordingAudio').show();
+
+                // Populate the call transcript with formatted text
+                $('#callTranscript').val(transcript);
+            });
+        });
+    </script>
     
+
+
+
+
+
+
     {foreach from=$addons_html item=addon_html key=k}
         {if !is_array($addon_html) && !$addon_html|strstr:"data-animation-content"}
             <div>{$addon_html}</div>

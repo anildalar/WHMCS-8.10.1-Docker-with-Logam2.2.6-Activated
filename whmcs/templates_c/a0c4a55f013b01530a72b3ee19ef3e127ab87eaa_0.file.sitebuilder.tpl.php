@@ -1,0 +1,32 @@
+<?php
+/* Smarty version 3.1.48, created on 2024-10-05 05:32:08
+  from '/var/www/html/templates/lagom2/assets/svg-icon/sitebuilder.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.48',
+  'unifunc' => 'content_6700cf58894382_82394530',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'a0c4a55f013b01530a72b3ee19ef3e127ab87eaa' => 
+    array (
+      0 => '/var/www/html/templates/lagom2/assets/svg-icon/sitebuilder.tpl',
+      1 => 1725455020,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6700cf58894382_82394530 (Smarty_Internal_Template $_smarty_tpl) {
+?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
+    <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M28.865 7.372a1 1 0 0 0-1.366-.364l-2.875 1.666a1 1 0 0 0 1.002 1.73l2.875-1.665a1 1 0 0 0 .364-1.367ZM20.24 12.37a1 1 0 0 0-1.366-.364l-5.75 3.331a1 1 0 0 0 1.002 1.73l5.75-3.33a1 1 0 0 0 .364-1.367Zm-11.5 6.663a1 1 0 0 0-1.366-.364l-2.875 1.666A1 1 0 0 0 4 21.2v3.788a1 1 0 1 0 2 0v-3.212L8.376 20.4a1 1 0 0 0 .364-1.366ZM5 31.563a1 1 0 0 0-1 1v7.575a1 1 0 1 0 2 0v-7.575a1 1 0 0 0-1-1Zm8.367 15.12A1 1 0 0 0 12 46.315l-1.875 1.08a1 1 0 0 0 .998 1.733l1.875-1.08a1 1 0 0 0 .368-1.365ZM5 46.713a1 1 0 0 0-1 1V51.5a1 1 0 0 0 1.499.867l1.875-1.08a1 1 0 0 0-.998-1.733L6 49.77v-2.058a1 1 0 0 0-1-1Z" clip-rule="evenodd" />
+    <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m22.093 6 7.322.98-3.05 6.729M47 17.7V6.2L13 25.9v30.3l10-5.758" />
+    <path fill="var(--svg-icon-color-2)" stroke="var(--svg-icon-color-2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 61.33 25 63l31-21.27L59 13l-3-1.67-34 19.6v30.4Z" />
+    <path fill="var(--svg-icon-color-1)" stroke="var(--svg-icon-color-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m25 63 34-19.6V13L25 32.6V63Z" />
+    <path fill="var(--svg-icon-color-4)" d="M38 36.8v4.17l-4.997 2.843v-4.044L38 36.8Zm0 9.2v1.867L36 49v-1.93L38 46Zm12-12.51v6.71l-8 4.6v-6.74l8-4.57Z" />
+    <path stroke="var(--svg-icon-color-4)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M38 36.8v4.17l-4.997 2.843v-4.044L38 36.8Zm0 9.2v1.867L36 49v-1.93L38 46Zm12-12.51v6.71l-8 4.6v-6.74l8-4.57Zm-22 .454L29.604 33m3.646-2.056L34.854 30m3.696-2.056L40.154 27" />
+</svg><?php }
+}
