@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-03 04:14:41
+/* Smarty version 3.1.48, created on 2024-10-08 10:52:50
   from '/var/www/html/modules/addons/AdvancedBilling/templates/admin/main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fe1a311ea328_55597017',
+  'unifunc' => 'content_67050f0281e094_93974359',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fe1a311ea328_55597017 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67050f0281e094_93974359 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="mg-wrapper body" data-target=".body" data-spy="scroll" data-twttr-rendered="true">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=all" rel="stylesheet" type="text/css"/> 
     <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['assetsURL']->value;?>

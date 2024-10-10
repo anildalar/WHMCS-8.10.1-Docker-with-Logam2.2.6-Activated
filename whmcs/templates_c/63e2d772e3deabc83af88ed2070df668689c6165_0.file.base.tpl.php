@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-03 04:14:41
+/* Smarty version 3.1.48, created on 2024-10-08 10:52:50
   from '/var/www/html/modules/addons/AdvancedBilling/templates/admin/pages/settings/extensions/base.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fe1a311b9757_19661025',
+  'unifunc' => 'content_67050f027ec368_81814036',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fe1a311b9757_19661025 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67050f027ec368_81814036 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel panel-primary">
     <div class="panel-body"><?php echo $_smarty_tpl->tpl_vars['MGLANG']->value->T('Each extension is configured per product, therefore you can use different sets of extensions according to your needs');?>
 .</div>

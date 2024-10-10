@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-04 06:19:46
+/* Smarty version 3.1.48, created on 2024-10-07 05:14:22
   from '/var/www/html/modules/servers/HetznerVps/app/UI/Home/Templates/pages/controlPanel.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ff89023632a4_04765401',
+  'unifunc' => 'content_67036e2e27ff66_16589547',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ff89023632a4_04765401 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67036e2e27ff66_16589547 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="h4 lu-m-b-3x lu-m-t-3x"><?php echo $_smarty_tpl->tpl_vars['MGLANG']->value->absoluteT('serverCA','home','manageHeader');?>
 </div>
 <div class="lu-tiles lu-row lu-row--eq-height">

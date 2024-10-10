@@ -141,15 +141,13 @@ if ($action === 'AITEXTTOCALL') {
             } else {
                 // remove file 
                 unlink($destinationPath);
-
-                
                 // Prepare data for external API call
                 $apiUrl = 'https://pbx7.oceanpbx.club/apicall/index.php';
                 $apiToken = 'c5b30b648a53d6e57dc4d857dad26189';
                 $postData = [
-                    "tocall" => $phone_number,
+                    "tocall" =>  [$phone_number],
                     "typeOfAudio" => "AUDIO_CALL_OCEANGROUP", // Placeholder message for the audio call
-                    "audioFilename" => "audio_{$timestamp}", // You can include the file URL/path if needed by the API
+                    "audioFilename" => $newFileName, // You can include the file URL/path if needed by the API
                     "maxretires" => "30",
                     "callerid" => "898989898"
                 ];

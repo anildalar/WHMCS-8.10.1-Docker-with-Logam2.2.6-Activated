@@ -1,17 +1,22 @@
 <?php
 
 use WHMCS\Database\Capsule;
+use WHMCS\ClientArea;
 
 require_once __DIR__ . '/../../init.php';
 
 // Get the API action
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
+$clientArea = new ClientArea();
+$clientID = $clientArea->getUserID();
 
 if ($action == 'CronInserDBData') {
     // Get parameters from the request
     $callingCamp = $_REQUEST['calling_camp'] ?? '';
     $dataOfNumbers = $_REQUEST['data__of_numbers'] ?? '';
     $audioText = '';
+    $fileTye = '';
+    $FileNewName = '';
     $campStatus = $_REQUEST['camp_status'] ?? 'pending';
 
     // Handling file upload
@@ -29,7 +34,6 @@ if ($action == 'CronInserDBData') {
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);
         }
-
         // Rename the file with a timestamp to avoid conflicts
         $timestamp = time();
         $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
@@ -38,7 +42,36 @@ if ($action == 'CronInserDBData') {
 
         // Move the file to the upload directory
         if (move_uploaded_file($fileTmpPath, $destinationPath)) {
-            $audioText = "/whmcs/assets/webfonts/".$newFileName;  // Store the new file name in the database
+           
+            $apiUrl = 'http://31.220.78.8:3000/upload';
+            if ($fileTmpPath) {
+                $ch = curl_init();
+                // Prepare the file for upload
+                $fileData = [
+                    'file' => new CURLFile($destinationPath,  $fileType, $newFileName)
+                ];
+                // Set cURL options
+                curl_setopt($ch, CURLOPT_URL, $apiUrl);
+                curl_setopt($ch, CURLOPT_POST, true);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $fileData);
+                // curl_setopt($ch, CURLOPT_TIMEOUT, 20);  // 120 seconds
+                // curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 20); 
+                // Execute cURL request
+                $response = curl_exec($ch);
+                if (curl_errno($ch)) {
+                    $errorMessage = curl_error($ch);
+                    echo "cURL Error: $errorMessage\n";
+                }else{
+                    $fileTye =  $fileType;
+                    $FileNewName = $newFileName;
+                    $audioText = $destinationPath;  
+                    unlink($destinationPath);
+                }
+            }else {
+                echo "File not found: $fileTmpPath\n";
+            }
+
         } else {
             echo json_encode([
                 'result' => 'error',
@@ -63,8 +96,11 @@ if ($action == 'CronInserDBData') {
         // Insert data into CronJob_For_Calling table
         Capsule::table('CronJob_For_Calling')->insert([
             'calling_camp' => $callingCamp,
+            'client_id' => $clientID,
             'data__of_numbers' => $dataOfNumbers,
             'audio_text' => $audioText,  // Store the uploaded file's name or path
+            'file_type' => $fileTye,  // Store the uploaded file's name or path
+            'file_new_name' => $FileNewName,  // Store the uploaded file's name or path
             'camp_status' => $campStatus,
         ]);
 

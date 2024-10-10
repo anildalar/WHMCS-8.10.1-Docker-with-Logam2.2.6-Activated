@@ -1,6 +1,18 @@
 
 {if $product eq 'Ocean VoIP Agent Topup'}
     
+    {foreach from=$clientsdetails.customfields item=customfield}
+        {if $customfield.id == 14}
+            <div style="position: absolute; top: 70px; right: 20px; background: linear-gradient(90deg, #007bff, #00c6ff); color: white; padding: 15px 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <h5 style="margin: 0; font-family: Orbitron, sans-serif; font-size: 18px; color: white;">
+                    Wallet Balance: {$customfield.value}
+                </h5>
+            </div>
+        {/if}
+    {/foreach}
+    
+
+
     <div style="text-align: center;" style="padding:0px">
         <img src="https://oceanpbx.club/templates/lagom2/assets/img/page-manager/humanoid.png" alt="AI Graphic" style="max-width: 100%; height: 300px; margin-bottom: 20px;">
         <h4 style="font-family: Orbitron, sans-serif; font-weight: var(--font-weight-h4); line-height: var(--line-height-h4); color: var(--text-heading-color); margin-bottom: var(--headings-margin-bottom); font-size: var(--font-size-h4); text-align: center;">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 09:03:50
+/* Smarty version 3.1.48, created on 2024-10-10 11:08:38
   from '/var/www/html/templates/lagom2/clientareaproductdetails.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_670100f631f612_10485150',
+  'unifunc' => 'content_6707b5b6957b93_27594089',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '984fedfdf1248f97c9e080684c832ec5775d02a6' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareaproductdetails.tpl',
-      1 => 1728119023,
+      1 => 1728558145,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_670100f631f612_10485150 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6707b5b6957b93_27594089 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 
 <?php if ($_smarty_tpl->tpl_vars['product']->value == 'Ocean VoIP Agent Topup') {?>
     
+    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['clientsdetails']->value['customfields'], 'customfield');
+$_smarty_tpl->tpl_vars['customfield']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['customfield']->value) {
+$_smarty_tpl->tpl_vars['customfield']->do_else = false;
+?>
+        <?php if ($_smarty_tpl->tpl_vars['customfield']->value['id'] == 14) {?>
+            <div style="position: absolute; top: 70px; right: 20px; background: linear-gradient(90deg, #007bff, #00c6ff); color: white; padding: 15px 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <h5 style="margin: 0; font-family: Orbitron, sans-serif; font-size: 18px; color: white;">
+                    Wallet Balance: <?php echo $_smarty_tpl->tpl_vars['customfield']->value['value'];?>
+
+                </h5>
+            </div>
+        <?php }?>
+    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+    
+
+
     <div style="text-align: center;" style="padding:0px">
         <img src="https://oceanpbx.club/templates/lagom2/assets/img/page-manager/humanoid.png" alt="AI Graphic" style="max-width: 100%; height: 300px; margin-bottom: 20px;">
         <h4 style="font-family: Orbitron, sans-serif; font-weight: var(--font-weight-h4); line-height: var(--line-height-h4); color: var(--text-heading-color); margin-bottom: var(--headings-margin-bottom); font-size: var(--font-size-h4); text-align: center;">

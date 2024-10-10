@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-03 10:15:37
+/* Smarty version 3.1.48, created on 2024-10-07 05:14:26
   from '/var/www/html/modules/servers/HetznerVps/templates/admin/ui/core/default/widget/dataTable/dataTable_components.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fe6ec9352039_35462561',
+  'unifunc' => 'content_67036e32b1f9f6_42590516',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fe6ec9352039_35462561 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67036e32b1f9f6_42590516 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <?php echo '<script'; ?>

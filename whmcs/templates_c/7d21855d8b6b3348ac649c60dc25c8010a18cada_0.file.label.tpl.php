@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-03 10:15:33
+/* Smarty version 3.1.48, created on 2024-10-07 05:14:24
   from '/var/www/html/modules/servers/HetznerVps/templates/admin/ui/core/default/widget/others/label.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fe6ec5125c54_55067909',
+  'unifunc' => 'content_67036e30e5c314_02820008',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fe6ec5125c54_55067909 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67036e30e5c314_02820008 (Smarty_Internal_Template $_smarty_tpl) {
 ?><span 
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['htmlAttributes']->value, 'aValue');
