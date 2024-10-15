@@ -6,6 +6,7 @@ require_once __DIR__ . '/../../init.php';
 require_once __DIR__ . '/../../ratelimit.php';
 
 // Example country codes array
+
 $countryCodes = [
     '1' => 'United States',
     '1' => 'Canada',
@@ -61,7 +62,6 @@ $countryCodes = [
     // Add more country codes as necessary
 ];
 
-
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
 if ($action === 'CronCallingAction') {
@@ -102,85 +102,85 @@ if ($action === 'CronCallingAction') {
                     echo "No pricing found for country code: $countryCode\n";
                 }
             }
+
             $updateStatus = Capsule::table('CronJob_For_Calling')
                 ->where('id', $campaign->id)
                 ->update(['total_price' => $totalPrice]);
-                // Prepare data for external API call
-                $apiUrl = 'https://pbx7.oceanpbx.club/apicall/index.php';
-                $apiToken = 'c5b30b648a53d6e57dc4d857dad26189';
-                $postData = [
-                    "tocall" => $numberArray,
-                    "typeOfAudio" => "AUDIO_CALL_OCEANGROUP",
-                    "language"=> "hi-IN",
-                    "accent"=>"hi-IN-Neural2-B", // 
-                    "audioFilename" => $campaign->file_new_name, // You can include the file URL/path if needed by the API
-                    "maxretires" => "30"
-                ];
-                $ch = curl_init();
-                curl_setopt($ch, CURLOPT_URL, $apiUrl);
-                curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                    'Content-Type: application/json',
-                    "token: $apiToken"
-                ]);
-                curl_setopt($ch, CURLOPT_POST, 1);
-                curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+            // Prepare data for external API call
+            $apiUrl = 'https://pbx7.oceanpbx.club/apicall/index.php';
+            $apiToken = 'c5b30b648a53d6e57dc4d857dad26189';
+            $postData = [
+                "tocall" => $numberArray,
+                "typeOfAudio" => "AUDIO_CALL_OCEANGROUP",
+                "language"=> "hi-IN",
+                "accent"=>"hi-IN-Neural2-B", // 
+                "accountId"=>$campaign->client_id,
+                "audioFilename" => $campaign->file_new_name, // You can include the file URL/path if needed by the API
+                "maxretires" => "30"
+            ];
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $apiUrl);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'Content-Type: application/json',
+                "token: $apiToken"
+            ]);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            
+            // Execute the API call
+            $apiResponse = curl_exec($ch);
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            if (curl_errno($ch)) {
+                $errorMsg = curl_error($ch);
+                curl_close($ch);
+                echo json_encode(['result' => 'error', 'message' => 'API call failed: ' . $errorMsg]);
+                exit;
+            }
+            
+
+            curl_close($ch);
+
+            if ($httpCode == 200) {
+                $clientId = $campaign->client_id;
+                $clientCustomFields = Capsule::table('tblcustomfieldsvalues')
+                    ->where('relid', $clientId)
+                    ->where('fieldid', 14)
+                    ->first();
                 
-                // Execute the API call
-                $apiResponse = curl_exec($ch);
-                $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-                if (curl_errno($ch)) {
-                    $errorMsg = curl_error($ch);
-                    curl_close($ch);
-                    echo json_encode(['result' => 'error', 'message' => 'API call failed: ' . $errorMsg]);
+                $currentBalance = (float)$clientCustomFields->value;
+                $newBalance = $currentBalance - $totalPrice;
+        
+                if ($newBalance < 0) {
+                    echo json_encode(['result' => 'error', 'message' => 'Insufficient balance']);
                     exit;
                 }
+                // Update the wallet balance
+                Capsule::table('tblcustomfieldsvalues')
+                    ->where('relid', $clientId)
+                    ->where('fieldid', 14)
+                    ->update(['value' => $newBalance]);
 
-                curl_close($ch);
-                // Check the HTTP response code
-                if ($httpCode == 200) {
-                    $clientId = $campaign->client_id;
-                    $clientCustomFields = Capsule::table('tblcustomfieldsvalues')
-                        ->where('relid', $clientId)
-                        ->where('fieldid', 14)
-                        ->first();
-                    
-                    $currentBalance = (float)$clientCustomFields->value;
-                    $newBalance = $currentBalance - $totalPrice;
-            
-                    if ($newBalance < 0) {
-                        echo json_encode(['result' => 'error', 'message' => 'Insufficient balance']);
-                        exit;
-                    }
-            
-                    // Update the wallet balance
-                    Capsule::table('tblcustomfieldsvalues')
-                        ->where('relid', $clientId)
-                        ->where('fieldid', 14)
-                        ->update(['value' => $newBalance]);
+                Capsule::table('CronJob_For_Calling')
+                ->where('id', $campaign->id)
+                ->update(['camp_status' => 'complete']);
 
-                    Capsule::table('CronJob_For_Calling')
-                    ->where('id', $campaign->id)
-                    ->update(['camp_status' => 'complete']);
-
-                    $responseData = [
-                        'file_name' => $newFileName,
-                        'phone_number' => $phone_number,
-                        'incoming_req_ip' => $clientIpAddress,
-                        'api_response' => json_decode($apiResponse, true)
-                    ];
-                    echo json_encode(['result' => 'success', 'data' => $responseData]);
-                } else {
-                    // Handle the failure case for the external API
-                    echo json_encode(['result' => 'error', 'message' => 'External API returned an error.', 'api_response' => $apiResponse]);
-                }
+                $responseData = [
+                    'file_name' => $newFileName,
+                    'phone_number' => $phone_number,
+                    'incoming_req_ip' => $clientIpAddress,
+                    'api_response' => json_decode($apiResponse, true)
+                ];
+                echo json_encode(['result' => 'success', 'data' => $responseData]);
+            } else {
+                echo json_encode(['result' => 'error', 'message' => 'External API returned an error.', 'api_response' => $apiResponse]);
+            }
         }
     } catch (Exception $e) {
-        // Log the error message
         echo "Error: " . $e->getMessage();
     }
 } else {
-    // Invalid action
     echo json_encode(['result' => 'error', 'message' => 'Invalid API action']);
 }
 
@@ -188,7 +188,7 @@ if ($action === 'CronCallingAction') {
 function getCountryCode($number) {
     global $countryCodes; 
     // Remove spaces and '+' sign at the beginning
-    $number = preg_replace('/\s+/', '', $number);
+    $number = preg_replace('/\s/', '', $number);
 
     for ($length = 1; $length <= 4; $length++) {
         $code = substr($number, 0, $length); // Extract country code

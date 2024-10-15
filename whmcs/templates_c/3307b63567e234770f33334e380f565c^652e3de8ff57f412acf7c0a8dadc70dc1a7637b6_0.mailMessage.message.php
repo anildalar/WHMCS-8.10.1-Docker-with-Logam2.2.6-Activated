@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-07 09:00:11
+/* Smarty version 3.1.48, created on 2024-10-14 09:00:05
   from 'mailMessage:message' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6703a31b855753_90939844',
+  'unifunc' => 'content_670cdd957e0906_44939748',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '652e3de8ff57f412acf7c0a8dadc70dc1a7637b6' => 
     array (
       0 => 'mailMessage:message',
-      1 => 1728291611,
+      1 => 1728896405,
       2 => 'mailMessage',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6703a31b855753_90939844 (Smarty_Internal_Template $_smarty_tpl) {
+function content_670cdd957e0906_44939748 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
@@ -211,24 +211,37 @@ function content_6703a31b855753_90939844 (Smarty_Internal_Template $_smarty_tpl)
                                     </tr>
                                     </tbody>
                                 </table>
-<!-- message header end --><p> Dear <?php echo $_smarty_tpl->tpl_vars['client_name']->value;?>
-, </p> <p> This is a notice that an invoice has been generated on <?php echo $_smarty_tpl->tpl_vars['invoice_date_created']->value;?>
-. </p> <p> Your payment method is: <?php echo $_smarty_tpl->tpl_vars['invoice_payment_method']->value;?>
- </p> <p> Invoice #<?php echo $_smarty_tpl->tpl_vars['invoice_num']->value;?>
-<br /> Amount Due: <?php echo $_smarty_tpl->tpl_vars['invoice_total']->value;?>
-<br /> Due Date: <?php echo $_smarty_tpl->tpl_vars['invoice_date_due']->value;?>
- </p> <p> <strong>Invoice Items</strong> </p> <p> <?php echo $_smarty_tpl->tpl_vars['invoice_html_contents']->value;?>
- <br /> ------------------------------------------------------ </p> <p> <?php if ($_smarty_tpl->tpl_vars['invoice_auto_capture_available']->value) {?>
-    Payment will be taken automatically from the <?php if ($_smarty_tpl->tpl_vars['invoice_pay_method_type']->value == "bankaccount") {?>bank account<?php } else { ?>credit card<?php }?> <?php echo $_smarty_tpl->tpl_vars['invoice_pay_method_display_name']->value;?>
- on <?php echo $_smarty_tpl->tpl_vars['invoice_next_payment_attempt_date']->value;?>
-. To change or pay with a different payment method, please login at <?php echo $_smarty_tpl->tpl_vars['invoice_link']->value;?>
- and click Pay Now, then follow the instructions on screen.
-<?php } else { ?>
-    Payment will not be taken automatically. To pay your invoice, please login at <?php echo $_smarty_tpl->tpl_vars['invoice_link']->value;?>
- and click Pay Now, then follow the instructions on screen.
-<?php }?>
- </p> <p> <?php echo $_smarty_tpl->tpl_vars['signature']->value;?>
- </p><!-- message footer start -->
+<!-- message header end --><p>
+Dear <?php echo $_smarty_tpl->tpl_vars['client_name']->value;?>
+,
+</p>
+<p>
+This is a billing reminder that your invoice no. <?php echo $_smarty_tpl->tpl_vars['invoice_num']->value;?>
+ which was generated on <?php echo $_smarty_tpl->tpl_vars['invoice_date_created']->value;?>
+ is due on <?php echo $_smarty_tpl->tpl_vars['invoice_date_due']->value;?>
+.
+</p>
+<p>
+Your payment method is: <?php echo $_smarty_tpl->tpl_vars['invoice_payment_method']->value;?>
+
+</p>
+<p>
+Invoice: <?php echo $_smarty_tpl->tpl_vars['invoice_num']->value;?>
+<br />
+Balance Due: <?php echo $_smarty_tpl->tpl_vars['invoice_balance']->value;?>
+<br />
+Due Date: <?php echo $_smarty_tpl->tpl_vars['invoice_date_due']->value;?>
+
+</p>
+<p>
+You can login to your client area to view and pay the invoice at <?php echo $_smarty_tpl->tpl_vars['invoice_link']->value;?>
+
+</p>
+<p>
+<?php echo $_smarty_tpl->tpl_vars['signature']->value;?>
+
+</p>
+<!-- message footer start -->
 </td>
 </tr>
 </tbody>

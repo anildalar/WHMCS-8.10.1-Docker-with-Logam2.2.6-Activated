@@ -34,7 +34,7 @@ if ($action === 'AITEXTTOCALL') {
     $apiUrl = 'https://pbx7.oceanpbx.club/apicall/index.php';
     $apiToken = 'c5b30b648a53d6e57dc4d857dad26189';
     $postData = [
-        "tocall" => $phone_number,
+        "tocall" => [$phone_number],
         "language" => $lang,
         "accent" => $accent,
         "message" => $text,
@@ -66,10 +66,8 @@ if ($action === 'AITEXTTOCALL') {
         echo json_encode(['result' => 'error', 'message' => 'API call failed: ' . $errorMsg]);
         exit;
     }
-    
     // Close the cURL session
     curl_close($ch);
-    
     // Check the HTTP response code
     if ($httpCode == 200) {
         // Prepare the response for the client
@@ -81,7 +79,6 @@ if ($action === 'AITEXTTOCALL') {
             'incoming_req_ip' => $clientIpAddress,
             'api_response' => json_decode($apiResponse, true)
         ];
-        
         // Send the success response accent
         echo json_encode(['result' => 'success', 'data' => $responseData]);
     } else {

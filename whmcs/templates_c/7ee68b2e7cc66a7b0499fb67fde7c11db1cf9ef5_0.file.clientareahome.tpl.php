@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-04 07:00:03
+/* Smarty version 3.1.48, created on 2024-10-15 11:08:53
   from '/var/www/html/templates/lagom2/clientareahome.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66ff92730a9796_57154260',
+  'unifunc' => 'content_670e4d45f398a0_88740967',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareahome.tpl',
-      1 => 1728025116,
+      1 => 1728988512,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66ff92730a9796_57154260 (Smarty_Internal_Template $_smarty_tpl) {
+function content_670e4d45f398a0_88740967 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'outputHomePanels' => 
   array (
     'compiled_filepath' => '/var/www/html/templates_c/7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5_0.file.clientareahome.tpl.php',
     'uid' => '7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5',
-    'call_name' => 'smarty_template_function_outputHomePanels_193129886166ff9272ed1429_50782300',
+    'call_name' => 'smarty_template_function_outputHomePanels_1505276747670e4d45eb1938_28046973',
   ),
 ));
 if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
@@ -206,241 +206,239 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
         </div>
         <div class="swiper-pagination"></div>
     </div>
-
-    <?php if ($_smarty_tpl->tpl_vars['product']->value == "Ocean VOIP PBX" && $_smarty_tpl->tpl_vars['item']->value->isActive()) {?>
-                <!-- Custom content for Ocean VOIP PBX if active -->
-                <div class="panel-body">
-                    <p>Ocean VOIP PBX is active and ready for use.</p>
-                    <!-- Add additional Ocean VOIP PBX specific content here -->
-                </div>
-            <?php } else { ?>
-                <p>Ocean VOIP PBX is Noactive and ready for use.</p>
-                <!-- Content for other items or Ocean VOIP PBX if not active -->
-            <?php }?>
-
-    <div class="table-container">
+   
+    <?php if ($_smarty_tpl->tpl_vars['loggedin']->value) {?>
+        <?php $_smarty_tpl->_assignInScope('clientID', $_smarty_tpl->tpl_vars['client']->value['id']);?>
+        <div class="table-container">
         <div class="table-top">
-            <div class="d-flex">
-              <h5><b>Call Details</b></h5>
-            </div>
+            <div class="d-flex"><h5><b>Call Details</b></h5> </div>
         </div>
         <div id="tableServicesList_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
             <div class="listtable">
                 <div id="tableServicesList_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tableServicesList"></label></div>
-                <table id="tableServicesList" class="table table-list dataTable no-footer dtr-inline" role="grid">
-                    <thead>
-                    <tr role="row">
-                        <th data-priority="1" class="sorting_asc" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Product/Service: activate to sort column descending" aria-sort="ascending"><button type="button" class="btn-table-collapse"></button>Caller<span class="sorting-arrows"></span></th>
-                        <th data-priority="5" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Receiver<span class="sorting-arrows"></span></th>
-                        <th data-priority="4" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Next Due Date: activate to sort column ascending">DateTime<span class="sorting-arrows"></span></th>
-                        <th data-priority="2" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr role="row" class="odd">
-                        <td class="dtr-control sorting_1" tabindex="0">
-                            <button type="button" class="btn-table-collapse"></button>
-                            <b>+45134587911</b>                                                             
-                        </td>
-                        <td class="text-nowrap" data-order="150.00">
-                            <b>+9789665151</b>    
-                        </td>
-                        <td>
-                            <span class="text-nowrap">
-                            <span class="hidden">
-                            2024-10-02
-                            </span>
-                            02/10/2024
-                            </span>
-                        </td>
-                        <td class="cell-action">
-                            <div class="dropdown">
-                                <a href="#" class="btn btn-icon dropdown-toggle" data-toggle="dropdown">
-                                <i class="lm lm-more"></i>
-                                </a>
-                                <ul class="dropdown-menu  pull-right" role="menu">
-                                <li>View Details
-                                </li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr  role="row" class="even">
-                        <td class="dtr-control sorting_1" tabindex="0">
-                            <button type="button" class="btn-table-collapse"></button>
-                            <b>+4145484848</b>                                                            
-                        </td>
-                        <td class="text-nowrap" data-order="50.00">
-                           <b>+8451454848</b>
-                        </td>
-                        <td>
-                            <span class="text-nowrap">
-                            <span class="hidden">
-                            2024-10-02
-                            </span>
-                            02/10/2024
-                            </span>
-                        </td>
-                        <td class="cell-action">
-                            <div class="dropdown">
-                                <a href="#" class="btn btn-icon dropdown-toggle" data-toggle="dropdown">
-                                <i class="lm lm-more"></i>
-                                </a>
-                                <ul class="dropdown-menu  pull-right" role="menu">
-                                <li>View Details
-                                </li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="dataTables_paginate  paging_simple_numbers" id="tableServicesList_paginate">
-                <ul class="pagination">
-                    <li class="paginate_button page-item previous disabled" id="tableServicesList_previous"><a href="#" aria-controls="tableServicesList" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                    <li class="paginate_button page-item active"><a href="#" aria-controls="tableServicesList" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                    <li class="paginate_button page-item next disabled" id="tableServicesList_next"><a href="#" aria-controls="tableServicesList" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
-                </ul>
-            </div>
-            <div class="dataTables_length" id="tableServicesList_length">
-                <label>
-                    Show 
-                    <select name="tableServicesList_length" aria-controls="tableServicesList" class="custom-select custom-select-sm form-control form-control-sm">
-                    <option value="10">10</option>
-                    <option value="25">25</option>
-                    <option value="50">50</option>
-                    <option value="-1">All</option>
-                    </select>
-                    entries
-                </label>
-            </div>
-        </div>
-        <div class="loader loader-table hidden" id="tableLoading">
-            <div class="spinner ">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-        </div>
-    </div>
-    <br></br>
-    <!-- Large Modal Structure -->
-    <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document" style="width:1100px">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="detailsModalLabel">Call Details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Table for displaying call details -->
-                    <table class="table table-striped table-bordered">
+                    <table id="tableServicesList" class="table table-list dataTable no-footer dtr-inline" role="grid">
                         <thead>
-                            <tr>
-                                <th>Caller</th>
-                                <th>Receiver</th>
-                                <th>Date</th>
-                                <th>Call Duration</th>
-                            </tr>
+                        <tr role="row">
+                            <th data-priority="1" class="sorting_asc" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Product/Service: activate to sort column descending" aria-sort="ascending"><button type="button" class="btn-table-collapse"></button>Caller<span class="sorting-arrows"></span></th>
+                            <th data-priority="3" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Receiver<span class="sorting-arrows"></span></th>
+                            <th data-priority="5" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Status<span class="sorting-arrows"></span></th>
+                            <th data-priority="4" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Next Due Date: activate to sort column ascending">DateTime<span class="sorting-arrows"></span></th>
+                            <th data-priority="2" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td id="modalCaller">+451248752</td>
-                                <td id="modalReceiver">+84955425</td>
-                                <td id="modalDate">02/10/2024</td>
-                                <td id="modalDuration">1min</td>
-                            </tr>
+                        
                         </tbody>
                     </table>
-                     <!-- Call Recorder Button and Playback -->
-                    <div class="call-recorder">
-                        <button id="playCallRecording" class="btn btn-primary">
-                            <i class="fa fa-play"></i> Play Call Recording
-                        </button>
-                        <audio id="callRecordingAudio" controls style="display: none; margin-top: 10px; width: 100%;">
-                            <source id="audioSource" src="" type="audio/mp3">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </div>
-
-                    <!-- Call Transcript Section -->
-                    <div class="form-group" style="margin-top: 20px;">
-                        <label for="callTranscript">Call Transcript</label>
-                        <textarea id="callTranscript" class="form-control" rows="6" placeholder="Call transcript will appear here..." readonly></textarea>
-                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <div class="dataTables_paginate  paging_simple_numbers" id="tableServicesList_paginate">
+                    <ul class="pagination">
+                        <li class="paginate_button page-item previous disabled" id="tableServicesList_previous"><a href="#" aria-controls="tableServicesList" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                        <li class="paginate_button page-item active"><a href="#" aria-controls="tableServicesList" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                        <li class="paginate_button page-item next disabled" id="tableServicesList_next"><a href="#" aria-controls="tableServicesList" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
+                    </ul>
+                </div>
+                <div class="dataTables_length" id="tableServicesList_length">
+                    <label>
+                        Show 
+                        <select name="tableServicesList_length" aria-controls="tableServicesList" class="custom-select custom-select-sm form-control form-control-sm">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="-1">All</option>
+                        </select>
+                        entries
+                    </label>
+                </div>
+            </div>
+            <div class="loader loader-table hidden" id="tableLoading">
+                <div class="spinner ">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
                 </div>
             </div>
         </div>
-    </div>
-    <?php echo '<script'; ?>
+        <br></br>
+        <!-- Large Modal Structure -->
+        <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document" style="width:1100px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="detailsModalLabel">Call Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Table for displaying call details -->
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Caller</th>
+                                    <th>Receiver</th>
+                                    <th>Status</th>
+                                    <th>Call Duration/BillSec</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="modalCaller">+451248752</td>
+                                    <td id="modalReceiver">+84955425</td>
+                                    <td id="modalStatus">Answerd</td>
+                                    <td id="modalDuration">1min</td>
+                                    <td id="modalDate">02/10/2024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Call Recorder Button and Playback -->
+                        <div class="call-recorder">
+                            <button id="playCallRecording" class="btn btn-primary">
+                                <i class="fa fa-play"></i> Play Call Recording
+                            </button>
+                            <audio id="callRecordingAudio" controls style="display: none; margin-top: 10px; width: 100%;">
+                                <source id="audioSource" src="">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <!-- Call Transcript Section -->
+                        <div class="form-group" style="margin-top: 20px;">
+                            <label for="callTranscript">Call Transcript</label>
+                            <textarea id="callTranscript" class="form-control" rows="6" placeholder="Call transcript will appear here..." readonly></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php echo '<script'; ?>
 >
-        $(document).ready(function() {
-            // Handle row click event
-            $('#tableServicesList tbody tr').click(function() {
-                // Get data from the clicked row
-                var caller = $(this).data('caller');
-                var receiver = $(this).data('receiver');
-                var date = $(this).data('date');
-                var time = $(this).data('time');
-                var duration = $(this).data('duration');
+            $(document).ready(function() {
+                // Handle row click event
+                var clientID = "<?php echo $_smarty_tpl->tpl_vars['clientID']->value;?>
+";
+                $.ajax({
+                    url: "https://oceanpbx.club/includes/api/fetchcdrdetails.php",
+                    type: "POST",
+                    data: {
+                        action: "GetCDRDetails",
+                        accountcode: clientID
+                    },
+                    success: function(response) {
+                        let parsedResponse;
+                        try {
+                            parsedResponse = typeof response === "string" ? JSON.parse(response) : response;
+                        } catch (error) {
+                            console.error("Failed to parse response:", error);
+                            return;
+                        }// Log the parsed response
+                        
+                        // Check if the response status is "success"
+                        console.log("Parsed Response Data:", parsedResponse.data);
+
+                        if (parsedResponse.status === "success" && Array.isArray(parsedResponse.data)) {
+                            const tableBody = $("#tableServicesList tbody");
+                            tableBody.empty(); // Clear existing rows
+                            parsedResponse.data.forEach(call => {
+                               console.log("Appending call:", call.src); // Debugging log
+                                const row = '<tr role="row" data-id="' + call.id + '" ' + // Include the ID as data-id
+                                    'data-caller="' + call.src + '" ' +
+                                    'data-receiver="' + call.dst + '" ' +
+                                    'data-date="' + formatDate(call.calldate) + '" ' +
+                                    'data-duration="' + call.billsec + '" ' +
+                                    'data-status="' + call.disposition + '" ' +
+                                    'data-recording-url="' + call.recordingfile + '">' +
+                                    '<td class="dtr-control sorting_1">' +
+                                        '<button type="button" class="btn-table-collapse"></button>' +
+                                        '<b>' + call.src + '</b>' +  // Concatenating call.src
+                                    '</td>' +
+                                    '<td class="text-nowrap">' +
+                                        '<b>' + call.dst + '</b>' +  // Concatenating call.dst
+                                    '</td>' +
+                                    '<td class="text-nowrap" style="color: green;">' +
+                                        '<b>' + call.disposition + '</b>' + 
+                                    '</td>' +
+                                    '<td>' +
+                                        '<span class="text-nowrap">' +
+                                            // Call formatDate with call.calldate
+                                            '<span class="hidden">' + call.calldate + '</span>' +  
+                                            // Add formatted date here
+                                            formatDate(call.calldate) + 
+                                        '</span>' +
+                                    '</td>' +
+                                    '<td class="cell-action">' +
+                                        '<div class="dropdown">' +
+                                            '<a href="#" class="btn btn-icon dropdown-toggle" data-bs-toggle="dropdown">' +
+                                                '<i class="lm lm-more"></i>' +
+                                            '</a>' +
+                                            '<ul class="dropdown-menu pull-right" role="menu">' +
+                                                '<li><a href="#">View Details</a></li>' +
+                                            '</ul>' +
+                                        '</div>' +
+                                    '</td>' +
+                                '</tr>'; 
+                                tableBody.append(row);
+                                console.log("Table rows appended");
+                            });
+                        } else {
+                            console.log("Failed to fetch data. Status:", parsedResponse.status);
+                        }
+                    },
+                    error: function(error) {
+                        console.error("Error:", error);
+                    }
+                });
                 
-                // Set the data in the modal
-                $('#modalCaller').text(caller);
-                $('#modalReceiver').text(receiver);
-                $('#modalDate').text(date);
-                $('#modalTime').text(time);
-                $('#modalDuration').text(duration);
-                
-                // Show the modal
-                $('#detailsModal').modal('show');
+                $('#tableServicesList').on('click', 'tbody tr', function() {
+                    // Get data from the clicked row
+                    var caller = $(this).data('caller');
+                    var receiver = $(this).data('receiver');
+                    var date = $(this).data('date');
+                    var duration = $(this).data('duration');
+                    var status = $(this).data('status');
+                    var recordingUrl = $(this).data('recording-url');
+
+                    // Set the data in the modal
+                    $('#modalCaller').text(caller);
+                    $('#modalReceiver').text(receiver);
+                    $('#modalDate').text(date);
+                    $('#modalDuration').text(duration);
+                    $('#modalStatus').text(status);
+                    var parts = date.split(' ')[0].split('/'); 
+                    var year = parts[2]; // Get year (2024)
+                    var month = parts[0]; // Get month (10)
+                    var day = parts[1]; // Get day (14)
+                    var baseRecordingUrl = 'https://pbx7.oceanpbx.club/files/'; 
+                    var recordingUrlBase = baseRecordingUrl + year + '/' + month + '/' + day + '/' + recordingUrl;
+                    $('#audioSource').attr('src', recordingUrlBase);
+                    $('#callRecordingAudio').show();
+                    // Show the modal
+                    $('#detailsModal').modal('show');
+                });
+                $('#playCallRecording').on('click', function() {
+                    // Load and play the audio
+                    $('#callRecordingAudio')[0].load(); // Load the audio source
+                    $('#callRecordingAudio')[0].play(); // Play the audio
+                });
             });
-            $('#detailsModal').on('show.bs.modal', function (event) {
-                // Fetch the relevant data for the call
-                var caller = 'John Doe';
-                var receiver = 'Jane Smith';
-                var date = '2024-10-03';
-                var time = '14:35';
-                var duration = '5 mins';
-                var recordingUrl = 'path/to/recording.mp3'; // The URL to the call recording
-
-                // Construct the formatted transcript
-                var transcript = `Caller: Hi\n` +
-                                `Receiver: Hello\n` +
-                                `Caller: How are you?\n` +
-                                `Receiver: I'm fine, thank you!`;
-
-                // Update the modal content with fetched data
-                $('#modalCaller').text(caller);
-                $('#modalReceiver').text(receiver);
-                $('#modalDate').text(date);
-                $('#modalTime').text(time);
-                $('#modalDuration').text(duration);
-
-                // Set up the call recording
-                $('#audioSource').attr('src', recordingUrl);
-                $('#callRecordingAudio')[0].load();
-                $('#callRecordingAudio').show();
-
-                // Populate the call transcript with formatted text
-                $('#callTranscript').val(transcript);
-            });
-        });
-    <?php echo '</script'; ?>
+            
+            function formatDate(dateString) {
+                const date = new Date(dateString);
+                return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+            }
+        <?php echo '</script'; ?>
 >
+    <?php } else { ?>
+        <p>Please log in to view your client information.</p>
+    <?php }?>
     
 
-
-
-
-
+    
 
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['addons_html']->value, 'addon_html', false, 'k');
@@ -503,9 +501,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php }
 }
 }
-/* smarty_template_function_outputHomePanels_193129886166ff9272ed1429_50782300 */
-if (!function_exists('smarty_template_function_outputHomePanels_193129886166ff9272ed1429_50782300')) {
-function smarty_template_function_outputHomePanels_193129886166ff9272ed1429_50782300(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_outputHomePanels_1505276747670e4d45eb1938_28046973 */
+if (!function_exists('smarty_template_function_outputHomePanels_1505276747670e4d45eb1938_28046973')) {
+function smarty_template_function_outputHomePanels_1505276747670e4d45eb1938_28046973(Smarty_Internal_Template $_smarty_tpl,$params) {
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
 }
@@ -729,5 +727,5 @@ echo smarty_modifier_replace(smarty_modifier_replace($_smarty_tpl->tpl_vars['ite
             </div>
         <?php
 }}
-/*/ smarty_template_function_outputHomePanels_193129886166ff9272ed1429_50782300 */
+/*/ smarty_template_function_outputHomePanels_1505276747670e4d45eb1938_28046973 */
 }
