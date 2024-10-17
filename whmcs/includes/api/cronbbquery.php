@@ -66,9 +66,13 @@
     ];
 
     if ($action == 'CronInserDBData') {
-        // Get parameters from the request
+        // Get parameters from the request 
         $callingCamp = $_REQUEST['calling_camp'] ?? '';
         $dataOfNumbers = $_REQUEST['data__of_numbers'] ?? '';
+        $checkValue = $_REQUEST['check_value'] ?? '';
+        $textArea = $_REQUEST['text_area'] ?? '';
+        $langArea = $_REQUEST['lang_area'] ?? '';
+        $accentArea = $_REQUEST['accent_area'] ?? '';
         $audioText = '';
         $fileTye = '';
         $FileNewName = '';
@@ -109,8 +113,7 @@
             exit;
         }
 
-        // Handling file upload
-        if (isset($_FILES['audio_text'])) {
+        if($checkValue == 'audio'){
             $audioFile = $_FILES['audio_text'];
             $fileName = $audioFile['name'];
             $fileTmpPath = $audioFile['tmp_name'];
@@ -119,7 +122,6 @@
             // Define the upload directory inside the WHMCS root
             $whmcsRoot = __DIR__ . '/../../'; 
             $uploadDir = $whmcsRoot . 'assets/webfonts/'; 
-
             // Check if the directory exists, if not, create it
             if (!is_dir($uploadDir)) {
                 mkdir($uploadDir, 0755, true);
@@ -169,13 +171,13 @@
                 ]);
                 exit;
             }
-        } else {
-            echo json_encode([
-                'result' => 'error',
-                'message' => 'No file uploaded.'
-            ]);
-            exit;
+        }elseif ($checkValue == 'text'){
+            $FileNewName = $accentArea;
+            $fileTye =  $langArea;
+            $audioText = $textArea;  
+
         }
+        
         try {
             // Validate the input data
             if (empty($callingCamp) || empty($dataOfNumbers)) {
@@ -185,6 +187,7 @@
             Capsule::table('CronJob_For_Calling')->insert([
                 'calling_camp' => $callingCamp,
                 'client_id' => $clientID,
+                'type_calling' => $checkValue ,
                 'data__of_numbers' => $dataOfNumbers,
                 'audio_text' => $audioText,
                 'file_type' => $fileTye, 
@@ -228,8 +231,6 @@
             'message' => 'Invalid API Action'
         ]);
     }
-
-
     // Function to get the country code based on the phone number
     function getCountryCode($number) {
         global $countryCodes; 

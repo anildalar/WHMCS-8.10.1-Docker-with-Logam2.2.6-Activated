@@ -114,7 +114,8 @@ if ($action === 'CronCallingAction') {
                 "tocall" => $numberArray,
                 "typeOfAudio" => "AUDIO_CALL_OCEANGROUP",
                 "language"=> "hi-IN",
-                "accent"=>"hi-IN-Neural2-B", // 
+                "accent"=>"hi-IN-Neural2-B", 
+                "campaignId"=>$campaign->calling_camp, 
                 "accountId"=>$campaign->client_id,
                 "audioFilename" => $campaign->file_new_name, // You can include the file URL/path if needed by the API
                 "maxretires" => "30"
