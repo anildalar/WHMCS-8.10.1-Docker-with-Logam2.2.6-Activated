@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-10 11:08:38
+/* Smarty version 3.1.48, created on 2024-10-17 11:41:53
   from '/var/www/html/templates/lagom2/clientareaproductdetails.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6707b5b6957b93_27594089',
+  'unifunc' => 'content_6710f801e16466_94600012',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '984fedfdf1248f97c9e080684c832ec5775d02a6' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareaproductdetails.tpl',
-      1 => 1728558145,
+      1 => 1729159889,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6707b5b6957b93_27594089 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6710f801e16466_94600012 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 
@@ -43,8 +43,6 @@ $_smarty_tpl->tpl_vars['customfield']->do_else = false;
     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-    
-
 
     <div style="text-align: center;" style="padding:0px">
         <img src="https://oceanpbx.club/templates/lagom2/assets/img/page-manager/humanoid.png" alt="AI Graphic" style="max-width: 100%; height: 300px; margin-bottom: 20px;">
@@ -54,24 +52,24 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
     
     <div class="content">
-    <div class="row text-align-center justify-content-center">
-        <div class="col-3">
-        <label class="radio">
-            <div class="radio-styled checked">
-            <input type="radio" class="icheck-control" name="domainoption" value="text" id="selregister" checked="">
+        <div class="row text-align-center justify-content-center">
+            <div class="col-3">
+            <label class="radio">
+                <div class="radio-styled checked">
+                <input type="radio" class="icheck-control" name="domainoption" value="text" id="selregister" checked="">
+                </div>
+                <span>Enter Text</span>
+            </label>
             </div>
-            <span>Enter Text</span>
-        </label>
-        </div>
-        <div class="col-3">
-        <label class="radio">
-            <div class="radio-styled">
-            <input type="radio" class="icheck-control" name="domainoption" value="audio" id="seltransfer">
+            <div class="col-3">
+            <label class="radio">
+                <div class="radio-styled">
+                <input type="radio" class="icheck-control" name="domainoption" value="audio" id="seltransfer">
+                </div>
+                <span>Upload Audio</span>
+            </label>
             </div>
-            <span>Upload Audio</span>
-        </label>
         </div>
-    </div>
     </div>
 
     <!-- Text input section -->
@@ -117,11 +115,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
     <br></br>
 
+<?php }?>
 
 
-
-<?php }
-if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
+<?php if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
     <?php $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'], $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>
     <?php if ($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['config']['hideRightBoxWithDetailsUsage'] == "1") {?>

@@ -11,6 +11,7 @@ $countryCodes = [
     '1' => 'United States',
     '1' => 'Canada',
     '44' => 'United Kingdom',
+    '971' => 'United Arab Emirates',
     '91' => 'India',
     '49' => 'Germany',
     '33' => 'France',
@@ -110,16 +111,30 @@ if ($action === 'CronCallingAction') {
             // Prepare data for external API call
             $apiUrl = 'https://pbx7.oceanpbx.club/apicall/index.php';
             $apiToken = 'c5b30b648a53d6e57dc4d857dad26189';
-            $postData = [
-                "tocall" => $numberArray,
-                "typeOfAudio" => "AUDIO_CALL_OCEANGROUP",
-                "language"=> "hi-IN",
-                "accent"=>"hi-IN-Neural2-B", 
-                "campaignId"=>$campaign->calling_camp, 
-                "accountId"=>$campaign->client_id,
-                "audioFilename" => $campaign->file_new_name, // You can include the file URL/path if needed by the API
-                "maxretires" => "30"
-            ];
+            $postData = [];
+            if($campaign->type_calling == 'audio'){
+                $postData = [
+                    "tocall" => $numberArray,
+                    "typeOfAudio" => "AUDIO_CALL_OCEANGROUP",
+                    "language"=> "hi-IN",
+                    "accent"=>"hi-IN-Neural2-B", 
+                    "campaignId"=>$campaign->calling_camp, 
+                    "accountId"=>$campaign->client_id,
+                    "audioFilename" => $campaign->file_new_name, // You can include the file URL/path if needed by the API
+                    "maxretires" => "30"
+                ];
+            }else{
+                $postData = [
+                    "tocall" => $numberArray,
+                    "language"=> $campaign->file_type,
+                    "accent"=>$campaign->file_new_name, 
+                    "message" => $campaign->audio_text, // You can include the file URL/path if needed by the API
+                    "campaignId"=>$campaign->calling_camp, 
+                    "accountId"=>$campaign->client_id,
+                    "maxretires" => "30"
+                ];
+            }
+            
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $apiUrl);
             curl_setopt($ch, CURLOPT_HTTPHEADER, [
@@ -139,8 +154,6 @@ if ($action === 'CronCallingAction') {
                 echo json_encode(['result' => 'error', 'message' => 'API call failed: ' . $errorMsg]);
                 exit;
             }
-            
-
             curl_close($ch);
 
             if ($httpCode == 200) {

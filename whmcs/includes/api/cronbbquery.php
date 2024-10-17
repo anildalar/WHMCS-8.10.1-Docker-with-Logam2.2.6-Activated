@@ -14,6 +14,7 @@
         '1' => 'United States',
         '1' => 'Canada',
         '44' => 'United Kingdom',
+        '971' => 'United Arab Emirates',
         '91' => 'India',
         '49' => 'Germany',
         '33' => 'France',

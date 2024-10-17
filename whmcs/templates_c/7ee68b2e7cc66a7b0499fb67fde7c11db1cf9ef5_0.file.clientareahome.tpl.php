@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-17 05:20:30
+/* Smarty version 3.1.48, created on 2024-10-17 10:36:52
   from '/var/www/html/templates/lagom2/clientareahome.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67109e9e06a336_05716437',
+  'unifunc' => 'content_6710e8c4871160_57469081',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareahome.tpl',
-      1 => 1729057653,
+      1 => 1729161408,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67109e9e06a336_05716437 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6710e8c4871160_57469081 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'outputHomePanels' => 
   array (
     'compiled_filepath' => '/var/www/html/templates_c/7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5_0.file.clientareahome.tpl.php',
     'uid' => '7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5',
-    'call_name' => 'smarty_template_function_outputHomePanels_176416405567109e9debd0c8_35027978',
+    'call_name' => 'smarty_template_function_outputHomePanels_7171660886710e8c47efdf3_56824923',
   ),
 ));
 if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
@@ -209,59 +209,14 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
    
     <?php if ($_smarty_tpl->tpl_vars['loggedin']->value) {?>
         <?php $_smarty_tpl->_assignInScope('clientID', $_smarty_tpl->tpl_vars['client']->value['id']);?>
+        
         <div class="table-container">
-        <div class="table-top">
-            <div class="d-flex"><h5><b>Call Details</b></h5> </div>
-        </div>
-        <div id="tableServicesList_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-            <div class="listtable">
-                <div id="tableServicesList_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tableServicesList"></label></div>
-                    <table id="tableServicesList" class="table table-list dataTable no-footer dtr-inline" role="grid">
-                        <thead>
-                        <tr role="row">
-                            <th data-priority="1" class="sorting_asc" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Product/Service: activate to sort column descending" aria-sort="ascending"><button type="button" class="btn-table-collapse"></button>Caller<span class="sorting-arrows"></span></th>
-                            <th data-priority="3" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Receiver<span class="sorting-arrows"></span></th>
-                            <th data-priority="5" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Status<span class="sorting-arrows"></span></th>
-                            <th data-priority="4" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Next Due Date: activate to sort column ascending">DateTime<span class="sorting-arrows"></span></th>
-                            <th data-priority="2" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        
-                        </tbody>
-                    </table>
-                </div>
-                <div class="dataTables_paginate  paging_simple_numbers" id="tableServicesList_paginate">
-                    <ul class="pagination">
-                        <li class="paginate_button page-item previous disabled" id="tableServicesList_previous"><a href="#" aria-controls="tableServicesList" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                        <li class="paginate_button page-item active"><a href="#" aria-controls="tableServicesList" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                        <li class="paginate_button page-item next disabled" id="tableServicesList_next"><a href="#" aria-controls="tableServicesList" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
-                    </ul>
-                </div>
-                <div class="dataTables_length" id="tableServicesList_length">
-                    <label>
-                        Show 
-                        <select name="tableServicesList_length" aria-controls="tableServicesList" class="custom-select custom-select-sm form-control form-control-sm">
-                            <option value="10">10</option>
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                            <option value="-1">All</option>
-                        </select>
-                        entries
-                    </label>
-                </div>
+            <div class="panel-heading">
+                <h5 class="panel-title">
+                    <i class="fas fa-phone-alt" style="margin-right: 8px;"></i> <!-- Added margin-right for spacing -->
+                    Call Details Records (CDR)
+                </h5>
             </div>
-            <div class="loader loader-table hidden" id="tableLoading">
-                <div class="spinner ">
-                    <div class="rect1"></div>
-                    <div class="rect2"></div>
-                    <div class="rect3"></div>
-                    <div class="rect4"></div>
-                    <div class="rect5"></div>
-                </div>
-            </div>
-        </div>
-        <br></br>
         <!-- Large Modal Structure -->
         <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document" style="width:1100px">
@@ -316,84 +271,104 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
                 </div>
             </div>
         </div>
+        <div id="tableServicesList_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+            <div class="listtable">
+                <div id="tableServicesList_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tableServicesList"></label></div>
+                    <table id="tableServicesList" class="table table-list dataTable no-footer dtr-inline" role="grid">
+                        <thead>
+                        <tr role="row">
+                            <th data-priority="1" class="sorting_asc" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Product/Service: activate to sort column descending" aria-sort="ascending"><button type="button" class="btn-table-collapse"></button>Caller<span class="sorting-arrows"></span></th>
+                            <th data-priority="3" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Receiver<span class="sorting-arrows"></span></th>
+                            <th data-priority="5" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Status<span class="sorting-arrows"></span></th>
+                            <th data-priority="4" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Next Due Date: activate to sort column ascending">DateTime<span class="sorting-arrows"></span></th>
+                            <th data-priority="2" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br></br>
+        
         <?php echo '<script'; ?>
 >
             $(document).ready(function() {
-                // Handle row click event
                 var clientID = "<?php echo $_smarty_tpl->tpl_vars['clientID']->value;?>
 ";
-                $.ajax({
-                    url: "https://oceanpbx.club/includes/api/fetchcdrdetails.php",
-                    type: "POST",
-                    data: {
-                        action: "GetCDRDetails",
-                        accountcode: clientID
-                    },
-                    success: function(response) {
-                        let parsedResponse;
-                        try {
-                            parsedResponse = typeof response === "string" ? JSON.parse(response) : response;
-                        } catch (error) {
-                            console.error("Failed to parse response:", error);
-                            return;
-                        }// Log the parsed response
-                        
-                        // Check if the response status is "success"
-                        console.log("Parsed Response Data:", parsedResponse.data);
+                // Initialize DataTables
+                $('#tableServicesList').DataTable({
+                    "paging": true,           // Enable pagination
+                    "lengthChange": true,     // Allow the user to change the number of rows displayed
+                    "searching": true,        // Enable search
+                    "ordering": true,         // Enable column sorting
+                    "info": true,             // Show table information
+                    "autoWidth": false,       // Disable auto-width
+                    "pageLength": 5,         // Default number of rows per page
+                    "lengthMenu": [5, 25, 50, 100], // Options for the number of rows per page
+                    "ajax": {
+                        "url": "https://oceanpbx.club/includes/api/fetchcdrdetails.php",
+                        "type": "POST",
+                        "data": {
+                            action: "GetCDRDetails",
+                            accountcode: "<?php echo $_smarty_tpl->tpl_vars['clientID']->value;?>
+"
+                        },
+                        "dataSrc": function (response) {
+                            let parsedResponse;
+                            try {
+                                parsedResponse = typeof response === "string" ? JSON.parse(response) : response;
+                            } catch (error) {
+                                console.error("Failed to parse response:", error);
+                                return [];
+                            }
 
-                        if (parsedResponse.status === "success" && Array.isArray(parsedResponse.data)) {
-                            const tableBody = $("#tableServicesList tbody");
-                            tableBody.empty(); // Clear existing rows
-                            parsedResponse.data.forEach(call => {
-                               console.log("Appending call:", call.src); // Debugging log
-                                const row = '<tr role="row" data-id="' + call.id + '" ' + // Include the ID as data-id
-                                    'data-caller="' + call.src + '" ' +
-                                    'data-receiver="' + call.dst + '" ' +
-                                    'data-date="' + formatDate(call.calldate) + '" ' +
-                                    'data-duration="' + call.billsec + '" ' +
-                                    'data-status="' + call.disposition + '" ' +
-                                    'data-recording-url="' + call.recordingfile + '">' +
-                                    '<td class="dtr-control sorting_1">' +
-                                        '<button type="button" class="btn-table-collapse"></button>' +
-                                        '<b>' + call.src + '</b>' +  // Concatenating call.src
-                                    '</td>' +
-                                    '<td class="text-nowrap">' +
-                                        '<b>' + call.dst + '</b>' +  // Concatenating call.dst
-                                    '</td>' +
-                                    '<td class="text-nowrap" style="color: green;">' +
-                                        '<b>' + call.disposition + '</b>' + 
-                                    '</td>' +
-                                    '<td>' +
-                                        '<span class="text-nowrap">' +
-                                            // Call formatDate with call.calldate
-                                            '<span class="hidden">' + call.calldate + '</span>' +  
-                                            // Add formatted date here
-                                            formatDate(call.calldate) + 
-                                        '</span>' +
-                                    '</td>' +
-                                    '<td class="cell-action">' +
-                                        '<div class="dropdown">' +
-                                            '<a href="#" class="btn btn-icon dropdown-toggle" data-bs-toggle="dropdown">' +
-                                                '<i class="lm lm-more"></i>' +
-                                            '</a>' +
-                                            '<ul class="dropdown-menu pull-right" role="menu">' +
-                                                '<li><a href="#">View Details</a></li>' +
-                                            '</ul>' +
-                                        '</div>' +
-                                    '</td>' +
-                                '</tr>'; 
-                                tableBody.append(row);
-                                console.log("Table rows appended");
-                            });
-                        } else {
-                            console.log("Failed to fetch data. Status:", parsedResponse.status);
+                            if (parsedResponse.status === "success" && Array.isArray(parsedResponse.data)) {
+                                return parsedResponse.data;
+                            } else {
+                                console.log("Failed to fetch data. Status:", parsedResponse.status);
+                                return [];
+                            }
                         }
                     },
-                    error: function(error) {
-                        console.error("Error:", error);
-                    }
+                    "columns": [
+                        { "data": "src" },          // Caller
+                        { "data": "dst" },          // Receiver
+                        { "data": "disposition" },  // Status
+                        { 
+                            "data": "calldate", 
+                            "render": function (data, type, row) {
+                                return formatDate(data);
+                            }
+                        },
+                        { 
+                            "data": null, 
+                            "render": function (data, type, row) {
+                                return '<div class="dropdown">' +
+                                    '<a href="#" class="btn btn-icon dropdown-toggle" data-bs-toggle="dropdown">' +
+                                        '<i class="lm lm-more"></i>' +
+                                    '</a>' +
+                                    '<ul class="dropdown-menu pull-right" role="menu">' +
+                                        '<li><a href="#">View Details</a></li>' +
+                                    '</ul>' +
+                                '</div>';
+                            }
+                        }
+                    ],
+                    "createdRow": function(row, data) {
+                        $(row).attr('role', 'row')
+                            .attr('data-id', data.id)
+                            .attr('data-caller', data.src)
+                            .attr('data-receiver', data.dst)
+                            .attr('data-date', formatDate(data.calldate))
+                            .attr('data-duration', data.billsec)
+                            .attr('data-status', data.disposition)
+                            .attr('data-recording-url', data.recordingfile);
+                    },
+                    "responsive": true 
                 });
-                
+                        
                 $('#tableServicesList').on('click', 'tbody tr', function() {
                     // Get data from the clicked row
                     var caller = $(this).data('caller');
@@ -404,6 +379,7 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
                     var recordingUrl = $(this).data('recording-url');
 
                     // Set the data in the modal
+                    $('#callTranscript').text(caller + ' :- ');
                     $('#modalCaller').text(caller);
                     $('#modalReceiver').text(receiver);
                     $('#modalDate').text(date);
@@ -421,7 +397,6 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
                     $('#detailsModal').modal('show');
                 });
                 $('#playCallRecording').on('click', function() {
-                    // Load and play the audio
                     $('#callRecordingAudio')[0].load(); // Load the audio source
                     $('#callRecordingAudio')[0].play(); // Play the audio
                 });
@@ -436,7 +411,6 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
         <p>Please log in to view your client information.</p>
     <?php }?>
     
-
     
 
     <?php
@@ -500,9 +474,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php }
 }
 }
-/* smarty_template_function_outputHomePanels_176416405567109e9debd0c8_35027978 */
-if (!function_exists('smarty_template_function_outputHomePanels_176416405567109e9debd0c8_35027978')) {
-function smarty_template_function_outputHomePanels_176416405567109e9debd0c8_35027978(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_outputHomePanels_7171660886710e8c47efdf3_56824923 */
+if (!function_exists('smarty_template_function_outputHomePanels_7171660886710e8c47efdf3_56824923')) {
+function smarty_template_function_outputHomePanels_7171660886710e8c47efdf3_56824923(Smarty_Internal_Template $_smarty_tpl,$params) {
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
 }
@@ -726,5 +700,5 @@ echo smarty_modifier_replace(smarty_modifier_replace($_smarty_tpl->tpl_vars['ite
             </div>
         <?php
 }}
-/*/ smarty_template_function_outputHomePanels_176416405567109e9debd0c8_35027978 */
+/*/ smarty_template_function_outputHomePanels_7171660886710e8c47efdf3_56824923 */
 }

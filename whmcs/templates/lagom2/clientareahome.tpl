@@ -124,59 +124,14 @@
    
     {if $loggedin}
         {assign var="clientID" value=$client.id}
+        
         <div class="table-container">
-        <div class="table-top">
-            <div class="d-flex"><h5><b>Call Details</b></h5> </div>
-        </div>
-        <div id="tableServicesList_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-            <div class="listtable">
-                <div id="tableServicesList_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tableServicesList"></label></div>
-                    <table id="tableServicesList" class="table table-list dataTable no-footer dtr-inline" role="grid">
-                        <thead>
-                        <tr role="row">
-                            <th data-priority="1" class="sorting_asc" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Product/Service: activate to sort column descending" aria-sort="ascending"><button type="button" class="btn-table-collapse"></button>Caller<span class="sorting-arrows"></span></th>
-                            <th data-priority="3" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Receiver<span class="sorting-arrows"></span></th>
-                            <th data-priority="5" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Status<span class="sorting-arrows"></span></th>
-                            <th data-priority="4" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Next Due Date: activate to sort column ascending">DateTime<span class="sorting-arrows"></span></th>
-                            <th data-priority="2" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        
-                        </tbody>
-                    </table>
-                </div>
-                <div class="dataTables_paginate  paging_simple_numbers" id="tableServicesList_paginate">
-                    <ul class="pagination">
-                        <li class="paginate_button page-item previous disabled" id="tableServicesList_previous"><a href="#" aria-controls="tableServicesList" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
-                        <li class="paginate_button page-item active"><a href="#" aria-controls="tableServicesList" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                        <li class="paginate_button page-item next disabled" id="tableServicesList_next"><a href="#" aria-controls="tableServicesList" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
-                    </ul>
-                </div>
-                <div class="dataTables_length" id="tableServicesList_length">
-                    <label>
-                        Show 
-                        <select name="tableServicesList_length" aria-controls="tableServicesList" class="custom-select custom-select-sm form-control form-control-sm">
-                            <option value="10">10</option>
-                            <option value="25">25</option>
-                            <option value="50">50</option>
-                            <option value="-1">All</option>
-                        </select>
-                        entries
-                    </label>
-                </div>
+            <div class="panel-heading">
+                <h5 class="panel-title">
+                    <i class="fas fa-phone-alt" style="margin-right: 8px;"></i> <!-- Added margin-right for spacing -->
+                    Call Details Records (CDR)
+                </h5>
             </div>
-            <div class="loader loader-table hidden" id="tableLoading">
-                <div class="spinner ">
-                    <div class="rect1"></div>
-                    <div class="rect2"></div>
-                    <div class="rect3"></div>
-                    <div class="rect4"></div>
-                    <div class="rect5"></div>
-                </div>
-            </div>
-        </div>
-        <br></br>
         <!-- Large Modal Structure -->
         <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document" style="width:1100px">
@@ -231,82 +186,101 @@
                 </div>
             </div>
         </div>
+        <div id="tableServicesList_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+            <div class="listtable">
+                <div id="tableServicesList_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tableServicesList"></label></div>
+                    <table id="tableServicesList" class="table table-list dataTable no-footer dtr-inline" role="grid">
+                        <thead>
+                        <tr role="row">
+                            <th data-priority="1" class="sorting_asc" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Product/Service: activate to sort column descending" aria-sort="ascending"><button type="button" class="btn-table-collapse"></button>Caller<span class="sorting-arrows"></span></th>
+                            <th data-priority="3" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Receiver<span class="sorting-arrows"></span></th>
+                            <th data-priority="5" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Status<span class="sorting-arrows"></span></th>
+                            <th data-priority="4" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Next Due Date: activate to sort column ascending">DateTime<span class="sorting-arrows"></span></th>
+                            <th data-priority="2" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <br></br>
+        
         <script>
             $(document).ready(function() {
-                // Handle row click event
                 var clientID = "{$clientID}";
-                $.ajax({
-                    url: "https://oceanpbx.club/includes/api/fetchcdrdetails.php",
-                    type: "POST",
-                    data: {
-                        action: "GetCDRDetails",
-                        accountcode: clientID
-                    },
-                    success: function(response) {
-                        let parsedResponse;
-                        try {
-                            parsedResponse = typeof response === "string" ? JSON.parse(response) : response;
-                        } catch (error) {
-                            console.error("Failed to parse response:", error);
-                            return;
-                        }// Log the parsed response
-                        
-                        // Check if the response status is "success"
-                        console.log("Parsed Response Data:", parsedResponse.data);
+                // Initialize DataTables
+                $('#tableServicesList').DataTable({
+                    "paging": true,           // Enable pagination
+                    "lengthChange": true,     // Allow the user to change the number of rows displayed
+                    "searching": true,        // Enable search
+                    "ordering": true,         // Enable column sorting
+                    "info": true,             // Show table information
+                    "autoWidth": false,       // Disable auto-width
+                    "pageLength": 5,         // Default number of rows per page
+                    "lengthMenu": [5, 25, 50, 100], // Options for the number of rows per page
+                    "ajax": {
+                        "url": "https://oceanpbx.club/includes/api/fetchcdrdetails.php",
+                        "type": "POST",
+                        "data": {
+                            action: "GetCDRDetails",
+                            accountcode: "{$clientID}"
+                        },
+                        "dataSrc": function (response) {
+                            let parsedResponse;
+                            try {
+                                parsedResponse = typeof response === "string" ? JSON.parse(response) : response;
+                            } catch (error) {
+                                console.error("Failed to parse response:", error);
+                                return [];
+                            }
 
-                        if (parsedResponse.status === "success" && Array.isArray(parsedResponse.data)) {
-                            const tableBody = $("#tableServicesList tbody");
-                            tableBody.empty(); // Clear existing rows
-                            parsedResponse.data.forEach(call => {
-                               console.log("Appending call:", call.src); // Debugging log
-                                const row = '<tr role="row" data-id="' + call.id + '" ' + // Include the ID as data-id
-                                    'data-caller="' + call.src + '" ' +
-                                    'data-receiver="' + call.dst + '" ' +
-                                    'data-date="' + formatDate(call.calldate) + '" ' +
-                                    'data-duration="' + call.billsec + '" ' +
-                                    'data-status="' + call.disposition + '" ' +
-                                    'data-recording-url="' + call.recordingfile + '">' +
-                                    '<td class="dtr-control sorting_1">' +
-                                        '<button type="button" class="btn-table-collapse"></button>' +
-                                        '<b>' + call.src + '</b>' +  // Concatenating call.src
-                                    '</td>' +
-                                    '<td class="text-nowrap">' +
-                                        '<b>' + call.dst + '</b>' +  // Concatenating call.dst
-                                    '</td>' +
-                                    '<td class="text-nowrap" style="color: green;">' +
-                                        '<b>' + call.disposition + '</b>' + 
-                                    '</td>' +
-                                    '<td>' +
-                                        '<span class="text-nowrap">' +
-                                            // Call formatDate with call.calldate
-                                            '<span class="hidden">' + call.calldate + '</span>' +  
-                                            // Add formatted date here
-                                            formatDate(call.calldate) + 
-                                        '</span>' +
-                                    '</td>' +
-                                    '<td class="cell-action">' +
-                                        '<div class="dropdown">' +
-                                            '<a href="#" class="btn btn-icon dropdown-toggle" data-bs-toggle="dropdown">' +
-                                                '<i class="lm lm-more"></i>' +
-                                            '</a>' +
-                                            '<ul class="dropdown-menu pull-right" role="menu">' +
-                                                '<li><a href="#">View Details</a></li>' +
-                                            '</ul>' +
-                                        '</div>' +
-                                    '</td>' +
-                                '</tr>'; 
-                                tableBody.append(row);
-                                console.log("Table rows appended");
-                            });
-                        } else {
-                            console.log("Failed to fetch data. Status:", parsedResponse.status);
+                            if (parsedResponse.status === "success" && Array.isArray(parsedResponse.data)) {
+                                return parsedResponse.data;
+                            } else {
+                                console.log("Failed to fetch data. Status:", parsedResponse.status);
+                                return [];
+                            }
                         }
                     },
-                    error: function(error) {
-                        console.error("Error:", error);
-                    }
+                    "columns": [
+                        { "data": "src" },          // Caller
+                        { "data": "dst" },          // Receiver
+                        { "data": "disposition" },  // Status
+                        { 
+                            "data": "calldate", 
+                            "render": function (data, type, row) {
+                                return formatDate(data);
+                            }
+                        },
+                        { 
+                            "data": null, 
+                            "render": function (data, type, row) {
+                                return '<div class="dropdown">' +
+                                    '<a href="#" class="btn btn-icon dropdown-toggle" data-bs-toggle="dropdown">' +
+                                        '<i class="lm lm-more"></i>' +
+                                    '</a>' +
+                                    '<ul class="dropdown-menu pull-right" role="menu">' +
+                                        '<li><a href="#">View Details</a></li>' +
+                                    '</ul>' +
+                                '</div>';
+                            }
+                        }
+                    ],
+                    "createdRow": function(row, data) {
+                        $(row).attr('role', 'row')
+                            .attr('data-id', data.id)
+                            .attr('data-caller', data.src)
+                            .attr('data-receiver', data.dst)
+                            .attr('data-date', formatDate(data.calldate))
+                            .attr('data-duration', data.billsec)
+                            .attr('data-status', data.disposition)
+                            .attr('data-recording-url', data.recordingfile);
+                    },
+                    "responsive": true 
                 });
-                
+                        
                 $('#tableServicesList').on('click', 'tbody tr', function() {
                     // Get data from the clicked row
                     var caller = $(this).data('caller');
@@ -317,6 +291,7 @@
                     var recordingUrl = $(this).data('recording-url');
 
                     // Set the data in the modal
+                    $('#callTranscript').text(caller + ' :- ');
                     $('#modalCaller').text(caller);
                     $('#modalReceiver').text(receiver);
                     $('#modalDate').text(date);
@@ -334,7 +309,6 @@
                     $('#detailsModal').modal('show');
                 });
                 $('#playCallRecording').on('click', function() {
-                    // Load and play the audio
                     $('#callRecordingAudio')[0].load(); // Load the audio source
                     $('#callRecordingAudio')[0].play(); // Play the audio
                 });
@@ -348,7 +322,6 @@
         <p>Please log in to view your client information.</p>
     {/if}
     
-
     
 
     {foreach from=$addons_html item=addon_html key=k}

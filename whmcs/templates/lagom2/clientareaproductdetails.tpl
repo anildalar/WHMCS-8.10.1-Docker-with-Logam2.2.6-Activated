@@ -10,8 +10,6 @@
             </div>
         {/if}
     {/foreach}
-    
-
 
     <div style="text-align: center;" style="padding:0px">
         <img src="https://oceanpbx.club/templates/lagom2/assets/img/page-manager/humanoid.png" alt="AI Graphic" style="max-width: 100%; height: 300px; margin-bottom: 20px;">
@@ -21,24 +19,24 @@
     </div>
     
     <div class="content">
-    <div class="row text-align-center justify-content-center">
-        <div class="col-3">
-        <label class="radio">
-            <div class="radio-styled checked">
-            <input type="radio" class="icheck-control" name="domainoption" value="text" id="selregister" checked="">
+        <div class="row text-align-center justify-content-center">
+            <div class="col-3">
+            <label class="radio">
+                <div class="radio-styled checked">
+                <input type="radio" class="icheck-control" name="domainoption" value="text" id="selregister" checked="">
+                </div>
+                <span>Enter Text</span>
+            </label>
             </div>
-            <span>Enter Text</span>
-        </label>
-        </div>
-        <div class="col-3">
-        <label class="radio">
-            <div class="radio-styled">
-            <input type="radio" class="icheck-control" name="domainoption" value="audio" id="seltransfer">
+            <div class="col-3">
+            <label class="radio">
+                <div class="radio-styled">
+                <input type="radio" class="icheck-control" name="domainoption" value="audio" id="seltransfer">
+                </div>
+                <span>Upload Audio</span>
+            </label>
             </div>
-            <span>Upload Audio</span>
-        </label>
         </div>
-    </div>
     </div>
 
     <!-- Text input section -->
@@ -84,10 +82,9 @@
     </div>
     <br></br>
 
-
-
-
 {/if}
+
+
 {if isset($RSThemes['pages'][$templatefile]) && file_exists($RSThemes['pages'][$templatefile]['fullPath'])}
     {include file=$RSThemes['pages'][$templatefile]['fullPath']}
 {else}
