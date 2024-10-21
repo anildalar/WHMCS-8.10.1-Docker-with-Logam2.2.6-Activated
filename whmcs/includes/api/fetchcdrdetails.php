@@ -46,8 +46,6 @@ if ($action == 'GetCDRDetails') {
                 
                 // Fetch the next record
                 $nextRecord = $nextStmt->fetch(PDO::FETCH_ASSOC);
-                
-                // Collect both current and next records
                 $responseData[] = $nextRecord;
             }
 

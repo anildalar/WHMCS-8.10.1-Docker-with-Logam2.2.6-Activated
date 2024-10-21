@@ -7,10 +7,10 @@
                 <h5 style="margin: 0; font-family: Orbitron, sans-serif; font-size: 18px; color: white;">
                     Wallet Balance: {$customfield.value}
                 </h5>
+                <!-- Add Payment Button -->
             </div>
         {/if}
     {/foreach}
-
     <div style="text-align: center;" style="padding:0px">
         <img src="https://oceanpbx.club/templates/lagom2/assets/img/page-manager/humanoid.png" alt="AI Graphic" style="max-width: 100%; height: 300px; margin-bottom: 20px;">
         <h4 style="font-family: Orbitron, sans-serif; font-weight: var(--font-weight-h4); line-height: var(--line-height-h4); color: var(--text-heading-color); margin-bottom: var(--headings-margin-bottom); font-size: var(--font-size-h4); text-align: center;">
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Text input section -->
     <div class="a_textbox orbitron row mb-3" id="textInputSection">
         <div class="col-12 mb-2 p-0">
@@ -65,7 +65,6 @@
             <p class="error_class" id="fileErrorMessage" style="color: red; display: none;">Please upload a valid audio file (.mp3, .wav).</p>
         </div>
     </div>
-
     <!-- Phone number input -->
     <div class="row orbitron">
     <div class="col-12 p-0">
@@ -76,9 +75,11 @@
     <p class="error_class" style="color: red;"></p>
     <!-- Call Button with Icon -->
     <div class="text-center mt-4">
-        <button type="button" class="btn btn-primary btn-lg calling_btn_bulk" id="callButton">
-            <i class="fas fa-phone-alt"></i> Call Now
-        </button>
+        {if !$isSuspended}
+            <button type="button" class="btn btn-primary btn-lg calling_btn_bulk" id="callButton">
+                <i class="fas fa-phone-alt"></i> Call Now
+            </button>
+        {/if}
     </div>
     <br></br>
 
@@ -189,7 +190,15 @@
                                         <ul class="list-info list-info-v">
                                             <li>
                                                 <span class="list-info-title">{$LANG.clientareastatus}</span>
-                                                <span class="list-info-text"><span class="status status-{$rawstatus|strtolower}">{$status}</span></span>
+                                                {if $product eq 'Ocean VoIP Agent Topup'}
+                                                    {if $isSuspended}
+                                                        <span class="list-info-text"><span class="status status-suspended">Suspended</span></span>
+                                                    {else}
+                                                        <span class="list-info-text"><span class="status status-{$rawstatus|strtolower}">{$status}</span></span>
+                                                    {/if}
+                                                {else}
+                                                    <span class="list-info-text"><span class="status status-{$rawstatus|strtolower}">{$status}</span></span>
+                                                {/if}
                                             </li>
                                             <li>
                                                 <span class="list-info-title">{$LANG.clientareahostingregdate}</span>
@@ -198,7 +207,11 @@
                                             {if $firstpaymentamount neq $recurringamount}
                                                 <li>
                                                     <span class="list-info-title">{$LANG.firstpaymentamount}</span>
-                                                    <span class="list-info-text">{$firstpaymentamount}</span>
+                                                    {if $product eq 'Ocean VoIP Agent Topup' && $isSuspended}
+                                                        <span class="list-info-text">{$currentBalance|formatCurrency} </span>
+                                                    {else}
+                                                        <span class="list-info-text">{$currentBalance|formatCurrency}</span>
+                                                    {/if}
                                                 </li>
                                             {/if}
                                             {if $billingcycle != $LANG.orderpaymenttermonetime && $billingcycle != $LANG.orderfree}
@@ -225,14 +238,15 @@
                                                 <span class="list-info-title">{$LANG.orderpaymentmethod}</span>
                                                 <span class="list-info-text"> {$paymentmethod}</span>
                                             </li>
-                                            {if $suspendreason}
+                                            {if $product eq 'Ocean VoIP Agent Topup' && $isSuspended}
                                                 <li>
                                                     <span class="list-info-title">{$LANG.suspendreason}</span>
-                                                    <span class="list-info-text">{$suspendreason}</span>
+                                                    <span class="list-info-text">Insufficient balance</span>
                                                 </li>
                                             {/if}
                                         </ul>
                                     </div>
+
                                 {/if}
                             </div>
                         {/if}

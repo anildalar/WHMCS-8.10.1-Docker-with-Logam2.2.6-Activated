@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-17 11:41:53
+/* Smarty version 3.1.48, created on 2024-10-19 09:57:52
   from '/var/www/html/templates/lagom2/clientareaproductdetails.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6710f801e16466_94600012',
+  'unifunc' => 'content_671382a00509a1_12814511',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '984fedfdf1248f97c9e080684c832ec5775d02a6' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareaproductdetails.tpl',
-      1 => 1729159889,
+      1 => 1729331331,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6710f801e16466_94600012 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671382a00509a1_12814511 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 
@@ -38,12 +38,12 @@ $_smarty_tpl->tpl_vars['customfield']->do_else = false;
                     Wallet Balance: <?php echo $_smarty_tpl->tpl_vars['customfield']->value['value'];?>
 
                 </h5>
+                <!-- Add Payment Button -->
             </div>
         <?php }?>
     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-
     <div style="text-align: center;" style="padding:0px">
         <img src="https://oceanpbx.club/templates/lagom2/assets/img/page-manager/humanoid.png" alt="AI Graphic" style="max-width: 100%; height: 300px; margin-bottom: 20px;">
         <h4 style="font-family: Orbitron, sans-serif; font-weight: var(--font-weight-h4); line-height: var(--line-height-h4); color: var(--text-heading-color); margin-bottom: var(--headings-margin-bottom); font-size: var(--font-size-h4); text-align: center;">
@@ -71,7 +71,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>
         </div>
     </div>
-
+    
     <!-- Text input section -->
     <div class="a_textbox orbitron row mb-3" id="textInputSection">
         <div class="col-12 mb-2 p-0">
@@ -98,7 +98,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <p class="error_class" id="fileErrorMessage" style="color: red; display: none;">Please upload a valid audio file (.mp3, .wav).</p>
         </div>
     </div>
-
     <!-- Phone number input -->
     <div class="row orbitron">
     <div class="col-12 p-0">
@@ -109,9 +108,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <p class="error_class" style="color: red;"></p>
     <!-- Call Button with Icon -->
     <div class="text-center mt-4">
-        <button type="button" class="btn btn-primary btn-lg calling_btn_bulk" id="callButton">
-            <i class="fas fa-phone-alt"></i> Call Now
-        </button>
+        <?php if (!$_smarty_tpl->tpl_vars['isSuspended']->value) {?>
+            <button type="button" class="btn btn-primary btn-lg calling_btn_bulk" id="callButton">
+                <i class="fas fa-phone-alt"></i> Call Now
+            </button>
+        <?php }?>
     </div>
     <br></br>
 
@@ -267,9 +268,19 @@ echo substr($_smarty_tpl->tpl_vars['bwpercent']->value,0,-1);
                                             <li>
                                                 <span class="list-info-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['clientareastatus'];?>
 </span>
-                                                <span class="list-info-text"><span class="status status-<?php echo strtolower($_smarty_tpl->tpl_vars['rawstatus']->value);?>
+                                                <?php if ($_smarty_tpl->tpl_vars['product']->value == 'Ocean VoIP Agent Topup') {?>
+                                                    <?php if ($_smarty_tpl->tpl_vars['isSuspended']->value) {?>
+                                                        <span class="list-info-text"><span class="status status-suspended">Suspended</span></span>
+                                                    <?php } else { ?>
+                                                        <span class="list-info-text"><span class="status status-<?php echo strtolower($_smarty_tpl->tpl_vars['rawstatus']->value);?>
 "><?php echo $_smarty_tpl->tpl_vars['status']->value;?>
 </span></span>
+                                                    <?php }?>
+                                                <?php } else { ?>
+                                                    <span class="list-info-text"><span class="status status-<?php echo strtolower($_smarty_tpl->tpl_vars['rawstatus']->value);?>
+"><?php echo $_smarty_tpl->tpl_vars['status']->value;?>
+</span></span>
+                                                <?php }?>
                                             </li>
                                             <li>
                                                 <span class="list-info-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['clientareahostingregdate'];?>
@@ -281,8 +292,13 @@ echo substr($_smarty_tpl->tpl_vars['bwpercent']->value,0,-1);
                                                 <li>
                                                     <span class="list-info-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['firstpaymentamount'];?>
 </span>
-                                                    <span class="list-info-text"><?php echo $_smarty_tpl->tpl_vars['firstpaymentamount']->value;?>
+                                                    <?php if ($_smarty_tpl->tpl_vars['product']->value == 'Ocean VoIP Agent Topup' && $_smarty_tpl->tpl_vars['isSuspended']->value) {?>
+                                                        <span class="list-info-text"><?php echo formatCurrency($_smarty_tpl->tpl_vars['currentBalance']->value);?>
+ </span>
+                                                    <?php } else { ?>
+                                                        <span class="list-info-text"><?php echo formatCurrency($_smarty_tpl->tpl_vars['currentBalance']->value);?>
 </span>
+                                                    <?php }?>
                                                 </li>
                                             <?php }?>
                                             <?php if ($_smarty_tpl->tpl_vars['billingcycle']->value != $_smarty_tpl->tpl_vars['LANG']->value['orderpaymenttermonetime'] && $_smarty_tpl->tpl_vars['billingcycle']->value != $_smarty_tpl->tpl_vars['LANG']->value['orderfree']) {?>
@@ -319,16 +335,16 @@ echo substr($_smarty_tpl->tpl_vars['bwpercent']->value,0,-1);
                                                 <span class="list-info-text"> <?php echo $_smarty_tpl->tpl_vars['paymentmethod']->value;?>
 </span>
                                             </li>
-                                            <?php if ($_smarty_tpl->tpl_vars['suspendreason']->value) {?>
+                                            <?php if ($_smarty_tpl->tpl_vars['product']->value == 'Ocean VoIP Agent Topup' && $_smarty_tpl->tpl_vars['isSuspended']->value) {?>
                                                 <li>
                                                     <span class="list-info-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['suspendreason'];?>
 </span>
-                                                    <span class="list-info-text"><?php echo $_smarty_tpl->tpl_vars['suspendreason']->value;?>
-</span>
+                                                    <span class="list-info-text">Insufficient balance</span>
                                                 </li>
                                             <?php }?>
                                         </ul>
                                     </div>
+
                                 <?php }?>
                             </div>
                         <?php }?>

@@ -7,7 +7,6 @@
             {assign var=clienthomealerts value=true}
         {/if}
     {/foreach}
-    
     {if $clienthomealerts && $RSThemes['pages']['clientareahome']['config']['hideDefaultAlerts'] != '1'}
         <div class="client-home-alerts alert-group">
             {foreach $panels as $item}
@@ -57,7 +56,6 @@
             {assign var="hasDashboardPrormo" value=true}
         {/if}
     {/foreach}
-    
     {if $promoSliderExtension && $promoBannerStatus eq '1'}
         {include file="$template/core/extensions/PromoBanners/promo-slide.tpl" setting="client-home"}
     {elseif $hasDashboardPrormo}
@@ -124,7 +122,6 @@
    
     {if $loggedin}
         {assign var="clientID" value=$client.id}
-        
         <div class="table-container">
             <div class="panel-heading">
                 <h5 class="panel-title">
@@ -206,20 +203,19 @@
             </div>
         </div>
         <br></br>
-        
         <script>
             $(document).ready(function() {
                 var clientID = "{$clientID}";
-                // Initialize DataTables
                 $('#tableServicesList').DataTable({
-                    "paging": true,           // Enable pagination
-                    "lengthChange": true,     // Allow the user to change the number of rows displayed
-                    "searching": true,        // Enable search
-                    "ordering": true,         // Enable column sorting
-                    "info": true,             // Show table information
-                    "autoWidth": false,       // Disable auto-width
-                    "pageLength": 5,         // Default number of rows per page
-                    "lengthMenu": [5, 25, 50, 100], // Options for the number of rows per page
+                    "paging": true,
+                    "lengthChange": true, 
+                    "searching": true,
+                    "ordering": true,
+                    "info": true,  
+                    "autoWidth": false, 
+                    "pageLength": 5,  
+                    "lengthMenu": [5, 25, 50, 100],
+                    "order": [[3, 'desc']],
                     "ajax": {
                         "url": "https://oceanpbx.club/includes/api/fetchcdrdetails.php",
                         "type": "POST",
@@ -245,9 +241,9 @@
                         }
                     },
                     "columns": [
-                        { "data": "src" },          // Caller
-                        { "data": "dst" },          // Receiver
-                        { "data": "disposition" },  // Status
+                        { "data": "src" },   
+                        { "data": "dst" },
+                        { "data": "disposition" },
                         { 
                             "data": "calldate", 
                             "render": function (data, type, row) {
@@ -279,38 +275,32 @@
                             .attr('data-recording-url', data.recordingfile);
                     },
                     "responsive": true 
-                });
-                        
+                });    
                 $('#tableServicesList').on('click', 'tbody tr', function() {
-                    // Get data from the clicked row
                     var caller = $(this).data('caller');
                     var receiver = $(this).data('receiver');
                     var date = $(this).data('date');
                     var duration = $(this).data('duration');
                     var status = $(this).data('status');
                     var recordingUrl = $(this).data('recording-url');
-
-                    // Set the data in the modal
-                    $('#callTranscript').text(caller + ' :- ');
                     $('#modalCaller').text(caller);
                     $('#modalReceiver').text(receiver);
                     $('#modalDate').text(date);
                     $('#modalDuration').text(duration);
                     $('#modalStatus').text(status);
                     var parts = date.split(' ')[0].split('/'); 
-                    var year = parts[2]; // Get year (2024)
-                    var month = parts[0]; // Get month (10)
-                    var day = parts[1]; // Get day (14)
+                    var year = parts[2];
+                    var month = parts[0];
+                    var day = parts[1];
                     var baseRecordingUrl = 'https://pbx7.oceanpbx.club/files/'; 
                     var recordingUrlBase = baseRecordingUrl + year + '/' + month + '/' + day + '/' + recordingUrl;
                     $('#audioSource').attr('src', recordingUrlBase);
                     $('#callRecordingAudio').show();
-                    // Show the modal
                     $('#detailsModal').modal('show');
                 });
                 $('#playCallRecording').on('click', function() {
-                    $('#callRecordingAudio')[0].load(); // Load the audio source
-                    $('#callRecordingAudio')[0].play(); // Play the audio
+                    $('#callRecordingAudio')[0].load(); 
+                    $('#callRecordingAudio')[0].play(); 
                 });
             });
             function formatDate(dateString) {
@@ -321,9 +311,6 @@
     {else}
         <p>Please log in to view your client information.</p>
     {/if}
-    
-    
-
     {foreach from=$addons_html item=addon_html key=k}
         {if !is_array($addon_html) && !$addon_html|strstr:"data-animation-content"}
             <div>{$addon_html}</div>
@@ -408,13 +395,13 @@
                                     {/if}
                                 </a>
                             {else}
-                                <div menuItemName="{$childItem->getName()}"
-                                     class="list-group-item{if $childItem->getClass()} {$childItem->getClass()}{/if} {if $RSThemes['pages']['clientareahome']['config']['hideExpiringIn'] == '1'}hide-expire-status{/if}"
+                                <div menuItemName="{$childItem->getName()}"class="list-group-item{if $childItem->getClass()} {$childItem->getClass()}{/if} {if $RSThemes['pages']['clientareahome']['config']['hideExpiringIn'] == '1'}hide-expire-status{/if}"
                                      id="{$childItem->getId()}">
                                     {if $childItem->hasIcon()}<i class="{$childItem->getIcon()}"></i>&nbsp;{/if}
                                     {$childItem->getLabel()}
                                     {if $childItem->hasBadge()}&nbsp;<span
-                                            class="badge">{$childItem->getBadge()}</span>{/if}
+                                        class="badge">{$childItem->getBadge()}</span>
+                                    {/if}
                                 </div>
                             {/if}
                         {/foreach}

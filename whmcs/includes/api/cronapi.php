@@ -26,7 +26,6 @@ $countryCodes = [
     '7' => 'Russia',
     '41' => 'Switzerland',
     '30' => 'Greece',
-    '41' => 'Switzerland',
     '32' => 'Belgium',
     '45' => 'Denmark',
     '46' => 'Sweden',
@@ -52,15 +51,13 @@ $countryCodes = [
     '82' => 'South Korea',
     '66' => 'Thailand',
     '64' => 'New Zealand',
-    '64' => 'New Zealand',
     '963' => 'Syria',
+    '966' => 'Kingdom of Saudi Arabia',
     '90' => 'Turkey',
     '20' => 'Egypt',
     '27' => 'South Africa',
-    '27' => 'South Africa',
     '30' => 'Greece',
     '41' => 'Switzerland',
-    // Add more country codes as necessary
 ];
 
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
@@ -165,8 +162,7 @@ if ($action === 'CronCallingAction') {
                 
                 $currentBalance = (float)$clientCustomFields->value;
                 $newBalance = $currentBalance - $totalPrice;
-        
-                if ($newBalance < 0) {
+                if ($newBalance <= 0) {
                     echo json_encode(['result' => 'error', 'message' => 'Insufficient balance']);
                     exit;
                 }
@@ -203,7 +199,6 @@ function getCountryCode($number) {
     global $countryCodes; 
     // Remove spaces and '+' sign at the beginning
     $number = preg_replace('/\s/', '', $number);
-
     for ($length = 1; $length <= 4; $length++) {
         $code = substr($number, 0, $length); // Extract country code
         if (isset($countryCodes[$code])) {

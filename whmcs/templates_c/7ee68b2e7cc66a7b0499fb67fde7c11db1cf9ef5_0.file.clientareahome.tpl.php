@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-17 10:36:52
+/* Smarty version 3.1.48, created on 2024-10-18 11:18:34
   from '/var/www/html/templates/lagom2/clientareahome.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6710e8c4871160_57469081',
+  'unifunc' => 'content_6712440a67fff7_54294934',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareahome.tpl',
-      1 => 1729161408,
+      1 => 1729246409,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6710e8c4871160_57469081 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6712440a67fff7_54294934 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'outputHomePanels' => 
   array (
     'compiled_filepath' => '/var/www/html/templates_c/7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5_0.file.clientareahome.tpl.php',
     'uid' => '7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5',
-    'call_name' => 'smarty_template_function_outputHomePanels_7171660886710e8c47efdf3_56824923',
+    'call_name' => 'smarty_template_function_outputHomePanels_2842898426712440a5e9510_48319813',
   ),
 ));
 if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
@@ -44,7 +44,6 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-    
     <?php if ($_smarty_tpl->tpl_vars['clienthomealerts']->value && $_smarty_tpl->tpl_vars['RSThemes']->value['pages']['clientareahome']['config']['hideDefaultAlerts'] != '1') {?>
         <div class="client-home-alerts alert-group">
             <?php
@@ -124,7 +123,6 @@ $_smarty_tpl->tpl_vars['addon']->do_else = false;
     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-    
     <?php if ($_smarty_tpl->tpl_vars['promoSliderExtension']->value && $_smarty_tpl->tpl_vars['promoBannerStatus']->value == '1') {?>
         <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/core/extensions/PromoBanners/promo-slide.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('setting'=>"client-home"), 0, true);
 ?>
@@ -209,7 +207,6 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
    
     <?php if ($_smarty_tpl->tpl_vars['loggedin']->value) {?>
         <?php $_smarty_tpl->_assignInScope('clientID', $_smarty_tpl->tpl_vars['client']->value['id']);?>
-        
         <div class="table-container">
             <div class="panel-heading">
                 <h5 class="panel-title">
@@ -291,22 +288,21 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
             </div>
         </div>
         <br></br>
-        
         <?php echo '<script'; ?>
 >
             $(document).ready(function() {
                 var clientID = "<?php echo $_smarty_tpl->tpl_vars['clientID']->value;?>
 ";
-                // Initialize DataTables
                 $('#tableServicesList').DataTable({
-                    "paging": true,           // Enable pagination
-                    "lengthChange": true,     // Allow the user to change the number of rows displayed
-                    "searching": true,        // Enable search
-                    "ordering": true,         // Enable column sorting
-                    "info": true,             // Show table information
-                    "autoWidth": false,       // Disable auto-width
-                    "pageLength": 5,         // Default number of rows per page
-                    "lengthMenu": [5, 25, 50, 100], // Options for the number of rows per page
+                    "paging": true,
+                    "lengthChange": true, 
+                    "searching": true,
+                    "ordering": true,
+                    "info": true,  
+                    "autoWidth": false, 
+                    "pageLength": 5,  
+                    "lengthMenu": [5, 25, 50, 100],
+                    "order": [[3, 'desc']],
                     "ajax": {
                         "url": "https://oceanpbx.club/includes/api/fetchcdrdetails.php",
                         "type": "POST",
@@ -333,9 +329,9 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
                         }
                     },
                     "columns": [
-                        { "data": "src" },          // Caller
-                        { "data": "dst" },          // Receiver
-                        { "data": "disposition" },  // Status
+                        { "data": "src" },   
+                        { "data": "dst" },
+                        { "data": "disposition" },
                         { 
                             "data": "calldate", 
                             "render": function (data, type, row) {
@@ -367,38 +363,32 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
                             .attr('data-recording-url', data.recordingfile);
                     },
                     "responsive": true 
-                });
-                        
+                });    
                 $('#tableServicesList').on('click', 'tbody tr', function() {
-                    // Get data from the clicked row
                     var caller = $(this).data('caller');
                     var receiver = $(this).data('receiver');
                     var date = $(this).data('date');
                     var duration = $(this).data('duration');
                     var status = $(this).data('status');
                     var recordingUrl = $(this).data('recording-url');
-
-                    // Set the data in the modal
-                    $('#callTranscript').text(caller + ' :- ');
                     $('#modalCaller').text(caller);
                     $('#modalReceiver').text(receiver);
                     $('#modalDate').text(date);
                     $('#modalDuration').text(duration);
                     $('#modalStatus').text(status);
                     var parts = date.split(' ')[0].split('/'); 
-                    var year = parts[2]; // Get year (2024)
-                    var month = parts[0]; // Get month (10)
-                    var day = parts[1]; // Get day (14)
+                    var year = parts[2];
+                    var month = parts[0];
+                    var day = parts[1];
                     var baseRecordingUrl = 'https://pbx7.oceanpbx.club/files/'; 
                     var recordingUrlBase = baseRecordingUrl + year + '/' + month + '/' + day + '/' + recordingUrl;
                     $('#audioSource').attr('src', recordingUrlBase);
                     $('#callRecordingAudio').show();
-                    // Show the modal
                     $('#detailsModal').modal('show');
                 });
                 $('#playCallRecording').on('click', function() {
-                    $('#callRecordingAudio')[0].load(); // Load the audio source
-                    $('#callRecordingAudio')[0].play(); // Play the audio
+                    $('#callRecordingAudio')[0].load(); 
+                    $('#callRecordingAudio')[0].play(); 
                 });
             });
             function formatDate(dateString) {
@@ -410,9 +400,6 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
     <?php } else { ?>
         <p>Please log in to view your client information.</p>
     <?php }?>
-    
-    
-
     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['addons_html']->value, 'addon_html', false, 'k');
 $_smarty_tpl->tpl_vars['addon_html']->do_else = true;
@@ -474,9 +461,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php }
 }
 }
-/* smarty_template_function_outputHomePanels_7171660886710e8c47efdf3_56824923 */
-if (!function_exists('smarty_template_function_outputHomePanels_7171660886710e8c47efdf3_56824923')) {
-function smarty_template_function_outputHomePanels_7171660886710e8c47efdf3_56824923(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_outputHomePanels_2842898426712440a5e9510_48319813 */
+if (!function_exists('smarty_template_function_outputHomePanels_2842898426712440a5e9510_48319813')) {
+function smarty_template_function_outputHomePanels_2842898426712440a5e9510_48319813(Smarty_Internal_Template $_smarty_tpl,$params) {
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
 }
@@ -590,8 +577,7 @@ if ($_smarty_tpl->tpl_vars['childItem']->value->getAttribute('target')) {?> targ
                                 </a>
                             <?php } else { ?>
                                 <div menuItemName="<?php echo $_smarty_tpl->tpl_vars['childItem']->value->getName();?>
-"
-                                     class="list-group-item<?php if ($_smarty_tpl->tpl_vars['childItem']->value->getClass()) {?> <?php echo $_smarty_tpl->tpl_vars['childItem']->value->getClass();
+"class="list-group-item<?php if ($_smarty_tpl->tpl_vars['childItem']->value->getClass()) {?> <?php echo $_smarty_tpl->tpl_vars['childItem']->value->getClass();
 }?> <?php if ($_smarty_tpl->tpl_vars['RSThemes']->value['pages']['clientareahome']['config']['hideExpiringIn'] == '1') {?>hide-expire-status<?php }?>"
                                      id="<?php echo $_smarty_tpl->tpl_vars['childItem']->value->getId();?>
 ">
@@ -600,8 +586,9 @@ if ($_smarty_tpl->tpl_vars['childItem']->value->getAttribute('target')) {?> targ
                                     <?php echo $_smarty_tpl->tpl_vars['childItem']->value->getLabel();?>
 
                                     <?php if ($_smarty_tpl->tpl_vars['childItem']->value->hasBadge()) {?>&nbsp;<span
-                                            class="badge"><?php echo $_smarty_tpl->tpl_vars['childItem']->value->getBadge();?>
-</span><?php }?>
+                                        class="badge"><?php echo $_smarty_tpl->tpl_vars['childItem']->value->getBadge();?>
+</span>
+                                    <?php }?>
                                 </div>
                             <?php }?>
                         <?php
@@ -700,5 +687,5 @@ echo smarty_modifier_replace(smarty_modifier_replace($_smarty_tpl->tpl_vars['ite
             </div>
         <?php
 }}
-/*/ smarty_template_function_outputHomePanels_7171660886710e8c47efdf3_56824923 */
+/*/ smarty_template_function_outputHomePanels_2842898426712440a5e9510_48319813 */
 }
