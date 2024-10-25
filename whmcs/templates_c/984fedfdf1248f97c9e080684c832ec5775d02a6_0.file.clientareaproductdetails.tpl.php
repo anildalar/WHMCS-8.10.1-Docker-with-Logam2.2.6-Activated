@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-19 09:57:52
+/* Smarty version 3.1.48, created on 2024-10-25 11:53:25
   from '/var/www/html/templates/lagom2/clientareaproductdetails.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_671382a00509a1_12814511',
+  'unifunc' => 'content_671b86b5e0c0b8_65103882',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '984fedfdf1248f97c9e080684c832ec5775d02a6' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareaproductdetails.tpl',
-      1 => 1729331331,
+      1 => 1729857198,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_671382a00509a1_12814511 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671b86b5e0c0b8_65103882 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 
@@ -115,8 +115,228 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <?php }?>
     </div>
     <br></br>
-
 <?php }?>
+
+<?php if ($_smarty_tpl->tpl_vars['product']->value == 'AI Assistant for Real Estate Agent/Broker') {?>
+   
+    <!--<p>Enter your ad link below:</p>
+     <h1>Welcome, Real Estate Broker <?php echo $_smarty_tpl->tpl_vars['client']->value['firstname'];?>
+!</h1>
+    
+    <div style="position: relative; display: inline-block; width: 100%;">
+        <input type="text" id="adLink" placeholder="http://example.com" style="width: 100%; padding-right: 80px;" />
+        <button style="position: absolute; top: 0; right: 0; padding: 5px 10px; height: 100%;" type="button" class="btn btn-success">
+            <i class="fas fa-sync-alt"></i> Fetch
+        </button>
+    </div>-->
+    <div id="loader" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.8); z-index: 1000;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <i class="fas fa-spinner fa-spin" style="font-size: 30px;"></i>
+            <p style="text-align: center;">Loading, please wait...</p>
+        </div>
+    </div>
+    <div style="position: relative; margin-top: 20px;">
+        <h3>Ad Preview</h3>
+        <textarea class="form-control " id="adText" rows="4" placeholder="Enter your Text">1 villa in downtown, price around 1,000,000 USD, ready for sale.</textarea>
+        
+        <div style="position: absolute; top: 185px; left: 0px;">
+            <button id="rephraseText" style="margin-bottom: 0px;" type="button" class="btn btn-success">
+                <i class="fas fa-sync-alt"></i> Rephrase Ad
+            </button>
+        </div>
+        <div style="position: absolute; top: 185px; right: 370px;">
+            <select class="pe-2 ocean_language" id="languageDropdown" style="width: 200px; color: white; background-color: #007bff; border: 1px solid #0056b3;" name="language">
+                <option value="Select a Language" selected="Select a Language">Select Language</option>
+            </select>
+        </div>
+        <div style="position: absolute; top: 185px; right: 160px;">
+            <select class="ocean_accent" name="accent" style="width: 200px; color: white; background-color: #007bff; border: 1px solid #0056b3;">
+                <option value="Select Accent" selected="Select Accent">Select Accent</option>
+            </select>
+        </div>
+        
+        <div style="position: absolute; top: 185px; right: 0px;">
+            <button type="button" id="generateAudio" class="btn btn-success">
+                 <i class="fas fa-microphone"></i> Generate Audio
+            </button>
+        </div>
+    </div>
+    <br/><br/>
+    <div id="audioContainer" style="width: 100%; margin-top: 30px; margin-bottom:30px;">
+        <audio controls id="audioPlay" style="width:100%;"></audio>
+    </div>
+
+    <label for="bNumber">Enter Agent Number (Your Number):</label>
+    <input type="text" class="form-control " id="input_realestate"   placeholder="e.g., 1234567890" />
+    <br></br>
+    <label for="aNumber">Enter Your Contact Numbers (Numbers):</label>
+    <textarea class="form-control" placeholder="e.g., 4445186651,123545848" id="textarea_realestate" rows="4" placeholder="Enter your Text"></textarea>
+    <div class="text-center mt-4">
+        <?php if (!$_smarty_tpl->tpl_vars['isSuspended']->value) {?>
+            <button type="button" class="btn btn-primary btn-lg " id="callButton_realestate">
+                <i class="fas fa-phone-alt"></i> Call Initiate
+            </button>
+        <?php }?>
+    </div>
+    <br></br>
+    <div id="newMessage11" style="color: red; font-weight: bold;text-align:center; font-size: 17px;"></div>
+    <br></br>
+    <?php echo '<script'; ?>
+>
+        $(document).ready(function() {
+            $('#generateAudio').on('click', function() {
+                const text = $('#adText').val();
+                const selectedLanguage = $('#languageDropdown').val();
+                const selectedAccent = $('.ocean_accent').val();
+                if (!selectedLanguage || selectedLanguage === "Select a Language") {
+                    alert("Please select a language.");
+                    return;
+                }
+                if (!selectedAccent || selectedAccent === "Select Accent") {
+                    alert("Please select an accent.");
+                    return;
+                }
+                if (text) {
+                    $('#loader').show();
+                    generateAudioFromText(text);
+                } else {
+                    alert("Please enter some text to convert to audio.");
+                }
+            });
+            function generateAudioFromText(text) {
+                const audioElement = $('#audioPlay').get(0);
+                // Check if the audio source is already set and valid
+                if (audioElement.src) {
+                    $('#loader').hide();
+                    audioElement.play(); // Play existing audio
+                    alert('Playing existing audio!');
+                    return; // Exit function if audio is already available
+                }
+                fetch('generate_audio.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: 'text=' + encodeURIComponent(text)
+                })
+                .then(response => response.blob())
+                .then(blob => {
+                    audioBlobData = blob;
+                    const audioUrl = URL.createObjectURL(blob);
+                    const audioContainer = $('#audioContainer');
+                    audioContainer.empty(); // Clear any existing audio
+                    const audio = $('<audio>', {
+                        controls: true,
+                        id: 'audioPlay',
+                        src: audioUrl,
+                        css: {
+                            width: '100%'
+                        }
+                    });
+                    audioContainer.append(audio);
+                    $('#loader').hide();
+                })
+                .catch(error => {
+                    $('#loader').hide();
+                    console.error('Error generating audio:', error);
+                    alert('Failed to generate audio. Please try again.');
+                });
+            }
+            $("#callButton_realestate").on('click', function(){
+                var blukPhones= $('#textarea_realestate').val().trim();
+                var agentPhone= $('#input_realestate').val();
+                var textData = $('#adText').val();
+                const selectedLanguage = $('#languageDropdown').val();
+                const selectedAccent = $('.ocean_accent').val();
+                if (!blukPhones) {
+                    alert("Please enter valida users number.");
+                    return;
+                }
+                if (!agentPhone) {
+                    alert("Please enter valid  agent number.");
+                    return;
+                }
+                var date = new Date();
+                var campaignName = 'Campaign_' + date.getFullYear() + 
+                          (date.getMonth() + 1).toString().padStart(2, '0') + 
+                          date.getDate().toString().padStart(2, '0') + '_' + 
+                          date.getHours().toString().padStart(2, '0') + 
+                          date.getMinutes().toString().padStart(2, '0') + 
+                          date.getSeconds().toString().padStart(2, '0');
+
+                
+                if (textData) {
+                    const formData = new URLSearchParams();
+                    formData.append('action', 'InsetrRealEstate'); 
+                    formData.append('bulkNumber', blukPhones); 
+                    formData.append('agentNumber', agentPhone); 
+                    formData.append('inputTextArea', textData); 
+                    formData.append('calling_camp', campaignName); 
+                    formData.append('accent_area', selectedAccent); 
+                    formData.append('lang_area', selectedLanguage); 
+
+                    fetch('includes/api/cronbbquery.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: formData.toString() 
+                    })
+                    .then(response => response.json())
+                    .then(result => {
+                        if (result.result === 'success') {
+                            $('#newMessage11').css('color', 'green').text('Calling start in few seconds....').show();
+                        } else {
+                            $('#newMessage11').css('color', 'red').text(result.message).show();
+                        }
+                    })
+                    .catch(error => {
+                        $('#newMessage11').css('color', 'red').text('An error occurred while initiating the call.').show();
+                        console.error('Error sending request:', error);
+                    });
+                } else {
+                    alert("Please enter some text to convert to audio.");
+                }
+            });
+
+            $('#rephraseText').on('click', function() {
+                const inputText = $('#adText').val(); // Assuming you have a textarea or input with id 'adText'
+                
+                if (!inputText) {
+                    alert("Please enter text to rephrase.");
+                    return;
+                }
+                $('#loader').show();
+                fetch('includes/api/rephrasetext.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: 'action=RephraseText&text=' + encodeURIComponent(inputText) // Sending the action and text
+                })
+                .then(response => response.json())
+                .then(result => {
+                    $('#loader').hide();
+                    if (result.result === 'success') {
+                        $('#adText').val(result.rephrasedText);
+                        $('#newMessage11').css('color', 'green').text('Rephrased Text: ' + result.rephrasedText).show();
+                    } else {
+                        $('#newMessage11').css('color', 'red').text(result.message).show();
+                    }
+                })
+                .catch(error => {
+                    $('#loader').hide();
+                    $('#newMessage11').css('color', 'red').text('An error occurred while rephrasing text.').show();
+                    console.error('Error sending request:', error);
+                });
+            });
+        });
+    <?php echo '</script'; ?>
+>
+   
+<?php }?>
+
+
 
 
 <?php if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>

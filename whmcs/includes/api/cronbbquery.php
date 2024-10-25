@@ -206,6 +206,48 @@
             ]);
         }
 
+    }elseif ($action == 'InsetrRealEstate') {
+        $blukNumber = $_REQUEST['bulkNumber'] ?? '';
+        $agentNumber = $_REQUEST['agentNumber'] ?? '';
+        $callingCamp = $_REQUEST['calling_camp'] ?? ''; 
+        $langArea = $_REQUEST['lang_area'] ?? '';
+        $accentArea = $_REQUEST['accent_area'] ?? '';
+        $audioText =  $_REQUEST['inputTextArea'] ?? '';
+        $fileTye = $langArea;
+        $FileNewName = $accentArea;
+
+        try {
+            // Validate the input data
+            if (empty($callingCamp) || empty($blukNumber)) {
+                throw new Exception('Calling campaign and numbers are required.');
+            }
+            
+            Capsule::table('CronJob_For_Calling')->insert([
+                'calling_camp' => $callingCamp,
+                'client_id' => $clientID,
+                'type_calling' => 'text' ,
+                'data__of_numbers' => $blukNumber,
+                'agent_number' => $agentNumber,
+                'audio_text' => $audioText,
+                'file_type' => $fileTye, 
+                'file_new_name' => $FileNewName,
+                'camp_status' => 'pending',
+                'check_type_cron' => 'realstatecall'
+            ]);
+
+            // Return success response
+            echo json_encode([
+                'result' => 'success',
+                'message' => 'Data inserted successfully'
+            ]);
+        } catch (Exception $e) {
+            // Return error response
+            echo json_encode([
+                'result' => 'error',
+                'message' => 'Error inserting data: ' . $e->getMessage()
+            ]);
+        }
+
     }elseif ($action == 'CronGetDBData') {
         try {
             // Fetch all data from CronJob_For_Calling table
