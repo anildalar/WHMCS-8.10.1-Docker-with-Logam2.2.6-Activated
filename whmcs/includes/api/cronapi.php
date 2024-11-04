@@ -220,7 +220,7 @@ if ($action === 'CronCallingAction') {
                         "tocall" => $numberArray,
                         "language"=> $campaign->file_type,
                         "accent"=>$campaign->file_new_name, 
-                        "message" => $campaign->audio_text, // You can include the file URL/path if needed by the API
+                        "message" => $campaign->audio_text, 
                         "campaignId"=>$campaign->calling_camp, 
                         "accountId"=>$campaign->client_id,
                         "maxretires" => "30"
