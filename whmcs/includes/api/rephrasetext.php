@@ -10,7 +10,6 @@ $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 if ($action === 'RephraseText') {
     $inputText = isset($_REQUEST['text']) ? $_REQUEST['text'] : '';
     
-    // Sample property description for rephrasing
     if (empty($inputText)) {
         $inputText = "This beautiful 3-bedroom house is located in a quiet neighborhood. It features a spacious backyard, modern kitchen, and is just minutes away from local amenities.";
     }

@@ -123,194 +123,244 @@
     {if $loggedin}
         {assign var="clientID" value=$client.id}
         <div class="table-container">
+            <!-- First Section: Ocean VoIP Agent Call Details -->
             <div class="panel-heading">
                 <h5 class="panel-title">
-                    <i class="fas fa-phone-alt" style="margin-right: 8px;"></i> <!-- Added margin-right for spacing -->
-                    Call Details Records (CDR)
+                    <i class="fas fa-phone-alt" style="margin-right: 8px;"></i>
+                    Reports/Ocean VoIP Agent (CDR)
                 </h5>
             </div>
-        <!-- Large Modal Structure -->
-        <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document" style="width:1100px">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="detailsModalLabel">Call Details</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+            <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document" style="width:1100px">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="detailsModalLabel">Call Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Table for displaying call details -->
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Caller</th>
+                                        <th>Receiver</th>
+                                        <th>Status</th>
+                                        <th>Call Duration/BillSec</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td id="modalCaller">+451248752</td>
+                                        <td id="modalReceiver">+84955425</td>
+                                        <td id="modalStatus">Answerd</td>
+                                        <td id="modalDuration">1min</td>
+                                        <td id="modalDate">02/10/2024</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="call-recorder">
+                                <button id="playCallRecording" class="btn btn-primary">
+                                    <i class="fa fa-play"></i> Play Call Recording
+                                </button>
+                                <audio id="callRecordingAudio" controls style="display: none; margin-top: 10px; width: 100%;">
+                                    <source id="audioSource" src="">
+                                    Your browser does not support the audio element.
+                                </audio>
+                            </div>
+                            <!-- Call Transcript Section -->
+                            <div class="form-group" style="margin-top: 20px;">
+                                <label for="callTranscript">Call Transcript</label>
+                                <textarea id="callTranscript" class="form-control" rows="6" placeholder="Call transcript will appear here..." readonly></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <!-- Table for displaying call details -->
-                        <table class="table table-striped table-bordered">
+                </div>
+            </div>
+            <div id="tableServicesList_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                <div class="listtable">
+                    <div id="tableServicesList_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tableServicesList"></label></div>
+                        <table id="tableServicesList" class="table tableServiceBoth table-list dataTable no-footer dtr-inline" role="grid">
                             <thead>
-                                <tr>
-                                    <th>Caller</th>
-                                    <th>Receiver</th>
-                                    <th>Status</th>
-                                    <th>Call Duration/BillSec</th>
-                                    <th>Date</th>
+                                <tr role="row">
+                                    <th data-priority="1" class="sorting_asc" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Product/Service: activate to sort column descending" aria-sort="ascending"><button type="button" class="btn-table-collapse"></button>Caller<span class="sorting-arrows"></span></th>
+                                    <th data-priority="3" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Receiver<span class="sorting-arrows"></span></th>
+                                    <th data-priority="5" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Status<span class="sorting-arrows"></span></th>
+                                    <th data-priority="4" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Next Due Date: activate to sort column ascending">DateTime<span class="sorting-arrows"></span></th>
+                                    <th data-priority="2" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td id="modalCaller">+451248752</td>
-                                    <td id="modalReceiver">+84955425</td>
-                                    <td id="modalStatus">Answerd</td>
-                                    <td id="modalDuration">1min</td>
-                                    <td id="modalDate">02/10/2024</td>
-                                </tr>
                             </tbody>
                         </table>
-                        <!-- Call Recorder Button and Playback -->
-                        <div class="call-recorder">
-                            <button id="playCallRecording" class="btn btn-primary">
-                                <i class="fa fa-play"></i> Play Call Recording
-                            </button>
-                            <audio id="callRecordingAudio" controls style="display: none; margin-top: 10px; width: 100%;">
-                                <source id="audioSource" src="">
-                                Your browser does not support the audio element.
-                            </audio>
-                        </div>
-                        <!-- Call Transcript Section -->
-                        <div class="form-group" style="margin-top: 20px;">
-                            <label for="callTranscript">Call Transcript</label>
-                            <textarea id="callTranscript" class="form-control" rows="6" placeholder="Call transcript will appear here..." readonly></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="tableServicesList_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-            <div class="listtable">
-                <div id="tableServicesList_filter" class="dataTables_filter"><label><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tableServicesList"></label></div>
-                    <table id="tableServicesList" class="table table-list dataTable no-footer dtr-inline" role="grid">
-                        <thead>
-                        <tr role="row">
-                            <th data-priority="1" class="sorting_asc" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Product/Service: activate to sort column descending" aria-sort="ascending"><button type="button" class="btn-table-collapse"></button>Caller<span class="sorting-arrows"></span></th>
-                            <th data-priority="3" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Receiver<span class="sorting-arrows"></span></th>
-                            <th data-priority="5" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Pricing: activate to sort column ascending">Status<span class="sorting-arrows"></span></th>
-                            <th data-priority="4" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="Next Due Date: activate to sort column ascending">DateTime<span class="sorting-arrows"></span></th>
-                            <th data-priority="2" class="sorting" tabindex="0" aria-controls="tableServicesList" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
+            <br></br>
+            <div class="table-container">
+                    <!-- Second Section: AI Assistant for Real Estate Call Details -->
+                    <div class="panel-heading">
+                        <h5 class="panel-title">
+                            <i class="fas fa-user-tie" style="margin-right: 8px;"></i>
+                            Reports/AI Assistant Real Estate Agent (CDR)
+                        </h5>
+                    </div>
+                    <!-- AI Assistant for Real Estate Table -->
+                    <div id="tableServicesListWrapperAIRealEstate" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                        <div class="listtable">
+                            <div id="tableServicesListFilterAIRealEstate" class="dataTables_filter">
+                                <label><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tableServicesListAIRealEstate"></label>
+                            </div>
+                            <table id="tableServicesListAIRealEstate" class="table tableServiceBoth table-list dataTable no-footer dtr-inline" role="grid">
+                                <thead>
+                                    <tr role="row">
+                                        <th>Caller</th>
+                                        <th>Receiver</th>
+                                        <th>Status</th>
+                                        <th>DateTime</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- AI Assistant for Real Estate Data -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
             </div>
-        </div>
-        <br></br>
-        <script>
-            $(document).ready(function() {
-                var clientID = "{$clientID}";
-                $('#tableServicesList').DataTable({
-                    "paging": true,
-                    "lengthChange": true, 
-                    "searching": true,
-                    "ordering": true,
-                    "info": true,  
-                    "autoWidth": false, 
-                    "pageLength": 5,  
-                    "lengthMenu": [5, 25, 50, 100],
-                    "order": [[3, 'desc']],
-                    "ajax": {
+            <br></br>
+                
+            <script>
+                $(document).ready(function() {
+                    var clientID = "{$clientID}";
+
+                    // Fetch data once and split it into two arrays based on 'userfield'
+                    $.ajax({
                         "url": "https://oceanpbx.club/includes/api/fetchcdrdetails.php",
                         "type": "POST",
                         "data": {
                             action: "GetCDRDetails",
-                            accountcode: "{$clientID}"
+                            accountcode: clientID
                         },
-                        "dataSrc": function (response) {
+                        success: function(response) {
                             let parsedResponse;
                             try {
                                 parsedResponse = typeof response === "string" ? JSON.parse(response) : response;
                             } catch (error) {
                                 console.error("Failed to parse response:", error);
-                                return [];
+                                return;
                             }
-
-                            if (parsedResponse.status === "success" && Array.isArray(parsedResponse.data)) {
-                                return parsedResponse.data;
+                            console.log("parsedResponse",parsedResponse);
+                            if (parsedResponse.status === "success") {
+                                console.log("data",parsedResponse.data);
+                                if (parsedResponse.data.voipAgent.length > 0 ) {
+                                    initializeDataTable('#tableServicesList', parsedResponse.data.voipAgent);
+                                } else {
+                                    $('#tableServicesList tbody').html('<tr><td colspan="5">No VoIP Agent Call Details available.</td></tr>');
+                                }
+                                if (parsedResponse.data.aiRealEstate.length > 0 ) {
+                                    initializeDataTable('#tableServicesListAIRealEstate', parsedResponse.data.aiRealEstate);
+                                } else {
+                                    $('#tableServicesListAIRealEstate tbody').html('<tr><td colspan="5">No AI Assistant Real Estate Agent Call Details available.</td></tr>');
+                                }
+                                
                             } else {
                                 console.log("Failed to fetch data. Status:", parsedResponse.status);
-                                return [];
                             }
                         }
-                    },
-                    "columns": [
-                        { "data": "src" },   
-                        { "data": "dst" },
-                        { "data": "disposition" },
-                        { 
-                            "data": "calldate", 
-                            "render": function (data, type, row) {
-                                return formatDate(data);
-                            }
-                        },
-                        { 
-                            "data": null, 
-                            "render": function (data, type, row) {
-                                return '<div class="dropdown">' +
-                                    '<a href="#" class="btn btn-icon dropdown-toggle" data-bs-toggle="dropdown">' +
-                                        '<i class="lm lm-more"></i>' +
-                                    '</a>' +
-                                    '<ul class="dropdown-menu pull-right" role="menu">' +
-                                        '<li><a href="#">View Details</a></li>' +
-                                    '</ul>' +
-                                '</div>';
-                            }
-                        }
-                    ],
-                    "createdRow": function(row, data) {
-                        $(row).attr('role', 'row')
-                            .attr('data-id', data.id)
-                            .attr('data-caller', data.src)
-                            .attr('data-receiver', data.dst)
-                            .attr('data-date', formatDate(data.calldate))
-                            .attr('data-duration', data.billsec)
-                            .attr('data-status', data.disposition)
-                            .attr('data-recording-url', data.recordingfile);
-                    },
-                    "responsive": true 
-                });    
-                $('#tableServicesList').on('click', 'tbody tr', function() {
-                    var caller = $(this).data('caller');
-                    var receiver = $(this).data('receiver');
-                    var date = $(this).data('date');
-                    var duration = $(this).data('duration');
-                    var status = $(this).data('status');
-                    var recordingUrl = $(this).data('recording-url');
-                    $('#modalCaller').text(caller);
-                    $('#modalReceiver').text(receiver);
-                    $('#modalDate').text(date);
-                    $('#modalDuration').text(duration);
-                    $('#modalStatus').text(status);
-                    var parts = date.split(' ')[0].split('/'); 
-                    var year = parts[2];
-                    var month = parts[0];
-                    var day = parts[1];
-                    var baseRecordingUrl = 'https://pbx7.oceanpbx.club/files/'; 
-                    var recordingUrlBase = baseRecordingUrl + year + '/' + month + '/' + day + '/' + recordingUrl;
-                    $('#audioSource').attr('src', recordingUrlBase);
-                    $('#callRecordingAudio').show();
-                    $('#detailsModal').modal('show');
+                    });
+
+                    function initializeDataTable(tableId, data) {
+                        $(tableId).DataTable({
+                            "data": data,
+                            "paging": true,
+                            "lengthChange": true,
+                            "searching": true,
+                            "ordering": true,
+                            "info": true,
+                            "autoWidth": false,
+                            "pageLength": 2,
+                            "lengthMenu": [2, 10, 25, 50, 100],
+                            "order": [[3, 'desc']],
+                            "columns": [
+                                { "data": "src" },
+                                { "data": "dst" },
+                                { "data": "disposition" },
+                                { 
+                                    "data": "calldate", 
+                                    "render": function (data, type, row) {
+                                        return formatDate(data);
+                                    }
+                                },
+                                { 
+                                    "data": null, 
+                                    "render": function (data, type, row) {
+                                        return '<div class="dropdown">' +
+                                            '<a href="#" class="btn btn-icon dropdown-toggle" data-bs-toggle="dropdown">' +
+                                                '<i class="lm lm-more"></i>' +
+                                            '</a>' +
+                                            '<ul class="dropdown-menu pull-right" role="menu">' +
+                                                '<li><a href="#">View Details</a></li>' +
+                                            '</ul>' +
+                                        '</div>';
+                                    }
+                                }
+                            ],
+                            "createdRow": function(row, data) {
+                                $(row).attr('role', 'row')
+                                    .attr('data-id', data.id)
+                                    .attr('data-caller', data.src)
+                                    .attr('data-receiver', data.dst)
+                                    .attr('data-date', formatDate(data.calldate))
+                                    .attr('data-duration', data.billsec)
+                                    .attr('data-status', data.disposition)
+                                    .attr('data-recording-url', data.recordingfile);
+                            },
+                            "responsive": true,
+                        });
+                    }
+                   
+                    $('.tableServiceBoth').on('click', 'tbody tr', function() {
+                        var caller = $(this).data('caller');
+                        var receiver = $(this).data('receiver');
+                        var date = $(this).data('date');
+                        var duration = $(this).data('duration');
+                        var status = $(this).data('status');
+                        var recordingUrl = $(this).data('recording-url');
+                        $('#modalCaller').text(caller);
+                        $('#modalReceiver').text(receiver);
+                        $('#modalDate').text(date);
+                        $('#modalDuration').text(duration);
+                        $('#modalStatus').text(status);
+                        var parts = date.split(' ')[0].split('/'); 
+                        var year = parts[2];
+                        var month = parts[0].padStart(2, '0');
+                        var day = parts[1].padStart(2, '0');
+                        var baseRecordingUrl = 'https://pbx7.oceanpbx.club/files/'; 
+                        var recordingUrlBase = baseRecordingUrl + year + '/' + month + '/' + day + '/' + recordingUrl;
+                        $('#audioSource').attr('src', recordingUrlBase);
+                        $('#callRecordingAudio').show();
+                        $('#detailsModal').modal('show');
+                    });
+                    $('#playCallRecording').on('click', function() {
+                        $('#callRecordingAudio')[0].load(); 
+                        $('#callRecordingAudio')[0].play(); 
+                    });
                 });
-                $('#playCallRecording').on('click', function() {
-                    $('#callRecordingAudio')[0].load(); 
-                    $('#callRecordingAudio')[0].play(); 
-                });
-            });
-            function formatDate(dateString) {
-                const date = new Date(dateString);
-                return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
-            }
-        </script>
+                function formatDate(dateString) {
+                    const date = new Date(dateString);
+                    return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+                }
+            </script>
     {else}
         <p>Please log in to view your client information.</p>
     {/if}
+    
     {foreach from=$addons_html item=addon_html key=k}
         {if !is_array($addon_html) && !$addon_html|strstr:"data-animation-content"}
             <div>{$addon_html}</div>

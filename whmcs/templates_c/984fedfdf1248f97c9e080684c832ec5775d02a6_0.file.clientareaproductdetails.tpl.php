@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-25 11:53:25
+/* Smarty version 3.1.48, created on 2024-10-26 11:55:28
   from '/var/www/html/templates/lagom2/clientareaproductdetails.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_671b86b5e0c0b8_65103882',
+  'unifunc' => 'content_671cd8b03afd31_07301310',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '984fedfdf1248f97c9e080684c832ec5775d02a6' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareaproductdetails.tpl',
-      1 => 1729857198,
+      1 => 1729943677,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_671b86b5e0c0b8_65103882 (Smarty_Internal_Template $_smarty_tpl) {
+function content_671cd8b03afd31_07301310 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 
@@ -98,6 +98,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <p class="error_class" id="fileErrorMessage" style="color: red; display: none;">Please upload a valid audio file (.mp3, .wav).</p>
         </div>
     </div>
+    
     <!-- Phone number input -->
     <div class="row orbitron">
     <div class="col-12 p-0">
@@ -118,7 +119,24 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <?php }?>
 
 <?php if ($_smarty_tpl->tpl_vars['product']->value == 'AI Assistant for Real Estate Agent/Broker') {?>
-   
+    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['clientsdetails']->value['customfields'], 'customfield');
+$_smarty_tpl->tpl_vars['customfield']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['customfield']->value) {
+$_smarty_tpl->tpl_vars['customfield']->do_else = false;
+?>
+        <?php if ($_smarty_tpl->tpl_vars['customfield']->value['id'] == 18) {?>
+            <div style="position: absolute; top: 70px; right: 20px; background: linear-gradient(90deg, #007bff, #00c6ff); color: white; padding: 15px 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <h5 style="margin: 0; font-family: Orbitron, sans-serif; font-size: 18px; color: white;">
+                    Wallet Balance: <?php echo $_smarty_tpl->tpl_vars['customfield']->value['value'];?>
+
+                </h5>
+                <!-- Add Payment Button -->
+            </div>
+        <?php }?>
+    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <!--<p>Enter your ad link below:</p>
      <h1>Welcome, Real Estate Broker <?php echo $_smarty_tpl->tpl_vars['client']->value['firstname'];?>
 !</h1>
@@ -171,6 +189,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <br></br>
     <label for="aNumber">Enter Your Contact Numbers (Numbers):</label>
     <textarea class="form-control" placeholder="e.g., 4445186651,123545848" id="textarea_realestate" rows="4" placeholder="Enter your Text"></textarea>
+    <div id="newMessage11" style="color: red; font-weight: bold;text-align:center; font-size: 17px;"></div>
     <div class="text-center mt-4">
         <?php if (!$_smarty_tpl->tpl_vars['isSuspended']->value) {?>
             <button type="button" class="btn btn-primary btn-lg " id="callButton_realestate">
@@ -178,8 +197,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </button>
         <?php }?>
     </div>
-    <br></br>
-    <div id="newMessage11" style="color: red; font-weight: bold;text-align:center; font-size: 17px;"></div>
     <br></br>
     <?php echo '<script'; ?>
 >
@@ -205,6 +222,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             });
             function generateAudioFromText(text) {
                 const audioElement = $('#audioPlay').get(0);
+                const selectedLanguage = $('#languageDropdown').val();
+                const selectedAccent = $('.ocean_accent').val();
                 // Check if the audio source is already set and valid
                 if (audioElement.src) {
                     $('#loader').hide();
@@ -212,12 +231,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     alert('Playing existing audio!');
                     return; // Exit function if audio is already available
                 }
+                const postData = 'text=' + encodeURIComponent(text) +
+                 '&language=' + encodeURIComponent(selectedLanguage) +
+                 '&accent=' + encodeURIComponent(selectedAccent);
                 fetch('generate_audio.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
-                    body: 'text=' + encodeURIComponent(text)
+                    body: postData
                 })
                 .then(response => response.blob())
                 .then(blob => {
@@ -289,10 +311,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         } else {
                             $('#newMessage11').css('color', 'red').text(result.message).show();
                         }
-                    })
-                    .catch(error => {
-                        $('#newMessage11').css('color', 'red').text('An error occurred while initiating the call.').show();
-                        console.error('Error sending request:', error);
                     });
                 } else {
                     alert("Please enter some text to convert to audio.");
@@ -496,6 +514,15 @@ echo substr($_smarty_tpl->tpl_vars['bwpercent']->value,0,-1);
 "><?php echo $_smarty_tpl->tpl_vars['status']->value;?>
 </span></span>
                                                     <?php }?>
+
+                                                <?php } elseif ($_smarty_tpl->tpl_vars['product']->value == 'AI Assistant for Real Estate Agent/Broker') {?>
+                                                    <?php if ($_smarty_tpl->tpl_vars['isSuspendedRealEstate']->value) {?>
+                                                        <span class="list-info-text"><span class="status status-suspended">Suspended</span></span>
+                                                    <?php } else { ?>
+                                                        <span class="list-info-text"><span class="status status-<?php echo strtolower($_smarty_tpl->tpl_vars['rawstatus']->value);?>
+"><?php echo $_smarty_tpl->tpl_vars['status']->value;?>
+</span></span>
+                                                    <?php }?>    
                                                 <?php } else { ?>
                                                     <span class="list-info-text"><span class="status status-<?php echo strtolower($_smarty_tpl->tpl_vars['rawstatus']->value);?>
 "><?php echo $_smarty_tpl->tpl_vars['status']->value;?>
@@ -512,13 +539,28 @@ echo substr($_smarty_tpl->tpl_vars['bwpercent']->value,0,-1);
                                                 <li>
                                                     <span class="list-info-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['firstpaymentamount'];?>
 </span>
-                                                    <?php if ($_smarty_tpl->tpl_vars['product']->value == 'Ocean VoIP Agent Topup' && $_smarty_tpl->tpl_vars['isSuspended']->value) {?>
-                                                        <span class="list-info-text"><?php echo formatCurrency($_smarty_tpl->tpl_vars['currentBalance']->value);?>
+                                                    
+                                                    <?php if ($_smarty_tpl->tpl_vars['product']->value == 'Ocean VoIP Agent Topup') {?>
+                                                        <?php if ($_smarty_tpl->tpl_vars['isSuspended']->value) {?>
+                                                            <span class="list-info-text"><?php echo formatCurrency($_smarty_tpl->tpl_vars['currentBalance']->value);?>
  </span>
+                                                        <?php } else { ?>
+                                                            <span class="list-info-text"><?php echo formatCurrency($_smarty_tpl->tpl_vars['currentBalance']->value);?>
+ </span>
+                                                        <?php }?>
+                                                    <?php } elseif ($_smarty_tpl->tpl_vars['product']->value == 'AI Assistant for Real Estate Agent/Broker') {?>
+                                                        <?php if ($_smarty_tpl->tpl_vars['isSuspendedRealEstate']->value) {?>
+                                                            <span class="list-info-text"><?php echo formatCurrency($_smarty_tpl->tpl_vars['currentBalanceRealEstate']->value);?>
+ </span>
+                                                        <?php } else { ?>
+                                                            <span class="list-info-text"><?php echo formatCurrency($_smarty_tpl->tpl_vars['currentBalanceRealEstate']->value);?>
+ </span>
+                                                        <?php }?>    
                                                     <?php } else { ?>
                                                         <span class="list-info-text"><?php echo formatCurrency($_smarty_tpl->tpl_vars['currentBalance']->value);?>
-</span>
+ </span>
                                                     <?php }?>
+
                                                 </li>
                                             <?php }?>
                                             <?php if ($_smarty_tpl->tpl_vars['billingcycle']->value != $_smarty_tpl->tpl_vars['LANG']->value['orderpaymenttermonetime'] && $_smarty_tpl->tpl_vars['billingcycle']->value != $_smarty_tpl->tpl_vars['LANG']->value['orderfree']) {?>
@@ -556,6 +598,13 @@ echo substr($_smarty_tpl->tpl_vars['bwpercent']->value,0,-1);
 </span>
                                             </li>
                                             <?php if ($_smarty_tpl->tpl_vars['product']->value == 'Ocean VoIP Agent Topup' && $_smarty_tpl->tpl_vars['isSuspended']->value) {?>
+                                                <li>
+                                                    <span class="list-info-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['suspendreason'];?>
+</span>
+                                                    <span class="list-info-text">Insufficient balance</span>
+                                                </li>
+                                            <?php }?>
+                                            <?php if ($_smarty_tpl->tpl_vars['product']->value == 'AI Assistant for Real Estate Agent/Broker' && $_smarty_tpl->tpl_vars['isSuspendedRealEstate']->value) {?>
                                                 <li>
                                                     <span class="list-info-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['suspendreason'];?>
 </span>

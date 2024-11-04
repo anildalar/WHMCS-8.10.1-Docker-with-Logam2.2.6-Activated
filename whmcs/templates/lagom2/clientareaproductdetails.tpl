@@ -65,6 +65,7 @@
             <p class="error_class" id="fileErrorMessage" style="color: red; display: none;">Please upload a valid audio file (.mp3, .wav).</p>
         </div>
     </div>
+    
     <!-- Phone number input -->
     <div class="row orbitron">
     <div class="col-12 p-0">
@@ -85,7 +86,16 @@
 {/if}
 
 {if $product eq 'AI Assistant for Real Estate Agent/Broker'}
-   
+    {foreach from=$clientsdetails.customfields item=customfield}
+        {if $customfield.id == 18}
+            <div style="position: absolute; top: 70px; right: 20px; background: linear-gradient(90deg, #007bff, #00c6ff); color: white; padding: 15px 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                <h5 style="margin: 0; font-family: Orbitron, sans-serif; font-size: 18px; color: white;">
+                    Wallet Balance: {$customfield.value}
+                </h5>
+                <!-- Add Payment Button -->
+            </div>
+        {/if}
+    {/foreach}
     <!--<p>Enter your ad link below:</p>
      <h1>Welcome, Real Estate Broker {$client.firstname}!</h1>
     
@@ -137,6 +147,7 @@
     <br></br>
     <label for="aNumber">Enter Your Contact Numbers (Numbers):</label>
     <textarea class="form-control" placeholder="e.g., 4445186651,123545848" id="textarea_realestate" rows="4" placeholder="Enter your Text"></textarea>
+    <div id="newMessage11" style="color: red; font-weight: bold;text-align:center; font-size: 17px;"></div>
     <div class="text-center mt-4">
         {if !$isSuspended}
             <button type="button" class="btn btn-primary btn-lg " id="callButton_realestate">
@@ -144,8 +155,6 @@
             </button>
         {/if}
     </div>
-    <br></br>
-    <div id="newMessage11" style="color: red; font-weight: bold;text-align:center; font-size: 17px;"></div>
     <br></br>
     <script>
         $(document).ready(function() {
@@ -170,6 +179,8 @@
             });
             function generateAudioFromText(text) {
                 const audioElement = $('#audioPlay').get(0);
+                const selectedLanguage = $('#languageDropdown').val();
+                const selectedAccent = $('.ocean_accent').val();
                 // Check if the audio source is already set and valid
                 if (audioElement.src) {
                     $('#loader').hide();
@@ -177,12 +188,15 @@
                     alert('Playing existing audio!');
                     return; // Exit function if audio is already available
                 }
+                const postData = 'text=' + encodeURIComponent(text) +
+                 '&language=' + encodeURIComponent(selectedLanguage) +
+                 '&accent=' + encodeURIComponent(selectedAccent);
                 fetch('generate_audio.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     },
-                    body: 'text=' + encodeURIComponent(text)
+                    body: postData
                 })
                 .then(response => response.blob())
                 .then(blob => {
@@ -254,10 +268,6 @@
                         } else {
                             $('#newMessage11').css('color', 'red').text(result.message).show();
                         }
-                    })
-                    .catch(error => {
-                        $('#newMessage11').css('color', 'red').text('An error occurred while initiating the call.').show();
-                        console.error('Error sending request:', error);
                     });
                 } else {
                     alert("Please enter some text to convert to audio.");
@@ -413,6 +423,13 @@
                                                     {else}
                                                         <span class="list-info-text"><span class="status status-{$rawstatus|strtolower}">{$status}</span></span>
                                                     {/if}
+
+                                                {elseif $product eq 'AI Assistant for Real Estate Agent/Broker'}
+                                                    {if $isSuspendedRealEstate}
+                                                        <span class="list-info-text"><span class="status status-suspended">Suspended</span></span>
+                                                    {else}
+                                                        <span class="list-info-text"><span class="status status-{$rawstatus|strtolower}">{$status}</span></span>
+                                                    {/if}    
                                                 {else}
                                                     <span class="list-info-text"><span class="status status-{$rawstatus|strtolower}">{$status}</span></span>
                                                 {/if}
@@ -424,11 +441,23 @@
                                             {if $firstpaymentamount neq $recurringamount}
                                                 <li>
                                                     <span class="list-info-title">{$LANG.firstpaymentamount}</span>
-                                                    {if $product eq 'Ocean VoIP Agent Topup' && $isSuspended}
-                                                        <span class="list-info-text">{$currentBalance|formatCurrency} </span>
+                                                    
+                                                    {if $product eq 'Ocean VoIP Agent Topup'}
+                                                        {if $isSuspended}
+                                                            <span class="list-info-text">{$currentBalance|formatCurrency} </span>
+                                                        {else}
+                                                            <span class="list-info-text">{$currentBalance|formatCurrency} </span>
+                                                        {/if}
+                                                    {elseif $product eq 'AI Assistant for Real Estate Agent/Broker'}
+                                                        {if $isSuspendedRealEstate}
+                                                            <span class="list-info-text">{$currentBalanceRealEstate|formatCurrency} </span>
+                                                        {else}
+                                                            <span class="list-info-text">{$currentBalanceRealEstate|formatCurrency} </span>
+                                                        {/if}    
                                                     {else}
-                                                        <span class="list-info-text">{$currentBalance|formatCurrency}</span>
+                                                        <span class="list-info-text">{$currentBalance|formatCurrency} </span>
                                                     {/if}
+
                                                 </li>
                                             {/if}
                                             {if $billingcycle != $LANG.orderpaymenttermonetime && $billingcycle != $LANG.orderfree}
@@ -456,6 +485,12 @@
                                                 <span class="list-info-text"> {$paymentmethod}</span>
                                             </li>
                                             {if $product eq 'Ocean VoIP Agent Topup' && $isSuspended}
+                                                <li>
+                                                    <span class="list-info-title">{$LANG.suspendreason}</span>
+                                                    <span class="list-info-text">Insufficient balance</span>
+                                                </li>
+                                            {/if}
+                                            {if $product eq 'AI Assistant for Real Estate Agent/Broker' && $isSuspendedRealEstate}
                                                 <li>
                                                     <span class="list-info-title">{$LANG.suspendreason}</span>
                                                     <span class="list-info-text">Insufficient balance</span>

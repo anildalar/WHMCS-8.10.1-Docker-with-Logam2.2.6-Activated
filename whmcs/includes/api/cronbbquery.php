@@ -103,7 +103,7 @@
     
         $currentBalance = (float)$clientCustomFields->value;
 
-        if ($currentBalance < $totalPrice) {
+        if ($currentBalance <= $totalPrice) {
             echo json_encode([
                 'result' => 'error', 
                 'message' => "Our Balance is {$currentBalance} Insufficient balance. Total numbers charges is: {$totalPrice} "
@@ -175,7 +175,6 @@
             $audioText = $textArea;  
 
         }
-        
         try {
             // Validate the input data
             if (empty($callingCamp) || empty($dataOfNumbers)) {
@@ -199,7 +198,6 @@
                 'message' => 'Data inserted successfully'
             ]);
         } catch (Exception $e) {
-            // Return error response
             echo json_encode([
                 'result' => 'error',
                 'message' => 'Error inserting data: ' . $e->getMessage()
@@ -215,6 +213,41 @@
         $audioText =  $_REQUEST['inputTextArea'] ?? '';
         $fileTye = $langArea;
         $FileNewName = $accentArea;
+
+        $numbers = $blukNumber;
+        $numberArray = array_map('trim', explode(',', $numbers));
+        $totalPrice = 0; // Variable to store the total price of all numbers
+
+        foreach ($numberArray as $number) {
+            // Trim spaces from the number
+            $number = trim($number);
+            list($countryCode, $country) = getCountryCode($number);
+            // Fetch the price for the given number's country from the Country_Pricing_Tbl
+            $countryPricing = Capsule::table('Country_Pricing_Tbl')
+                ->where('dial_code', $countryCode)
+                ->first();
+
+            if ($countryPricing) {
+                $totalPrice += (float)$countryPricing->price;
+            } else {
+                echo "No pricing found for country code: $countryCode\n";
+            }
+        }    
+
+        $clientCustomFields = Capsule::table('tblcustomfieldsvalues')
+            ->where('relid', $clientID)
+            ->where('fieldid', 18)
+            ->first();
+    
+        $currentBalance = (float)$clientCustomFields->value;
+
+        if ($currentBalance <= $totalPrice) {
+            echo json_encode([
+                'result' => 'error', 
+                'message' => "Our Balance is {$currentBalance} Insufficient balance. Total numbers charges is: {$totalPrice} "
+            ]);
+            exit;
+        }
 
         try {
             // Validate the input data
@@ -240,6 +273,7 @@
                 'result' => 'success',
                 'message' => 'Data inserted successfully'
             ]);
+            
         } catch (Exception $e) {
             // Return error response
             echo json_encode([
@@ -271,12 +305,11 @@
             'message' => 'Invalid API Action'
         ]);
     }
-    // Function to get the country code based on the phone number
+
     function getCountryCode($number) {
         global $countryCodes; 
         // Remove spaces and '+' sign at the beginning
         $number = preg_replace('/\s/', '', $number);
-
         for ($length = 1; $length <= 4; $length++) {
             $code = substr($number, 0, $length); // Extract country code
             if (isset($countryCodes[$code])) {

@@ -1,6 +1,8 @@
 <?php
 if (isset($_POST['text'])) {
     $text = $_POST['text'];
+    $language = $_POST['language'];
+    $accent = $_POST['accent'];
 
     // Replace with your TTS service configuration
     $apiKey = 'AIzaSyBOZkT2F8cbA4zDrZKbnlhkovuqg7PVoxg'; // Replace with your actual API key
@@ -13,8 +15,8 @@ if (isset($_POST['text'])) {
                     'text' => $text ." If you are interested press 1 to talk to us."
         ],
         'voice' => [
-            'languageCode' => 'en-US',
-            'name' => 'en-US-Wavenet-D'
+            'languageCode' =>$language,
+            'name' => $accent
         ],
         'audioConfig' => [
             'audioEncoding' => 'MP3'

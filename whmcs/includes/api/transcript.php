@@ -20,7 +20,7 @@ if ($action === 'GoogleTranscriptSpeechToText') {
         // Configure the request payload
         $data = [
             'config' => [
-                'encoding' => 'LINEAR16', // Adjust based on your audio file type
+                'encoding' => 'LINEAR16',  // Adjust based on your audio file type
                 'sampleRateHertz' => 8000, // Match your audio file's sample rate
                 'languageCode' => 'en-US',
                 'enableAutomaticPunctuation' => true // Add punctuation automatically
@@ -29,7 +29,6 @@ if ($action === 'GoogleTranscriptSpeechToText') {
                 'content' => $base64Audio
             ]
         ];
-
         // Convert the data to JSON format
         $jsonData = json_encode($data);
 
@@ -66,7 +65,6 @@ if ($action === 'GoogleTranscriptSpeechToText') {
                     $receiverTranscript = $trimmedSentence; // Second sentence as receiver
                 }
             }
-
             // Prepare the output
             $output = "Caller - $callerTranscript\nReceiver - $receiverTranscript";
             echo json_encode(['result' => 'success', 'data' => $output]);

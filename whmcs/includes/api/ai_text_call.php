@@ -29,19 +29,22 @@ if ($action === 'AITEXTTOCALL') {
     $phone_number = isset($_REQUEST['phone_number']) ? $_REQUEST['phone_number'] : '';
     $lang = isset($_REQUEST['lang']) ? $_REQUEST['lang'] : '';
     $accent = isset($_REQUEST['accent']) ? $_REQUEST['accent'] : '';
+    $callingCampId = isset($_REQUEST['calling_camp']) ? $_REQUEST['calling_camp'] : 'websiteCamp1';
+    $accountId = isset($_REQUEST['account_id']) ? $_REQUEST['account_id'] : 0;
 
     // Prepare the external API call data
     $apiUrl = 'https://pbx7.oceanpbx.club/apicall/index.php';
     $apiToken = 'c5b30b648a53d6e57dc4d857dad26189';
+   
     $postData = [
         "tocall" => [$phone_number],
         "language" => $lang,
         "accent" => $accent,
         "message" => $text,
+        "campaignId"=>$callingCampId, 
+        "accountId"=>'1',
         "maxretires" => "30",
-        "callerid" => "898989898"
     ];
-
     // Initialize cURL session
     $ch = curl_init();
 
@@ -88,7 +91,7 @@ if ($action === 'AITEXTTOCALL') {
 }else if  ($action === 'AIAUDIOCALL'){
     // Get client IP address
     $clientIpAddress = getClientIp();
-
+    
     // Check if the file is uploaded
     if (isset($_FILES['audio_file'])) {
         $audioFile = $_FILES['audio_file'];
@@ -142,11 +145,14 @@ if ($action === 'AITEXTTOCALL') {
                 $apiUrl = 'https://pbx7.oceanpbx.club/apicall/index.php';
                 $apiToken = 'c5b30b648a53d6e57dc4d857dad26189';
                 $postData = [
-                    "tocall" =>  [$phone_number],
-                    "typeOfAudio" => "AUDIO_CALL_OCEANGROUP", // Placeholder message for the audio call
+                    "tocall" => [$phone_number],
+                    "typeOfAudio" => "AUDIO_CALL_OCEANGROUP",
+                    "language"=> "hi-IN",
+                    "accent"=>"hi-IN-Neural2-B", 
+                    "campaignId"=>'websiteCamp1', 
+                    "accountId"=>'1',
                     "audioFilename" => $newFileName, // You can include the file URL/path if needed by the API
-                    "maxretires" => "30",
-                    "callerid" => "898989898"
+                    "maxretires" => "30"
                 ];
     
                 // Initialize cURL session

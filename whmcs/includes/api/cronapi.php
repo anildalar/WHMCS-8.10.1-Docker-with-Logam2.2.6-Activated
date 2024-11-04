@@ -102,9 +102,9 @@ if ($action === 'CronCallingAction') {
                     }
                 }
 
-                // $updateStatus = Capsule::table('CronJob_For_Calling')
-                //     ->where('id', $campaign->id)
-                //     ->update(['total_price' => $totalPrice]);
+                $updateStatus = Capsule::table('CronJob_For_Calling')
+                    ->where('id', $campaign->id)
+                    ->update(['total_price' => $totalPrice]);
 
                 $apiUrl = 'https://pbx7.oceanpbx.club/apicall/index.php';
                 $apiToken = 'c5b30b648a53d6e57dc4d857dad26189';
@@ -141,23 +141,23 @@ if ($action === 'CronCallingAction') {
                 curl_close($ch);
 
                 if ($httpCode == 200) {
-                    // $clientId = $campaign->client_id;
-                    // $clientCustomFields = Capsule::table('tblcustomfieldsvalues')
-                    //     ->where('relid', $clientId)
-                    //     ->where('fieldid', 14)
-                    //     ->first();
+                    $clientId = $campaign->client_id;
+                    $clientCustomFields = Capsule::table('tblcustomfieldsvalues')
+                        ->where('relid', $clientId)
+                        ->where('fieldid', 18)
+                        ->first();
                     
-                    // $currentBalance = (float)$clientCustomFields->value;
-                    // $newBalance = $currentBalance - $totalPrice;
-                    // if ($newBalance <= 0) {
-                    //     echo json_encode(['result' => 'error', 'message' => 'Insufficient balance']);
-                    //     exit;
-                    // }
+                    $currentBalance = (float)$clientCustomFields->value;
+                    $newBalance = $currentBalance - $totalPrice;
+                    if ($newBalance <= 0) {
+                        echo json_encode(['result' => 'error', 'message' => 'Insufficient balance']);
+                        exit;
+                    }
 
-                    // Capsule::table('tblcustomfieldsvalues')
-                    //     ->where('relid', $clientId)
-                    //     ->where('fieldid', 14)
-                    //     ->update(['value' => $newBalance]);
+                    Capsule::table('tblcustomfieldsvalues')
+                        ->where('relid', $clientId)
+                        ->where('fieldid', 18)
+                        ->update(['value' => $newBalance]);
 
                     Capsule::table('CronJob_For_Calling')
                     ->where('id', $campaign->id)
