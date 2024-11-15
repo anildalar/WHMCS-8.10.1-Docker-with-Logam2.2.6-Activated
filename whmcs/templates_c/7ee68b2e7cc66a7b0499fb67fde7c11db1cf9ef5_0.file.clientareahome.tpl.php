@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-04 11:55:16
+/* Smarty version 3.1.48, created on 2024-11-05 04:44:11
   from '/var/www/html/templates/lagom2/clientareahome.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6728b6247703f3_18339076',
+  'unifunc' => 'content_6729a29b0bc758_86892059',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareahome.tpl',
-      1 => 1730721287,
+      1 => 1730721693,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6728b6247703f3_18339076 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6729a29b0bc758_86892059 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'outputHomePanels' => 
   array (
     'compiled_filepath' => '/var/www/html/templates_c/7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5_0.file.clientareahome.tpl.php',
     'uid' => '7ee68b2e7cc66a7b0499fb67fde7c11db1cf9ef5',
-    'call_name' => 'smarty_template_function_outputHomePanels_3921294186728b624558c90_95293557',
+    'call_name' => 'smarty_template_function_outputHomePanels_6233451386729a29aa43aa7_04549970',
   ),
 ));
 if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
@@ -426,7 +426,7 @@ echo $_smarty_tpl->tpl_vars['clientsstats']->value['numactivetickets'];
                         $('#modalStatus').text(status);
                         var parts = date.split(' ')[0].split('/'); 
                         var year = parts[2];
-                        var month = parts[0];
+                        var month = parts[0].padStart(2, '0');
                         var day = parts[1].padStart(2, '0');
                         var baseRecordingUrl = 'https://pbx7.oceanpbx.club/files/'; 
                         var recordingUrlBase = baseRecordingUrl + year + '/' + month + '/' + day + '/' + recordingUrl;
@@ -510,9 +510,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php }
 }
 }
-/* smarty_template_function_outputHomePanels_3921294186728b624558c90_95293557 */
-if (!function_exists('smarty_template_function_outputHomePanels_3921294186728b624558c90_95293557')) {
-function smarty_template_function_outputHomePanels_3921294186728b624558c90_95293557(Smarty_Internal_Template $_smarty_tpl,$params) {
+/* smarty_template_function_outputHomePanels_6233451386729a29aa43aa7_04549970 */
+if (!function_exists('smarty_template_function_outputHomePanels_6233451386729a29aa43aa7_04549970')) {
+function smarty_template_function_outputHomePanels_6233451386729a29aa43aa7_04549970(Smarty_Internal_Template $_smarty_tpl,$params) {
 foreach ($params as $key => $value) {
 $_smarty_tpl->tpl_vars[$key] = new Smarty_Variable($value, $_smarty_tpl->isRenderingCache);
 }
@@ -736,5 +736,5 @@ echo smarty_modifier_replace(smarty_modifier_replace($_smarty_tpl->tpl_vars['ite
             </div>
         <?php
 }}
-/*/ smarty_template_function_outputHomePanels_3921294186728b624558c90_95293557 */
+/*/ smarty_template_function_outputHomePanels_6233451386729a29aa43aa7_04549970 */
 }

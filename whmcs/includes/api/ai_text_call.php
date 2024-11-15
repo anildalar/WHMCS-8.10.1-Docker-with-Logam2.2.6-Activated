@@ -3,7 +3,7 @@
 use WHMCS\Database\Capsule;
 
 require_once __DIR__ . '/../../init.php';
-require_once __DIR__ . '/../../ratelimit.php';
+require_once __DIR__ . '/../../../ratelimit.php';
 
 // Get API action
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';

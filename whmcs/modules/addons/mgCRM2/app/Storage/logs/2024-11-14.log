@@ -1,0 +1,7 @@
+2024-11-14 11:39:26 [171.48.47.103] [ERROR]	Exception: Access Denied. Access has not been given for your admin role group to access this addon module. You can grant access in Setup > Addon Modules in /var/www/html/modules/addons/mgCRM2/app/Middleware/PrettyExceptions.php:78
+Stack trace:
+#0 /var/www/html/modules/addons/mgCRM2/app/Integration/Slim/SlimApp.php(127): mgCRM2\Middleware\PrettyExceptions->call()
+#1 /var/www/html/modules/addons/mgCRM2/app/app.php(353): mgCRM2\Integration\Slim\SlimApp->run()
+#2 /var/www/html/modules/addons/mgCRM2/mgCRM2app.php(769): unknown()
+#3 /var/www/html/admin/crm.php(278): unknown()
+#4 {main}
