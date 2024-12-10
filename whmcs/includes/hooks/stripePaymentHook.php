@@ -197,7 +197,6 @@ add_hook('InvoicePaid', 1, function($vars) {
                 }
             }
         }
-        // Check if the product matches "Ocean VoIP Agent Topup"
         if (stripos($item['description'], 'Ocean VoIP Agent Topup') !== false) {
             // Retrieve the amount paid
             $newAmount = $item['amount'];
@@ -297,6 +296,58 @@ add_hook('InvoicePaid', 1, function($vars) {
             if ($hostingRecords->count() > 1) {
                 // Keep the first record, delete the others
                 $firstRecord = $hostingRecords->shift(); // Keep this one
+                $idsToDelete = $hostingRecords->pluck('id')->toArray();
+                Capsule::table('tblhosting')
+                    ->whereIn('id', $idsToDelete)
+                    ->delete();
+                logActivity("Deleted extra hosting records for User ID: $userId with packageid 8. Kept record ID: {$firstRecord->id}");
+            }
+        }
+        if (stripos($item['description'], 'CTI Connector for OceanCRM') !== false) {
+            $invoice = Capsule::table('tblinvoices')->where('id', $invoiceId)->first();
+            $userId = $invoice->userid;
+
+            $newAmount = $item['amount'];
+            $fieldId = 20;
+            $packageId = 10;
+
+            $service = Capsule::table('tblhosting')
+                ->where('packageid', $packageId)
+                ->where('userid', $userId)
+                ->first();
+
+            if (!$service) {
+                echo json_encode(['result' => 'error', 'message' => 'The specified service does not belong to the given user']);
+                exit;
+            }
+
+            $existingRecord = Capsule::table('tblcustomfieldsvalues')
+                ->where('fieldid', $fieldId)
+                ->where('relid', $service->id)
+                ->first();
+            if ($existingRecord) {
+                $oldAmount = is_numeric($existingRecord->value) ? (float)$existingRecord->value : 0;
+                $totalAmount = $oldAmount + $newAmount;
+                Capsule::table('tblcustomfieldsvalues')
+                    ->where('fieldid', $fieldId)
+                    ->where('relid', $service->id)
+                    ->update(['value' => $totalAmount]);
+            } else {
+                Capsule::table('tblcustomfieldsvalues')
+                    ->insert([
+                        'fieldid' => $fieldId,
+                        'relid' => $service->id,
+                        'value' => $newAmount
+                    ]);
+            }
+            $hostingRecords = Capsule::table('tblhosting')
+                ->where('userid', $userId)
+                ->where('packageid', 10)
+                ->orderBy('id', 'asc')
+                ->get();
+
+            if ($hostingRecords->count() > 1) {
+                $firstRecord = $hostingRecords->shift();
                 $idsToDelete = $hostingRecords->pluck('id')->toArray();
                 Capsule::table('tblhosting')
                     ->whereIn('id', $idsToDelete)

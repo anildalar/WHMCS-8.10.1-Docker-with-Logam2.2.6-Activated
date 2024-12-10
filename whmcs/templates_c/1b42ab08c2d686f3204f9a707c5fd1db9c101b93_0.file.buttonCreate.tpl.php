@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-07 05:14:22
+/* Smarty version 3.1.48, created on 2024-11-26 12:00:11
   from '/var/www/html/modules/servers/HetznerVps/templates/admin/ui/core/default/widget/buttons/buttonCreate.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67036e2e44d4e1_82487684',
+  'unifunc' => 'content_6745b84b4c4081_72375978',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67036e2e44d4e1_82487684 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6745b84b4c4081_72375978 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <a <?php
@@ -28,11 +28,11 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 $_smarty_tpl->tpl_vars['aValue']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['aValue']->key => $_smarty_tpl->tpl_vars['aValue']->value) {
 $_smarty_tpl->tpl_vars['aValue']->do_else = false;
-$__foreach_aValue_44_saved = $_smarty_tpl->tpl_vars['aValue'];
+$__foreach_aValue_91_saved = $_smarty_tpl->tpl_vars['aValue'];
 ?> <?php echo $_smarty_tpl->tpl_vars['aValue']->key;?>
 ="<?php echo $_smarty_tpl->tpl_vars['aValue']->value;?>
 " <?php
-$_smarty_tpl->tpl_vars['aValue'] = $__foreach_aValue_44_saved;
+$_smarty_tpl->tpl_vars['aValue'] = $__foreach_aValue_91_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> class="<?php echo $_smarty_tpl->tpl_vars['rawObject']->value->getClasses();?>
 ">

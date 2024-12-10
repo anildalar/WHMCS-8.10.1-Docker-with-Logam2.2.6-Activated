@@ -6,7 +6,7 @@ RewriteEngine on
 #RewriteCond %{HTTPS} off
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-RewriteRule ^/?$ ./custom_page_template.php?cmsid=143&%{QUERY_STRING} [L] #lagom-homepage-mark
+RewriteRule ^/?$ ./custom_page_template.php?cmsid=179&%{QUERY_STRING} [L] #lagom-homepage-mark
 RewriteRule ^360-monitoring/?$ ./custom_page_template.php?cmsid=90&%{QUERY_STRING} [L] #custom-page-90
 RewriteRule ^email-services/archiving/?$ ./custom_page_template.php?cmsid=91&%{QUERY_STRING} [L] #custom-page-91
 RewriteRule ^email-services/incoming-filtering/?$ ./custom_page_template.php?cmsid=92&%{QUERY_STRING} [L] #custom-page-92
@@ -60,7 +60,7 @@ RewriteRule ^game-servers/terraria/?$ ./custom_page_template.php?cmsid=139&%{QUE
 RewriteRule ^game-servers/the-forest/?$ ./custom_page_template.php?cmsid=140&%{QUERY_STRING} [L] #custom-page-140
 RewriteRule ^game-servers/v-rising/?$ ./custom_page_template.php?cmsid=141&%{QUERY_STRING} [L] #custom-page-141
 RewriteRule ^game-servers/valheim/?$ ./custom_page_template.php?cmsid=142&%{QUERY_STRING} [L] #custom-page-142
-#RewriteRule ^home/?$ ./custom_page_template.php?cmsid=143&%{QUERY_STRING} [L] #custom-page-143
+RewriteRule ^home/?$ ./custom_page_template.php?cmsid=143&%{QUERY_STRING} [L] #custom-page-143
 RewriteRule ^knowledgebase-cms/?$ ./custom_page_template.php?cmsid=144&%{QUERY_STRING} [L] #custom-page-144
 RewriteRule ^legal/acceptable-use-policy/?$ ./custom_page_template.php?cmsid=145&%{QUERY_STRING} [L] #custom-page-145
 RewriteRule ^legal/domain-registration-greement/?$ ./custom_page_template.php?cmsid=146&%{QUERY_STRING} [L] #custom-page-146
@@ -94,6 +94,8 @@ RewriteRule ^section/products/?$ ./custom_page_template.php?cmsid=173&%{QUERY_ST
 RewriteRule ^section/stats/?$ ./custom_page_template.php?cmsid=174&%{QUERY_STRING} [L] #custom-page-174
 RewriteRule ^section/tlds-table/?$ ./custom_page_template.php?cmsid=175&%{QUERY_STRING} [L] #custom-page-175
 RewriteRule ^section/testimonials/?$ ./custom_page_template.php?cmsid=176&%{QUERY_STRING} [L] #custom-page-176
+#RewriteRule ^customhomepage/?$ ./custom_page_template.php?cmsid=179&%{QUERY_STRING} [L] #custom-page-179
+RewriteRule ^services/dialer/?$ ./custom_page_template.php?cmsid=180&%{QUERY_STRING} [L] #custom-page-180
 #LagomPagesRedirection
 </IfModule>
 #EndLagomRedirection

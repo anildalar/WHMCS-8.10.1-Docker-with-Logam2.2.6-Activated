@@ -41,6 +41,7 @@
     function CTIAdapter_activate()
     {
         $hookFilePath = __DIR__ . '/../../../includes/hooks/CTIAdapterCRM.php';
+        
         if (!file_exists($hookFilePath)) {
             $hookContent = <<<PHP
                 <?php
@@ -344,7 +345,6 @@
                 'description' => 'includes/hooks  not founf directory.',
             ];
         }
-
         return [
             'status' => 'success',
             'description' => 'CTI Adapter for WHMCS CRM has been activated!',
@@ -355,6 +355,7 @@
     {
 
         $hookFilePath = __DIR__ . '/../../../includes/hooks/CTIAdapterCRM.php';
+
         if (file_exists($hookFilePath)) {
             if (unlink($hookFilePath)) {
                 return [
@@ -374,6 +375,7 @@
             ];
         }
     }
+
     use WHMCS\Database\Capsule;
 
     function checkAndStoreCRMResource($phone) {

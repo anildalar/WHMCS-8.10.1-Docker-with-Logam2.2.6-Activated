@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-03 10:17:28
+/* Smarty version 3.1.48, created on 2024-12-10 11:00:34
   from 'mailMessage:message' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fe6f383280a8_40015657',
+  'unifunc' => 'content_67581f526ea637_57423326',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '652e3de8ff57f412acf7c0a8dadc70dc1a7637b6' => 
     array (
       0 => 'mailMessage:message',
-      1 => 1727950648,
+      1 => 1733828434,
       2 => 'mailMessage',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fe6f383280a8_40015657 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67581f526ea637_57423326 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
