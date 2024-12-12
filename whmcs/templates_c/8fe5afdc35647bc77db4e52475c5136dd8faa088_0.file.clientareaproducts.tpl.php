@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-21 06:51:53
+/* Smarty version 3.1.48, created on 2024-12-12 11:50:57
   from '/var/www/html/templates/lagom2/clientareaproducts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6715fa0978fdb9_08100713',
+  'unifunc' => 'content_675ace210671c5_51453639',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8fe5afdc35647bc77db4e52475c5136dd8faa088' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareaproducts.tpl',
-      1 => 1729492886,
+      1 => 1733998039,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6715fa0978fdb9_08100713 (Smarty_Internal_Template $_smarty_tpl) {
+function content_675ace210671c5_51453639 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
-if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
+?>
+
+<?php if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
     <?php $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'], $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>
     <?php $_smarty_tpl->_assignInScope('iconsPages', array('clientareadomains','supportticketslist','clientareainvoices','clientareaproducts'));?>

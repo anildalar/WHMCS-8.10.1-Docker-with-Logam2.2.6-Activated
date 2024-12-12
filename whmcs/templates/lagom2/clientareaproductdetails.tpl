@@ -313,8 +313,10 @@
 
 
 
+
 {if isset($RSThemes['pages'][$templatefile]) && file_exists($RSThemes['pages'][$templatefile]['fullPath'])}
     {include file=$RSThemes['pages'][$templatefile]['fullPath']}
+    
 {else}
     {if $RSThemes['pages'][$templatefile]['config']['hideRightBoxWithDetailsUsage'] == "1"}
         {assign var="hideDetailsBox" value=true}
@@ -351,10 +353,11 @@
         </div>
     {/if}
     <div class="tab-content margin-bottom {if $hideDetailsBox}details-box-hidden{/if} {if $RSThemes['pages'][$templatefile]['config']['removeUrlFromDomainName'] == "1"}domain-url-disabled{/if} {if $RSThemes['pages'][$templatefile]['config']['removeProductGroupName'] == "1"}product-group-hidden{/if}">
-        <div class="tab-pane active" id="Overview">
+        <div class="tab-pane active"  id="Overview">
             {if $tplOverviewTabOutput}
                 {$tplOverviewTabOutput}
             {else}
+            
                 {if !$customModuleInfo}
                 <div class="product-details clearfix">
                     <div class="row row-eq-height row-eq-height-sm">
@@ -991,3 +994,68 @@
         {/literal}    
     </script>
 {/if}
+{if $product eq 'DNRC Lookup'}
+    <!-- Real-time API Validation Card -->
+    <div class="card">
+        <div class="card-header">
+            <h5>Phone Validation</h5>
+            Real-time API Validation
+        </div>
+        <div class="card-body">
+            <div class="form-section">
+                <label for="authToken">Authorization Token</label>
+                <input type="text" id="authToken" name="authToken" placeholder="Enter Authorization Token">
+                <button class="btn btn-primary btn-sm mt-2">Regenerate Token</button>
+                <p><a href="#">Link to API Documentation</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manual Validation Card -->
+    <div class="card">
+        <div class="card-header">Manual Validation</div>
+        <div class="card-body">
+            <div class="form-section">
+                <label for="validationMethod">Select Validation Method</label>
+                <select id="validationMethod" name="validationMethod">
+                    <option value="realEmailValidation">Real Email Validation ($0.50 each)</option>
+                    <!-- Add more options here if needed -->
+                </select>
+                <p>Make sure your file meets the following guidelines to avoid unintended charges:</p>
+                <ul>
+                    <li>1 MB limit on file size</li>
+                    <li>Single column CSV file that contains email addresses</li>
+                    <li>Column should not have a header</li>
+                    <li>Failure to meet the guidelines may result in unintended charges</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Batch Validations Card -->
+    <div class="card">
+        <div class="card-header">Batch Validations</div>
+        <div class="card-body">
+            <div class="upload-section">
+                <label for="fileUpload">Browse or Drag and Drop</label>
+                <input type="file" id="fileUpload" name="fileUpload">
+                <div class="file-guidelines">
+                    <p>File Submission Guidelines:</p>
+                    <ul>
+                        <li>If unsure if a file was uploaded, contact support. Do NOT submit a file twice or you will be charged twice!</li>
+                        <li>1 MB limit on file size</li>
+                        <li>Single column CSV file that contains email addresses</li>
+                        <li>Column should not have a header</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="btn btn-primary-outline btn-sm" type="submit">Submit</button>
+    <script>
+        document.querySelector('.main-sidebar').remove();
+    </script>
+{/if}
+

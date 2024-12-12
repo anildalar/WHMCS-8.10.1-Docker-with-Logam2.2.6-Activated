@@ -219,7 +219,7 @@
             {/if}
         </div>   
         </div>
-        <div class="main-sidebar {if $sidebarOnRight || $RSThemes['layouts']['name'] == 'left-nav-wide'} main-sidebar-right {/if}">
+        <div class="main-sidebar  {if $sidebarOnRight || $RSThemes['layouts']['name'] == 'left-nav-wide'} main-sidebar-right {/if}">
             <div class="sidebar-sticky" {if $RSThemes.addonSettings.show_affixed_navigation == 'enabled'}data-sidebar-sticky{/if}>
                 {if $status == "Unpaid"}
                     <div class="panel panel-summary panel-summary-{$sidebarBoxStyle} view-invoice panel-view-invoice">

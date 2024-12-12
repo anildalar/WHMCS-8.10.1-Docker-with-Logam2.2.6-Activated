@@ -20,7 +20,7 @@
         </div>
     {/if}
     <div class="tab-content margin-bottom">
-        <div class="tab-pane  in active" id="Overview">            
+        <div class="tab-pane  in active" id="Overview ">            
             {if $systemStatus != 'Active'}
                 <div class="alert alert-lagom alert-primary alert-warning text-center" role="alert">
                     {$LANG.domainCannotBeManagedUnlessActive}
@@ -148,7 +148,7 @@
                     $managementoptions.locking or
                     $renew)}
                     {* No reason to show this section if nothing can be done here! *}
-                    <div class="panel panel-sidebar m-b-0">
+                    <div class="panel panel-sidebar m-b-0 ">
                         <div class="panel-heading">
                             <h5 class="panel-title">{$LANG.doToday}</h5>
                         </div>

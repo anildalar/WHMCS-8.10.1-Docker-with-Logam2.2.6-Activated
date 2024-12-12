@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-26 11:55:28
+/* Smarty version 3.1.48, created on 2024-12-12 11:56:22
   from '/var/www/html/templates/lagom2/clientareaproductdetails.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_671cd8b03afd31_07301310',
+  'unifunc' => 'content_675acf66c6b590_41977053',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '984fedfdf1248f97c9e080684c832ec5775d02a6' => 
     array (
       0 => '/var/www/html/templates/lagom2/clientareaproductdetails.tpl',
-      1 => 1729943677,
+      1 => 1734004577,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_671cd8b03afd31_07301310 (Smarty_Internal_Template $_smarty_tpl) {
+function content_675acf66c6b590_41977053 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 
@@ -357,9 +357,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
 
+
 <?php if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
     <?php $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'], $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
-} else { ?>
+?>
+    
+<?php } else { ?>
     <?php if ($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['config']['hideRightBoxWithDetailsUsage'] == "1") {?>
         <?php $_smarty_tpl->_assignInScope('hideDetailsBox', true);?>
     <?php }?>
@@ -408,11 +411,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
     <?php }?>
     <div class="tab-content margin-bottom <?php if ($_smarty_tpl->tpl_vars['hideDetailsBox']->value) {?>details-box-hidden<?php }?> <?php if ($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['config']['removeUrlFromDomainName'] == "1") {?>domain-url-disabled<?php }?> <?php if ($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['config']['removeProductGroupName'] == "1") {?>product-group-hidden<?php }?>">
-        <div class="tab-pane active" id="Overview">
+        <div class="tab-pane active"  id="Overview">
             <?php if ($_smarty_tpl->tpl_vars['tplOverviewTabOutput']->value) {?>
                 <?php echo $_smarty_tpl->tpl_vars['tplOverviewTabOutput']->value;?>
 
             <?php } else { ?>
+            
                 <?php if (!$_smarty_tpl->tpl_vars['customModuleInfo']->value) {?>
                 <div class="product-details clearfix">
                     <div class="row row-eq-height row-eq-height-sm">
@@ -709,7 +713,7 @@ echo $_smarty_tpl->tpl_vars['LANG']->value['clientareahostingdomain'];
                                             </div>
                                             <?php }?>
                                             <div class="col-md-6 col-lg-3">
-                                                <div class="row" id="registrationDate">
+                                                <div class="row" id="registrationDate">aa
                                                     <div class="col-12">
                                                         <span class="gray-base">
                                                             <?php echo $_smarty_tpl->tpl_vars['LANG']->value['clientareahostingregdate'];?>
@@ -1275,5 +1279,72 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php echo '</script'; ?>
 >
 <?php }
-}
+if ($_smarty_tpl->tpl_vars['product']->value == 'DNRC Lookup') {?>
+    <!-- Real-time API Validation Card -->
+    <div class="card">
+        <div class="card-header">
+            <h5>Phone Validation</h5>
+            Real-time API Validation
+        </div>
+        <div class="card-body">
+            <div class="form-section">
+                <label for="authToken">Authorization Token</label>
+                <input type="text" id="authToken" name="authToken" placeholder="Enter Authorization Token">
+                <button class="btn btn-primary btn-sm mt-2">Regenerate Token</button>
+                <p><a href="#">Link to API Documentation</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Manual Validation Card -->
+    <div class="card">
+        <div class="card-header">Manual Validation</div>
+        <div class="card-body">
+            <div class="form-section">
+                <label for="validationMethod">Select Validation Method</label>
+                <select id="validationMethod" name="validationMethod">
+                    <option value="realEmailValidation">Real Email Validation ($0.50 each)</option>
+                    <!-- Add more options here if needed -->
+                </select>
+                <p>Make sure your file meets the following guidelines to avoid unintended charges:</p>
+                <ul>
+                    <li>1 MB limit on file size</li>
+                    <li>Single column CSV file that contains email addresses</li>
+                    <li>Column should not have a header</li>
+                    <li>Failure to meet the guidelines may result in unintended charges</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Batch Validations Card -->
+    <div class="card">
+        <div class="card-header">Batch Validations</div>
+        <div class="card-body">
+            <div class="upload-section">
+                <label for="fileUpload">Browse or Drag and Drop</label>
+                <input type="file" id="fileUpload" name="fileUpload">
+                <div class="file-guidelines">
+                    <p>File Submission Guidelines:</p>
+                    <ul>
+                        <li>If unsure if a file was uploaded, contact support. Do NOT submit a file twice or you will be charged twice!</li>
+                        <li>1 MB limit on file size</li>
+                        <li>Single column CSV file that contains email addresses</li>
+                        <li>Column should not have a header</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="btn btn-primary-outline btn-sm" type="submit">Submit</button>
+    <?php echo '<script'; ?>
+>
+        document.querySelector('.main-sidebar').remove();
+    <?php echo '</script'; ?>
+>
+<?php }?>
+
+<?php }
 }
