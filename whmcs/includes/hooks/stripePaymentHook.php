@@ -303,7 +303,7 @@ add_hook('InvoicePaid', 1, function($vars) {
                 logActivity("Deleted extra hosting records for User ID: $userId with packageid 8. Kept record ID: {$firstRecord->id}");
             }
         }
-        if (stripos($item['description'], 'CTI Connector for OceanCRM') !== false) {
+        if (stripos($item['description'], 'PerfexCRM CTI Module') !== false) {
             $invoice = Capsule::table('tblinvoices')->where('id', $invoiceId)->first();
             $userId = $invoice->userid;
 
