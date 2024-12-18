@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 03:41:44
+/* Smarty version 3.1.48, created on 2024-12-18 08:53:16
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/currency_components.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fcc0f848a3c2_99545025',
+  'unifunc' => 'content_67628d7c6091d0_64086313',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fcc0f848a3c2_99545025 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67628d7c6091d0_64086313 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-one-page-currency-<?php echo strtolower($_smarty_tpl->tpl_vars['elementId']->value);?>
 "

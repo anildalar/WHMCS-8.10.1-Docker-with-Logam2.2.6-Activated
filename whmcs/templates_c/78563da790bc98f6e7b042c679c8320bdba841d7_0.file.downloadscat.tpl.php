@@ -1,0 +1,123 @@
+<?php
+/* Smarty version 3.1.48, created on 2024-12-12 20:30:56
+  from '/var/www/html/templates/lagom2/downloadscat.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.48',
+  'unifunc' => 'content_675b4800202b59_86649087',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '78563da790bc98f6e7b042c679c8320bdba841d7' => 
+    array (
+      0 => '/var/www/html/templates/lagom2/downloadscat.tpl',
+      1 => 1725455022,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_675b4800202b59_86649087 (Smarty_Internal_Template $_smarty_tpl) {
+if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
+    <?php $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'], $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+} else { ?>
+    <div class="search-box search-box-<?php echo $_smarty_tpl->tpl_vars['searchBoxStyle']->value;?>
+">
+        <form role="form" method="post" action="<?php echo routePath('download-search');?>
+">
+            <div class="search-group search-group-lg">
+                <div class="search-field">
+                    <input class="form-control" type="text" name="search" id="inputDownloadsSearch"  placeholder="<?php echo $_smarty_tpl->tpl_vars['LANG']->value['downloadssearch'];?>
+" />
+                    <div class="search-field-icon"><i class="lm lm-search"></i></div>
+                </div>
+                <div class="search-group-btn">
+                    <button class="btn btn-primary<?php if ($_smarty_tpl->tpl_vars['searchBoxStyle']->value == 'primary') {?>-faded<?php }?>" type="submit" id="btnDownloadsSearch"/><?php echo $_smarty_tpl->tpl_vars['LANG']->value['search'];?>
+</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <?php if ($_smarty_tpl->tpl_vars['dlcats']->value) {?>
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['knowledgebasecategories'];?>
+</h2>
+            </div>
+            <div class="section-body">
+                <div class="list-group">
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dlcats']->value, 'dlcat');
+$_smarty_tpl->tpl_vars['dlcat']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['dlcat']->value) {
+$_smarty_tpl->tpl_vars['dlcat']->do_else = false;
+?>  
+                        <a class="list-group-item has-icon" href="<?php echo routePath('download-by-cat',$_smarty_tpl->tpl_vars['dlcat']->value['id'],$_smarty_tpl->tpl_vars['dlcat']->value['urlfriendlyname']);?>
+">
+                            <i class="list-group-item-icon lm lm-folder"></i>
+                            <div class="list-group-item-body">
+                                <div class="list-group-item-heading"><?php echo $_smarty_tpl->tpl_vars['dlcat']->value['name'];?>
+ (<?php echo $_smarty_tpl->tpl_vars['dlcat']->value['numarticles'];?>
+)</div>
+                                <?php if ($_smarty_tpl->tpl_vars['dlcat']->value['description']) {?><p class="list-group-item-text"><?php echo $_smarty_tpl->tpl_vars['dlcat']->value['description'];?>
+</p><?php }?>
+                            </div>
+                        </a>
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </div>
+            </div>
+        </div>
+    <?php }?>
+    <?php if ($_smarty_tpl->tpl_vars['downloads']->value) {?>
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['downloadsfiles'];?>
+</h2>
+            </div>
+            <div class="section-body">
+                <div class="list-group list-group-sm">
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['downloads']->value, 'download');
+$_smarty_tpl->tpl_vars['download']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['download']->value) {
+$_smarty_tpl->tpl_vars['download']->do_else = false;
+?> 
+                        <a class="list-group-item has-icon" href="<?php echo $_smarty_tpl->tpl_vars['download']->value['link'];?>
+">
+                            <i class="list-group-item-icon ls ls-document"></i>
+                            <div class="list-group-item-body">
+                                <div class="list-group-item-heading"><?php echo $_smarty_tpl->tpl_vars['download']->value['title'];?>
+ <?php if ($_smarty_tpl->tpl_vars['download']->value['clientsonly']) {?><i class="ls ls-padlock text-faded"></i> <?php }?></div>
+                                <p class="list-group-item-text"><?php echo $_smarty_tpl->tpl_vars['download']->value['filesize'];?>
+<i class="ls ls-bullet-small"></i><?php echo $_smarty_tpl->tpl_vars['download']->value['description'];?>
+</p>
+                            </div>
+                        </a>
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </div>
+            </div>
+        </div>
+    <?php } else { ?>
+        <div class="section">
+            <div class="section-body">
+                <div class="message message-no-data">
+                    <div class="message-image">
+                        <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/svg-icon.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('icon'=>"downloads"), 0, true);
+?>
+                    </div>
+                    <h6 class="message-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['downloadsnone'];?>
+</h6>
+                </div>
+            </div>
+        </div>
+    <?php }
+}
+}
+}

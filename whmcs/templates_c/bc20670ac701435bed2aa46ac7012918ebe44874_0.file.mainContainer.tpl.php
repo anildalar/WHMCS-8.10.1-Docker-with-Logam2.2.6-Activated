@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 03:42:36
+/* Smarty version 3.1.48, created on 2024-12-18 08:53:51
   from '/var/www/html/modules/addons/LagomOrderForm/templates/admin/ui/core/default/mainContainer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fcc12ca23853_51579564',
+  'unifunc' => 'content_67628d9f4c9c82_56188930',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fcc12ca23853_51579564 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67628d9f4c9c82_56188930 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div id="<?php echo $_smarty_tpl->tpl_vars['mainContainer']->value->getVueInstanceName();?>

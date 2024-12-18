@@ -1,0 +1,4 @@
+.panel-sidebar .badge {
+    color: var(--badge-info-color);
+    background: var(--badge-info-bg);
+}

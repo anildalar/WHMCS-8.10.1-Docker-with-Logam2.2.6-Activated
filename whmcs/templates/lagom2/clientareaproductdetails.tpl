@@ -995,67 +995,187 @@
     </script>
 {/if}
 {if $product eq 'DNRC Lookup'}
-    <!-- Real-time API Validation Card -->
-    <div class="card">
-        <div class="card-header">
-            <h5>Phone Validation</h5>
-            Real-time API Validation
-        </div>
-        <div class="card-body">
-            <div class="form-section">
-                <label for="authToken">Authorization Token</label>
-                <input type="text" id="authToken" name="authToken" placeholder="Enter Authorization Token">
-                <button class="btn btn-primary btn-sm mt-2">Regenerate Token</button>
-                <p><a href="#">Link to API Documentation</a></p>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card border">
+                        <div class="card-header border-bottom">
+                            <span class="">Phone Validation</span>
+                            <span class="float-right">Real-time API Validation<span>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-section">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="authToken">Authorization Token</label>
+                                        <input type="text" id="authToken" name="authToken" placeholder="Enter Authorization Token">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row align-items-center d-flex justify-content-between">
+                                            <div class="col-md-6">
+                                                <a href="#">Link to API Documentation</a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button class="btn btn-primary-outline btn-sm mt-2 float-right"><i class="fa fa-repeat"></i>Regenerate Token</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mt-4">
+                    <!-- Batch Validations Card -->
+                    <div class="card border">
+                        <div class="card-header border-bottom">
+                            <span>Batch Validations</span>
+                            <button class="btn btn-sm btn-primary-outline float-right" onclick="downloadSampleFile()"><i class="fa fa-download"></i>Download Sample File</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="upload-section">
+                            
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <label 
+                                            data-bs-toggle="tooltip" 
+                                            data-bs-placement="top" 
+                                            title="• If unsure if a file was uploaded, contact support. Do NOT submit a file twice or you will be charged twice!&#10;• 1 MB limit on file size&#10;• Single column CSV file that contains email addresses&#10;• Column should not have a header"
+                                            for="fileUpload">
+                                            Browse or Drag and Drop
+                                        </label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="file" id="fileUpload" name="fileUpload">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <!-- Submit Button -->
+                                        <button class="btn btn-primary-outline btn-sm float-right" type="submit"><i class="fa fa-paper-plane"></i>Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
             </div>
         </div>
-    </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Manual Validation Card -->
+                    <div class="card border">
+                        <div class="card-header border-bottom">
+                            <strong>Manual Validation</strong>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-section">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12">
+                                        <label for="validationInput">Numbers for Validation </label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group mb-3">
+                                            <!-- Textarea for multiple numbers separated by commas -->
+                                            <textarea id="validationInput" oninput="updateRecipientsCount()" name="validationInput" class="form-control" placeholder="Enter numbers separated by , commas" aria-label="Enter numbers" rows="4" style="resize: none;"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-6">
+                                                <small class="text-uppercase">
+                                                    Total Number Of Recipients:<span class="number_of_recipients fw-bold text-success"></span>
+                                                </small>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <button class="btn btn-primary-outline btn-sm rounded float-right"  type="button" onclick="showDummyJSON()" id="button-addon2"><i class="fa fa-paper-plane"></i>Check</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-    <!-- Manual Validation Card -->
-    <div class="card">
-        <div class="card-header">Manual Validation</div>
-        <div class="card-body">
-            <div class="form-section">
-                <label for="validationMethod">Select Validation Method</label>
-                <select id="validationMethod" name="validationMethod">
-                    <option value="realEmailValidation">Real Email Validation ($0.50 each)</option>
-                    <!-- Add more options here if needed -->
-                </select>
-                <p>Make sure your file meets the following guidelines to avoid unintended charges:</p>
-                <ul>
-                    <li>1 MB limit on file size</li>
-                    <li>Single column CSV file that contains email addresses</li>
-                    <li>Column should not have a header</li>
-                    <li>Failure to meet the guidelines may result in unintended charges</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Batch Validations Card -->
-    <div class="card">
-        <div class="card-header">Batch Validations</div>
-        <div class="card-body">
-            <div class="upload-section">
-                <label for="fileUpload">Browse or Drag and Drop</label>
-                <input type="file" id="fileUpload" name="fileUpload">
-                <div class="file-guidelines">
-                    <p>File Submission Guidelines:</p>
-                    <ul>
-                        <li>If unsure if a file was uploaded, contact support. Do NOT submit a file twice or you will be charged twice!</li>
-                        <li>1 MB limit on file size</li>
-                        <li>Single column CSV file that contains email addresses</li>
-                        <li>Column should not have a header</li>
-                    </ul>
+                            <!-- Dummy JSON Response - Initially Hidden -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <div class="col-md-12" id="jsonResponse" style="display:none; margin-top: 15px; font-family: monospace; background-color: #f8f9fa; padding: 10px; border-radius: 5px;">
+                        <pre id="jsonOutput"></pre>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Submit Button -->
-    <button class="btn btn-primary-outline btn-sm" type="submit">Submit</button>
+        
     <script>
-        document.querySelector('.main-sidebar').remove();
+        function downloadSampleFile() {
+            // Create the sample file content
+            const sampleContent = `email\nexample1@example.com\nexample2@example.com\nexample3@example.com`;
+
+            // Create a blob object for the content
+            const blob = new Blob([sampleContent], { type: 'text/csv' });
+
+            // Create a temporary anchor element for downloading
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'sample_file.csv'; // Set the download file name
+            document.body.appendChild(a);
+
+            // Trigger the download
+            a.click();
+
+            // Clean up the temporary anchor element
+            document.body.removeChild(a);
+        }
+
+        function updateRecipientsCount() {
+            // Get the input value
+            const input = document.getElementById("validationInput").value.trim();
+
+            // Split the input by commas, filter out empty values, and count valid numbers
+            const numbers = input.split(',').filter(num => num.trim() !== "");
+
+            // Update the count in the Total Number Of Recipients
+            document.querySelector(".number_of_recipients").textContent = numbers.length;
+        }
+        var tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        function showDummyJSON() {
+            // Get the input value (numbers separated by commas)
+            const input = document.getElementById("validationInput").value.trim();
+            
+            // Split the input by commas and trim any extra spaces around the numbers
+            const numbers = input.split(',').map(num => num.trim());
+
+            // Initialize an array to hold the validation responses for each number
+            const responses = numbers.map(num => {
+                // Construct a dummy JSON response for each number
+                return {
+                    status: "success",
+                    message: "Validation successful",
+                    inputValue: num,
+                    isValid: num.length >= 5 && num.length <= 10 && /^\d+$/.test(num)
+                };
+            });
+
+            // Show the dummy JSON response for each number
+            document.getElementById("jsonResponse").style.display = "block";
+            document.getElementById("jsonOutput").textContent = JSON.stringify(responses, null, 2);
+        }
+       document.querySelector('.main-sidebar').remove();
     </script>
+    <style>
+        /* Customize tooltip appearance */
+        .tooltip-inner {
+            white-space: pre-line; /* Ensures line breaks are handled correctly */
+        }
+    </style>
 {/if}
 

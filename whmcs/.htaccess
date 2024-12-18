@@ -60,7 +60,7 @@ RewriteRule ^game-servers/terraria/?$ ./custom_page_template.php?cmsid=139&%{QUE
 RewriteRule ^game-servers/the-forest/?$ ./custom_page_template.php?cmsid=140&%{QUERY_STRING} [L] #custom-page-140
 RewriteRule ^game-servers/v-rising/?$ ./custom_page_template.php?cmsid=141&%{QUERY_STRING} [L] #custom-page-141
 RewriteRule ^game-servers/valheim/?$ ./custom_page_template.php?cmsid=142&%{QUERY_STRING} [L] #custom-page-142
-RewriteRule ^home/?$ ./custom_page_template.php?cmsid=143&%{QUERY_STRING} [L] #custom-page-143
+RewriteRule ^ai_assistant/?$ ./custom_page_template.php?cmsid=143&%{QUERY_STRING} [L] #custom-page-143
 RewriteRule ^knowledgebase-cms/?$ ./custom_page_template.php?cmsid=144&%{QUERY_STRING} [L] #custom-page-144
 RewriteRule ^legal/acceptable-use-policy/?$ ./custom_page_template.php?cmsid=145&%{QUERY_STRING} [L] #custom-page-145
 RewriteRule ^legal/domain-registration-greement/?$ ./custom_page_template.php?cmsid=146&%{QUERY_STRING} [L] #custom-page-146
@@ -96,6 +96,9 @@ RewriteRule ^section/tlds-table/?$ ./custom_page_template.php?cmsid=175&%{QUERY_
 RewriteRule ^section/testimonials/?$ ./custom_page_template.php?cmsid=176&%{QUERY_STRING} [L] #custom-page-176
 #RewriteRule ^customhomepage/?$ ./custom_page_template.php?cmsid=179&%{QUERY_STRING} [L] #custom-page-179
 RewriteRule ^services/dialer/?$ ./custom_page_template.php?cmsid=180&%{QUERY_STRING} [L] #custom-page-180
+RewriteRule ^supporting-governments/?$ ./custom_page_template.php?cmsid=182&%{QUERY_STRING} [L] #custom-page-182
+RewriteRule ^investors/?$ ./custom_page_template.php?cmsid=183&%{QUERY_STRING} [L] #custom-page-183
+RewriteRule ^easysim/?$ ./custom_page_template.php?cmsid=184&%{QUERY_STRING} [L] #custom-page-184
 #LagomPagesRedirection
 </IfModule>
 #EndLagomRedirection
@@ -112,7 +115,8 @@ RewriteEngine on
 # If there are _any_ other RewriteBase directives in this file,
 # the last entry will take precedence!
 RewriteBase /
-
+#one-step-order
+RewriteRule ^order/(.*)$ order.php?m=OneStepOrder&gid=$1 [L]
 # Redirect directories to an address with slash
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+[^/])$  $1/ [R]

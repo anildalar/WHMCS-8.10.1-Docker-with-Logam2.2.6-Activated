@@ -16,6 +16,7 @@ services:
       - whmcs-network2
     depends_on:
       - db2
+    restart: always  # Ensure the container restarts automatically
 
   db2:
     image: mysql:8.0
@@ -26,6 +27,7 @@ services:
       - .env  # Load .env file for MySQL environment variables
     networks:
       - whmcs-network2
+    restart: always  # Ensure the container restarts automatically
 
   phpmyadmin2:
     image: phpmyadmin/phpmyadmin
@@ -38,6 +40,7 @@ services:
       - db2
     networks:
       - whmcs-network2
+    restart: always  # Ensure the container restarts automatically
 
 volumes:
   db_data:

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 06:24:20
+/* Smarty version 3.1.48, created on 2024-12-18 07:11:30
   from 'mailMessage:plaintext' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fce7149b1488_63432831',
+  'unifunc' => 'content_676275a2563511_09982490',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dac51ccee8dbecedf9afb805fb153d5c6bf41d7a' => 
     array (
       0 => 'mailMessage:plaintext',
-      1 => 1727850260,
+      1 => 1734505890,
       2 => 'mailMessage',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fce7149b1488_63432831 (Smarty_Internal_Template $_smarty_tpl) {
+function content_676275a2563511_09982490 (Smarty_Internal_Template $_smarty_tpl) {
 ?>To reset your password, please click on the link below.
 
 

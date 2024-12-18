@@ -1,0 +1,17 @@
+.lagom:not(.lagom-layout-left-wide):not(.lagom-layout-left) .main-header .search-group .btn{
+    display: none;
+}
+.table-container.loading{
+    min-height: 320px;
+}
+.loader-table{
+    top: 0!important;
+    background: var(--table-container-bg);
+}
+.dataTable tbody tr:hover>td {
+    background: var(--table-bg-hover);
+}
+.dataTable tbody tr >td {
+    transition: background var(--transition-base);
+    cursor: pointer;
+}

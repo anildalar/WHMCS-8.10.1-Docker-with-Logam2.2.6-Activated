@@ -1,0 +1,139 @@
+.kb-rate-article .btn-social{
+    border-radius: 100%;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.kb-rate-article .btn-social i{
+    display: flex;
+    color: var(--gray-icons);
+    transition: var(--btn-transition);
+}
+.kb-rate-article .btn-social:hover i{
+    color: var(--brand-primary);
+}
+
+.article-content > .sp-editor-content > *:first-child{
+    margin-top: 0;
+}
+.article-content > .sp-editor-content > *:last-child{
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.announcements-list ul.details {
+    padding: 0;
+}
+
+.announcements-list ul.details > li {
+    color: #777;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    font-size: 85%;
+    margin: 0 1rem 0 0;
+    background: left center no-repeat;
+}
+
+.announcements-list ul.details .fas {
+    margin-right: 4px;
+}
+
+.announcements-list ul.item-list {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.announcements-list ul.item-list li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.announcements-list ul.item-list li:after {
+    content: ", ";
+}
+
+.announcements-list ul.item-list li:last-child:after {
+    content: "";
+}
+
+.announcements-toolbar .dropdown-filter,
+.announcements-toolbar .tld-toolbar{
+    z-index: 9;
+}
+
+.announcements-list.list-group-lg.list-boxed .list-group-item-heading{
+    margin-top: -8px;
+}
+.announcements-list.list-boxed{
+    margin-bottom: 0;
+}
+.main-banner .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-size: var(--main-header-breadcrumb-font-size);
+    justify-content: center;
+}
+
+.main-banner .breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.main-banner .breadcrumb li a {
+    display: flex;
+    align-items: center;
+    color: var(--main-header-breadcrumb-color);
+}
+.lagom-futuristic .main-banner .breadcrumb > li.active,
+.lagom-modern .main-banner .breadcrumb > li.active {
+    color: var(--main-header-breadcrumb-color-active)
+}
+
+.lagom-futuristic .banner-secondary .search-group .form-control{
+    color: var(--input-color);
+}
+
+.lagom-futuristic .banner-secondary .search-group .form-control::placeholder {
+    color: var(--input-color-placeholder);
+}
+
+.main-banner .breadcrumb li small {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.p-t-0x{
+    padding-top: 0!important
+}
+.panel-sidebar[menuitemname="categories"] .list-group a:before {
+    font-family: var(--font-family-icons-small);
+    color: var(--panel-sidebar-link-icon-color);
+    transition: color var(--transition-base);
+    font-size: var(--ui-icon-size-small);
+    margin-right: var(--spacing-1x);
+}
+.panel-sidebar[menuitemname="categories"] .list-group a[menuitemname="category-0"]:before {
+    content: "\e93c";
+}
+.panel-sidebar[menuitemname="categories"] .list-group a[menuitemname="category-Product Updates"]:before {
+    content: "\e916";
+}
+.panel-sidebar[menuitemname="categories"] .list-group a[menuitemname="category-WordPress"]:before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f19a";
+}
