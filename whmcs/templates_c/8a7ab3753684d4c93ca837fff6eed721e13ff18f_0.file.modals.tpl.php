@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:02
+/* Smarty version 3.1.48, created on 2024-12-21 07:18:58
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/modals.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2edaa7e7_83690000',
+  'unifunc' => 'content_67666be27650b8_33762390',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a7ab3753684d4c93ca837fff6eed721e13ff18f' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/modals.tpl',
-      1 => 1720189762,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -45,7 +45,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/modal/edit-item/graphic-icons-edit.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2edaa7e7_83690000 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67666be27650b8_33762390 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:adminarea/pages/includes/modal/add-item/product-group-add.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender('file:adminarea/pages/includes/modal/edit-item/product-group-edit.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>

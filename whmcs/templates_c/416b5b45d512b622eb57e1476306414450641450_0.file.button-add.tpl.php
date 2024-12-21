@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2024-12-21 07:18:58
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/add-item/button-add.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f2af532_79835725',
+  'unifunc' => 'content_67666be29468a4_73272502',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '416b5b45d512b622eb57e1476306414450641450' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/add-item/button-add.tpl',
-      1 => 1720189764,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/modal/icon-tabs.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2f2af532_79835725 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67666be29468a4_73272502 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="modal modal--lg modal--media modal--media-scroll" id="addNewButtonItemModal" data-add-new-button-item-modal>
     <div class="modal__dialog">

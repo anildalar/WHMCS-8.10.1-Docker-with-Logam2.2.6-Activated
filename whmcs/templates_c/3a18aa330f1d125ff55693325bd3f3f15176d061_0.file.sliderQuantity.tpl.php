@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-18 08:53:16
+/* Smarty version 3.1.48, created on 2024-12-21 07:18:56
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/fields/sliderQuantity.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67628d7c53f748_16171687',
+  'unifunc' => 'content_67666be0601de1_22450404',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3a18aa330f1d125ff55693325bd3f3f15176d061' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/fields/sliderQuantity.tpl',
-      1 => 1702664292,
+      1 => 1734760265,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67628d7c53f748_16171687 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67666be0601de1_22450404 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-one-page-slider-input-field">
     <div :id="fieldId" class="panel panel--main has-slider" :class="[

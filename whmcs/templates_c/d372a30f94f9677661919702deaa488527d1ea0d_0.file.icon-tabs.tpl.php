@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2024-12-21 07:18:58
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/icon-tabs.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f440f81_16594372',
+  'unifunc' => 'content_67666be29d8e61_46668890',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd372a30f94f9677661919702deaa488527d1ea0d' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/icon-tabs.tpl',
-      1 => 1720189762,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de2f440f81_16594372 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67666be29d8e61_46668890 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('visibleFontIcons', false);
 $_smarty_tpl->_assignInScope('visiblePredefinedIcons', false);
 $_smarty_tpl->_assignInScope('visiblePredefinedIllustrations', false);?>

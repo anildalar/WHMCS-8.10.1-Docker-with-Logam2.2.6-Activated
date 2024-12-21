@@ -6,8 +6,8 @@ RewriteEngine on
 #RewriteCond %{HTTPS} off
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-RewriteRule ^/?$ ./custom_page_template.php?cmsid=179&%{QUERY_STRING} [L] #lagom-homepage-mark
-RewriteRule ^360-monitoring/?$ ./custom_page_template.php?cmsid=90&%{QUERY_STRING} [L] #custom-page-90
+RewriteRule ^/?$ ./custom_page_template.php?cmsid=90&%{QUERY_STRING} [L] #lagom-homepage-mark
+#RewriteRule ^home-page/?$ ./custom_page_template.php?cmsid=90&%{QUERY_STRING} [L] #custom-page-90
 RewriteRule ^email-services/archiving/?$ ./custom_page_template.php?cmsid=91&%{QUERY_STRING} [L] #custom-page-91
 RewriteRule ^email-services/incoming-filtering/?$ ./custom_page_template.php?cmsid=92&%{QUERY_STRING} [L] #custom-page-92
 RewriteRule ^email-services/outgoing-filtering/?$ ./custom_page_template.php?cmsid=93&%{QUERY_STRING} [L] #custom-page-93

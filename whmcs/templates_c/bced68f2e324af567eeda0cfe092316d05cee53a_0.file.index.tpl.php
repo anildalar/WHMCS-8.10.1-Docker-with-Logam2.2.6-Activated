@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:02
+/* Smarty version 3.1.48, created on 2024-12-21 07:18:58
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2e7fb544_62462420',
+  'unifunc' => 'content_67666be2742379_26845833',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bced68f2e324af567eeda0cfe092316d05cee53a' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/index.tpl',
-      1 => 1720189764,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/custom/sections/section.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2e7fb544_62462420 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67666be2742379_26845833 (Smarty_Internal_Template $_smarty_tpl) {
 ?><input name="language" value="<?php echo $_smarty_tpl->tpl_vars['language']->value;?>
 " type="hidden">
 <?php if ($_smarty_tpl->tpl_vars['pageSections']->value) {?>

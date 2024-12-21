@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:02
+/* Smarty version 3.1.48, created on 2024-12-21 07:19:10
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/select.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2eb35bb9_20703402',
+  'unifunc' => 'content_67666beed3da84_29334576',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '628fc89eaa3360367b4e7c0c0a24a7875fb28131' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/select.tpl',
-      1 => 1720189764,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 2,
   ),
 ),false)) {
-function content_66f7de2eb35bb9_20703402 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67666beed3da84_29334576 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['sectionGroupField']->value))) {?>
     <?php if ($_smarty_tpl->tpl_vars['sectionGroupField']->value['container_collapse_target']) {?>
         <?php if ($_smarty_tpl->tpl_vars['pageSection']->value) {?>
@@ -123,7 +123,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['dependenceOption']->do_else = false;
 $_smarty_tpl->tpl_vars['dependenceOption']->iteration++;
 $_smarty_tpl->tpl_vars['dependenceOption']->last = $_smarty_tpl->tpl_vars['dependenceOption']->iteration === $_smarty_tpl->tpl_vars['dependenceOption']->total;
-$__foreach_dependenceOption_21_saved = $_smarty_tpl->tpl_vars['dependenceOption'];
+$__foreach_dependenceOption_8_saved = $_smarty_tpl->tpl_vars['dependenceOption'];
 ?>"<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
 ":{<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dependenceOption']->value, 'option', true, 'key2');
@@ -133,14 +133,14 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key2']->value =>
 $_smarty_tpl->tpl_vars['option']->do_else = false;
 $_smarty_tpl->tpl_vars['option']->iteration++;
 $_smarty_tpl->tpl_vars['option']->last = $_smarty_tpl->tpl_vars['option']->iteration === $_smarty_tpl->tpl_vars['option']->total;
-$__foreach_option_22_saved = $_smarty_tpl->tpl_vars['option'];
+$__foreach_option_9_saved = $_smarty_tpl->tpl_vars['option'];
 ?>"<?php echo $_smarty_tpl->tpl_vars['key2']->value;?>
 ":"<?php echo $_smarty_tpl->tpl_vars['option']->value;?>
 "<?php if (!$_smarty_tpl->tpl_vars['option']->last) {?>,<?php }
-$_smarty_tpl->tpl_vars['option'] = $__foreach_option_22_saved;
+$_smarty_tpl->tpl_vars['option'] = $__foreach_option_9_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>}<?php if (!$_smarty_tpl->tpl_vars['dependenceOption']->last) {?>,<?php }
-$_smarty_tpl->tpl_vars['dependenceOption'] = $__foreach_dependenceOption_21_saved;
+$_smarty_tpl->tpl_vars['dependenceOption'] = $__foreach_dependenceOption_8_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>}'
                 <?php }?>
@@ -235,13 +235,13 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['option']->value)
 $_smarty_tpl->tpl_vars['option']->do_else = false;
 $_smarty_tpl->tpl_vars['option']->iteration++;
 $_smarty_tpl->tpl_vars['option']->last = $_smarty_tpl->tpl_vars['option']->iteration === $_smarty_tpl->tpl_vars['option']->total;
-$__foreach_option_28_saved = $_smarty_tpl->tpl_vars['option'];
+$__foreach_option_15_saved = $_smarty_tpl->tpl_vars['option'];
 ?>
                         <?php if ($_smarty_tpl->tpl_vars['sectionGroupInputValue']->value == $_smarty_tpl->tpl_vars['option']->value['value']) {?>
                             <?php $_smarty_tpl->_assignInScope('hasSelectedValue', true);?>
                         <?php }?>
                     <?php
-$_smarty_tpl->tpl_vars['option'] = $__foreach_option_28_saved;
+$_smarty_tpl->tpl_vars['option'] = $__foreach_option_15_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <?php
@@ -252,7 +252,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['option']->value)
 $_smarty_tpl->tpl_vars['option']->do_else = false;
 $_smarty_tpl->tpl_vars['option']->iteration++;
 $_smarty_tpl->tpl_vars['option']->last = $_smarty_tpl->tpl_vars['option']->iteration === $_smarty_tpl->tpl_vars['option']->total;
-$__foreach_option_29_saved = $_smarty_tpl->tpl_vars['option'];
+$__foreach_option_16_saved = $_smarty_tpl->tpl_vars['option'];
 ?>
                         <?php if (is_array($_smarty_tpl->tpl_vars['option']->value)) {?>
                             <option value="<?php echo $_smarty_tpl->tpl_vars['option']->value['value'];?>
@@ -264,7 +264,7 @@ $__foreach_option_29_saved = $_smarty_tpl->tpl_vars['option'];
 </option>
                         <?php }?>
                     <?php
-$_smarty_tpl->tpl_vars['option'] = $__foreach_option_29_saved;
+$_smarty_tpl->tpl_vars['option'] = $__foreach_option_16_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <?php }?>
@@ -376,7 +376,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['dependenceOption']->do_else = false;
 $_smarty_tpl->tpl_vars['dependenceOption']->iteration++;
 $_smarty_tpl->tpl_vars['dependenceOption']->last = $_smarty_tpl->tpl_vars['dependenceOption']->iteration === $_smarty_tpl->tpl_vars['dependenceOption']->total;
-$__foreach_dependenceOption_34_saved = $_smarty_tpl->tpl_vars['dependenceOption'];
+$__foreach_dependenceOption_21_saved = $_smarty_tpl->tpl_vars['dependenceOption'];
 ?>"<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
 ":{<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dependenceOption']->value, 'option', true, 'key2');
@@ -386,14 +386,14 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key2']->value =>
 $_smarty_tpl->tpl_vars['option']->do_else = false;
 $_smarty_tpl->tpl_vars['option']->iteration++;
 $_smarty_tpl->tpl_vars['option']->last = $_smarty_tpl->tpl_vars['option']->iteration === $_smarty_tpl->tpl_vars['option']->total;
-$__foreach_option_35_saved = $_smarty_tpl->tpl_vars['option'];
+$__foreach_option_22_saved = $_smarty_tpl->tpl_vars['option'];
 ?>"<?php echo $_smarty_tpl->tpl_vars['key2']->value;?>
 ":"<?php echo $_smarty_tpl->tpl_vars['option']->value;?>
 "<?php if (!$_smarty_tpl->tpl_vars['option']->last) {?>,<?php }
-$_smarty_tpl->tpl_vars['option'] = $__foreach_option_35_saved;
+$_smarty_tpl->tpl_vars['option'] = $__foreach_option_22_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>}<?php if (!$_smarty_tpl->tpl_vars['dependenceOption']->last) {?>,<?php }
-$_smarty_tpl->tpl_vars['dependenceOption'] = $__foreach_dependenceOption_34_saved;
+$_smarty_tpl->tpl_vars['dependenceOption'] = $__foreach_dependenceOption_21_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>}'
                 <?php }?>
@@ -488,13 +488,13 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['option']->value)
 $_smarty_tpl->tpl_vars['option']->do_else = false;
 $_smarty_tpl->tpl_vars['option']->iteration++;
 $_smarty_tpl->tpl_vars['option']->last = $_smarty_tpl->tpl_vars['option']->iteration === $_smarty_tpl->tpl_vars['option']->total;
-$__foreach_option_41_saved = $_smarty_tpl->tpl_vars['option'];
+$__foreach_option_28_saved = $_smarty_tpl->tpl_vars['option'];
 ?>
                         <?php if ($_smarty_tpl->tpl_vars['sectionFieldValue']->value == $_smarty_tpl->tpl_vars['option']->value['value']) {?>
                             <?php $_smarty_tpl->_assignInScope('hasSelectedValue', true);?>
                         <?php }?>
                     <?php
-$_smarty_tpl->tpl_vars['option'] = $__foreach_option_41_saved;
+$_smarty_tpl->tpl_vars['option'] = $__foreach_option_28_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                     <?php
@@ -505,7 +505,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['option']->value)
 $_smarty_tpl->tpl_vars['option']->do_else = false;
 $_smarty_tpl->tpl_vars['option']->iteration++;
 $_smarty_tpl->tpl_vars['option']->last = $_smarty_tpl->tpl_vars['option']->iteration === $_smarty_tpl->tpl_vars['option']->total;
-$__foreach_option_42_saved = $_smarty_tpl->tpl_vars['option'];
+$__foreach_option_29_saved = $_smarty_tpl->tpl_vars['option'];
 ?>
                         <?php if (is_array($_smarty_tpl->tpl_vars['option']->value)) {?>
                             <option value="<?php echo $_smarty_tpl->tpl_vars['option']->value['value'];?>
@@ -517,7 +517,7 @@ $__foreach_option_42_saved = $_smarty_tpl->tpl_vars['option'];
 </option>
                         <?php }?>
                     <?php
-$_smarty_tpl->tpl_vars['option'] = $__foreach_option_42_saved;
+$_smarty_tpl->tpl_vars['option'] = $__foreach_option_29_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <?php }?>

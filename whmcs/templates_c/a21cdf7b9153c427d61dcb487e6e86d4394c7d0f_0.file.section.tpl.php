@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:02
+/* Smarty version 3.1.48, created on 2024-12-21 07:19:10
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/section.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2e829b28_05264399',
+  'unifunc' => 'content_67666beec666a5_59643801',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a21cdf7b9153c427d61dcb487e6e86d4394c7d0f' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/section.tpl',
-      1 => 1720189764,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/custom/sections/inputs/".((string)$_smarty_tpl->tpl_vars[\'sectionField\']->value[\'type\']).".tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2e829b28_05264399 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67666beec666a5_59643801 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('sectionLang', $_smarty_tpl->tpl_vars['pageSection']->value['lang'][$_smarty_tpl->tpl_vars['language']->value]['translation']);
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['pageSection']->value['type']['fields'], 'sectionField', true, 'sectionKey');
 $_smarty_tpl->tpl_vars['sectionField']->iteration = 0;
@@ -30,7 +30,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['sectionKey']->va
 $_smarty_tpl->tpl_vars['sectionField']->do_else = false;
 $_smarty_tpl->tpl_vars['sectionField']->iteration++;
 $_smarty_tpl->tpl_vars['sectionField']->last = $_smarty_tpl->tpl_vars['sectionField']->iteration === $_smarty_tpl->tpl_vars['sectionField']->total;
-$__foreach_sectionField_3_saved = $_smarty_tpl->tpl_vars['sectionField'];
+$__foreach_sectionField_0_saved = $_smarty_tpl->tpl_vars['sectionField'];
 ?>
     <?php $_smarty_tpl->_assignInScope('sectionCurrentName', false);?>
     <?php if ($_smarty_tpl->tpl_vars['sectionField']->value['name'] == "caption") {?>
@@ -61,7 +61,7 @@ $_smarty_tpl->tpl_vars['section']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <?php break 1;?>
     <?php }
-$_smarty_tpl->tpl_vars['sectionField'] = $__foreach_sectionField_3_saved;
+$_smarty_tpl->tpl_vars['sectionField'] = $__foreach_sectionField_0_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 <section 
@@ -191,7 +191,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['sectionKey']->va
 $_smarty_tpl->tpl_vars['sectionField']->do_else = false;
 $_smarty_tpl->tpl_vars['sectionField']->iteration++;
 $_smarty_tpl->tpl_vars['sectionField']->last = $_smarty_tpl->tpl_vars['sectionField']->iteration === $_smarty_tpl->tpl_vars['sectionField']->total;
-$__foreach_sectionField_5_saved = $_smarty_tpl->tpl_vars['sectionField'];
+$__foreach_sectionField_2_saved = $_smarty_tpl->tpl_vars['sectionField'];
 ?>
                     <?php if ($_smarty_tpl->tpl_vars['sectionField']->value['type'] == "subsection") {?>
                         <?php $_smarty_tpl->_assignInScope('hasSubSection', true);?>
@@ -206,7 +206,7 @@ $__foreach_sectionField_5_saved = $_smarty_tpl->tpl_vars['sectionField'];
                         </div>
                     <?php }?>     
                 <?php
-$_smarty_tpl->tpl_vars['sectionField'] = $__foreach_sectionField_5_saved;
+$_smarty_tpl->tpl_vars['sectionField'] = $__foreach_sectionField_2_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </div>

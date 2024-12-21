@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-18 08:53:16
+/* Smarty version 3.1.48, created on 2024-12-21 07:18:56
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/fields/checkbox.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67628d7c513619_58153484',
+  'unifunc' => 'content_67666be05c7ce8_94253901',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd6d54e4310b0099205891b0bd3b409e48609f8c6' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/fields/checkbox.tpl',
-      1 => 1702664292,
+      1 => 1734760265,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67628d7c513619_58153484 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67666be05c7ce8_94253901 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-one-page-checkbox-input-field">
     <div class="panel panel--main has-checkbox" v-if="visible" :id="fieldId" :class="[
