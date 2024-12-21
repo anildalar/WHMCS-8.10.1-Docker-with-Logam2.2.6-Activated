@@ -126,3 +126,13 @@
     --svg-icon-on-dark-color-4:                     var(--svg-icon-color-2);
 
 }
+
+.lagom-dark-mode{
+
+    /* Section : Dark Mode Colors */
+    
+    --svg-icon-color-3:                             #ffffff;
+
+    --svg-icon-on-dark-color-2:                     var(--gray-darker);
+
+}

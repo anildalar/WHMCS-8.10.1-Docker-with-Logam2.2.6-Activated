@@ -8,12 +8,11 @@
     type-3 -> Left aligned text, with custom graphics filling full background
     type-4 -> Center aligned text, with custom graphic filling full background
     type-5 -> Center aligned text, with custom graphic filling bottom background
-    type-6 -> Center aligned text, with no graphic
+    type-6 -> Center aligned text, with no graphic 
 * ******************************************
 *}
 {$sideTypes = ['type-1','type-2','type-3']}
 {$centerTypes = ['type-4','type-5','type-6']}
-
 <div class="site-banner banner banner-cms banner-{$theme} {if $type|in_array:$sideTypes} banner-sides{else} banner-center{/if} banner-{$type} {if $type == "type-1"} banner-predefined-graphic{elseif $type == "type-2"} banner-custom-graphic {elseif $type== "type-3" || $type== "type-4" } banner-custom-graphic-bg {elseif $type == "type-5"} banner-custom-graphic-overlap {elseif $type == "type-6"} banner-no-graphic{/if} {if $overlay} section-overlay{/if} {if $combined}section-combined{/if} {if $custom_class} {$custom_class}{/if}" data-site-banner>
 {include file="{$smarty.current_dir}/../../common/anchor.tpl"} 
 {if $type|in_array:$centerTypes}
@@ -31,6 +30,26 @@
                 <div class="banner-subtitle">
                     {$subtitle|unescape:'html'}
                 </div>
+            {/if}
+            {if $pageSettings.promo.promotionDisplayTimeEnabled == "1" && $enable_timer && $time_display == "synchronized" && $pageSettings.promo.promotionEndDate}
+                {include file="{$smarty.current_dir}/../../common/timer.tpl" 
+                    end_date_timer=$pageSettings.promo.promotionEndDate
+                    timer_style=$timer_style
+                    time_display="synchronized"
+                    countdown_type="synchronized"
+                    timezone={date_default_timezone_get()}
+                    action_after="hide"
+                }
+            {else if $time_display == "custom" && (($enable_timer && $countdown_type == "restart" && $start_date) || ($enable_timer && $countdown_type == "synchronized" && $end_date))}
+                {include file="{$smarty.current_dir}/../../common/timer.tpl" 
+                    start_date_timer=$start_date
+                    end_date_timer=$end_date
+                    timer_style=$timer_style
+                    time_display=$time_display
+                    countdown_type=$countdown_type
+                    timezone={date_default_timezone_get()}
+                    action_after=$action_after
+                }
             {/if}
             {if $buttons || $show_product_pricing}
                 <div class="banner-actions">

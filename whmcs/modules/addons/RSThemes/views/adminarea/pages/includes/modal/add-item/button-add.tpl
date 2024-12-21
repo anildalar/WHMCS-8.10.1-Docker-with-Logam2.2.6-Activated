@@ -64,7 +64,7 @@ RSThemes - Website Builder - Add New Button Modal
                                     }
                                 {/if}
                             </label>
-                            <select class="form-control" name="item[size]" required style="opacity: 1" data-default-select-value="default">
+                            <select class="form-control" name="item[size]" required style="opacity: 1" data-default-select-value="large">
                                 <option value="extra-small">Extra Small</option>
                                 <option value="small">Small</option>
                                 <option value="default">Default</option>

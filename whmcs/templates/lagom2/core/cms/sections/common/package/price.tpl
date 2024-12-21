@@ -20,7 +20,7 @@
                         {$discountPrice|replace:$WHMCSCurrency.suffix:" `$WHMCSCurrency.suffix`"}
                     </span>
                 </span>
-                <span class="price-discount-save label label-xs label-info">
+                <span class="price-discount-save label label-xs label-save">
                     {$rslang->trans('packages.save')}&nbsp;
                     <span
                         {if isset($dataDiscountPrice) && $dataDiscountPrice}

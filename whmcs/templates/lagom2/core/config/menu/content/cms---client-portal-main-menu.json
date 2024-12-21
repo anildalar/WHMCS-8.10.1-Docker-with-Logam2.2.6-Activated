@@ -14,7 +14,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "1",
+                "pageslug": "ec9c2b65a12ec830ea02ea73d206896c",
                 "translation-method": "whmcs",
                 "icon": "",
                 "predefined_icon": "sitebuilder.tpl",
@@ -89,7 +89,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "30",
+                "pageslug": "eb3cb218e2b5edae24f94d87b61b56cc",
                 "translation-method": "whmcs",
                 "icon": "",
                 "predefined_icon": "web-hosting.tpl",
@@ -164,7 +164,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "26",
+                "pageslug": "a0038de61cce082b09e275e7af5b2c72",
                 "translation-method": "whmcs",
                 "icon": "",
                 "predefined_icon": "content-delivery-network.tpl",
@@ -314,7 +314,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "30",
+                        "pageslug": "eb3cb218e2b5edae24f94d87b61b56cc",
                         "translation-method": "whmcs",
                         "icon": "ls ls-hosting",
                         "predefined_icon": "",
@@ -389,7 +389,7 @@
                     "active": 0,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "66",
+                        "pageslug": "9644c79760c922cb8cd7f27640e2b742",
                         "translation-method": "whmcs",
                         "icon": "ls ls-refresh",
                         "predefined_icon": "",
@@ -446,7 +446,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "63",
+                        "pageslug": "86024cad1e83101d97359d7351051156",
                         "translation-method": "whmcs",
                         "icon": "ls ls-box",
                         "predefined_icon": "",
@@ -502,7 +502,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "10",
+                        "pageslug": "44d953f68cd66a06bca460e237decaf0",
                         "translation-method": "whmcs",
                         "icon": "ls ls-addon",
                         "predefined_icon": "",
@@ -635,7 +635,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "26",
+                        "pageslug": "a0038de61cce082b09e275e7af5b2c72",
                         "translation-method": "whmcs",
                         "icon": "lm lm-globe",
                         "predefined_icon": "",
@@ -710,7 +710,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "43",
+                        "pageslug": "54699144aa1bd5fb0e349080a7248295",
                         "translation-method": "whmcs",
                         "icon": "ls ls-refresh",
                         "predefined_icon": "",
@@ -766,7 +766,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "44",
+                        "pageslug": "b6cbb659d9fb5cb3c7ee11e20982c4c2",
                         "translation-method": "whmcs",
                         "icon": "ls ls-dns",
                         "predefined_icon": "",
@@ -822,7 +822,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "45",
+                        "pageslug": "7220d55075bc5ee40f74a25d5535072c",
                         "translation-method": "whmcs",
                         "icon": "ls ls-transfer",
                         "predefined_icon": "",
@@ -995,7 +995,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "60",
+                        "pageslug": "d1714749b9a42a7c0a45cc4ace56f34e",
                         "translation-method": "whmcs",
                         "icon": "ls ls-security-code",
                         "predefined_icon": "",
@@ -1128,7 +1128,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "28",
+                        "pageslug": "36ac4a91e9d99aacefb93e308f33c74e",
                         "translation-method": "whmcs",
                         "icon": "ls ls-document",
                         "predefined_icon": "",
@@ -1184,7 +1184,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "31",
+                        "pageslug": "e842e2340ace2840b71477dc4d007267",
                         "translation-method": "whmcs",
                         "icon": "ls ls-text-cloud",
                         "predefined_icon": "",
@@ -1259,7 +1259,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "61",
+                        "pageslug": "a694d22474c531a9e7246bc115f6002b",
                         "translation-method": "whmcs",
                         "icon": "ls ls-bank-note",
                         "predefined_icon": "",
@@ -1315,7 +1315,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "6",
+                        "pageslug": "0a631edbc59176766bc4651f7b2018cc",
                         "translation-method": "whmcs",
                         "icon": "ls ls-bank-note",
                         "predefined_icon": "",
@@ -1371,7 +1371,7 @@
                     "active": 0,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "16",
+                        "pageslug": "1e6ae57bcba3e8882cb7eced84b54399",
                         "translation-method": "whmcs",
                         "icon": "ls ls-credit",
                         "predefined_icon": "",
@@ -1504,7 +1504,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "68",
+                        "pageslug": "9f3b8d9439b28a7bbec3db6a7c26a47a",
                         "translation-method": "whmcs",
                         "icon": "ls ls-envelope",
                         "predefined_icon": "",
@@ -1560,7 +1560,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "13",
+                        "pageslug": "bccd1749fc2f1ef02fdc62280cd40df0",
                         "translation-method": "whmcs",
                         "icon": "ls ls-text-cloud",
                         "predefined_icon": "",
@@ -1616,7 +1616,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "55",
+                        "pageslug": "c08500cb9b12178780fd9d10e43e8c2c",
                         "translation-method": "whmcs",
                         "icon": "ls ls-document-info",
                         "predefined_icon": "",
@@ -1672,7 +1672,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "47",
+                        "pageslug": "d07d50a751bc6ddf12bf3af0efee9b45",
                         "translation-method": "whmcs",
                         "icon": "ls ls-download-square",
                         "predefined_icon": "",
@@ -1728,7 +1728,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "65",
+                        "pageslug": "d8ec5eb30ec0cdd56e7672fd550a0afd",
                         "translation-method": "whmcs",
                         "icon": "ls ls-range",
                         "predefined_icon": "",
@@ -1803,7 +1803,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "70",
+                        "pageslug": "634dc1498bd40a79a7bd94922d6d893b",
                         "translation-method": "whmcs",
                         "icon": "ls ls-new-window",
                         "predefined_icon": "",
@@ -1861,7 +1861,7 @@
             "active": 0,
             "type": "WHMCS Page",
             "settings": {
-                "page": "11",
+                "pageslug": "8cb7fa6b52e768805bc04640ce7e8072",
                 "translation-method": "whmcs",
                 "icon": "",
                 "predefined_icon": "increase-SEO-rank.tpl",
@@ -2011,7 +2011,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "152",
+                        "pageslug": "293d060943b8794ecc40dc1c34dc108e",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2067,7 +2067,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "156",
+                        "pageslug": "e21a0412c8c00ecdd53862f2041e9a2b",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2123,7 +2123,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "150",
+                        "pageslug": "60fb0cec541e7bf14c1a1babb62e28ec",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2179,7 +2179,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "154",
+                        "pageslug": "8ae7201668a6f8a750d30676742dc82c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2367,7 +2367,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "152",
+                        "pageslug": "293d060943b8794ecc40dc1c34dc108e",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2423,7 +2423,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "156",
+                        "pageslug": "e21a0412c8c00ecdd53862f2041e9a2b",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2479,7 +2479,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "150",
+                        "pageslug": "60fb0cec541e7bf14c1a1babb62e28ec",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2590,7 +2590,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "154",
+                        "pageslug": "8ae7201668a6f8a750d30676742dc82c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2646,7 +2646,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "117",
+                        "pageslug": "b8b3816320adbe323751791b801f68b7",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2702,7 +2702,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "121",
+                        "pageslug": "ccdb5d46740ec44879f8bc27d8d05345",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2758,7 +2758,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "132",
+                        "pageslug": "c04bc6ee934ddc3f3672ef4cbf16a28d",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2869,7 +2869,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "43",
+                        "pageslug": "54699144aa1bd5fb0e349080a7248295",
                         "translation-method": "whmcs",
                         "icon": "",
                         "predefined_icon": "",
@@ -2925,7 +2925,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "44",
+                        "pageslug": "b6cbb659d9fb5cb3c7ee11e20982c4c2",
                         "translation-method": "whmcs",
                         "icon": "",
                         "predefined_icon": "",
@@ -2981,7 +2981,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "45",
+                        "pageslug": "7220d55075bc5ee40f74a25d5535072c",
                         "translation-method": "whmcs",
                         "icon": "",
                         "predefined_icon": "",
@@ -3092,7 +3092,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "102",
+                        "pageslug": "3f6947b3e708636055f6f9f838825c0c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3148,7 +3148,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "106",
+                        "pageslug": "2f3b6daea14cf8f359f8b1c8be06b88f",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3204,7 +3204,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "94",
+                        "pageslug": "5d329ac99493992d08030819e214a6b4",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3260,7 +3260,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "108",
+                        "pageslug": "f5772e7160c73e8a195e283a8a11f007",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3335,7 +3335,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "96",
+                        "pageslug": "0aba9a87bdc63da6c037cd904f718f3c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3391,7 +3391,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "97",
+                        "pageslug": "656b635e3190aeaac61b5c2bf2050a45",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3447,7 +3447,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "104",
+                        "pageslug": "9c4b321d8961aaf86f517fdfba509ba7",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3503,7 +3503,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "90",
+                        "pageslug": "56a2426cafc786d98cfbb1b9e66bcd6a",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3578,7 +3578,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "107",
+                        "pageslug": "c0e5c5751a09649b1fcdb5c4abe40b48",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3634,7 +3634,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "105",
+                        "pageslug": "dea70235bd5ef67eaa7a34debd0f64a3",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3690,7 +3690,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "103",
+                        "pageslug": "f4040174d6533171eb35d5e136c0cebf",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3746,7 +3746,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "95",
+                        "pageslug": "0617f09b5703ef53001e85073ff7dfbe",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3804,7 +3804,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "70",
+                "pageslug": "634dc1498bd40a79a7bd94922d6d893b",
                 "translation-method": "whmcs",
                 "icon": "lm lm-chat-cloud",
                 "predefined_icon": "",

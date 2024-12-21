@@ -89,6 +89,8 @@
                     {$packageDataPrice = false}
                     {$packageDataPeriod = false}
                     {$startingfromtext = false}
+                    {$promocode = false}
+                    
                     {if $product.product.hasConfigurableOptions && $hide_starting_from == "0"}
                         {$startingfromtext = true}
                     {/if}
@@ -100,6 +102,7 @@
                     {* recurring products *}
                     {if $product.product.price.type == "recurring"}
                     {if $displayBestPrice}
+                        
                         {* get best cycle *}
                         {$bestCycle = $product.product.price.bestCycle} 
 
@@ -120,6 +123,10 @@
                         {else}
                             {$packagePriceValue = formatCurrency($product.product.price.tabs[$bestCycle].real_price)}
                             {$packageCycle = $bestCycle}
+                        {/if}
+
+                        {if $product.product.price.tabs.$bestCycle.promocode && $product.apply_promocode}
+                            {$promocode = $product.product.price.tabs.$bestCycle.promocode}
                         {/if}
                     {else}
                         {* check if first cycle (billing switcher not active) *}
@@ -171,6 +178,10 @@
                                 {$packageDataPeriod = $product.product.price.tabs}
                             {/if}    
                         {/if}
+
+                        {if $product.product.price.tabs.$firstAvailableCycle.promocode && $product.apply_promocode}
+                            {$promocode = $product.product.price.tabs.$firstAvailableCycle.promocode}
+                        {/if}
                     {/if}
                 {elseif $product.product.price.type == "onetime"}
                     {if $product.product.price.tabs.onetime.discount.applied === true}
@@ -185,7 +196,8 @@
                     {else}
                         {$packagePriceValue = formatCurrency(0)}
                     {/if}
-                {/if}   
+                {/if}
+               
 
                     {* Package Price *}
                     {include 
@@ -201,6 +213,7 @@
                         dataDiscountPrice=$packageDataDiscountPrice
                         discountHidden=$packageDiscountHidden
                         startingFrom=$startingfromtext
+                        
                     } 
 
                     {* Package Actions *}    
@@ -211,6 +224,7 @@
                             cycle=$actionCycle
                             dataPeriod=$actionDataPeriod
                             classes=$product.custom_classes
+                            promocodeValue=$promocode
                         }
                     {/if}
                 </div>
@@ -259,6 +273,7 @@
                         dataPeriod=$actionDataPeriod
                         classes=$product.custom_classes
                         typePackage=$productType
+                        promocodeValue=$promocode
                     }
                 {/if}
             </div>

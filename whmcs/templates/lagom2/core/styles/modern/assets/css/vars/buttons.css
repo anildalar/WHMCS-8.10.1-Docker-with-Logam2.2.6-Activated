@@ -109,8 +109,8 @@
     
     /* Section: Success */
 
-    --btn-success-bg:                               var(--brand-success-darker); /* name: Background; type: select-colors;*/
-    --btn-success-border:                           var(--brand-success-darker); /* name: Border Color; type: select-colors;*/
+    --btn-success-bg:                               var(--brand-success); /* name: Background; type: select-colors;*/
+    --btn-success-border:                           var(--brand-success); /* name: Border Color; type: select-colors;*/
     --btn-success-color:                            #fff; /* name: Font Color; type: select-colors;*/
     --btn-success-hover-bg:                         var(--brand-success); /* name: Hover - Background; type: select-colors;*/
     --btn-success-hover-border:                     var(--brand-success); /* name: Hover - Border Color; type: select-colors;*/
@@ -120,8 +120,8 @@
 
     /* Section: Info */
 
-    --btn-info-bg:                                  var(--brand-info-darker); /* name: Background; type: select-colors;*/
-    --btn-info-border:                              var(--brand-info-darker); /* name: Border Color; type: select-colors;*/
+    --btn-info-bg:                                  var(--brand-info); /* name: Background; type: select-colors;*/
+    --btn-info-border:                              var(--brand-info); /* name: Border Color; type: select-colors;*/
     --btn-info-color:                               #fff; /* name: Font Color; type: select-colors;*/
     --btn-info-hover-bg:                            var(--brand-info); /* name: Hover - Background; type: select-colors;*/
     --btn-info-hover-border:                        var(--brand-info); /* name: Hover - Border Color; type: select-colors;*/
@@ -131,8 +131,8 @@
 
     /* Section: Warning */
     
-    --btn-warning-bg:                               var(--brand-warning-darker); /* name: Background; type: select-colors;*/
-    --btn-warning-border:                           var(--brand-warning-darker); /* name: Border Color; type: select-colors;*/
+    --btn-warning-bg:                               var(--brand-warning); /* name: Background; type: select-colors;*/
+    --btn-warning-border:                           var(--brand-warning); /* name: Border Color; type: select-colors;*/
     --btn-warning-color:                            #fff; /* name: Font Color; type: select-colors;*/
     --btn-warning-hover-bg:                         var(--brand-warning); /* name: Hover - Background; type: select-colors;*/
     --btn-warning-hover-border:                     var(--brand-warning); /* name: Hover - Border Color; type: select-colors;*/
@@ -142,8 +142,8 @@
 
     /* Section: Danger */
     
-    --btn-danger-bg:                                var(--brand-danger-darker); /* name: Background; type: select-colors;*/
-    --btn-danger-border:                            var(--brand-danger-darker); /* name: Border Color; type: select-colors;*/
+    --btn-danger-bg:                                var(--brand-danger); /* name: Background; type: select-colors;*/
+    --btn-danger-border:                            var(--brand-danger); /* name: Border Color; type: select-colors;*/
     --btn-danger-color:                             #fff; /* name: Font Color; type: select-colors;*/
     --btn-danger-hover-bg:                          var(--brand-danger); /* name: Hover - Background; type: select-colors;*/
     --btn-danger-hover-border:                      var(--brand-danger); /* name: Hover - Border Color; type: select-colors;*/
@@ -199,4 +199,17 @@
 
     --btn-social-linkedin-bg:                       #0077b5;
     
+}
+
+.lagom-dark-mode{
+    /* Section : Dark Mode Colors */
+
+    --btn-primary-faded-bg:                         var(--gray-lighter-3); 
+    --btn-primary-faded-border:                     transparent; 
+    --btn-primary-faded-color:                      #fff; 
+    --btn-primary-faded-hover-bg:                   var(--gray-lighter-4); 
+    --btn-primary-faded-hover-border:               transparent; 
+    --btn-primary-faded-hover-color:                #fff; 
+    --btn-primary-faded-active-bg:                  var(--gray-lighter-5); 
+    --btn-primary-faded-active-border:              transparent; 
 }

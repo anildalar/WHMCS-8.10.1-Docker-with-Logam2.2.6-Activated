@@ -52,12 +52,30 @@
             "translation": "Currencies"
         },
         {
+            "name": "Mode Switcher",
+            "location": null,
+            "active": 1,
+            "type": "Mode Switcher",
+            "settings": null,
+            "display": {
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "position": "left",
+                "custom-data-classes": "hidden-xs hidden-sm hidden-md",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": "Mode Switcher"
+        },
+        {
             "name": "View Cart",
             "location": null,
             "active": 0,
             "type": "WHMCS Page",
             "settings": {
-                "page": "86",
+                "pageslug": "0b7f31ba9d090bb81dac159b8ab3d207",
                 "translation-method": "whmcs",
                 "icon": "lm lm-basket",
                 "predefined_icon": "",
@@ -207,7 +225,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "1",
+                "pageslug": "d56b699830e77ba53855679cb1d252da",
                 "translation-method": "whmcs",
                 "icon": "",
                 "predefined_icon": "",
@@ -282,7 +300,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "1",
+                "pageslug": "ec9c2b65a12ec830ea02ea73d206896c",
                 "translation-method": "whmcs",
                 "icon": "",
                 "predefined_icon": "",

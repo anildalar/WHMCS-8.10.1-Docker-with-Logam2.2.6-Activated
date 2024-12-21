@@ -197,6 +197,10 @@
                     {foreach $pages as $key => $page}
                         <option value="{$page['name']}" {if $sectionFieldValue == $page['name']} selected {/if}>{$page['label']}</option>
                     {/foreach}
+                {elseif $sectionField['name'] == "promocode"}    
+                    {foreach $promoCodes as $promoCode}
+                        <option value="{$promoCode.id}" {if $sectionFieldValue == $promoCode.id}selected{/if}>{$promoCode.code}</option>
+                    {/foreach}
                 {else}
                     {$hasSelectedValue = false}
                     {foreach $sectionField['options'] as $option}

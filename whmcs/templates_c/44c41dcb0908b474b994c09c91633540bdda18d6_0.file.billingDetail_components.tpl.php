@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-18 08:53:16
+/* Smarty version 3.1.48, created on 2024-12-21 06:18:50
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/billingDetail_components.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67628d7c5f94a5_68120097',
+  'unifunc' => 'content_67665dcac92c95_43222011',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '44c41dcb0908b474b994c09c91633540bdda18d6' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/billingDetail_components.tpl',
-      1 => 1702664292,
+      1 => 1734760265,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67628d7c5f94a5_68120097 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67665dcac92c95_43222011 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-one-page-billing-details-<?php echo strtolower($_smarty_tpl->tpl_vars['elementId']->value);?>
 "

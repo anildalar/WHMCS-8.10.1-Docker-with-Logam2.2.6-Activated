@@ -2,7 +2,7 @@
     {include file=$RSThemes['pages'][$templatefile]['fullPath']}
 {else}
     {if $quotes}
-        {include file="$template/includes/tablelist.tpl" tableName="QuotesList"  noSortColumns="5" filterColumn="4"}
+        {include file="$template/includes/tablelist.tpl" tableName="QuotesList"  noSortColumns="5" filterColumn="4" ajaxUrl="{$WEB_ROOT}/modules/addons/RSThemes/src/Api/clientApi.php?controller=ClientData&method=getClientQuotes" tableIncludes="quotes"}
         <script type="text/javascript">
             jQuery(document).ready( function ()
             {
@@ -17,16 +17,19 @@
                     table.order(4, '{$sort}');
                 {/if}
                 table.draw();
-                jQuery('.table-container').removeClass('loading');
-                jQuery('#tableLoading').addClass('hidden');
+                {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled"}
+                {else}
+                    jQuery('.table-container').removeClass('loading');
+                    jQuery('#tableLoading').addClass('hidden');
+                {/if}
             });
         </script>
-        <div class="table-container loading clearfix">
+        <div class="table-container {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled"}table-container-ajax{/if} loading clearfix">
             <div class="table-top">
                 <div class="d-flex">
                     <label>{$LANG.clientareahostingaddonsview}</label>
                     <div class="dropdown view-filter-btns {if $RSThemes.addonSettings.show_status_icon == 'displayed'}iconsEnabled{/if}">
-                        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                             <span class="status hidden"></span>
                             <span class="filter-name">{$rslang->trans('generals.all_entries')}</span>
                             <i class="ls ls-caret"></i>
@@ -38,6 +41,7 @@
                             {/foreach}
                         </ul>
                     </div>
+                    <button id="clearFilters" class="btn btn-link btn-xs hidden">{$rslang->trans('generals.clear_filters')}<i class="ls ls-close"></i></button>
                 </div>  
             </div>
             <table id="tableQuotesList" class="table table-list">

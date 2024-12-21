@@ -49,6 +49,7 @@
                                 href="{$item->getUri()}"
                             {/if}
                         {/if}
+                        {if $item->getClass()|strstr:'nav-item-icon-only'}aria-label="{$item->getName()}"{/if}
                         {if $item->getAttribute('target')} target="{$item->getAttribute('target')}"{/if}
                         {if $RSThemes.layouts.templateLayout ==  "left-nav" && $navtype == "primary" && $item->getUri() && $item->getUri()!= "#" && $item->hasChildren()}data-nav-href="{$item->getUri()}"{/if}
                     >
@@ -177,6 +178,7 @@
                                                                         {else}
                                                                             href="{$childItem->getUri()}"
                                                                         {/if}
+                                                                        {if $childItem->getClass()|strstr:'nav-item-icon-only'}aria-label="{$childItem->getName()}"{/if}
                                                                         {if $childItem->getAttribute('target')} target="{$childItem->getAttribute('target')}"{/if}
                                                                     >
                                                                         {if $childItem->hasIcon()}
@@ -209,12 +211,12 @@
                                                                 </ul></div></div>
                                                             {/if}
                                                             {if $collapseOpened || $childItem->getClass()|strstr:"keep-column"}
-                                                                <li class="nav-header">
+                                                                <li class="{$childItem->getClass()}">
                                                                     {$childItem->getBodyHtml()}
                                                                 </li>
                                                             {else}
                                                             <div class="dropdown-menu-parent">
-                                                                <div class="nav-header">
+                                                                <div class="{$childItem->getClass()}">
                                                                     {$childItem->getBodyHtml()}
                                                                 </div>
                                                                 <div class="dropdown-menu-cols">
@@ -292,6 +294,7 @@
                                                         href="{$childItem->getUri()}"
                                                     {/if}
                                                     {if $childItem->getAttribute('target')} target="{$childItem->getAttribute('target')}"{/if}
+                                                    {if $childItem->getClass()|strstr:'nav-item-icon-only'}aria-label="{$childItem->getName()}"{/if}    
                                                 >
                                                     {if $childItem->hasIcon()}
                                                         <i class="{$childItem->getIcon()}"></i>

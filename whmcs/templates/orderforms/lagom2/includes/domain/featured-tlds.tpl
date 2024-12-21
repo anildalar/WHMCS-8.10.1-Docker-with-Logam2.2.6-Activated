@@ -20,7 +20,10 @@
                                         {/if}
                                     {else}
                                         {if is_object($tldinfo.register)}
-                                            {$tldinfo.register}{if $tldinfo.period > 1}{lang key="orderForm.shortPerYears" years={$tldinfo.period}}{else}{lang key="orderForm.shortPerYear" years=''}{/if}
+                                            <div class="d-flex">
+                                                <span>{$tldinfo.register}{if $tldinfo.period > 1}{lang key="orderForm.shortPerYears" years={$tldinfo.period}}{else}{lang key="orderForm.shortPerYear" years=''}{/if}</span>
+                                                <a class="btn btn-primary-faded btn-xs btn-register-domain" data-register-btn={$tldinfo.tldNoDots}> Register</a>
+                                            </div>
                                         {else}
                                             {lang key="domainregnotavailable"}
                                         {/if}

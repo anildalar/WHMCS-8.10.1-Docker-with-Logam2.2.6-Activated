@@ -43,7 +43,7 @@
                             href="#graphic-{$sectionId}-{$key}" 
                             role="tab" 
                             aria-controls="graphic-{$sectionId}-{$key}" 
-                            aria-selected="{if $feature@first} true{else} false{/if}"
+                            aria-selected="{if $feature@first}true{else}false{/if}"
                         >
                             <div class="list-group-cms-item-top {if $feature.fields.list_desc != "" && $feature.fields.list_desc != " ..." && $feature.fields.list_desc != " " && $features_list_type != "default"}m-b-0{/if}">
                                 <div class="list-group-cms-item-heading">
@@ -106,9 +106,10 @@
                         >
                             <div class="list-group-cms-item-top {if $feature@first}collapse{else}collapsed{/if}" 
                                 id="key-top-{$sectionId}-{$key}"
+                                role="button"
                                 data-toggle="collapse" 
                                 data-target="#key-collapse-{$sectionId}-{$key}" 
-                                aria-expanded="{if $feature@first} true{else} false{/if}" 
+                                aria-expanded="{if $feature@first}true{else}false{/if}" 
                                 aria-controls="key-collapse-{$sectionId}-{$key}"
                                 data-graphic-type="section-graphic-{if $feature.fields.graphic.type == "media"}type-2{else}type-1{/if}"
                                 onclick="$('#link-feature-{$sectionId}-{$key}').trigger('click');setActiveAccordion(this);"

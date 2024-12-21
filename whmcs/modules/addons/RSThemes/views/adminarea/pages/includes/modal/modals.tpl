@@ -35,3 +35,11 @@
 
 {include file='adminarea/pages/includes/modal/add-item/graphic-icons-add.tpl'}
 {include file='adminarea/pages/includes/modal/edit-item/graphic-icons-edit.tpl'}
+
+{include file='adminarea/pages/includes/modal/add-item/location-add.tpl'}
+{include file='adminarea/pages/includes/modal/edit-item/location-edit.tpl'}
+
+{if $promotionManagerSlides}
+    {include file='adminarea/pages/includes/modal/add-item/promotion-manager-add.tpl'}
+    {include file='adminarea/pages/includes/modal/edit-item/promotion-manager-edit.tpl'}
+{/if}

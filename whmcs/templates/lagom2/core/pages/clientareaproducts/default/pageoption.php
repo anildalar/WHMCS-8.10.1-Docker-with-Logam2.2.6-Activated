@@ -21,7 +21,7 @@ return [
         'hideInactiveServicesStatus' => [
             'type' => 'multiselect',
             'name' => 'servicesStatus',
-            'label' => 'Choose service statues which should be hidden:',
+            'label' => 'Choose Service Statuses Which Should Be Hidden:',
             'options' => 'Pending,Completed,Suspended,Terminated,Cancelled,Fraud',
             'customFormGroupClass' => 'flex-column is-hidden m-b-0x m-t-2x', 
             'formGroupDataAttr' => 'data-inactive-services-status',           
@@ -30,7 +30,7 @@ return [
         'hideInactiveServicesTerminatedDays' => [
             'type' => 'number',
             'name' => 'terminatedDays',
-            'label' => 'Hide service after “X” amount of days from the “Terminated” date',
+            'label' => 'Hide Service After "X" Amount of Days From the "Terminated" Date',
             'default' => 0,
             'tooltip' => 'sample tooltip',
             'customFormGroupClass' => 'flex-column is-hidden m-b-0x m-t-2x',
@@ -40,7 +40,7 @@ return [
         'hideInactiveServicesCancelledDays' => [
             'type' => 'number',
             'name' => 'cancelledDays',
-            'label' => 'Hide service after “X” amount of days from the “Cancelled” date',
+            'label' => 'Hide Service After "X" Amount of Days From the "Cancelled" Date',
             'default' => 0,
             'tooltip' => 'sample tooltip',
             'customFormGroupClass' => 'flex-column is-hidden m-t-2x m-b-0x',
@@ -50,14 +50,14 @@ return [
 	    'showManageButton' => [
             'type' => 'checkbox',
             'name' => 'showManageButton',
-            'label' => 'Show "Manage" button',
+            'label' => "Show 'Manage' Button",
             'customFormGroupClass' => 'm-t-2x',
             'tooltip' => "Choose whether you would like to show or hide the 'Manage' button.",
         ],
         'showIdProduct' => [
             'type' => 'checkbox',
             'name' => 'showIdProduct',
-            'label' => 'Display product ID',
+            'label' => 'Display Product ID',
             'tooltip' => "Adds product ID in product list table, next to its name.",
         ],
         'hideSslIcon' => [
@@ -69,19 +69,19 @@ return [
         'removeUrlFromDomainName' => [
             'type' => 'checkbox',
             'name' => 'removeUrlFromDomainName',
-            'label' => 'Remove URL from the domain/host name',
+            'label' => 'Remove URL From the Domain/Host Name',
             'tooltip' => "Remove anchor link from the domain/host name.",
         ],
         'hideTabServiceGroup' => [
             'type' => 'checkbox',
             'name' => 'hideTabProductGroup',
-            'label' => 'Hide group name',
+            'label' => 'Hide Group Name',
             'tooltip' => "Choose whether you would like to show or hide the group name shown in the table.",
         ],
         'showEndOfTrialPeriod' => [
             'type' => 'checkbox',
             'name' => 'showEndOfTrialPeriod',
-            'label' => 'Show end of trial period',
+            'label' => 'Show End of Trial Period',
             'tooltip' => "Choose whether you would like to show `end of trial period` in the table. This option is working only when `Auto Terminate/Fixed Term` for product is enabled",
         ],
     ]

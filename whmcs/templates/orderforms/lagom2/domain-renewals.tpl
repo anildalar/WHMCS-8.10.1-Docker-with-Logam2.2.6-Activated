@@ -15,6 +15,39 @@
                 {include file="orderforms/$carttpl/sidebar-categories-collapsed.tpl"}
             {/if}
             {if $renewalsData}
+                <div class="alert alert-lagom alert-danger w-hidden" data-renewal-alert-no-domain>
+                    <div class="alert-body">
+                        {$LANG.domainrenewalsnoneavailable}
+                    </div>
+                </div>
+                <div class="alert alert-lagom alert-success w-hidden" data-renewal-alert-added>
+                    <div class="alert-body">
+                        {$rslang->trans('order.renew_all_success')}
+                    </div>
+                </div>
+                <div class="alert alert-primary alert-lagom alert-domain-renewals hidden" data-domain-renewals-add-all-container>
+                    <div class="alert-content">
+                        <div class="icon">{include file="$template/includes/common/svg-icon.tpl" icon="64-free-domain-name-3"}</div>
+                        <div class="description">
+                            <p class="title p-lg">{$rslang->trans('order.renew_domains')}</p>
+                            <span class="desc p-d m-b-0">{$rslang->trans('order.renew_all_desc')|sprintf2:"<span data-domain-renewals-add-all-counter></span>"}</span>
+                        </div>
+                    </div>
+                    <div class="alert-action">
+                        <button type="button" 
+                            data-check-renew-url="{$WEB_ROOT}/modules/addons/RSThemes/src/Api/clientApi.php?controller=ClientData&method=getCountClientRenewDomains" 
+                            data-ajax-url="{$WEB_ROOT}/modules/addons/RSThemes/src/Api/clientApi.php?controller=ClientData&method=doClientRenewDomains" 
+                            data-renewals-in-cart="{$renewalsInCart}"
+                            data-domain-renewals-add-all 
+                            class="btn btn-primary-faded"
+                            >
+                            <span class="btn-text"><i class="ls ls-refresh"></i>{$rslang->trans('order.renew_all')}</span>
+                            <div class="loader loader-button hidden" >
+                                {include file="$template/includes/common/loader.tpl" classes="spinner-sm"}  
+                            </div>
+                        </button>
+                    </div>
+                </div>
                 <div class="domain-renewals" id="domainRenewals">
                     {foreach $renewalsData as $renewalData}
                         {assign var="renewal_added" value=false}

@@ -21,7 +21,7 @@ return [
         'hideInactiveServicesStatus' => [
             'type' => 'multiselect',
             'name' => 'servicesStatus',
-            'label' => 'Choose domain statues which should be hidden:',
+            'label' => 'Choose Domain Statues Which Should Be Hidden:',
             'options' => 'Pending,Pending Registration,Pending Transfer,Grace,Redemption,Expired,Transferred Away,Cancelled,Fraud',
             'customFormGroupClass' => 'flex-column is-hidden m-b-0x m-t-2x', 
             'formGroupDataAttr' => 'data-inactive-services-status',           
@@ -30,20 +30,20 @@ return [
 	    'showManageButton' => [
             'type' => 'checkbox',
             'name' => 'showManageButton',
-            'label' => 'Show "Manage" button',
+            'label' => 'Show "Manage" Button',
             'tooltip' => "Choose whether you would like to show or hide the 'Manage' button.",
             'customFormGroupClass' => 'm-t-2x',
         ],
 	    'showAutoRenewSwitcher' => [
             'type' => 'checkbox',
             'name' => 'showAutoRenewSwitcher',
-            'label' => 'Show "Auto Renew" switcher',
+            'label' => 'Show "Auto Renew" Switcher',
             'tooltip' => "Choose whether you would like to show or hide the 'Auto Renew' switcher.",
         ],
         'showDomainId' => [
             'type' => 'checkbox',
             'name' => 'showDomainId',
-            'label' => 'Display domain ID',
+            'label' => 'Display Domain ID',
             'tooltip' => "Adds domain ID in the domain list table, next to its name.",
         ],
         'hideSslIcon' => [

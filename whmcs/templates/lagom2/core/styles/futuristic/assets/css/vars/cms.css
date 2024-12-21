@@ -31,7 +31,8 @@
 
     --cms-ui-icon-on-dark:                              rgba(204, 221, 255, 0.8);
     --cms-on-dark-lighter-3:                            rgba(255, 255, 255, 0.34);
-    --cms-on-light-darker-3:                            #DEE0E3;
+    --cms-on-light-darker-3:                            #DEE0E3; /*--gray-lighter-3 - v2.3.0*/
+    --cms-on-light-darker-4:                            rgba(222, 224, 227, 0.6); /*--gray-lighter-3 - v2.3.0 + opacity .6*/
 
     --cms-color-on-dark:                                #fff;
     --cms-color-on-dark-2:                              rgba(255, 255, 255, 0.8);
@@ -39,6 +40,8 @@
 
     --cms-color-on-light:                                #17191C;
     --cms-color-on-light-2:                              #5E636E;
+
+    --cms-line-color:                                   var(--brand-primary);
 
    --white-gradient:                                    none;
 }
@@ -69,6 +72,7 @@
     --section-caption-font-size:                        var(--font-size-h6);
     --section-caption-line-height:                      var(--line-height-h6);
     --section-caption-font-weight:                      var(--font-weight-h6);
+    --section-caption-color:                            var(--text-primary-color);
 
     --section-subtitle-font-size:                       var(--site-banner-desc-font-size);
     --section-subtitle-line-height:                     var(--site-banner-desc-line-height);
@@ -87,7 +91,7 @@
     --section-primary-color-faded:                      rgba(255, 255, 255, 0.8);
 
     --value-lg-font-size:                               56px;
-    --value-lg-line-height:                             52px;
+    --value-lg-line-height:                             62px;
 
     --value-base-font-size:                             var(--font-size-h1);
     --value-base-line-height:                           var(--line-height-h1);

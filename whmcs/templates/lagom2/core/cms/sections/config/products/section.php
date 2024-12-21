@@ -238,13 +238,20 @@ return [
             'label' => 'Reverse billing cycle order',
             'tooltip' => 'When this option is enabled, billing cycles will be displayed from shortest cycle to longest.',            
             'tooltip_url' => 'https://lagom.rsstudio.net/docs/website-builder/section-products/#reverse-billing-cycle-order'
-        ],
+        ],        
         [   // Hide Starting From Text
             'type' => 'checkbox',
             'name' => 'hide_starting_from',
             'label' => 'Hide starting form text',
             'tooltip' => 'When this option is enabled, product will not show "Starting from" text above the pricing. This text is shown by WHMCS system, where product has configurable options assigned.',            
             'tooltip_url' => 'https://lagom.rsstudio.net/docs/website-builder/section-products/#hide-starting-from'
+        ],
+        [   // Enable stock control
+            'type' => 'checkbox',
+            'name' => 'enable_stock_control',
+            'label' => 'Enable stock control',
+            'tooltip' => 'Automatically detects whether the Stock Control option is enabled in the Product Details section in WHMCS. If enabled, it displays the available quantity of the product on the product description page.',            
+            'tooltip_url' => 'https://lagom.rsstudio.net/docs/website-builder/section-products/#enable-stock-control'
         ],
         [   // Columns on desktop
             'type' => 'select',
@@ -409,6 +416,31 @@ return [
             ],
             'tooltip' => 'This configuration pulls the section below over the currently managed section while adding an extra 200px padding at the bottom. You can adjust the pixel value by customizing the <b>--cms-section-overlay-margin</b> CSS variable through custom CSS rules.',
             'tooltip_url' => 'https://lagom.rsstudio.net/docs/website-builder/section-common-settings/#overlay-sections'
+        ],
+        
+        [   // Package apply promotion code
+            'type' => 'checkbox',
+            'name' => 'apply_promocode',
+            'label' => 'Apply promotion code to all section products',
+            'label_attributes' => [
+                [
+                    'name' => 'toggle',
+                    'value' => 'lu-collapse'
+                ],
+                [
+                    'name' => 'target',
+                    'value' => '#apply_promocode'
+                ],
+            ],
+            'tooltip' => 'Select the WHMCS promotion code you want to add to all the section\'s products. For more information on promotion codes, click the link below.',
+            'tooltip_url' => 'https://lagom.rsstudio.net/docs/website-builder/section-common-settings/#promotion-codes',
+        ],
+        [   // Promo Codes
+            'type' => 'select',
+            'name' => 'promocode',
+            'container_id' => 'apply_promocode',
+            'container_collapse' => true,
+            'container_collapse_target' => 'apply_promocode'
         ],
         [   // Package custom class
             'type' => 'text',

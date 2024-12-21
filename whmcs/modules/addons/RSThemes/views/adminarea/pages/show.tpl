@@ -122,93 +122,95 @@
                                 </div>
                             </div>
                         {/if}
-                        {if !$settings['hideSeoSettings']}
-                            <div class="widget panel of-visible">
-                                <label class="widget__top top">
-                                    <div class="top__title">
-                                        SEO
+                        <div class="widget panel of-visible">
+                            <label class="widget__top top">
+                                <div class="top__title">
+                                    SEO
+                                </div>
+                                <div class="top__actions">
+                                    <div class="switch">
+                                        <input type="hidden" name="seoEnabled" value="0">
+                                        <input class="switch__checkbox" name="seoEnabled" value="1" type="checkbox" {if isset($page) && $page->seo_enabled} checked {/if} data-seo-enable>
+                                        <span class="switch__container"><span class="switch__handle"></span></span>
                                     </div>
-                                    <div class="top__actions">
-                                        <div class="switch">
-                                            <input type="hidden" name="seoEnabled" value="0">
-                                            <input class="switch__checkbox" name="seoEnabled" value="1" type="checkbox" {if isset($page) && $page->seo_enabled} checked {/if} data-seo-enable>
-                                            <span class="switch__container"><span class="switch__handle"></span></span>
-                                        </div>
+                                </div>
+                            </label>
+                            <div class="widget__body widget__body--seo {if !isset($page) || !$page->seo_enabled}is-hidden{/if}" data-seo-section>
+                                <div class="widget__content">
+                                    <div class="form-group" data-form-counter>
+                                        <label class="form-label">
+                                            Search Engine Indexing
+                                            {if $tooltips['page']['settings']['seo']['robots']['content']}
+                                                {if isset($tooltips['page']['settings']['seo']['robots']['url']) && $tooltips['page']['settings']['seo']['robots']['url'] != ""}
+                                                    {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$tooltips['page']['settings']['seo']['robots']['url']}' target='_blank'>Learn More</a>"}
+                                                {else}
+                                                    {assign var="popoverFooter" value=false}
+                                                {/if}
+                                                {include 
+                                                    file="adminarea/includes/helpers/popover.tpl" 
+                                                    popoverClasses="notification__popover popover__top"
+                                                    popoverBody="{$tooltips['page']['settings']['seo']['robots']['content']}"
+                                                    popoverFooter="{$popoverFooter}"
+                                                }
+                                            {/if}
+                                        </label>
+                                        <select class="form-control selectized m-w-250" name="seoRobots" tabindex="-1">
+                                            <option value="1" {if $page->seo_robots} selected{/if}>Allow</option>
+                                            <option value="0" {if !$page->seo_robots} selected {/if}>Disallow</option>
+                                        </select>
                                     </div>
-                                </label>
-                                <div class="widget__body widget__body--seo {if !isset($page) || !$page->seo_enabled}is-hidden{/if}" data-seo-section>
-                                    <div class="widget__content">
-                                        <div class="form-group" data-form-counter>
-                                            <label class="form-label">
-                                                Robots
-                                                {if $tooltips['page']['settings']['seo']['robots']['content']}
-                                                    {if isset($tooltips['page']['settings']['seo']['robots']['url']) && $tooltips['page']['settings']['seo']['robots']['url'] != ""}
-                                                        {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$tooltips['page']['settings']['seo']['robots']['url']}' target='_blank'>Learn More</a>"}
-                                                    {else}
-                                                        {assign var="popoverFooter" value=false}
-                                                    {/if}
-                                                    {include 
-                                                        file="adminarea/includes/helpers/popover.tpl" 
-                                                        popoverClasses="notification__popover popover__top"
-                                                        popoverBody="{$tooltips['page']['settings']['seo']['robots']['content']}"
-                                                        popoverFooter="{$popoverFooter}"
-                                                    }
+                                    {if !$settings['hideSeoSettings']}
+                                    <div class="form-group" data-form-counter>
+                                        <label class="form-label">
+                                            SEO Title 
+                                            <span class="form-label__counter">(<span data-form-counter-value>{if isset($page)}{$page->seo_title[$whmcsLang->value]|count_characters:true}{else}0{/if}</span>/64)</span>
+                                            {if $tooltips['page']['settings']['seo']['title']['content']}
+                                                {if isset($tooltips['page']['settings']['seo']['title']['url']) && $tooltips['page']['settings']['seo']['title']['url'] != ""}
+                                                    {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$tooltips['page']['settings']['seo']['title']['url']}' target='_blank'>Learn More</a>"}
+                                                {else}
+                                                    {assign var="popoverFooter" value=false}
                                                 {/if}
-                                            </label>
-                                            <select class="form-control selectized m-w-250" name="seoRobots" tabindex="-1">
-                                                <option value="1" {if $page->seo_robots} selected{/if}>Allow</option>
-                                                <option value="0" {if !$page->seo_robots} selected {/if}>Disallow</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group" data-form-counter>
-                                            <label class="form-label">
-                                                Seo Title 
-                                                <span class="form-label__counter">(<span data-form-counter-value>{if isset($page)}{$page->seo_title[$whmcsLang->value]|count_characters:true}{else}0{/if}</span>/64)</span>
-                                                {if $tooltips['page']['settings']['seo']['title']['content']}
-                                                    {if isset($tooltips['page']['settings']['seo']['title']['url']) && $tooltips['page']['settings']['seo']['title']['url'] != ""}
-                                                        {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$tooltips['page']['settings']['seo']['title']['url']}' target='_blank'>Learn More</a>"}
-                                                    {else}
-                                                        {assign var="popoverFooter" value=false}
-                                                    {/if}
-                                                    {include 
-                                                        file="adminarea/includes/helpers/popover.tpl" 
-                                                        popoverClasses="notification__popover popover__top"
-                                                        popoverBody="{$tooltips['page']['settings']['seo']['title']['content']}"
-                                                        popoverFooter="{$popoverFooter}"
-                                                    }
+                                                {include 
+                                                    file="adminarea/includes/helpers/popover.tpl" 
+                                                    popoverClasses="notification__popover popover__top"
+                                                    popoverBody="{$tooltips['page']['settings']['seo']['title']['content']}"
+                                                    popoverFooter="{$popoverFooter}"
+                                                }
+                                            {/if}
+                                            <a class="form-label__translate seo-translation" data-seo-translation="title" href="#titleSeoTranslationModal" data-toggle="lu-modal" data-backdrop="static" data-keyboard="false">
+                                                Translate
+                                            </a>
+                                        </label>
+                                        <input class="form-control" type="text" data-max="64" data-seo-input-title data-form-counter-input value="{$page->seo_title[$whmcsLang->value]}" data-ajax-url="{$helper->url('Page@updateSeoTranslations',['templateName'=>$template->getMainName()])}">
+                                        <input type="hidden" name="seoTitle" value='{literal}{{/literal}{foreach $page->seo_title as $key=>$title}"{$key}":"{$title}"{if !$title@last},{/if}{/foreach}{literal}}{/literal}' data-seo-translation-title>
+                                    </div> 
+                                    <div class="form-group" data-form-counter>
+                                        <label class="form-label">
+                                            SEO Description 
+                                            <span class="form-label__counter">(<span data-form-counter-value>{if isset($page)}{$page->seo_description[$whmcsLang->value]|count_characters:true}{else}0{/if}</span>/160)</span>
+                                            {if $tooltips['page']['settings']['seo']['description']['content']}
+                                                {if isset($tooltips['page']['settings']['seo']['description']['url']) && $tooltips['page']['settings']['seo']['description']['url'] != ""}
+                                                    {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$tooltips['page']['settings']['seo']['description']['url']}' target='_blank'>Learn More</a>"}
+                                                {else}
+                                                    {assign var="popoverFooter" value=false}
                                                 {/if}
-                                                <a class="form-label__translate seo-translation" data-seo-translation="title" href="#titleSeoTranslationModal" data-toggle="lu-modal" data-backdrop="static" data-keyboard="false">
-                                                    Translate
-                                                </a>
-                                            </label>
-                                            <input class="form-control" type="text" data-max="64" data-seo-input-title data-form-counter-input value="{$page->seo_title[$whmcsLang->value]}" data-ajax-url="{$helper->url('Page@updateSeoTranslations',['templateName'=>$template->getMainName()])}">
-                                            <input type="hidden" name="seoTitle" value='{literal}{{/literal}{foreach $page->seo_title as $key=>$title}"{$key}":"{$title}"{if !$title@last},{/if}{/foreach}{literal}}{/literal}' data-seo-translation-title>
-                                        </div>
-                                        <div class="form-group" data-form-counter>
-                                            <label class="form-label">
-                                                Seo Description 
-                                                <span class="form-label__counter">(<span data-form-counter-value>{if isset($page)}{$page->seo_description[$whmcsLang->value]|count_characters:true}{else}0{/if}</span>/160)</span>
-                                                {if $tooltips['page']['settings']['seo']['description']['content']}
-                                                    {if isset($tooltips['page']['settings']['seo']['description']['url']) && $tooltips['page']['settings']['seo']['description']['url'] != ""}
-                                                        {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$tooltips['page']['settings']['seo']['description']['url']}' target='_blank'>Learn More</a>"}
-                                                    {else}
-                                                        {assign var="popoverFooter" value=false}
-                                                    {/if}
-                                                    {include 
-                                                        file="adminarea/includes/helpers/popover.tpl" 
-                                                        popoverClasses="notification__popover popover__top"
-                                                        popoverBody="{$tooltips['page']['settings']['seo']['description']['content']}"
-                                                        popoverFooter="{$popoverFooter}"
-                                                    }
-                                                {/if}
-                                                <a class="form-label__translate seo-translation" data-seo-translation="description" href="#descriptionSeoTranslationModal" data-toggle="lu-modal" data-backdrop="static" data-keyboard="false">
-                                                    Translate
-                                                </a>
-                                            </label>
-                                            <textarea class="form-control" type="text" data-max="160" data-seo-input-description data-form-counter-input data-ajax-url="{$helper->url('Page@updateSeoTranslations',['templateName'=>$template->getMainName()])}">{$page->seo_description[$whmcsLang->value]}</textarea>
-                                            <input type="hidden" name="seoDescription" value='{literal}{{/literal}{foreach $page->seo_description as $key=>$desc}"{$key}":"{$desc}"{if !$desc@last},{/if}{/foreach}{literal}}{/literal}' data-seo-translation-description>
-                                        </div>
-                                        <div class="form-group m-b-0x" data-seo-container>
+                                                {include 
+                                                    file="adminarea/includes/helpers/popover.tpl" 
+                                                    popoverClasses="notification__popover popover__top"
+                                                    popoverBody="{$tooltips['page']['settings']['seo']['description']['content']}"
+                                                    popoverFooter="{$popoverFooter}"
+                                                }
+                                            {/if}
+                                            <a class="form-label__translate seo-translation" data-seo-translation="description" href="#descriptionSeoTranslationModal" data-toggle="lu-modal" data-backdrop="static" data-keyboard="false">
+                                                Translate
+                                            </a>
+                                        </label>
+                                        <textarea class="form-control" type="text" data-max="160" data-seo-input-description data-form-counter-input data-ajax-url="{$helper->url('Page@updateSeoTranslations',['templateName'=>$template->getMainName()])}">{$page->seo_description[$whmcsLang->value]}</textarea>
+                                        <input type="hidden" name="seoDescription" value='{literal}{{/literal}{foreach $page->seo_description as $key=>$desc}"{$key}":"{$desc}"{if !$desc@last},{/if}{/foreach}{literal}}{/literal}' data-seo-translation-description>
+                                    </div>
+                                    {/if} 
+                                    <div class="form-group m-b-0x" data-seo-container>
+                                        {if !$settings['hideSeoSettings']}
                                             <label class="form-label">
                                                 Social Image
                                                 {if $tooltips['page']['settings']['seo']['image']['content']}
@@ -254,11 +256,11 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
+                                        {/if}    
+                                    </div>                     
                                 </div>
                             </div>
-                        {/if}
+                        </div>
 
                         <div class="widget panel of-visible {if $template->getActiveDisplay()->name == 'CMS'}is-hidden{/if}" data-toggle-visibility>
                             <label class="widget__top top">

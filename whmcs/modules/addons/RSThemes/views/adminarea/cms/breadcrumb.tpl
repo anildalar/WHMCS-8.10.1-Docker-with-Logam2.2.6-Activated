@@ -15,11 +15,20 @@
                                         {$lang.breadcrumb.pages}
                                     </a>
                                 </li>
-                                <li class="breadcrumb__item">
-                                    <a class="breadcrumb__item-text" href="{$helper->url('Template@pages',['templateName'=>$template->getMainName(), 'tab' => 'website'])}">
-                                        {$lang.breadcrumb.website}
-                                    </a>
-                                </li>
+                                {if $pageType == "promo"}
+                                    <li class="breadcrumb__item">
+                                        <a class="breadcrumb__item-text" href="{$helper->url('Template@pages',['templateName'=>$template->getMainName(), 'tab' => 'promotion'])}">
+                                            Promotion
+                                        </a>
+                                    </li>
+                                {else}
+                                    <li class="breadcrumb__item">
+                                        <a class="breadcrumb__item-text" href="{$helper->url('Template@pages',['templateName'=>$template->getMainName(), 'tab' => 'website'])}">
+                                            {$lang.breadcrumb.website}
+                                        </a>
+                                    </li>
+                                {/if}
+                                
                                 {if isset($customPage)}
                                     <li class="breadcrumb__item breadcrumb__item--page">
                                         <span class="breadcrumb__item-text">

@@ -6,7 +6,7 @@
     >
         {if $captcha}
             <script>
-                var recaptchaSiteKey = "{$captcha->recaptcha->getSiteKey()}";
+                {$captcha->getPageJs()}
             </script>
         {/if}
         <div class="domain-search-input search-group search-group-lg search-group-combined has-shadow {if $customClass}{$customClass}{/if}">

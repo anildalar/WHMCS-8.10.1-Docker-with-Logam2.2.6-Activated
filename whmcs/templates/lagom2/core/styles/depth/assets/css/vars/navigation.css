@@ -145,3 +145,16 @@
         --app-nav-top-menu-link-padding-h:           var(--spacing-2x);
     }
 }
+
+.lagom-dark-mode{
+
+    /* Section : Dark Mode Colors */
+    
+   --app-nav-top-bg:                                  #242424;
+   --app-nav-left-bg:                                 #242424;
+   --mob-app-nav-header-bg:                           #242424;
+   --mob-app-nav-bg:                                  #242424;
+   
+   --extended-nav-link-hover-bg:                       var(--gray-faded);
+   --extended-nav-link-hover-color:                    var(--brand-primary-lighter);
+}

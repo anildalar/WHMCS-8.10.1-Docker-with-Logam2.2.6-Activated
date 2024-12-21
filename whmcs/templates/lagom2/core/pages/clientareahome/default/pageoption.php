@@ -13,7 +13,7 @@ return [
         'hideExpiringIn' => [
             'type' => 'checkbox',
             'name' => 'hideExpiringIn',
-            'label' => 'Hide Expiring In / Expired label',
+            'label' => 'Hide Expiring In / Expired Label',
             'tooltip' => "Choose whether you would like to show or hide Expiring in / Expired label in services panel"    
         ],
         'showAlertButtons' => [

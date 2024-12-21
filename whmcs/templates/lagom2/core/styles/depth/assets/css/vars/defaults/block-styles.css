@@ -136,3 +136,9 @@
     --gray-block-bg:                                var(--gray-gradient-v);
     --gray-block-bg-h:                              var(--gray-gradient-h);
 }
+
+.lagom-dark-mode{
+
+    --primary-block-input-color:                    var(--gray-lighter-4);
+    
+}

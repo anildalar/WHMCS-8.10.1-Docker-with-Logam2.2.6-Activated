@@ -70,13 +70,13 @@
    --icheck-border-width:                          2px; /* name: Border Width; type: size; append: px;*/
    --icheck-size:                                  18px; /* name: Size; type: size; append: px;*/
    --icheck-border-color:                          var(--gray-lighter-3); /* name: Border Color; type: select-colors*/
-   --icheck-hover-bg:                              var(--gray-faded); /* name: Hover - Background; type: select-colors*/
-   --icheck-hover-border-color:                    var(--gray-lighter-2); /* name: Hover - Border Color; type: select-colors*/
+   --icheck-hover-bg:                              #fff; /* name: Hover - Background; type: select-colors*/
+   --icheck-hover-border-color:                    var(--brand-primary); /* name: Hover - Border Color; type: select-colors*/
    --icheck-active-bg:                             var(--brand-primary); /* name: Checked - Background; type: select-colors*/
    --icheck-active-border-color:                   var(--brand-primary); /* name: Checked - Border Color; type: select-colors*/
    --icheck-active-icon-color:                     #fff; /* name: Icon Color; type: select-colors*/
-   --icheck-disabled-bg:                           var(--gray-lighter-2); /* name: Disabled - Background; type: select-colors*/
-   --icheck-disabled-border-color:                 var(--gray-lighter-2); /* name: Disabled - Border Color; type: select-colors*/                            
+   --icheck-disabled-bg:                           var(--gray-lighter-4); /* name: Disabled - Background; type: select-colors*/
+   --icheck-disabled-border-color:                 var(--gray-lighter-4); /* name: Disabled - Border Color; type: select-colors*/                            
    --icheck-border-radius:                         var(--border-radius-sm);
    --icheck-border:                                var(--icheck-border-width) solid var(--icheck-border-color);
    --checkbox-spacing:                             var(--spacing-2x);
@@ -123,4 +123,16 @@
    --form-grid-gutter-width:                       10px;
    --select-option-color:                          var(--text-body-color);
    --select-option-bg:                             #fff;
+}
+
+.lagom-dark-mode{
+    
+    --input-bg:                                  #212121;
+    --input-hover-bg:                            #212121;
+    --input-focus-bg:                            #262626;
+
+    --icheck-bg:                                 transparent;
+    --icheck-hover-bg:                           transparent;
+
+    --select-option-bg:                          #262626;
 }

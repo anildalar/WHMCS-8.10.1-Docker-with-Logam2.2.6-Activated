@@ -30,7 +30,7 @@
     {assign var="activePredefinedIllustrations" value=true}
 {/if}
 
-{if $type == "testimonial-add" || $type == "testimonial-edit" || $type == "seo-image"}
+{if $type == "testimonial-add" || $type == "testimonial-edit" || $type == "seo-image" || $type == "location-add" || $type == "location-edit"}
     {assign var="activeMediaLibrary" value=true}
 {/if}
 

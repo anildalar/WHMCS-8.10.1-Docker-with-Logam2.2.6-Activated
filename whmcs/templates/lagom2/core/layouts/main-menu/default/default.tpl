@@ -9,7 +9,7 @@
 
 {assign var=iconsPages value=['clientareadomains', 'supportticketslist', 'clientareainvoices', 'clientareaproducts']}
 {if (isset($skipAppNav) && !$skipAppNav) || !isset($skipAppNav)}
-    <div class="app-nav{if $RSThemes.layouts.vars.type == "condensed"} app-nav-condensed{/if} {if $RSThemes.addonSettings.show_affixed_navigation == 'enabled'} sticky-navigation{/if}{if $RSThemes.addonSettings.show_affixed_navigation == 'enabled' && $RSThemes.layouts.name == "default"} sticky-navigation--default{/if}" {if $RSThemes.addonSettings.show_affixed_navigation == 'enabled'}data-site-navbar{/if}>
+    <div class="app-nav{if $RSThemes.layouts.vars.type == "condensed"} app-nav-condensed{/if}{if isset($RSThemes.pageSettings.promo.promotionNavType) && $RSThemes.pageSettings.promo.promotionNavType == "Only Logo"} app-nav-only-logo{/if}{if $RSThemes.addonSettings.show_affixed_navigation == 'enabled'} sticky-navigation{/if}{if $RSThemes.addonSettings.show_affixed_navigation == 'enabled' && $RSThemes.layouts.name == "default"} sticky-navigation--default{/if} {if $topNavStyle} app-nav-{$topNavStyle}{/if}" {if $RSThemes.addonSettings.show_affixed_navigation == 'enabled'}data-site-navbar{/if}>
         {if $secondaryNavbar|@count > 0 && !$adminMasqueradingAsClient && !$adminLoggedIn}
             {$hiddenLg = true}
             {$hiddenXl = true}

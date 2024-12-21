@@ -20,13 +20,13 @@ return [
         'displayDueWhenPaid' => [
             'type'  => 'checkbox',
             'name'  => "Display invoice due date when it's paid",
-            'label' => "Display invoice due date when it's paid",
+            'label' => "Display Invoice Due Date When It's Paid",
             'tooltip' => "Display invoice due date when it's paid"
         ],
         'displayBankDetailsOnInvoice' => [
             'type'  => 'checkbox',
             'name'  => "Display bank transfer details on the invoice",
-            'label' => "Display bank transfer details on the invoice",
+            'label' => "Display Bank Transfer Details on the Invoice",
             'tooltip' => "This option will automatically display selected bank transfer details, on invoices. However your payment gateway need to have 'Bank Transfer' name included in your payment gateway settings, for example: 'Bank Transfer USD', 'Bank Transfer EUR', etc."
         ],
     ]

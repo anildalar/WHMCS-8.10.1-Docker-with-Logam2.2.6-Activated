@@ -33,7 +33,7 @@ return [
         'hideInactiveServicesStatus' => [
             'type' => 'multiselect',
             'name' => 'servicesStatus',
-            'label' => 'Choose service statues which should be hidden:',
+            'label' => 'Choose Service Statues Which Should Be Hidden:',
             'options' => 'Pending,Completed,Suspended,Terminated,Cancelled,Fraud',
             'customFormGroupClass' => 'flex-column is-hidden m-b-0x m-t-2x', 
             'formGroupDataAttr' => 'data-inactive-services-status',           
@@ -42,7 +42,7 @@ return [
         'hideInactiveDomainStatus' => [
             'type' => 'multiselect',
             'name' => 'domainStatus',
-            'label' => 'Choose domain statues which should be hidden:',
+            'label' => 'Choose Domain Statues Which Should Be Hidden:',
             'options' => 'Pending,Pending Registration,Pending Transfer,Grace,Redemption,Expired,Transferred Away,Cancelled,Fraud',
             'customFormGroupClass' => 'flex-column is-hidden m-b-0x m-t-2x', 
             'formGroupDataAttr' => 'data-inactive-services-status',           

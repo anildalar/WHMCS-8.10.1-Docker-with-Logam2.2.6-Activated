@@ -14,10 +14,11 @@
         {if $autosaveExists && $smarty.get.autosave != "1"}
             data-autosave-show-modal
         {/if}
-    >   
+    >
         <input name="id" value="{$customPage->id}" type="hidden">
+        <input name="type" value="{$customPage->type}" type="hidden">
         <input type="hidden" name="customFilename" value="{$customPage->settings['filename']}">
-        <div class="block is-loading">
+        <div class="block {if $customPage->type}block--{$customPage->type}{/if} is-loading">
             <div class="block__body" style="max-width: calc(100% - 368px);">
                 <div class="section">
                     <div class="section__header">
@@ -149,6 +150,35 @@
                         {include file='adminarea/pages/custom/sections/index.tpl' pageSections=$customPageSections language=$language}
                     </div>
                 </div>
+                {if $pageType == "promo"}
+                    <div class="section">
+                        <div class="section__header top">
+                            <h3 class="section__title top__title">
+                                Expired Promotion Sections
+                                {include file="adminarea/includes/helpers/docs.tpl" link=$cms_docs->page['promotions']['page_sections_expired']}
+                            </h3>
+                            <div class="top__toolbar">
+                                <button
+                                    type="button"
+                                    class="btn btn--secondary"
+                                    data-toggle="lu-modal"
+                                    data-target="#modalAddNewSection"
+                                    data-section-add
+                                    data-section-type="expired_promo"
+                                    data-section-header-btn
+                                    data-order="{if is_countable($customPageSectionsStypes['expired_promo'])}{sizeof($customPageSectionsStypes['expired_promo']) + 1}{else}1{/if}"
+                                    data-index="{if is_countable($customPageSectionsStypes['expired_promo'])}{sizeof($customPageSectionsStypes['expired_promo']) + 10000}{else}10000{/if}"
+                                >
+                                    <i class="btn__icon ls ls-plus"></i>
+                                    <span class="btn__text">{$lang.general.add_new}</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="promotions-settings" class="section__body d-flex flex-column" data-page-builder-expired-promo>
+                            {include file='adminarea/pages/custom/sections/index.tpl' language=$language pageSections=$customPageSectionsStypes['expired_promo'] sType="expired_promo" counterStart=10000}
+                        </div>
+                    </div>
+                {/if} 
             </div>
             <div class="block__sidebar block__sidebar--md is-sticky" data-page-settings>
                 <div class="section">
@@ -188,44 +218,32 @@
                                             </div>
                                         </label>
                                     </div>
-                                    {*
-                                    <div class="form-group d-flex p-b-1x m-b-0x">
-                                        <span class="form-label text-default form-text m-r-2x m-b-0x" style="flex-grow: 1">Promo Page
-                                            <i class="ls ls-info-circle m-l-1x tooltip drop-target" data-toggle="lu-tooltip" data-title="Promo Page"></i>
-                                        </span>
-                                        <label>
-                                            <div class="switch switch--primary">
-                                                <input type="hidden" name="settings[is_promo_page]" value="0">
-                                                <input class="switch__checkbox" name="settings[is_promo_page]" value="1" type="checkbox" {if ($customPage->settings['is_promo_page'])} checked {/if}>
-                                                <span class="switch__container"><span class="switch__handle"></span></span>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    *}
-                                    <div class="form-group d-flex p-b-1x m-b-0x">
-                                        <span class="form-label text-default form-text m-r-2x m-b-0x" style="flex-grow: 1">Set as Homepage
-                                           {if $cms_tooltips->page['settings']['general']['set_as_homepage']['content']}
-                                                {if isset($cms_tooltips->page['settings']['general']['set_as_homepage']['url']) && $cms_tooltips->page['settings']['general']['set_as_homepage']['url'] != ""}
-                                                    {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$cms_tooltips->page['settings']['general']['set_as_homepage']['url']}' target='_blank'>Learn More</a>"}
-                                                {else}
-                                                    {assign var="popoverFooter" value=false}
+                                    {if $pageType != "promo"}
+                                        <div class="form-group d-flex p-b-1x m-b-0x">
+                                            <span class="form-label text-default form-text m-r-2x m-b-0x" style="flex-grow: 1">Set as Homepage
+                                            {if $cms_tooltips->page['settings']['general']['set_as_homepage']['content']}
+                                                    {if isset($cms_tooltips->page['settings']['general']['set_as_homepage']['url']) && $cms_tooltips->page['settings']['general']['set_as_homepage']['url'] != ""}
+                                                        {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$cms_tooltips->page['settings']['general']['set_as_homepage']['url']}' target='_blank'>Learn More</a>"}
+                                                    {else}
+                                                        {assign var="popoverFooter" value=false}
+                                                    {/if}
+                                                    {include 
+                                                        file="adminarea/includes/helpers/popover.tpl" 
+                                                        popoverClasses="notification__popover popover__top"
+                                                        popoverBody="{$cms_tooltips->page['settings']['general']['set_as_homepage']['content']}"
+                                                        popoverFooter="{$popoverFooter}"
+                                                    }
                                                 {/if}
-                                                {include 
-                                                    file="adminarea/includes/helpers/popover.tpl" 
-                                                    popoverClasses="notification__popover popover__top"
-                                                    popoverBody="{$cms_tooltips->page['settings']['general']['set_as_homepage']['content']}"
-                                                    popoverFooter="{$popoverFooter}"
-                                                }
-                                            {/if}
-                                        </span>
-                                        <label>
-                                            <div class="switch switch--primary">
-                                                <input type="hidden" name="isHomepage" value="0">
-                                                <input class="switch__checkbox" name="isHomepage" value="1" type="checkbox" {if $isHomepage} checked {/if}>
-                                                <span class="switch__container"><span class="switch__handle"></span></span>
-                                            </div>
-                                        </label>
-                                    </div>
+                                            </span>
+                                            <label>
+                                                <div class="switch switch--primary">
+                                                    <input type="hidden" name="isHomepage" value="0">
+                                                    <input class="switch__checkbox" name="isHomepage" value="1" type="checkbox" {if $isHomepage} checked {/if}>
+                                                    <span class="switch__container"><span class="switch__handle"></span></span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    {/if}
                                     <div class="form-group m-b-0x">
                                         <span class="form-label text-default form-text m-r-2x m-b-1x" style="flex-grow: 1">Body class
                                             {if $cms_tooltips->page['settings']['general']['body_class']['content']}
@@ -249,6 +267,11 @@
                                 </div>
                             </div>
                         </div>
+                      
+                        {if $pageType == "promo"} 
+                            {include file="adminarea/pages/custom/promotions/sidebar.tpl"}
+                        {/if}
+
                         <div class="widget panel of-visible">
                             <label class="widget__top top">
                                 <div class="top__title">
@@ -266,7 +289,7 @@
                                 <div class="widget__content">
                                     <div class="form-group" data-form-counter>
                                         <label class="form-label">
-                                            Robots
+                                            Search Engine Indexing
                                             {if $cms_tooltips->page['settings']['seo']['robots']['content']}
                                                 {if isset($cms_tooltips->page['settings']['seo']['robots']['url']) && $cms_tooltips->page['settings']['seo']['robots']['url'] != ""}
                                                     {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$cms_tooltips->page['settings']['seo']['robots']['url']}' target='_blank'>Learn More</a>"}
@@ -289,7 +312,7 @@
                                     <div class="form-group" data-form-counter>
 {*                                         <label class="form-label">Seo Title<span class="form-label__counter">(<span data-form-counter-value>{if isset($page)}{$customPage->seoTitle|count_characters:true}{else}0{/if}</span>/64)</span></label>*}
                                         <label class="form-label" data-form-counter>
-                                            Seo Title
+                                            SEO Title
                                             <span class="form-label__counter">(<span data-form-counter-value>{if isset($customPage)}{$customPage->seo_title[$whmcsLang->value]|count_characters:true}{else}0{/if}</span>/64)</span>
                                             {if $cms_tooltips->page['settings']['seo']['title']['content']}
                                                 {if isset($cms_tooltips->page['settings']['seo']['title']['url']) && $cms_tooltips->page['settings']['seo']['title']['url'] != ""}
@@ -314,7 +337,7 @@
                                     <div class="form-group" data-form-counter>
 {*                                         <label class="form-label">Seo Description<span class="form-label__counter">(<span data-form-counter-value>{if isset($page)}{$page->seoDescription|count_characters:true}{/if}</span>/160)</span></label>*}
                                         <label class="form-label">
-                                            Seo Description
+                                            SEO Description
                                             <span class="form-label__counter">(<span data-form-counter-value>{if isset($customPage)}{$customPage->seo_description[$whmcsLang->value]|count_characters:true}{else}0{/if}</span>/160)</span>
                                              {if $cms_tooltips->page['settings']['seo']['description']['content']}
                                                 {if isset($cms_tooltips->page['settings']['seo']['description']['url']) && $cms_tooltips->page['settings']['seo']['description']['url'] != ""}
@@ -413,6 +436,16 @@
     {if $autosaveExists}
         {include file='adminarea/pages/includes/modal/other/load-autosave.tpl'}
     {/if}
+
+    <form data-duplicate-section-form class="is-hidden">
+        <input type="hidden" name="language" value="{$language}">
+        <input type="hidden" name="order" value="" data-duplicate-section-order> 
+        <input type="hidden" name="duplicateIndex" value="" data-duplicate-section-index>
+        <input type="hidden" name="index" value="" data-duplicate-section-new-index> 
+        <input type="hidden" name="stype" value="" data-duplicate-section-stype>
+        <input type="hidden" name="newSection[new]" value="" data-duplicate-section-type>
+        <input type="hidden" name="newSection[type]" value="new">
+    </form>
 {/block}
 
 {block name="template-sidebar"}

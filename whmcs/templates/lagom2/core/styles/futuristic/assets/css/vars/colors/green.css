@@ -17,7 +17,7 @@
     --gray-lighter:                                 hsla(220, 100%, 94%, 80%); /* name: Lighter;*/
     --gray-lighter-2:                               hsla(220, 100%, 94%, 56%); /* name: Lighter 2; */
     --gray-lighter-3:                               hsla(220, 100%, 94%, 24%); /* name: Lighter 3; */
-    --gray-lighter-4:                               hsla(220, 100%, 94%, 16%); /* name: Lighter 4; */
+    --gray-lighter-4:                               hsla(220, 100%, 94%, 16%); /* name: Lighter 4; */ 
     --gray-faded:                                   hsla(220, 100%, 94%, 8%); /* name: Lighter 5;*/
     --gray-darker:                                  #fff; /* name: Darker; */
     --gray-icons:                                   hsla(220, 100%, 94%, 64%); /* name: Icons; */
@@ -112,6 +112,8 @@
     --svg-illustration-color-6:                     #E0F5E7; /* name: Lighter 5; type: hiddenlist; */
     --svg-illustration-color-7:                     #ffffff; /* name: Secondary; type: hiddenlist; */
     --svg-illustration-shadow:                      #000000;
+
+    --svg-illustration-line-color:                 rgba(155, 232, 173, 0.24); 
 
     /* Section: Background */
 

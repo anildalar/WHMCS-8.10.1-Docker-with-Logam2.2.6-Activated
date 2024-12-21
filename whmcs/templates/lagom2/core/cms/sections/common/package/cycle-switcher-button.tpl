@@ -24,7 +24,7 @@
             </span>
         {/if}
         <label 
-            class="label label-xs label-info label-save {if isset($discount) && $discount}{else}hidden{/if}"
+            class="label label-xs label-save {if isset($discount) && $discount}{else}hidden{/if}"
             {if isset($dataDiscount) && is_array($dataDiscount)}
                 data-change-discount='[{foreach from=$dataDiscount key=key item=$d}"{if isset($d[$name]) && is_array($d[$name])}{min($d[$name])}{else}0{/if}"{if !$d@last},{/if}{/foreach}]'
             {/if}

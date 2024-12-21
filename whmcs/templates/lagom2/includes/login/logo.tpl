@@ -16,7 +16,9 @@
             <a class="logo" href="{if $lagom_logo_url}{$lagom_logo_url}{else}{$WEB_ROOT}/index.php{/if}"><img src="{$MBLogo}" alt="{$companyname}" ></a>
         {else}
             {* Fallback - check if specific logo version is uploaded in Branding section*}
-            {if $logoVersion}
+            {if $display_mode_switcher.enabled && $RSThemes.styles.name != "futuristic"}
+                <a class="logo logo-login" logo-login-light-mode="{$WEB_ROOT}{$logoVersion}" logo-login-dark-mode="{$WEB_ROOT}{$RSThemes.logo_inverse}" href="{if $lagom_logo_url}{$lagom_logo_url}{else}{$WEB_ROOT}/index.php{/if}"><img class="logo-login-img" src="{$WEB_ROOT}{if $display_mode_switcher.dark}{$RSThemes.logo_inverse}{else}{$logoVersion}{/if}" title="{$companyname}" alt="{$companyname}"/></a>
+            {elseif $logoVersion}
                 <a class="logo" href="{if $lagom_logo_url}{$lagom_logo_url}{else}{$WEB_ROOT}/index.php{/if}"><img src="{$WEB_ROOT}{$logoVersion}" title="{$companyname}" alt="{$companyname}"/></a>
             {elseif $RSThemes.logo_inverse}
                 <a class="logo" href="{if $lagom_logo_url}{$lagom_logo_url}{else}{$WEB_ROOT}/index.php{/if}"><img src="{$WEB_ROOT}{$RSThemes.logo_inverse}" title="{$companyname}" alt="{$companyname}"/></a>

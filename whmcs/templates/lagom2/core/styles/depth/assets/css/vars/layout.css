@@ -155,3 +155,11 @@
         --layout-container-gutter:                  24px;
     }
 }
+
+.lagom-dark-mode{
+
+    --main-footer-bg:                               #121212;
+    --main-top-bg:                                  transparent;
+    --main-body-sidebar-content-bg:                 transparent;
+
+}

@@ -14,7 +14,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "86",
+                "pageslug": "0b7f31ba9d090bb81dac159b8ab3d207",
                 "translation-method": "whmcs",
                 "icon": "lm lm-basket",
                 "predefined_icon": "",
@@ -88,7 +88,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "13",
+                "pageslug": "bccd1749fc2f1ef02fdc62280cd40df0",
                 "translation-method": "whmcs",
                 "icon": "",
                 "predefined_icon": "",
@@ -236,7 +236,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "119",
+                        "pageslug": "1642ef02347f0d4c88d849098e0ccad3",
                         "translation-method": "whmcs",
                         "icon": "",
                         "predefined_icon": "",
@@ -348,7 +348,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "55",
+                        "pageslug": "c08500cb9b12178780fd9d10e43e8c2c",
                         "translation-method": "whmcs",
                         "icon": "",
                         "predefined_icon": "",
@@ -552,6 +552,23 @@
             },
             "description": "null",
             "translation": "Language"
+        },
+        {
+            "name": "Mode Switcher",
+            "location": null,
+            "active": 1,
+            "type": "Mode Switcher",
+            "settings": null,
+            "display": {
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": "Mode Switcher"
         }
     ]
 }

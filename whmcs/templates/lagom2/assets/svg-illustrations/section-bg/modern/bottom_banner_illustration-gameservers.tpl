@@ -8,32 +8,32 @@
     <g clip-path="url(#bg-illustration-game-servers-bottom-left__a)">
       <g>
         <path data-animation-path data-animation-path-9 style="stroke-dasharray: 96px; stroke-dashoffset: 96px;"
-          stroke="var(--svg-illustration-gray-1)" d="M157.735 351.037L77.9502 397.05" opacity=".12" />
+          stroke="var(--svg-illustration-line-color)" d="M157.735 351.037L77.9502 397.05"  />
         <path data-animation-path data-animation-path-8 style="stroke-dasharray: 412px; stroke-dashoffset: 412px;"
           stroke="url(#bg-illustration-game-servers-bottom-left__b)" d="M157.74 351.04L77.9546 397.05" />
-        <path data-animation-path data-animation-path-3 style="stroke-dasharray: 400px; stroke-dashoffset: 400px;"
-          stroke="var(--svg-illustration-gray-1)"
+        <path data-animation-path data-animation-path-3 style="stroke-dasharray: 415px; stroke-dashoffset: 415px;"
+          stroke="var(--svg-illustration-line-color)"
           d="M110.973 423.981L34.006 468.377C28.3969 471.596 21.5426 471.61 15.9399 468.38L-60.7272 423.907C-63.7637 422.157 -63.7561 417.772 -60.7134 416.032L15.9822 371.81C21.5636 368.618 28.5882 368.62 34.1721 371.807L110.964 416.099C114.013 417.839 114.018 422.233 110.973 423.981Z"
-          opacity=".12" />
+           />
         <path data-animation-path data-animation-path-5 style="stroke-dasharray: 422px; stroke-dashoffset: 422px;"
-          stroke="var(--svg-illustration-gray-1)"
+          stroke="var(--svg-illustration-line-color)"
           d="M678.172 363.264L596.999 410.034C592.054 412.883 585.966 412.883 581.022 410.033L513.366 371.046C510.696 369.507 510.696 365.654 513.365 364.115L594.561 317.288C599.511 314.434 605.607 314.436 610.555 317.292L678.175 356.334C680.843 357.875 680.841 361.726 678.172 363.264Z"
-          opacity=".12" />
+           />
         <path data-animation-path data-animation-path-10 style="stroke-dasharray: 422px; stroke-dashoffset: 422px;"
-          stroke="var(--svg-illustration-gray-1)"
+          stroke="var(--svg-illustration-line-color)"
           d="M587.038 451.084L524.48 414.92C521.818 413.381 521.816 409.538 524.477 407.996L551.163 392.532"
-          opacity=".12" />
+           />
         <path data-animation-path data-animation-path-9 style="stroke-dasharray: 122px; stroke-dashoffset: 122px;"
-          stroke="var(--svg-illustration-gray-1)" d="M290.645 357.22L333.759 382.137" opacity=".12" />
+          stroke="var(--svg-illustration-line-color)" d="M290.645 357.22L333.759 382.137"  />
         <path data-animation-path data-animation-path-9 style="stroke-dasharray: 122px; stroke-dashoffset: 122px;"
-          stroke="var(--svg-illustration-gray-1)" d="M466.56 295.47L549.302 343.713" opacity=".12" />
+          stroke="var(--svg-illustration-line-color)" d="M466.56 295.47L549.302 343.713"  />
         <path data-animation-path data-animation-path-9 style="stroke-dasharray: 122px; stroke-dashoffset: 122px;" 
         stroke="url(#bg-illustration-game-servers-bottom-left__c)" d="M466.559 295.472L549.3 343.71"
           opacity=".5" />
         <path data-animation-path data-animation-path-4 style="stroke-dasharray: 588px; stroke-dashoffset: 588px;"
-          stroke="var(--svg-illustration-gray-1)"
+          stroke="var(--svg-illustration-line-color)"
           d="M232.461 440.464L382.93 353.601C387.881 350.743 393.981 350.743 398.931 353.603L516.547 421.533C519.214 423.074 519.212 426.924 516.544 428.462L330.803 535.555"
-          opacity=".12" />
+           />
       </g>
       <g data-bg-element-animation data-animation-type-4>
         <g>
@@ -870,7 +870,7 @@
                   d="M445.021 279.611L412.008 260.142L485.597 218.467L519.005 237.717L445.021 279.611Z" />
                 <path fill="var(--svg-illustration-primary-1)"
                   d="M444.974 283.888L526.008 237.693C526.013 258.527 525.995 270.338 526 291.172L444.996 337.33L444.974 283.888Z" />
-                <path fill="var(--svg-illustration-shadow)" fill-opacity=".12" d="M485.594 256.662V218.474L519.031 237.709L485.594 256.662Z" />
+                <path fill="var(--svg-illustration-shadow)" fill-  d="M485.594 256.662V218.474L519.031 237.709L485.594 256.662Z" />
                 <path fill="var(--svg-illustration-primary-1)"
                   d="M362.885 220.75C360.338 238.933 387.008 276.575 405.335 260.581L400.134 253.25L386.065 239.483L371.92 226.548L362.885 220.75Z" />
                 <path fill="var(--svg-illustration-primary-3)" d="M404.987 260.401L445 283.861L445 337.333L404.987 314.136L404.987 260.401Z" />
@@ -1479,31 +1479,31 @@
     <g clip-path="url(#bg-illustration-game-servers-bottom-right__a)">
       <g data-animation-delay-1>
         <path data-animation-path data-animation-path-8 style="stroke-dasharray: 412px; stroke-dashoffset: 412px;"
-          stroke="var(--svg-illustration-gray-1)"
+          stroke="var(--svg-illustration-line-color)"
           d="M357.585 503.976L392.697 524.137M279.015 283.501L300.033 271.44C304.98 268.601 311.064 268.611 316.003 271.465L335.543 282.759C340.487 285.617 346.58 285.623 351.529 282.774L378.024 267.529M191.157 334.258L133.498 367.54C130.831 369.079 130.83 372.927 133.495 374.467L284.981 462.03"
-          opacity=".12" />
+           />
         <path data-animation-path data-animation-path-8 style="stroke-dasharray: 412px; stroke-dashoffset: 412px;"
-          stroke="var(--svg-illustration-gray-1)"
+          stroke="var(--svg-illustration-line-color)"
           d="M386.348 487.238L327.556 521.143C322.607 523.996 316.513 523.995 311.565 521.14L253.089 487.393C250.428 485.858 250.42 482.02 253.075 480.473L311.51 446.423C316.468 443.535 322.592 443.522 327.562 446.389L386.349 480.308C389.017 481.848 389.017 485.699 386.348 487.238Z"
-          opacity=".12" />
+           />
         <path data-animation-path data-animation-path-8 style="stroke-dasharray: 412px; stroke-dashoffset: 412px;"
-          stroke="var(--svg-illustration-gray-1)"
+          stroke="var(--svg-illustration-line-color)"
           d="M648.082 504.617L590.572 537.786C585.624 540.639 579.53 540.639 574.583 537.785L517.102 504.621C514.433 503.082 514.434 499.23 517.103 497.691L574.59 464.557C579.534 461.708 585.621 461.707 590.566 464.555L648.08 497.686C650.751 499.225 650.752 503.078 648.082 504.617Z"
-          opacity=".12" />
+           />
         <path data-animation-path data-animation-path-8 style="stroke-dasharray: 412px; stroke-dashoffset: 412px;"
-          stroke="var(--svg-illustration-gray-1)"
+          stroke="var(--svg-illustration-line-color)"
           d="M272.45 334.473L239.59 353.379C234.636 356.229 228.538 356.22 223.593 353.357L149.595 310.507C146.927 308.963 146.936 305.108 149.61 303.575L224.054 260.916C228.997 258.084 235.072 258.093 240.006 260.94L314.039 303.657C316.71 305.198 316.706 309.054 314.032 310.59L272.45 334.473ZM272.45 334.473L412.568 415.383C417.527 418.247 423.638 418.242 428.592 415.371L440.861 408.261"
-          opacity=".12" />
+           />
         <path data-animation-path data-animation-path-8 style="stroke-dasharray: 452px; stroke-dashoffset: 452px;"
-          stroke="var(--svg-illustration-gray-1)"
+          stroke="var(--svg-illustration-line-color)"
           d="M504.28 243.834L428.575 287.457C423.626 290.308 417.533 290.306 412.586 287.45L338.116 244.451C335.467 242.921 335.446 239.104 338.079 237.545L412.472 193.5C417.435 190.561 423.596 190.522 428.597 193.397L504.277 236.9C506.95 238.437 506.952 242.294 504.28 243.834Z"
-          opacity=".12" />
+           />
         <path data-animation-path data-animation-path-4 style="stroke-dasharray: 588px; stroke-dashoffset: 588px;"
-          stroke="var(--svg-illustration-gray-1)"
+          stroke="var(--svg-illustration-line-color)"
           d="M631.607 375.51L515.509 442.499C510.561 445.354 504.466 445.354 499.517 442.499L383.68 375.673C381.011 374.134 381.012 370.282 383.681 368.743L499.758 301.819C504.702 298.968 510.792 298.967 515.737 301.817L631.604 368.58C634.274 370.118 634.275 373.971 631.607 375.51Z"
-          opacity=".12" />
+           />
         <path data-animation-path data-animation-path-7 style="stroke-dasharray: 212px; stroke-dashoffset: 212px;"
-          stroke="var(--svg-illustration-gray-1)" d="M609.564 248.041L515.91 302.15" opacity=".12" />
+          stroke="var(--svg-illustration-line-color)" d="M609.564 248.041L515.91 302.15"  />
         <path stroke="url(#bg-illustration-game-servers-bottom-right__b)" data-animation-path data-animation-path-6
           style="stroke-dasharray: 212px; stroke-dashoffset: 212px;" d="M609.564 248.041L515.906 302.151" />
         <path stroke="url(#bg-illustration-game-servers-bottom-right__c)" data-animation-path data-animation-path-6

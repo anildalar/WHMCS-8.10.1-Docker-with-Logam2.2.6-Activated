@@ -21,7 +21,11 @@
             {include file="orderforms/$carttpl/includes/domain/captcha.tpl" pageClass="rspage-modern"}
         </form>
     </div>
-    {include file="$template/includes/common/svg-illustration.tpl" illustration="site/banner-bg"} 
+        {if $RSThemes.styles.iconType == "modern"}
+            {include file="$template/includes/common/svg-illustration.tpl" illustration="site/modern/banner-bg"} 
+        {else} 
+            {include file="$template/includes/common/svg-illustration.tpl" illustration="site/banner-bg"} 
+        {/if}
 </div>
 <div class="main-body">
     <div class="container">

@@ -3,10 +3,10 @@
 <div class="graphic-background graphic-background-bg-illustration-homepage" data-animation-css>
     <svg class="graphic-background-left" width="778" height="640" fill="none" viewBox="0 0 778 640">
         <g clip-path="url(#bg-illustration-homepage-left__a)">
-            <path data-animation-path data-animation-path-7 style="stroke-dasharray: 642px; stroke-dashoffset: 642px;" stroke="var(--svg-illustration-primary-1)" d="M201.422 279.325L326.132 351.321C328.763 352.839 328.763 355.302 326.132 356.82L187.628 436.779C184.998 438.298 180.732 438.298 178.102 436.779L53.3919 364.783C50.7612 363.265 50.7612 360.802 53.3919 359.284L191.895 279.325C194.526 277.806 198.791 277.806 201.422 279.325Z" opacity=".12" />
-            <path data-animation-path data-animation-path-2 style="stroke-dasharray: 116px; stroke-dashoffset: 116px;" stroke="var(--svg-illustration-gray-1)" d="M95.98 389L-28 459.443" opacity=".12" />
-            <path data-animation-path data-animation-path-6 style="stroke-dasharray: 257px; stroke-dashoffset: 257px;" stroke="var(--svg-illustration-gray-1)" d="M77.125 517L111.965 540.015C115.998 542.474 121.048 542.552 125.155 540.218L296.5 440.5" opacity=".12" />
-            <path data-animation-path data-animation-path-5 style="stroke-dasharray: 90px; stroke-dashoffset: 90px;" stroke="var(--svg-illustration-gray-1)" d="M423 360.5L348 404.5" opacity=".12" />
+            <path data-animation-path data-animation-path-7 style="stroke-dasharray: 642px; stroke-dashoffset: 642px;" stroke="var(--svg-illustration-line-color)" d="M201.422 279.325L326.132 351.321C328.763 352.839 328.763 355.302 326.132 356.82L187.628 436.779C184.998 438.298 180.732 438.298 178.102 436.779L53.3919 364.783C50.7612 363.265 50.7612 360.802 53.3919 359.284L191.895 279.325C194.526 277.806 198.791 277.806 201.422 279.325Z"   />
+            <path data-animation-path data-animation-path-2 style="stroke-dasharray: 116px; stroke-dashoffset: 116px;" stroke="var(--svg-illustration-line-color)" d="M95.98 389L-28 459.443"   />
+            <path data-animation-path data-animation-path-6 style="stroke-dasharray: 257px; stroke-dashoffset: 257px;" stroke="var(--svg-illustration-line-color)" d="M77.125 517L111.965 540.015C115.998 542.474 121.048 542.552 125.155 540.218L296.5 440.5"   />
+            <path data-animation-path data-animation-path-5 style="stroke-dasharray: 90px; stroke-dashoffset: 90px;" stroke="var(--svg-illustration-line-color)" d="M423 360.5L348 404.5"   />
             <g data-top-right-animation data-animation-delay-1>
                 <path fill="var(--svg-illustration-primary-1)" d="M-6.99854 165.344L76.9957 157.831L76.9926 347.185L-7.00162 395.776L-6.99854 165.344Z" />
                 <rect width="97.037" height="97.037" fill="var(--svg-illustration-primary-3)" transform="matrix(.86562 -.5007 .86562 .5007 -90.995 157.843)" />
@@ -226,11 +226,11 @@
     </svg>
     <svg class="graphic-background-right" width="778" height="640" fill="none" viewBox="0 0 778 640">
         <g clip-path="url(#bg-illustration-homepage-right__a)">
-            <path data-animation-path data-animation-path-1 style="stroke-dasharray: 78px; stroke-dashoffset: 78px;" stroke="var(--svg-illustration-gray-1)" d="M529.5 273.5L594 310.5" opacity=".12" />
-            <path data-animation-path data-animation-path-1 style="stroke-dasharray: 78px; stroke-dashoffset: 78px;" stroke="var(--svg-illustration-gray-1)" d="M473.5 359L408.5 396.25" opacity=".12" />
-            <path data-animation-path data-animation-path-2 style="stroke-dasharray: 116px; stroke-dashoffset: 116px;" stroke="var(--svg-illustration-gray-1)" d="M789.5 257L688.5 314" opacity=".12" />
-            <path data-animation-path data-animation-path-3 style="stroke-dasharray: 718px; stroke-dashoffset: 718px;" stroke="var(--svg-illustration-gray-1)" d="M559.532 238.272L717.151 329.267C719.782 330.785 719.782 333.248 717.151 334.766L578.935 414.559C576.305 416.078 572.039 416.078 569.409 414.559L411.789 323.565C409.159 322.046 409.159 319.584 411.789 318.065L550.005 238.272C552.636 236.753 556.901 236.753 559.532 238.272Z" opacity=".12" />
-            <path data-animation-path data-animation-path-3 style="stroke-dasharray: 718px; stroke-dashoffset: 718px;" stroke="var(--svg-illustration-gray-1)" d="M694.75 488L647.845 519.685C642.933 522.68 636.783 522.775 631.782 519.933L423.125 398.5" opacity=".12" />
+            <path data-animation-path data-animation-path-1 style="stroke-dasharray: 78px; stroke-dashoffset: 78px;" stroke="var(--svg-illustration-line-color)" d="M529.5 273.5L594 310.5"   />
+            <path data-animation-path data-animation-path-1 style="stroke-dasharray: 78px; stroke-dashoffset: 78px;" stroke="var(--svg-illustration-line-color)" d="M473.5 359L408.5 396.25"   />
+            <path data-animation-path data-animation-path-2 style="stroke-dasharray: 116px; stroke-dashoffset: 116px;" stroke="var(--svg-illustration-line-color)" d="M789.5 257L688.5 314"   />
+            <path data-animation-path data-animation-path-3 style="stroke-dasharray: 718px; stroke-dashoffset: 718px;" stroke="var(--svg-illustration-line-color)" d="M559.532 238.272L717.151 329.267C719.782 330.785 719.782 333.248 717.151 334.766L578.935 414.559C576.305 416.078 572.039 416.078 569.409 414.559L411.789 323.565C409.159 322.046 409.159 319.584 411.789 318.065L550.005 238.272C552.636 236.753 556.901 236.753 559.532 238.272Z"   />
+            <path data-animation-path data-animation-path-3 style="stroke-dasharray: 718px; stroke-dashoffset: 718px;" stroke="var(--svg-illustration-line-color)" d="M694.75 488L647.845 519.685C642.933 522.68 636.783 522.775 631.782 519.933L423.125 398.5"   />
             <g data-top-left-animation data-animation-delay-1>
                 <path fill="url(#bg-illustration-homepage-right__b)" fill-opacity=".1" d="M555.449 442.09L585.699 459.775L529.702 492.414L499.48 474.791L555.449 442.09Z" />
                 <path fill="url(#bg-illustration-homepage-right__c)" fill-opacity=".1" d="M573.943 482.319L599.373 497.178L591.643 501.821L566.076 486.881L573.943 482.319Z" />

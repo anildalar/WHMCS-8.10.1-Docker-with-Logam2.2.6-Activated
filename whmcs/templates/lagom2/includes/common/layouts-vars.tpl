@@ -11,8 +11,7 @@
 {* Assign page templates with custom status icons option *}
 {assign var=iconsPages value=['clientareadomains', 'supportticketslist', 'clientareainvoices', 'clientareaproducts'] scope=parent}
 
-{* Assign variable to skip the .
- container with all children *}
+{* Assign variable to skip the .main-sidebar container with all children *}
 {if ((isset($RSThemes['pages'][$templatefile]['optionvars']['skipMainSidebar']) && $RSThemes['pages'][$templatefile]['optionvars']['skipMainSidebar'] == "true") ||
 $ignoreSidebars ||
 (isset($inShoppingCart) && $inShoppingCart) ||

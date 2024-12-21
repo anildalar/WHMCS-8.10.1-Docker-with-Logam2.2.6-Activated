@@ -29,6 +29,10 @@
    24. Required Company name - client register & checkout 
    25. Configure Product Domain & Configure Domains - Product Free Domain
    26. WordPress Managment icon on the cPanel page
+   27. Assets Cache Key
+   28. Show amount of hidden services/domains
+   29. Custom Language List
+   30. Domain Revewals - Renewals In Cart Counter
  * ******************************************
  */
 
@@ -38,6 +42,8 @@
  * ******************************************
  */
 
+use RSThemes\Helpers\AddonHelper;
+use RSThemes\Models\Domain;
 use RSThemes\Models\Icons;
 use RSThemes\Models\Page;
 use RSThemes\Processors\MenuProcessor;
@@ -53,6 +59,7 @@ use WHMCS\User\Client;
 
 use RSThemes\Template\Template;
 use RSThemes\Template\Page as TemplatePage;
+
 /*
  * ******************************************
    2. Layout Helpers
@@ -512,97 +519,16 @@ add_hook('ClientAreaPage', 1, function($vars) {
     $displayModeSwitcherEnabled = (bool) $displayModeSwitcher->value;
     $darkModeEnabledValue = false; //default value
     if ($displayModeSwitcherEnabled) {
-        if (!$vars['loggedin']) {  //unlogged user
-            if (isset($_COOKIE['dark_mode_enabled'])) { //get cookie value
-                $darkModeEnabledValue = $_COOKIE['dark_mode_enabled'];
-            }
-        } else { //logged user
-            if (isset($_COOKIE['dark_mode_enabled'])) {
-                $darkModeEnabledValue = $_COOKIE['dark_mode_enabled'];
-            } else {
-                $clientId = '';
-                if (isset($vars['client'])) {
-                    $clientId = $vars['client']->id; //user has not clients
-                } else {
-                    $loggedInUser = $vars['loggedinUser'];
-                    foreach ($loggedInUser->getClientIds() as $id) {
-                        $client = Client::find($id);
-                        if ($client->email == $loggedInUser->email) { //account selection
-                            $clientId = $client->id;
-                        }
-                    }
-                }
-                $darkModeCustomField = CustomField::where('fieldname', 'Dark Mode Enabled')
-                    ->where('type', 'client')
-                    ->where('fieldtype', 'tickbox')
-                    ->where('relid', 0)
-                    ->first();
-                $darkModeCustomFieldValue = CustomFieldValue::where('fieldid', $darkModeCustomField->id)
-                    ->where('relid', $clientId)
-                    ->first();
-                if (!is_null($darkModeCustomFieldValue) && $darkModeCustomFieldValue->value == 'on') { //if user has custom field and value is true
-                    $darkModeEnabledValue = true;
-                }
-            }
-        }
+        if (isset($_COOKIE['lagom_client_theme_dark_mode'])) { //get cookie value
+            $darkModeEnabledValue = $_COOKIE['lagom_client_theme_dark_mode'];
+        } 
     }
     return [
-        'mode_switcher' => [
+        'display_mode_switcher' => [
             'enabled' => $displayModeSwitcherEnabled,
-            'value' => $darkModeEnabledValue
+            'dark' => $darkModeEnabledValue
         ]
     ];
-});
-
-add_hook('ClientAreaRegister', 1, function($vars) {
-    $darkModeEnabledValue = false;
-    if (isset($_COOKIE['dark_mode_enabled'])) {
-        $darkModeEnabledValue = $_COOKIE['dark_mode_enabled'];
-    }
-    $darkModeCustomField = CustomField::where('fieldname', 'Dark Mode Enabled')
-        ->where('type', 'client')
-        ->where('fieldtype', 'tickbox')
-        ->where('relid', 0)
-        ->first();
-    if (!is_null($darkModeCustomField)) {
-        $darkModeCustomFieldValue = new CustomFieldValue(); //custom field value creation
-        $darkModeCustomFieldValue->fieldid = $darkModeCustomField->id;
-        $darkModeCustomFieldValue->relid = $vars['client_id'];
-        $darkModeCustomFieldValue->value = $darkModeEnabledValue ? 'on' : '';
-        $darkModeCustomFieldValue->created_at = new DateTime();
-        $darkModeCustomFieldValue->updated_at = new DateTime();
-        $darkModeCustomFieldValue->save();
-    }
-});
-
-add_hook('UserLogin', 1, function($vars) {
-    $user = $vars['user'];
-    $clientExists = false;
-    foreach ($user->getClientIds() as $id) {
-        $client = Client::find($id);
-        if ($client->email == $user->email) {
-            $clientId = $client->id;
-            $clientExists = true; // orderform account creation login hook is triggered, no client in db
-        }
-    }
-    $darkModeEnabledValue = false;
-    if (isset($_COOKIE['dark_mode_enabled'])) {
-        $darkModeEnabledValue = $_COOKIE['dark_mode_enabled'];
-    }
-    $darkModeCustomField = CustomField::where('fieldname', 'Dark Mode Enabled')
-        ->where('type', 'client')
-        ->where('fieldtype', 'tickbox')
-        ->where('relid', 0)
-        ->first();
-    if (!is_null($darkModeCustomField) && $clientExists) {
-        $darkModeCustomFieldValue = new CustomFieldValue(); //custom field value creation
-        $darkModeCustomFieldValue->fieldid = $darkModeCustomField->id;
-        $darkModeCustomFieldValue->relid = $clientId;
-        $darkModeCustomFieldValue->value = $darkModeEnabledValue ? 'on' : '';
-        $darkModeCustomFieldValue->created_at = new DateTime();
-        $darkModeCustomFieldValue->updated_at = new DateTime();
-        $darkModeCustomFieldValue->save();
-    }
 });
 
 /*
@@ -622,7 +548,22 @@ add_hook('ClientAreaPage', 1, function($vars) {
     $uri = str_replace("&amp;", "&", $_SERVER['REQUEST_URI']);
     $uri = strstr($uri, '?rs', true) ?: $uri;
     $uri = strstr($uri, '&rs', true) ?: $uri;
-    
+
+    if($vars['templatefile'] == "knowledgebasearticle"){
+        $uri = routePath('knowledgebase-article-view' ,$vars['kbarticle']['id'],$vars['kbarticle']['urlfriendlytitle']);
+    }elseif($vars['templatefile'] == "knowledgebase"){
+        $uri = routePath('knowledgebase-index');
+    }elseif($vars['templatefile'] == "knowledgebasecat"){
+        $uri = routePath('knowledgebase-category-view', $vars['kbcurrentcat']['id'],$vars['kbcurrentcat']['urlfriendlyname']);
+    }elseif($vars['templatefile'] == "announcements"){
+        $uri = routePath('announcement-index');
+    }elseif($vars['templatefile'] == "viewannouncement"){
+        $uri = routePath('announcement-view',$vars['id'],$vars['urlfriendlytitle']);
+    }elseif($vars['templatefile'] == "downloads"){
+        $uri = routePath('download-index');
+    }
+
+
     return [
         'currentUrl' => $uri,
         'hideServerAlert' => $_SESSION['hide_server_alert'] ?? ""
@@ -847,8 +788,10 @@ add_hook('ShoppingCartValidateProductUpdate', 1, function($vars) {
 add_hook('ClientAreaPage', 2, function($vars) {
     // if ($vars['templatefile'] == "knowledgebasearticle" || $vars['templatefile'] == "viewannouncement" || $vars['templatefile'] == "products" || str_contains($vars['templatefile'], "store/")){
         $seoHost = 'https://'.$_SERVER['HTTP_HOST'].'/';
+        $defaultLanguage = (new \RSThemes\Models\Configuration())->getConfig('Language');
         return[
-            'seoHost' => $seoHost
+            'seoHost' => $seoHost,
+            'defaultLanguage' => $defaultLanguage
         ];
     // }
 });
@@ -898,6 +841,19 @@ add_hook('ClientAreaPage', 2, function($vars) {
                     }
                 }
             }
+            $orderForm = new WHMCS\OrderForm();
+            $cartDomains = $orderForm->getCartDataByKey("domains");
+            if (is_array($cartDomains)) {
+                foreach ($cartDomains as $key => $domain) {
+                    if ($domain['isPremium'] && $domain['domainpriceoverride']){
+                        $domainName = explode('.', $domain['domain'], 2);
+                        $tld = $domainName[1];
+                        unset($tldPricing[$tld]);
+                        $tldPricing[$tld]['1']['register'] = $domain['domainpriceoverride'];
+                    }
+                }
+            }
+
             return [
                 'tldPricing' => $tldPricing
             ];
@@ -1161,5 +1117,97 @@ add_hook('ClientAreaPrimarySidebar', 9999, function($vars) {
         if (!is_null($wpManager->getChild('mg-wp-manager'))){
             $wpManager->getChild('mg-wp-manager')->setIcon('fab fa-wordpress');
         }
+    }
+});
+
+/*
+ * **************************************************************
+    27. Assets Cache Key
+ * **************************************************************
+*/
+
+add_hook('ClientAreaPage', 2, function($vars) {
+    $assetsCacheKey = AddonHelper::getCacheKey();
+    return [
+        'assetsCacheKey' => $assetsCacheKey
+    ];
+});
+
+/*
+ * **************************************************************
+    28. Show amount of hidden services/domains
+ * **************************************************************
+*/
+
+add_hook('ClientAreaPageDomains', 2, function($vars) {
+    $template = AddonHelper::getCurrentTemplate();
+    $page = (new \RSThemes\Template\Page(AddonHelper::getCurrentTemplateObject(), "clientareadomains"));
+    $pageConfig = $page->getConfiguredOption()->getSettings(true);
+    if(isset($pageConfig['hideInactiveServicesStatus']) && is_array($pageConfig['hideInactiveServicesStatus'])) {
+        $domains = Domain::where("userid", \Auth::client()->id);
+        $domains->whereIn("status", $pageConfig['hideInactiveServicesStatus']);
+        return ["hiddenInactiveAmount"=>$domains->count()];
+    }
+});
+
+add_hook('ClientAreaPageServices', 2, function($vars) {
+    $template = AddonHelper::getCurrentTemplate();
+    $page = (new \RSThemes\Template\Page(AddonHelper::getCurrentTemplateObject(), "clientareadomains"));
+    $pageConfig = $page->getConfiguredOption()->getSettings(true);
+    if(isset($pageConfig['hideInactiveServicesStatus']) && is_array($pageConfig['hideInactiveServicesStatus'])) {
+        $hostings = \RSThemes\Models\Hostings::where("userid", \Auth::client()->id);
+        $hostings->whereIn("domainstatus", $pageConfig['hideInactiveServicesStatus']);
+        return ["hiddenInactiveAmount"=>$hostings->count()];
+    }
+});
+
+/*
+ * **************************************************************
+    29. Custom Language List
+ * **************************************************************
+*/
+
+add_hook('ClientAreaPage', 2, function($vars) {
+    if (isset($vars['locales']) && is_array($vars['locales'])){
+        $customLanguageListEnabled = \RSThemes\Models\Settings::where('setting', 'custom_language_list')->first();
+        if (isset($customLanguageListEnabled) && $customLanguageListEnabled){
+            $customLanguageListEnabledValue = $customLanguageListEnabled->value;
+        }
+        if ($customLanguageListEnabledValue == "enabled"){
+            $customAvailableLanguages = \RSThemes\Models\Settings::where('setting', 'custom_available_languages')->first();
+            if (isset($customAvailableLanguages) && $customAvailableLanguages){
+                $customAvailableLanguagesValue = $customAvailableLanguages->value;
+                $languageList = json_decode($customAvailableLanguagesValue);
+                $mylocal = $vars['locales'];
+                if (!in_array('all', $languageList)) {
+                    foreach ($mylocal as $key => $value) {
+                        if (!in_array($value["language"], $languageList)) {
+                            unset($mylocal[$key]);
+                        }
+                    }
+                    return [
+                        "locales" => $mylocal
+                    ];
+                }
+            }
+        }
+    }   
+});
+
+/*
+ * **************************************************************
+    30. Domain Revewals - Renewals In Cart Counter
+ * **************************************************************
+*/
+
+add_hook('ClientAreaPage', 2, function($vars) {
+    if ($vars['templatefile'] == "domain-renewals"){
+        $renewalsInCart = 0;
+        if (isset($_SESSION['cart']['renewalsByType']['domains']) && is_array($_SESSION['cart']['renewalsByType']['domains'])){
+            $renewalsInCart = count($_SESSION['cart']['renewalsByType']['domains']);
+        }
+        return [
+            'renewalsInCart' => $renewalsInCart
+        ];
     }
 });

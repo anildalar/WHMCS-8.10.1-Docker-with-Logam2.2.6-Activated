@@ -11,7 +11,7 @@
             <a href="{$systemurl}" class="btn btn-primary btn-lg">
                 {lang key="errorPage.404.home"}
             </a>
-            <a href="{$systemurl}submitticket.php" class="btn btn-primary btn-lg">
+            <a href="{$systemurl}submitticket.php" class="btn btn-primary-faded btn-lg">
                 {lang key="errorPage.404.submitTicket"}
             </a> 
         </div>

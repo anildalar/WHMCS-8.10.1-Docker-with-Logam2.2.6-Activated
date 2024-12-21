@@ -211,7 +211,7 @@
 											</span>
 											
 											<label 
-												class="label label-xs label-info label-save {if isset($discountTabs) && is_array($discountTabs) && isset($discountTabs[0][$firstAvailableCycle])}{else}hidden{/if}"
+												class="label label-xs label-save {if isset($discountTabs) && is_array($discountTabs) && isset($discountTabs[0][$firstAvailableCycle])}{else}hidden{/if}"
 												{if is_array($products_group['groups']) && count($products_group['groups']) > 1 && isset($discountTabs) && is_array($discountTabs)}
 												
 													data-change-discount='[{foreach from=$discountTabs key=key item=$d}"{if isset($d[$firstAvailableCycle]) && is_array($d[$firstAvailableCycle])}{min($d[$firstAvailableCycle])}{else}0{/if}"{if !$d@last},{/if}{/foreach}]'
@@ -330,10 +330,10 @@
 									<div class="slider-nav " data-js-plan-nav>
 										<a class="js-previous-plan is-disabled" data-js-plan-prev>
 											<i class="ls ls-left"></i>
-											Previous Package
+											{$rslang->trans('product_comparison.previous_package')}
 										</a>
 										<a class="js-next-plan" data-js-plan-next>
-											Next Package
+											{$rslang->trans('product_comparison.next_package')}
 											<i class="ls ls-right"></i>
 										</a>
 									</div>
@@ -376,14 +376,14 @@
 									<div class="section-collapse {if !$comparison.type}section-collapse-no-title{/if}" data-compare-packages-collapse>
 										{if $comparison.type}
 											{if $type == 'expanded'}
-												<div class="section-collapse-item" id="collapse-item-{$key}" data-target="#compare-{if isset($group['group_name_tab_link'])}collapse-{$group['group_name_tab_link']}-{$key}-{$sectionId}{else}tab-{strtolower($group['group_name']|replace:" ":"-"|replace:"/":"-"|replace:"&amp;":"and")}-{$sectionId}{/if}-1" data-js-plan-container data-compare-packages-item>
+												<div class="section-collapse-item" role="button" id="collapse-item-{$key}" data-target="#compare-{if isset($group['group_name_tab_link'])}collapse-{$group['group_name_tab_link']}-{$key}-{$sectionId}{else}tab-{strtolower($group['group_name']|replace:" ":"-"|replace:"/":"-"|replace:"&amp;":"and")}-{$sectionId}{/if}-1" data-js-plan-container data-compare-packages-item>
 											{else}
-												<div class="section-collapse-item collapsed" id="collapse-item-{$key}" data-toggle="collapse" data-target="#compare-{if isset($group['group_name_tab_link'])}collapse-{$group['group_name_tab_link']}-{$key}-{$sectionId}{else}tab-{strtolower($group['group_name']|replace:" ":"-"|replace:"/":"-"|replace:"&amp;":"and")}-{$sectionId}{/if}-1"
+												<div class="section-collapse-item collapsed" role="button" id="collapse-item-{$key}" data-toggle="collapse" data-target="#compare-{if isset($group['group_name_tab_link'])}collapse-{$group['group_name_tab_link']}-{$key}-{$sectionId}{else}tab-{strtolower($group['group_name']|replace:" ":"-"|replace:"/":"-"|replace:"&amp;":"and")}-{$sectionId}{/if}-1"
 												aria-expanded="false" aria-controls="compare-{if isset($group['group_name_tab_link'])}collapse-{$group['group_name_tab_link']}-{$key}-{$sectionId}{else}tab-{strtolower($group['group_name']|replace:" ":"-"|replace:"/":"-"|replace:"&amp;":"and")}-{$sectionId}{/if}-1" data-js-plan-container data-compare-packages-item>
 											{/if}
 
 										{else}
-											<div class="section-collapse-item glued" data-js-plan-container data-compare-packages-item aria-expanded='true'>
+											<div class="section-collapse-item glued" role="button" data-js-plan-container data-compare-packages-item aria-expanded='true'>
 										{/if}
 											{if $comparison.type}
 												<div class="collapse-item-top h5" data-compare-packages-header id="header-{$sectionId}-{$key}">
@@ -484,7 +484,7 @@
             <div class="section-actions">
                 <div class="section-actions-buttons">
                     {foreach $buttons as $button}
-                        {include file="{$smarty.current_dir}/../../../cms/sections/common/button.tpl"}
+                        {include file="{$smarty.current_dir}/../../common/button.tpl"}
                     {/foreach}
                 </div>
             </div>

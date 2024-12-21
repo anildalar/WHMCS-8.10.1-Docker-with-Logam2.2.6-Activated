@@ -35,7 +35,10 @@
                                     </label>
                                 </div>
                                 <div class="form-group accordion-select p-0x m-0x collapse show" id="export-all-pages" data-parent="#exportAccordion">
-                                    {foreach $websitePages as $page}
+                                    {foreach $websitePages['website'] as $page}
+                                        <input type="hidden" name="pages[]" value="{$page->id}" data-lagom-cms-export-input>
+                                    {/foreach}
+                                    {foreach $websitePages['promo'] as $page}
                                         <input type="hidden" name="pages[]" value="{$page->id}" data-lagom-cms-export-input>
                                     {/foreach}
                                 </div>
@@ -63,7 +66,10 @@
                                     <div class="form-group accordion-select p-0x p-l-3x m-b-0x collapse" id="export-selected-pages" data-parent="#exportAccordion">
                                         <select disabled class="form-control multiselect form-control--basic group-multi-select m-t-2x" name="pages[]" multiple required data-lagom-cms-export-select>
                                             <option value="">Select Page To Export</option>
-                                            {foreach $websitePages as $key => $websitePage}
+                                            {foreach $websitePages['website'] as $key => $websitePage}
+                                                <option value="{$websitePage->id}">{$websitePage->name}</option>
+                                            {/foreach}
+                                            {foreach $websitePages['promo'] as $key => $websitePage}
                                                 <option value="{$websitePage->id}">{$websitePage->name}</option>
                                             {/foreach}
                                         </select>

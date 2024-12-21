@@ -53,9 +53,6 @@
                                                     {* Custom Logo URL *}
                                                     {include file="adminarea/settings/includes/custom-logo-url.tpl"}   
                                                     
-                                                    {* Display Mode Switcher *}
-                                                    {include file="adminarea/settings/includes/display-mode-switcher.tpl"}   
-
                                                     {* Homepage Price Display *}
                                                     {*{include file="adminarea/settings/includes/homepage-price-display.tpl"}*}
                                                     
@@ -92,8 +89,20 @@
                                                     {* Capitalize Section Titles *}
                                                     {include file="adminarea/settings/includes/capitalize_section_titles.tpl"}
 
+                                                    {* Menu Cache Disabled *}
+                                                    {include file="adminarea/settings/includes/menu_cache_disable.tpl"}
+
                                                     {* Hide Discounts *}
                                                     {include file="adminarea/settings/includes/hide-discounts.tpl"}
+                                                    
+                                                    {* Ajax Data Tables *}
+                                                    {include file="adminarea/settings/includes/ajax-data-tables.tpl"}
+
+                                                    {* Custom Language List *}
+                                                    {include file="adminarea/settings/includes/custom-language-list.tpl"}
+
+                                                    {* Display Mode Switcher *}
+                                                    {include file="adminarea/settings/includes/display-mode-switcher.tpl"}   
                                                 </div>
                                             </div>
                                         </div> 

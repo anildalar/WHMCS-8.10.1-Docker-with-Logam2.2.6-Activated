@@ -8,10 +8,10 @@
         <g>
             <g clip-path="url(#bg-illustration-homepage-left-default__a)">
                 <g>
-                    <path data-animation-path data-animation-path-7 style="stroke-dasharray: 642px; stroke-dashoffset: 642px;" stroke="var(--svg-illustration-color-3)" d="M191.462 279.075C194.332 277.418 198.985 277.418 201.855 279.075L326.565 351.071C329.435 352.727 329.435 355.413 326.565 357.07L188.061 437.029C185.191 438.686 180.539 438.686 177.669 437.029L52.9588 365.033C50.089 363.377 50.089 360.691 52.9588 359.034L191.462 279.075Z" opacity=".24"/>
-                    <path data-animation-path data-animation-path-2 style="stroke-dasharray: 116px; stroke-dashoffset: 116px;" stroke="var(--svg-illustration-color-3)" d="M95.98 389L-28 459.443" opacity=".24"/>
-                    <path data-animation-path data-animation-path-6 style="stroke-dasharray: 257px; stroke-dashoffset: 257px;" stroke="var(--svg-illustration-color-3)" d="M77.125 517L111.965 540.015C115.998 542.474 121.048 542.552 125.155 540.218L296.5 440.5" opacity=".24"/>
-                    <path data-animation-path data-animation-path-5 style="stroke-dasharray: 90px; stroke-dashoffset: 90px;" stroke="var(--svg-illustration-color-3)" d="M423 360.5L348 404.5" opacity=".24"/>
+                    <path data-animation-path data-animation-path-7 style="stroke-dasharray: 642px; stroke-dashoffset: 642px;" stroke="var(--svg-illustration-line-color)" d="M191.462 279.075C194.332 277.418 198.985 277.418 201.855 279.075L326.565 351.071C329.435 352.727 329.435 355.413 326.565 357.07L188.061 437.029C185.191 438.686 180.539 438.686 177.669 437.029L52.9588 365.033C50.089 363.377 50.089 360.691 52.9588 359.034L191.462 279.075Z" />
+                    <path data-animation-path data-animation-path-2 style="stroke-dasharray: 116px; stroke-dashoffset: 116px;" stroke="var(--svg-illustration-line-color)" d="M95.98 389L-28 459.443" />
+                    <path data-animation-path data-animation-path-6 style="stroke-dasharray: 257px; stroke-dashoffset: 257px;" stroke="var(--svg-illustration-line-color)" d="M77.125 517L111.965 540.015C115.998 542.474 121.048 542.552 125.155 540.218L296.5 440.5" />
+                    <path data-animation-path data-animation-path-5 style="stroke-dasharray: 90px; stroke-dashoffset: 90px;" stroke="var(--svg-illustration-line-color)" d="M423 360.5L348 404.5" />
                 </g>
             <g data-top-right-animation  data-animation-delay-1>
                 <g>
@@ -414,11 +414,11 @@
         <g>
             <g clip-path="url(#bg-illustration-homepage-right-default__a)">
             <g>
-                <path data-animation-path data-animation-path-1 style="stroke-dasharray: 78px; stroke-dashoffset: 78px;" stroke="var(--svg-illustration-color-3)" d="M529.5 273.5L594 310.5" opacity=".24"/>
-                <path data-animation-path data-animation-path-1 style="stroke-dasharray: 78px; stroke-dashoffset: 78px;" stroke="var(--svg-illustration-color-3)" d="M473.5 359L408.5 396.25" opacity=".24"/>
-                <path data-animation-path data-animation-path-2 style="stroke-dasharray: 116px; stroke-dashoffset: 116px;" stroke="var(--svg-illustration-color-3)" d="M789.5 257L688.5 314" opacity=".24"/>
-                <path data-animation-path data-animation-path-3 style="stroke-dasharray: 718px; stroke-dashoffset: 718px;" stroke="var(--svg-illustration-color-3)" d="M549.572 238.022C552.442 236.365 557.095 236.365 559.965 238.022L717.584 329.017C720.454 330.673 720.454 333.359 717.584 335.016L579.368 414.809C576.498 416.466 571.845 416.466 568.976 414.809L411.356 323.814C408.486 322.158 408.486 319.472 411.356 317.815L549.572 238.022Z" opacity=".24"/>
-                <path data-animation-path data-animation-path-3 style="stroke-dasharray: 718px; stroke-dashoffset: 718px;" stroke="var(--svg-illustration-color-3)" d="M694.75 488L647.845 519.685C642.933 522.68 636.783 522.775 631.782 519.933L423.125 398.5" opacity=".24"/>
+                <path data-animation-path data-animation-path-1 style="stroke-dasharray: 78px; stroke-dashoffset: 78px;" stroke="var(--svg-illustration-line-color)" d="M529.5 273.5L594 310.5" />
+                <path data-animation-path data-animation-path-1 style="stroke-dasharray: 78px; stroke-dashoffset: 78px;" stroke="var(--svg-illustration-line-color)" d="M473.5 359L408.5 396.25" />
+                <path data-animation-path data-animation-path-2 style="stroke-dasharray: 116px; stroke-dashoffset: 116px;" stroke="var(--svg-illustration-line-color)" d="M789.5 257L688.5 314" />
+                <path data-animation-path data-animation-path-3 style="stroke-dasharray: 718px; stroke-dashoffset: 718px;" stroke="var(--svg-illustration-line-color)" d="M549.572 238.022C552.442 236.365 557.095 236.365 559.965 238.022L717.584 329.017C720.454 330.673 720.454 333.359 717.584 335.016L579.368 414.809C576.498 416.466 571.845 416.466 568.976 414.809L411.356 323.814C408.486 322.158 408.486 319.472 411.356 317.815L549.572 238.022Z" />
+                <path data-animation-path data-animation-path-3 style="stroke-dasharray: 718px; stroke-dashoffset: 718px;" stroke="var(--svg-illustration-line-color)" d="M694.75 488L647.845 519.685C642.933 522.68 636.783 522.775 631.782 519.933L423.125 398.5" />
                 <g data-top-left-animation data-animation-delay-1>
                 <g>
                     <path fill="url(#bg-illustration-homepage-right-default__b)" fill-opacity=".1" d="M555.449 442.06L585.699 459.744L529.702 492.384L499.48 474.761L555.449 442.06Z"/>

@@ -13,7 +13,7 @@ return [
         'displayImages' => [
             'type' => 'checkbox',
             'name' => 'displayImages',
-            'label' => 'Display images on Announcement list',
+            'label' => 'Display Images on Announcement List',
             'tooltip' => "If you'd like to disply images on articles list, your article should include graphic at the beginning of the article description."
         ]
     ]

@@ -33,13 +33,13 @@
             {else}
                 {foreach $template->getFunctions() as $function}
                     {if $function.label != 'Extensions'}
-                    <li class="nav__item {if !$template->license()->isActive() && $function.action!='info'}is-disabled{/if} {if $smarty.get.action==$function.action} is-active{/if}">
+                    <li class="nav__item {if !$template->license()->isActive() && $function.action!='info' || !$isInstalled}is-disabled{/if} {if $smarty.get.action==$function.action} is-active{/if}">
                         <a class="nav__link" href="{$helper->url("Template@{$function.action}",['templateName'=>$template->getMainName()])}">
                             <span class="nav__link-text">{$function.label}</span>
                         </a>
                     </li>
                     {else}
-                    <li class="nav__item m-l-a {if !$template->license()->isActive() && $function.action!='info'}is-disabled{/if} {if $smarty.get.action==$function.action} is-active{/if}">
+                    <li class="nav__item m-l-a {if !$template->license()->isActive() && $function.action!='info' || !$isInstalled}is-disabled{/if} {if $smarty.get.action==$function.action} is-active{/if}">
                         <a class="nav__link" href="{$helper->url("Template@{$function.action}",['templateName'=>$template->getMainName()])}">
                             <span class="nav__link-text">{$function.label}</span>
                         </a>

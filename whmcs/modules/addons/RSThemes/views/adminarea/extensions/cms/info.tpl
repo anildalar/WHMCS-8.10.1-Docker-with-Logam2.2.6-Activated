@@ -92,7 +92,7 @@
                             <div class="requirement__body">
                                 <i class="ls ls-close icon-requirement icon-requirement--danger"></i>
                                 <i class="ls ls-check icon-requirement icon-requirement--success"></i>
-                                <span class="requirements__name">IonCube Loader v10.4.5 and later.</span>
+                                <span class="requirements__name">IonCube Loader v13 and later.</span>
                             </div>
                             <span class="preloader preloader--sm"></span>
                             <label class="label label--success label--outline requirement__status requirement__status--passed">Passed</label>
@@ -102,7 +102,7 @@
                             <div class="requirement__body">
                                 <i class="ls ls-close icon-requirement icon-requirement--danger"></i>
                                 <i class="ls ls-check icon-requirement icon-requirement--success"></i>
-                                <span class="requirements__name">PHP v7.4 and later.</span>
+                                <span class="requirements__name">PHP v8.1 and later.</span>
                             </div>
                             <span class="preloader preloader--sm"></span>
                             <label class="label label--success label--outline requirement__status requirement__status--passed">Passed</label>

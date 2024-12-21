@@ -75,6 +75,10 @@
                                         {/if} *} 
                                     </a>
                                     <div class="widget__actions widget__actions--raised">
+                                        {* <label class="checkbox m-t-0x m-b-0x">
+                                            <input class="form-checkbox" type="checkbox" name=""> 
+                                            <span class="form-indicator"></span>
+                                        </label> *}
                                         <span class="truncate">{$media_img['filename']}</span>
                                         {if $media_img['type'] == 'custom'}
                                             <span class="tooltip-toggle" data-toggle="lu-tooltip" data-title="Delete">

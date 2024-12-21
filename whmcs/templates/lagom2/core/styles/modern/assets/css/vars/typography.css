@@ -158,3 +158,26 @@
         --line-height-h1:                           48px;
     }
 }
+
+.lagom-dark-mode{
+
+    /* Section : Dark Mode Colors */
+
+    --link-color:                                   var(--gray-darker); 
+    --link-hover-color:                             var(--brand-primary-lighter);
+    --ui-nav-link-color:                            var(--gray-base);
+    --ui-nav-link-hover-color:                      var(--brand-primary-lighter);
+    --ui-nav-link-active-color:                     var(--brand-primary-lighter);
+    --ui-nav-link-icon-color:                       var(--gray-lighter); 
+    --ui-nav-link-icon-hover-color:                 var(--brand-primary-lighter);
+    --ui-nav-link-icon-active-color:                var(--brand-primary-lighter);
+    
+    --ui-nav-secondary-link-color:                  var(--gray-base); 
+    --ui-nav-secondary-link-hover-color:            var(--brand-primary-lighter);
+    --ui-nav-secondary-link-active-color:           var(--brand-primary-lighter);
+    --ui-nav-secondary-link-icon-color:             var(--gray-base); 
+    --ui-nav-secondary-link-icon-hover-color:       var(--brand-primary-lighter);
+    --ui-nav-secondary-link-icon-active-color:      var(--brand-primary-lighter);
+
+    --text-primary-color:                           var(--brand-primary-lighter);
+}

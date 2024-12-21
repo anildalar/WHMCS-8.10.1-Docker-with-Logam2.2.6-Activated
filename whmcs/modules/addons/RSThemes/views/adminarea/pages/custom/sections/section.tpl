@@ -29,14 +29,18 @@
     data-section-position="{$pageSection['order']}" 
     style="order: {$pageSection['order']}"
 >
+    {if $sectionPost}
+        {var_dump($sectionPost)}
+    {/if}
     <a 
         class="btn btn--sm btn--link btn--block btn--add-section" 
         href="#" 
         data-toggle="lu-modal" 
         data-target="#modalAddNewSection"
-        data-section-add 
+        data-section-add
+        {if isset($sType)}data-section-type="{$sType}"{elseif isset($pageSection['stype'])}data-section-type="{$pageSection['stype']}"{/if}
         data-order="{$pageSection['order']}" 
-        data-index="{if is_array($customPage->sections) || is_object($customPage->sections)}{sizeof($customPage->sections)}{/if}"
+        data-index="{if is_array($customPage->sections) || is_object($customPage->sections)}{if $counterStart}{sizeof($customPage->sections) + $counterStart}{else}{sizeof($customPage->sections)}{/if}{/if}"
         data-language="{$language}"
     >
         <div class="text-bg">
@@ -45,6 +49,7 @@
         </div>
         <div class="dashed-line"></div>
     </a>
+    
     <div class="widget panel {*has-drag-icon*} of-visible m-b-0x">
         <div class="widget__top top top--collapsible">
             <div class="top__title collapsed" data-section-top data-toggle="lu-collapse" data-target="#page-section-content-{$sectionIndex}">
@@ -54,6 +59,16 @@
                 {$pageSection['type']['name']} {if $sectionCurrentName}- <span class="top__title-light">&nbsp;{$sectionCurrentName}</span>{/if}
             </div>
             <div class="top__toolbar">
+                <button
+                    class="btn btn--sm btn--link btn--icon i-c-4x"
+                    type="button"
+                    data-duplicate-section
+                    data-ajax-url="{$helper->url('CustomPage@addNewSection',['templateName'=>$template->getMainName()])}"
+                    data-type="{$pageSection['type']['slug']}"
+                    data-stype="{$pageSection['stype']}"
+                >
+                    <i class="btn__icon ls ls-copy" data-toggle="lu-tooltip" data-title="Duplicate"></i>
+                </button>
                 <button
                     class="btn btn--sm btn--link btn--icon i-c-4x"
                     type="button"
@@ -140,6 +155,7 @@
                 <input type="hidden" class="page_section_{$sectionIndex}_lang_id" name="sections[{$sectionIndex}][langId]" value="{$pageSection['lang'][$language]['id']}">
             {/if}
             <input type="hidden" class="page_section_{$sectionIndex}_type" name="sections[{$sectionIndex}][type]" value="{$pageSection['type']['slug']}">
+            <input type="hidden" class="page_Section_{$sectionIndex}_stype" name="sections[{$sectionIndex}][stype]" value="{$pageSection['stype']}">
         </div>
     </div>
 </section>

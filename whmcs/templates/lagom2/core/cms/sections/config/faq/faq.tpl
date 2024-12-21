@@ -50,10 +50,9 @@
                             {if $list_type == "accordion"}id="accordion-{$sectionId}-{$group['group_index']}" {/if}>
                             {foreach $group.fields.list as $item}
                                 <div class="faq-item {if !$item@first || $list_type == "expanded"}collapsed{/if} {if $list_style == 'divided'} faq-item-divided{/if}{if $list_type == "expanded"} faq-item-expanded{/if}{if $list_style == 'boxed'} faq-item-boxed{/if}"
-                                    id="faq-collapse-{$group['group_index']}-{$item.index}"
+                                    role="button"{if $item@first}aria-expanded="true"{else}aria-expanded="false"{/if} id="faq-collapse-{$group['group_index']}-{$item.index}"
                                     {if $list_type == 'accordion'}data-toggle="collapse" {/if}
-                                    data-target="#faq-{if isset($sectionId)}{$sectionId}-{/if}{if is_array($group) && isset($group['group_index'])}{$group['group_index']}{/if}-{if is_array($item) && isset($item['index'])}{$item['index']}{/if}"
-                                    aria-expanded="true">
+                                    data-target="#faq-{if isset($sectionId)}{$sectionId}-{/if}{if is_array($group) && isset($group['group_index'])}{$group['group_index']}{/if}-{if is_array($item) && isset($item['index'])}{$item['index']}{/if}">
                                     <div class="faq-item-top panel-heading">
                                         <h3 class="h5">{$item.title}</h3>
                                         {if $list_type == 'accordion'}
@@ -64,7 +63,7 @@
                                     </div>
                                     <div id="faq-{if isset($sectionId)}{$sectionId}-{/if}{if is_array($group) && isset($group['group_index'])}{$group['group_index']}{/if}-{if is_array($item) && isset($item['index'])}{$item['index']}{/if}"
                                         class="panel-collapse {if $list_type == 'accordion'}collapse{/if} {if $item@first}show{/if}"
-                                        aria-expanded="true" style="" {if $list_type == 'accordion'}data-parent="#accordion-{$sectionId}-{$group['group_index']}"
+                                        style="" {if $list_type == 'accordion'}data-parent="#accordion-{$sectionId}-{$group['group_index']}"
                                         {/if}>
                                         <div class="faq-item-bottom">
                                             {$item.description|unescape:'html'}

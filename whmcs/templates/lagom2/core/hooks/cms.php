@@ -3,6 +3,7 @@
 use RSThemes\Helpers\AddonHelper;
 use RSThemes\View\ViewHelper;
 use WHMCS\Database\Capsule;
+use RSThemes\Helpers\PageHelper;
 
 add_hook('ClientAreaPage', 1, function($vars) {
     if(basename($_SERVER['SCRIPT_NAME']) == "index.php" && str_contains($_SERVER['REQUEST_URI'],"index.php")) {
@@ -44,10 +45,19 @@ add_hook('ClientAreaHeadOutput', 2, function($vars) {
     if(method_exists("\RSThemes\Helpers\AddonHelper",'isExtensionEnabled') && 
         \RSThemes\Helpers\AddonHelper::isExtensionEnabled("CMS") && 
         $vars['pageType'] == "website" && 
-        isset($vars['pageContent'])
+        isset($vars['pageContent']) && isset($vars['RSThemes']['pageSettings'])
     ){
         $version = Capsule::table('rsthemes_versions')->where("type","Website Builder")->select('whmcsVersion')->first()->whmcsVersion;
         $caCssURL = (new ViewHelper())->extensionStyle('CMS', 'lagom-cms.css');
+        // $promotionCssUrl = false;
+        // if (isset($vars['RSThemes']['pageSettings']['promo']['promotionTheme'])){
+        //     $promotionCssUrl = (new ViewHelper())->extensionStyle('CMS', 'promotions/'.$vars['RSThemes']['pageSettings']['promo']['promotionTheme'].'.css');
+        // }
+        // if ($promotionCssUrl){
+        //     return '<link href="'.$caCssURL.'?v='.$version.'" rel="stylesheet" type="text/css"/><link href="'.$promotionCssUrl.'?v='.$version.'" rel="stylesheet" type="text/css"/>';
+        // } else {
+        //     return '<link href="'.$caCssURL.'?v='.$version.'" rel="stylesheet" type="text/css"/>';
+        // }
         return '<link href="'.$caCssURL.'?v='.$version.'" rel="stylesheet" type="text/css"/>';
     }
 });
@@ -55,7 +65,7 @@ add_hook('ClientAreaHeadOutput', 2, function($vars) {
 add_hook('ClientAreaFooterOutput', 2, function($vars) {
     if(method_exists("\RSThemes\Helpers\AddonHelper",'isExtensionEnabled') && 
         \RSThemes\Helpers\AddonHelper::isExtensionEnabled("CMS") && 
-        $vars['pageType'] == "website"
+        $vars['pageType'] == "website" && isset($vars['RSThemes']['pageSettings'])
     ) {
         $version = Capsule::table('rsthemes_versions')->where("type","Website Builder")->select('whmcsVersion')->first()->whmcsVersion;
         $caJsURL = (new ViewHelper())->extensionScript('CMS', 'lagom-cms.js');
@@ -93,4 +103,26 @@ add_hook('ClientAreaHeadOutput', 9999, function($vars) {
         }
     }
     return $data;
+});
+
+add_hook("ClientAreaPage", 1, function($vars) {
+
+    if (isset($_GET['cmsid']) && $_GET['cmsid']){
+        $pageHelper = PageHelper::setPageById(preg_replace("/[^0-9]/", '', $_GET['cmsid']));
+        $page = $pageHelper->getPage();
+        if($page->type == "promo" && isset($page->settings['promo'])){
+            $promoData = $page->settings['promo'];
+            if(isset($promoData['promotionTheme']) && isset($promoData['promotionNavType']) && $promoData['promotionNavType'] == "Only Logo"){
+                $logoConfig = [
+                    'black_week' => 'dark',
+                    'christmas_sale' => 'dark'
+                ];
+                if (isset($logoConfig[$promoData['promotionTheme']])){
+                    return [
+                        'LagomPromotionLogo' => $logoConfig[$promoData['promotionTheme']]
+                    ];
+                }
+            }
+        }
+    }
 });

@@ -44,6 +44,7 @@
                             <th>{lang key='pricing.register'}</th>
                             <th>{lang key='pricing.transfer'}</th>
                             <th>{lang key='pricing.renewal'}</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -124,6 +125,9 @@
                                     {else}
                                         <small>{lang key='na'}</small>
                                     {/if}
+                                </td>
+                                <td class="tld-register">
+                                    <a class="btn btn-primary-faded btn-xs btn-register-domain" data-register-btn={$tld}>Register</a>
                                 </td>
                             </tr>
                         {/foreach}

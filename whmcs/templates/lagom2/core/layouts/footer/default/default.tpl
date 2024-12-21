@@ -42,7 +42,7 @@
                             <ul class="footer-company-socials footer-nav footer-nav-h">
                                 {foreach from=$rsFooter.social item=$footerLink}
                                     <li class="{if $footerLink.style != "icon"}footer-social-wide{/if}">
-                                        <a class="{$footerLink.custom_classes}" href="{$footerLink.url}" {if isset($footerLink.target_blank) && $footerLink.target_blank}target="_blank"{/if}>
+                                        <a class="{$footerLink.custom_classes}" href="{$footerLink.url}" {if isset($footerLink.target_blank) && $footerLink.target_blank}target="_blank"{/if} {if $footerLink.style == "icon" && (isset($footerLink.name) && $footerLink.name)}aria-label="{$footerLink.name}"{/if}>
                                             {if isset($footerLink.icon) && $footerLink.icon}
                                                 <i class="{$footerLink.icon}"></i>
                                             {elseif isset($footerLink.predefined_icon) && $footerLink.predefined_icon}
@@ -50,7 +50,7 @@
                                             {elseif isset($footerLink.media) && $footerLink.media}
                                                 {$footerLink.media}
                                             {/if}
-                                            {if isset($footerLink.name) && $footerLink.name}
+                                            {if isset($footerLink.name) && $footerLink.name && $footerLink.style != "icon"}
                                                 <span>{$footerLink.name}</span>
                                             {/if}
                                         </a>
@@ -73,7 +73,7 @@
                                                 {elseif isset($footerLink.media) && $footerLink.media}
                                                     {$footerLink.media}
                                                 {/if}
-                                                {if $footerLink.name}{$footerLink.name}{/if}
+                                                {if $footerLink.name && $footerLink.style != "icon"}{$footerLink.name}{/if}
                                                 <i class="footer-icon">
                                                     <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M9.21 10.01H8.79C8.66 10.01 8.53 9.96 8.44 9.86L0.14 1.57C0.04 1.48 0 1.34 0 1.22C0 1.1 0.05 0.97 0.15 0.87L0.86 0.16C1.06 -0.0400002 1.37 -0.0400002 1.57 0.16L9 7.6L16.43 0.15C16.63 -0.05 16.94 -0.05 17.14 0.15L17.85 0.86C18.05 1.06 18.05 1.37 17.85 1.57L9.56 9.86C9.47 9.95 9.34 10.01 9.21 10.01Z" fill="#B9BDC5"/>
@@ -83,7 +83,7 @@
                                             <ul class="footer-nav collapse" id="footer-nav-{$footerLink@index}">
                                                 {foreach from=$footerLink.children item=$footerChild}
                                                     <li>
-                                                        <a href="{$footerChild.url}" class="nav-link {$footerChild.custom_classes}" {if isset($footerChild.target_blank) && $footerChild.target_blank}target="_blank"{/if}>
+                                                        <a href="{$footerChild.url}" class="nav-link {$footerChild.custom_classes}" {if isset($footerChild.target_blank) && $footerChild.target_blank}target="_blank"{/if} {if (isset($footerChild.name) && $footerChild.name) && $footerChild.style == "icon"}aria-label="{$footerChild.name}"{/if}>
                                                             {if isset($footerChild.icon) && $footerChild.icon}
                                                                 <i class="{$footerChild.icon}"></i>
                                                             {elseif isset($footerChild.predefined_icon) && $footerChild.predefined_icon}
@@ -91,7 +91,7 @@
                                                             {elseif isset($footerChild.media) && $footerChild.media}
                                                                 {$footerChild.media}
                                                             {/if}
-                                                            {if isset($footerChild.name) && $footerChild.name}<span>{$footerChild.name}</span>{/if}
+                                                            {if isset($footerChild.name) && $footerChild.name && $footerChild.style != "icon"}<span>{$footerChild.name}</span>{/if}
                                                         </a>
                                                     </li>
                                                 {/foreach}
@@ -123,7 +123,7 @@
                         <ul class="footer-nav footer-nav-h">
                             {foreach from=$rsFooter.secondary item=$footerLink}
                                 <li {if isset($footerLink.type) && ($footerLink.type == "language" || $footerLink.type == "currencies")} class="dropdown dropup"{/if} {if isset($footerLink.type) && $footerLink.type == "language"}data-language-select{/if}>
-                                    <a {if $footerLink.custom_classes}class="{$footerLink.custom_classes}"{/if} {if isset($footerLink.type) && ($footerLink.type == "language" || $footerLink.type == "currencies")}data-toggle="dropdown"{/if} href="{if $footerLink.url}{$footerLink.url}{else}#{/if}" {if isset($footerLink.target_blank) && $footerLink.target_blank}target="_blank"{/if}>
+                                    <a {if $footerLink.custom_classes}class="{$footerLink.custom_classes}"{/if} {if isset($footerLink.type) && ($footerLink.type == "language" || $footerLink.type == "currencies")}data-toggle="dropdown"{/if} href="{if $footerLink.url}{$footerLink.url}{else}#{/if}" {if isset($footerLink.target_blank) && $footerLink.target_blank}target="_blank"{/if} {if (isset($footerLink.name) && $footerLink.name) && $footerLink.style == "icon"}aria-label="{$footerLink.name}"{/if}>
                                         {if isset($footerLink.icon) && $footerLink.icon}
                                             <i class="{$footerLink.icon}"></i>
                                         {elseif isset($footerLink.predefined_icon) && $footerLink.predefined_icon}
@@ -131,9 +131,9 @@
                                         {elseif isset($footerLink.media) && $footerLink.media}
                                             {$footerLink.media}
                                         {/if}
-                                        {if isset($footerLink.type) && $footerLink.type == "language" && isset($footerLink.name) && $footerLink.name}
+                                        {if isset($footerLink.type) && $footerLink.type == "language" && isset($footerLink.name) && $footerLink.name && $footerLink.style != "icon"}
                                             {$footerLink.name}
-                                        {elseif isset($footerLink.name) && $footerLink.name}
+                                        {elseif isset($footerLink.name) && $footerLink.name && $footerLink.style != "icon"}
                                             <span>{$footerLink.name}</span>
                                         {/if}
                                         {if isset($footerLink.type) && ($footerLink.type == "language" || $footerLink.type == "currencies")}
@@ -217,11 +217,11 @@
     {include file="$template/includes/generate-password.tpl"}
     {$footeroutput}
     <div class="overlay"></div>
-    <script {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}defer{/if} src="{$WEB_ROOT}/templates/{$template}/assets/js/vendor.js?v={$RSThemes['templateVersion']}"></script>
-    <script {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}defer{/if} src="{$WEB_ROOT}/templates/{$template}/assets/js/lagom-app.js?v={$RSThemes['templateVersion']}"></script>
+    <script {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}defer{/if} src="{$WEB_ROOT}/templates/{$template}/assets/js/vendor.js?v={$RSThemes['templateVersion']}-{$assetsCacheKey}"></script>
+    <script {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}defer{/if} src="{$WEB_ROOT}/templates/{$template}/assets/js/lagom-app.js?v={$RSThemes['templateVersion']}-{$assetsCacheKey}"></script>
     {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}
     {else}
-        <script src="{$WEB_ROOT}/templates/{$template}/assets/js/whmcs-custom.min.js?v={$RSThemes['templateVersion']}"></script>
+        <script src="{$WEB_ROOT}/templates/{$template}/assets/js/whmcs-custom.min.js?v={$RSThemes['templateVersion']}-{$assetsCacheKey}"></script>
     {/if}
 </body>
 </html>

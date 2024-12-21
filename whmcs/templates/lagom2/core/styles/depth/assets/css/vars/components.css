@@ -59,6 +59,9 @@
     --dropdown-divider-bg:                      var(--ui-block-divider-color);    
     --dropdown-link-padding-h:                  var(--ui-block-padding-base);    
     --dropdown-link-padding-v:                  var(--ui-nav-v-link-padding-v);
+    --dropdown-collapse-link-padding-h:         16px;    
+    --dropdown-collapse-link-padding-v:         8px;
+        --dropdown-collapse-bg:                     var(--gray-faded);
     --dropdown-link-color:                      var(--ui-nav-link-color);
     --dropdown-link-hover-color:                var(--ui-nav-link-hover-color);
     --dropdown-link-hover-bg:                   var(--ui-nav-link-hover-bg);
@@ -426,18 +429,18 @@
     --badge-primary-faded-bg:                   var(--brand-primary-lighter-3);
     --badge-primary-faded-hover-bg:             var(--brand-primary-lighter-2);
     --badge-primary-faded-color:                var(--brand-primary);
-    --badge-success-bg:                         var(--brand-success-lighter);
+    --badge-success-bg:                         var(--state-success-bg);
     --badge-success-hover-bg:                   var(--brand-success-darker);
-    --badge-success-color:                      var(--badge-color);
-    --badge-info-bg:                            var(--brand-primary); 
+    --badge-success-color:                      var(--state-success-text);
+    --badge-info-bg:                            var(--state-info-bg); 
     --badge-info-hover-bg:                      var(--brand-primary-darker); 
-    --badge-info-color:                         var(--brand-warning-lighter-3); 
-    --badge-warning-bg:                         var(--brand-warning-lighter);
+    --badge-info-color:                         var(--state-info-text); 
+    --badge-warning-bg:                         var(--state-warning-bg);
     --badge-warning-hover-bg:                   var(--brand-warning-darker);
-    --badge-warning-color:                      var(--badge-color);
-    --badge-danger-bg:                          var(--brand-danger-lighter);
+    --badge-warning-color:                      var(--state-warning-text);
+    --badge-danger-bg:                          var(--state-danger-bg);
     --badge-danger-hover-bg:                    var(--brand-danger-darker);
-    --badge-danger-color:                       var(--badge-color);
+    --badge-danger-color:                       var(--state-danger-text);
     --badge-text-transform:                     none;
 
     /* Breadcrumbs */
@@ -550,4 +553,19 @@
     :root {
         --navbar-dropdown-max-height:           560px;
     }
+}
+
+.lagom-dark-mode{
+
+    /* Section : Dark Mode Colors */
+
+    --dropdown-bg:                                 #242424;
+    --modal-backdrop-bg:                           rgba(18, 18, 18, .78);
+
+    --popover-bg:                                   var(--dropdown-bg);
+
+    --tooltip-arrow-color:                          var(--dropdown-bg);
+    --tooltip-bg:                                   var(--dropdown-bg);
+
+    --dropdown-collapse-bg:                         #1A1A1A;
 }

@@ -133,11 +133,26 @@ add_hook('ClientAreaPage', 1, function($vars) {
             }
         }
     }
-    $rule = getDisplayRule($pageName,((isset($vars['isOnePageOrder']))?"Order Process":false));
-    if($rule->name == "Website") {
-        $cache = menuGetCache("primary", $vars['language'], (($rule->loggedIn)?"user":"guest"));
-        $cacheSecondary = menuGetCache("secondary", $vars['language'], (($rule->loggedIn)?"user":"guest"));
-        if ($cache && $cacheSecondary) return ["primaryNavbarHtmlCache" => $cache, "secondaryNavbarHtmlCache" => $cacheSecondary];
+    $customMenu = false;
+    if($page->display_type == "website"){
+        if($page->type == "promo" && isset($page->settings['promo']) && isset($page->settings['promo']['promotionNavType'])) {
+            $promoData = $page->settings['promo'];
+            $customMenu = $promoData['promotionNavType'];
+            if($customMenu == "Only Logo") {
+                menuCleanWhmcs("primary");
+                menuCleanWhmcs("secondary");
+                return [['primaryNavbarHtmlCache' => '', 'secondaryNavbarHtmlCache' => '']];
+            }
+        }
+    }
+    $rule = getDisplayRule($pageName,(($customMenu)?$customMenu:((isset($vars['isOnePageOrder']))?"Order Process":false)));
+    if($rule->name == "Website" || $customMenu) {
+        $cache = menuGetCache("primary", $vars['language'], $rule->id."_".(($rule->loggedIn)?"user":"guest"));
+        $cacheSecondary = menuGetCache("secondary", $vars['language'], $rule->id."_".(($rule->loggedIn)?"user":"guest"));
+        $dataReturn = [];
+        if($cache) $dataReturn["primaryNavbarHtmlCache"] = $cache;
+        if($cacheSecondary) $dataReturn["secondaryNavbarHtmlCache"] = $cacheSecondary;
+        return $dataReturn;
     }
 });
 
@@ -182,9 +197,19 @@ add_hook('ClientAreaPrimaryNavbar', 0, function($vars) {
             }
         }
     }
-    $rule = getDisplayRule($pageName,((isset($vars['isOnePageOrder']))?"Order Process":false));
-    if($rule->name == "Website") {
-        $cache = menuGetCache("primary", $vars['language'], (($rule->loggedIn)?"user":"guest"));
+    $customMenu = false;
+    if($page->display_type == "website"){
+        if($page->type == "promo" && isset($page->settings['promo']) && isset($page->settings['promo']['promotionNavType'])) {
+            $promoData = $page->settings['promo'];
+            $customMenu = $promoData['promotionNavType'];
+            if($customMenu == "Only Logo")
+                return;
+        }
+    }
+    $rule = getDisplayRule($pageName,(($customMenu)?$customMenu:((isset($vars['isOnePageOrder']))?"Order Process":false)));
+    //$rule = getDisplayRule($pageName,((isset($vars['isOnePageOrder']))?"Order Process":false));
+    if($rule->name == "Website" || $customMenu) {
+        $cache = menuGetCache("primary", $vars['language'], $rule->id."_".(($rule->loggedIn)?"user":"guest"));
         if ($cache) return;
     }
     $rsThemesPrimaryMenu = RsMenu::find($rule->main_menu_id);
@@ -206,8 +231,8 @@ add_hook('ClientAreaPrimaryNavbar', 0, function($vars) {
         ];
         generateRsMenu($primaryNavbar, $rsThemesPrimaryMenu, $vars['language'], $layout, $vars, $navbarType);
     }
-    if($rule->name == "Website")
-        menuCache("primary", $vars['language'], (($rule->loggedIn)?"user":"guest"));
+    if($rule->name == "Website" || $customMenu)
+        menuCache("primary", $vars['language'], $rule->id."_".(($rule->loggedIn)?"user":"guest"));
     return;
 });
 
@@ -259,9 +284,20 @@ add_hook('ClientAreaSecondaryNavbar', 0, function($vars) {
             }
         }
     }
-    $rule = getDisplayRule($pageName,((isset($vars['isOnePageOrder']))?"Order Process":false));
-    if($rule->name == "Website") {
-        $cache = menuGetCache("secondary", $vars['language'], (($rule->loggedIn)?"user":"guest"));
+
+    $customMenu = false;
+    if($page->display_type == "website"){
+        if($page->type == "promo" && isset($page->settings['promo']) && isset($page->settings['promo']['promotionNavType'])) {
+            $promoData = $page->settings['promo'];
+            $customMenu = $promoData['promotionNavType'];
+            if($customMenu == "Only Logo")
+                return;
+        }
+    }
+    $rule = getDisplayRule($pageName,(($customMenu)?$customMenu:((isset($vars['isOnePageOrder']))?"Order Process":false)));
+    //$rule = getDisplayRule($pageName,((isset($vars['isOnePageOrder']))?"Order Process":false));
+    if($rule->name == "Website" || $customMenu) {
+        $cache = menuGetCache("secondary", $vars['language'], $rule->id."_".(($rule->loggedIn)?"user":"guest"));
         if ($cache) return;
     }
     $rsThemesSecondaryMenu = RsMenu::find($rule->secondary_menu_id);
@@ -283,8 +319,8 @@ add_hook('ClientAreaSecondaryNavbar', 0, function($vars) {
         ];
         generateRsMenu($secondaryNavbar, $rsThemesSecondaryMenu, $vars['language'], $layout, $vars, $navbarType);
     }
-    if($rule->name == "Website")
-        menuCache("secondary", $vars['language'], (($rule->loggedIn)?"user":"guest"));
+    if($rule->name == "Website" || $customMenu)
+        menuCache("secondary", $vars['language'], $rule->id."_".(($rule->loggedIn)?"user":"guest"));
 });
 
 /*
@@ -328,7 +364,6 @@ add_hook('ClientAreaPage', 0, function($vars) {
         if (!is_null($client)) {
             $userStatus = 'Logged-In';
         }
-
         $routes = json_decode(file_get_contents(ROOTDIR . DS . 'templates' . DS . 'lagom2' . DS . 'core' . DS . 'config' . DS  . 'routing' . DS . 'routes.json'), true);
         $rsFooter = [];
         foreach ($rsFooterMenu->parents as $parent) {
@@ -372,11 +407,11 @@ add_hook('ClientAreaPage', 0, function($vars) {
                     }
                     if ($pageEnabled) {
                         $rsFooter[$footerItemLocation][$parentOrder]['item'] = MenuProcessor::getMenuItemName($parent);
-                        if ($itemStyle != 'icon'){
-                            if (isset($parent->content->display_settings['label_text'])){
+                        // if ($itemStyle != 'icon'){
+                            if (isset($parent->content->display_settings['label_text']) && $itemStyle != 'icon'){
                                 $customLabelText = MenuProcessor::getMenuItemCommonTranslation($parent->content->display_settings['label_text'], $language);
                             }
-                            if (isset($customLabelText) && $customLabelText && $customLabelText != ''){
+                            if (isset($customLabelText) && $customLabelText && $customLabelText != '' && $itemStyle != 'icon'){
                                 $labelType = $parent->content->display_settings['label_type'];
                                 $customLabel = '<span class="label label-'.$labelType.' label-xxs label-rounded">'.$customLabelText.'</span>';
                                 $template = $name . $customLabel;
@@ -386,7 +421,7 @@ add_hook('ClientAreaPage', 0, function($vars) {
                             }
 
                             $rsFooter[$footerItemLocation][$parentOrder]['name'] = $template = $name . $customLabel;
-                        }
+                        // }
                         $rsFooter[$footerItemLocation][$parentOrder]['url'] = $url;
                     }
                 }
@@ -401,11 +436,11 @@ add_hook('ClientAreaPage', 0, function($vars) {
                         $url = AddonHelper::convertUri($url);
                     }
                     $rsFooter[$footerItemLocation][$parentOrder]['item'] = MenuProcessor::getMenuItemName($parent);
-                    if ($itemStyle != 'icon'){
+                    // if ($itemStyle != 'icon'){
                         if (isset($parent->content->display_settings['label_text'])){
                             $customLabelText = MenuProcessor::getMenuItemCommonTranslation($parent->content->display_settings['label_text'], $language);
                         }
-                        if (isset($customLabelText) && $customLabelText && $customLabelText != ''){
+                        if (isset($customLabelText) && $customLabelText && $customLabelText != '' && $itemStyle != 'icon'){
                             $labelType = $parent->content->display_settings['label_type'];
                             $customLabel = '<span class="label label-'.$labelType.' label-xxs label-rounded">'.$customLabelText.'</span>';
 
@@ -418,7 +453,7 @@ add_hook('ClientAreaPage', 0, function($vars) {
 
 
                         $rsFooter[$footerItemLocation][$parentOrder]['name'] = $template;
-                    }
+                    // }
                     $rsFooter[$footerItemLocation][$parentOrder]['url'] = $url;
                 }
 
@@ -547,11 +582,11 @@ add_hook('ClientAreaPage', 0, function($vars) {
                                 }
                                 if ($childPageEnabled) {
                                     $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder]['item'] = $item;
-                                    if ($itemStyle != 'icon'){
-                                        if (isset($child->content->display_settings['label_text'])){
+                                    // if ($itemStyle != 'icon'){
+                                        if (isset($child->content->display_settings['label_text']) && $itemStyle != 'icon'){
                                             $customLabelText = MenuProcessor::getMenuItemCommonTranslation($child->content->display_settings['label_text'], $language);
                                         }
-                                        if (isset($customLabelText) && $customLabelText && $customLabelText != ''){
+                                        if (isset($customLabelText) && $customLabelText && $customLabelText != '' && $itemStyle != 'icon'){
                                             $labelType = $child->content->display_settings['label_type'];
                                             $customLabel = '<span class="label label-'.$labelType.' label-xxs label-rounded">'.$customLabelText.'</span>';
                                             $template = $name . $customLabel;
@@ -560,7 +595,7 @@ add_hook('ClientAreaPage', 0, function($vars) {
                                             $template = $name;
                                         }
                                         $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder]['name'] = $template;
-                                    }
+                                    // }
                                     $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder]['url'] = $url;
                                 }
                             }
@@ -574,11 +609,11 @@ add_hook('ClientAreaPage', 0, function($vars) {
                                     $url = AddonHelper::convertUri($url);
                                 }
                                 $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder]['item'] = MenuProcessor::getMenuItemName($child);
-                                if ($itemStyle != 'icon'){
+                                // if ($itemStyle != 'icon'){
                                     if (isset($child->content->display_settings['label_text'])){
                                         $customLabelText = MenuProcessor::getMenuItemCommonTranslation($child->content->display_settings['label_text'], $language);
                                     }
-                                    if (isset($customLabelText) && $customLabelText && $customLabelText != ''){
+                                    if (isset($customLabelText) && $customLabelText && $customLabelText != '' && $itemStyle != 'icon'){
                                         $labelType = $child->content->display_settings['label_type'];
                                         $customLabel = '<span class="label label-'.$labelType.' label-xxs label-rounded">'.$customLabelText.'</span>';
 
@@ -589,7 +624,7 @@ add_hook('ClientAreaPage', 0, function($vars) {
                                         $template = MenuProcessor::getMenuItemLabel($child, $language);
                                     }
                                     $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder]['name'] = $template;
-                                }
+                                // }
                                 $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder]['url'] = $url;
                             }
                             if ($child->content->type->name == 'Predefined List') {
@@ -597,9 +632,9 @@ add_hook('ClientAreaPage', 0, function($vars) {
                                 $listOffset = 0;
                                 if ($list == 'Product Groups') {
                                     foreach (ProductGroup::notHidden()->sorted()->get() as $group) {
-                                        if ($itemStyle != 'icon'){
+                                        // if ($itemStyle != 'icon'){
                                             $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder + $listOffset]['name'] = $group->name;
-                                        }
+                                        // }
                                         $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder + $listOffset]['url'] = $group->getRoutePath();
                                         $listOffset++;
                                     }
@@ -607,9 +642,9 @@ add_hook('ClientAreaPage', 0, function($vars) {
                                 if ($list == 'Client Details') {
                                     if (!is_null($client)) {
                                         $clientDetails = $client->fullName . '-' . $client->email;
-                                        if ($itemStyle != 'icon'){
+                                        // if ($itemStyle != 'icon'){
                                             $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder]['name'] = $clientDetails ;
-                                        }
+                                        // }
                                         $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder]['url'] = 'clientarea.php?action=details';
                                     }
                                 }
@@ -617,9 +652,9 @@ add_hook('ClientAreaPage', 0, function($vars) {
                                     $downloadCats = Capsule::table('tbldownloadcats')->where('hidden', '')->orWhere('hidden', 0)->get();
                                     foreach ($downloadCats as $downloadCat) {
                                         $uri = trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $downloadCat->name), '-');
-                                        if ($itemStyle != 'icon'){
+                                        // if ($itemStyle != 'icon'){
                                             $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder + $listOffset]['name'] = $downloadCat->name;
-                                        }
+                                        // }
                                         $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder + $listOffset]['url'] = 'index.php?rp=/download/category/'.$downloadCat->id.'/' .$uri.'.html';
                                         $listOffset++;
                                     }
@@ -628,9 +663,9 @@ add_hook('ClientAreaPage', 0, function($vars) {
                                     $knowledgebaseCats = Capsule::table('tblknowledgebasecats')->where('hidden', '')->orWhere('hidden', 0)->get();
                                     foreach ($knowledgebaseCats as $knowledgebaseCat) {
                                         $uri = trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $knowledgebaseCat->name), '-');
-                                        if ($itemStyle != 'icon'){
+                                        // if ($itemStyle != 'icon'){
                                             $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder + $listOffset]['name'] = $knowledgebaseCat->name;
-                                        }
+                                        // }
                                         $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder + $listOffset]['url'] = 'index.php?rp=/knowledgebase/'.$knowledgebaseCat->id.'/'.$uri;
                                         $listOffset++;
                                     }
@@ -641,9 +676,9 @@ add_hook('ClientAreaPage', 0, function($vars) {
 
                                     $marketConnectProducts = \WHMCS\MarketConnect\MarketConnect::getMenuItems(false);
                                     foreach ($marketConnectProducts as $marketConnectProduct) {
-                                        if ($itemStyle != 'icon'){
+                                        // if ($itemStyle != 'icon'){
                                             $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder + $listOffset]['name'] = $marketConnectProduct['label'];
-                                        }
+                                        // }
                                         $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder + $listOffset]['url'] = $marketConnectProduct['uri'];
                                         $listOffset++;
                                     }
@@ -655,9 +690,9 @@ add_hook('ClientAreaPage', 0, function($vars) {
                                     foreach ($departments as $department) {
                                         if ($userStatus == 'Logged-Out' && $department->clientsonly == "on"){}
                                         else{
-                                            if ($itemStyle != 'icon'){
+                                            // if ($itemStyle != 'icon'){
                                                 $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder + $listOffset]['name'] = $department->name;
-                                            }
+                                            // }
                                             $rsFooter[$footerItemLocation][$parentOrder]['children'][$childOrder + $listOffset]['url'] = 'submitticket.php?step=2&deptid=' . $department->id;
                                             $listOffset++;
                                         }
@@ -799,8 +834,10 @@ function generateRsMenu($navbar, $menu, $language, $layout, $vars, $navbarType) 
     if (!is_null($client) || !is_null($_SESSION['login_auth_tk'])) {
         $userStatus = 'Logged-In';
     }
+
     /*** Get WHMCS Pages Routes ***/
     $routes = json_decode(file_get_contents(ROOTDIR . DS . 'templates' . DS . $vars['template'] . DS . 'core' . DS . 'config' . DS  . 'routing' . DS . 'routes.json'), true);
+    $conditionalLinks = \WHMCS\ClientArea::getConditionalLinks();
 
     /*** Items ***/
     foreach ($menu->parents as $parent) {
@@ -1314,6 +1351,33 @@ function generateRsMenu($navbar, $menu, $language, $layout, $vars, $navbarType) 
                                         $pageConfig = MenuProcessor::getWhmcsPageConfiguration($childPage->name);
                                         if (!$pageConfig['enabled']) {
                                             $childPageEnabled = false;
+                                        }
+                                        
+                                        if (isset($childPage->name) && $childPage->name == "account-user-management"){
+                                            if (\Auth::client() && \Auth::client()->authedUserIsOwner() && !\WHMCS\Config\Setting::getValue("DisableClientAreaUserMgmt")){}
+                                            else {
+                                                $childPageEnabled = false;
+                                            }
+                                        }
+                                        if (isset($childPage->name) && $childPage->name == "account-paymentmethods"){
+                                            if (empty($conditionalLinks["updatecc"])) {
+                                                $childPageEnabled = false;
+                                            }
+                                        }
+                                        if (isset($childPage->name) && $childPage->name == "clientareasecurity"){
+                                            if (empty($conditionalLinks["sso"])) {
+                                                $childPageEnabled = false;
+                                            }
+                                        }
+                                        if (isset($childPage->name) && $childPage->name == "user-accounts"){
+                                            if (!\Auth::hasMultipleClients()) {
+                                                $childPageEnabled = false;
+                                            }
+                                        }
+                                        if (isset($childPage->name) && $childPage->name == "user-security"){
+                                            if (empty($conditionalLinks["security"])) {
+                                                $childPageEnabled = false;
+                                            }
                                         }
                                     }
                                     if($childPage->name == "clientareadomains" && $vars['clientsstats']['numactivedomains'] > 0)
@@ -1912,10 +1976,7 @@ function getStoreAddonChildren($startIndex){
     return $addonChildren;
 }
 
-function menuGetCache($type, $language, $login){
-    $loggedInUser = Auth::user();
-    if($loggedInUser)
-        $login = $login."_".$loggedInUser->id;
+function menuCleanWhmcs($type){
     if ($type == "primary"){
         $whmcsnavbar = Menu::primaryNavbar();
     } else if ($type == "secondary"){
@@ -1927,6 +1988,18 @@ function menuGetCache($type, $language, $login){
             $whmcsnavbar->removeChild($navbarItem->getName());
         }
     }
+}
+
+function menuGetCache($type, $language, $login){
+    if (\RSThemes\Models\Settings::where('setting', 'menu_cache_disabled')->first() && \RSThemes\Models\Settings::where('setting', 'menu_cache_disabled_menu')->first() && \RSThemes\Models\Settings::where('setting', 'menu_cache_disabled')->first()->value == "1") {
+        if(\RSThemes\Models\Settings::where('setting', 'menu_cache_disabled_menu')->first()->value == "all" || \RSThemes\Models\Settings::where('setting', 'menu_cache_disabled_menu')->first()->value == $type) {
+            return false;
+        }
+    }
+    $loggedInUser = Auth::user();
+    if($loggedInUser)
+        $login = $login."_".$loggedInUser->id;
+    menuCleanWhmcs($type);
   
     $currency = getCurrency($_SESSION['uid']);
     $item = HtmlCache::where("name", "navbar_cache_".$type."_".$language."_".$login."_".$currency['code'])->first();
@@ -1975,6 +2048,23 @@ function menuCache($type, $language, $login){
     $smarty->assign("loggedinuser", $loggedInUser);
 
     $locales = \Lang::getLocales();
+    $customLanguageListEnabled = \RSThemes\Models\Settings::where('setting', 'custom_language_list')->first();
+    if (isset($customLanguageListEnabled) && $customLanguageListEnabled){
+    if ($customLanguageListEnabled->value == "enabled"){
+        $customAvailableLanguages = \RSThemes\Models\Settings::where('setting', 'custom_available_languages')->first();
+        if (isset($customAvailableLanguages) && $customAvailableLanguages){
+            $customAvailableLanguagesValue = $customAvailableLanguages->value;
+            $languageList = json_decode($customAvailableLanguagesValue);
+            if (!in_array('all', $languageList)) {
+                foreach ($locales as $key => $value) {
+                    if (!in_array($value["language"], $languageList)) {
+                        unset($locales[$key]);
+                    }
+                }
+            }
+        }
+    }
+    }
     $smarty->assign("locales", $locales);
     $currenciesarray = \WHMCS\Billing\Currency::all(["id", "code", "prefix", "suffix", "default"])->toArray();
     if (count($currenciesarray) == 1) {
@@ -1983,11 +2073,16 @@ function menuCache($type, $language, $login){
     $smarty->assign("currencies", $currenciesarray);
     $templatePath = AddonHelper::getTemplate()->getFullPath();
     $html = $smarty->fetch($templatePath."/includes/navbar.tpl");
-    //
-    HtmlCache::updateOrCreate(
-        ['name' => "navbar_cache_".$type."_".$language."_".$login."_".$currency['code']],
-        ['html' => $html]
-    );
+    if (!\RSThemes\Models\Settings::where('setting', 'menu_cache_disabled')->first() ||
+        \RSThemes\Models\Settings::where('setting', 'menu_cache_disabled')->first()->value != "1" ||
+        (\RSThemes\Models\Settings::where('setting', 'menu_cache_disabled')->first()->value == "1" &&
+            (\RSThemes\Models\Settings::where('setting', 'menu_cache_disabled_menu')->first()->value != "all" && \RSThemes\Models\Settings::where('setting', 'menu_cache_disabled_menu')->first()->value != $type)
+        )) {
+        HtmlCache::updateOrCreate(
+            ['name' => "navbar_cache_".$type."_".$language."_".$login."_".$currency['code']],
+            ['html' => $html]
+        );
+    }
     return $html;
 }
 

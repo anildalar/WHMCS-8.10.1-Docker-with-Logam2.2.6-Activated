@@ -93,7 +93,7 @@
                     <tbody>
                     {foreach from=$template->getPages() item=page key=k}
                         <tr data-url="{$helper->url('Template@pages',['templateName'=>$template->getMainName(), 'pageName' => $page->getMainName()])}">
-                            <td class="cell-name">
+                            <td class="cell-name kurwadsadas">
                                 <div class="content-name">
                                     <strong>{$page->getName()}</strong>
                                     {*<p class="extensions-description">{$page->getDescription()}</p>*}

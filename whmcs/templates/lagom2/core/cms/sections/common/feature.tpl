@@ -35,7 +35,7 @@
                 <div class="feature-content">
                         {if $feature.stat}
                             <p class="feature-stat" data-animation="" data-animation-options="type: featureValue; mobileAnimation: true; ">
-                                <span data-animation-bar-value="{$feature.stat}">{$feature.stat}</span>
+                                <span data-animation-bar-value="{$feature.stat}">{$feature.stat|unescape:'html'}</span>
                             </p>
                         {/if}
                         {if $feature.title}

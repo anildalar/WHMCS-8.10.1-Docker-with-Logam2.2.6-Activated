@@ -1,23 +1,25 @@
 <input name="language" value="{$language}" type="hidden">
 {if $pageSections}
     {foreach $pageSections as $sectionIndex => $pageSection}
+        {if $counterStart}{$sectionIndex = $sectionIndex + $counterStart}{/if}
         {include file='adminarea/pages/custom/sections/section.tpl'}
     {/foreach}
 {/if}    
-    <button
-        type="button"
-        class="btn btn--secondary btn--block order-max m-t-3x {if !$pageSections}is-hidden{/if}"
-        data-toggle="lu-modal"
-        data-target="#modalAddNewSection"
-        data-section-add
-        data-section-header-btn
-        data-order="{if $pageSections}{sizeof($pageSections) + 1}{else}1{/if}"
-        data-index="{if $pageSections}{sizeof($pageSections)}{else}0{/if}"
-        data-language="{$language}"
-    >
-        <i class="btn__icon ls ls-plus"></i>
-        <span class="btn__text">{$lang.general.add_new}</span>
-    </button>
+<button
+    type="button"
+    class="btn btn--secondary btn--block order-max m-t-3x {if !$pageSections}is-hidden{/if}"
+    data-toggle="lu-modal"
+    data-target="#modalAddNewSection"
+    data-section-add
+    {if isset($sType)}data-section-type="{$sType}"{/if} 
+    data-section-header-btn
+    data-order="{if $pageSections}{sizeof($pageSections) + 1}{else}1{/if}"
+    data-index="{if $pageSections}{if $counterStart}{sizeof($pageSections) + $counterStart}{else}{sizeof($pageSections)}{/if}{else}0{/if}"
+    data-language="{$language}"
+>
+    <i class="btn__icon ls ls-plus"></i>
+    <span class="btn__text">{$lang.general.add_new}</span>
+</button>
 
 <div class="section__body panel {if $pageSections}is-hidden{/if}" data-no-sections>
     <div class="section__builder">
@@ -29,7 +31,15 @@
         <h5 class="builder__title">No Sections Created</h5>
         <p class="p-md builder__desc text-center m-b-4x">Please use bellow button to start adding new sections to this page, or follow our <span class="form-label__counter label-docs"><a href="#" class="btn--link btn--xs p-0x">documentation</a></span>.</p>
         <div class="builder__actions">
-            <a class="btn btn--secondary" href="#" data-toggle="lu-modal" data-target="#modalAddNewSection" data-section-add data-order="1" data-index="0">
+            <a 
+                class="btn btn--secondary" 
+                href="#" 
+                data-toggle="lu-modal" 
+                data-target="#modalAddNewSection" 
+                data-section-add
+                {if isset($sType)}data-section-type="{$sType}"{/if} 
+                data-order="1" 
+                data-index="{if isset($counterStart) && $counterStart}{$counterStart}{else}1{/if}">
                 <i class="btn__icon ls ls-plus"></i>
                 <span class="btn__text m-l-0x">Add New Section</span>
             </a>

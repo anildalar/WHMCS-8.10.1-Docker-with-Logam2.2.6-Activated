@@ -137,11 +137,38 @@
         data-domain-id="{$item['domain_id']}"
     {/if}
 
+    {* locations *}
+    {if isset($item['location'])}
+        data-location="{$item['location']}"
+    {/if}
+    {if isset($item['location_status'])}
+        data-location-status="{$item['location_status']}"
+    {/if}
+    {if isset($item['location_position_top'])}
+        data-location-position-top="{$item['location_position_top']}"
+    {/if}
+    {if isset($item['location_position_left'])}
+        data-location-position-left="{$item['location_position_left']}"
+    {/if}
+
+    {* promocodes *}
+    {if isset($item['apply_promocode'])}
+        data-apply-promocode="{$item['apply_promocode']}"
+    {/if}
+     {if isset($item['promocode'])}
+        data-promocode="{$item['promocode']}"
+    {/if}
+
+    {* promotion manager *}
+    {if isset($item['slide_id'])}
+        data-slide-id="{$item['slide_id']}"
+    {/if}
+    
     {if isset($showModalIconsTabs)} data-show-modal-icon='{if !$showModalIconsTabs}false{else}true{/if}'{/if}
     {if isset($showModalLinks)}data-show-modal-link="{if !$showModalLinks}false{else}true{/if}"{/if}
     {if isset($showModalStatsField) && $showModalStatsField}data-show-modal-stats{/if}
     {if isset($item['stat'])}
-        data-stats="{$item['stat']}"
+        data-stats="{$item['stat']|escape:"html"}"
     {/if}
     {if isset($sidebarType) && $sidebarType}data-list-sidebar-type{/if}
 >

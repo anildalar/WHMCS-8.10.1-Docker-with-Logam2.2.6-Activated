@@ -13,13 +13,13 @@ return [
 	    'showManageButton' => [
             'type' => 'checkbox',
             'name' => 'showManageButton',
-            'label' => 'Show "Manage" button',
+            'label' => "Show 'Manage' Button",
             'tooltip' => "Choose whether you would like to show or hide the 'Manage' button.",
         ],
         'showPdfButton' => [
             'type' => 'checkbox',
             'name' => 'showPdfButton',
-            'label' => 'Show "Download" button',
+            'label' => "Show 'Download' Button",
             'tooltip' => "Choose whether you would like to show or hide the 'Download' button.",
         ],
         'sortingTableOption' => [

@@ -225,7 +225,7 @@
                                                 </ul>
                                             </div>
                                             <span class="renewal cycle">
-                                                {lang key='domainrenewalprice'} <span class="renewal-price cycle">{if isset($domain.renewprice)}{$domain.renewprice}{$domain.shortRenewalYearsLanguage}{/if}</span>
+                                                <span class="renewal-price cycle">{if isset($domain.renewprice)}{lang key='domainrenewalprice'} {$domain.renewprice}{$domain.shortRenewalYearsLanguage}{/if}</span>
                                             </span>
                                         </span>
                                     </span>

@@ -5,6 +5,7 @@ return [
     'group'        => 'Client Area',
     'type' => 'client-portal',
     'listDisplay' => true,
+    'hideSeoSettings' => true,
     'variables'    => [
 
     ],

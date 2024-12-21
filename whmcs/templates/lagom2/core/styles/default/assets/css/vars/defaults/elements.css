@@ -59,6 +59,9 @@
      /* Section: Promotion Slider */
 
     --promo-slider-min-height:                      314px;
+    --promo-slider-caption-font-size:               var(--font-size-h6); /* name: Caption - Size; var_group: Font Size; */
+    --promo-slider-caption-line-height:             var(--line-height-h6); /* name: Caption - Line Height; var_group: Line Height; */
+    --promo-slider-caption-font-weight:             var(--font-weight-h6); /* name: Caption - Weight; var_group: Font Weight; */
     --promo-slider-title-font-size:                 var(--font-size-h4); /* name: Title - Size; var_group: Font Size; */
     --promo-slider-title-line-height:               var(--line-height-h4); /* name: Title - Line Height; var_group: Line Height; */
     --promo-slider-title-font-weight:               var(--font-weight-bold); /* name: Title - Weight; var_group: Font Weight; */
@@ -116,8 +119,8 @@
     --panel-sidebar-footer-padding:                 var(--ui-block-padding-sm) 0 0;
     --panel-sidebar-margin-bottom:                  var(--spacing-4x);
     --panel-sidebar-link-bg:                        transparent;
-    --panel-sidebar-link-color:                     var(--brand-primary);
-    --panel-sidebar-link-icon-color:                var(--brand-primary);
+    --panel-sidebar-link-color:                     var(--ui-nav-link-color);
+    --panel-sidebar-link-icon-color:                var(--ui-nav-link-color);
     --panel-sidebar-link-margin:                    1px;
     --panel-sidebar-link-padding:                   var(--ui-nav-v-link-padding-v) 0;
     --panel-sidebar-link-border-radius:             var(--ui-nav-link-border-radius); 
@@ -195,6 +198,8 @@
     --tile-mob-title-font-size:                     var(--font-size-base);
     --tile-sm-mob-stat-font-size:                   var(--font-size-xxlg);
     --tile-sm-mob-title-font-size:                  var(--font-size-sm);
+    --tile-loader-bg:                               var(--gray-lighter-4);
+    --tile-loader-progress-bg:                      var(--brand-primary);
 
     /* Section: Login and Register Box */
 
@@ -217,6 +222,10 @@
     --login-desc-font-size:                         var(--font-size-base);
     --login-desc-font-weight:                       var(--font-weight-base);
     --login-link-color:                             var(--link-color);
+
+    /* Section: Error Page*/
+
+    --error-page-bg:                                var(--brand-secondary-gradient-h);
 
     /* Login Sidebar */ 
 
@@ -378,4 +387,13 @@
     :root {
         --login-logo-height:                        44px;
     }
+}
+
+.lagom-dark-mode{
+
+--error-page-bg:                                     #121212;
+--list-group-item-link-heading-color:                var(--brand-primary-lighter);
+
+--price-savings-color:                               #F01A67;
+--price-savings-background:                          #FFD6DF;
 }

@@ -49,6 +49,24 @@
             <div class="site-section section-slider-btn">
                 <div class="container">
                     <div class="section-content">
+                        {* <div class="slider-navigation slider-navigation-promotion row" data-promo-slider-pagination promotion-navigation-slider>
+                            <div class="swiper-wrapper row flex-nowrap ">
+                                {foreach from=$homepage->getPromotionBanner() item=item}
+                                    {if strpos($item.settings, '"client-home":true,"') != false}
+                                        <div class="swiper-slide col-xl5 col-lg-3 col-md-4 col-6">
+                                            <div class="tile" data-promo-slider-pagination-item>     
+                                                {include file="$template/includes/common/svg-icon.tpl" icon="{$item['name']}"}                
+                                                <span class="title">{$item['tabname']}</span>
+                                                <div class="tile-loader">
+                                                    <div class="tile-loader-progress"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {/if}
+                                {/foreach}
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-promotion animation-paused"></div>
+                        </div> *}
                         <div class="slider-navigation row" data-promo-slider-pagination>
                             {foreach from=$homepage->getPromotionBanner() item=item}
                                 {if strpos($item.settings, '"client-home":true,"') != false}

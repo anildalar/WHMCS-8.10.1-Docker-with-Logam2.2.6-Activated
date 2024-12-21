@@ -9,7 +9,7 @@
 {/if}
 
 {if !$skipAppNav}
-    <div class="app-nav app-nav-{$leftNavStyle} {if $RSThemes.addonSettings.show_affixed_navigation == 'enabled'} sticky-navigation{/if}" {if $RSThemes.addonSettings.show_affixed_navigation == 'enabled'}data-site-navbar data-site-navbar-left{/if}>
+    <div class="app-nav app-nav-{$leftNavStyle}{if isset($RSThemes.pageSettings.promo.promotionNavType) && $RSThemes.pageSettings.promo.promotionNavType == "Only Logo"} app-nav-only-logo{/if}{if $RSThemes.addonSettings.show_affixed_navigation == 'enabled'} sticky-navigation{/if}" {if $RSThemes.addonSettings.show_affixed_navigation == 'enabled'}data-site-navbar data-site-navbar-left{/if}>
         <div class="app-nav-header" id="header">
             <div class="container">
                 <button class="app-nav-toggle navbar-toggle" type="button">

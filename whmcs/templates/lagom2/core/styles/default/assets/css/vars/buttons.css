@@ -201,3 +201,16 @@
     --btn-social-linkedin-bg:                       #0077b5;
     
 }
+
+.lagom-dark-mode{
+    /* Section : Dark Mode Colors */
+
+    --btn-primary-faded-bg:                         var(--gray-lighter-3); 
+    --btn-primary-faded-border:                     transparent; 
+    --btn-primary-faded-color:                      #fff; 
+    --btn-primary-faded-hover-bg:                   var(--gray-lighter-4); 
+    --btn-primary-faded-hover-border:               transparent; 
+    --btn-primary-faded-hover-color:                #fff; 
+    --btn-primary-faded-active-bg:                  var(--gray-lighter-5); 
+    --btn-primary-faded-active-border:              transparent; 
+}

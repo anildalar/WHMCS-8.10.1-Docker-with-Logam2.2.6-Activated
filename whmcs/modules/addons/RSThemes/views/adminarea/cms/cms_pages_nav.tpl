@@ -1,3 +1,8 @@
+<li class="nav__item {if $smarty.get.tab == 'promotion'} is-active {/if}">
+    <a class="nav__link" data-toggle="lu-tab" data-change-hash="true" href="#pages-promotion">
+        <span class="nav__link-text">{$lang.breadcrumb.promotion}</span>
+    </a>
+</li>
 <div class="nav__header p-0x text-faded p-4">
     {$lang.general.settings}
 </div>

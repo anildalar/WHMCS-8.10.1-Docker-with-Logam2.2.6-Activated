@@ -15,7 +15,6 @@
         {$slider = ","|explode:$package_slider}
     {/if}
 {/if}
-
 {assign var=darkIcons value=false}
 {if ($theme == "primary" || $theme == "secondary") && $style != "boxed"}
     {assign var=darkIcons value=true}
@@ -196,7 +195,7 @@
                                             </span>
                                             
                                             <label 
-                                                class="label label-xs label-info label-save {if isset($discountTabs) && is_array($discountTabs) && isset($discountTabs[0][$firstAvailableCycle])}{else}hidden{/if}"
+                                                class="label label-xs label-save {if isset($discountTabs) && is_array($discountTabs) && isset($discountTabs[0][$firstAvailableCycle])}{else}hidden{/if}"
                                                 {if is_array($products_group['groups']) && count($products_group['groups']) > 1 && isset($discountTabs) && is_array($discountTabs)}
                                                 
                                                     data-change-discount='[{foreach from=$discountTabs key=key item=$d}"{if isset($d[$firstAvailableCycle]) && is_array($d[$firstAvailableCycle])}{min($d[$firstAvailableCycle])}{else}0{/if}"{if !$d@last},{/if}{/foreach}]'
@@ -291,9 +290,14 @@
                                     <div class="section-slider content-slider content-slider-mixed {foreach $slider as $slide} res-{$slide|lower|replace:" ":"-"}{/foreach}" data-cms-content-slider >
                                     <div class="slider-cover-before"></div>
                                 {/if} 
-                                    <div class="row row-eq-height row-lg row-cols-mixed row-packages-{$group['fields']['products_list']|count} {if $sliderOn}content-slider-wrapper{foreach $slider as $slide} content-slider-{$slide|lower|replace:" ":"-"}{/foreach}{else}row-eq-height{/if}" {if $sliderOn}data-content-slider-wrapper{/if}>
+                                    
+                                    <div class="row row-eq-height row-lg row-cols-mixed row-packages-{$group['fields']['products_list']|count} {if $sliderOn}content-slider-wrapper{foreach $slider as $slide} content-slider-{$slide|lower|replace:" ":"-"}{/foreach}{else}row-eq-height{/if}" {if $sliderOn}data-content-slider-wrapper{/if} {if $enable_stock_control}data-product-qty-controller='[{foreach from=$group['fields']['products_list'] key=key item=$product}"{$product.product_id}"{if !$product@last},{/if}{/foreach}]' data-ajax-url="{$WEB_ROOT}/modules/addons/RSThemes/src/Api/clientApi.php?controller=StockControl&method=getStockControl&id="{/if}>    
                                         {foreach from=$group['fields']['products_list'] key=key item=$product}
                                             {if isset($product['product']) && is_array($product['product']) && count($product['product']) > 0}
+                                                {$stockControl = false}
+                                                {if $enable_stock_control && $product['product']['stockControl'] == "1"}
+                                                    {$stockControl = true}
+                                                {/if}
                                                 {include file="{$smarty.current_dir}/../../common/package.tpl" 
                                                     product=$product  
                                                     productStyle=$style                            
@@ -306,6 +310,7 @@
                                                     featureSlider=$sliderOn
                                                     productCustomClasses=$package_custom_classes
                                                     theme=$darkIcons
+                                                    productStockControl=$stockControl
                                                 }   
                                             {/if}   
                                         {/foreach}   

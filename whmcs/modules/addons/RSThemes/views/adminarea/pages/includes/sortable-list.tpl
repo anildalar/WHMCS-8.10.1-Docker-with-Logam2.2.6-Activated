@@ -46,7 +46,7 @@
         {foreach $items as $key => $item}
             <li class="items-list list__item">
                 {* {if isset($item['icon']) || isset($item['illustration']) || isset($item['font-icon']) || isset($item['media']) || isset($item['show_icon'])} *}
-                    <div class="list__item-icon i-c-4x icon-{$item['index']} m-l-0x {if !$item['show_icon']}is-hidden{/if}">
+                    <div class="list__item-icon {if isset($item['location'])}list__item-icon--flag{else}i-c-4x{/if} icon-{$item['index']} m-l-0x {if !$item['show_icon']}is-hidden{/if}">
                         {if isset($item['icon'])}
                             {if $item['icon']|strstr:".tpl"}
                                 {if file_exists("{$whmcsDir}/templates/{$themeName}/assets/svg-icon/{$item['icon']}")}
@@ -92,7 +92,7 @@
                 {* {/if} *}
                 {*TODO długie imie wchodzi na opis*}
                 <div 
-                    class="list__item-name" 
+                    class="list__item-name {if isset($item['slide_id']) && $item['slide_id'] == "all"}w-a{/if}" 
                     data-name
                     href="#{$btnEditAction}"
                     data-edit-item
@@ -227,11 +227,38 @@
                         data-domain-id="{$item['domain_id']}"
                     {/if}
 
+                    {* locations *}
+                    {if isset($item['location'])}
+                        data-location="{$item['location']}"
+                    {/if}
+                    {if isset($item['location_status'])}
+                        data-location-status="{$item['location_status']}"
+                    {/if}
+                    {if isset($item['location_position_top'])}
+                        data-location-position-top="{$item['location_position_top']}"
+                    {/if}
+                    {if isset($item['location_position_left'])}
+                        data-location-position-left="{$item['location_position_left']}"
+                    {/if}
+
+                    {* promocodes *}
+                    {if isset($item['apply_promocode'])}
+                        data-apply-promocode="{$item['apply_promocode']}"
+                    {/if}
+                    {if isset($item['promocode'])}
+                        data-promocode="{$item['promocode']}"
+                    {/if}
+
+                    {* promotion manager *}
+                    {if isset($item['slide_id'])}
+                        data-slide-id="{$item['slide_id']}"
+                    {/if}
+
                     {if isset($showModalIconsTabs)} data-show-modal-icon='{if !$showModalIconsTabs}false{else}true{/if}'{/if}
                     {if isset($showModalLinks)}data-show-modal-link="{if !$showModalLinks}false{else}true{/if}"{/if}
                     {if isset($showModalStatsField) && $showModalStatsField}data-show-modal-stats{/if}
                     {if isset($item['stat'])}
-                        data-stats="{$item['stat']}"
+                        data-stats="{$item['stat']|escape:"html"}"
                     {/if}
                     {if isset($sidebarType) && $sidebarType}data-list-sidebar-type{/if}
 
@@ -242,16 +269,16 @@
                         {if $item['text']}
                             {$item['text']}
                         {else}
-                            {$item['title']}
+                            {$item['title']} {if isset($item['promocode']) && isset($item['apply_promocode']) && $item['apply_promocode'] == "1"}<span class="i-c-2x m-l-1x" data-toggle="lu-tooltip" data-title="A separate promotional code has been chosen for this product"><i class="fas fa-badge-percent text-savings"></i></span>{/if}
                         {/if}
                     {/if}
                 </div>
                 {*TODO długi opis zawija buttony edycji oraz usuwania *}
-                {if $item['custom_url'] || $item['url'] || $item['description'] || $item['custom_description'] || $item['whmcs_product']}
+                {if $item['custom_url'] || $item['url'] || $item['description'] || $item['custom_description'] || $item['whmcs_product'] || $item['slide_id']}
                 <div class="list__item-desc" data-desc>
                     {if $item['custom_description']}
                         {$item['custom_description']|html_entity_decode|escape:"html"}
-                    {elseif $item['description']}
+                    {elseif $item['description'] || $item['slide_id']}
                         {$item['description']|html_entity_decode|escape:"html"}
                     {elseif $item['custom_url'] && !$item['group_id']}
                         {if $item['link_type'] == 'homepage'}

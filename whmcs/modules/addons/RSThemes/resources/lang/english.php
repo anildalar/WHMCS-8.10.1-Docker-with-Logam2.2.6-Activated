@@ -75,6 +75,7 @@ return [
         'activate_theme' => 'Activate Theme',
         'media' => 'Media',
         'sitemap' => 'Sitemap',
+        'promotion' => 'Promotion'
     ],
     'info' => [
         'theme_information' => [
@@ -199,6 +200,25 @@ return [
                 'hide_discounts' => [
                     'title' => 'Hide Billing Cycle Discounts',
                 ],
+                'enable_table_ajax_load' => [
+                    'title' => 'Enable Dynamic AJAX Loading',
+                ],
+                'custom_language_list' => [
+                    'title' => 'Custom Language List',
+                    'label' => 'Language Display'
+                ],
+                'menu_cache_disable' => [
+                    'title' => 'Disable CMS Menu Cache',
+                    'label' => 'Menu cache disable',
+                    'all' => 'Disable cache for all menus',
+                    'primary' => 'Disable cache for primary menus',
+                    'secondary' => 'Disable cache for secondary menus'
+                ],
+                'dark_mode' => [
+                    'title' => 'Enable Dark Mode',
+                    'label' => 'Choose Display Type',
+                    'info' => 'Dark mode is not available for the Futuristic style'
+                ],
             ],
             'order_process' => [
                 'title' => 'Order Process Settings',
@@ -246,7 +266,7 @@ return [
                     'title' => 'Show TLD Cycle Switcher'
                 ],
                 'product_domain_free_price' => [
-                    'title' => 'Display Free Domain Pricing'
+                    'title' => 'Enhanced Free Domain Display'
                 ]
             ]
         ],  

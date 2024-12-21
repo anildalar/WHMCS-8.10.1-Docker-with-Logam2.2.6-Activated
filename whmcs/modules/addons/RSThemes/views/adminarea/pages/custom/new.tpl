@@ -12,7 +12,8 @@
         enctype="multipart/form-data"
     >
         <input type="hidden" name="customFilename" value="">
-        <div class="block is-loading">
+        <input type="hidden" name="type" value="{$pageType}">
+        <div class="block {if $pageType}block--{$pageType}{/if} is-loading">
             <div class="block__body" style="max-width: calc(100% - 368px);">
                 <div class="section">
                     <div class="section__header">
@@ -71,8 +72,13 @@
                 <div class="section">
                     <div class="section__header top">
                         <h3 class="section__title top__title">
-                            {$lang.page.page_sections.header}
-                            {include file="adminarea/includes/helpers/docs.tpl" link=$cms_docs->page['page_sections']}
+                            {if $pageType == "promo"}
+                                Promotion Sections
+                                {include file="adminarea/includes/helpers/docs.tpl" link=$cms_docs->page['promotions']['page_sections']}
+                            {else}
+                                {$lang.page.page_sections.header}
+                                {include file="adminarea/includes/helpers/docs.tpl" link=$cms_docs->page['page_sections']}
+                            {/if}   
                         </h3>
                         <div class="top__toolbar">
                             <button
@@ -111,8 +117,36 @@
                         {include file='adminarea/pages/custom/sections/index.tpl' language=$language}
                     </div>
                 </div>
-            </div>
 
+                {if $pageType == "promo"}
+                    <div class="section">
+                        <div class="section__header top">
+                            <h3 class="section__title top__title">
+                                Expired Promotion Sections
+                                {include file="adminarea/includes/helpers/docs.tpl" link=$cms_docs->page['promotions']['page_sections_expired']}
+                            </h3>
+                            <div class="top__toolbar">
+                                <button
+                                    type="button"
+                                    class="btn btn--secondary"
+                                    data-toggle="lu-modal"
+                                    data-target="#modalAddNewSection"
+                                    data-section-add
+                                    data-section-type="expired_promo"
+                                    data-section-header-btn
+                                    data-order="1"
+                                    data-index="10000">
+                                    <i class="btn__icon ls ls-plus"></i>
+                                    <span class="btn__text">{$lang.general.add_new}</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="promotions-settings" class="section__body d-flex flex-column" data-page-builder-expired-promo>
+                            {include file='adminarea/pages/custom/sections/index.tpl' language=$language sType="expired_promo"}
+                        </div>
+                    </div>
+                {/if}    
+            </div>
 
             <div class="block__sidebar block__sidebar--md is-sticky">
                 <div class="section">
@@ -174,11 +208,11 @@
                                                 {else}
                                                     {assign var="popoverFooter" value=false}
                                                 {/if}
-                                                {include 
-                                                    file="adminarea/includes/helpers/popover.tpl" 
-                                                    popoverClasses="notification__popover popover__top"
-                                                    popoverBody="{$cms_tooltips->page['settings']['general']['body_class']['content']}"
-                                                    popoverFooter="{$popoverFooter}"
+                                                {include
+                                                file="adminarea/includes/helpers/popover.tpl"
+                                                popoverClasses="notification__popover popover__top"
+                                                popoverBody="{$cms_tooltips->page['settings']['general']['body_class']['content']}"
+                                                popoverFooter="{$popoverFooter}"
                                                 }
                                             {/if}
                                         </span>
@@ -189,6 +223,10 @@
                                 </div>
                             </div>
                         </div>
+
+                        {if $pageType == "promo"}
+                            {include file="adminarea/pages/custom/promotions/sidebar.tpl"} 
+                        {/if}    
 
                         <div class="widget panel of-visible">
                             <label class="widget__top top">
@@ -349,6 +387,15 @@
     {include file='adminarea/pages/includes/modal/section/section-add.tpl' type="pageSection"}
     {include file='adminarea/pages/includes/modal/section/section-delete.tpl'}
     
+    <form data-duplicate-section-form class="is-hidden">
+        <input type="hidden" name="language" value="{$language}">
+        <input type="hidden" name="order" value="" data-duplicate-section-order> 
+        <input type="hidden" name="duplicateIndex" value="" data-duplicate-section-index>
+        <input type="hidden" name="index" value="" data-duplicate-section-new-index> 
+        <input type="hidden" name="stype" value="" data-duplicate-section-stype>
+        <input type="hidden" name="newSection[new]" value="" data-duplicate-section-type>
+        <input type="hidden" name="newSection[type]" value="new">
+    </form>
 {/block}
 
 {block name="template-actions"}

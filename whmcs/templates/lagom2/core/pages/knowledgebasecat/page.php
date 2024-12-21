@@ -6,6 +6,7 @@ return [
     'type' => 'client-portal',
     'cms_type' => 'website',
     'listDisplay' => false,
+    'hideSeoSettings' => true,
     'variables'    => [
 
     ],

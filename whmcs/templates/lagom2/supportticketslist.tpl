@@ -3,7 +3,7 @@
 {else}  
     {assign var=iconsPages value=['clientareadomains', 'supportticketslist', 'clientareainvoices', 'clientareaproducts']}
     {if $tickets}
-        {include file="$template/includes/tablelist.tpl" tableName="TicketsList" filterColumn="2"}
+        {include file="$template/includes/tablelist.tpl" tableName="TicketsList" filterColumn="2" ajaxUrl="{$WEB_ROOT}/modules/addons/RSThemes/src/Api/clientApi.php?controller=ClientData&method=getClientTickets" tableIncludes="tickets"}
         <script type="text/javascript">
             jQuery(document).ready( function ()
             {
@@ -18,12 +18,14 @@
                     table.order(3, '{$sort}');
                 {/if}
                 table.draw();
-                jQuery('.table-container').removeClass('loading');
-                jQuery('#tableLoading').addClass('hidden');
-
+                {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled"}
+                {else}
+                    jQuery('.table-container').removeClass('loading');
+                    jQuery('#tableLoading').addClass('hidden');
+                {/if}    
             });
         </script>
-        <div class="table-container loading clearfix">
+        <div class="table-container {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled"}table-container-ajax{/if} loading clearfix">
             <div class="table-top">
                 <div class="d-flex">
                     <label>{$LANG.clientareahostingaddonsview}</label>
@@ -93,6 +95,7 @@
                         </ul>
                         
                     </div>
+                    <button id="clearFilters" class="btn btn-link btn-xs hidden">{$rslang->trans('generals.clear_filters')}<i class="ls ls-close"></i></button>
                 </div> 
             </div>
                 
@@ -109,66 +112,53 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from=$tickets item=ticket}
-                    {if $RSThemes.addonSettings.show_status_icon == 'displayed' && in_array($templatefile, $iconsPages)}
-                        {assign var="ticketColor" value='style="color:'|explode:$ticket.status} 
-                        {assign var="ticketColor" value='">'|explode:$ticketColor[1]}
-                    {/if}
-                        <tr data-url="viewticket.php?tid={$ticket.tid}&amp;c={$ticket.c}">
-                            <td><button type="button" class="btn-table-collapse"></button>
-                                {$ticket.department}
-                            </td>
-                            <td>
-                                <div class="text-primary">#{$ticket.tid}
-                                    {if $ticket.sensitiveData === true}
-                                        <span class="" data-toggle="tooltip" data-placement="top" title="{$rslang->trans('support.sensitive_data_tooltip')}">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_9219_3103)">
-                                            <path d="M10.6875 0.000244141H1.3125C1.1375 0.000244141 1 0.146911 1 0.333577V6.66691C1 9.60691 3.24375 12.0002 6 12.0002C8.75625 12.0002 11 9.60691 11 6.66691V0.333577C11 0.146911 10.8625 0.000244141 10.6875 0.000244141ZM7 1.52691L2.49375 6.00024H2V1.00024H7V1.52691Z" fill="var(--brand-success)"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_9219_3103">
-                                            <rect width="12" height="12" fill="white" transform="translate(0 0.000244141)"/>
-                                            </clipPath>
-                                            </defs>
-                                            </svg>
-                                        </span>
-                                    {/if}
-                                </div>
-                                <span class="small">{$ticket.subject}</span>
-                            </td>
-                            <td>
-                                {if $RSThemes.addonSettings.show_status_icon == 'displayed' && in_array($templatefile, $iconsPages)}
-                                    {if file_exists("templates/$template/assets/img/status-icons/{$ticket.statusClass}.tpl")}
-                                        <span class="status-icon status-icon-ticket {$ticketColor[0]}">
-                                            {include file="$template/assets/img/status-icons/{$ticket.statusClass}.tpl" statusColor={$ticketColor[0]}}      
-                                        </span>
-                                        {$ticket.status|replace:'style="color':'class="status status-ticket dot-hidden" style="--status-color'}
-                                    {else}
-                                        <span class="status-icon status-icon-ticket">
-                                            {include file="$template/assets/img/status-icons/default.tpl"}      
-                                        </span>
-                                        {$ticket.status|replace:'style="color':'class="status status-ticket dot-hidden" style="--status-color'}
-                                    {/if}     
-                                {else}                
-                                    {$ticket.status|replace:'style="color':'class="status" style="--status-color'}
-                                {/if}  
-                                {* <span class="{if $RSThemes.addonSettings.show_status_icon == 'displayed'}status status-{$ticket.statusClass} dot-hidden{/if}" style="color: --status-color">
-                                    {$ticket.status|replace:'style="color':'class="status" style="--status-color'}
-                                </span> *}
-                            </td>
-                            <td class="text-center sorting_1 text-nowrap">
-                                <span class="hidden">{$ticket.normalisedLastReply}</span>
-                                {$ticket.lastreply}
-                            </td>
-                            {if isset($RSThemes['pages'][$templatefile]) && $RSThemes['pages'][$templatefile]['config']['showManageButton'] == "1"}
-                                <td class="cell-action">
-                                    <a href="viewticket.php?tid={$ticket.tid}&amp;c={$ticket.c}"
-                                        class="btn btn-default btn-sm btn-manage">{$_LANG['manage']}</a>
-                                </td>
+                    {if !isset($RSThemes.addonSettings.enable_table_ajax_load) || $RSThemes.addonSettings.enable_table_ajax_load == "disabled"}
+                        {foreach from=$tickets item=ticket}
+                            {if $RSThemes.addonSettings.show_status_icon == 'displayed' && in_array($templatefile, $iconsPages)}
+                                {assign var="ticketColor" value='style="color:'|explode:$ticket.status} 
+                                {assign var="ticketColor" value='">'|explode:$ticketColor[1]}
                             {/if}
-                        </tr>
-                    {/foreach}
+                            <tr data-url="viewticket.php?tid={$ticket.tid}&amp;c={$ticket.c}">
+                                <td><button type="button" class="btn-table-collapse"></button>
+                                    {$ticket.department}
+                                </td>
+                                <td>
+                                    <div class="text-primary">#{$ticket.tid}</div>
+                                    <span class="small">{$ticket.subject}</span>
+                                </td>
+                                <td>
+                                    {if $RSThemes.addonSettings.show_status_icon == 'displayed' && in_array($templatefile, $iconsPages)}
+                                        {if file_exists("templates/$template/assets/img/status-icons/{$ticket.statusClass}.tpl")}
+                                            <span class="status-icon status-icon-ticket {$ticketColor[0]}">
+                                                {include file="$template/assets/img/status-icons/{$ticket.statusClass}.tpl" statusColor={$ticketColor[0]}}      
+                                            </span>
+                                            {$ticket.status|replace:'style="color':'class="status status-ticket dot-hidden" style="--status-color'}
+                                        {else}
+                                            <span class="status-icon status-icon-ticket">
+                                                {include file="$template/assets/img/status-icons/default.tpl"}      
+                                            </span>
+                                            {$ticket.status|replace:'style="color':'class="status status-ticket dot-hidden" style="--status-color'}
+                                        {/if}     
+                                    {else}                
+                                        {$ticket.status|replace:'style="color':'class="status" style="--status-color'}
+                                    {/if}  
+                                    {* <span class="{if $RSThemes.addonSettings.show_status_icon == 'displayed'}status status-{$ticket.statusClass} dot-hidden{/if}" style="color: --status-color">
+                                        {$ticket.status|replace:'style="color':'class="status" style="--status-color'}
+                                    </span> *}
+                                </td>
+                                <td class="text-center sorting_1 text-nowrap">
+                                    <span class="hidden">{$ticket.normalisedLastReply}</span>
+                                    {$ticket.lastreply}
+                                </td>
+                                {if isset($RSThemes['pages'][$templatefile]) && $RSThemes['pages'][$templatefile]['config']['showManageButton'] == "1"}
+                                    <td class="cell-action">
+                                        <a href="viewticket.php?tid={$ticket.tid}&amp;c={$ticket.c}"
+                                            class="btn btn-default btn-sm btn-manage">{$_LANG['manage']}</a>
+                                    </td>
+                                {/if}
+                            </tr>
+                        {/foreach}
+                    {/if}    
                 </tbody>
             </table>
             <div class="loader loader-table" id="tableLoading">

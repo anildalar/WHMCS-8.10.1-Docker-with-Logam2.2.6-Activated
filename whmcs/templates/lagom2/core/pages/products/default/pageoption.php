@@ -30,7 +30,7 @@ return [
         'showOneTime' => [
             'type' => 'checkbox',
             'name' => 'showOneTime',
-            'label' => 'Show "One Time" cycle',
+            'label' => 'Show "One Time" Cycle',
             'tooltip' => 'Choose whether you would like to show "One Time" cycle text under product price.'    
         ]
     ]

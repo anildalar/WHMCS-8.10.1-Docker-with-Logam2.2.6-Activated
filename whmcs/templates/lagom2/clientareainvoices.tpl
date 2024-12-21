@@ -3,7 +3,7 @@
 {else}  
     {assign var=iconsPages value=['clientareadomains', 'supportticketslist', 'clientareainvoices', 'clientareaproducts']}
     {if $invoices}
-        {include file="$template/includes/tablelist.tpl" tableName="InvoicesList" filterColumn="4"}
+        {include file="$template/includes/tablelist.tpl" tableName="InvoicesList" filterColumn="4" ajaxUrl="{$WEB_ROOT}/modules/addons/RSThemes/src/Api/clientApi.php?controller=ClientData&method=getClientInvoices" tableIncludes="invoices"}
         <script type="text/javascript">
             jQuery(document).ready( function ()
             {
@@ -40,12 +40,14 @@
                 {elseif $orderby == 'status'}
                     table.order(4, '{$sort}');
                 {/if}
-                table.draw();
-                jQuery('.table-container').removeClass('loading');
-                jQuery('#tableLoading').addClass('hidden');
+                {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled"}
+                {else}
+                    jQuery('.table-container').removeClass('loading');
+                    jQuery('#tableLoading').addClass('hidden');
+                {/if}    
             });
         </script>
-        <div class="table-container loading clearfix">
+        <div class="table-container {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled"}table-container-ajax{/if} loading clearfix">
             <div class="table-top">
                 <div class="d-flex">
                     <label>{$LANG.clientareahostingaddonsview}</label>
@@ -106,6 +108,7 @@
                             {/foreach}
                         </ul>
                     </div>
+                    <button id="clearFilters" class="btn btn-link btn-xs hidden">{$rslang->trans('generals.clear_filters')}<i class="ls ls-close"></i></button>
                 </div>       
             </div>
             <table id="tableInvoicesList" class="table table-list">
@@ -125,44 +128,46 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach key=num item=invoice from=$invoices}
-                        <tr data-url="viewinvoice.php?id={$invoice.id}">
-                            <td><button type="button" class="btn-table-collapse"></button>{$invoice.invoicenum}</td>
-                            <td><span class="hidden">{$invoice.normalisedDateCreated}</span>{$invoice.datecreated}</td>
-                            <td><span class="hidden">{$invoice.normalisedDateDue}</span>{$invoice.datedue}</td>
-                            <td data-order="{$invoice.totalnum}">{$invoice.total}</td>
-                            {if $RSThemes.addonSettings.show_status_icon == 'displayed' && in_array($templatefile, $iconsPages)}
-                                <td>
-                                    <span class="status status-{$invoice.statusClass} {if $RSThemes.addonSettings.show_status_icon == 'displayed'}dot-hidden{/if}">
-                                        {if $RSThemes.addonSettings.show_status_icon == 'displayed'}
-                                            {if file_exists("templates/$template/assets/img/status-icons/{$invoice.statusClass}.tpl")}
-                                                <span class="status-icon">
-                                                    {include file="$template/assets/img/status-icons/{$invoice.statusClass}.tpl"}      
-                                                </span>
-                                            {else}
-                                                <span class="status-icon">
-                                                    {include file="$template/assets/img/status-icons/default.tpl"}      
-                                                </span>
-                                            {/if}                     
-                                        {/if}
-                                        {$invoice.status}
-                                    </span>
-                                </td>
-                            {else}
-                                <td><span class="status status-{$invoice.statusClass}">{$invoice.status}</span></td>                                
-                            {/if}
-                            {if isset($RSThemes['pages'][$templatefile]) && $RSThemes['pages'][$templatefile]['config']['showPdfButton'] == "1"}
-                                    <td class="cell-action">
-                                            <a href="dl.php?type=i&amp;id={$invoice.id}" class="btn btn-default btn-sm btn-manage">{$LANG.invoicesdownload}</a>
+                    {if !isset($RSThemes.addonSettings.enable_table_ajax_load) || $RSThemes.addonSettings.enable_table_ajax_load == "disabled"}
+                        {foreach key=num item=invoice from=$invoices}
+                            <tr data-url="viewinvoice.php?id={$invoice.id}">
+                                <td><button type="button" class="btn-table-collapse"></button>{$invoice.invoicenum}</td>
+                                <td><span class="hidden">{$invoice.normalisedDateCreated}</span>{$invoice.datecreated}</td>
+                                <td><span class="hidden">{$invoice.normalisedDateDue}</span>{$invoice.datedue}</td>
+                                <td data-order="{$invoice.totalnum}">{$invoice.total}</td>
+                                {if $RSThemes.addonSettings.show_status_icon == 'displayed' && in_array($templatefile, $iconsPages)}
+                                    <td>
+                                        <span class="status status-{$invoice.statusClass} {if $RSThemes.addonSettings.show_status_icon == 'displayed'}dot-hidden{/if}">
+                                            {if $RSThemes.addonSettings.show_status_icon == 'displayed'}
+                                                {if file_exists("templates/$template/assets/img/status-icons/{$invoice.statusClass}.tpl")}
+                                                    <span class="status-icon">
+                                                        {include file="$template/assets/img/status-icons/{$invoice.statusClass}.tpl"}      
+                                                    </span>
+                                                {else}
+                                                    <span class="status-icon">
+                                                        {include file="$template/assets/img/status-icons/default.tpl"}      
+                                                    </span>
+                                                {/if}                     
+                                            {/if}
+                                            {$invoice.status}
+                                        </span>
                                     </td>
-                            {/if}
-                            {if isset($RSThemes['pages'][$templatefile]) && $RSThemes['pages'][$templatefile]['config']['showManageButton'] == "1"}
-                                <td class="cell-action cell-action--last">
-                                    <a href="viewinvoice.php?id={$invoice.id}" class="btn btn-default btn-sm btn-manage">{$_LANG['manage']}</a>
-                                </td>
-                            {/if}   
-                        </tr>
-                    {/foreach}
+                                {else}
+                                    <td><span class="status status-{$invoice.statusClass}">{$invoice.status}</span></td>                                
+                                {/if}
+                                {if isset($RSThemes['pages'][$templatefile]) && $RSThemes['pages'][$templatefile]['config']['showPdfButton'] == "1"}
+                                        <td class="cell-action">
+                                                <a href="dl.php?type=i&amp;id={$invoice.id}" class="btn btn-default btn-sm btn-manage">{$LANG.invoicesdownload}</a>
+                                        </td>
+                                {/if}
+                                {if isset($RSThemes['pages'][$templatefile]) && $RSThemes['pages'][$templatefile]['config']['showManageButton'] == "1"}
+                                    <td class="cell-action cell-action--last">
+                                        <a href="viewinvoice.php?id={$invoice.id}" class="btn btn-default btn-sm btn-manage">{$_LANG['manage']}</a>
+                                    </td>
+                                {/if}   
+                            </tr>
+                        {/foreach}
+                    {/if}    
                 </tbody>
             </table>
             <div class="loader loader-table" id="tableLoading">

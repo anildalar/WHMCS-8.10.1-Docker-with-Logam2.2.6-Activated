@@ -37,9 +37,10 @@
                 <h1 class="main-header-title">{$title}</h1>
                 <div class="search-group">
                     <div class="search-field">                
-                        <input type="text" id="domainRenewalFilter" class="form-control" placeholder="{$LANG.tableentersearchterm}">
+                        <input type="text" {if isset($RSThemes['pages'][$templatefile]['optionvars']['renewalContent']) && $RSThemes['pages'][$templatefile]['optionvars']['renewalContent'] == 'table'}id="table-search"{else}id="domainRenewalFilter"{/if} class="form-control" placeholder="{$LANG.tableentersearchterm}">
                        <div class="search-field-icon"><i class="lm lm-search"></i></div>     
                     </div>
+
                 </div>
             </div>
         {elseif $RSheaderServicesRenewalSearch}

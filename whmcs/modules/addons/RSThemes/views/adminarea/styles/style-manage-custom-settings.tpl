@@ -27,7 +27,7 @@
 					</div>
 					<div class="collapse show p-3x">
 						{foreach $groupValue['styles'] as $styleIndex => $value}
-							<div class="form-group--horizontal form-group--style-select {if !$value@last}m-b-2x{/if} p-0x {if $styleIndex == "navigationTop"}is-hidden{/if}">
+							<div class="form-group--horizontal form-group--style-select {if !$value@last}m-b-2x{/if} p-0x {*{if $styleIndex == "navigationTop"}is-hidden{/if}*}">
 								<label class="form-label text-default">
 									{$value['name']}
 									{include file="adminarea/includes/helpers/tooltip.tpl" tooltip=$value['tooltip']}

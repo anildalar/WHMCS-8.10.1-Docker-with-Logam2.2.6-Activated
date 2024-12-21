@@ -8,7 +8,8 @@ return [
             'type' => 'checkbox',
             'name' => 'hideSidebar',
             'label' => 'Hide Sidebar',
-            'tooltip' => "Choose whether you would like to show or hide the content sidebar available on this page."    
+            'tooltip' => "Choose whether you would like to show or hide the content sidebar available on this page.",
+            'tooltip_url' => "todo"
         ],
         'freeProductCancellation' => [
             'type' => 'checkbox',
@@ -19,7 +20,7 @@ return [
         'removeUrlFromDomainName' => [
             'type' => 'checkbox',
             'name' => 'removeUrlFromDomainName',
-            'label' => 'Remove URL from the domain/host name',
+            'label' => 'Remove URL From the Domain/Host Name',
             'tooltip' => "Remove anchor link from the domain/host name.",
         ],
         'removeProductGroupName' => [

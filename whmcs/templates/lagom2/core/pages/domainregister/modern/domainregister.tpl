@@ -1,13 +1,13 @@
 
 {include file="orderforms/$carttpl/common.tpl"}
-<div class="main-banner banner-home banner-{$siteBannerStyle}">
+<div class="main-banner banner-home banner-{$siteBannerStyle} banner-domain-register">
     <div class="container">
         <h1 class="banner-title">{$LANG.findyourdomain}</h1>
         <form method="post" action="{$WEB_ROOT}/cart.php" id="frmDomainChecker" {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true'}data-show-tld-cycle-switcher {if isset($smarty.get.period)}data-period="{$smarty.get.period}"{/if}{/if}>
             <input type="hidden" name="a" value="checkDomain">
             <div class="domain-search-input search-group search-group-lg search-group-combined">
                 <div class="search-field">
-                    <input class="form-control"  type="text" name="domain" placeholder="{$LANG.findyourdomain}" value="{$lookupTerm}" id="inputDomain" data-toggle="tooltip" data-placement="top" data-trigger="manual" title="{lang key='orderForm.domainOrKeyword'}" />
+                    <input class="form-control"  type="text" name="domain" placeholder="{$LANG.findyourdomain}" value="{$lookupTerm}" id="inputDomain" data-toggle="tooltip" data-placement="top" data-trigger="manual" title="{lang key='orderForm.domainOrKeyword'}" data-domain-search />
                     <div class="search-field-icon"><i class="lm lm-search"></i></div>
                 </div>
                 <div class="search-group-btn">
@@ -22,7 +22,11 @@
             {include file="orderforms/$carttpl/includes/domain/captcha.tpl" pageClass="rspage-modern"}
         </form>
     </div>
-    {include file="$template/includes/common/svg-illustration.tpl" illustration="site/banner-bg"} 
+        {if $RSThemes.styles.iconType == "modern"}
+            {include file="$template/includes/common/svg-illustration.tpl" illustration="site/modern/banner-bg"} 
+        {else} 
+            {include file="$template/includes/common/svg-illustration.tpl" illustration="site/banner-bg"} 
+        {/if}
 </div>
 <div class="main-body">
     <div class="container">

@@ -32,94 +32,94 @@
                     {include file="orderforms/$carttpl/includes/domain/captcha.tpl"}
                 </form>
             </div>
-                <div id="DomainSearchResults" class="hidden" data-scroll-to-results="true">
-                    {* <div id="primaryLookupSearching" class="domain-lookup-loader message message-lg message-no-data {if (!$lookupTerm || $captchaError || $invalid)}hidden{/if}">
-                        <div class="loader">
-                            {include file="$template/includes/common/loader.tpl"}  
-                        </div>
-                    </div> *}
-                    <div class="domain-checker-result-headline" id="searchDomainInfo">
-                        <div id="primaryLookupResult" class="hidden">
-                            {include file="orderforms/$carttpl/includes/domain/search-result.tpl"} 
-                        </div>
+            <div id="DomainSearchResults" class="hidden" data-scroll-to-results="true">
+                {* <div id="primaryLookupSearching" class="domain-lookup-loader message message-lg message-no-data {if (!$lookupTerm || $captchaError || $invalid)}hidden{/if}">
+                    <div class="loader">
+                        {include file="$template/includes/common/loader.tpl"}  
                     </div>
-                    {if $spotlightTlds}
-                        {include file="orderforms/$carttpl/includes/domain/spotlight.tpl"}
-                    {/if}
-                    {include file="orderforms/$carttpl/includes/domain/suggested.tpl"}
+                </div> *}
+                <div class="domain-checker-result-headline" id="searchDomainInfo">
+                    <div id="primaryLookupResult" class="hidden">
+                        {include file="orderforms/$carttpl/includes/domain/search-result.tpl"} 
+                    </div>
                 </div>
-                {if $RSThemes['pages'][$templatefile]['config']['showFeaturedTLD'] == '1'}
-                    {include file="orderforms/$carttpl/includes/domain/featured-tlds.tpl"}
+                {if $spotlightTlds}
+                    {include file="orderforms/$carttpl/includes/domain/spotlight.tpl"}
                 {/if}
-                {include file="orderforms/$carttpl/includes/domain/tld-pricing.tpl"}
-                <div class="section">
-                    <div class="section-body">
-                        <div class="row row-eq-height row-eq-height-sm">
-                            <div class="col-md-{if $domainTransferEnabled}6{else}12{/if}">
+                {include file="orderforms/$carttpl/includes/domain/suggested.tpl"}
+            </div>
+            {if $RSThemes['pages'][$templatefile]['config']['showFeaturedTLD'] == '1'}
+                {include file="orderforms/$carttpl/includes/domain/featured-tlds.tpl"}
+            {/if}
+            {include file="orderforms/$carttpl/includes/domain/tld-pricing.tpl"}
+            <div class="section">
+                <div class="section-body">
+                    <div class="row row-eq-height row-eq-height-sm">
+                        <div class="col-md-{if $domainTransferEnabled}6{else}12{/if}">
+                            <div class="domain-promo-box">
+                                <div class="promo-box-body">
+                                    <div class="promo-box-content">
+                                        <div class="promo-box-icon">
+                                            {include file="$template/includes/common/svg-icon.tpl" icon="web-hosting"}  
+                                        </div>
+                                        <div class="promo-box-header">
+                                            <h5>{lang key='orderForm.addHosting'}</h5>
+                                            <p class="description">{lang key='orderForm.chooseFromRange'}</p>
+                                        </div>
+                                    </div>
+                                    <div class="promo-box-content promo-box-content-between">
+                                        <p class="promo-description">{lang key='orderForm.packagesForBudget'}</p>
+                                        <a href="{$WEB_ROOT}/cart.php" class="btn btn-primary">
+                                            {lang key='orderForm.exploreNow'}
+                                        </a>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        {if $domainTransferEnabled}
+                            <div class="col-md-6">
                                 <div class="domain-promo-box">
                                     <div class="promo-box-body">
                                         <div class="promo-box-content">
                                             <div class="promo-box-icon">
-                                                {include file="$template/includes/common/svg-icon.tpl" icon="web-hosting"}  
+                                                {include file="$template/includes/common/svg-icon.tpl" icon="transfer-domain"}
                                             </div>
                                             <div class="promo-box-header">
-                                                <h5>{lang key='orderForm.addHosting'}</h5>
-                                                <p class="description">{lang key='orderForm.chooseFromRange'}</p>
+                                                <h5>{lang key='orderForm.transferToUs'}</h5>
+                                                <p class="description text-primary">{lang key='orderForm.transferExtend'}*</p>
                                             </div>
                                         </div>
                                         <div class="promo-box-content promo-box-content-between">
-                                            <p class="promo-description">{lang key='orderForm.packagesForBudget'}</p>
-                                            <a href="{$WEB_ROOT}/cart.php" class="btn btn-primary">
-                                                {lang key='orderForm.exploreNow'}
-                                            </a>
-                                        </div>
-                                    </div>    
-                                </div>
-                            </div>
-                            {if $domainTransferEnabled}
-                                <div class="col-md-6">
-                                    <div class="domain-promo-box">
-                                        <div class="promo-box-body">
-                                            <div class="promo-box-content">
-                                                <div class="promo-box-icon">
-                                                    {include file="$template/includes/common/svg-icon.tpl" icon="transfer-domain"}
-                                                </div>
-                                                <div class="promo-box-header">
-                                                    <h5>{lang key='orderForm.transferToUs'}</h5>
-                                                    <p class="description text-primary">{lang key='orderForm.transferExtend'}*</p>
-                                                </div>
-                                            </div>
-                                            <div class="promo-box-content promo-box-content-between">
-                                                <p class="promo-description">* {lang key='orderForm.extendExclusions'}</p>
-                                                <a href="{$WEB_ROOT}/cart.php?a=add&domain=transfer" class="btn btn-primary">{lang key='orderForm.transferDomain'}</a>
-                                            </div>
+                                            <p class="promo-description">* {lang key='orderForm.extendExclusions'}</p>
+                                            <a href="{$WEB_ROOT}/cart.php?a=add&domain=transfer" class="btn btn-primary">{lang key='orderForm.transferDomain'}</a>
                                         </div>
                                     </div>
-                                </div>    
-                            {/if}
-                        </div>
-                    </div>
-                </div>
-                <div class="bottom-action-sticky hidden" data-fixed-actions href="#bottom-action-anchor">
-                    <div class="container">
-                        <div class="sticky-content">
-                            <div class="badge badge-circle-lg" id="cartItemCount">0</div>
-                            <span class="m-l-1x">{$rslang->trans('domains.domains_selected')}</span>
-                        </div>
-                        <div class="sticky-actions">
-                            <a class="btn btn-lg btn-primary" href="cart.php?a=confdomains" id="btnDomainContinue"  data-btn-loader>
-                                <span>
-                                    <i class="ls ls-share"></i>
-                                    <span class="btn-text">{$LANG.continue}</span>
-                                </span>
-                                <div class="loader loader-button hidden" >
-                                    {include file="$template/includes/common/loader.tpl" classes="spinner-sm spinner-light"}  
                                 </div>
-                            </a>
-                        </div>
+                            </div>    
+                        {/if}
                     </div>
                 </div>
-            </div>        
+            </div>
+            <div id="bottom-action-anchor" class="bottom-action-anchor"></div>
+            <div class="bottom-action-sticky hidden" data-fixed-actions href="#bottom-action-anchor">
+                <div class="container">
+                    <div class="sticky-content">
+                        <div class="badge badge-circle-lg" id="cartItemCount">0</div>
+                        <span class="m-l-1x">{$rslang->trans('domains.domains_selected')}</span>
+                    </div>
+                    <div class="sticky-actions">
+                        <a class="btn btn-lg btn-primary" href="cart.php?a=confdomains" id="btnDomainContinue"  data-btn-loader>
+                            <span>
+                                <i class="ls ls-share"></i>
+                                <span class="btn-text">{$LANG.continue}</span>
+                            </span>
+                            <div class="loader loader-button hidden" >
+                                {include file="$template/includes/common/loader.tpl" classes="spinner-sm spinner-light"}  
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
         <script>
             jQuery(document).ready(function() {

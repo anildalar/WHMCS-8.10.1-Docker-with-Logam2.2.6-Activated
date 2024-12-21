@@ -56,6 +56,7 @@
                                                     {$sectionComingSoon = false}
                                                     {$sectionThumb = false}
                                                     {$sectionChecked = false}
+                                                    {$sectionRequiredExtenstion = false}
                                                     {if $sectionType@first}
                                                         {$sectionChecked = true}
                                                     {/if}
@@ -64,6 +65,9 @@
                                                     {/if}
                                                     {if isset($sectionType['thumb'])}
                                                         {$sectionThumb = $sectionType['thumb']}
+                                                    {/if}
+                                                    {if isset($sectionType['required_extension'])}
+                                                        {$sectionRequiredExtenstion = $sectionType['required_extension']}
                                                     {/if}
                                                     {include 
                                                         file="adminarea/pages/includes/modal/section/media-item.tpl"
@@ -74,6 +78,7 @@
                                                         comingsoon=$sectionComingSoon
                                                         thumb=$sectionThumb
                                                         checked=$sectionChecked
+                                                        requiredExtenstion=$sectionRequiredExtenstion
                                                     }
                                                 {/if}
                                             {/foreach}
@@ -118,6 +123,7 @@
                         <input id="section_language" type="hidden" name="language" value="{$language}">
                         <input id="section_order" type="hidden" name="order" value="" data-modal-section-add-order> {*order where section must be placed*}
                         <input id="section_index" type="hidden" name="index" value="" data-modal-section-add-index> {*generates static index for each section +1 every new section*}
+                        <input id="section_type" type="hidden" name="stype" value="" data-modal-section-add-type>  {* section type value*}
                     {/if} 
 
                     {if $type == "predefined"}

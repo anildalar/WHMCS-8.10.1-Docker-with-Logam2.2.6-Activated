@@ -42,10 +42,10 @@
 
     --box-shadow-none:                              unset; /* name: None; group: Box Shadow; type:hidden; */
     --box-shadow-xs:                                0 1px 1px rgba(0,0,0,.05); /* name: Extra Small; group: Box Shadow; */
-    --box-shadow-sm:                                0px 0px 1px rgba(0, 0, 0, 0.1), 0px 2px 16px rgba(0, 0, 0, 0.08); /* name: Small; group: Box Shadow; */
-    --box-shadow-base:                              0px 0px 1px rgba(0, 0, 0, 0.1), 0px 2px 24px rgba(0, 0, 0, 0.08); /* name: Base; group: Box Shadow; */
-    --box-shadow-lg:                                0px 0px 1px rgba(0, 0, 0, 0.12), 0px 8px 32px rgba(0, 0, 0, 0.08); /* name: Large; group: Box Shadow; */
-    --box-shadow-xlg:                               0px 0px 1px rgba(0, 0, 0, 0.12), 0px 16px 40px rgba(0, 0, 0, 0.16); /* name: Extra Large; group: Box Shadow; */
+    --box-shadow-sm:                                0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 16px rgba(0, 0, 0, 0.08); /* name: Small; group: Box Shadow; */
+    --box-shadow-base:                              0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 24px rgba(0, 0, 0, 0.08); /* name: Base; group: Box Shadow; */
+    --box-shadow-lg:                                0px 0px 1px rgba(0, 0, 0, 0.04), 0px 8px 40px rgba(0, 0, 0, 0.08); /* name: Large; group: Box Shadow; */
+    --box-shadow-xlg:                               0px 0px 1px rgba(0, 0, 0, 0.04), 0px 8px 56px rgba(0, 0, 0, 0.08); /* name: Extra Large; group: Box Shadow; */
 
     /* Section: UI Elements Height */
 
@@ -100,6 +100,7 @@
     --ui-nav-link-border-radius:                    var(--border-radius-sm);
     --ui-nav-link-hover-bg:                         transparent;
     --ui-nav-link-active-bg:                        var(--brand-primary-lighter-4);
+    --dropdown-link-disabled-color:                 #ACB0B9;
     --ui-nav-link-icon-size:                        18px;
     --ui-nav-link-icon-size-sm:                     12px;
     --ui-nav-link-icon-spacing:                     10px;
@@ -152,14 +153,14 @@
     --label-primary-color:         				    #fff; /* name: Primary - Color; type: select-colors;*/
     --label-secondary-bg:            				var(--brand-secondary); /* name: Secondary - Background; type: select-colors;*/
     --label-secondary-color:         			    #fff; /* name: Secondary - Color; type: select-colors;*/
-    --label-success-bg:            				    var(--brand-success-lighter-3); /* name: Success - Background; type: select-colors;*/
-    --label-success-color:         				    var(--brand-success-darker); /* name: Success - Color; type: select-colors;*/
-    --label-info-bg:               				    var(--brand-info-lighter-3); /* name: Info - Background; type: select-colors;*/
-    --label-info-color:            				    var(--brand-info);   /* name: Info - Color; type: select-colors;*/
-    --label-warning-bg:            				    var(--brand-warning-lighter-3); /* name: Warning - Background; type: select-colors;*/
-    --label-warning-color:         				    var(--brand-warning-darker); /* name: Warning - Color; type: select-colors;*/
-    --label-danger-bg:            				    var(--brand-danger-lighter-2); /* name: Danger - Background; type: select-colors;*/
-    --label-danger-color:         				    var(--brand-danger); /* name: Danger - Color; type: select-colors;*/
+    --label-success-bg:            				    var(--state-success-bg); /* name: Success - Background; type: select-colors;*/
+    --label-success-color:         				    var(--state-success-text); /* name: Success - Color; type: select-colors;*/
+    --label-info-bg:               				    var(--state-info-bg); /* name: Info - Background; type: select-colors;*/
+    --label-info-color:            				    var(--state-info-text);   /* name: Info - Color; type: select-colors;*/
+    --label-warning-bg:            				    var(--state-warning-bg); /* name: Warning - Background; type: select-colors;*/
+    --label-warning-color:         				    var(--state-warning-text); /* name: Warning - Color; type: select-colors;*/
+    --label-danger-bg:            				    var(--state-danger-bg); /* name: Danger - Background; type: select-colors;*/
+    --label-danger-color:         				    var(--state-danger-text); /* name: Danger - Color; type: select-colors;*/
     --label-purple-bg:            				    #b3a3de; /* name: Purple - Background; type: select-colors;*/
     --label-purple-color:         				    #fff; /* name: Purple - Color; type: select-colors;*/
     --label-savings-bg:            				    #FFE7EC; /* name: Savings - Background; type: select-colors;*/
@@ -267,7 +268,7 @@
     --ui-icon-size-small:                           12px;
 
     --scrollbar-width:                              6px;
-    --scrollbar-track-bg:                           var(--gray-lighter);
+    --scrollbar-track-bg:                           var(--gray-lighter-4);
     --scrollbar-thumb-bg:                           var(--gray-lighter-3);
     --scrollbar-thumb-hover-bg:                     var(--gray-lighter-2);
 
@@ -321,4 +322,41 @@
     :root{
         --ui-block-overlay-bg:                      rgba(255,255,255, .87);
     }
+}
+
+.lagom-dark-mode{
+
+    /* Section : Dark Mode Colors */
+
+    --ui-block-bg:                                  #1E1E1E;
+    --ui-nav-link-active-bg:                        var(--gray-faded);
+
+    --ui-block-link-hover-bg:                       var(--gray-faded);
+    --ui-block-link-active-bg:                      var(--gray-faded);
+    --ui-block-divider-color:                       #2B2B2B;
+
+    --dropdown-link-disabled-color:                 #666666;
+
+    --status-answered:                              #9871B7;
+    --status-expired:                               #3FA1B8;
+    --status-onhold:                                var(--brand-info-ligher);
+    --status-collections:                           #6185A8;
+    --status-payment-pending:                       var(--brand-info-lighter);
+
+    --box-shadow-base:                              0px 0px 1px rgba(0, 0, 0, 0.16), 0px 2px 24px rgba(0, 0, 0, 0.4);
+    --box-shadow-lg:                                0px 0px 1px rgba(0, 0, 0, 0.16), 0px 8px 40px rgba(0, 0, 0, 0.4);
+    --box-shadow-xlg:                               0px 0px 1px rgba(0, 0, 0, 0.16), 0px 8px 56px rgba(0, 0, 0, 0.4);
+
+    --state-success-bg:                             var(--brand-success-lighter-4);
+    --state-success-border:                         var(--brand-success-lighter-2);
+    --state-success-text:                           var(--brand-success);
+    --state-info-bg:                                #102242;
+    --state-info-border:                            var(--brand-info-lighter-2);
+    --state-info-text:                              var(--brand-info-lighter);
+    --state-warning-bg:                             var(--brand-warning-lighter-4);
+    --state-warning-border:                         var(--brand-warning-lighter-2);
+    --state-warning-text:                           var(--brand-warning);
+    --state-danger-bg:                              var(--brand-danger-lighter-4);
+    --state-danger-border:                          var(--brand-danger-lighter-2);
+    --state-danger-text:                            var(--brand-danger);
 }

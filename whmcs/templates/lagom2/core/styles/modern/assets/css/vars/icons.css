@@ -118,11 +118,22 @@
     --svg-icon-color-1:                             var(--brand-primary-lighter);
     --svg-icon-color-2:                             var(--brand-primary);
     --svg-icon-color-3:                             var(--gray-darker);
-    --svg-icon-color-4:                             #ffffff;
+    --svg-icon-color-4:                             #ffffff;      
     --svg-icon-color-5:                             var(--gray-lighter-3);
     
     --svg-icon-on-dark-color-1:                     var(--svg-icon-color-4);
     --svg-icon-on-dark-color-2:                     var(--svg-icon-color-5);
     --svg-icon-on-dark-color-3:                     var(--svg-icon-color-4);
     --svg-icon-on-dark-color-4:                     var(--svg-icon-color-2);
+}
+
+
+.lagom-dark-mode{
+
+    /* Section : Dark Mode Colors */
+    
+    --svg-icon-color-3:                             #ffffff;
+
+    --svg-icon-on-dark-color-2:                     var(--gray-darker);
+
 }

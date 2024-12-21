@@ -34,19 +34,19 @@
     
     {* Main Styles *}
     {if ($language == 'arabic' || $language == 'hebrew' || $language == 'farsi') && file_exists("templates/{$template}/assets/css/theme-rtl.css")}
-        <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/theme-rtl.css?v={$RSThemes['templateVersion']}">
+        <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/theme-rtl.css?v={$RSThemes['templateVersion']}-{$assetsCacheKey}">
         {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}
         {else}
             {if ($isSite || isset($custompage)) && file_exists("templates/{$template}/assets/css/site-rtl.css")}
-                <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/site-rtl.css?v={$RSThemes['templateVersion']}">
+                <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/site-rtl.css?v={$RSThemes['templateVersion']}-{$assetsCacheKey}">
             {/if}
         {/if}    
     {else}
-        <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/theme.css?v={$RSThemes['templateVersion']}">
+        <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/theme.css?v={$RSThemes['templateVersion']}-{$assetsCacheKey}">
         {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}
         {else}
              {if ($isSite || isset($custompage))}
-                <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/site.css?v={$RSThemes['templateVersion']}">
+                <link rel="stylesheet" href="{$WEB_ROOT}/templates/{$template}/assets/css/site.css?v={$RSThemes['templateVersion']}-{$assetsCacheKey}">
             {/if}
         {/if}
     {/if}
@@ -58,20 +58,20 @@
 
     {* Custom *}
     {if ($language == 'arabic' || $language == 'hebrew' || $language == 'farsi') && file_exists("{$moveDirUpInFileChecker}templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom-rtl.css")} 
-        <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom-rtl.css?v={$RSThemes['templateVersion']}" rel="stylesheet">
+        <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom-rtl.css?v={$RSThemes['templateVersion']}-{$assetsCacheKey}" rel="stylesheet">
     {elseif file_exists("{$moveDirUpInFileChecker}templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom.css")}
-        <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom.css?v={$RSThemes['templateVersion']}" rel="stylesheet">
+        <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/custom.css?v={$RSThemes['templateVersion']}-{$assetsCacheKey}" rel="stylesheet">
     {/if}
 
     {* Theme Custom *}
     {if ($language == 'arabic' || $language == 'hebrew' || $language == 'farsi') && file_exists("{$moveDirUpInFileChecker}templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom-rtl.css")} 
-        <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom-rtl.css?v={$RSThemes['templateVersion']}" rel="stylesheet">
+        <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom-rtl.css?v={$RSThemes['templateVersion']}-{$assetsCacheKey}" rel="stylesheet">
     {elseif file_exists("{$moveDirUpInFileChecker}templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom.css")}
-        <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom.css?v={$RSThemes['templateVersion']}" rel="stylesheet">
+        <link href="{$WEB_ROOT}/templates/{$template}/core/styles/{$RSThemes['styles']['name']}/assets/css/theme-custom.css?v={$RSThemes['templateVersion']}-{$assetsCacheKey}" rel="stylesheet">
     {/if}
 
     {if isset($isOnePageOrder) && $isOnePageOrder}
-        <link href="{$WEB_ROOT}/modules/addons/LagomOrderForm/app/UI/Client/Templates/assets/css/order/lagom2/index.css?v={$RSThemes['templateVersion']}" rel="stylesheet">
+        <link href="{$WEB_ROOT}/modules/addons/LagomOrderForm/app/UI/Client/Templates/assets/css/order/lagom2/index.css?v={$RSThemes['templateVersion']}-{$assetsCacheKey}" rel="stylesheet">
     {/if}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -94,8 +94,8 @@
         <script>disableInternalTabSelection = true</script>
     {/if}
     {* Main Scripts *}
-    <script {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}defer{/if} src="{$WEB_ROOT}/templates/{$template}/assets/js/scripts.min.js?v={$RSThemes['templateVersion']}"></script>
-    <script {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}defer{/if} src="{$WEB_ROOT}/templates/{$template}/assets/js/core.min.js?v={$RSThemes['templateVersion']}"></script>
+    <script {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}defer{/if} src="{$WEB_ROOT}/templates/{$template}/assets/js/scripts.min.js?v={$RSThemes['templateVersion']}-{$assetsCacheKey}"></script>
+    <script {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}defer{/if} src="{$WEB_ROOT}/templates/{$template}/assets/js/core.min.js?v={$RSThemes['templateVersion']}-{$assetsCacheKey}"></script>
 
     {* Custom Head *}
     {if file_exists("templates/$template/core/layouts/{$RSThemes.layouts.name}/head.tpl")}

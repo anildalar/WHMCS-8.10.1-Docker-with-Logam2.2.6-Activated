@@ -13,7 +13,7 @@ return [
 	    'showManageButton' => [
             'type' => 'checkbox',
             'name' => 'showManageButton',
-            'label' => 'Show "Manage" button',
+            'label' => "Show 'Manage' Button",
             'tooltip' => "Choose whether you would like to show or hide the 'Manage' button.",
 	
         ]

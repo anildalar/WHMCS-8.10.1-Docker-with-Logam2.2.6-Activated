@@ -50,7 +50,6 @@
                                             {assign var="doc_category" value="{ucfirst($category)|replace:" ":"_"|lower}_pages"}
                                             {include file="adminarea/includes/helpers/docs.tpl" link=$docs.pages.$doc_category}
                                         </h3>
-                                        
                                     </div>
                                     <div class="top__toolbar is-right">
                                         <span>{$lang.general.show}:</span>
@@ -94,10 +93,16 @@
                                         <thead>
                                             <tr>
                                                 <th class="cell-name">
-                                                    <span>{$lang.general.name}</span>
-                                                    <span class="sorting-icons-box">
-                                                        {include file="adminarea/includes/svg-icons/sorting-arrows.tpl"}
-                                                    </span>
+                                                    <div class="content-name">
+                                                        {* <label class="checkbox m-t-0x m-b-0x">
+                                                            <input class="form-checkbox" type="checkbox" name=""> 
+                                                            <span class="form-indicator"></span>
+                                                        </label> *}
+                                                        <span>{$lang.general.name}</span>
+                                                        <span class="sorting-icons-box">
+                                                            {include file="adminarea/includes/svg-icons/sorting-arrows.tpl"}
+                                                        </span>
+                                                    </div>
                                                 </th>
                                                 {*TODO filtrowanie seo ???*}
                                                 <th class="cell-seo" >
@@ -126,6 +131,10 @@
                                                     <tr>
                                                         <td class="cell-name">
                                                             <div class="content-name">
+                                                                {* <label class="checkbox m-t-0x m-b-0x">
+                                                                    <input class="form-checkbox" type="checkbox" name=""> 
+                                                                    <span class="form-indicator"></span>
+                                                                </label> *}
                                                                 <a href="{$helper->url('Page@show',['templateName'=>$template->getMainName(), 'pageName' => $pageName])}"><strong>{$page['settings']['name']}</strong></a>
                                                             </div>
                                                         </td>
@@ -164,6 +173,76 @@
                         {/if}
                     </div>
                 </div>
+                {*
+                <div id="bottom-action-anchor" class="bottom-action-anchor"></div>
+                <div class="sticky-panel panel m-b-0x" data-fixed-actions href="#bottom-action-anchor">
+                    <div class="sticky-panel__container container d-flex">
+                        <div class="sticky-panel__content">
+                            <div class="badge badge--lg badge--primary" id="cartItemCount">3</div>
+                            <span class="p-md">Items selected</span>
+                            <span class="horizontal-line"></span>
+                            <label class="checkbox m-t-0x m-b-0x">
+                                <input class="form-checkbox" type="checkbox" name=""> 
+                                <span class="form-indicator"></span>
+                                <span class="p-md">Select All</span>
+                            </label>
+                        </div>
+                        <div class="sticky-panel__actions">
+                            <div class="has-dropdown">
+                                <a class="btn btn--xs btn--default btn--outline" href="" data-toggle="lu-dropdown" data-placement="bottom right">
+                                    <span class="btn__text">{$lang.general.actions}</span>
+                                    <span class="btn__icon btn__icon-arrow ls ls-caret is-hidden-mob-down" data-arrow-target></span>
+                                    <span class="btn__icon btn__icon-arrow ls ls-caret is-hidden-mob-up" data-arrow-target></span>
+                                </a>
+                                <div class="dropdown" data-dropdown-menu>
+                                    <div class="dropdown__arrow" data-arrow></div>
+                                    <div class="dropdown__menu dropdown__menu--sticky-actions">
+                                        <ul class="nav">
+                                            <li class="nav__item">
+                                                <a class="nav__link" href="#" target="_blank">
+                                                    <span class="nav__link-icon ls ls-addon"></span>
+                                                    <span class="nav__link-text">Duplicate</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav__item">
+                                                <a class="nav__link" href="#" target="_blank">
+                                                    <span class="nav__link-icon lm lm-globe-alt"></span>
+                                                    <span class="nav__link-text">Publish</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav__item">
+                                                <a class="nav__link" href="#" target="_blank">
+                                                    <span class="nav__link-icon lm lm-flag"></span>
+                                                    <span class="nav__link-text">Enable Robots</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav__item">
+                                                <a class="nav__link" href="#" target="_blank">
+                                                    <span class="nav__link-icon lm lm-denied"></span>
+                                                    <span class="nav__link-text">Unpublish</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav__item">
+                                                <a class="nav__link" href="#" target="_blank">
+                                                    <span class="nav__link-icon lm lm-close"></span>
+                                                    <span class="nav__link-text">Disable Robots</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav__divider"></li>
+                                            <li class="nav__item">
+                                                <a class="nav__link nav__link--deleted" href="https://lagom.rsstudio.net/docs" target="_blank">
+                                                    <span class="nav__link-icon lm lm-trash"></span>
+                                                    <span class="nav__link-text">Delete Selected</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                *}
             </div>
         </div>
     </div>

@@ -7,7 +7,7 @@
     >
         {if $captcha}
             <script>
-                var recaptchaSiteKey = "{$captcha->recaptcha->getSiteKey()}";
+                {$captcha->getPageJs()}
             </script>
         {/if}
         <div class="search-group search-group-lg search-group-combined has-shadow {if $customClass}{$customClass}{/if}">
@@ -131,7 +131,7 @@
             <div class="search-group-btn">
                 <button 
                     type="submit" 
-                    class="btn btn-primary {if in_array($captcha, ['invisible']) && $captcha->isEnabled() && $captcha->isEnabledForForm($captchaForm)}{$captcha->getButtonClass($captchaForm)}{/if}" 
+                    class="btn btn-primary {if $captcha && $captcha->isEnabled() && $captcha->isEnabledForForm($captchaForm)}{$captcha->getButtonClass($captchaForm)}{/if}" 
                 >
                     <span>Check</span>
                     <div class="loader hidden" >

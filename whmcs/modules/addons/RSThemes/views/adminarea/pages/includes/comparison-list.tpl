@@ -266,8 +266,8 @@
                         
                         data-key="{$item['index']}"
                         data-position="{$item['position']}"
-                        data-product='{$item['product']}'
-                        data-feature-name="{$item['feature_name']}"
+                        data-product='{$item['product']|escape:"html"}'
+                        data-feature-name="{$item['feature_name']|escape:"html"}"
                         data-hint="{$item['hint']}"
                         data-show-hint="{$item['show_hint']}"
                         data-hide-item="{if !isset($item['hide_item'])}false{else}{$item['hide_item']}{/if}"

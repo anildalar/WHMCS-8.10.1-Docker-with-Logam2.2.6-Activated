@@ -163,6 +163,163 @@ return [
             'tooltip_url' => 'https://lagom.rsstudio.net/docs/website-builder/section-common-settings/#overlay-sections'
         ],
         [
+            'type' => 'checkbox',
+            'name' => 'enable_timer',
+            'label' => 'Enable Timer',
+            'label_attributes' => [
+                [
+                    'name' => 'toggle',
+                    'value' => 'lu-collapse'
+                ],
+                [
+                    'name' => 'target',
+                    'value' => '#enable_timer_style, #enable_timer_display, #enable_timer_startdate, #enable_timer_enddate, #enable_timer_type, #enable_timer_actionafter'
+                ],
+                [
+                    'name' => 'overriding',
+                    'value' => 'enable_timer'
+                ]
+            ],
+            'tooltip' => '',            
+            'tooltip_url' => 'https://lagom.rsstudio.net/docs/website-builder/section-banner-default/'
+        ],
+        [
+            'type' => 'select',
+            'name' => 'timer_style',
+            'label' => 'Timer Style',
+            'container_id' => 'enable_timer_style',
+            'container_collapse' => true,
+            'container_collapse_target' => 'enable_timer',
+            'container_class' => 'col-sm-6',
+            'options' => [
+                [
+                    'name' => 'Default',
+                    'value' => 'default'
+                ],
+                [
+                    'name' => 'Bordered',
+                    'value' => 'bordered'
+                ],
+                [
+                    'name' => 'Boxed',
+                    'value' => 'boxed'
+                ],
+                [
+                    'name' => 'Separated',
+                    'value' => 'separated'
+                ]
+            ],
+            'tooltip' => '',
+            'tooltip_url' => ''
+        ],
+        [
+            'type' => 'select',
+            'name' => 'time_display',
+            'label' => 'Time Display',
+            'container_id' => 'enable_timer_display',
+            'container_collapse' => true,
+            'container_collapse_target' => 'enable_timer',
+            'container_class' => 'col-sm-6',
+            'options' => [
+                [
+                    'name' => 'Custom Settings',
+                    'value' => 'custom'
+                ],
+                [
+                    'name' => 'Synchronized with Promotion Display Time',
+                    'value' => 'synchronized'
+                ]
+            ],
+            'attributes' => [
+                [
+                    'name' => 'toggle',
+                    'value' => 'select-collapse'
+                ],
+                [
+                    'name' => 'overriding',
+                    'value' => 'enable_timer'
+                ],
+                [
+                    'name' => 'target',
+                    'value' => '#enable_timer_startdate, #enable_timer_enddate, #enable_timer_type, #enable_timer_actionafter'
+                ],
+                [
+                    'name' => 'show',
+                    'value' => 'custom'
+                ],
+                [
+                    'name' => 'hide',
+                    'value' => 'synchronized'
+                ],
+            ],
+            'tooltip' => '',
+            'tooltip_url' => ''
+        ],
+        [
+            'type' => 'date',
+            'name' => 'start_date',
+            'label' => 'Start Date',
+            'container_id' => 'enable_timer_startdate',
+            'container_collapse' => true,
+            'container_collapse_target' => 'enable_timer',
+            'container_class' => 'col-sm-3',
+            'tooltip' => '',
+            'tooltip_url' => ''
+        ],
+        [
+            'type' => 'date',
+            'name' => 'end_date',
+            'label' => 'End Date',
+            'container_id' => 'enable_timer_enddate',
+            'container_collapse' => true,
+            'container_collapse_target' => 'enable_timer',
+            'container_class' => 'col-sm-3',
+            'tooltip' => '',
+            'tooltip_url' => ''
+        ],
+        [
+            'type' => 'select',
+            'name' => 'countdown_type',
+            'label' => 'Countdown Type',
+            'container_id' => 'enable_timer_type',
+            'container_collapse' => true,
+            'container_collapse_target' => 'enable_timer',
+            'container_class' => 'col-sm-3',
+            'options' => [
+                [
+                    'name' => 'Restart Every 24 Hours',
+                    'value' => 'restart'
+                ],
+                [
+                    'name' => 'Synchronized with End Date',
+                    'value' => 'synchronized'
+                ]
+            ],
+            'tooltip' => '',
+            'tooltip_url' => ''
+        ],
+        [
+            'type' => 'select',
+            'name' => 'action_after',
+            'label' => 'Action After End Date',
+            'container_id' => 'enable_timer_actionafter',
+            'container_collapse' => true,
+            'container_collapse_target' => 'enable_timer',
+            'container_class' => 'col-sm-3',
+            'options' => [
+                [
+                    'name' => 'Hide Timer',
+                    'value' => 'hide'
+                ],
+                [
+                    'name' => 'Display 00:00:00:00',
+                    'value' => 'display_zero'
+                ]
+            ],
+            'tooltip' => '',
+            'tooltip_url' => ''
+        ],
+        [
             'type' => 'text',
             'name' => 'section_anchor',
             'label' => 'Section anchor',

@@ -1,19 +1,7 @@
 {if file_exists("templates/$template/includes/common/overwrites/seo.tpl")}
      {include file="{$template}/includes/common/overwrites/seo.tpl"}  
 {else}
-    <title>
-        {if isset($pageSeo['title'][$language]) && isset($pageSeo['enabled']) && $pageSeo['enabled']}
-            {$pageSeo['title'][$language]}
-        {elseif $kbarticle.title}
-            {$kbarticle.title}    
-        {elseif $templatefile == "viewinvoice" || $templatefile == "viewquote" || $templatefile == "clientareahome" || $templatefile == "viewticket"}
-            {$pagetitle}
-        {elseif $templatefile == "products"}
-            {$groupname}
-        {else}
-            {$displayTitle}
-        {/if} {if $templatefile == "knowledgebasecat" && $catname}- {$catname} {/if}{if $templatefile == "knowledgebasecat" && $tag}- {$tag} {/if}{if $templatefile == "knowledgebasecat" && $catname}- {$catname} {/if}{if $templatefile == "announcements" && $view}- {$view} {/if}- {$companyname}
-    </title>
+    <title>{if isset($pageSeo['title'][$language]) && isset($pageSeo['enabled']) && $pageSeo['enabled']}{$pageSeo['title'][$language]}{elseif $kbarticle.title}{$kbarticle.title}{elseif $templatefile == "viewinvoice" || $templatefile == "viewquote" || $templatefile == "clientareahome" || $templatefile == "viewticket"}{$pagetitle}{elseif $templatefile == "products"}{$groupname}{else}{$displayTitle}{/if}{if $templatefile == "knowledgebasecat" && $catname} - {$catname}{/if}{if $templatefile == "knowledgebasecat" && $tag} - {$tag} {/if}{if $templatefile == "knowledgebasecat" && $catname} - {$catname}{/if}{if $templatefile == "announcements" && $view} - {$view}{/if} - {$companyname}</title>
     {if $templatefile == "knowledgebasearticle" || $templatefile == "viewannouncement" || $templatefile == "knowledgebasecat"}
         <meta name="description" content="{if $templatefile == "viewannouncement"}{$summary|replace:'"':''|strip:" "|truncate:155:"..."}{elseif $templatefile == "knowledgebasearticle"}{$kbarticle.text|strip_tags|replace:'"':''|strip:" "|truncate:155:"..."}{elseif $templatefile == "knowledgebasecat"}{$catname|strip_tags|replace:'"':''|strip:" "|truncate:155:"..."}{/if}">
         {if ($templatefile == "knowledgebasearticle" || $templatefile == "viewannouncement") && $RSThemes.addonSettings.enable_hreflang_links != "displayed"}
@@ -50,7 +38,7 @@
         {if isset($pageSeo['description'][$language])}<meta property="og:description" content="{$pageSeo['description'][$language]}">{/if}
         {if isset($pageSeo['image'])}<meta property="og:image" content="{$systemurl}templates/{$template}/assets/img/page-manager/{$pageSeo['image']}">{/if}
         <meta property="og:url" content="{$systemurl}{$smarty.server.REQUEST_URI|ltrim:'/'}">
-        <meta name="twitter:title" content="{if isset($pageSeo['title'][$language])}{$pageSeo['title'][$language]}{else}{$displayTitle}{/if}">
+        <meta name="twitter:title" content="{if isset($pageSeo['title'][$language])}{$pageSeo['title'][$language]}{else}{$displayTitle}{/if} - {$companyname}">
         {if isset($pageSeo['description'][$language])}<meta name="twitter:description" content="{$pageSeo['description'][$language]}">{/if}
         {if isset($pageSeo['image'])}<meta property="twitter:image" content="{$systemurl}templates/{$template}/assets/img/page-manager/{$pageSeo['image']}">{/if}
     {/if}
@@ -66,7 +54,7 @@
         {else}
             {$divChar = "?"}
         {/if}
-        <link rel="alternate" hreflang="x-default" href="{$seoHost}{if $currentUrl|substr:0:1 eq '/'}{$currentUrl|substr:1|replace:"?currency={$WHMCSCurrency.id}":""|replace:"&currency={$WHMCSCurrency.id}":""}{else}{$currentUrl|replace:"?currency={$WHMCSCurrency.id}":""|replace:"&currency={$WHMCSCurrency.id}":""}{/if}">
+        <link rel="alternate" hreflang="x-default" href="{$seoHost}?language={$defaultLanguage}">
         {foreach from=$locales item=language}
             <link rel="alternate" hreflang="{$language.languageCode|replace:"_":"-"}" href="{$seoHost}{$changedCurrentUrl}{$divChar}language={$language.language}">
         {/foreach}

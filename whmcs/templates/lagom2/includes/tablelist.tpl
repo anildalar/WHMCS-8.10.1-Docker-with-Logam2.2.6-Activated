@@ -7,7 +7,7 @@
     {if isset($filterColumn) && $filterColumn}
     <script type="text/javascript">
         if (typeof(buildFilterRegex) !== "function") {
-            function buildFilterRegex(filterValue) {
+            function buildFilterRegex(filterValue) {                
                 if (filterValue.indexOf('&') === -1) {
                     return '[~>]\\s*' + jQuery.fn.dataTable.util.escapeRegex(filterValue) + '\\s*[<~]';
                 } else {
@@ -84,7 +84,7 @@
                     {rdelim} else {ldelim} 
                         filterValueRegex = buildFilterRegex(filterText);
                     {rdelim}
-
+                    //console.log(filterValueRegex);
                     dataTable.column({$filterColumn})
                         .search(filterValueRegex, true, false, false)
                         .draw();
@@ -159,8 +159,9 @@
         };
 
         var alreadyReady = false; // The ready function is being called twice on page load.
-
-        {if $saveState}
+        {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled" && isset($tableIncludes)}
+            var saveState = false
+        {else if $saveState}
             var saveState = {$saveState}
         {else}
             var saveState = true;
@@ -188,6 +189,37 @@
         jQuery(document).ready( function () {ldelim}
 
             var table = jQuery("#table{$tableName}").DataTable({ldelim}
+                {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled" && isset($tableIncludes)}
+                    ajax: {ldelim}
+                        url: '{$ajaxUrl}',
+                        data: function(d){
+                            let checkbox = $('[data-inactive-services-checkbox]');
+                            if (checkbox.length){
+                                if (checkbox[0].checked){
+                                    d.hideInactiveStatus = 1;
+                                }
+                            }
+                        },
+                        dataSrc: 'data'
+                    {rdelim},
+                    processing: true,
+                    serverSide: true,
+                    columns: [
+                        {if isset($tableIncludes) && file_exists("templates/$template/includes/tables/$tableIncludes/columns.tpl")}                                   
+                            {include file="{$template}/includes/tables/{$tableIncludes}/columns.tpl"} 
+                        {/if}
+                    ], 
+                    initComplete: function (settings, json) {
+                        //console.log(json);
+                    },   
+                    drawCallback: function (settings) {
+                        jQuery('.table-container').removeClass('loading');
+                        jQuery('#tableLoading').addClass('hidden');
+                    },
+                    {if isset($tableIncludes) && file_exists("templates/$template/includes/tables/$tableIncludes/additionals.tpl")}                                   
+                        {include file="{$template}/includes/tables/{$tableIncludes}/additionals.tpl"}
+                    {/if}
+                {/if}
                 "dom": '<"listtable"fit>pl',{if isset($noPagination) && $noPagination}
                 "paging": false,{/if}
                 "info": false,{if isset($noSearch) && $noSearch}
@@ -216,10 +248,17 @@
                 "order": [
                     [ {if isset($startOrderCol) && $startOrderCol}{$startOrderCol}{else}0{/if}, "asc" ]
                 ],
-                "lengthMenu": [
-                    [10, 25, 50, -1],
-                    [10, 25, 50, "{$LANG.tableviewall}"]
-                ],
+                {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled" && isset($tableIncludes)}
+                    "lengthMenu": [
+                        [10, 25, 50],
+                        [10, 25, 50]
+                    ],
+                {else}
+                    "lengthMenu": [
+                        [10, 25, 50, -1],
+                        [10, 25, 50, "{$LANG.tableviewall}"]
+                    ],
+                {/if}
                 "aoColumnDefs": [
                     {ldelim}
                         "bSortable": false,
@@ -227,8 +266,11 @@
                     {rdelim},
                     {ldelim}
                         "sType": "string",
-                        "aTargets": [ {if isset($filterColumn) && $filterColumn}{$filterColumn}{/if} ]
+                        "aTargets": [ {if isset($filterColumn) && $filterColumn}{$filterColumn}{/if} ],
                     {rdelim}
+                    {if isset($tableIncludes) && file_exists("templates/$template/includes/tables/$tableIncludes/columnDefs.tpl")}                                   
+                        ,{include file="{$template}/includes/tables/{$tableIncludes}/columnDefs.tpl"} 
+                    {/if}
                 ],
                 "stateSave": saveState,
                 "stateDuration": stateDuration,
@@ -237,7 +279,7 @@
                
             {if isset($filterColumn) && $filterColumn}
             // highlight remembered filter on page re-load
-            if (!noStartFilters){
+            if (!noStartFilters && table.state()){
                 var rememberedFilterTerm = table.state().columns[{$filterColumn}].search.search;
             }
             if (rememberedFilterTerm && !alreadyReady) {
@@ -307,33 +349,72 @@
                     increaseArea: '40%'
                 });
                 checkAll();
-
+                {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled"}
+                    $('.bottom-action-sticky').addClass('hidden');
+                    $('#selectAll').iCheck('uncheck');
+                {/if}
             });  
+            {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled" && isset($tableIncludes)}
+                table.on('preDraw', function () {
+                    jQuery('#tableLoading').removeClass('hidden');
+                });
+            {/if}
 
-            $('[data-inactive-services-checkbox]').on('change', function(){ldelim}
-                if ($(this)[0].checked === true) {ldelim}
-                    table.column(0).search("lagomshowservice", true, false, false).draw();      
-                {rdelim}
-                else {ldelim}
+            {if isset($RSThemes.addonSettings.enable_table_ajax_load) && $RSThemes.addonSettings.enable_table_ajax_load == "enabled" && isset($tableIncludes)}
+                $('[data-inactive-services-checkbox]').on('change', function(){ldelim}
                     table.column(0).search("", true, false, false).draw();    
-                {rdelim}
-            {rdelim});
+                {rdelim});
+            {else}
+                $('[data-inactive-services-checkbox]').on('change', function(){ldelim}
+                    if ($(this)[0].checked === true) {ldelim}
+                        table.column(0).search("lagomshowservice", true, false, false).draw();      
+                    {rdelim}
+                    else {ldelim}
+                        table.column(0).search("", true, false, false).draw();    
+                    {rdelim}
+                {rdelim});
             
-            {if $templatefile == "clientareaproducts"}
-                {if !$hideInactiveServices['inactiveServices'] && isset($RSThemes['pages'][$templatefile]) && $RSThemes['pages'][$templatefile]['config']['hideInactiveServices'] == "1" && !empty($RSThemes['pages'][$templatefile]['config']['hideInactiveServicesStatus'])}
-                    table.column(0).search("lagomshowservice", true, false, false).draw();    
-                {else}
-                    table.column(0).search("", true, false, false).draw();     
+                {if $templatefile == "clientareaproducts"}
+                    {if !$hideInactiveServices['inactiveServices'] && isset($RSThemes['pages'][$templatefile]) && $RSThemes['pages'][$templatefile]['config']['hideInactiveServices'] == "1" && !empty($RSThemes['pages'][$templatefile]['config']['hideInactiveServicesStatus'])}
+                        table.column(0).search("lagomshowservice", true, false, false).draw();    
+                    {else}
+                        table.column(0).search("", true, false, false).draw();     
+                    {/if}
+                {/if}
+                {if $templatefile == "clientareadomains"}
+                    {if !$hideInactiveServices['inactiveDomains'] && isset($RSThemes['pages'][$templatefile]) && $RSThemes['pages'][$templatefile]['config']['hideInactiveServices'] == "1" && !empty($RSThemes['pages'][$templatefile]['config']['hideInactiveServicesStatus'])}
+                        table.column(0).search("lagomshowservice", true, false, false).draw();    
+                    {else}
+                        table.column(0).search("", true, false, false).draw();     
+                    {/if}
                 {/if}
             {/if}
-            {if $templatefile == "clientareadomains"}
-                {if !$hideInactiveServices['inactiveDomains'] && isset($RSThemes['pages'][$templatefile]) && $RSThemes['pages'][$templatefile]['config']['hideInactiveServices'] == "1" && !empty($RSThemes['pages'][$templatefile]['config']['hideInactiveServicesStatus'])}
-                    table.column(0).search("lagomshowservice", true, false, false).draw();    
-                {else}
-                    table.column(0).search("", true, false, false).draw();     
-                {/if}
-            {/if}
-        {rdelim});
 
+
+
+            $('.view-filter-btns .dropdown-menu a').on('click', function(e) {
+                e.preventDefault();
+
+                var filterName = $(this).find('span').data('value');
+
+                if (filterName !== 'all') {
+                    $('#clearFilters').removeClass('hidden');
+                    $('.view-filter-btns .filter-name').text(filterName);
+                } else {
+                    $('#clearFilters').addClass('hidden');
+                    $('.view-filter-btns .filter-name').text('{$rslang->trans('generals.all_entries')}');
+                }
+            });
+
+            $('#clearFilters').on('click', function() {
+                table.state.clear();
+                table.search('').columns().search('').draw();
+                $('#clearFilters').addClass('hidden');
+                $('.view-filter-btns .filter-name').text('{$rslang->trans('generals.all_entries')}');
+                $('.view-filter-btns .dropdown-toggle .status').addClass('hidden');
+                $('.view-filter-btns ul li').removeClass('active');
+            });
+
+            {rdelim});
     </script>
 {/if}

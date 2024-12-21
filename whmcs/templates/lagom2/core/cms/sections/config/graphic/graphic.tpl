@@ -42,6 +42,26 @@
                 {if $desc}
                     <div class="section-desc">{$desc|unescape:'html'}</div>
                 {/if}
+                {if $pageSettings.promo.promotionDisplayTimeEnabled == "1" && $enable_timer && $time_display == "synchronized" && $pageSettings.promo.promotionEndDate}
+                    {include file="{$smarty.current_dir}/../../common/timer.tpl" 
+                        end_date_timer=$pageSettings.promo.promotionEndDate
+                        timer_style=$timer_style
+                        time_display="synchronized"
+                        countdown_type="synchronized"
+                        timezone={date_default_timezone_get()}
+                        action_after="hide"
+                    }
+                {else if $time_display == "custom" && (($enable_timer && $countdown_type == "restart" && $start_date) || ($enable_timer && $countdown_type == "synchronized" && $end_date))}
+                    {include file="{$smarty.current_dir}/../../common/timer.tpl" 
+                        start_date_timer=$start_date
+                        end_date_timer=$end_date
+                        timer_style=$timer_style
+                        time_display=$time_display
+                        countdown_type=$countdown_type
+                        timezone={date_default_timezone_get()}
+                        action_after=$action_after
+                    }
+                {/if}
                 {if $buttons || $show_product_pricing} 
                     <div class="section-actions">
                         {if $buttons}

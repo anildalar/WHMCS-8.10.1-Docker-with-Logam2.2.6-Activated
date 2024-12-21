@@ -362,6 +362,30 @@ return [
             'tooltip' => 'This configuration pulls the section below over the currently managed section while adding an extra 200px padding at the bottom. You can adjust the pixel value by customizing the <b>--cms-section-overlay-margin</b> CSS variable through custom CSS rules.',
             'tooltip_url' => 'https://lagom.rsstudio.net/docs/website-builder/section-common-settings/#overlay-sections'
         ],
+        [   // Package apply promotion code
+            'type' => 'checkbox',
+            'name' => 'apply_promocode',
+            'label' => 'Apply promotion code to all section TLDs',
+            'label_attributes' => [
+                [
+                    'name' => 'toggle',
+                    'value' => 'lu-collapse'
+                ],
+                [
+                    'name' => 'target',
+                    'value' => '#apply_promocode'
+                ],
+            ],
+            'tooltip' => 'Select the WHMCS promotion code you want to add to all the section\'s TLDs. For more information on promotion codes, click the link below.',
+            'tooltip_url' => 'https://lagom.rsstudio.net/docs/website-builder/section-common-settings/#promotion-codes',
+        ],
+        [   // Promo Codes
+            'type' => 'select',
+            'name' => 'promocode',
+            'container_id' => 'apply_promocode',
+            'container_collapse' => true,
+            'container_collapse_target' => 'apply_promocode'
+        ],
         [
             'type' => 'text',
             'name' => 'tlds_custom_classes',

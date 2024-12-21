@@ -130,7 +130,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "58",
+                "pageslug": "d56b699830e77ba53855679cb1d252da",
                 "translation-method": "custom",
                 "icon": "",
                 "predefined_icon": "",
@@ -204,7 +204,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "1",
+                "pageslug": "ec9c2b65a12ec830ea02ea73d206896c",
                 "translation-method": "custom",
                 "icon": "",
                 "predefined_icon": "",
@@ -271,6 +271,23 @@
                     "ukranian": ""
                 }
             }
+        },
+        {
+            "name": "Mode Switcher",
+            "location": null,
+            "active": 1,
+            "type": "Mode Switcher",
+            "settings": null,
+            "display": {
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "custom-data-classes": "hidden-lg hidden-xl",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": "Mode Switcher"
         }
     ]
 }

@@ -63,6 +63,7 @@ return [
         'price_save'                    => 'Gem',
         'taxes'                         => 'Skatter',
         'search_domain'                 => 'Søg efter domæne',
+        'try_again'                     => 'Try Again',
         'additional_services'           => 'Yderligere tjenester',
         'start_shopping'                => 'Begynd at handle',
         'order_placed'                  => 'Ordre blev placeret',
@@ -72,6 +73,11 @@ return [
         'use_own_domain'                => 'Use Own Domain',
         'servername_example'            => 'servername.example.com',
         'product_selected'              => 'Selected Product',
+        'assign_addons'                 => 'Assign Addons to the Domain',
+        'renew_all'                     => 'Renew All',
+        'renew_domains'                 => 'Renew Your Domains',
+        'renew_all_success'             => 'All Domains Have Been Added to the Cart',
+        'renew_all_desc'                => 'You have <b>%s domains up for renewal</b>. Renew them all at once to ensure continuous service and avoid interruptions. Click button to add them to the cart.</span>',
         'free_domain_terms' => [
             'title'                     => 'Free Domain Registration Details',
             'available_for_cycles'      => 'Available for selected product billing cycles',
@@ -93,6 +99,7 @@ return [
         'add_new'                       => 'Add New',
         "what_new"                      => "What's new",
         "currency"                      => "Currency",
+        "clear_filters"                 => "Clear Filters"
     ],
 
     'affiliates' => [

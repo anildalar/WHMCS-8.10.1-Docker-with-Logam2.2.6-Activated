@@ -10,12 +10,12 @@
             <stop offset="1" stop-color="#1B1D1F" stop-opacity="0"/>
         </linearGradient>
             <linearGradient id="paint1_linear_874_123584" x1="1272" y1="737.993" x2="2025.47" y2="-12.5773" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#E3E6EB"/>
-            <stop offset="0.536458" stop-color="#E3E6EB" stop-opacity="0"/>
+            <stop stop-color="var(--shape-light-gradient-start)"/>
+            <stop offset="0.536458" stop-color="var(--shape-light-gradient-start)" stop-opacity="0"/>
         </linearGradient>
         <linearGradient id="paint2_linear_874_123584" x1="1087" y1="48.1513" x2="1257.8" y2="741.49" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#A9B1BB" stop-opacity="0"/>
-            <stop offset="1" stop-color="#A9B1BB"/>
+            <stop stop-color="var(--shape-dark-gradient-start)" stop-opacity="0"/>
+            <stop offset="1" stop-color="var(--shape-dark-gradient-start)"/>
         </linearGradient>
     </defs>
 </svg>

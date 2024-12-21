@@ -18,9 +18,11 @@ RSThemes - Website Builder - Edit Product Modal
         2.3.9. Show Graphic Switcher
         2.3.10. Graphic Container 
     2.4. Advanced Settings    
-        2.4.1. Custom Description
-        2.4.2. Custom Price
-        2.4.3. Custom Package Class 
+        2.4.1  Apply Promocode
+        2.4.2. Promocode Select
+        2.4.3. Custom Description
+        2.4.4. Custom Price
+        2.4.5. Custom Package Class 
     2.5. Hidden Inputs
     2.6. Modal Actions
 
@@ -412,8 +414,51 @@ RSThemes - Website Builder - Edit Product Modal
                             </button>
                         </div>
                         <div class="modal__section-content collapse" id="addNewProduct-advanced-settings" data-product-advanced-settings>
+                            
+                            {* 2.4.1 Apply Promocode *}
+                            <div class="form-group">
+                                <label class="form-label is-pointer m-w-360 m-b-0x m-t-2x" data-toggle="lu-collapse" data-target="#product-edit-modal-promocode">
+                                    <span class="form-text d-flex align-items-center">
+                                        Apply promotion code to this product
+                                        {if $cms_tooltips->modal['item']['add_edit']['product']['apply_promocode']['content']}
+                                            {if isset($cms_tooltips->modal['item']['add_edit']['product']['apply_promocode']['url']) && $cms_tooltips->modal['item']['add_edit']['product']['apply_promocode']['url'] != ""}
+                                                {assign var="popoverFooter" value="<a class='btn btn--secondary btn--xs' href='{$cms_tooltips->modal['item']['add_edit']['product']['apply_promocode']['url']}' target='_blank'>Learn More</a>"}
+                                            {else}
+                                                {assign var="popoverFooter" value=false}
+                                            {/if}
+                                            {include 
+                                                file="adminarea/includes/helpers/popover.tpl" 
+                                                popoverClasses="notification__popover popover__right"
+                                                popoverBody="{$cms_tooltips->modal['item']['add_edit']['product']['apply_promocode']['content']}"
+                                                popoverFooter="{$popoverFooter}"
+                                            }
+                                        {/if}
+                                    </span>
+                                    <div class="switch switch--success m-l-0x">
+                                        <input type="hidden" name="item[apply_promocode]" value="0" />
+                                        <input class="switch__checkbox" name="item[apply_promocode]" value="1" type="checkbox" data-apply-promocode>
+                                        <span class="switch__container">
+                                            <span class="switch__handle"></span>
+                                        </span>
+                                    </div>
+                                </label>
+                            </div>
 
-                            {* 2.4.1. Custom Description *}
+                            {* 2.4.2. Promocode Select *}
+                            <div class="collapse" id="product-edit-modal-promocode" data-product-promocode>
+                                <div class="form-group">
+                                    <select class="form-control" name="item[promocode]">
+                                        {foreach $promoCodes as $promoCode}
+                                            <option value="{$promoCode.id}">{$promoCode.code}</option>
+                                        {/foreach}
+                                    </select>
+                                    <div class="form-feedback form-feedback-md form-feedback-danger form-feedback--icon text-danger-lighter">
+                                        Selected promotional code for this product will overwrite the code that was selected for the entire section
+                                    </div>
+                                </div>
+                            </div>
+
+                            {* 2.4.3. Custom Description *}
                             <div class="form-group m-t-2x">
                                 <div class="d-flex">
                                     <label class="form-label">
@@ -440,10 +485,10 @@ RSThemes - Website Builder - Edit Product Modal
                                 ></textarea>
                             </div>
 
-                            {* 2.4.2. Custom Price *}
+                            {* 2.4.4. Custom Price *}
                             {include file="adminarea/pages/includes/modal/product/custom-price.tpl"}
 
-                            {* 2.4.3. Custom Package Class *}
+                            {* 2.4.5. Custom Package Class *}
                             <div class="form-group">
                                 <label class="form-label">
                                     Custom Classes

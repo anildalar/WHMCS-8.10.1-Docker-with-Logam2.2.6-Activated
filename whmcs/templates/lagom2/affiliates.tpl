@@ -94,6 +94,7 @@
                                         {/foreach}
                                     </ul>
                                 </div>
+                                <button id="clearFilters" class="btn btn-link btn-xs hidden">{$rslang->trans('generals.clear_filters')}<i class="ls ls-close"></i></button>
                             </div>  
                         </div>
                         <table id="tableAffiliatesList" class="table table-list">

@@ -89,7 +89,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "152",
+                        "pageslug": "293d060943b8794ecc40dc1c34dc108e",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "64-shared-hosting-5.tpl",
@@ -145,7 +145,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "156",
+                        "pageslug": "e21a0412c8c00ecdd53862f2041e9a2b",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "64-wordpress-hosting-2.tpl",
@@ -201,7 +201,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "150",
+                        "pageslug": "60fb0cec541e7bf14c1a1babb62e28ec",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "64-resellers-hosting.tpl",
@@ -334,7 +334,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "154",
+                        "pageslug": "8ae7201668a6f8a750d30676742dc82c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "64-vps-hosting-2.tpl",
@@ -390,7 +390,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "117",
+                        "pageslug": "b8b3816320adbe323751791b801f68b7",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "64-vps-hosting-3.tpl",
@@ -446,7 +446,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "121",
+                        "pageslug": "ccdb5d46740ec44879f8bc27d8d05345",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "64-dedicated-servers-2.tpl",
@@ -502,7 +502,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "134",
+                        "pageslug": "b50ba350891cd5a0e8af77cf62c21e45",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "64-game-servers-5.tpl",
@@ -560,7 +560,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "122",
+                "pageslug": "cd78ce4eba17aec506ddb4955d1411b7",
                 "translation-method": "custom",
                 "icon": "",
                 "predefined_icon": "",
@@ -710,7 +710,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "102",
+                        "pageslug": "3f6947b3e708636055f6f9f838825c0c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "symantec.tpl",
@@ -766,7 +766,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "106",
+                        "pageslug": "2f3b6daea14cf8f359f8b1c8be06b88f",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "weebly.tpl",
@@ -822,7 +822,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "94",
+                        "pageslug": "0aba9a87bdc63da6c037cd904f718f3c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "spamexperts.tpl",
@@ -878,7 +878,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "108",
+                        "pageslug": "f5772e7160c73e8a195e283a8a11f007",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "xovinow.tpl",
@@ -953,7 +953,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "96",
+                        "pageslug": "0aba9a87bdc63da6c037cd904f718f3c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "icon-email-backup.tpl",
@@ -1009,7 +1009,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "97",
+                        "pageslug": "656b635e3190aeaac61b5c2bf2050a45",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "cpanelseo.tpl",
@@ -1065,7 +1065,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "104",
+                        "pageslug": "9c4b321d8961aaf86f517fdfba509ba7",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "sitelockvpn.tpl",
@@ -1121,7 +1121,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "90",
+                        "pageslug": "56a2426cafc786d98cfbb1b9e66bcd6a",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "64-360-monitoring-4.tpl",
@@ -1196,7 +1196,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "107",
+                        "pageslug": "c0e5c5751a09649b1fcdb5c4abe40b48",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "activate-HTTPS-and-the-lock-icon.tpl",
@@ -1252,7 +1252,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "105",
+                        "pageslug": "dea70235bd5ef67eaa7a34debd0f64a3",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "codeguard.tpl",
@@ -1308,7 +1308,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "103",
+                        "pageslug": "f4040174d6533171eb35d5e136c0cebf",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "builder.tpl",
@@ -1364,7 +1364,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "95",
+                        "pageslug": "0617f09b5703ef53001e85073ff7dfbe",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "nordvpn.tpl",
@@ -1422,7 +1422,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "113",
+                "pageslug": "953679896fda6be14dd6f7f625578c16",
                 "translation-method": "custom",
                 "icon": "",
                 "predefined_icon": "",
@@ -1497,7 +1497,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "113",
+                        "pageslug": "fb21eebd549fa572bb88c850ba73e538",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "company.tpl",
@@ -1553,7 +1553,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "118",
+                        "pageslug": "cc3a84bacb2be512ff4a1c4430f37d65",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "our-team.tpl",
@@ -1686,7 +1686,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "119",
+                        "pageslug": "1642ef02347f0d4c88d849098e0ccad3",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -1798,7 +1798,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "55",
+                        "pageslug": "c08500cb9b12178780fd9d10e43e8c2c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -1854,7 +1854,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "13",
+                        "pageslug": "bccd1749fc2f1ef02fdc62280cd40df0",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -1920,8 +1920,8 @@
                 "media": ""
             },
             "display": {
-                "label_type": "default",
-                "label_text": "",
+                "label_type": "primary",
+                "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
                 "dropdown": "mega",
                 "dropdown_graphic": {
                     "icon": "",
@@ -2038,7 +2038,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "157",
+                        "pageslug": "b438739694a389637a59c0d5d71a6528",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2094,7 +2094,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "158",
+                        "pageslug": "f0ec22001e9ed2547cfa8226272715b0",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2150,7 +2150,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "159",
+                        "pageslug": "476149dcf91d9daf28e08b126957f8fe",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2206,7 +2206,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "160",
+                        "pageslug": "51698190a529cb47ae1028b4d7095d54",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2257,12 +2257,68 @@
                     }
                 },
                 {
+                    "name": "Contact Form",
+                    "location": null,
+                    "active": 0,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Contact Form",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
                     "name": "Domain Search",
                     "location": null,
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "162",
+                        "pageslug": "21cbc3f5670da4fa0e8d1cdaf93df68d",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2318,7 +2374,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "163",
+                        "pageslug": "268e16dc32aaf9b10d3e5facc442f2f8",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2374,7 +2430,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "166",
+                        "pageslug": "ddb8be09add629e71e9c9cd3641cdd64",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2430,7 +2486,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "165",
+                        "pageslug": "a7063b964469cafa8cc00991287059c4",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2486,7 +2542,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "164",
+                        "pageslug": "60eda45c42c5ea11e6611b888eb7b36c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2537,12 +2593,68 @@
                     }
                 },
                 {
+                    "name": "Gallery",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "6adbc16af31828dc9f67cc173252ec45",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Gallery",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
                     "name": "Graphic",
                     "location": null,
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "168",
+                        "pageslug": "db4dbb81af4117c437216c010dce9497",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2598,7 +2710,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "169",
+                        "pageslug": "860b706d51a853588ab2592209e0d90d",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2649,12 +2761,68 @@
                     }
                 },
                 {
+                    "name": "Location List",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "82c498250c9d3c1d7c93eefc7a0545ca",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Location List",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
                     "name": "Products",
                     "location": null,
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "173",
+                        "pageslug": "12cf41dfd15caff163c2c86aa605a54c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2724,12 +2892,124 @@
                     "translation": "-----"
                 },
                 {
+                    "name": "Product Comparison",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "345ca7eaf56915c039ed562b228395b8",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Product Comparison",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Promotion Manager",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "6002f07283545b256869a85c84e8571b",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Promotion Manager",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
                     "name": "Product Groups",
                     "location": null,
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "172",
+                        "pageslug": "ee1f428a8f6a86b334a9a835b12ba04e",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2785,7 +3065,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "174",
+                        "pageslug": "e1c2d939e7204ac1840af88a42bdc507",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2841,7 +3121,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "176",
+                        "pageslug": "f562fc5d852d67ec250c8e8c42f1a386",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2897,7 +3177,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "175",
+                        "pageslug": "0ee9c021a11f5620bf5d79fc5af1a993",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -2946,193 +3226,6 @@
                             "ukranian": ""
                         }
                     }
-                },
-                {
-                    "name": "Gallery",
-                    "location": null,
-                    "active": 1,
-                    "type": "WHMCS Page",
-                    "settings": {
-                        "page": "167",
-                        "translation-method": "custom",
-                        "icon": "",
-                        "predefined_icon": "",
-                        "predefined_illustration": "",
-                        "media": ""
-                    },
-                    "display": {
-                        "label_type": "primary-faded",
-                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
-                        "client-status": "All",
-                        "style": {
-                            "layout": "text"
-                        },
-                        "custom-data-classes": "",
-                        "target": "0"
-                    },
-                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
-                    "translation": {
-                        "whmcs": "",
-                        "custom": {
-                            "arabic": "",
-                            "azerbaijani": "",
-                            "catalan": "",
-                            "chinese": "",
-                            "croatian": "",
-                            "czech": "",
-                            "danish": "",
-                            "dutch": "",
-                            "english": "Gallery",
-                            "estonian": "",
-                            "farsi": "",
-                            "french": "",
-                            "german": "",
-                            "hebrew": "",
-                            "hungarian": "",
-                            "italian": "",
-                            "macedonian": "",
-                            "norwegian": "",
-                            "portuguese-br": "",
-                            "portuguese-pt": "",
-                            "romanian": "",
-                            "russian": "",
-                            "spanish": "",
-                            "swedish": "",
-                            "turkish": "",
-                            "ukranian": ""
-                        }
-                    }
-                },
-                {
-                    "name": "Location Map",
-                    "location": null,
-                    "active": 1,
-                    "type": "WHMCS Page",
-                    "settings": {
-                        "page": "170",
-                        "translation-method": "custom",
-                        "icon": "",
-                        "predefined_icon": "",
-                        "predefined_illustration": "",
-                        "media": ""
-                    },
-                    "display": {
-                        "label_type": "primary-faded",
-                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
-                        "client-status": "All",
-                        "style": {
-                            "layout": "text"
-                        },
-                        "custom-data-classes": "",
-                        "target": "0"
-                    },
-                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
-                    "translation": {
-                        "whmcs": "",
-                        "custom": {
-                            "arabic": "",
-                            "azerbaijani": "",
-                            "catalan": "",
-                            "chinese": "",
-                            "croatian": "",
-                            "czech": "",
-                            "danish": "",
-                            "dutch": "",
-                            "english": "Location Map",
-                            "estonian": "",
-                            "farsi": "",
-                            "french": "",
-                            "german": "",
-                            "hebrew": "",
-                            "hungarian": "",
-                            "italian": "",
-                            "macedonian": "",
-                            "norwegian": "",
-                            "portuguese-br": "",
-                            "portuguese-pt": "",
-                            "romanian": "",
-                            "russian": "",
-                            "spanish": "",
-                            "swedish": "",
-                            "turkish": "",
-                            "ukranian": ""
-                        }
-                    }
-                },
-                {
-                    "name": "Product Comparison",
-                    "location": null,
-                    "active": 1,
-                    "type": "WHMCS Page",
-                    "settings": {
-                        "page": "171",
-                        "translation-method": "custom",
-                        "icon": "",
-                        "predefined_icon": "",
-                        "predefined_illustration": "",
-                        "media": ""
-                    },
-                    "display": {
-                        "label_type": "primary-faded",
-                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
-                        "client-status": "All",
-                        "style": {
-                            "layout": "text"
-                        },
-                        "custom-data-classes": "",
-                        "target": "0"
-                    },
-                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
-                    "translation": {
-                        "whmcs": "",
-                        "custom": {
-                            "arabic": "",
-                            "azerbaijani": "",
-                            "catalan": "",
-                            "chinese": "",
-                            "croatian": "",
-                            "czech": "",
-                            "danish": "",
-                            "dutch": "",
-                            "english": "Product Comparison",
-                            "estonian": "",
-                            "farsi": "",
-                            "french": "",
-                            "german": "",
-                            "hebrew": "",
-                            "hungarian": "",
-                            "italian": "",
-                            "macedonian": "",
-                            "norwegian": "",
-                            "portuguese-br": "",
-                            "portuguese-pt": "",
-                            "romanian": "",
-                            "russian": "",
-                            "spanish": "",
-                            "swedish": "",
-                            "turkish": "",
-                            "ukranian": ""
-                        }
-                    }
-                },
-                {
-                    "name": "-----",
-                    "location": null,
-                    "active": 0,
-                    "type": "Divider",
-                    "settings": null,
-                    "display": {
-                        "label_type": "default",
-                        "label_text": "",
-                        "client-status": "All",
-                        "style": {
-                            "layout": "icon-text"
-                        },
-                        "custom-data-classes": "",
-                        "target": "0"
-                    },
-                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
-                    "translation": "-----"
                 },
                 {
                     "name": "Predefined Pages",
@@ -3189,9 +3282,9 @@
                     "name": "Homepage",
                     "location": null,
                     "active": 1,
-                    "type": "WHMCS Page",
+                    "type": "Homepage",
                     "settings": {
-                        "page": "143",
+                        "link": "\/",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3203,7 +3296,7 @@
                         "label_text": "",
                         "client-status": "All",
                         "style": {
-                            "layout": "text"
+                            "layout": "icon-text"
                         },
                         "custom-data-classes": "",
                         "target": "0"
@@ -3242,12 +3335,180 @@
                     }
                 },
                 {
+                    "name": "Home - Default Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "18e4855cdeab8a9c3882b253f12b0ea7",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Home - Default Sale",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Home - Black Week",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "a2be70d24985b0cc9620c260985a421f",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Home - Black Week",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Home - Christmas Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "773df2cdb442128a497d831172f099a6",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Home - Christmas Sale",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
                     "name": "Shared Hosting",
                     "location": null,
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "152",
+                        "pageslug": "293d060943b8794ecc40dc1c34dc108e",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3303,7 +3564,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "156",
+                        "pageslug": "e21a0412c8c00ecdd53862f2041e9a2b",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3359,7 +3620,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "154",
+                        "pageslug": "8ae7201668a6f8a750d30676742dc82c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3415,7 +3676,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "150",
+                        "pageslug": "60fb0cec541e7bf14c1a1babb62e28ec",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3471,7 +3732,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "121",
+                        "pageslug": "ccdb5d46740ec44879f8bc27d8d05345",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3480,7 +3741,7 @@
                     },
                     "display": {
                         "label_type": "primary-faded",
-                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
                         "client-status": "All",
                         "style": {
                             "layout": "text"
@@ -3527,7 +3788,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "134",
+                        "pageslug": "b50ba350891cd5a0e8af77cf62c21e45",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3583,7 +3844,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "122",
+                        "pageslug": "cd78ce4eba17aec506ddb4955d1411b7",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3639,7 +3900,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "113",
+                        "pageslug": "fb21eebd549fa572bb88c850ba73e538",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3690,12 +3951,68 @@
                     }
                 },
                 {
+                    "name": "Coming Soon",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "bb0ae55724fb5363d6c8488c4da0c769",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Coming Soon",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
                     "name": "Contact Us",
                     "location": null,
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "119",
+                        "pageslug": "1642ef02347f0d4c88d849098e0ccad3",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3746,12 +4063,31 @@
                     }
                 },
                 {
+                    "name": "-----",
+                    "location": null,
+                    "active": 1,
+                    "type": "Divider",
+                    "settings": null,
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": "-----"
+                },
+                {
                     "name": "Legal Pages",
                     "location": null,
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "148",
+                        "pageslug": "953679896fda6be14dd6f7f625578c16",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3807,7 +4143,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "96",
+                        "pageslug": "0aba9a87bdc63da6c037cd904f718f3c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3863,7 +4199,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "102",
+                        "pageslug": "3f6947b3e708636055f6f9f838825c0c",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3914,31 +4250,12 @@
                     }
                 },
                 {
-                    "name": "-----",
-                    "location": null,
-                    "active": 1,
-                    "type": "Divider",
-                    "settings": null,
-                    "display": {
-                        "label_type": "default",
-                        "label_text": "",
-                        "client-status": "All",
-                        "style": {
-                            "layout": "icon-text"
-                        },
-                        "custom-data-classes": "",
-                        "target": "0"
-                    },
-                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
-                    "translation": "-----"
-                },
-                {
                     "name": "MC - 360 Monitoring",
                     "location": null,
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "90",
+                        "pageslug": "56a2426cafc786d98cfbb1b9e66bcd6a",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -3994,7 +4311,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "94",
+                        "pageslug": "5d329ac99493992d08030819e214a6b4",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4050,7 +4367,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "95",
+                        "pageslug": "0617f09b5703ef53001e85073ff7dfbe",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4106,7 +4423,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "97",
+                        "pageslug": "656b635e3190aeaac61b5c2bf2050a45",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4162,7 +4479,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "104",
+                        "pageslug": "9c4b321d8961aaf86f517fdfba509ba7",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4218,7 +4535,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "107",
+                        "pageslug": "c0e5c5751a09649b1fcdb5c4abe40b48",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4274,7 +4591,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "106",
+                        "pageslug": "2f3b6daea14cf8f359f8b1c8be06b88f",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4330,7 +4647,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "105",
+                        "pageslug": "dea70235bd5ef67eaa7a34debd0f64a3",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4386,7 +4703,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "106",
+                        "pageslug": "2f3b6daea14cf8f359f8b1c8be06b88f",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4442,7 +4759,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "108",
+                        "pageslug": "f5772e7160c73e8a195e283a8a11f007",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4498,7 +4815,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "118",
+                        "pageslug": "cc3a84bacb2be512ff4a1c4430f37d65",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4506,7 +4823,7 @@
                         "media": ""
                     },
                     "display": {
-                        "label_type": "primary-faded",
+                        "label_type": "default",
                         "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
                         "client-status": "All",
                         "style": {
@@ -4554,7 +4871,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "114",
+                        "pageslug": "51470bc59893e6f73cfbab1e2fd80ff5",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4562,7 +4879,7 @@
                         "media": ""
                     },
                     "display": {
-                        "label_type": "primary-faded",
+                        "label_type": "default",
                         "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
                         "client-status": "All",
                         "style": {
@@ -4584,6 +4901,729 @@
                             "danish": "",
                             "dutch": "",
                             "english": "Blog",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Promotion Pages",
+                    "location": null,
+                    "active": 1,
+                    "type": "Header",
+                    "settings": {
+                        "translation-method": "custom"
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Promotion Pages",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Default Promotion",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "05495658c7b667d1dd4aace82c81c141",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Default Promotion",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Expired Promotion",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "c88bbc023d7b33590b4be06fd332d324",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Expired Promotion",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Black Week Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "f73b9dcf8f27f6b586580648a188e3f0",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Black Week Sale",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Cyber Monday Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "aed9caef06dc20c5320b73900b195862",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Cyber Monday Sale",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Christmas Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "c2853b3fd850c705b610c244c7946d45",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Christmas Sale",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Winter Sale ",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "56a513d543396052b741b7dd89d38ee3",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Winter Sale ",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "New Year&#039;s Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "f76581752588e64a094e6555f2c325e7",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "New Year&#039;s Sale",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Valentine\u2019s Day Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "c92eeaccb9e181d39e4c537f949ea9a8",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Valentine\u2019s Day Sale",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Easter Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "b4fbf4eafaa2fdb922a592cfa452b7ba",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Easter Sale",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Summer Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "c7d6203d9d94d1f8c47c6b0752908841",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Summer Sale",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Spring Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "fcb4d3f9be48a38012b0ed6ed50c05e6",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Spring Sale",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Halloween Sale",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "dd95f63b4a47715526462215ddd94c67",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Halloween Sale",
                             "estonian": "",
                             "farsi": "",
                             "french": "",
@@ -4656,12 +5696,68 @@
                     }
                 },
                 {
+                    "name": "Section Timer",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "pageslug": "efb4777327e6f704fb1519c1882f93ec",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Section Timer",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
                     "name": "Section Styles",
                     "location": null,
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "161",
+                        "pageslug": "b22a1903fb5c1e5b6e61b34541ddbf13",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4717,7 +5813,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "109",
+                        "pageslug": "1a4f50979d0292f72924d12021e4ffdf",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4725,8 +5821,8 @@
                         "media": ""
                     },
                     "display": {
-                        "label_type": "default",
-                        "label_text": "",
+                        "label_type": "primary-faded",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
                         "client-status": "All",
                         "style": {
                             "layout": "text"
@@ -4773,7 +5869,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "110",
+                        "pageslug": "3e6f823971df6213a24886aa524fe7ec",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4781,8 +5877,8 @@
                         "media": ""
                     },
                     "display": {
-                        "label_type": "default",
-                        "label_text": "",
+                        "label_type": "primary-faded",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;New&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
                         "client-status": "All",
                         "style": {
                             "layout": "icon-text"
@@ -4829,7 +5925,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "112",
+                        "pageslug": "3e6f823971df6213a24886aa524fe7ec",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4885,7 +5981,7 @@
                     "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
-                        "page": "111",
+                        "pageslug": "5491821325b4e7454789d0a365a8b9e2",
                         "translation-method": "custom",
                         "icon": "",
                         "predefined_icon": "",
@@ -4943,7 +6039,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "58",
+                "pageslug": "d56b699830e77ba53855679cb1d252da",
                 "translation-method": "whmcs",
                 "icon": "",
                 "predefined_icon": "",
@@ -5018,7 +6114,7 @@
             "active": 1,
             "type": "WHMCS Page",
             "settings": {
-                "page": "1",
+                "pageslug": "ec9c2b65a12ec830ea02ea73d206896c",
                 "translation-method": "whmcs",
                 "icon": "",
                 "predefined_icon": "",

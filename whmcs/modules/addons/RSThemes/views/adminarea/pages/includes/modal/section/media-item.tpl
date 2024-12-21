@@ -1,5 +1,9 @@
-<label class="media__item media__item--thumb {if isset($type) && $type=="predefined"}media__item--horizontal{/if}{if isset($comingsoon) && $comingsoon}media__item--comingsoon{/if}" data-media-item="{$name}">
-    <div class="media__item-icon" data-label="Soon">
+{if isset($requiredExtenstion) && $requiredExtenstion}
+    <div class="media__item media__item--thumb {if isset($type) && $type=="predefined"}media__item--horizontal{/if}{if isset($comingsoon) && $comingsoon}media__item--comingsoon{/if} {if isset($requiredExtenstion) && $requiredExtenstion}media__item--extensionrequired{/if}" data-media-item="{$name}">
+{else}
+    <label class="media__item media__item--thumb {if isset($type) && $type=="predefined"}media__item--horizontal{/if}{if isset($comingsoon) && $comingsoon}media__item--comingsoon{/if}" data-media-item="{$name}">
+{/if}
+    <div class="media__item-icon" data-label="Soon" data-ex-required="Extension Required">
         {if isset($thumb) && $thumb}
             <img src="{$whmcsURL}/templates/{$themeName}/core/cms/sections/config/{$slug}/{$thumb}" alt="{$name}">
         {else}
@@ -14,5 +18,15 @@
         {if isset($originalName) && $originalName}
             <span class="media__item-type">{$originalName}</span>
         {/if}    
-    </div>                             
-</label>
+    </div> 
+    {if isset($requiredExtenstion) && $requiredExtenstion}
+        <div class="media__item-info">
+            <p class="p-xs text-center">This section requires <b>{$cms_docs->modal['new_section'][$requiredExtenstion]['title']}</b> extension</p>
+            <a class="btn btn--xs btn--primary" href="{$cms_docs->modal['new_section'][$requiredExtenstion]['url']}" target="_blank">Learn More</a>
+        </div>
+    {/if}                       
+{if isset($requiredExtenstion) && $requiredExtenstion}
+    </div>
+{else}
+    </label>
+{/if}

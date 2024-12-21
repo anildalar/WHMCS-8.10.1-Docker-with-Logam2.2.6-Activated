@@ -1,27 +1,28 @@
 {if isset($RSThemes['pages'][$templatefile]) && file_exists($RSThemes['pages'][$templatefile]['fullPath'])}
     {include file=$RSThemes['pages'][$templatefile]['fullPath']}
 {else}
+
     <script>
-    var _localLang = {
-        'addToCart': '{$LANG.orderForm.addToCart|escape}',
-        'addedToCartRemove': '{$LANG.orderForm.addedToCartRemove|escape}'
-    }
+        var _localLang = {
+            'addToCart': '{$LANG.orderForm.addToCart|escape}',
+            'addedToCartRemove': '{$LANG.orderForm.addedToCartRemove|escape}'
+        }
     </script>
     {include file="orderforms/$carttpl/common.tpl"}
     <div class="main-content {if $mainContentClasses}{$mainContentClasses}{/if}">
         <form method="post" action="{$smarty.server.PHP_SELF}?a=confdomains" id="frmConfigureDomains">
             <input type="hidden" name="update" value="true" />
-                {if $errormessage}
-                    <div class="alert alert-lagom alert-danger" role="alert">
-                        <div class="alert-body">
-                            <p>{$LANG.orderForm.correctErrors}:</p>
-                            <ul>
-                                {$errormessage}
-                            </ul>
-                        </div>
+            {if $errormessage}
+                <div class="alert alert-lagom alert-danger" role="alert">
+                    <div class="alert-body">
+                        <p>{$LANG.orderForm.correctErrors}:</p>
+                        <ul>
+                            {$errormessage}
+                        </ul>
                     </div>
-                {/if}
-                {if $domains}
+                </div>
+            {/if}
+            {if $domains}
                 <div class="section">
                     <div class="section-body">
                         {foreach $domains as $num => $domain}
@@ -31,16 +32,16 @@
                             {else}
                                 {$currentTld = $currentTld[1]}
                             {/if}
-                            <div 
-                                class="panel panel-lg panel-default panel-form panel-domain-info{if $domain.fields} panel-separated{/if}" 
-                                {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
-                                    data-configuredomains-tld-cycle-switcher-container
-                                {/if}
+                            <div
+                                    class="panel panel-lg panel-default panel-form panel-domain-info{if $domain.fields} panel-separated{/if}"
+                                    {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
+                                        data-configuredomains-tld-cycle-switcher-container
+                                    {/if}
                             >
                                 <div class="panel-body">
                                     <div class="domain-info">
                                         <div class="domain-info-icon">
-                                            {include file="$template/includes/common/svg-icon.tpl" icon="content-delivery-network"}      
+                                            {include file="$template/includes/common/svg-icon.tpl" icon="content-delivery-network"}
                                         </div>
                                         <div class="domain-info-body">
                                             <div class="domain-info-top">
@@ -68,7 +69,7 @@
                                                 <button type="button" class="btn btn-sm btn-default" onclick="removeItem('d', '{$num}')">
                                                     <i class="ls ls-trash"></i><span class="btn-text">{$LANG.orderForm.remove}</span>
                                                 </button>
-                                               
+
                                             </div>
                                             <div class="domain-info-bottom">
                                                 {if $domain.hosting}
@@ -80,112 +81,145 @@
                                                         <a href="{$WEB_ROOT}/cart.php" class="label label-primary-faded"><i class="ls ls-close"></i>{$LANG.cartdomainsnohosting}</a>
                                                     </span>
                                                 {/if}
-                                                
+
                                                 {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
                                                 {else}
                                                     <span class="domain-info-period">{$LANG.orderregperiod}: {$domain.regperiod} {$LANG.orderyears}</span>
                                                 {/if}
-                                            </div> 
+                                            </div>
                                         </div>
                                     </div>
                                     {if $domain.dnsmanagement || $domain.emailforwarding || $domain.idprotection}
-                                        <div class="domain-info-addons row" data-inputs-container>
-                                            {if $domain.dnsmanagement}
-                                                <div class="col-lg-4">
-                                                    <div class="panel panel-check{if $domain.dnsmanagementselected} checked{/if}" data-virtual-input>
-                                                        <div class="check">
-                                                            <label>
-                                                                <input class="icheck-control" type="checkbox" name="dnsmanagement[{$num}]"{if $domain.dnsmanagementselected} checked{/if} {if !$domain.dnsmanagement} disabled{/if} />
-                                                                <div class="check-content">
-                                                                    <h6 class="check-title">{$LANG.domaindnsmanagement}<i class="ls ls-info-circle" data-toggle="tooltip" title="{$LANG.domainaddonsdnsmanagementinfo}"></i></h6>
-                                                                    <p 
-                                                                        class="check-subtitle"
-                                                                        {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
-                                                                            data-domain-addon 
-                                                                            data-price="{if is_object($domain.dnsmanagementprice)}{math equation="x/y" x=$domain.dnsmanagementprice->toNumeric() y=$domain.regperiod format="%.2f"}{else}0.00{/if}"
-                                                                            data-lang-years="{$LANG.orderyears}"
-                                                                            data-currency-prefix="{$WHMCSCurrency.prefix}"
-                                                                            data-currency-suffix="{$WHMCSCurrency.suffix}"
+                                        <div class="domain-info-addons {if $RSThemes['pages'][$templatefile]['config']['displayExtendedVersion'] == '1'} domain-info-addons-extended{/if}">
+                                            <h6 class="domain-addons-title">{$rslang->trans('order.assign_addons')}</h6>
+                                            <div class="row row-eq-height" data-inputs-container>
+                                                {if $domain.dnsmanagement}
+                                                    <div class="col-lg-4">
+                                                        <div class="panel panel-check{if $domain.dnsmanagementselected} checked{/if}" data-virtual-input>
+                                                            <div class="check">
+                                                                <label>
+                                                                    <input class="icheck-control" type="checkbox" name="dnsmanagement[{$num}]"{if $domain.dnsmanagementselected} checked{/if} {if !$domain.dnsmanagement} disabled{/if} />
+                                                                    <div class="check-content">
+                                                                        <h6 class="check-title">{$LANG.domaindnsmanagement}<i class="ls ls-info-circle" data-toggle="tooltip" title="{$LANG.domainaddonsdnsmanagementinfo}"></i></h6>
+                                                                        {if $RSThemes['pages'][$templatefile]['config']['displayExtendedVersion'] == '1'}
+                                                                            <p class="check-desc">{$LANG.domainaddonsdnsmanagementinfo}</p>
                                                                         {/if}
+                                                                    </div>
+                                                                    <p
+                                                                            class="check-subtitle"
+                                                                            {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
+                                                                                data-domain-addon
+                                                                                data-price="{if is_object($domain.dnsmanagementprice)}{math equation="x/y" x=$domain.dnsmanagementprice->toNumeric() y=$domain.regperiod format="%.2f"}{else}0.00{/if}"
+                                                                                data-lang-years="{$LANG.orderyears}"
+                                                                                data-currency-prefix="{$WHMCSCurrency.prefix}"
+                                                                                data-currency-suffix="{$WHMCSCurrency.suffix}"
+                                                                            {/if}
                                                                     >
                                                                         {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
-                                                                            {if is_object($domain.dnsmanagementprice)}{$domain.dnsmanagementprice}{else}{$WHMCSCurrency.prefix}0.00 {$WHMCSCurrency.suffix}{/if} / {$domain.regperiod} {$LANG.orderyears}
+                                                                            {if is_object($domain.dnsmanagementprice)}{$domain.dnsmanagementprice}{else}{$WHMCSCurrency.prefix}0.00 {$WHMCSCurrency.suffix}{/if} <span>/ {$domain.regperiod} {$LANG.orderyears}</span>
                                                                         {else}
-                                                                            {$domain.dnsmanagementprice} / {$domain.regperiod} {$LANG.orderyears}
-                                                                        {/if}  
-                                                                    </p>
-                                                                </div>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            {/if}
-                                            {if $domain.idprotection}
-                                                <div class="col-lg-4">
-                                                    <div class="panel panel-check{if $domain.idprotectionselected} checked{/if}" data-virtual-input>
-                                                        <div class="check">
-                                                            <label>
-                                                                <input class="icheck-control" type="checkbox" name="idprotection[{$num}]"{if $domain.idprotectionselected} checked{/if} />
-                                                                <div class="check-content">
-                                                                    <h6 class="check-title">{$LANG.domainidprotection}<i class="ls ls-info-circle" data-toggle="tooltip" title="{$LANG.domainaddonsidprotectioninfo}"></i></h6>
-                                                                    <p 
-                                                                        class="check-subtitle"
-                                                                        {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
-                                                                            data-domain-addon 
-                                                                            data-price="{if is_object($domain.idprotectionprice)}{math equation="x/y" x=$domain.idprotectionprice->toNumeric() y=$domain.regperiod format="%.2f"}{else}0.00{/if}"
-                                                                            data-lang-years="{$LANG.orderyears}"
-                                                                            data-currency-prefix="{$WHMCSCurrency.prefix}"
-                                                                            data-currency-suffix="{$WHMCSCurrency.suffix}"
+                                                                            {$domain.dnsmanagementprice} <span>/ {$domain.regperiod} {$LANG.orderyears}</span>
                                                                         {/if}
-                                                                    >
-                                                                        {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
-                                                                            {if is_object($domain.idprotectionprice)}{$domain.idprotectionprice}{else}{$WHMCSCurrency.prefix}0.00 {$WHMCSCurrency.suffix}{/if} / {$domain.regperiod} {$LANG.orderyears}
-                                                                        {else}
-                                                                            {$domain.idprotectionprice} / {$domain.regperiod} {$LANG.orderyears}
-                                                                        {/if}  
                                                                     </p>
-                                                                </div>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            {/if}
-                                            {if $domain.emailforwarding}
-                                            <div class="col-lg-4">
-                                                <div class="panel panel-check{if $domain.emailforwardingselected} checked{/if}" data-virtual-input>
-                                                    <div class="check">
-                                                        <label>
-                                                            <input class="icheck-control" type="checkbox" name="emailforwarding[{$num}]"{if $domain.emailforwardingselected} checked{/if}/>
-                                                            <div class="check-content">
-                                                                <h6 class="check-title"> 
-                                                                    {$LANG.domainemailforwarding}
-                                                                    <span class="ls ls-info-circle" data-toggle="tooltip" title="{$LANG.domainaddonsemailforwardinginfo}"></span>
-                                                                </h6>                                               
-                                                                <p 
-                                                                    class="check-subtitle"
-                                                                    {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
-                                                                        data-domain-addon 
-                                                                        data-price="{if is_object($domain.emailforwardingprice)}{math equation="x/y" x=$domain.emailforwardingprice->toNumeric() y=$domain.regperiod format="%.2f"}{else}0.00{/if}"
-                                                                        data-lang-years="{$LANG.orderyears}"
-                                                                        data-currency-prefix="{$WHMCSCurrency.prefix}"
-                                                                        data-currency-suffix="{$WHMCSCurrency.suffix}"
+                                                                    {if $RSThemes['pages'][$templatefile]['config']['displayExtendedVersion'] == '1'}
+                                                                        <button type="button" class="btn btn-sm btn-block {if $RSThemes.styles.vars.futuristic}btn-outline btn-default{else}btn-primary-faded{/if}" {if $RSThemes.styles.vars.futuristic}data-system-style="futuristic"{/if}>
+                                                                            <span class="to-add">{$LANG.addtocart}</span>
+                                                                            <span class="added"><i class="ls ls-check"></i>{$LANG.domaincheckeradded}</span>
+                                                                            <i class="ls ls-trash" data-toggle="tooltip" title="" data-original-title="Remove"></i>
+                                                                        </button>
                                                                     {/if}
-                                                                >
-                                                                    {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
-                                                                        {if is_object($domain.emailforwardingprice)}{$domain.emailforwardingprice}{else}{$WHMCSCurrency.prefix}0.00 {$WHMCSCurrency.suffix}{/if} / {$domain.regperiod} {$LANG.orderyears}
-                                                                    {else}
-                                                                        {$domain.emailforwardingprice} / {$domain.regperiod} {$LANG.orderyears}
-                                                                    {/if}    
-                                                                </p>
+                                                                </label>
                                                             </div>
-                                                        </label>
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                {/if}
+                                                {if $domain.idprotection}
+                                                    <div class="col-lg-4">
+                                                        <div class="panel panel-check{if $domain.idprotectionselected} checked{/if}" data-virtual-input>
+                                                            <div class="check">
+                                                                <label>
+                                                                    <input class="icheck-control" type="checkbox" name="idprotection[{$num}]"{if $domain.idprotectionselected} checked{/if} />
+                                                                    <div class="check-content">
+                                                                        <h6 class="check-title">{$LANG.domainidprotection}<i class="ls ls-info-circle" data-toggle="tooltip" title="{$LANG.domainaddonsidprotectioninfo}"></i></h6>
+                                                                        {if $RSThemes['pages'][$templatefile]['config']['displayExtendedVersion'] == '1'}
+                                                                            <p class="check-desc">{$LANG.domainaddonsidprotectioninfo}</p>
+                                                                        {/if}
+                                                                    </div>
+                                                                    <p
+                                                                            class="check-subtitle"
+                                                                            {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
+                                                                                data-domain-addon
+                                                                                data-price="{if is_object($domain.idprotectionprice)}{math equation="x/y" x=$domain.idprotectionprice->toNumeric() y=$domain.regperiod format="%.2f"}{else}0.00{/if}"
+                                                                                data-lang-years="{$LANG.orderyears}"
+                                                                                data-currency-prefix="{$WHMCSCurrency.prefix}"
+                                                                                data-currency-suffix="{$WHMCSCurrency.suffix}"
+                                                                            {/if}
+                                                                    >
+                                                                        {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
+                                                                            {if is_object($domain.idprotectionprice)}{$domain.idprotectionprice}{else}{$WHMCSCurrency.prefix}0.00 {$WHMCSCurrency.suffix}{/if} <span>/ {$domain.regperiod} {$LANG.orderyears}</span>
+                                                                        {else}
+                                                                            {$domain.idprotectionprice} <span>/ {$domain.regperiod} {$LANG.orderyears}</span>
+                                                                        {/if}
+                                                                    </p>
+                                                                    {if $RSThemes['pages'][$templatefile]['config']['displayExtendedVersion'] == '1'}
+                                                                        <button type="button" class="btn btn-sm btn-block {if $RSThemes.styles.vars.futuristic}btn-outline btn-default{else}btn-primary-faded{/if}" {if $RSThemes.styles.vars.futuristic}data-system-style="futuristic"{/if}>
+                                                                            <span class="to-add">{$LANG.addtocart}</span>
+                                                                            <span class="added"><i class="ls ls-check"></i>{$LANG.domaincheckeradded}</span>
+                                                                            <i class="ls ls-trash" data-toggle="tooltip" title="" data-original-title="Remove"></i>
+                                                                        </button>
+                                                                    {/if}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {/if}
+                                                {if $domain.emailforwarding}
+                                                    <div class="col-lg-4">
+                                                        <div class="panel panel-check{if $domain.emailforwardingselected} checked{/if}" data-virtual-input>
+                                                            <div class="check">
+                                                                <label>
+                                                                    <input class="icheck-control" type="checkbox" name="emailforwarding[{$num}]"{if $domain.emailforwardingselected} checked{/if}/>
+                                                                    <div class="check-content">
+                                                                        <h6 class="check-title">
+                                                                            {$LANG.domainemailforwarding}
+                                                                            <span class="ls ls-info-circle" data-toggle="tooltip" title="{$LANG.domainaddonsemailforwardinginfo}"></span>
+                                                                        </h6>
+                                                                        {if $RSThemes['pages'][$templatefile]['config']['displayExtendedVersion'] == '1'}
+                                                                            <p class="check-desc">{$LANG.domainaddonsemailforwardinginfo}</p>
+                                                                        {/if}
+                                                                    </div>
+                                                                    <p
+                                                                            class="check-subtitle"
+                                                                            {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
+                                                                                data-domain-addon
+                                                                                data-price="{if is_object($domain.emailforwardingprice)}{math equation="x/y" x=$domain.emailforwardingprice->toNumeric() y=$domain.regperiod format="%.2f"}{else}0.00{/if}"
+                                                                                data-lang-years="{$LANG.orderyears}"
+                                                                                data-currency-prefix="{$WHMCSCurrency.prefix}"
+                                                                                data-currency-suffix="{$WHMCSCurrency.suffix}"
+                                                                            {/if}
+                                                                    >
+                                                                        {if isset($RSThemes['addonSettings']['tld_cycle_switcher']) && $RSThemes['addonSettings']['tld_cycle_switcher'] == 'true' && isset($tldPricing) && is_array($tldPricing) && isset($tldPricing[$currentTld]) && is_array($tldPricing[$currentTld]) && isset($tldPricing[$domain.domain]) && $tldPricing[$domain.domain] == "register"}
+                                                                            {if is_object($domain.emailforwardingprice)}{$domain.emailforwardingprice}{else}{$WHMCSCurrency.prefix}0.00 {$WHMCSCurrency.suffix}{/if}<span> / {$domain.regperiod} {$LANG.orderyears}</span>
+                                                                        {else}
+                                                                            {$domain.emailforwardingprice} <span>/ {$domain.regperiod} {$LANG.orderyears}</span>
+                                                                        {/if}
+                                                                    </p>
+                                                                    {if $RSThemes['pages'][$templatefile]['config']['displayExtendedVersion'] == '1'}
+                                                                        <button type="button" class="btn btn-sm btn-block {if $RSThemes.styles.vars.futuristic}btn-outline btn-default{else}btn-primary-faded{/if}" {if $RSThemes.styles.vars.futuristic}data-system-style="futuristic"{/if}>
+                                                                            <span class="to-add">{$LANG.addtocart}</span>
+                                                                            <span class="added"><i class="ls ls-check"></i>{$LANG.domaincheckeradded}</span>
+                                                                            <i class="ls ls-trash" data-toggle="tooltip" title="" data-original-title="Remove"></i>
+                                                                        </button>
+                                                                    {/if}
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                {/if}
                                             </div>
-                                            {/if}
                                         </div>
                                     {/if}
-                                </div> 
+                                </div>
                                 {if $RSThemes.pages.configuredomains.config.displayProminentHosting && !$domain.hosting}
                                     <div class="panel-body panel-body-hosting">
                                         <h5 class="m-b-1x">{$rslang->trans('domains.domains_hosting.title')}</h5>
@@ -195,23 +229,23 @@
                                         </div>
                                         <div class="panel-icon">
                                             {if $RSThemes.styles.iconType == "modern"}
-                                                {include file="$template/includes/common/svg-illustration.tpl" illustration="products/modern/sitebuilder"}  
+                                                {include file="$template/includes/common/svg-illustration.tpl" illustration="products/modern/sitebuilder"}
                                             {else}
-                                                {include file="$template/includes/common/svg-illustration.tpl" illustration="products/sitebuilder"} 
+                                                {include file="$template/includes/common/svg-illustration.tpl" illustration="products/sitebuilder"}
                                             {/if}
                                         </div>
                                     </div>
                                 {/if}
                                 {if $domain.eppenabled}
-                                <div class="domain-info-additional panel-body">
-                                    <div class="form-group row">
-                                        <label class="col-form-label col-md-4 col-lg-2">{$LANG.domaineppcode}</label>
-                                        <div class="col-md-8 col-lg-10">
-                                            <input class="form-control" type="text" name="epp[{$num}]" id="inputEppcode{$num}" value="{$domain.eppvalue}"/>
-                                            <span class="help-block m-b-0">{$LANG.domaineppcodedesc}</span>
+                                    <div class="domain-info-additional panel-body">
+                                        <div class="form-group row">
+                                            <label class="col-form-label col-md-4 col-lg-2">{$LANG.domaineppcode}</label>
+                                            <div class="col-md-8 col-lg-10">
+                                                <input class="form-control" type="text" name="epp[{$num}]" id="inputEppcode{$num}" value="{$domain.eppvalue}"/>
+                                                <span class="help-block m-b-0">{$LANG.domaineppcodedesc}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                 {/if}
                                 {if $domain.fields}
                                     <div class="domain-info-additional panel-body">
@@ -229,7 +263,7 @@
                 </div>
             {/if}
             {if $atleastonenohosting}
-            <div class="section {if $RSThemes.pages.configuredomains.config.hideNameserversSection != "1"}{else}hidden{/if}">
+                <div class="section {if $RSThemes.pages.configuredomains.config.hideNameserversSection != "1"}{else}hidden{/if}">
                     <div class="section-header">
                         <h2 class="section-title">{$LANG.domainnameservers}</h2>
                         <p class="section-desc">{$LANG.cartnameserversdesc}</p>
@@ -271,7 +305,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                 </div>
             {/if}
             <div id="bottom-action-anchor" class="bottom-action-anchor"></div>
@@ -282,7 +316,7 @@
                         <button type="submit" data-btn-loader class="btn btn-lg btn-primary">
                             <span><i class="ls ls ls-share"></i><span class="btn-text">{$LANG.continue}</span></span>
                             <div class="loader loader-button hidden">
-                                {include file="$template/includes/common/loader.tpl" classes="spinner-sm spinner-light"}  
+                                {include file="$template/includes/common/loader.tpl" classes="spinner-sm spinner-light"}
                             </div>
                         </button>
                     </div>
@@ -291,30 +325,31 @@
         </form>
     </div>
     {include file="orderforms/$carttpl/includes/recommendations-modal.tpl"}
-{/if}
-<form method="post" action="cart.php">
-    <input type="hidden" name="a" value="remove" />
-    <input type="hidden" name="r" value="" id="inputRemoveItemType" />
-    <input type="hidden" name="i" value="" id="inputRemoveItemRef" />
-    <div class="modal fade modal-remove-item" id="modalRemoveItem" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="{$LANG.orderForm.close}">
-                        <span aria-hidden="true"><i class="lm lm-close"></i></span>
-                    </button>
-                    <h3 class="modal-title">                                
-                        <span>{$LANG.orderForm.removeItem}</span>
-                    </h3>
-                </div>
-                <div class="modal-body">
-                    {$LANG.cartremoveitemconfirm}
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">{$LANG.yes}</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">{$LANG.no}</button>
+
+    <form method="post" action="cart.php">
+        <input type="hidden" name="a" value="remove" />
+        <input type="hidden" name="r" value="" id="inputRemoveItemType" />
+        <input type="hidden" name="i" value="" id="inputRemoveItemRef" />
+        <div class="modal fade modal-remove-item" id="modalRemoveItem" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="{$LANG.orderForm.close}">
+                            <span aria-hidden="true"><i class="lm lm-close"></i></span>
+                        </button>
+                        <h3 class="modal-title">
+                            <span>{$LANG.orderForm.removeItem}</span>
+                        </h3>
+                    </div>
+                    <div class="modal-body">
+                        {$LANG.cartremoveitemconfirm}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">{$LANG.yes}</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">{$LANG.no}</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</form>
+    </form>
+{/if}

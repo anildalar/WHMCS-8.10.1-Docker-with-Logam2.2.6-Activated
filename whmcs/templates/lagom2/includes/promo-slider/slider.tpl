@@ -29,7 +29,7 @@
             <div class="promo-slider-background" data-promo-slider-background>
                 <div></div>
                 <div></div>
-                <div class="promo-slider-shape">
+            <div class="promo-slider-shape {if $class|strstr:'promo-slider-xs'}promo-slider-shape-xs{/if}">
                     {include file="$template/includes/common/svg-illustration.tpl" illustration="site/banner-shape"}
                 </div>
             </div>

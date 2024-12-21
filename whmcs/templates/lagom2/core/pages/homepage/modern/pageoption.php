@@ -66,7 +66,7 @@ return [
         'productGroupPriceDisplay' => [
             'type' => 'select',
             'name' => 'productGroupPriceDisplay',
-            'label' => 'Choose product group price display',
+            'label' => 'Choose Product Group Price Display',
             'options' => 'Cheapest billing cycle,Monthly,Quarterly,Semiannually,Annually,Biennially,Triennially',
         ]
     ]

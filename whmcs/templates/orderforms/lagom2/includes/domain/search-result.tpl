@@ -81,6 +81,9 @@
             <div class="message-body">
                 <p class="message-title">{lang key='orderForm.domainHasUnavailableTld'}</p>
             </div>
+            <div class="message-actions">
+            <button  type="button" class="btn btn-lg btn-primary-faded" data-try-again>{$rslang->trans('order.try_again')}</button>
+        </div>
         </div>
     {/if}
     <div class="domain-unavailable message message-lg message-danger message-h">
@@ -89,6 +92,9 @@
         </div>
         <div class="message-body">
             <p class="message-title">{lang key='orderForm.domainIsUnavailable'}</p>
+        </div>
+        <div class="message-actions">
+            <button type="button" class="btn btn-lg btn-primary-faded" data-try-again>{$rslang->trans('order.try_again')}</button>
         </div>
     </div>
     <div class="domain-invalid message message-lg message-danger message-h">
@@ -108,7 +114,10 @@
         </div>
         <div class="message-body">
             <p class="message-title"></p>
-        </div>    
+        </div>
+        <div class="message-actions">
+            <button type="button" class="btn btn-lg btn-primary-faded" data-try-again>{$rslang->trans('order.try_again')}</button>
+        </div>
     </div>
     {if $configProductDomain}
     <div class="transfer-eligible message message-lg message-success message-h">

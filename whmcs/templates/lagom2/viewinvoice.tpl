@@ -219,7 +219,7 @@
             {/if}
         </div>   
         </div>
-        <div class="main-sidebar  {if $sidebarOnRight || $RSThemes['layouts']['name'] == 'left-nav-wide'} main-sidebar-right {/if}">
+        <div class="main-sidebar {if $sidebarOnRight || $RSThemes['layouts']['name'] == 'left-nav-wide'} main-sidebar-right {/if}">
             <div class="sidebar-sticky" {if $RSThemes.addonSettings.show_affixed_navigation == 'enabled'}data-sidebar-sticky{/if}>
                 {if $status == "Unpaid"}
                     <div class="panel panel-summary panel-summary-{$sidebarBoxStyle} view-invoice panel-view-invoice">
@@ -285,5 +285,40 @@
         </div>
     {/if}
 {/if}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const paymentBtnContainer = document.querySelector('.payment-btn-container');
+
+        if (paymentBtnContainer) {
+            const loaderHTML = `
+            <div class="loader loader-button hidden">
+                <div class="spinner spinner-sm">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                </div>
+            </div>`;
+
+            paymentBtnContainer.insertAdjacentHTML('beforeend', loaderHTML);
+
+            const loader = paymentBtnContainer.querySelector('.loader');
+
+            const submitBtn = paymentBtnContainer.querySelector('button[type="submit"], input[type="submit"]');
+
+            if (submitBtn) {
+                submitBtn.addEventListener('click', function() {
+
+                    submitBtn.style.color = 'transparent';
+                    loader.classList.remove('hidden');
+                    loader.classList.add('d-flex');
+
+                });
+            }
+        }
+    });
+</script>
 
 

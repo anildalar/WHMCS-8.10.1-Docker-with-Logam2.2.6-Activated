@@ -2856,6 +2856,7 @@ jQuery(document).ready(function () {
                             .attr('data-domain', domain.domainName)
                             .removeClass('hidden');
                             result.find('.btn-loading').addClass('hidden');    
+                            result.closest('.spotlight').removeClass('unavailable');
                             result.find('button.btn-remove-domain').attr('data-domain', domain.domainName);
                             if (tldCycleSwitcher.length){
                                 let langYear = tldCycleSwitcher.attr('data-lang-year'),
@@ -3313,7 +3314,7 @@ jQuery(document).ready(function () {
     */
     jQuery('#serviceRenewals').find('span.added').hide().end().find('span.to-add').find('i').hide();
     jQuery('#serviceRenewals').find('.btn-remove-renewal').hide();
-    jQuery('.btn-add-renewal-to-cart').on('click', function () {
+    jQuery(document).on('click','.btn-add-renewal-to-cart',function () {
         var self = jQuery(this);
         var selfOuterWidth = self.outerWidth();
         var domainId = self.data('domain-id');
@@ -3355,10 +3356,7 @@ jQuery(document).ready(function () {
             ).done(function (data) {
                 self.find('span.to-add').hide();
                 self.find('.loader').css("display", "flex").show();
-                //console.log('done');
                 if (data.result === 'added') {
-                    //console.log('added');
-                    //console.log(self.closest('.panel').find('.btn-remove-renewal'));
                     setTimeout(function () {
                         self.find('.loader').hide().end().find('span.added').css("display", "flex");
                         self.closest('.panel').addClass('border-primary domain-renewal-added');
@@ -3391,6 +3389,10 @@ jQuery(document).ready(function () {
                 jQuery(this).closest('.panel').removeClass('border-primary domain-renewal-added');
                 jQuery(this).removeClass('btn-primary').addClass('btn-primary-faded');
             });
+            let renewAll = $('.page-domain-renewals [data-domain-renewals-add-all]');
+            if (renewAll.length){
+                renewAll.removeClass('disabled').prop('disabled', false);
+            }
         }).always(function () {
             jQuery('#modalRemoveItem').modal('hide');
             recalculateRenewalTotals();
@@ -4254,6 +4256,83 @@ jQuery(document).ready(function () {
                     event.preventDefault();
                     loginBtn.click();
                 }
+            });
+        }
+
+        /*
+        ************************************************************
+        14. Renew all domains
+        ************************************************************
+        */
+        let renewAll = $('.page-domain-renewals [data-domain-renewals-add-all]'),
+            renewAllContainer = $('.page-domain-renewals [data-domain-renewals-add-all-container]'),
+            renewAllCounter = $('.page-domain-renewals [data-domain-renewals-add-all-counter]');
+
+        if (renewAll.length){
+            let checkRenewalsAjaxUrl = renewAll.data('check-renew-url');
+            $.ajax({
+                type: 'POST',
+                url: checkRenewalsAjaxUrl,
+                success: function (data) {
+                    let counter = renewAll.data('renewals-in-cart'),
+                        allDomains = parseInt(counter) + parseInt(data);
+                    renewAllCounter.html(allDomains);   
+                    if (data == 0){
+                        renewAll.addClass('disabled').prop('disabled', true);
+                    }
+                    if (allDomains != 0){
+                        renewAllContainer.removeClass('hidden');
+                    }  
+                }
+            });
+
+            renewAll.on('click', function(){
+                let text = $(this).find('.btn-text');
+                let loader = $(this).find('loader');
+                let ajaxUrl = $(this).data('ajax-url');
+
+                text.addClass('invisible');
+                loader.removeClass('hidden');
+
+                $.ajax({
+                    type: 'POST',
+                    url: ajaxUrl,
+                    success: function (data) {
+                        
+                        if (data == "true"){
+                            $('[data-renewal-alert-no-domain]').hide();
+                            $('[data-renewal-alert-added]').show();
+                            renewAll.addClass('disabled').prop('disabled', true);
+                            let buttons = $('#domainRenewals').find('.btn-add-renewal-to-cart')
+                            if ($('#tableRenewalList').length){
+                                buttons = $('#tableRenewalList').find('.btn-add-renewal-to-cart');
+                            }
+
+                            buttons.each(function () {
+                                jQuery(this).find('span.added').show().end()
+                                    .removeClass('checkout').find('span.to-add').hide().end();
+                                
+                                jQuery(this).closest('.panel').addClass('border-primary domain-renewal-added');
+                                jQuery(this).addClass('btn-primary').removeClass('btn-primary-faded');
+                            });
+
+                            setTimeout(function(){
+                                $('[data-renewal-alert-added]').hide();
+                            },10000);
+
+                            recalculateRenewalTotals();
+
+                        } else {
+                            $('[data-renewal-alert-no-domain]').show();
+                            $('[data-renewal-alert-added]').hide();
+                            setTimeout(function(){
+                                $('[data-renewal-alert-no-domain]').hide();
+                            }, 10000);
+                        }  
+                        text.removeClass('invisible');
+                        loader.addClass('hidden');
+                    }
+                })
             });
         }
     });

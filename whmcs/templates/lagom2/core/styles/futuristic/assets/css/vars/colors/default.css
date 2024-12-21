@@ -113,6 +113,8 @@
     --svg-illustration-color-7:                     #ffffff; /* name: Secondary;  type: hiddenlist;*/
     --svg-illustration-shadow:                      #000000;
 
+    --svg-illustration-line-color:                 rgba(118, 200, 254, 0.24); 
+
     /* Section: Background */
  
     --body-bg:                                      #022268; /* name: Body; type: hiddenlist;*/

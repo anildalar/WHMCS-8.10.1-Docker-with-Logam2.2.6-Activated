@@ -9,3 +9,5 @@
 {include file="adminarea/cms/includes/tab-optimization.tpl"}
 
 {include file="adminarea/cms/includes/tab-export-import.tpl"}
+
+{include file="adminarea/cms/includes/tab-promotion.tpl"}

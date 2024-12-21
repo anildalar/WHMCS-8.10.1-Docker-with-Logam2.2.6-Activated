@@ -55,8 +55,8 @@ return [
                     'label' => 'Graphic for this group',
                     'graphic_types' => 'icons',
                     'grouped_only_visible' => true,
-                    'tooltip' => 'TO DO',
-                    'tooltip_url' => 'TO DO'
+                    'tooltip' => 'Choose a graphic to display on the group tab.',
+                    'tooltip_url' => 'https://lagom-staging.rsstudio.net/docs/website-builder/section-product-comparison/#add-group'
                 ],
                 [   // Packages
                     'type' => 'product',
