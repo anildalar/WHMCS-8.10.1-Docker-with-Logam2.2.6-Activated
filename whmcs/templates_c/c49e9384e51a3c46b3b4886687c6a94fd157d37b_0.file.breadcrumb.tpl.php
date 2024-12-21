@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:52
+/* Smarty version 3.1.48, created on 2024-12-21 06:00:46
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/breadcrumb.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de246ea802_78418620',
+  'unifunc' => 'content_6766598e345347_45460616',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c49e9384e51a3c46b3b4886687c6a94fd157d37b' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/breadcrumb.tpl',
-      1 => 1725773960,
+      1 => 1734760587,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/breadcrumb/button-back.tpl' => 8,
   ),
 ),false)) {
-function content_66f7de246ea802_78418620 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6766598e345347_45460616 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="app-main__top">
     <div class="container">
         <div class="top">

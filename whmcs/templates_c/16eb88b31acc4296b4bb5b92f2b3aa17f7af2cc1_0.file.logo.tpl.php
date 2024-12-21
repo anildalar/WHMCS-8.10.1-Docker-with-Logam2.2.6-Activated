@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:38
+/* Smarty version 3.1.48, created on 2024-12-21 05:56:55
   from '/var/www/html/templates/lagom2/includes/common/logo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de161f9ec6_19811422',
+  'unifunc' => 'content_676658a761e1d7_35539931',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '16eb88b31acc4296b4bb5b92f2b3aa17f7af2cc1' => 
     array (
       0 => '/var/www/html/templates/lagom2/includes/common/logo.tpl',
-      1 => 1725773960,
+      1 => 1734760587,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de161f9ec6_19811422 (Smarty_Internal_Template $_smarty_tpl) {
+function content_676658a761e1d7_35539931 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/overwrites/logo.tpl")) {?>
      <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/overwrites/logo.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>  

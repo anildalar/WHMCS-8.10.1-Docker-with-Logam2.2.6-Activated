@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:52
+/* Smarty version 3.1.48, created on 2024-12-21 06:00:46
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de246a66c0_10120502',
+  'unifunc' => 'content_6766598e2f6981_65905247',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a96387a6e1ea21d71a15c4a7959de7e69a510793' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/navbar.tpl',
-      1 => 1725773960,
+      1 => 1734760587,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de246a66c0_10120502 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6766598e2f6981_65905247 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="app-navbar navbar navbar--main navbar--h">
     <div class="container">
         <a class="navbar__brand brand" href="<?php echo $_smarty_tpl->tpl_vars['helper']->value->url('Templates@index');?>

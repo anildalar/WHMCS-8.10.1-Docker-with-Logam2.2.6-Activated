@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:38
+/* Smarty version 3.1.48, created on 2024-12-21 05:56:55
   from '/var/www/html/templates/lagom2/includes/common/seo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de160db9a5_84684552',
+  'unifunc' => 'content_676658a755cd53_41616466',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c437778cdee1186eea7a905845e6a1b21925b579' => 
     array (
       0 => '/var/www/html/templates/lagom2/includes/common/seo.tpl',
-      1 => 1725773960,
+      1 => 1734760587,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de160db9a5_84684552 (Smarty_Internal_Template $_smarty_tpl) {
+function content_676658a755cd53_41616466 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),1=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.truncate.php','function'=>'smarty_modifier_truncate',),));
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/overwrites/seo.tpl")) {?>
      <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/overwrites/seo.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
@@ -42,7 +42,14 @@ if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)
         <?php } else { ?>
             <?php echo $_smarty_tpl->tpl_vars['displayTitle']->value;?>
 
-        <?php }?> - <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
+        <?php }?> <?php if ($_smarty_tpl->tpl_vars['templatefile']->value == "knowledgebasecat" && $_smarty_tpl->tpl_vars['catname']->value) {?>- <?php echo $_smarty_tpl->tpl_vars['catname']->value;?>
+ <?php }
+if ($_smarty_tpl->tpl_vars['templatefile']->value == "knowledgebasecat" && $_smarty_tpl->tpl_vars['tag']->value) {?>- <?php echo $_smarty_tpl->tpl_vars['tag']->value;?>
+ <?php }
+if ($_smarty_tpl->tpl_vars['templatefile']->value == "knowledgebasecat" && $_smarty_tpl->tpl_vars['catname']->value) {?>- <?php echo $_smarty_tpl->tpl_vars['catname']->value;?>
+ <?php }
+if ($_smarty_tpl->tpl_vars['templatefile']->value == "announcements" && $_smarty_tpl->tpl_vars['view']->value) {?>- <?php echo $_smarty_tpl->tpl_vars['view']->value;?>
+ <?php }?>- <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
 
     </title>
     <?php if ($_smarty_tpl->tpl_vars['templatefile']->value == "knowledgebasearticle" || $_smarty_tpl->tpl_vars['templatefile']->value == "viewannouncement" || $_smarty_tpl->tpl_vars['templatefile']->value == "knowledgebasecat") {?>
@@ -110,22 +117,21 @@ echo $_smarty_tpl->tpl_vars['currentUrl']->value;
     <?php if ((isset($_smarty_tpl->tpl_vars['pageSeo']->value['enabled'])) && $_smarty_tpl->tpl_vars['pageSeo']->value['enabled']) {?>
         <?php if ((isset($_smarty_tpl->tpl_vars['pageSeo']->value['description'][$_smarty_tpl->tpl_vars['language']->value]))) {?><meta name="description" content="<?php echo $_smarty_tpl->tpl_vars['pageSeo']->value['description'][$_smarty_tpl->tpl_vars['language']->value];?>
 "><?php }?>
-        <?php if ((isset($_smarty_tpl->tpl_vars['activeDisplay']->value)) && $_smarty_tpl->tpl_vars['activeDisplay']->value == 'CMS') {?>
-            <meta name="robots" content="<?php if ($_smarty_tpl->tpl_vars['pageSeo']->value['robots'] == 0) {?>noindex nofollow<?php } else { ?>index follow<?php }?>">
-        <?php }?>
-        <meta name="og:type" content="<?php if ($_smarty_tpl->tpl_vars['templatefile']->value == 'homepage') {?>website<?php } else { ?>article<?php }?>">
-        <meta name="og:title" content="<?php if ((isset($_smarty_tpl->tpl_vars['pageSeo']->value['title'][$_smarty_tpl->tpl_vars['language']->value]))) {
+        <meta name="robots" content="<?php if ($_smarty_tpl->tpl_vars['pageSeo']->value['robots'] == 0) {?>noindex nofollow<?php } else { ?>index follow<?php }?>">
+        <meta property="og:type" content="<?php if ($_smarty_tpl->tpl_vars['templatefile']->value == 'homepage') {?>website<?php } else { ?>article<?php }?>">
+        <meta property="og:title" content="<?php if ((isset($_smarty_tpl->tpl_vars['pageSeo']->value['title'][$_smarty_tpl->tpl_vars['language']->value]))) {
 echo $_smarty_tpl->tpl_vars['pageSeo']->value['title'][$_smarty_tpl->tpl_vars['language']->value];
 } else {
 echo $_smarty_tpl->tpl_vars['displayTitle']->value;
-}?>">
-        <?php if ((isset($_smarty_tpl->tpl_vars['pageSeo']->value['description'][$_smarty_tpl->tpl_vars['language']->value]))) {?><meta name="og:description" content="<?php echo $_smarty_tpl->tpl_vars['pageSeo']->value['description'][$_smarty_tpl->tpl_vars['language']->value];?>
+}?> - <?php echo $_smarty_tpl->tpl_vars['companyname']->value;?>
+">
+        <?php if ((isset($_smarty_tpl->tpl_vars['pageSeo']->value['description'][$_smarty_tpl->tpl_vars['language']->value]))) {?><meta property="og:description" content="<?php echo $_smarty_tpl->tpl_vars['pageSeo']->value['description'][$_smarty_tpl->tpl_vars['language']->value];?>
 "><?php }?>
         <?php if ((isset($_smarty_tpl->tpl_vars['pageSeo']->value['image']))) {?><meta property="og:image" content="<?php echo $_smarty_tpl->tpl_vars['systemurl']->value;?>
 templates/<?php echo $_smarty_tpl->tpl_vars['template']->value;?>
 /assets/img/page-manager/<?php echo $_smarty_tpl->tpl_vars['pageSeo']->value['image'];?>
 "><?php }?>
-        <meta name="og:url" content="<?php echo $_smarty_tpl->tpl_vars['systemurl']->value;
+        <meta property="og:url" content="<?php echo $_smarty_tpl->tpl_vars['systemurl']->value;
 echo ltrim($_SERVER['REQUEST_URI'],'/');?>
 ">
         <meta name="twitter:title" content="<?php if ((isset($_smarty_tpl->tpl_vars['pageSeo']->value['title'][$_smarty_tpl->tpl_vars['language']->value]))) {
