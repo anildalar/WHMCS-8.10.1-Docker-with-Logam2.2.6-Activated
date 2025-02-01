@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:15
+/* Smarty version 3.1.48, created on 2025-01-07 15:55:23
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-tools-2.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de3b884b35_71304849',
+  'unifunc' => 'content_677d4e6b55ea50_63431898',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b94155d89b920d12da4da21c51dc15af3a0287d' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-tools-2.tpl',
-      1 => 1725773960,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de3b884b35_71304849 (Smarty_Internal_Template $_smarty_tpl) {
+function content_677d4e6b55ea50_63431898 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.5 3L32 1L28.5 3M48.4 10.4L42.6 7.1M59 20.6V16.6L55.5 14.6M59 35.3V28.7M55.5 49.4L59 47.4V43.4M42.6 56.9L48.4 53.6M28.5 61L32 63L35.5 61M15.6 53.6L21.4 56.9M5 43.4V47.4L8.5 49.4M5 28.7V35.3M8.5 14.6L5 16.6V20.6M21.4 7.1L15.6 10.5" />
     <path fill="var(--svg-icon-color-2)" d="M51.9978 26.8749V24.5567L48.6645 26.2469L44.8531 24.0741L47.4001 22.6222L47.3977 22.6215V20.4494L35.8293 24.5489V26.3832L36.2501 28.2541L22.6667 35.9975L12.0026 38.0609V40.3869C11.9962 40.7602 12.1441 41.6763 12.7871 42.3537L16.9125 40.002L18.9017 41.0673L17.784 41.7295L16.5954 42.3558V44.525L16.6011 44.525L16.5986 44.5264C19.604 45.3449 23.4183 45.1224 25.9076 43.7034C28.0522 42.4808 28.1689 40.8598 28.1689 38.6549L41.3321 31.1511C44.1501 31.6909 47.3864 31.321 49.6311 30.0414C51.6132 28.9028 52.0348 27.456 51.9978 26.8749Z" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:09
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/modals/overwrite-display-menu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf590e9919_40816798',
+  'unifunc' => 'content_6784b3a23431e9_77882670',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ecec53c0e3424ab0f2ff5a138683496507646e0b' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/modals/overwrite-display-menu.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700cf590e9919_40816798 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a23431e9_77882670 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="overwriteDisplayMenuModal" data-menu-overwrite-rules-modal>
     <div class="modal__dialog">
         <div class="modal__content">

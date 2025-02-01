@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 04:55:27
+/* Smarty version 3.1.48, created on 2025-01-13 07:06:58
   from '/var/www/html/templates/lagom2/assets/svg-icon/company.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe0bf98c1f7_98456139',
+  'unifunc' => 'content_6784bb92ba2430_48047594',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7f9a8b5f67d3235d7d14476b112ffc12bf74707f' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/company.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe0bf98c1f7_98456139 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784bb92ba2430_48047594 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 13.442v37.262l15.984 9.437 16.985-9.437V13.442m-32.969 0 16 9.566m-16-9.566 16.047-9.41 16.922 9.41m0 0L33 23.008m0 0-.016 36.603M2.016 28.41v13.261l14.953 9.014M2.016 28.411l14.953 9.146M2.016 28.41l14.906-8.38m45.117 10.81V44.1l-11.977 6.524M62.04 30.84l-11.977 6.656M62.04 30.84l-11.664-6.809" />
     <path fill="var(--svg-icon-color-2)" d="m42.493 23.576 4.336-2.518h.14v5.456l-4.476 2.657v-5.595Zm-6.435 3.497 4.476-2.518v5.456l-4.476 2.657v-5.595Zm4.476 6.294-4.476 2.658v5.455l4.476-2.517v-5.596ZM36.058 45.08l4.476-2.658v5.595l-4.476 2.518V45.08Zm10.771-15.21-4.336 2.658v5.455l4.476-2.517V29.87h-.14Zm-4.336 11.713 4.336-2.658h.14v5.595l-4.476 2.518v-5.455Z" />

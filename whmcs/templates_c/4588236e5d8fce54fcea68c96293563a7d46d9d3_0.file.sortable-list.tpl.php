@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-21 07:19:10
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:25
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/sortable-list.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67666beece6770_84581771',
+  'unifunc' => 'content_6784b199a55d69_84566438',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/sortable-list/edit-btn.tpl' => 6,
   ),
 ),false)) {
-function content_67666beece6770_84581771 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b199a55d69_84566438 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 $_smarty_tpl->_assignInScope('iconLocation', "./../../../../assets/svg-icons");
 $_smarty_tpl->_assignInScope('iconsPath', "./../../../../../../../templates/".((string)$_smarty_tpl->tpl_vars['themeName']->value)."/assets/svg-icon");

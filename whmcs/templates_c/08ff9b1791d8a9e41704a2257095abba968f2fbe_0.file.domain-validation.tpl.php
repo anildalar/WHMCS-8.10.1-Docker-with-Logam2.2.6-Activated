@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 19:35:55
+/* Smarty version 3.1.48, created on 2025-01-03 12:12:37
   from '/var/www/html/templates/lagom2/assets/svg-icon/domain-validation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f85a9b748ce7_35986929',
+  'unifunc' => 'content_6777d4357832f2_81140414',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '08ff9b1791d8a9e41704a2257095abba968f2fbe' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/domain-validation.tpl',
-      1 => 1725773960,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f85a9b748ce7_35986929 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d4357832f2_81140414 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M34.177 3.253c-15.049-2.03-28.894 8.524-30.923 23.57-2.03 15.047 8.524 28.89 23.573 30.92 15.049 2.029 28.893-8.524 30.923-23.57 2.03-15.048-8.524-28.89-23.573-30.92ZM1.268 26.555C3.446 10.412 18.3-.91 34.445 1.268 50.59 3.445 61.913 18.297 59.735 34.44c-2.177 16.143-17.03 27.465-33.176 25.288C10.414 57.551-.909 42.698 1.27 26.556Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linejoin="round" stroke-width="2" d="m43.521 5.677-8.026 2.505-.475 3.524-1.346 2.38-5.17.329-2.42 2.748 6.04.815 4.762 2.692 3.02.408 1.171 2.72-1.646.803-7.047-.95-2.884-1.414-4.027-.543-1.918 2.816-1.918 2.817 2.75 2.42 1.741 2.286 3.756 2.557-1.55 3.89.463 4.164 1.81 1.781 1.81 1.782 2.72-1.17.34-2.517 3.564-3.62 2.189-4.83 1.781-1.81 2.285-1.742-1.606-3.292 3.02.407 2.79-1.673.631-2.52 1.015 1.717 2.381 1.346 1.239 2.218-.272 2.013 1.878 1.278 2.013.272M25.46 2.593l2.817 1.918-.475 3.523-5.741.764-3.795 1.538-4.067 3.552-1.918 2.817-2.189 4.83-1.85 2.313-2.476-4.434-2.204 3.974 2.124 4.215 3.32 1.986 1.374 1.21 1.035 3.728-.475 3.523 1.606 3.292-.34 2.517-.474 3.524-.475 3.523" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:26
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/page-delete.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f75d2b7_49813846',
+  'unifunc' => 'content_6784b19a288502_24399898',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a274bc2031da38ee54ec971cc38d5a4662bbfe3' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/page-delete.tpl',
-      1 => 1720189762,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de2f75d2b7_49813846 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b19a288502_24399898 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal modal--hero" id="deletePageModal">
     <div class="modal__dialog">
         <div class="modal__content">

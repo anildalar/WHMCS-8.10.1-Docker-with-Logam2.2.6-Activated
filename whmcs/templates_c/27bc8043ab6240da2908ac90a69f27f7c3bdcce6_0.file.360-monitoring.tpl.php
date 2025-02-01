@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 09:33:55
+/* Smarty version 3.1.48, created on 2025-01-05 19:10:55
   from '/var/www/html/templates/lagom2/core/cms/sections/common/forms/360-monitoring.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67010803714b89_55070710',
+  'unifunc' => 'content_677ad93f9cf6f9_95351462',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '27bc8043ab6240da2908ac90a69f27f7c3bdcce6' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/common/forms/360-monitoring.tpl',
-      1 => 1715336408,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67010803714b89_55070710 (Smarty_Internal_Template $_smarty_tpl) {
+function content_677ad93f9cf6f9_95351462 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/360-monitoring.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/360-monitoring.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>  

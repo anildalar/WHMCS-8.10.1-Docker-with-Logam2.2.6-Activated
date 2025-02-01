@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/sharedhosting-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aeaec520_38292435',
+  'unifunc' => 'content_6784b5b6b921f7_31833957',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'de1de9deee53b8a4c3e21ade7791a9fae3b6fe5d' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/sharedhosting-left.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aeaec520_38292435 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6b921f7_31833957 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-sharedhosting-left svg-sharedhosting-left-left promo-slider-icon promo-slider-icon-reverse" width="596" height="514" fill="none" viewBox="0 0 596 514">
     <g clip-path="url(#shared-hosting-modern-left-left__a)">
         <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M181 242.171V409.029L1.00017 512.937V345.804L181 242.171Z" />

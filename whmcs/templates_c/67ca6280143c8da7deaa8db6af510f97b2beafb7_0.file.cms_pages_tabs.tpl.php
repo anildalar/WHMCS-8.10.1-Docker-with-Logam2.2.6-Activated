@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:55
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:19
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/cms_pages_tabs.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de276c65e4_99251933',
+  'unifunc' => 'content_6784b193a3b5c3_19522701',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '67ca6280143c8da7deaa8db6af510f97b2beafb7' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/cms_pages_tabs.tpl',
-      1 => 1720189766,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/cms/includes/tab-export-import.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de276c65e4_99251933 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b193a3b5c3_19522701 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:adminarea/cms/includes/tab-website.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

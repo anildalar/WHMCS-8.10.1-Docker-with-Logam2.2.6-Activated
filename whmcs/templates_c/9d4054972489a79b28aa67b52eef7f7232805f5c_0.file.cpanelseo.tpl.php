@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/cpanelseo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3ae9c6315_52472000',
+  'unifunc' => 'content_6784b5b6ad8078_59061518',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9d4054972489a79b28aa67b52eef7f7232805f5c' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/cpanelseo.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3ae9c6315_52472000 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6ad8078_59061518 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-seo promo-slider-icon svg-cpanelseo svg-cpanelseo-left" width="377" height="324" fill="none" viewBox="0 0 377 324">
     <g clip-path="url(#cpanel-seo-modern-right-left__a)">
         <path fill="url(#cpanel-seo-modern-right-left__b)" fill-opacity=".1" d="M26.8649 216.64L62.1759 237.323L42.6174 248.722L7.26725 228.025L26.8649 216.64Z" />

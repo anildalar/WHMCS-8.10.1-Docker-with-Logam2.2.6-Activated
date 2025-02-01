@@ -1,0 +1,2467 @@
+{
+    "menu-settings": {
+        "name": "Custom Header",
+        "version": "1.0.0",
+        "location": "Main Menu",
+        "active": 1,
+        "display": "CMS",
+        "rules": "Website"
+    },
+    "menu-items": [
+        {
+            "name": "Products",
+            "location": null,
+            "active": 1,
+            "type": "Custom Link",
+            "settings": {
+                "link": "#",
+                "translation-method": "custom",
+                "icon": "",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "mega",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "Products",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            },
+            "items": [
+                {
+                    "name": "Products",
+                    "location": null,
+                    "active": 1,
+                    "type": "Header",
+                    "settings": {
+                        "translation-method": "custom"
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Products",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "All Products",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "\/store\/enterprise-hostedpbx",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-one-click-installation-7.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"Browse All Ocean Products\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "All Products",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "AI Assistant",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "page": "178",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-box-3.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"AI Assistant for Real Estate Agent\\\/Broker\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "AI Assistant",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Ocean PBX Dialer",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "page": "180",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-support-headset-box.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"Boost Productivity And Sales With Our Predective Dialer\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Ocean PBX Dialer",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "SMS Platform",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "comments.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"Efficiently send, control, and analyze your SMS.\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "SMS Platform",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "VoIP Service",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "shared-hosting.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"Communicate with global SIP trunk and VoIP termination.\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "VoIP Service",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "-----",
+                    "location": null,
+                    "active": 1,
+                    "type": "Divider",
+                    "settings": null,
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": "-----"
+                },
+                {
+                    "name": "Cloud PBX",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "156-cloud-servers-1.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"Manage and monitor your customer communications.\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Cloud PBX",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "DID Numbers",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-email-2.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"Manage and monitor your customer communications.\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "DID Numbers",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "HLR Lookup",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-domain-search.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"Accurately validate any phone number. No more dead-end leads.\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "HLR Lookup",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "DNRC Lookup",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "\/store\/dnrc-check",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-domain-search.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"Accurately validate any phone number for Do Not Call.\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "DNRC Lookup",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Telecom",
+            "location": null,
+            "active": 1,
+            "type": "Custom Link",
+            "settings": {
+                "link": "#",
+                "translation-method": "custom",
+                "icon": "",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "Telecom",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            },
+            "items": [
+                {
+                    "name": "easySIM",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "page": "179",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": "easySim_wp.png"
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "easySIM",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Solutions",
+            "location": null,
+            "active": 1,
+            "type": "Custom Link",
+            "settings": {
+                "link": "#",
+                "translation-method": "custom",
+                "icon": "",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "mega",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "Solutions",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            },
+            "items": [
+                {
+                    "name": "By Industry",
+                    "location": null,
+                    "active": 1,
+                    "type": "Header",
+                    "settings": {
+                        "translation-method": "custom"
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "By Industry",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Healthcare",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "trusted-by-over-40.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Healthcare",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Education",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-guaranteed-satisfaction-3.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Education",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "eCommerce and Retail",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "credit-card.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "eCommerce and Retail",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Insurance",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-success-shield.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Insurance",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Real Estate",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-keys-dashed-cube.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Real Estate",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Financial Services",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-briefcase-business.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Financial Services",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Explore More Industries",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Explore More Industries",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "-----",
+                    "location": null,
+                    "active": 1,
+                    "type": "Divider",
+                    "settings": null,
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": "-----"
+                },
+                {
+                    "name": "By Need",
+                    "location": null,
+                    "active": 1,
+                    "type": "Header",
+                    "settings": {
+                        "translation-method": "custom"
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "By Need",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Contact Centers",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-support-headset-arrows-circle.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Contact Centers",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Inbound Call Centers",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-support-24-headset.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Inbound Call Centers",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Cloud-Based Call Centers",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-support-headset-arrows-circle.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Cloud-Based Call Centers",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Customer Services",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-support-24-headset.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Customer Services",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Outbound Call Centers",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-support-headset-arrows-circle.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Releases Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Outbound Call Centers",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Investors",
+            "location": null,
+            "active": 1,
+            "type": "Custom Link",
+            "settings": {
+                "link": "#",
+                "translation-method": "custom",
+                "icon": "",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "Investors",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            }
+        },
+        {
+            "name": "Company",
+            "location": null,
+            "active": 1,
+            "type": "Custom Link",
+            "settings": {
+                "link": "#",
+                "translation-method": "custom",
+                "icon": "",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "All",
+                "style": {
+                    "top": {
+                        "layout": "text",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "left",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "Company",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            },
+            "items": [
+                {
+                    "name": "Company",
+                    "location": null,
+                    "active": 1,
+                    "type": "Header",
+                    "settings": {
+                        "translation-method": "custom"
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Company",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "About Us",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "page": "114",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "company.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "primary-faded",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "About Us",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Contact Us",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "page": "120",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-support-headset-box.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Contact Us",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Careers",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-rocket-dashed-box.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Careers",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "News",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "article.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "News",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Events",
+                    "location": null,
+                    "active": 1,
+                    "type": "Custom Link",
+                    "settings": {
+                        "link": "#",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-calendar-1.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "{&quot;arabic&quot;:&quot;&quot;,&quot;azerbaijani&quot;:&quot;&quot;,&quot;catalan&quot;:&quot;&quot;,&quot;chinese&quot;:&quot;&quot;,&quot;croatian&quot;:&quot;&quot;,&quot;czech&quot;:&quot;&quot;,&quot;danish&quot;:&quot;&quot;,&quot;dutch&quot;:&quot;&quot;,&quot;english&quot;:&quot;Soon&quot;,&quot;estonian&quot;:&quot;&quot;,&quot;farsi&quot;:&quot;&quot;,&quot;french&quot;:&quot;&quot;,&quot;german&quot;:&quot;&quot;,&quot;hebrew&quot;:&quot;&quot;,&quot;hungarian&quot;:&quot;&quot;,&quot;italian&quot;:&quot;&quot;,&quot;macedonian&quot;:&quot;&quot;,&quot;norwegian&quot;:&quot;&quot;,&quot;portuguese-br&quot;:&quot;&quot;,&quot;portuguese-pt&quot;:&quot;&quot;,&quot;romanian&quot;:&quot;&quot;,&quot;russian&quot;:&quot;&quot;,&quot;spanish&quot;:&quot;&quot;,&quot;swedish&quot;:&quot;&quot;,&quot;turkish&quot;:&quot;&quot;,&quot;ukranian&quot;:&quot;&quot;}",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Events",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Blog",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "page": "116",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-camera-1.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Blog",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Knowledgebase",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "page": "55",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "64-storage-2.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Knowledgebase",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                },
+                {
+                    "name": "Supporting Governments",
+                    "location": null,
+                    "active": 1,
+                    "type": "WHMCS Page",
+                    "settings": {
+                        "page": "182",
+                        "translation-method": "custom",
+                        "icon": "",
+                        "predefined_icon": "our-team.tpl",
+                        "predefined_illustration": "",
+                        "media": ""
+                    },
+                    "display": {
+                        "label_type": "default",
+                        "label_text": "",
+                        "client-status": "All",
+                        "style": {
+                            "layout": "icon-text"
+                        },
+                        "custom-data-classes": "",
+                        "target": "0"
+                    },
+                    "description": "{\"arabic\":\"\",\"azerbaijani\":\"\",\"catalan\":\"\",\"chinese\":\"\",\"croatian\":\"\",\"czech\":\"\",\"danish\":\"\",\"dutch\":\"\",\"english\":\"\",\"estonian\":\"\",\"farsi\":\"\",\"french\":\"\",\"german\":\"\",\"hebrew\":\"\",\"hungarian\":\"\",\"italian\":\"\",\"macedonian\":\"\",\"norwegian\":\"\",\"portuguese-br\":\"\",\"portuguese-pt\":\"\",\"romanian\":\"\",\"russian\":\"\",\"spanish\":\"\",\"swedish\":\"\",\"turkish\":\"\",\"ukranian\":\"\"}",
+                    "translation": {
+                        "whmcs": "",
+                        "custom": {
+                            "arabic": "",
+                            "azerbaijani": "",
+                            "catalan": "",
+                            "chinese": "",
+                            "croatian": "",
+                            "czech": "",
+                            "danish": "",
+                            "dutch": "",
+                            "english": "Supporting Governments",
+                            "estonian": "",
+                            "farsi": "",
+                            "french": "",
+                            "german": "",
+                            "hebrew": "",
+                            "hungarian": "",
+                            "italian": "",
+                            "macedonian": "",
+                            "norwegian": "",
+                            "portuguese-br": "",
+                            "portuguese-pt": "",
+                            "romanian": "",
+                            "russian": "",
+                            "spanish": "",
+                            "swedish": "",
+                            "turkish": "",
+                            "ukranian": ""
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Login",
+            "location": null,
+            "active": 1,
+            "type": "WHMCS Page",
+            "settings": {
+                "page": "58",
+                "translation-method": "whmcs",
+                "icon": "",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "Logged-Out",
+                "style": {
+                    "top": {
+                        "layout": "button",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "right",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "login",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "Log In",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            }
+        },
+        {
+            "name": "My Account",
+            "location": null,
+            "active": 1,
+            "type": "WHMCS Page",
+            "settings": {
+                "page": "1",
+                "translation-method": "whmcs",
+                "icon": "",
+                "predefined_icon": "",
+                "predefined_illustration": "",
+                "media": ""
+            },
+            "display": {
+                "label_type": "default",
+                "label_text": "",
+                "dropdown": "default",
+                "dropdown_graphic": {
+                    "icon": "",
+                    "predefined_icon": "",
+                    "predefined_illustration": "",
+                    "media": ""
+                },
+                "dropdown_description": "",
+                "theme-layout": [
+                    "All"
+                ],
+                "client-status": "Logged-In",
+                "style": {
+                    "top": {
+                        "layout": "button",
+                        "button-style": "primary"
+                    },
+                    "left": {
+                        "layout": "icon-text",
+                        "button-style": "primary"
+                    }
+                },
+                "position": "right",
+                "custom-data-classes": "",
+                "target": "0"
+            },
+            "description": "null",
+            "translation": {
+                "whmcs": "myaccount",
+                "custom": {
+                    "arabic": "",
+                    "azerbaijani": "",
+                    "catalan": "",
+                    "chinese": "",
+                    "croatian": "",
+                    "czech": "",
+                    "danish": "",
+                    "dutch": "",
+                    "english": "My Account",
+                    "estonian": "",
+                    "farsi": "",
+                    "french": "",
+                    "german": "",
+                    "hebrew": "",
+                    "hungarian": "",
+                    "italian": "",
+                    "macedonian": "",
+                    "norwegian": "",
+                    "portuguese-br": "",
+                    "portuguese-pt": "",
+                    "romanian": "",
+                    "russian": "",
+                    "spanish": "",
+                    "swedish": "",
+                    "turkish": "",
+                    "ukranian": ""
+                }
+            }
+        }
+    ]
+}

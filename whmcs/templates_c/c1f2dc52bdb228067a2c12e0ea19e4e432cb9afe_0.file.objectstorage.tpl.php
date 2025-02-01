@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/objectstorage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aea5eec4_39470840',
+  'unifunc' => 'content_6784b5b6b3f613_36944647',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c1f2dc52bdb228067a2c12e0ea19e4e432cb9afe' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/objectstorage.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aea5eec4_39470840 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6b3f613_36944647 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-objectstorage svg-objectstorage-left promo-slider-icon" width="377" height="324" fill="none" viewBox="0 0 377 324">
     <g clip-path="url(#s-3-object-storage-modern-right-left__a)">
         <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M1.74878 1.77246V106.658L115.749 171.275V66.612L1.74878 1.77246Z" />

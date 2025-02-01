@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 05:34:30
+/* Smarty version 3.1.48, created on 2025-01-31 10:14:02
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/load-autosave.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fcdb66120c71_89393055',
+  'unifunc' => 'content_679ca26a2b2840_49841909',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c12022889f4cb660e01f7a43e61e698fca47b44' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/load-autosave.tpl',
-      1 => 1720189762,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fcdb66120c71_89393055 (Smarty_Internal_Template $_smarty_tpl) {
+function content_679ca26a2b2840_49841909 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="loadAutosave" data-load-autosave-modal>
     <div class="modal__dialog">
         <div class="modal__content">

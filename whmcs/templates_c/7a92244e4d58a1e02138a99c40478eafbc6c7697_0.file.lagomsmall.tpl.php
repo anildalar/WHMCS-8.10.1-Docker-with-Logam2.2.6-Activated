@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:58:51
+/* Smarty version 3.1.48, created on 2025-01-13 06:25:12
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/ajax/lagomsmall.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7e16b0ccff0_63782332',
+  'unifunc' => 'content_6784b1c8978980_84259198',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7a92244e4d58a1e02138a99c40478eafbc6c7697' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/ajax/lagomsmall.tpl',
-      1 => 1725773960,
+      1 => 1730150160,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./../includes/media/no-data.tpl' => 1,
   ),
 ),false)) {
-function content_66f7e16b0ccff0_63782332 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b1c8978980_84259198 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('iconLocation', "./../../../assets/svg-icons");
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['icons']->value['lagomSmall'], 'lagomSmallIcon');
 $_smarty_tpl->tpl_vars['lagomSmallIcon']->do_else = true;

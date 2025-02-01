@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/resellerhosting-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aeac3298_23144329',
+  'unifunc' => 'content_6784b5b6b78609_62287396',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '20deee628019dc1a23480e086e5794eed27a464b' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/resellerhosting-left.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aeac3298_23144329 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6b78609_62287396 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-resellerhosting svg-resellerhosting-left promo-slider-icon promo-slider-icon-reverse" width="596" height="514" fill="none" viewBox="0 0 596 514">
     <g>
         <path fill="url(#reseller-hosting-modern-left-left__a)" fill-opacity=".1" d="M165.958 470.379L183.446 480.555L154.895 491.995L131.559 478.384L165.958 470.379Z" />

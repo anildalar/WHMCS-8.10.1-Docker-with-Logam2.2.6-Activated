@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:55
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:19
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/includes/tab-website.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de276e4111_63711543',
+  'unifunc' => 'content_6784b193a50548_25180924',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd08a1175f3b83a321f105029b8b6fa82947f7540' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/includes/tab-website.tpl',
-      1 => 1720189766,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/docs.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de276e4111_63711543 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b193a50548_25180924 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="tab-pane <?php if (($_smarty_tpl->tpl_vars['template']->value->getActiveDisplay()->name == 'CMS' && !$_GET['tab']) || ($_smarty_tpl->tpl_vars['template']->value->getActiveDisplay()->name == 'CMS' && $_GET['tab'] == 'website')) {?> is-active <?php }?>" id="pages-website">
     <div class="t-c__top top m-b-3x" data-top-search data-toggler-options="toggleClass: is-open;">
         <div class="top__toolbar">

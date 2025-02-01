@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-13 11:18:43
+/* Smarty version 3.1.48, created on 2025-01-13 07:30:21
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/section-bg/modern/bg_illustration-homepage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_675c1813599e09_48537843',
+  'unifunc' => 'content_6784c10d02cbe4_06670776',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4e483a7a161225b24d591b38e3d7832725929418' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/section-bg/modern/bg_illustration-homepage.tpl',
-      1 => 1715336408,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_675c1813599e09_48537843 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c10d02cbe4_06670776 (Smarty_Internal_Template $_smarty_tpl) {
 ?><span class="hidden"> <?php if (!is_object($_smarty_tpl->tpl_vars['template']->value)) {?>
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['WEB_ROOT']->value;?>
 /templates/<?php echo $_smarty_tpl->tpl_vars['template']->value;?>

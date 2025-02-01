@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-globe-close.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d14691bc33_45214193',
+  'unifunc' => 'content_6784c20cb72429_36190493',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8361c5f2ddadcfda3b10a88678b170d2979175e0' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-globe-close.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d14691bc33_45214193 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cb72429_36190493 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="66" height="65" fill="none" viewBox="0 0 66 65">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M35.1752 3.25306C20.1265 1.2237 6.28173 11.7765 4.25212 26.8233C2.22251 41.8702 12.7766 55.7132 27.8253 57.7425C42.874 59.7719 56.7188 49.2191 58.7484 34.1723C60.778 19.1254 50.2239 5.28242 35.1752 3.25306ZM2.26644 26.5555C4.44396 10.4122 19.2976 -0.909624 35.443 1.26762C51.5884 3.44487 62.9116 18.2967 60.7341 34.4401C58.5565 50.5834 43.7029 61.9052 27.5575 59.728C11.4121 57.5507 0.0889187 42.6989 2.26644 26.5555Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linejoin="round" stroke-width="2" d="M44.5196 5.67651L36.4937 8.18181L36.0184 11.7055L34.6722 14.0866L29.5026 14.4145L27.0818 17.1632L33.1223 17.9779L37.8846 20.6703L40.9049 21.0777L42.0756 23.7982L40.4296 24.6013L33.3823 23.6509L30.4978 22.2367L26.4708 21.6936L24.5533 24.5102L22.6358 27.3268L25.3845 29.7477L27.1265 32.0328L30.8819 34.5895L29.3321 38.4807L29.7957 42.6436L31.6056 44.4253L33.4154 46.207L36.136 45.0363L36.4754 42.5194L40.0388 38.8997L42.2279 34.0695L44.0096 32.2597L46.2947 30.5177L44.6885 27.2259L47.7088 27.6332L50.4973 25.9591L51.1287 23.4389L52.1432 25.156L54.5243 26.5023L55.7629 28.7195L55.4913 30.733L57.3691 32.0113L59.3826 32.2829" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:02
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:25
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/add-item/product-group-add.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2ede93e8_07667064',
+  'unifunc' => 'content_6784b199c3f995_26454596',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61c7eb3ce4b2d79d3b55fa7d661fe5540b14d719' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/add-item/product-group-add.tpl',
-      1 => 1720189764,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/modal/tabs.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2ede93e8_07667064 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b199c3f995_26454596 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div 
     class="modal modal--lg modal--media modal--media-scroll" 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/instagram-twitter-connect.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146e92e61_84455227',
+  'unifunc' => 'content_6784c20cf1eec0_04790690',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9daa3c22db187baea677134f4518c9e58eea747e' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/instagram-twitter-connect.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146e92e61_84455227 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cf1eec0_04790690 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linejoin="round" stroke-width="2" d="M15.559 34.3804L24.1171 39.3063L12.5522 45.8918L35.195 58.7731" />
     <path stroke="var(--svg-icon-color-3)" stroke-linejoin="round" stroke-width="2" d="M22.0764 22.2906L55.0135 3.2027V13.2559L43.9965 19.5755V34.3042" />

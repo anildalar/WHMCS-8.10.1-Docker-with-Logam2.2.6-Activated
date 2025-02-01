@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 05:36:17
+/* Smarty version 3.1.48, created on 2025-01-13 06:05:02
   from '/var/www/html/admin/templates/blend/clientssummary.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fcdbd18eb351_11709353',
+  'unifunc' => 'content_6784ad0e522cd2_91262012',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7fe49ca4698ebcc7976c4f7e6d6e52e1fdd72414' => 
     array (
       0 => '/var/www/html/admin/templates/blend/clientssummary.tpl',
-      1 => 1725773959,
+      1 => 1734760264,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fcdbd18eb351_11709353 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784ad0e522cd2_91262012 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/function.cycle.php','function'=>'smarty_function_cycle',),1=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <div id="clientsummarycontainer">

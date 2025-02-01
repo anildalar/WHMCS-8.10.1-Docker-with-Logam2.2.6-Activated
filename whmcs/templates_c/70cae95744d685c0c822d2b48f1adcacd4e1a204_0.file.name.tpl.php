@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:08
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/components/name.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf5883de61_04848101',
+  'unifunc' => 'content_6784b3a216e2a6_29657703',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '70cae95744d685c0c822d2b48f1adcacd4e1a204' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/components/name.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/tooltip.tpl' => 4,
   ),
 ),false)) {
-function content_6700cf5883de61_04848101 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a216e2a6_29657703 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="menu-name-group col-md-12">
     <label class="form-label">
         Name

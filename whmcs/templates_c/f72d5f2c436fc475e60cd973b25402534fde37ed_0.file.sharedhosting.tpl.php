@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-21 06:23:11
+/* Smarty version 3.1.48, created on 2025-01-03 12:50:37
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/sharedhosting.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67665ecfcfdf31_78001270',
+  'unifunc' => 'content_6777dd1d77c421_49942351',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67665ecfcfdf31_78001270 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777dd1d77c421_49942351 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-sharedhosting svg-sharedhosting-left promo-slider-icon" width="596" height="514" fill="none" viewBox="0 0 596 514">
     <g>
         <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M0 1.23447V168.09L180 272V104.868L0 1.23447Z" />

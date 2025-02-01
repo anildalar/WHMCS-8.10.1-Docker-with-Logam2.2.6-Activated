@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 04:55:59
+/* Smarty version 3.1.48, created on 2025-01-18 09:43:26
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/types/currency-switcher.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe0df58df62_40530824',
+  'unifunc' => 'content_678b77be507b06_35223542',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'badf29d11b45495fb8b262e1a395f247f2c5bc09' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/types/currency-switcher.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/menu/includes/components/icon.tpl' => 1,
   ),
 ),false)) {
-function content_674fe0df58df62_40530824 (Smarty_Internal_Template $_smarty_tpl) {
+function content_678b77be507b06_35223542 (Smarty_Internal_Template $_smarty_tpl) {
 ?><input 
     class="translation-<?php echo $_smarty_tpl->tpl_vars['parent']->value;?>
 -<?php echo $_smarty_tpl->tpl_vars['index']->value;?>

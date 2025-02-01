@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-30 12:11:38
+/* Smarty version 3.1.48, created on 2025-01-03 12:04:24
   from '/var/www/html/templates/lagom2/includes/navbar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fa957a4b7b13_84579170',
+  'unifunc' => 'content_6777d248d45022_30209061',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2655da9318f9c406a0c7bd39871f9aba4977476d' => 
     array (
       0 => '/var/www/html/templates/lagom2/includes/navbar.tpl',
-      1 => 1725455022,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/".((string)$_smarty_tpl->tpl_vars[\'template\']->value)."/includes/common/currency-dropdown.tpl' => 1,
   ),
 ),false)) {
-function content_66fa957a4b7b13_84579170 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d248d45022_30209061 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),1=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/function.counter.php','function'=>'smarty_function_counter',),));
 if ((isset($_smarty_tpl->tpl_vars['primaryNavbarHtmlCache']->value)) && $_smarty_tpl->tpl_vars['navtype']->value == "primary") {?>
     <?php echo $_smarty_tpl->tpl_vars['primaryNavbarHtmlCache']->value;?>
@@ -58,7 +58,7 @@ $_smarty_tpl->tpl_vars['childItem']->do_else = false;
 $_smarty_tpl->tpl_vars['childItem']->iteration++;
 $_smarty_tpl->tpl_vars['childItem']->index++;
 $_smarty_tpl->tpl_vars['childItem']->last = $_smarty_tpl->tpl_vars['childItem']->iteration === $_smarty_tpl->tpl_vars['childItem']->total;
-$__foreach_childItem_1_saved = $_smarty_tpl->tpl_vars['childItem'];
+$__foreach_childItem_12_saved = $_smarty_tpl->tpl_vars['childItem'];
 ?>
                         <?php $_smarty_tpl->_assignInScope('activePage', false);?>
                         <?php if ($_smarty_tpl->tpl_vars['childItem']->value->getUri() && ($_smarty_tpl->tpl_vars['childItem']->value->getUri() == $_smarty_tpl->tpl_vars['currentUrl']->value || (strstr($_smarty_tpl->tpl_vars['currentUrl']->value,"/ssl-certificates/") && strstr($_smarty_tpl->tpl_vars['childItem']->value->getUri(),"/ssl-certificates") && !strstr($_smarty_tpl->tpl_vars['currentUrl']->value,"/ssl-certificates/manage")) || smarty_modifier_replace($_smarty_tpl->tpl_vars['childItem']->value->getUri(),".php",'') == $_smarty_tpl->tpl_vars['currentUrl']->value)) {?>
@@ -71,7 +71,7 @@ $__foreach_childItem_1_saved = $_smarty_tpl->tpl_vars['childItem'];
 break 1;
 }?>
                     <?php
-$_smarty_tpl->tpl_vars['childItem'] = $__foreach_childItem_1_saved;
+$_smarty_tpl->tpl_vars['childItem'] = $__foreach_childItem_12_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <?php }?>
@@ -255,13 +255,13 @@ $_smarty_tpl->tpl_vars['childItem']->do_else = false;
 $_smarty_tpl->tpl_vars['childItem']->iteration++;
 $_smarty_tpl->tpl_vars['childItem']->index++;
 $_smarty_tpl->tpl_vars['childItem']->last = $_smarty_tpl->tpl_vars['childItem']->iteration === $_smarty_tpl->tpl_vars['childItem']->total;
-$__foreach_childItem_3_saved = $_smarty_tpl->tpl_vars['childItem'];
+$__foreach_childItem_14_saved = $_smarty_tpl->tpl_vars['childItem'];
 ?>
                                         <?php if ($_smarty_tpl->tpl_vars['childItem']->index == 0 && strstr($_smarty_tpl->tpl_vars['childItem']->value->getName(),"Header") && strstr($_smarty_tpl->tpl_vars['childItem']->value->getClass(),"nav-header") && !strstr($_smarty_tpl->tpl_vars['childItem']->value->getClass(),"nav-header-collapse")) {?>
                                             <?php $_smarty_tpl->_assignInScope('headerFirst', true);?>
                                         <?php }?>
                                     <?php
-$_smarty_tpl->tpl_vars['childItem'] = $__foreach_childItem_3_saved;
+$_smarty_tpl->tpl_vars['childItem'] = $__foreach_childItem_14_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     <?php if (!$_smarty_tpl->tpl_vars['headerFirst']->value) {?><div class="dropdown-menu-parent">
@@ -279,7 +279,7 @@ $_smarty_tpl->tpl_vars['childItem']->do_else = false;
 $_smarty_tpl->tpl_vars['childItem']->iteration++;
 $_smarty_tpl->tpl_vars['childItem']->index++;
 $_smarty_tpl->tpl_vars['childItem']->last = $_smarty_tpl->tpl_vars['childItem']->iteration === $_smarty_tpl->tpl_vars['childItem']->total;
-$__foreach_childItem_4_saved = $_smarty_tpl->tpl_vars['childItem'];
+$__foreach_childItem_15_saved = $_smarty_tpl->tpl_vars['childItem'];
 ?>
                                                     <?php echo smarty_function_counter(array(),$_smarty_tpl);?>
 
@@ -379,7 +379,7 @@ echo $_smarty_tpl->tpl_vars['childItem']->value->getClass();
                                                         <?php }?>
                                                     <?php }?>
                                                 <?php
-$_smarty_tpl->tpl_vars['childItem'] = $__foreach_childItem_4_saved;
+$_smarty_tpl->tpl_vars['childItem'] = $__foreach_childItem_15_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                                 <?php if ($_smarty_tpl->tpl_vars['childItem']->last && $_smarty_tpl->tpl_vars['collapseOpened']->value) {?>
@@ -423,7 +423,7 @@ $_smarty_tpl->tpl_vars['childItem']->do_else = false;
 $_smarty_tpl->tpl_vars['childItem']->iteration++;
 $_smarty_tpl->tpl_vars['childItem']->index++;
 $_smarty_tpl->tpl_vars['childItem']->last = $_smarty_tpl->tpl_vars['childItem']->iteration === $_smarty_tpl->tpl_vars['childItem']->total;
-$__foreach_childItem_5_saved = $_smarty_tpl->tpl_vars['childItem'];
+$__foreach_childItem_16_saved = $_smarty_tpl->tpl_vars['childItem'];
 ?>
                                 <?php if ($_smarty_tpl->tpl_vars['childItem']->value->getName() == 'Client Details' && $_smarty_tpl->tpl_vars['loggedin']->value) {?>
                                     <li class="dropdown-header dropdown-header--account">
@@ -507,7 +507,7 @@ echo $_smarty_tpl->tpl_vars['childItem']->value->getBadge();
                                     <?php }?>    
                                 <?php }?>
                             <?php
-$_smarty_tpl->tpl_vars['childItem'] = $__foreach_childItem_5_saved;
+$_smarty_tpl->tpl_vars['childItem'] = $__foreach_childItem_16_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </ul>

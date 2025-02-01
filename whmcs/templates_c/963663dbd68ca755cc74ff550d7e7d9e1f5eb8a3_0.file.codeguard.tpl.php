@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-16 02:08:22
+/* Smarty version 3.1.48, created on 2025-01-03 12:04:24
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/codeguard.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_670f2016858bb9_11185459',
+  'unifunc' => 'content_6777d2486f9a02_80519269',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '963663dbd68ca755cc74ff550d7e7d9e1f5eb8a3' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/codeguard.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_670f2016858bb9_11185459 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d2486f9a02_80519269 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-codeguard svg-codeguard-left promo-slider-icon codeguard" width="377" height="324" fill="none" viewBox="0 0 377 324">
     <g clip-path="url(#codeguard-modern-right-left__a)">
         <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M0.248779 1.91235V106.798L114.249 171.415V66.7519L0.248779 1.91235Z" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-cloud-load-4.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d1467c1502_00728062',
+  'unifunc' => 'content_6784c20ca94899_04072164',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd7231cf61fd413b05aa3048479e09c344d0ee044' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-cloud-load-4.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d1467c1502_00728062 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20ca94899_04072164 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-2)" d="M29.4807 6.76963C32.953 4.76473 35.9765 4.52405 38.2312 5.75149C38.3096 5.79417 38.3871 5.83863 38.4636 5.88485L42.6719 8.2996C45.1809 6.5924 48.5915 5.51326 51.315 7.38168L56.2134 10.1555C53.9121 20.0908 53.5307 31.8883 43.5542 37.6486L15.3982 53.9057L11.9726 57.7101L6.95376 54.7601C4.53281 53.4289 3.01939 50.4154 3.01953 46.1012C3.01981 37.277 8.84929 26.2309 17.4849 23.0068C19.4133 16.4319 24.0578 9.90081 29.4807 6.76963Z" />
     <path fill="var(--svg-icon-color-1)" d="M8.18311 49.1378C8.18285 57.1185 13.3619 60.6484 19.8841 57.3112L49.2525 40.36C55.2228 36.5421 59.9777 27.2517 59.978 19.2319C59.9782 10.974 55.1306 7.07881 48.7187 10.781C48.0134 11.1882 47.3233 11.6728 46.6539 12.224C44.7347 7.84885 40.0808 6.66729 34.6443 9.80631C29.2213 12.9375 24.5769 19.4686 22.6485 26.0435C21.9725 26.2959 21.2778 26.6251 20.5693 27.0342C13.7289 30.9839 8.18337 40.88 8.18311 49.1378Z" />

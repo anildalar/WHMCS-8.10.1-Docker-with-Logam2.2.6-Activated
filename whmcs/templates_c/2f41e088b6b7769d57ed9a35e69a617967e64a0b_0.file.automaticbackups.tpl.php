@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/automaticbackups.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3ae7a3d07_38550592',
+  'unifunc' => 'content_6784b5b685f515_35554446',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2f41e088b6b7769d57ed9a35e69a617967e64a0b' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/automaticbackups.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3ae7a3d07_38550592 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b685f515_35554446 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-automaticbackups svg-automaticbackups-left promo-slider-icon automaticbackups" width="377" height="324" fill="none" viewBox="0 0 377 324">
     <path fill="var(--svg-illustration-gray-3)" d="M52.9488 76.599L26.2488 61.4394L21.0488 52.563L4.74878 43.2878C4.24878 42.8888 3.4488 42.8888 3.0488 43.3875C2.8488 43.6867 2.74878 43.9859 2.74878 44.3849V59.8436L54.7488 89.5644V79.8902C54.7488 78.5936 54.0488 77.2971 52.9488 76.599Z" />
     <path fill="var(--svg-illustration-gray-4)" d="M53.352 77.8383L4.06513 49.6782C3.76581 49.3797 3.26698 49.3797 2.96767 49.7777C2.76813 49.9768 2.76812 50.1758 2.76812 50.4743V48.4842C2.66835 48.0862 2.96766 47.6881 3.36675 47.5886C3.56629 47.5886 3.86558 47.5886 4.06513 47.7876L25.2166 59.8278L26.1145 61.3204L52.7534 76.4452C53.8508 77.1418 54.649 78.4354 54.7488 79.8284V80.0275C54.649 79.2314 54.1502 78.3359 53.352 77.8383Z" />

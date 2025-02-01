@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-11-18 13:17:56
+/* Smarty version 3.1.48, created on 2025-01-03 12:57:42
   from '/var/www/html/templates/lagom2/assets/svg-icon/coupon-discount.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_673b3e84f10481_59129527',
+  'unifunc' => 'content_6777dec64b1a75_41156327',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e248b2dd8323f59947e212b86b43a55571e1284c' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/coupon-discount.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_673b3e84f10481_59129527 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777dec64b1a75_41156327 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M.5 48.572a1 1 0 0 0 .999 0l2.722-1.566a1 1 0 0 0-.998-1.733L2 45.977v-1.318a1 1 0 1 0-2 0v3.047a1 1 0 0 0 .5.866Zm7.8-5.067a1 1 0 0 0 1.365.368l2.722-1.566a1 1 0 1 0-.998-1.733L8.667 42.14a1 1 0 0 0-.368 1.365ZM1 39.566a1 1 0 0 0 1-1V32.47a1 1 0 0 0-2 0v6.094a1 1 0 0 0 1 1Zm0-12.188a1 1 0 0 0 1-1v-2.47l2.583-1.489a1 1 0 0 0-1-1.732L.502 22.463A1 1 0 0 0 0 23.33v3.047a1 1 0 0 0 1 1Zm8.384-8.88a1 1 0 0 0 1.365.366l6.167-3.554a1 1 0 0 0-.999-1.733L9.751 17.13a1 1 0 0 0-.367 1.366ZM38 16.38a1 1 0 0 0 1-1v-3.345a1 1 0 1 0-2 0v3.346a1 1 0 0 0 1 1Zm-16.283-4.994a1 1 0 0 0 1.366.367l6.166-3.555a1 1 0 1 0-.998-1.733l-6.167 3.555a1 1 0 0 0-.367 1.366ZM38 6.345a1 1 0 0 0 1-1V2a1 1 0 0 0-1.5-.866L34.418 2.91a1 1 0 0 0 1 1.733L37 3.73v1.614a1 1 0 0 0 1 1Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 30.13v24.376l37-21.33V8.8L13 30.13Z" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-18 08:49:51
+/* Smarty version 3.1.48, created on 2025-01-03 12:00:05
   from '/var/www/html/modules/addons/LagomOrderForm/templates/admin/ui/core/default/widget/dataTable/dataTable_components.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67628cafbce301_44951769',
+  'unifunc' => 'content_6777d14506dd38_27578128',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a9c2a3388215aff27f5bd99b2cd81680bcfff6e' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/templates/admin/ui/core/default/widget/dataTable/dataTable_components.tpl',
-      1 => 1702664292,
+      1 => 1734760265,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67628cafbce301_44951769 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d14506dd38_27578128 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <?php echo '<script'; ?>

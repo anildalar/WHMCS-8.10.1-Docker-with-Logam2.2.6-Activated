@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-29 14:05:04
+/* Smarty version 3.1.48, created on 2025-01-03 12:01:32
   from '/var/www/html/templates/lagom2/core/cms/sections/config/call-to-action/call-to-action.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f95e90631431_69039409',
+  'unifunc' => 'content_6777d19c212ad8_36349948',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6449484a910e13c3ca26a2940b6f910c0b6c1a4f' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/config/call-to-action/call-to-action.tpl',
-      1 => 1720186760,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f95e90631431_69039409 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d19c212ad8_36349948 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <div class="site-section section-<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>

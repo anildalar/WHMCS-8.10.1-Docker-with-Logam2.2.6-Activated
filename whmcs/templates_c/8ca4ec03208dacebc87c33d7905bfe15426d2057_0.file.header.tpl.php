@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:52
+/* Smarty version 3.1.48, created on 2025-01-13 06:19:39
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2469ef79_59061756',
+  'unifunc' => 'content_6784b07b575ff1_77180212',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8ca4ec03208dacebc87c33d7905bfe15426d2057' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/header.tpl',
-      1 => 1725773960,
+      1 => 1730150156,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de2469ef79_59061756 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b07b575ff1_77180212 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['styleConfigurationPage']->value)) && $_smarty_tpl->tpl_vars['styleConfigurationPage']->value) {?>
     <?php if ((isset($_smarty_tpl->tpl_vars['angularDistCss']->value)) && $_smarty_tpl->tpl_vars['angularDistCss']->value) {?>
         <?php

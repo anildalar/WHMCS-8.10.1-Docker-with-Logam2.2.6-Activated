@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:37
   from '/var/www/html/templates/lagom2/assets/svg-icon/sitelock.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146eff609_70729618',
+  'unifunc' => 'content_6784c20d040f18_68930427',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ef5f3c50a2956cf938bc5cacab9eedc296f7c895' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/sitelock.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146eff609_70729618 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20d040f18_68930427 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="65" height="64" fill="none" viewBox="0 0 65 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M29.2 12.086a1 1 0 0 1-.927 1.068 49.96 49.96 0 0 0-7.964 1.202 1 1 0 1 1-.46-1.946 51.97 51.97 0 0 1 8.282-1.25 1 1 0 0 1 1.068.926Zm6.222.035a1 1 0 0 1 1.079-.915 53.28 53.28 0 0 1 4.16.507l.006.001c1.56.265 3.061.593 4.498.979a1 1 0 1 1-.52 1.931 46.82 46.82 0 0 0-4.309-.938 51.101 51.101 0 0 0-4-.487 1 1 0 0 1-.914-1.078Zm-22.21 3.49a1 1 0 0 1-.485 1.327 29.476 29.476 0 0 0-3.487 1.904 1 1 0 1 1-1.08-1.684 31.482 31.482 0 0 1 3.724-2.033 1 1 0 0 1 1.328.485Zm39.191.867a1 1 0 0 1 1.359-.393c3.018 1.666 5.483 3.675 7.244 5.925a1 1 0 1 1-1.575 1.233c-1.562-1.996-3.802-3.842-6.636-5.407a1 1 0 0 1-.392-1.358Zm10.679 13.506a1 1 0 0 1 .923 1.071c-.116 1.564-.548 3.135-1.307 4.685a17.889 17.889 0 0 1-.813 1.32 1 1 0 0 1-1.656-1.122c.246-.362.474-.73.685-1.103.647-1.328 1-2.643 1.096-3.928a1 1 0 0 1 1.072-.923Zm-3.103 7.987a1 1 0 0 1 .051 1.413c-.336.361-.686.712-1.05 1.049a1 1 0 0 1-1.36-1.466c.327-.304.643-.62.946-.945a1 1 0 0 1 1.413-.051Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15.7 18.4-8.3.1 1.1-4.8" />

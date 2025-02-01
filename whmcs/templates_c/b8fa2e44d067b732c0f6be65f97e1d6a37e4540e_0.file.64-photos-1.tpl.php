@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-07 19:50:40
+/* Smarty version 3.1.48, created on 2025-01-03 12:47:57
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-photos-1.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67043b90072f33_87131127',
+  'unifunc' => 'content_6777dc7d7317b3_49269727',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b8fa2e44d067b732c0f6be65f97e1d6a37e4540e' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-photos-1.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67043b90072f33_87131127 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777dc7d7317b3_49269727 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="65" height="64" fill="none" viewBox="0 0 65 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M33.4999 0.133894C33.8093 0.312506 34 0.642677 34 1V4.9C34 5.45228 33.5523 5.9 33 5.9C32.4477 5.9 32 5.45228 32 4.9V2.73269L30.1253 3.81587C29.6471 4.09216 29.0354 3.92848 28.7591 3.45028C28.4828 2.97207 28.6465 2.36043 29.1247 2.08413L32.4997 0.134135C32.8091 -0.0446257 33.1904 -0.0447174 33.4999 0.133894ZM23.7409 6.34972C24.0172 6.82793 23.8535 7.43957 23.3753 7.71587L16.6253 11.6159C16.1471 11.8922 15.5354 11.7285 15.2591 11.2503C14.9828 10.7721 15.1465 10.1604 15.6247 9.88414L22.3747 5.98414C22.8529 5.70784 23.4646 5.87152 23.7409 6.34972ZM10.2409 14.1497C10.5172 14.6279 10.3535 15.2396 9.87528 15.5159L7 17.1771V20.45C7 21.0023 6.55228 21.45 6 21.45C5.44772 21.45 5 21.0023 5 20.45V16.6C5 16.2428 5.19048 15.9128 5.49972 15.7341L8.87472 13.7841C9.35293 13.5078 9.96457 13.6715 10.2409 14.1497ZM6 27.15C6.55228 27.15 7 27.5977 7 28.15V35.85C7 36.4023 6.55228 36.85 6 36.85C5.44772 36.85 5 36.4023 5 35.85V28.15C5 27.5977 5.44772 27.15 6 27.15ZM6 42.55C6.55228 42.55 7 42.9977 7 43.55V45.6801L8.7553 44.6809C9.23527 44.4077 9.84585 44.5753 10.1191 45.0553C10.3923 45.5353 10.2247 46.1459 9.7447 46.4191L6.4947 48.2691C6.18516 48.4453 5.80527 48.4435 5.49736 48.2645C5.18945 48.0855 5 47.7562 5 47.4V43.55C5 42.9977 5.44772 42.55 6 42.55Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.1988 43.6541L14 53.4V22.6L41 7V30.1354M37 30.6777L18 41.5V25L37 14V30.6777Z" />

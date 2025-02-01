@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:26
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/group/group-content-switch.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f3a31f3_70303314',
+  'unifunc' => 'content_6784b19a0221b2_23440478',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f4e2ef90f515bfa1963958f1725405e81d4cd433' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/group/group-content-switch.tpl',
-      1 => 1720189764,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de2f3a31f3_70303314 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b19a0221b2_23440478 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal modal--hero" id="toggleGroupContentModal" data-switch-group-content-modal>
     <div class="modal__dialog">
         <div class="modal__content">

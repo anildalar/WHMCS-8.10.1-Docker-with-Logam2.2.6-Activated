@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-unlimited-bandwidth-2.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146cb1249_41205500',
+  'unifunc' => 'content_6784c20cd95eb3_13439667',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b23505bcae6b3cda00dea26841bbff6610359eaa' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-unlimited-bandwidth-2.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146cb1249_41205500 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cd95eb3_13439667 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="66" height="64" fill="none" viewBox="0 0 66 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.7689 9.19749L37.0625 3.91539C29.7352 0.482082 18.7844 6.81355 11.3461 18.9962C3.46366 32.3972 2.79753 47.681 10.0138 53.2185L19.8818 58.6123M48.0359 10.0217C40.8196 4.48415 28.448 10.7613 20.4546 24.0515C12.4611 37.3417 11.7899 52.475 19.0062 58.0126C26.2225 63.5502 38.483 57.2731 46.4765 43.8721C54.4699 30.4712 55.2522 15.5593 48.0359 10.0217Z" />
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M35.3854 19.4922C29.1542 23.09 23.2906 31.7926 22.9998 39.0658C22.9872 39.3815 22.7781 39.7572 22.511 39.9253V39.9253C22.2264 40.1043 21.9879 39.9784 21.9983 39.6437C22.2626 31.0813 28.022 21.3451 35.3854 17.0935C42.6368 12.9066 48.5563 15.3102 48.9971 23.2463C49.0264 23.7746 48.6437 24.4424 48.1706 24.7239L47.8968 24.8868C47.4134 25.1744 47.0211 24.9487 46.984 24.4135C46.5278 17.8349 41.4797 15.9734 35.3854 19.4922Z" clip-rule="evenodd" />

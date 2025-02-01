@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-29 15:12:00
+/* Smarty version 3.1.48, created on 2025-01-03 20:32:51
   from '/var/www/html/templates/lagom2/core/cms/sections/config/banner-form/banner-form.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f96e4087d253_65109563',
+  'unifunc' => 'content_6778497360ae26_54438225',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dae0bc00784e20fd79ff238f94a25cec7432a9c7' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/config/banner-form/banner-form.tpl',
-      1 => 1694186636,
+      1 => 1694183036,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f96e4087d253_65109563 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6778497360ae26_54438225 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-ecommerce-success.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d14686b4c4_83998977',
+  'unifunc' => 'content_6784c20caf0652_75335635',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '56eb618f0d766d4ec0b17205f6d41c19c1705003' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-ecommerce-success.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d14686b4c4_83998977 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20caf0652_75335635 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linejoin="round" stroke-width="2" d="M31.0958 7.26046L34.9053 5.02073C36.0978 4.31811 37.1448 4.24736 38.3613 4.91248L52.0472 12.7654M31.0958 7.26046C31.0958 7.26046 35.5231 9.84844 36.1763 10.2214C36.8294 10.5943 42.4633 18.2185 42.4633 18.2185L52.0472 12.7654M31.0958 7.26046L20.6401 1.36509C19.4183 0.653889 18.2747 1.08284 17.7793 1.78859C17.2839 2.49434 16.7805 3.99324 16.4497 4.7284L10.525 19.045L3.58979 23.2039C2.13955 24.214 1.64566 25.3801 1.30023 26.3895M52.0472 12.7654C53.5195 13.6748 54.2245 14.4074 53.937 16.2534L50.0179 35.681C49.4624 38.1166 48.5775 39.8283 46.4969 41.2834L25.9274 52.9956C24.0852 53.9535 23.5207 54.5456 20.9376 53.2982M20.9376 53.2982C16.7542 50.8753 8.85799 46.4882 8.26995 46.062C7.38376 45.4198 6.89707 44.3075 6.73166 43.9484L1.30011 30.3806C0.824733 28.4297 1.03667 27.2377 1.30023 26.3895M20.9376 53.2982L16.0717 38.4879C15.7065 37.5824 15.5958 35.5935 15.9592 34.7446M15.9592 34.7446C16.5146 33.4472 16.7208 33.2578 18.222 32.1432L26.7425 27.1883L31.8729 14.2054L25.4873 10.5209M15.9592 34.7446L1.30023 26.3895M25.4873 10.5209L19.3684 7.08228L15.6358 16.1535L25.4873 10.5209ZM34.726 16.4418L37.7809 20.8712L31.8729 24.1295L34.726 16.4418Z" />
     <path fill="var(--svg-icon-color-2)" stroke="var(--svg-icon-color-2)" stroke-linejoin="round" stroke-width="2" d="M51.3056 62.9437L62.4627 34.0121L57.3491 31.1146C57.0213 30.9294 56.5787 30.9738 56.1172 31.2384L37.4599 41.862C36.0993 42.6419 35.6207 44.353 36.3137 45.3015C39.6736 49.9001 47.8297 60.9056 47.8297 60.9056L51.3056 62.9437Z" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:08
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/types/custom-link.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf588e0239_56899422',
+  'unifunc' => 'content_6784b3a2153a28_28612854',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f850393984a1160a1286de3332a928e034d545a9' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/types/custom-link.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/menu/includes/components/icon.tpl' => 1,
   ),
 ),false)) {
-function content_6700cf588e0239_56899422 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a2153a28_28612854 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="col-md-12">
     <div class="form-group">
         <label class="form-label">

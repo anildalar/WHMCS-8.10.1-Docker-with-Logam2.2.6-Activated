@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-29 15:29:44
+/* Smarty version 3.1.48, created on 2025-01-04 00:56:16
   from '/var/www/html/templates/lagom2/core/cms/sections/config/legal/legal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f97268efa633_31196236',
+  'unifunc' => 'content_67788730d18281_31545007',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a4a323786480c42a93a5d3dfa52426d0c46fe971' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/config/legal/legal.tpl',
-      1 => 1694186636,
+      1 => 1694183036,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f97268efa633_31196236 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67788730d18281_31545007 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="site-section section-legal section-<?php echo $_smarty_tpl->tpl_vars['theme']->value;
 if ($_smarty_tpl->tpl_vars['custom_class']->value) {?> <?php echo $_smarty_tpl->tpl_vars['custom_class']->value;
 }?>">

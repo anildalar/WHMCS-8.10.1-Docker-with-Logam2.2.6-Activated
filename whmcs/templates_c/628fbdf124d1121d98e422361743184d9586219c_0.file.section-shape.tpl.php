@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:15
+/* Smarty version 3.1.48, created on 2025-01-03 12:12:37
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/cms/section-shape.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de3b9887d5_12832827',
+  'unifunc' => 'content_6777d4357f99d8_47787079',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '628fbdf124d1121d98e422361743184d9586219c' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/cms/section-shape.tpl',
-      1 => 1694186636,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de3b9887d5_12832827 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d4357f99d8_47787079 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg viewBox="0 0 2544 876" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g opacity="0.32">
         <path d="M1033 876L1271.99 737.562L0 0L1033 876Z" fill="url(#paint0_linear_874_123584)" fill-opacity="0.1"/>

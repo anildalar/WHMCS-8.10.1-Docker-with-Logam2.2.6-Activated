@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/cloud-hosting.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146da6449_57045691',
+  'unifunc' => 'content_6784c20ce6ea08_13240397',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '929d89c9973b63fabb9d73d2d237aa99928b96db' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/cloud-hosting.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146da6449_57045691 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20ce6ea08_13240397 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M59 47 32 31 5 47m0 0 27 15.8L59 47" />
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M31.504.132a1 1 0 0 1 .992 0l3.5 2a1 1 0 1 1-.992 1.736L32 2.152l-3.004 1.716a1 1 0 1 1-.992-1.736l3.5-2ZM41.73 6.605a1 1 0 0 1 1.363-.374l5.8 3.3a1 1 0 1 1-.988 1.738l-5.8-3.3a1 1 0 0 1-.375-1.364Zm-19.468-.01a1 1 0 0 1-.357 1.368l-5.8 3.4a1 1 0 1 1-1.012-1.726l5.8-3.4a1 1 0 0 1 1.369.357ZM9.368 14.103a1 1 0 0 1-.372 1.364L6 17.18v3.42a1 1 0 1 1-2 0v-4a1 1 0 0 1 .504-.868l3.5-2a1 1 0 0 1 1.364.372Zm45.264 0a1 1 0 0 1 1.364-.372l3.5 2A1 1 0 0 1 60 16.6v4a1 1 0 1 1-2 0v-3.42l-2.996-1.712a1 1 0 0 1-.372-1.364ZM5 27.7a1 1 0 0 1 1 1v6.6a1 1 0 1 1-2 0v-6.6a1 1 0 0 1 1-1Zm54 0a1 1 0 0 1 1 1v6.6a1 1 0 1 1-2 0v-6.6a1 1 0 0 1 1-1ZM5 42a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1Zm54 0a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0v-4a1 1 0 0 1 1-1Z" clip-rule="evenodd" />

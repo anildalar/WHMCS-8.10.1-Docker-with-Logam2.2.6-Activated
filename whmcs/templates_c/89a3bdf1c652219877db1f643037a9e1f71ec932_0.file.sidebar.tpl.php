@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 22:35:12
+/* Smarty version 3.1.48, created on 2025-01-03 16:53:42
   from '/var/www/html/templates/lagom2/includes/sidebar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f884a0022a77_10079875',
+  'unifunc' => 'content_67781616d7ec68_53489601',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '89a3bdf1c652219877db1f643037a9e1f71ec932' => 
     array (
       0 => '/var/www/html/templates/lagom2/includes/sidebar.tpl',
-      1 => 1725773960,
+      1 => 1725473022,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f884a0022a77_10079875 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67781616d7ec68_53489601 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/overwrites/sidebar.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/overwrites/sidebar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);

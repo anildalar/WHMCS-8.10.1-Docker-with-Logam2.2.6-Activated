@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:02
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:25
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/text.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2e892eb9_33769011',
+  'unifunc' => 'content_6784b1999ce384_37129431',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '34016e99e18586234992f2d1b8409c381b23c785' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/text.tpl',
-      1 => 1720189764,
+      1 => 1734354618,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2e892eb9_33769011 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b1999ce384_37129431 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['sectionGroupField']->value))) {?>
     <div class="form-group <?php echo $_smarty_tpl->tpl_vars['sectionGroupField']->value['container_class'];?>
 " <?php

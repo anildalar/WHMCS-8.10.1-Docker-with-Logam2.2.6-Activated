@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-30 12:09:25
+/* Smarty version 3.1.48, created on 2025-01-15 10:59:28
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/settings/includes/gravatar.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fa94f546ec92_42443935',
+  'unifunc' => 'content_6787951079bfc4_05319797',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4290d8b52126fb48a0554f494c32f292f3cea026' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/settings/includes/gravatar.tpl',
-      1 => 1726757106,
+      1 => 1730150158,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 2,
   ),
 ),false)) {
-function content_66fa94f546ec92_42443935 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6787951079bfc4_05319797 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="panel panel--collapse">
     <div class="collapse-toggle">
         <h6 class="top__title">

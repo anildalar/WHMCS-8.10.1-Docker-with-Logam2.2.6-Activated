@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-07 19:44:54
+/* Smarty version 3.1.48, created on 2025-01-03 14:24:09
   from '/var/www/html/templates/lagom2/core/cms/sections/config/banner-domain/banner-domain.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67043a36d723b8_39754832',
+  'unifunc' => 'content_6777f309731869_02981239',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd6bde346a2622be154b791f8cc18070922e55535' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/config/banner-domain/banner-domain.tpl',
-      1 => 1695895314,
+      1 => 1732281828,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67043a36d723b8_39754832 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777f309731869_02981239 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <?php $_smarty_tpl->_assignInScope('sideTypes', array('type-1','type-2','type-3'));

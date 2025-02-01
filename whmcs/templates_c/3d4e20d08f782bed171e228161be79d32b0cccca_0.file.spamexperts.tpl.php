@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/spamexperts.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aeb3c8b8_80337685',
+  'unifunc' => 'content_6784b5b6bcde38_99366757',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3d4e20d08f782bed171e228161be79d32b0cccca' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/spamexperts.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aeb3c8b8_80337685 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6bcde38_99366757 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-mailsecurity svg-mailsecurity-left promo-slider-icon" width="377" height="325" fill="none" viewBox="0 0 377 325">
     <g clip-path="url(#mail-security-modern-right-left__a)">
         <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M3.02725 2.50275V107.388L117.027 172.005V67.3423L3.02725 2.50275Z" clip-rule="evenodd" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 09:33:44
+/* Smarty version 3.1.48, created on 2025-01-31 07:19:22
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/hidden.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_670107f88fd300_51474426',
+  'unifunc' => 'content_679c797ad249b9_17001788',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9832ac45c2d0f929efdcf9572127eb2c0b45c29f' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/hidden.tpl',
-      1 => 1720189764,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_670107f88fd300_51474426 (Smarty_Internal_Template $_smarty_tpl) {
+function content_679c797ad249b9_17001788 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['sectionGroupField']->value))) {?>
     <input
         type="hidden"

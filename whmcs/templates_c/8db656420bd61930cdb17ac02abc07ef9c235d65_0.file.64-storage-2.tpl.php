@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-18 08:57:39
+/* Smarty version 3.1.48, created on 2025-01-13 07:06:58
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-storage-2.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67628e835f3bd6_48556871',
+  'unifunc' => 'content_6784bb92c35942_30272296',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8db656420bd61930cdb17ac02abc07ef9c235d65' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-storage-2.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67628e835f3bd6_48556871 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784bb92c35942_30272296 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.00003 34L1.99998 40.9998L38 62.5M38 62.5L62 48.9999L62 41.5L53.0001 36.3175M38 62.5L38 55M38.0108 54.9386L2.01077 33.8501L11.0001 28.7262" />
     <path fill="var(--svg-icon-color-1)" stroke="var(--svg-icon-color-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.031 33.5105L32.4039 45.4448L35.5 43.7103L15.5 31.5331L12.031 33.5105Z" />

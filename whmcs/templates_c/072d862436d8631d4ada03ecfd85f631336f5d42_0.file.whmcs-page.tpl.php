@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:08
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/types/whmcs-page.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf5881a996_40495967',
+  'unifunc' => 'content_6784b3a225fa77_85532833',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '072d862436d8631d4ada03ecfd85f631336f5d42' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/types/whmcs-page.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/menu/includes/components/icon.tpl' => 1,
   ),
 ),false)) {
-function content_6700cf5881a996_40495967 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a225fa77_85532833 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="col-md-12">
     <div class="form-group">
         <label class="form-label">

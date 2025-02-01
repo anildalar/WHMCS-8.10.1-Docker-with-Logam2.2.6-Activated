@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-29 19:16:04
+/* Smarty version 3.1.48, created on 2025-01-03 13:41:31
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/section-bg/modern/bottom_banner_illustration-sharedhosting.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f9a774a136b5_11966769',
+  'unifunc' => 'content_6777e90b64c447_16854258',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c8c160cc8828e062d25e0b6e47fd02f2bf847da8' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/section-bg/modern/bottom_banner_illustration-sharedhosting.tpl',
-      1 => 1715336408,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f9a774a136b5_11966769 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777e90b64c447_16854258 (Smarty_Internal_Template $_smarty_tpl) {
 ?><span class="hidden"> <?php if (!is_object($_smarty_tpl->tpl_vars['template']->value)) {?>
     <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['WEB_ROOT']->value;?>
 /templates/<?php echo $_smarty_tpl->tpl_vars['template']->value;?>

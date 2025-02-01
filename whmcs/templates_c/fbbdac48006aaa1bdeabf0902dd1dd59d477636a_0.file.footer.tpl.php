@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:38
+/* Smarty version 3.1.48, created on 2025-01-03 12:00:19
   from '/var/www/html/templates/lagom2/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de162a5066_78068995',
+  'unifunc' => 'content_6777d1532e1b91_14871678',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fbbdac48006aaa1bdeabf0902dd1dd59d477636a' => 
     array (
       0 => '/var/www/html/templates/lagom2/footer.tpl',
-      1 => 1726806673,
+      1 => 1681745128,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/".((string)$_smarty_tpl->tpl_vars[\'template\']->value)."/core/layouts/footer/default/default.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de162a5066_78068995 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d1532e1b91_14871678 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/overwrites/footer.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/overwrites/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>
@@ -32,20 +32,6 @@ if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)
         <?php $_smarty_tpl->_subTemplateRender("file:templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/core/layouts/footer/default/default.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
     <?php }
-}?>
-<!--Start of Tawk.to Script-->
-<?php echo '<script'; ?>
- type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/66ecf6014cbc4814f7dbb1bd/1i86q1tn5';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-<?php echo '</script'; ?>
->
-<!--End of Tawk.to Script--><?php }
+}
+}
 }

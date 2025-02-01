@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-29 15:12:00
+/* Smarty version 3.1.48, created on 2025-01-03 20:32:51
   from '/var/www/html/templates/lagom2/core/cms/sections/common/forms/knowledgebase-search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f96e4089a357_48761464',
+  'unifunc' => 'content_67784973618e90_90362551',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '37cec25e9a423c4d633171e65564e3234520c6c0' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/common/forms/knowledgebase-search.tpl',
-      1 => 1694186636,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f96e4089a357_48761464 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67784973618e90_90362551 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/knowledgebase-search.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/knowledgebase-search.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>  

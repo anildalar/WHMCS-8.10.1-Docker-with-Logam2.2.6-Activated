@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/increase-SEO-rank.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146e8d359_20587567',
+  'unifunc' => 'content_6784c20cf1a8a0_63245498',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ea9e45a7965cf2f4c27c58ae67cab4b13ac49da9' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/increase-SEO-rank.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146e8d359_20587567 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cf1a8a0_63245498 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M39.5.634a1 1 0 0 1 .5.866v2.125a1 1 0 1 1-2 0v-.39l-2.749 1.593a1 1 0 1 1-1.002-1.73l4.25-2.463a1 1 0 0 1 1-.001ZM39 6.875a1 1 0 0 1 1 1V10a1 1 0 1 1-2 0V7.875a1 1 0 0 1 1-1ZM27.115 8.386a1 1 0 0 1-.364 1.367l-8.5 4.925a1 1 0 0 1-1.002-1.73l8.5-4.926a1 1 0 0 1 1.366.364Zm-17 9.85a1 1 0 0 1-.364 1.367L6 21.776v3.212a1 1 0 1 1-2 0V21.2a1 1 0 0 1 .499-.865l4.25-2.463a1 1 0 0 1 1.366.364ZM5 31.562a1 1 0 0 1 1 1v7.576a1 1 0 1 1-2 0v-7.575a1 1 0 0 1 1-1Zm8.367 15.12a1 1 0 0 1-.368 1.366l-1.875 1.08a1 1 0 1 1-.998-1.733l1.875-1.08a1 1 0 0 1 1.366.368ZM5 46.713a1 1 0 0 1 1 1v2.058l.376-.216a1 1 0 0 1 .998 1.733l-1.875 1.08A1 1 0 0 1 4 51.5v-3.788a1 1 0 0 1 1-1Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M47 17.7V6.2L13 25.9v30.3l10-5.758" />

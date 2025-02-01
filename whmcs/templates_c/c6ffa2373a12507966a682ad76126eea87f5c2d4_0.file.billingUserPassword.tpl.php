@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-21 07:18:56
+/* Smarty version 3.1.48, created on 2025-01-04 09:20:21
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/fields/billingUserPassword.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67666be0625565_30583426',
+  'unifunc' => 'content_6778fd552ab428_14577989',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c6ffa2373a12507966a682ad76126eea87f5c2d4' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/fields/billingUserPassword.tpl',
-      1 => 1734760265,
+      1 => 1702664292,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67666be0625565_30583426 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6778fd552ab428_14577989 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-one-page-billing-user-password-field">
     <div class="col-sm-6" :class="progressBar.inputFrameClass">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:09
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/export.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf59119a05_16846888',
+  'unifunc' => 'content_6784b3a235f433_69369707',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '82b81d8b6b6de80a0a441077206cfe6d3835f774' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/export.tpl',
-      1 => 1726757104,
+      1 => 1730150156,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700cf59119a05_16846888 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a235f433_69369707 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="exportConfirmation">
     <div class="modal__dialog">
         <div class="modal__content">

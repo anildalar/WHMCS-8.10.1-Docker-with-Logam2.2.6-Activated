@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/gameservers-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aea1e0f0_79750438',
+  'unifunc' => 'content_6784b5b6b10068_31460946',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9437f4babf1527f077ed677793417ff969d28466' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/gameservers-left.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aea1e0f0_79750438 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6b10068_31460946 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-gameservers svg-gameservers-left promo-slider-icon promo-slider-icon-reverse" width="596" height="515" fill="none" viewBox="0 0 596 515">
     <g clip-path="url(#game-servers-modern-left-left__a)">
         <path fill="url(#game-servers-modern-left-left__b)" fill-opacity=".05"

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:37
   from '/var/www/html/templates/lagom2/assets/svg-icon/prove-legitimacy.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146eddf60_12360591',
+  'unifunc' => 'content_6784c20d0272b5_71835517',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '98fa5d6c7ec19a73c5d319860e7a3ccffa124061' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/prove-legitimacy.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146eddf60_12360591 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20d0272b5_71835517 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="none" viewBox="0 0 65 65">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M41.5 1.134a1 1 0 0 0-1.001 0l-3 1.739a1 1 0 0 0 1.002 1.73L40 3.735v.56a1 1 0 1 0 2 0V2a1 1 0 0 0-.5-.866Zm-8.635 5.58a1 1 0 0 0-1.366-.365l-6 3.477a1 1 0 0 0 1.002 1.73l6-3.476a1 1 0 0 0 .364-1.367ZM41 7.881a1 1 0 0 0-1 1v2.295a1 1 0 1 0 2 0V8.882a1 1 0 0 0-1-1Zm-20.135 5.784a1 1 0 0 0-1.366-.364l-6 3.477a1 1 0 0 0 1.002 1.73l6-3.476a1 1 0 0 0 .364-1.367Zm-12 6.953a1 1 0 0 0-1.366-.364l-3 1.739a1 1 0 0 0-.499.865v4.01a1 1 0 1 0 2 0v-3.434l2.501-1.45a1 1 0 0 0 .364-1.366ZM5 33.89a1 1 0 0 0-1 1v8.021a1 1 0 1 0 2 0v-8.02a1 1 0 0 0-1-1Zm10.868 14.827a1 1 0 0 0-1.364-.373l-2.502 1.43a1 1 0 1 0 .993 1.737l2.501-1.43a1 1 0 0 0 .372-1.364ZM5 49.93a1 1 0 0 0-1 1v4.01a1 1 0 0 0 1.499.867c.778-.448 1.614-.929 2.497-1.435A1 1 0 1 0 7 52.638l-1 .575V50.93a1 1 0 0 0-1-1Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M51 37.876V7.7L15 28.559V60.64c10.24-5.895 30.706-17.523 30.706-17.523M23 55.45v-31m4 4.474 8.006-4.541L35 33.829l-8 4.5v-9.405Zm12-6.84 8.006-4.541L47 26.989l-8 4.5v-9.405Z" />

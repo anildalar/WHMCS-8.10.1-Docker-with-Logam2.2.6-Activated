@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/symantec-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aeb54159_44463796',
+  'unifunc' => 'content_6784b5b6be7206_92041392',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3da13355c8cc3fb27c2d56a6ff183ed17de3af84' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/symantec-left.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aeb54159_44463796 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6be7206_92041392 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-symantec svg-symantec-left promo-slider-icon promo-slider-icon-reverse" width="377" height="324" fill="none" viewBox="0 0 377 324">
     <g clip-path="url(#symantec-modern-left-left__a)">
         <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M114.749 151.135V257.021L0.748772 321.637V215.975L114.749 151.135Z" />

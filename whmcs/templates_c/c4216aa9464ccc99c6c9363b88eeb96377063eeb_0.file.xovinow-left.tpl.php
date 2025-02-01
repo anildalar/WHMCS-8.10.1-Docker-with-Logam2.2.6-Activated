@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/xovinow-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aebce167_79864535',
+  'unifunc' => 'content_6784b5b6c4aa56_39848560',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c4216aa9464ccc99c6c9363b88eeb96377063eeb' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/xovinow-left.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aebce167_79864535 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6c4aa56_39848560 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-xovi promo-slider-icon svg-marketgoo svg-marketgoo-left promo-slider-icon-reverse"  width="376" height="324" fill="none" viewBox="0 0 376 324">
   <g clip-path="url(#xovi-modern-left-left__a)">
     <path fill="url(#xovi-modern-left-left__b)" fill-opacity="0.15" d="M134.469 302.6L148.969 311.1L124.344 324.725L109.125 315.662L134.469 302.6Z"/>

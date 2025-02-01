@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 11:42:56
+/* Smarty version 3.1.48, created on 2025-01-03 12:33:01
   from '/var/www/html/templates/orderforms/lagom2/sidebar-categories.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7ebc0b444e3_41333680',
+  'unifunc' => 'content_6777d8fdd17a47_38576011',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c75c080d71ae7cd92671c6c54de46f2155bac214' => 
     array (
       0 => '/var/www/html/templates/orderforms/lagom2/sidebar-categories.tpl',
-      1 => 1725773961,
+      1 => 1679504692,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:orderforms/".((string)$_smarty_tpl->tpl_vars[\'carttpl\']->value)."/sidebar-categories-selector.tpl' => 1,
   ),
 ),false)) {
-function content_66f7ebc0b444e3_41333680 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d8fdd17a47_38576011 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists("templates/orderforms/".((string)$_smarty_tpl->tpl_vars['carttpl']->value)."/overwrites/sidebar-categories.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender("file:templates/orderforms/".((string)$_smarty_tpl->tpl_vars['carttpl']->value)."/overwrites/sidebar-categories.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>

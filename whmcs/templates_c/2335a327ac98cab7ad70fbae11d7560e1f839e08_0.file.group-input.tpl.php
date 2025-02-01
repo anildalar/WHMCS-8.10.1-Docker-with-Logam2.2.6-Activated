@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:02
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:25
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/group-input.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2ebda463_17597760',
+  'unifunc' => 'content_6784b199b5d3b6_12519829',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2335a327ac98cab7ad70fbae11d7560e1f839e08' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/custom/sections/inputs/group-input.tpl',
-      1 => 1720189764,
+      1 => 1734354618,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/section-group.tpl' => 2,
   ),
 ),false)) {
-function content_66f7de2ebda463_17597760 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b199b5d3b6_12519829 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 if ((isset($_smarty_tpl->tpl_vars['sectionFieldValue']->value['grouped']))) {?>
     <?php $_smarty_tpl->_assignInScope('grouped', $_smarty_tpl->tpl_vars['sectionFieldValue']->value['grouped']);

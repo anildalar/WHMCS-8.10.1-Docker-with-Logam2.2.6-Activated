@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-07 19:50:39
+/* Smarty version 3.1.48, created on 2025-01-03 12:07:46
   from '/var/www/html/templates/lagom2/assets/svg-icon/drag-drop-builder.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67043b8fe174d1_82477329',
+  'unifunc' => 'content_6777d31252c811_96692854',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b76930ce110a0b144c5230a2263721c3669475ee' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/drag-drop-builder.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67043b8fe174d1_82477329 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d31252c811_96692854 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M40.5.634a1 1 0 0 0-1.001 0l-4.25 2.463a1 1 0 0 0 1.002 1.73L39 3.236v3.14a1 1 0 1 0 2 0V1.5a1 1 0 0 0-.5-.866ZM28.114 8.386a1 1 0 0 0-1.366-.364l-8.5 4.925a1 1 0 0 0 1.002 1.73l8.5-4.924a1 1 0 0 0 .364-1.367ZM40 15.125a1 1 0 0 0-1 1V21a1 1 0 1 0 2 0v-4.875a1 1 0 0 0-1-1Zm-28.885 3.111a1 1 0 0 0-1.366-.364l-4.25 2.463A1 1 0 0 0 5 21.2v3.788a1 1 0 1 0 2 0v-3.212l3.751-2.173a1 1 0 0 0 .364-1.367ZM6 31.562a1 1 0 0 0-1 1v7.576a1 1 0 1 0 2 0v-7.575a1 1 0 0 0-1-1Zm17.367 9.939A1 1 0 0 0 22 41.133l-4.125 2.375a1 1 0 1 0 .998 1.734l4.125-2.375a1 1 0 0 0 .368-1.366ZM6 46.713a1 1 0 0 0-1 1V51.5a1 1 0 0 0 1.499.867l4.125-2.375a1 1 0 1 0-.998-1.734L7 49.77v-2.058a1 1 0 0 0-1-1Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M24 46v16.5l34-19.7V12.5L41.5 22" />

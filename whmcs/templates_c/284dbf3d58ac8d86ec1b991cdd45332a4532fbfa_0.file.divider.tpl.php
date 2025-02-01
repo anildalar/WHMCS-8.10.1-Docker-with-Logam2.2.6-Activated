@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:08
+/* Smarty version 3.1.48, created on 2025-01-13 07:06:58
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/types/divider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf58911b22_06132906',
+  'unifunc' => 'content_6784bb92995478_03270428',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '284dbf3d58ac8d86ec1b991cdd45332a4532fbfa' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/types/divider.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700cf58911b22_06132906 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784bb92995478_03270428 (Smarty_Internal_Template $_smarty_tpl) {
 ?><input 
     class="translation-<?php echo $_smarty_tpl->tpl_vars['parent']->value;?>
 -<?php echo $_smarty_tpl->tpl_vars['index']->value;?>

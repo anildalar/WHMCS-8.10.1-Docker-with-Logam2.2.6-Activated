@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:09
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/modals/change-type.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf59112446_07017813',
+  'unifunc' => 'content_6784b3a2358c41_92792372',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '47c9d65975b5f5753f585fa135f087698a6c2f85' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/modals/change-type.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700cf59112446_07017813 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a2358c41_92792372 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="changeTypeModal" data-modal-change-type>
     <div class="modal__dialog">
         <div class="modal__content">

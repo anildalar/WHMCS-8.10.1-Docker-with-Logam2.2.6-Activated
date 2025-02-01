@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 09:33:55
+/* Smarty version 3.1.48, created on 2025-01-05 19:10:55
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/threesixtymonitoring.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67010803745bf1_92929399',
+  'unifunc' => 'content_677ad93fa50600_31405296',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9b06ae2f4b804b98d67cc460c50a06e156e4338c' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/threesixtymonitoring.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67010803745bf1_92929399 (Smarty_Internal_Template $_smarty_tpl) {
+function content_677ad93fa50600_31405296 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-threesixtymonitoring svg-threesixtymonitoring-left promo-slider-icon" width="376" height="325" fill="none" viewBox="0 0 376 325">
     <g clip-path="url(#monitoring-modern-right-left__a)">
         <path fill="url(#monitoring-modern-right-left__b)" fill-opacity="0.1" d="M26.1161 222.611L61.4272 243.295L41.8686 254.694L6.51846 233.997L26.1161 222.611Z" />

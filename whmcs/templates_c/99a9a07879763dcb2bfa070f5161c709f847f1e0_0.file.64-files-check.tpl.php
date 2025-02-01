@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-files-check.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d1468ba504_59410273',
+  'unifunc' => 'content_6784c20cb2ee05_10908266',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99a9a07879763dcb2bfa070f5161c709f847f1e0' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-files-check.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d1468ba504_59410273 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cb2ee05_10908266 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="67" height="65" fill="none" viewBox="0 0 67 65">
     <mask id="64-files-check__a" width="65" height="64" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
         <path fill="var(--svg-icon-color-5)" d="M64.1006 0H0.100586V64H48.1048C47.0899 63.9945 46.1329 63.7789 45.2651 63.3454C45.1404 63.2893 45.0207 63.2184 44.9031 63.1487L44.8917 63.1418C44.4547 62.8999 43.6132 62.4351 42.8772 62.0287L41.5259 61.2827C39.5446 60.335 37.1293 57.4362 37.1294 53.3208C37.1295 49.8066 38.3585 45.9818 40.2972 42.629C42.236 39.2762 44.9389 36.3015 47.9864 34.5446C50.6706 32.9973 53.305 32.587 55.4742 33.4225C55.8021 33.5348 56.3837 33.8296 56.7979 34.0442C57.0352 34.1671 57.2579 34.2853 57.421 34.3726C57.6679 34.5047 57.9135 34.6393 58.1587 34.7746C58.4141 34.9155 58.6691 35.057 58.9249 35.1972C59.1257 35.3073 59.3051 35.4054 59.4344 35.4761C59.6601 35.5995 59.8822 35.7274 60.102 35.8611C62.4784 36.9465 63.8783 39.4384 64.1006 42.7311V0Z" />

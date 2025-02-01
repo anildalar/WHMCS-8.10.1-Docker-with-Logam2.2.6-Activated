@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-29 19:16:05
+/* Smarty version 3.1.48, created on 2025-01-04 02:53:10
   from '/var/www/html/templates/lagom2/core/cms/sections/common/package-pg.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f9a77518c582_06059456',
+  'unifunc' => 'content_6778a29645e5d5_32729180',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '67493b60cd7d3120e4a595e68b5653d735710d56' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/common/package-pg.tpl',
-      1 => 1714141152,
+      1 => 1732281842,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f9a77518c582_06059456 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6778a29645e5d5_32729180 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 if (file_exists(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/package-pg.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/package-pg.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);

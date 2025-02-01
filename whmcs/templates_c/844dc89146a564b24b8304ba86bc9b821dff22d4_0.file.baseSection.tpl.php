@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-17 03:59:00
+/* Smarty version 3.1.48, created on 2025-01-04 09:20:04
   from '/var/www/html/modules/addons/LagomOrderForm/templates/admin/ui/core/default/widget/forms/sections/baseSection.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6760f7040d61b1_81709173',
+  'unifunc' => 'content_6778fd44d00665_44980022',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '844dc89146a564b24b8304ba86bc9b821dff22d4' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/templates/admin/ui/core/default/widget/forms/sections/baseSection.tpl',
-      1 => 1702658892,
+      1 => 1702664292,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6760f7040d61b1_81709173 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6778fd44d00665_44980022 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="lu-widget">

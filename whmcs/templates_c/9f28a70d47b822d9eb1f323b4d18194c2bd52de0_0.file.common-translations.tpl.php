@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:09
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/common-translations.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf590d7e50_82351189',
+  'unifunc' => 'content_6784b3a232ee38_45786993',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9f28a70d47b822d9eb1f323b4d18194c2bd52de0' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/common-translations.tpl',
-      1 => 1726757104,
+      1 => 1730150156,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700cf590d7e50_82351189 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a232ee38_45786993 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="translationCommonModal" data-common-translations-modal>
     <div class="modal__dialog">
         <div class="modal__content">

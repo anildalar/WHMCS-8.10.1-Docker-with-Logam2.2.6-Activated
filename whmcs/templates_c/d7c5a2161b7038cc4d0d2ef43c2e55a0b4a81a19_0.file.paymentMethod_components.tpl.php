@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-21 07:18:56
+/* Smarty version 3.1.48, created on 2025-01-04 09:20:21
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/paymentMethod_components.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67666be0756178_73174384',
+  'unifunc' => 'content_6778fd553b95b5_82729123',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd7c5a2161b7038cc4d0d2ef43c2e55a0b4a81a19' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/paymentMethod_components.tpl',
-      1 => 1734760265,
+      1 => 1702664292,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67666be0756178_73174384 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6778fd553b95b5_82729123 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-one-page-payment-methods-<?php echo strtolower($_smarty_tpl->tpl_vars['elementId']->value);?>
 "

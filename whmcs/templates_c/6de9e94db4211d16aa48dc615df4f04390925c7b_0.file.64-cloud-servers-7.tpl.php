@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-cloud-servers-7.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d1467eb753_40204016',
+  'unifunc' => 'content_6784c20caaf5f5_71706243',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6de9e94db4211d16aa48dc615df4f04390925c7b' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-cloud-servers-7.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d1467eb753_40204016 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20caaf5f5_71706243 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36 35.5V54L42.5 50L48.5 53.5M41 32.5V44L47.5 40L55.5 44.5L60 42M46 29.5V36L52 32.5M26 41V60L19 56M21 43V51L14 47L8.5 50M31 38.5V63L36.5 60" />
     <path stroke="var(--svg-icon-color-3)" stroke-width="2" d="M57.9998 13.5C57.9998 22.7774 58.3694 22.3267 55.2513 24.102L53.0074 25.3827C52.9492 25.4118 52.92 25.4409 52.8617 25.47C52.8034 25.47 52.7743 25.4991 52.716 25.5282L25.6438 41.0119C25.5855 41.041 25.5564 41.0701 25.5272 41.0992C25.469 41.1283 25.4107 41.1574 25.3524 41.1865L24.7404 41.5358C23.0794 42.4962 20.8938 42.9619 18.7082 42.9619C15.3861 43.1656 11.9766 42.5544 9.47041 41.0992C6.32935 39.2752 7 38.0001 7 30.5001C7 29.4416 8 27.5001 8 27.5001C8.5 25.5001 6.5 20.0001 11.5 15.5001" />

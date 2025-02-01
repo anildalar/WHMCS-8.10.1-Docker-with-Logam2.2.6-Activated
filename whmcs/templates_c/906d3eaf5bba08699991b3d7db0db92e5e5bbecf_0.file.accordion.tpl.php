@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:15
+/* Smarty version 3.1.48, created on 2025-01-03 12:01:32
   from '/var/www/html/templates/lagom2/assets/img/cms/accordion.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de3ba61e73_10720987',
+  'unifunc' => 'content_6777d19c1cc276_86548064',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '906d3eaf5bba08699991b3d7db0db92e5e5bbecf' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/img/cms/accordion.tpl',
-      1 => 1695895314,
+      1 => 1732281828,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de3ba61e73_10720987 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d19c1cc276_86548064 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
 fill="none">
 <g clip-path="url(#clip0_1015_66215)">

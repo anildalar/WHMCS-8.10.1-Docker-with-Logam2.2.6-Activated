@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-29 19:16:04
+/* Smarty version 3.1.48, created on 2025-01-03 12:04:24
   from '/var/www/html/templates/lagom2/assets/svg-icon/icon-staging-of-restores.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f9a774deb016_54981903',
+  'unifunc' => 'content_6777d2489339e7_70693258',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '7704952318fe73f2b568cca04ef4980d4ae8b9d8' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/icon-staging-of-restores.tpl',
-      1 => 1725773960,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f9a774deb016_54981903 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d2489339e7_70693258 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="none" viewBox="0 0 65 65">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23.9912 3.05438C7.45376 7.48558 -2.36029 24.484 2.0709 41.0215C5.44025 53.5961 16.0755 62.2834 28.2493 63.7768" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.4775 4.64161C20.9175 4.00708 22.4242 3.47431 23.9914 3.0544C40.5288 -1.3768 57.5273 8.43726 61.9584 24.9747C65.3554 37.6524 60.3807 50.601 50.4231 57.951" />

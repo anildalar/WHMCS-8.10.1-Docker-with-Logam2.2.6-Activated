@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/objectstorage-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aea6a0f9_37807237',
+  'unifunc' => 'content_6784b5b6b45833_60355749',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a356689248296a8125def0f91528cbec8d29a7f0' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/objectstorage-left.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aea6a0f9_37807237 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6b45833_60355749 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-objectstorage svg-objectstorage-left promo-slider-icon promo-slider-icon-reverse" width="377" height="324" fill="none" viewBox="0 0 377 324">
     <path fill="var(--svg-illustration-gray-8)" d="M54.7482 183V231L2.74878 261V213L54.7482 183Z" />
     <path fill="var(--svg-illustration-gray-3)" d="M26.3616 233.649C26.3616 235.309 27.5216 235.979 28.9616 235.149C29.7173 234.655 30.3464 233.991 30.798 233.209C31.2497 232.427 31.5112 231.55 31.5616 230.649C31.5616 228.989 30.3916 228.319 28.9616 229.149C28.2043 229.641 27.574 230.305 27.1221 231.087C26.6703 231.869 26.4097 232.747 26.3616 233.649Z" />

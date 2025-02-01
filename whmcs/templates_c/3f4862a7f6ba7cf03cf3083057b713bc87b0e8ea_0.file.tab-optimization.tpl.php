@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:55
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:19
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/includes/tab-optimization.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de27832f19_90793910',
+  'unifunc' => 'content_6784b193b2e986_08826174',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3f4862a7f6ba7cf03cf3083057b713bc87b0e8ea' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/includes/tab-optimization.tpl',
-      1 => 1720189766,
+      1 => 1734354618,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 4,
   ),
 ),false)) {
-function content_66f7de27832f19_90793910 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b193b2e986_08826174 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="tab-pane <?php if ($_GET['tab'] == 'optimization') {?>is-active<?php }?>" id="settings-optimization">
     <div class="section">
         <div class="section__header">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:37
   from '/var/www/html/templates/lagom2/assets/svg-icon/sitebuilder.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146efaec2_47945399',
+  'unifunc' => 'content_6784c20d03e299_70646519',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3ba059f5acfb534f6cb611d9a64f0325627d4192' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/sitebuilder.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146efaec2_47945399 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20d03e299_70646519 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M28.865 7.372a1 1 0 0 0-1.366-.364l-2.875 1.666a1 1 0 0 0 1.002 1.73l2.875-1.665a1 1 0 0 0 .364-1.367ZM20.24 12.37a1 1 0 0 0-1.366-.364l-5.75 3.331a1 1 0 0 0 1.002 1.73l5.75-3.33a1 1 0 0 0 .364-1.367Zm-11.5 6.663a1 1 0 0 0-1.366-.364l-2.875 1.666A1 1 0 0 0 4 21.2v3.788a1 1 0 1 0 2 0v-3.212L8.376 20.4a1 1 0 0 0 .364-1.366ZM5 31.563a1 1 0 0 0-1 1v7.575a1 1 0 1 0 2 0v-7.575a1 1 0 0 0-1-1Zm8.367 15.12A1 1 0 0 0 12 46.315l-1.875 1.08a1 1 0 0 0 .998 1.733l1.875-1.08a1 1 0 0 0 .368-1.365ZM5 46.713a1 1 0 0 0-1 1V51.5a1 1 0 0 0 1.499.867l1.875-1.08a1 1 0 0 0-.998-1.733L6 49.77v-2.058a1 1 0 0 0-1-1Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m22.093 6 7.322.98-3.05 6.729M47 17.7V6.2L13 25.9v30.3l10-5.758" />

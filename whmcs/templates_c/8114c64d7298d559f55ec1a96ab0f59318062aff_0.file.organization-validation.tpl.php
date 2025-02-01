@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:37
   from '/var/www/html/templates/lagom2/assets/svg-icon/organization-validation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146ebfad3_25709653',
+  'unifunc' => 'content_6784c20d0014b4_90745586',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8114c64d7298d559f55ec1a96ab0f59318062aff' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/organization-validation.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146ebfad3_25709653 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20d0014b4_90745586 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M17.464 2.682a1 1 0 0 1-.3 1.382 31.836 31.836 0 0 0-2.515 1.797 1 1 0 0 1-1.24-1.569 33.828 33.828 0 0 1 2.673-1.91 1 1 0 0 1 1.382.3Zm-7.395 6.03a1 1 0 0 1 .088 1.41 34.674 34.674 0 0 0-3.672 4.987 1 1 0 0 1-1.711-1.036A36.672 36.672 0 0 1 8.657 8.8a1 1 0 0 1 1.412-.088ZM3.22 19.395a1 1 0 0 1 .609 1.276 25.815 25.815 0 0 0-.861 2.976 29.152 29.152 0 0 0-.873 5.72A1 1 0 1 1 .1 29.263a31.1 31.1 0 0 1 .929-6.097c.24-1.064.547-2.12.916-3.161a1 1 0 0 1 1.277-.61Zm-.735 20.762a1 1 0 0 1 1.28.604 28.568 28.568 0 0 0 2.488 5.218 1 1 0 0 1-1.708 1.04 30.57 30.57 0 0 1-2.664-5.583 1 1 0 0 1 .604-1.279Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M62 23.6c2.8 12.9-2.8 26.2-14.1 33.1-6.9 4.4-15.4 5.9-23.4 4.1-4.4-1.1-8.5-3.2-12-6.1m4.2-45.4 1.6-7.5h-7.4" />

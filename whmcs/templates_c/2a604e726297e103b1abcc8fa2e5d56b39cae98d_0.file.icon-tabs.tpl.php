@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:09
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/components/icon-tabs.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf59101568_70621998',
+  'unifunc' => 'content_6784b3a2350462_18624433',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2a604e726297e103b1abcc8fa2e5d56b39cae98d' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/components/icon-tabs.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700cf59101568_70621998 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a2350462_18624433 (Smarty_Internal_Template $_smarty_tpl) {
 ?><ul class="nav nav--h nav--tabs m-b-2x">
     <li class="nav__item is-active">
         <a class="nav__link" data-toggle="lu-tab" href="#<?php echo $_smarty_tpl->tpl_vars['type']->value;?>

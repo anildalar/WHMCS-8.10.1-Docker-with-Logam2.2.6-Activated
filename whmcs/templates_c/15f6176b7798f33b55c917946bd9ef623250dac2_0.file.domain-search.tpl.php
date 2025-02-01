@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-07 19:44:54
+/* Smarty version 3.1.48, created on 2025-01-03 14:24:09
   from '/var/www/html/templates/lagom2/core/cms/sections/common/domain-search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67043a36da6be3_97283382',
+  'unifunc' => 'content_6777f309755af5_17556631',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '15f6176b7798f33b55c917946bd9ef623250dac2' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/common/domain-search.tpl',
-      1 => 1695895314,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67043a36da6be3_97283382 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777f309755af5_17556631 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/domain-search.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/domain-search.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>  

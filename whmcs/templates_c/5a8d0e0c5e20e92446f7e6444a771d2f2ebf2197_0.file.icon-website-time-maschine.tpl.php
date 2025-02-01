@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/icon-website-time-maschine.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146e7df84_61056787',
+  'unifunc' => 'content_6784c20cf11199_48095219',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5a8d0e0c5e20e92446f7e6444a771d2f2ebf2197' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/icon-website-time-maschine.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146e7df84_61056787 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cf11199_48095219 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M33.501.235a1 1 0 0 0-.998-.003l-3.25 1.864a1 1 0 0 0 .994 1.735L32 2.826v1.899a1 1 0 1 0 2 0V1.1a1 1 0 0 0-.499-.865Zm-9.383 5.958a1 1 0 0 0-1.365-.37l-6.5 3.726a1 1 0 0 0 .994 1.735l6.5-3.726a1 1 0 0 0 .37-1.365ZM33 10.975a1 1 0 0 0-1 1V15.6a1 1 0 1 0 2 0v-3.625a1 1 0 0 0-1-1Zm-21.883 2.67a1 1 0 0 0-1.364-.37l-3.25 1.864a1 1 0 0 0-.503.868v3.921a1 1 0 1 0 2 0v-3.342l2.747-1.575a1 1 0 0 0 .37-1.365ZM7 26.773a1 1 0 0 0-1 1v7.843a1 1 0 1 0 2 0v-7.843a1 1 0 0 0-1-1ZM20.868 39.46a1 1 0 0 0-1.364-.373l-.375.215a.995.995 0 0 0-.327.299.996.996 0 0 0-.423.13l-3.25 1.855a1 1 0 0 0 .992 1.737l3.25-1.856a.994.994 0 0 0 .326-.3.996.996 0 0 0 .424-.129l.375-.214a1 1 0 0 0 .372-1.364ZM7 42.459a1 1 0 0 0-1 1v3.92a1 1 0 0 0 1.496.87l2.875-1.643a1 1 0 0 0-.992-1.736L8 45.657v-2.199a1 1 0 0 0-1-1Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M41.5 42.5 20 54.78V23.407L46 8.5v15.86" />

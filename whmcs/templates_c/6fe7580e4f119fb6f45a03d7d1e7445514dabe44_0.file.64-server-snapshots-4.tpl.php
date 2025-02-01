@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-server-snapshots-4.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146af9e72_92306874',
+  'unifunc' => 'content_6784c20ccae0b4_93900550',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6fe7580e4f119fb6f45a03d7d1e7445514dabe44' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-server-snapshots-4.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146af9e72_92306874 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20ccae0b4_93900550 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <mask id="64-server-snapshots-4__a" width="64" height="64" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
         <path fill="var(--svg-icon-color-5)" fill-rule="evenodd" d="M64 0H0V64H64V0ZM12.0156 21.3008C12.0156 19.4956 12.0166 18.1057 13.6831 16.8538C14.2056 16.4614 15.377 15.7993 16.3315 15.2617C16.8623 14.9629 17.3262 14.7024 17.5742 14.5483V11.8508C17.5742 10.4561 18.1201 9.79468 19.2422 9.07153L24.8403 5.69263C25.6094 5.29004 26.6084 5.10059 27.7183 5.69263C28.6953 6.21387 29.2861 6.60986 30.646 7.39429L41.1675 1.42725C42.0576 0.934326 42.7441 0.923584 43.6304 1.42725C44.2334 1.75854 44.8711 2.09058 45.5342 2.43555C47.1274 3.26465 48.8652 4.16919 50.6157 5.31982C50.8486 5.51514 51.0005 5.9165 51.0005 6.38013L50.999 7.88574C50.9941 11.6123 50.9819 21.0093 51.0015 26.0098C50.9697 27.3384 50.7539 28.1848 49.603 28.9468L44.4658 32.4006C43.7661 33.3418 41.959 35.4277 40.3281 36.2446C39.5176 36.7405 37.4795 37.6023 35.812 37.0828L22.7197 44.5059C21.6147 45.0732 20.8315 45.4297 19.6479 44.8467L14.5957 41.8801C12.0767 40.415 12.0161 39.7085 12.0161 36.6533L12.0156 21.3008Z" clip-rule="evenodd" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:15
+/* Smarty version 3.1.48, created on 2025-01-03 12:01:32
   from '/var/www/html/templates/lagom2/core/cms/sections/config/testimonials/testimonial-item.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de3b9f6827_85563534',
+  'unifunc' => 'content_6777d19c161380_31074825',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a44a2cc86f2f5c2738e480c3921127107ed425dc' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/config/testimonials/testimonial-item.tpl',
-      1 => 1714141152,
+      1 => 1732281842,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de3b9f6827_85563534 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d19c161380_31074825 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div
     class="testimonials-item<?php if ($_smarty_tpl->tpl_vars['type']->value == "type-3") {?> testimonials-single<?php }
 if ($_smarty_tpl->tpl_vars['style']->value == "boxed") {?> is-boxed<?php } elseif ($_smarty_tpl->tpl_vars['style']->value == "bordered") {?> is-bordered<?php } elseif ($_smarty_tpl->tpl_vars['style']->value == "default") {?> testimonials-item-default<?php }?>">

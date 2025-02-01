@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-12 11:55:33
+/* Smarty version 3.1.48, created on 2025-01-13 07:06:58
   from '/var/www/html/templates/lagom2/assets/svg-icon/credit-card.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_675acf352d4a58_75505253',
+  'unifunc' => 'content_6784bb92a8bd04_63775885',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '53dba6b36212d7656107974bee7b853542b0346e' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/credit-card.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_675acf352d4a58_75505253 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784bb92a8bd04_63775885 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-2)" stroke="var(--svg-icon-color-2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m39 1 3 1.7-34 50L5 51V20.6L39 1Z" />
     <path fill="var(--svg-icon-color-1)" stroke="var(--svg-icon-color-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M42 2.7v19.5L24.5 32.3v10.9L8 52.7V22.4L42 2.7Z" />

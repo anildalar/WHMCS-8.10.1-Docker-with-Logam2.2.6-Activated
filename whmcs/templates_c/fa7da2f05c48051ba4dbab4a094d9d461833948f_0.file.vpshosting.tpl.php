@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/vpshosting.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aeb79e47_39916310',
+  'unifunc' => 'content_6784b5b6bffff1_14880685',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fa7da2f05c48051ba4dbab4a094d9d461833948f' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/vpshosting.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aeb79e47_39916310 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6bffff1_14880685 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-vpshosting svg-vpshosting-left promo-slider-icon" width="596" height="514" fill="none" viewBox="0 0 596 514">
     <g clip-path="url(#vps-hosting-modern-right-left__a)">
         <path fill="var(--svg-illustration-gray-3)" d="M85.2963 48.4743L176.667 101.443C179.049 102.824 181 106.182 181 108.943V250.911C181.001 254.255 173.636 257.178 173.636 257.178L85.3011 200.442C82.9193 199.061 80.9883 195.703 80.9882 192.942L75.7617 51.9849C75.7617 51.9849 81.6866 46.3818 85.2963 48.4743Z" />

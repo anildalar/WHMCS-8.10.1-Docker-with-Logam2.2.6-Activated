@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-30 12:09:25
+/* Smarty version 3.1.48, created on 2025-01-15 10:59:28
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/cookie-box-translation.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fa94f55b80e2_96588747',
+  'unifunc' => 'content_678795108dc221_50044311',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '13c66aca871fa2f6037b0d3cb3bc4b30bb488eca' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/cookie-box-translation.tpl',
-      1 => 1726757104,
+      1 => 1730150156,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fa94f55b80e2_96588747 (Smarty_Internal_Template $_smarty_tpl) {
+function content_678795108dc221_50044311 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="cookieBoxTranslationsModal" data-cookiebox-translation-modal>
     <div class="modal__dialog">
         <div class="modal__content">

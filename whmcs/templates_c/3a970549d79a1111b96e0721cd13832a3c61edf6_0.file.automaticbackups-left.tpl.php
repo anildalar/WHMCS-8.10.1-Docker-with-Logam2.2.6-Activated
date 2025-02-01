@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/automaticbackups-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3ae7ad4e1_96585187',
+  'unifunc' => 'content_6784b5b68675e5_27539553',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3a970549d79a1111b96e0721cd13832a3c61edf6' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/automaticbackups-left.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3ae7ad4e1_96585187 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b68675e5_27539553 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-automaticbackups svg-automaticbackups-left promo-slider-icon promo-slider-icon-reverse" width="377" height="324" fill="none" viewBox="0 0 377 324">
     <path fill="var(--svg-illustration-gray-6)" fill-rule="evenodd" d="M28.6882 184.714C25.7996 186.431 24.5437 189.755 24.6036 193.394C24.6635 197.039 25.9811 200.87 27.9322 204.146C29.883 207.421 32.6248 210.405 35.81 212.186C37.174 212.948 38.8979 212.461 39.6604 211.097C40.4229 209.733 39.9354 208.009 38.5714 207.246C36.4606 206.066 34.3732 203.901 32.7939 201.25C31.2149 198.599 30.3015 195.726 30.2616 193.301C30.2216 190.869 31.043 189.897 31.5806 189.577C32.1221 189.255 33.3768 188.999 35.5024 190.187C36.8663 190.95 38.5902 190.462 39.3527 189.098C40.1153 187.734 39.6277 186.01 38.2638 185.248C35.0933 183.475 31.5728 182.998 28.6882 184.714Z" />
     <path fill="var(--svg-illustration-gray-6)" fill-rule="evenodd" d="M77.839 156.357C74.9504 158.075 73.6945 161.399 73.7544 165.038C73.8143 168.683 75.1319 172.514 77.083 175.79C79.0338 179.065 81.7756 182.049 84.9609 183.829C86.3248 184.592 88.0487 184.104 88.8112 182.74C89.5738 181.376 89.0862 179.653 87.7222 178.89C85.6114 177.71 83.524 175.545 81.9447 172.894C80.3658 170.243 79.4523 167.37 79.4124 164.945C79.3725 162.512 80.1938 161.541 80.7314 161.221C81.273 160.899 82.5276 160.642 84.6532 161.831C86.0172 162.593 87.741 162.106 88.5036 160.742C89.2661 159.378 88.7785 157.654 87.4146 156.891C84.2441 155.119 80.7236 154.642 77.839 156.357Z" />

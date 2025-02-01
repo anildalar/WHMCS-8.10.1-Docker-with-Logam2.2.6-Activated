@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-08 03:24:45
+/* Smarty version 3.1.48, created on 2025-01-05 23:53:08
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-domain-search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6704a5fd842f63_14521952',
+  'unifunc' => 'content_677b1b640807f4_36979166',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c0877c1657a63b29500a7c2a807a63871301c0e8' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-domain-search.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6704a5fd842f63_14521952 (Smarty_Internal_Template $_smarty_tpl) {
+function content_677b1b640807f4_36979166 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-width="2" d="M42.0001 5.85741L36.1917 7.82798L35.8722 10.1971L34.9671 11.798L31.4914 12.0184L29.8638 13.8665L33.9251 14.4142L37.1269 16.2244L39.1575 16.4983L39.9446 18.3274L38.838 18.8674L34.0999 18.2283L32.1605 17.2776L29.453 16.9124L26.8746 20.6998L28.7227 22.3275L29.8938 23.8638L32.4188 25.5827L31.3767 28.199L31.6885 30.9978L34.1221 33.3936L35.9512 32.6065L36.1795 30.9143L38.5753 28.4806L40.047 25.2332L41.2449 24.0163L42.7813 22.8452V22.2206L43.732 20.9058L45.6068 19.7803H46.1597L46.7134 19.2403L48.3143 20.1454L49.075 20.9058L50.8115 16.9124M28.0465 3.6344L30.6666 5.35983L30.3471 7.72891L26.4873 8.24213L23.9357 9.27637L21.2014 11.6644L19.9122 13.5581L18.4404 16.8055L17.1969 18.3608L16.3787 16.0809L15.478 13.5581M13.8354 17.2776L15.478 20.8858L17.7101 22.2206L18.6341 23.0344L19.3299 25.5404L19.0104 27.9095L20.0903 30.1227L19.5426 34.184V36.6911" />
     <path stroke="var(--svg-icon-color-3)" stroke-linejoin="round" stroke-width="2" d="M37.4225 40.9283C35.0121 41.5854 32.4338 41.7808 29.8032 41.426C19.2615 40.0042 11.8709 30.2872 13.2958 19.7223C14.7206 9.15751 24.4214 1.74557 34.9631 3.16732C44.1261 4.40313 50.9084 11.9064 51.5899 20.786" />

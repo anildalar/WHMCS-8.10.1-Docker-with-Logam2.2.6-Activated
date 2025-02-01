@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/sitelock-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aeb1c1f5_74902338',
+  'unifunc' => 'content_6784b5b6bb6c73_65411577',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a7c102b93777cbb64c4f83c935a5eb8ef793318c' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/sitelock-left.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aeb1c1f5_74902338 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6bb6c73_65411577 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-sitelock svg-sitelock-left promo-slider-icon promo-slider-icon-reverse" width="377" height="324" fill="none" viewBox="0 0 377 324">
     <path fill="var(--svg-illustration-primary-1)" d="M101.875 294.25L143.375 270.25V236.25L101.875 260.25V294.25Z" />
     <path fill="var(--svg-illustration-gray-w)" d="M109.475 271.37V275.37L106.875 276.87V272.87L109.475 271.37Z" />

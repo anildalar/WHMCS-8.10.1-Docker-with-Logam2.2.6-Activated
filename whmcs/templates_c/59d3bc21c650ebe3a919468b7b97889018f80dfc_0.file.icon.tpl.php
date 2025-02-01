@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:08
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/components/icon.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf588821c1_78314787',
+  'unifunc' => 'content_6784b3a21af454_56498294',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '59d3bc21c650ebe3a919468b7b97889018f80dfc' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/components/icon.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/tooltip.tpl' => 2,
   ),
 ),false)) {
-function content_6700cf588821c1_78314787 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a21af454_56498294 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('iconsPath', "./../../../../../../../../templates/".((string)$_smarty_tpl->tpl_vars['themeName']->value)."/assets");?>
 <div class="col-md-12">
     <div class="form-group">

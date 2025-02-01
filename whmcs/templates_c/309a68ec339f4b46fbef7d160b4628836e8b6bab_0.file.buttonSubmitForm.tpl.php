@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-18 08:53:51
+/* Smarty version 3.1.48, created on 2025-01-04 09:20:08
   from '/var/www/html/modules/addons/LagomOrderForm/templates/admin/ui/core/default/widget/buttons/buttonSubmitForm.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67628d9f50e901_37854618',
+  'unifunc' => 'content_6778fd48f33970_73428667',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67628d9f50e901_37854618 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6778fd48f33970_73428667 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <a <?php

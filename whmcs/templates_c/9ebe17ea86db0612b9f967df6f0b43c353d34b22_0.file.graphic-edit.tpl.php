@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:26
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/edit-item/graphic-edit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f3952e4_72856586',
+  'unifunc' => 'content_6784b19a0162d8_34250818',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ebe17ea86db0612b9f967df6f0b43c353d34b22' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/edit-item/graphic-edit.tpl',
-      1 => 1720189764,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/modal/tabs.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2f3952e4_72856586 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b19a0162d8_34250818 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal modal--lg modal--media" id="editGraphicModal" data-edit-graphic-modal>
     <div class="modal__dialog">
         <div class="modal__content">

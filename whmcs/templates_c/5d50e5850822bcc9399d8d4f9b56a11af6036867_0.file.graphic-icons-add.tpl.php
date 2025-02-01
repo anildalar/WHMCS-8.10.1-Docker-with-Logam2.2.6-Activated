@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:26
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/add-item/graphic-icons-add.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f477929_62983269',
+  'unifunc' => 'content_6784b19a0b8ca5_15052358',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d50e5850822bcc9399d8d4f9b56a11af6036867' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/add-item/graphic-icons-add.tpl',
-      1 => 1720189764,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/modal/other/icon-tabs.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2f477929_62983269 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b19a0b8ca5_15052358 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal modal--lg modal--media" id="addGraphicIconModal" data-add-new-graphic-icon-modal>
     <div class="modal__dialog">
         <div class="modal__content">

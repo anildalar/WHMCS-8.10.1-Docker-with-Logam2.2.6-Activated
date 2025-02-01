@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/cloudservers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3ae99e951_77158427',
+  'unifunc' => 'content_6784b5b6ab6de8_63711270',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4caae30d46afb0e016af64dc7d17209e0a7e5693' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/cloudservers.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3ae99e951_77158427 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6ab6de8_63711270 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-cloudservers svg-cloudservers-left promo-slider-icon" width="596" height="515" fill="none" viewBox="0 0 596 515">
     <g clip-path="url(#cloud-servers-modern-right-left__a)">
         <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M0 1.29785V168.153L180 272.063V104.931L0 1.29785Z" />

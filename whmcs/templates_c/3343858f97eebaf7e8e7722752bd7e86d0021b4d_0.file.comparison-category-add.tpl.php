@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:26
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/add-item/comparison-category-add.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f415da7_18719643',
+  'unifunc' => 'content_6784b19a071d51_28608570',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3343858f97eebaf7e8e7722752bd7e86d0021b4d' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/add-item/comparison-category-add.tpl',
-      1 => 1720189764,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/modal/other/icon-tabs.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2f415da7_18719643 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b19a071d51_28608570 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div 
     class="modal modal--lg modal--media modal--media-scroll" 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-30 07:07:03
+/* Smarty version 3.1.48, created on 2025-01-03 20:31:45
   from '/var/www/html/templates/lagom2/assets/svg-icon/156-leading-security.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fa4e177f54b0_41797864',
+  'unifunc' => 'content_67784931221778_13670405',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd57f5eac9fc9744b28598c0bed80faf9748a594f' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/156-leading-security.tpl',
-      1 => 1725773960,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fa4e177f54b0_41797864 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67784931221778_13670405 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?> svg-icon-animate" xmlns="http://www.w3.org/2000/svg" width="156" height="156" fill="none" viewBox="0 0 156 156">
   <path stroke="var(--svg-icon-color-3)" stroke-linejoin="round" stroke-width="2" d="M30.6667 81L35 76L30.6667 71L14.3333 71L11 74.3333L7.66667 71L1 71L5.33334 76L1 81L7.66667 81L11 77.6667L14.3333 81L30.6667 81Z"/>
   <path stroke="var(--svg-icon-color-3)" stroke-linejoin="round" stroke-width="2" d="M121.645 22.9874L120.432 29.4918L126.698 31.6165L142.518 22.3515L143.71 17.7906L148.271 18.9824L154.024 15.6133L147.757 13.4887L148.97 6.98422L143.217 10.3533L142.025 14.9142L137.464 13.7224L121.645 22.9874Z"/>

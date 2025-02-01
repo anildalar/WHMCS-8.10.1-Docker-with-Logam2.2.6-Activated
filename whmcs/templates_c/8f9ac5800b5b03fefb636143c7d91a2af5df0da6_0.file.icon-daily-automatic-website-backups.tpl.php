@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-16 02:08:22
+/* Smarty version 3.1.48, created on 2025-01-03 12:04:24
   from '/var/www/html/templates/lagom2/assets/svg-icon/icon-daily-automatic-website-backups.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_670f2016a63780_87411514',
+  'unifunc' => 'content_6777d24893da74_24931047',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8f9ac5800b5b03fefb636143c7d91a2af5df0da6' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/icon-daily-automatic-website-backups.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_670f2016a63780_87411514 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d24893da74_24931047 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M32 2.004c1.329 0 2.637.086 3.92.254a1 1 0 0 0 .258-1.984 32.292 32.292 0 0 0-8.356 0 1 1 0 1 0 .259 1.984A30.29 30.29 0 0 1 32 2.004Zm10.943.97a1 1 0 0 0 .54 1.306 29.968 29.968 0 0 1 6.78 3.921 1 1 0 1 0 1.219-1.585 31.967 31.967 0 0 0-7.233-4.184 1 1 0 0 0-1.306.541Zm13.043 9.365a1 1 0 0 0-.183 1.402 29.972 29.972 0 0 1 3.921 6.78 1 1 0 1 0 1.847-.767 31.965 31.965 0 0 0-4.183-7.232 1 1 0 0 0-1.402-.183Zm6.623 14.624a1 1 0 0 0-.863 1.121 30.286 30.286 0 0 1 0 7.84 1 1 0 1 0 1.984.258 32.297 32.297 0 0 0 0-8.356 1 1 0 0 0-1.121-.863ZM61.03 42.947a1 1 0 0 0-1.307.54 29.97 29.97 0 0 1-3.921 6.78 1 1 0 1 0 1.585 1.218 31.965 31.965 0 0 0 4.183-7.232 1 1 0 0 0-.54-1.306ZM12.335 55.99a1 1 0 0 0 .183 1.402 31.965 31.965 0 0 0 7.232 4.183 1 1 0 1 0 .767-1.847 29.97 29.97 0 0 1-6.78-3.922 1 1 0 0 0-1.402.184Zm39.33 0a1 1 0 0 0-1.402-.184 29.97 29.97 0 0 1-6.78 3.922 1 1 0 1 0 .767 1.847 31.965 31.965 0 0 0 7.232-4.183 1 1 0 0 0 .183-1.402Zm-14.624 6.622a1 1 0 0 0-1.121-.862 30.286 30.286 0 0 1-7.84 0 1 1 0 1 0-.258 1.983 32.298 32.298 0 0 0 8.356 0 1 1 0 0 0 .863-1.12Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.771 1.365A31.239 31.239 0 0 0 32.001 1C14.878 1 1 14.88 1 32c0 13.125 8.156 24.345 19.676 28.867M45.443 10.36l-2.4-7.9 8.3-1.3" />

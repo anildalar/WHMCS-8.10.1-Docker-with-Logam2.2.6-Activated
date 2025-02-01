@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-files-upload.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d1468ce176_94526213',
+  'unifunc' => 'content_6784c20cb3d9b9_37876116',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '066ca76be2e83891ab531c784b771a82163eb433' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-files-upload.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d1468ce176_94526213 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cb3d9b9_37876116 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="66" height="65" fill="none" viewBox="0 0 66 65">
     <mask id="64-files-upload__a" width="64" height="64" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
         <path fill="var(--svg-icon-color-5)" d="M64 0H0V64H48.0042C46.9893 63.9945 46.0323 63.7789 45.1645 63.3454C45.0398 63.2893 44.9201 63.2184 44.8026 63.1487L44.7911 63.1418C44.3541 62.8999 43.5126 62.4351 42.7766 62.0287L41.4253 61.2827C39.444 60.335 37.0287 57.4362 37.0288 53.3208C37.0289 49.8066 38.2579 45.9818 40.1966 42.629C42.1354 39.2762 44.8383 36.3015 47.8858 34.5446C50.57 32.9973 53.2044 32.587 55.3737 33.4225C55.7015 33.5348 56.2831 33.8296 56.6973 34.0442C56.9346 34.1671 57.1573 34.2853 57.3204 34.3726C57.5673 34.5047 57.8129 34.6393 58.0581 34.7746C58.3135 34.9155 58.5685 35.057 58.8243 35.1972C59.0251 35.3073 59.2045 35.4054 59.3338 35.4761C59.5595 35.5995 59.7816 35.7274 60.0014 35.8611C62.3778 36.9465 63.7777 39.4384 64 42.7311V0Z" />

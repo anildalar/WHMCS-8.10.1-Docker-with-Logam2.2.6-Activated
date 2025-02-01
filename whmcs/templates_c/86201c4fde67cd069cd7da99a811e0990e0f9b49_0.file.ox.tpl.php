@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/ox.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aea9f4c2_24375804',
+  'unifunc' => 'content_6784b5b6b5e481_47686600',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '86201c4fde67cd069cd7da99a811e0990e0f9b49' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/ox.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aea9f4c2_24375804 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6b5e481_47686600 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-ox svg-ox-left promo-slider-icon" width="377" height="325" fill="none" viewBox="0 0 377 325">
     <g clip-path="url(#ox-modern-right-left__a)">
         <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M2.98083 2.60358V107.489L116.981 172.106V67.4431L2.98083 2.60358Z" clip-rule="evenodd" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:26
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/group/group-remove.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f39ed15_92317883',
+  'unifunc' => 'content_6784b19a01d882_06138036',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bc403a098bb5003d753e7f1e661d4c6456180529' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/group/group-remove.tpl',
-      1 => 1720189764,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de2f39ed15_92317883 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b19a01d882_06138036 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal modal--hero" id="deleteGroupModal" data-delete-group-modal>
     <div class="modal__dialog">
         <div class="modal__content">

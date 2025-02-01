@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:48:02
+/* Smarty version 3.1.48, created on 2025-01-03 12:05:40
   from '/var/www/html/admin/templates/blend/homepage.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7dee2ba95f7_29684833',
+  'unifunc' => 'content_6777d294ac4267_05078359',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '049d8299b8638743544317398e757f2bf6c1de61' => 
     array (
       0 => '/var/www/html/admin/templates/blend/homepage.tpl',
-      1 => 1725773959,
+      1 => 1734760264,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7dee2ba95f7_29684833 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d294ac4267_05078359 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="clearfix"></div>
 
 <?php echo $_smarty_tpl->tpl_vars['infobox']->value;?>

@@ -3,9 +3,9 @@
         "name": "CMS - Footer Menu",
         "version": "1.0.0",
         "location": "Footer",
-        "active": 0,
+        "active": 1,
         "display": "CMS",
-        "rules": ""
+        "rules": "Website, Client Portal, Order Process"
     },
     "menu-items": [
         {
@@ -68,7 +68,7 @@
                 {
                     "name": "Shared Hosting",
                     "location": null,
-                    "active": 0,
+                    "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
                         "page": "152",
@@ -124,7 +124,7 @@
                 {
                     "name": "WordPress Hosting",
                     "location": null,
-                    "active": 0,
+                    "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
                         "page": "156",
@@ -180,7 +180,7 @@
                 {
                     "name": "Reseller Hosting",
                     "location": null,
-                    "active": 0,
+                    "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
                         "page": "150",
@@ -236,7 +236,7 @@
                 {
                     "name": "VPS Hosting",
                     "location": null,
-                    "active": 0,
+                    "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
                         "page": "154",
@@ -292,7 +292,7 @@
                 {
                     "name": "Cloud Servers",
                     "location": null,
-                    "active": 0,
+                    "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
                         "page": "117",
@@ -348,7 +348,7 @@
                 {
                     "name": "Dedicated Servers",
                     "location": null,
-                    "active": 0,
+                    "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
                         "page": "121",
@@ -404,7 +404,7 @@
                 {
                     "name": "Game Servers",
                     "location": null,
-                    "active": 0,
+                    "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
                         "page": "134",
@@ -460,7 +460,7 @@
                 {
                     "name": "Domain Registration",
                     "location": null,
-                    "active": 0,
+                    "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
                         "page": "122",
@@ -516,7 +516,7 @@
                 {
                     "name": "Domain Transfer",
                     "location": null,
-                    "active": 0,
+                    "active": 1,
                     "type": "WHMCS Page",
                     "settings": {
                         "page": "123",
@@ -568,69 +568,13 @@
                             "ukranian": ""
                         }
                     }
-                },
-                {
-                    "name": "HostedPBX",
-                    "location": null,
-                    "active": 1,
-                    "type": "WHMCS Page",
-                    "settings": {
-                        "page": "152",
-                        "translation-method": "custom",
-                        "icon": "",
-                        "predefined_icon": "",
-                        "predefined_illustration": "",
-                        "media": ""
-                    },
-                    "display": {
-                        "label_type": "default",
-                        "label_text": "",
-                        "client-status": "All",
-                        "style": {
-                            "layout": "icon-text"
-                        },
-                        "custom-data-classes": "",
-                        "target": "0"
-                    },
-                    "description": "null",
-                    "translation": {
-                        "whmcs": "",
-                        "custom": {
-                            "arabic": "",
-                            "azerbaijani": "",
-                            "catalan": "",
-                            "chinese": "",
-                            "croatian": "",
-                            "czech": "",
-                            "danish": "",
-                            "dutch": "",
-                            "english": "HostedPBX",
-                            "estonian": "",
-                            "farsi": "",
-                            "french": "",
-                            "german": "",
-                            "hebrew": "",
-                            "hungarian": "",
-                            "italian": "",
-                            "macedonian": "",
-                            "norwegian": "",
-                            "portuguese-br": "",
-                            "portuguese-pt": "",
-                            "romanian": "",
-                            "russian": "",
-                            "spanish": "",
-                            "swedish": "",
-                            "turkish": "",
-                            "ukranian": ""
-                        }
-                    }
                 }
             ]
         },
         {
             "name": "Security &amp; Tools",
             "location": null,
-            "active": 0,
+            "active": 1,
             "type": "Custom Link",
             "settings": {
                 "link": "#",
@@ -1754,7 +1698,7 @@
                 {
                     "name": "Live Chat",
                     "location": null,
-                    "active": 0,
+                    "active": 1,
                     "type": "Custom Link",
                     "settings": {
                         "link": "#",
@@ -1815,7 +1759,7 @@
             "active": 1,
             "type": "Custom Link",
             "settings": {
-                "link": "https:\/\/www.facebook.com\/people\/Ocean-Tel-LTD\/100071336802930\/",
+                "link": "https:\/\/www.facebook.com\/lagom.whmcs\/",
                 "translation-method": "whmcs",
                 "icon": "fab fa-facebook",
                 "predefined_icon": "",
@@ -1872,12 +1816,12 @@
             "active": 1,
             "type": "Custom Link",
             "settings": {
-                "link": "https:\/\/twitter.com\/",
+                "link": "https:\/\/twitter.com\/Lagom_whmcs",
                 "translation-method": "whmcs",
-                "icon": "",
+                "icon": "fab fa-twitter",
                 "predefined_icon": "",
                 "predefined_illustration": "",
-                "media": "x-twitter-brands-solid3.svg"
+                "media": ""
             },
             "display": {
                 "label_type": "default",
@@ -1929,7 +1873,7 @@
             "active": 1,
             "type": "Custom Link",
             "settings": {
-                "link": "https:\/\/www.linkedin.com\/company\/ocean-tel\/",
+                "link": "https:\/\/pl.linkedin.com\/company\/rs-studio",
                 "translation-method": "whmcs",
                 "icon": "fab fa-linkedin",
                 "predefined_icon": "",
@@ -2131,63 +2075,6 @@
                     "danish": "",
                     "dutch": "",
                     "english": "",
-                    "estonian": "",
-                    "farsi": "",
-                    "french": "",
-                    "german": "",
-                    "hebrew": "",
-                    "hungarian": "",
-                    "italian": "",
-                    "macedonian": "",
-                    "norwegian": "",
-                    "portuguese-br": "",
-                    "portuguese-pt": "",
-                    "romanian": "",
-                    "russian": "",
-                    "spanish": "",
-                    "swedish": "",
-                    "turkish": "",
-                    "ukranian": ""
-                }
-            }
-        },
-        {
-            "name": "New Item",
-            "location": null,
-            "active": 1,
-            "type": "WHMCS Page",
-            "settings": {
-                "page": "",
-                "translation-method": "custom",
-                "icon": "",
-                "predefined_icon": "",
-                "predefined_illustration": "",
-                "media": ""
-            },
-            "display": {
-                "label_type": "default",
-                "label_text": "",
-                "client-status": "All",
-                "style": {
-                    "layout": "text"
-                },
-                "footer-position": "Primary",
-                "custom-data-classes": "",
-                "target": "0"
-            },
-            "description": "null",
-            "translation": {
-                "whmcs": "",
-                "custom": {
-                    "arabic": "",
-                    "azerbaijani": "",
-                    "catalan": "",
-                    "chinese": "",
-                    "croatian": "",
-                    "czech": "",
-                    "danish": "",
-                    "dutch": "",
-                    "english": "New Item",
                     "estonian": "",
                     "farsi": "",
                     "french": "",

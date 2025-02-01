@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:55
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:19
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/optimize-media.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de278c6975_29420300',
+  'unifunc' => 'content_6784b193bc6ff7_76850622',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fdc10f926c1f658a09970ed1adfc0830a14fd728' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/optimize-media.tpl',
-      1 => 1720189762,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de278c6975_29420300 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b193bc6ff7_76850622 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div 
     class="modal" 
     id="optimize-media-modal" 

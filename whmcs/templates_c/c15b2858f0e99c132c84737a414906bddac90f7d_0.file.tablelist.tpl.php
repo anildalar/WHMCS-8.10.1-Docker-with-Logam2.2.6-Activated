@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-02 05:37:06
+/* Smarty version 3.1.48, created on 2025-01-04 08:49:01
   from '/var/www/html/templates/lagom2/includes/tablelist.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fcdc024c76a2_21773659',
+  'unifunc' => 'content_6778f5fd88fb79_41594293',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c15b2858f0e99c132c84737a414906bddac90f7d' => 
     array (
       0 => '/var/www/html/templates/lagom2/includes/tablelist.tpl',
-      1 => 1726738920,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fcdc024c76a2_21773659 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6778f5fd88fb79_41594293 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/overwrites/tablelist.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/overwrites/tablelist.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>  

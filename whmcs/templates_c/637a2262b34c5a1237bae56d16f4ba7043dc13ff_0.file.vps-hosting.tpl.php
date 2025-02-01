@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:23
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:37
   from '/var/www/html/templates/lagom2/assets/svg-icon/vps-hosting.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d14700c830_87147648',
+  'unifunc' => 'content_6784c20d076e53_58344262',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '637a2262b34c5a1237bae56d16f4ba7043dc13ff' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/vps-hosting.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d14700c830_87147648 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20d076e53_58344262 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M30.882.145a1 1 0 0 1 1.02-.01l3.826 2.226a1 1 0 1 1-1.006 1.728L31.41 2.163 28.243 4.08a1 1 0 1 1-1.036-1.71L30.882.145Zm11.129 7.027a1 1 0 0 1 1.367-.361l7.65 4.45a1 1 0 1 1-1.006 1.728l-7.65-4.45a1 1 0 0 1-.361-1.367Zm-20.78-.015a1 1 0 0 1-.338 1.373l-7.35 4.45a1 1 0 1 1-1.036-1.71l7.35-4.45a1 1 0 0 1 1.373.337Zm36.08 8.915a1 1 0 0 1 1.367-.361l3.825 2.225A1 1 0 0 1 63 18.8v5.6a1 1 0 1 1-2 0v-5.025l-3.328-1.936a1 1 0 0 1-.361-1.367Zm-50.78-.015a1 1 0 0 1-.338 1.373L3 19.364v2.799a1 1 0 1 1-2 0V18.8a1 1 0 0 1 .482-.855l3.675-2.225a1 1 0 0 1 1.373.337ZM2 27.887a1 1 0 0 1 1 1v6.725a1 1 0 1 1-2 0v-6.725a1 1 0 0 1 1-1ZM62 34.6a1 1 0 0 1 1 1v9.564a1 1 0 0 1-2 0V35.6a1 1 0 0 1 1-1ZM2 41.337a1 1 0 0 1 1 1v3.675a1 1 0 1 1-2 0v-3.675a1 1 0 0 1 1-1Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 46.102 31.4 63 62 45.281" />

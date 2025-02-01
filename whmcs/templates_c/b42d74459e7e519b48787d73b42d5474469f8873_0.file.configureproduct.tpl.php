@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-30 14:57:10
+/* Smarty version 3.1.48, created on 2025-01-06 12:31:34
   from '/var/www/html/templates/orderforms/lagom2/configureproduct.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fabc46579d36_56882250',
+  'unifunc' => 'content_677bcd2684c975_89848451',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b42d74459e7e519b48787d73b42d5474469f8873' => 
     array (
       0 => '/var/www/html/templates/orderforms/lagom2/configureproduct.tpl',
-      1 => 1726063642,
+      1 => 1727116108,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:orderforms/".((string)$_smarty_tpl->tpl_vars[\'carttpl\']->value)."/includes/recommendations-modal.tpl' => 1,
   ),
 ),false)) {
-function content_66fabc46579d36_56882250 (Smarty_Internal_Template $_smarty_tpl) {
+function content_677bcd2684c975_89848451 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/function.math.php','function'=>'smarty_function_math',),1=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 

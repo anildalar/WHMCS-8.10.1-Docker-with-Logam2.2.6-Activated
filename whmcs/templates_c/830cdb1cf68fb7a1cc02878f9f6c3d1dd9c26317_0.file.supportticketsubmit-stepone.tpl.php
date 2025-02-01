@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-15 01:20:26
+/* Smarty version 3.1.48, created on 2025-01-04 00:56:12
   from '/var/www/html/templates/lagom2/core/pages/supportticketsubmit-stepone/boxes/supportticketsubmit-stepone.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_675e2eda03e062_23790813',
+  'unifunc' => 'content_6778872c70dc98_28016854',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '830cdb1cf68fb7a1cc02878f9f6c3d1dd9c26317' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/pages/supportticketsubmit-stepone/boxes/supportticketsubmit-stepone.tpl',
-      1 => 1681727128,
+      1 => 1681745128,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_675e2eda03e062_23790813 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6778872c70dc98_28016854 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="section">
     <div class="section-header">
         <h2 class="section-title"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['supportticketschoosedepartment'];?>

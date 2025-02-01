@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/cloudservers-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3ae9a8178_78827506',
+  'unifunc' => 'content_6784b5b6abd726_52790234',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63fa0d4eca928625475634271219670f3ad6d313' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/cloudservers-left.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3ae9a8178_78827506 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6abd726_52790234 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-cloudservers svg-cloudservers-left promo-slider-icon promo-slider-icon-reverse" width="596" height="515" fill="none" viewBox="0 0 596 515">
     <g>
         <path fill="var(--svg-illustration-gray-2)" fill-rule="evenodd" d="M154.5 380.884C154.224 380.884 154 381.107 154 381.384V405.902C154 407.16 154.675 408.321 155.769 408.944L176.7 420.852C178.376 421.806 178.387 424.218 176.719 425.187L74.3889 484.611L62.422 478.892C61.5531 478.477 61 477.6 61 476.637V461.507C61 461.23 60.7761 461.007 60.5 461.007C60.2239 461.007 60 461.23 60 461.507V476.637C60 477.985 60.7744 479.213 61.9908 479.795L74.196 485.628L74.1994 485.629L116.091 505.264C119.824 507.013 124.151 506.961 127.841 505.123L170.576 483.832C174.067 482.093 178.17 482.082 181.669 483.804L217.955 501.66C220.28 502.804 223 501.111 223 498.519V455.067C223 454.791 222.776 454.567 222.5 454.567C222.224 454.567 222 454.791 222 455.067V498.519C222 500.371 220.057 501.58 218.396 500.762L182.111 482.907C178.331 481.047 173.9 481.058 170.13 482.937L127.395 504.228C123.979 505.93 119.972 505.978 116.516 504.358L75.4888 485.129L177.221 426.051C179.556 424.695 179.541 421.318 177.194 419.983L156.264 408.074C155.482 407.63 155 406.8 155 405.902V381.384C155 381.107 154.776 380.884 154.5 380.884Z" opacity=".12" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 11:42:56
+/* Smarty version 3.1.48, created on 2025-01-03 12:33:01
   from '/var/www/html/templates/orderforms/lagom2/products.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7ebc0b07126_50773175',
+  'unifunc' => 'content_6777d8fdcf09e6_79246416',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b574b5ed23a3a17175dff5c97ba5167fc23c9de5' => 
     array (
       0 => '/var/www/html/templates/orderforms/lagom2/products.tpl',
-      1 => 1725773961,
+      1 => 1727116108,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:orderforms/".((string)$_smarty_tpl->tpl_vars[\'carttpl\']->value)."/includes/recommendations-modal.tpl' => 1,
   ),
 ),false)) {
-function content_66f7ebc0b07126_50773175 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d8fdcf09e6_79246416 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value])) && file_exists($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'])) {?>
     <?php $_smarty_tpl->_subTemplateRender($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['fullPath'], $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>
@@ -95,7 +95,10 @@ if ($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['t
                                                             <div class="price-starting-from"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['startingfrom'];?>
 </div>
                                                         <?php }?>
-                                                        
+                                                        <?php $_smarty_tpl->_assignInScope('showOneTime', false);?>
+                                                        <?php if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['config']['showOneTime'])) && $_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['templatefile']->value]['config']['showOneTime'] == "1") {?>
+                                                            <?php $_smarty_tpl->_assignInScope('showOneTime', true);?>
+                                                        <?php }?>
                                                         <?php if ((isset($_smarty_tpl->tpl_vars['RSThemes']->value['addonSettings']['price_calculation'])) && $_smarty_tpl->tpl_vars['RSThemes']->value['addonSettings']['price_calculation'] == "lowest") {?>
                                                             <?php if ($_smarty_tpl->tpl_vars['display_billing_monthly_price']->value) {?>
                                                                 <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/price.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('price'=>formatCurrency($_smarty_tpl->tpl_vars['productsPricing']->value[$_smarty_tpl->tpl_vars['product']->value['pid']]->tabs[$_smarty_tpl->tpl_vars['productsPricing']->value[$_smarty_tpl->tpl_vars['product']->value['pid']]->cycle]['price']),'priceCycle'=>"monthly",'priceType'=>$_smarty_tpl->tpl_vars['productsPricing']->value[$_smarty_tpl->tpl_vars['product']->value['pid']]->billing,'priceSetupFee'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['setupFee']), 0, true);
@@ -130,16 +133,16 @@ if ($_smarty_tpl->tpl_vars['RSThemes']->value['pages'][$_smarty_tpl->tpl_vars['t
                                                                 <?php } else { ?>
                                                                     <?php $_smarty_tpl->_assignInScope('productPrice', formatCurrency($_smarty_tpl->tpl_vars['productsPricing']->value[$_smarty_tpl->tpl_vars['product']->value['pid']]->tabs[$_smarty_tpl->tpl_vars['productsPricing']->value[$_smarty_tpl->tpl_vars['product']->value['pid']]->cycle]['real_price']));?>
                                                                 <?php }?>
-                                                                <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/price.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('price'=>$_smarty_tpl->tpl_vars['productPrice']->value,'priceCycle'=>$_smarty_tpl->tpl_vars['productsPricing']->value[$_smarty_tpl->tpl_vars['product']->value['pid']]->cycle,'priceType'=>$_smarty_tpl->tpl_vars['productsPricing']->value[$_smarty_tpl->tpl_vars['product']->value['pid']]->billing,'priceSetupFeeLowest'=>$_smarty_tpl->tpl_vars['setupFeePrice']->value), 0, true);
+                                                                <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/price.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('price'=>$_smarty_tpl->tpl_vars['productPrice']->value,'priceCycle'=>$_smarty_tpl->tpl_vars['productsPricing']->value[$_smarty_tpl->tpl_vars['product']->value['pid']]->cycle,'priceType'=>$_smarty_tpl->tpl_vars['productsPricing']->value[$_smarty_tpl->tpl_vars['product']->value['pid']]->billing,'priceSetupFeeLowest'=>$_smarty_tpl->tpl_vars['setupFeePrice']->value,'showOneTime'=>$_smarty_tpl->tpl_vars['showOneTime']->value), 0, true);
 ?>
                                                                 
                                                             <?php }?> 
                                                         <?php } else { ?>
                                                             <?php if ((isset($_smarty_tpl->tpl_vars['DiscountCenterAddonIsActive']->value))) {?>
-                                                                <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/price.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('price'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['price'],'priceCycle'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['cycle'],'priceType'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['type']), 0, true);
+                                                                <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/price.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('price'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['price'],'priceCycle'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['cycle'],'priceType'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['type'],'showOneTime'=>$_smarty_tpl->tpl_vars['showOneTime']->value), 0, true);
 ?>
                                                             <?php } else { ?>
-                                                                <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/price.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('price'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['price'],'priceCycle'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['cycle'],'priceType'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['type'],'priceSetupFee'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['setupFee']), 0, true);
+                                                                <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/common/price.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('price'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['price'],'priceCycle'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['cycle'],'priceType'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['type'],'priceSetupFee'=>$_smarty_tpl->tpl_vars['product']->value['pricing']['minprice']['setupFee'],'showOneTime'=>$_smarty_tpl->tpl_vars['showOneTime']->value), 0, true);
 ?>
                                                             <?php }?>    
                                                         <?php }?>

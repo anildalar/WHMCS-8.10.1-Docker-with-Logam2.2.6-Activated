@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-wordpress-hosting-1.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146d28b05_09661441',
+  'unifunc' => 'content_6784c20cdedba5_20352928',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1b471ad4d3dfe6427b0f16ebb6a2eb7646d973c' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-wordpress-hosting-1.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146d28b05_09661441 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cdedba5_20352928 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32 51.4286V63M32 51.4286L3 34.7143M32 51.4286L61 34.7143M32 63L61 46.2857V34.7143M32 63L3 46.2857V34.7143M3 34.7143L32 18L61 34.7143M42.3747 51.5531L37.0043 54.7674" />
     <path fill="var(--svg-icon-color-2)" d="M43.5752 10.676C43.5749 20.2127 36.9979 31.8095 28.9993 36.5781C25.7849 38.4944 21.52 37.9637 26.2986 40.377C26.5042 40.4808 24.8849 41.0268 25.0693 41.1234C25.1555 41.1685 19.905 38.1717 19.905 38.1717C17.6233 37.0651 14.5169 33.3743 14.5171 27.9447C14.5174 18.408 21.0018 6.81123 29.0004 2.04262C32.5403 -0.0677979 35.7835 -0.487151 38.2993 0.527765C38.9117 0.729557 41.2039 2.02085 41.2039 2.02085C42.1609 2.57015 43.9326 3.57062 43.9326 3.57062C47.6368 5.78381 48.3738 7.05073 43.5752 10.676Z" />

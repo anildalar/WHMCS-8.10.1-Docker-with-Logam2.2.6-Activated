@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/section-bg/modern/bg_illustration-gameservers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3ae7f6de5_58701780',
+  'unifunc' => 'content_6784b5b68c4a98_06628710',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '80303ca955018a4df26d3e046c025e75ec125734' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/section-bg/modern/bg_illustration-gameservers.tpl',
-      1 => 1715336408,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3ae7f6de5_58701780 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b68c4a98_06628710 (Smarty_Internal_Template $_smarty_tpl) {
 ?><span class="hidden">
   <?php if (!is_object($_smarty_tpl->tpl_vars['template']->value)) {?>
     <link rel="stylesheet"

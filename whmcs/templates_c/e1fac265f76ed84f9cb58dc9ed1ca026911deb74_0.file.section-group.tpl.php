@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:02
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:25
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/section-group.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2ec05078_81441644',
+  'unifunc' => 'content_6784b199b6f363_29124295',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e1fac265f76ed84f9cb58dc9ed1ca026911deb74' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/section-group.tpl',
-      1 => 1720189762,
+      1 => 1734354614,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/custom/sections/inputs/".((string)$_smarty_tpl->tpl_vars[\'sectionGroupInput\']->value[\'type\']).".tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2ec05078_81441644 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b199b6f363_29124295 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="list-group__sortable" data-group-item="<?php echo $_smarty_tpl->tpl_vars['group']->value['group_index'];?>
 " data-group-position="<?php echo $_smarty_tpl->tpl_vars['group']->value['group_order'];?>

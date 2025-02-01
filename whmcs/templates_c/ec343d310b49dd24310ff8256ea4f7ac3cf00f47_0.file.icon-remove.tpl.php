@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:09
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/modals/icon-remove.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf59109854_54336796',
+  'unifunc' => 'content_6784b3a2353899_34261564',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec343d310b49dd24310ff8256ea4f7ac3cf00f47' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/modals/icon-remove.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700cf59109854_54336796 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a2353899_34261564 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="deleteMenuIconModal" data-delete-icon-modal>
     <div class="modal__dialog">
         <div class="modal__content">

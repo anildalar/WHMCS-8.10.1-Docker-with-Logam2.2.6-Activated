@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-21 07:18:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:19
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/section/section-add.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67666be2a1c4d5_72978596',
+  'unifunc' => 'content_6784b193baf350_69859355',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/media/no-data.tpl' => 3,
   ),
 ),false)) {
-function content_67666be2a1c4d5_72978596 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b193baf350_69859355 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div 
     class="modal modal--lg modal--media" 
     id="modalAddNewSection" 
@@ -91,7 +91,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['sectionType']->v
 $_smarty_tpl->tpl_vars['sectionType']->do_else = false;
 $_smarty_tpl->tpl_vars['sectionType']->index++;
 $_smarty_tpl->tpl_vars['sectionType']->first = !$_smarty_tpl->tpl_vars['sectionType']->index;
-$__foreach_sectionType_12_saved = $_smarty_tpl->tpl_vars['sectionType'];
+$__foreach_sectionType_8_saved = $_smarty_tpl->tpl_vars['sectionType'];
 ?>
                                                 <?php if ($_smarty_tpl->tpl_vars['sectionType']->value['default_type']) {?>
                                                     <?php $_smarty_tpl->_assignInScope('sectionComingSoon', false);?>
@@ -110,7 +110,7 @@ $__foreach_sectionType_12_saved = $_smarty_tpl->tpl_vars['sectionType'];
 ?>
                                                 <?php }?>
                                             <?php
-$_smarty_tpl->tpl_vars['sectionType'] = $__foreach_sectionType_12_saved;
+$_smarty_tpl->tpl_vars['sectionType'] = $__foreach_sectionType_8_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                             <?php $_smarty_tpl->_subTemplateRender("file:adminarea/includes/media/no-data.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -172,7 +172,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['sectionType']->v
 $_smarty_tpl->tpl_vars['sectionType']->do_else = false;
 $_smarty_tpl->tpl_vars['sectionType']->index++;
 $_smarty_tpl->tpl_vars['sectionType']->first = !$_smarty_tpl->tpl_vars['sectionType']->index;
-$__foreach_sectionType_14_saved = $_smarty_tpl->tpl_vars['sectionType'];
+$__foreach_sectionType_10_saved = $_smarty_tpl->tpl_vars['sectionType'];
 ?>
                                         <?php if ($_smarty_tpl->tpl_vars['sectionType']->value['default_type']) {?>
                                             <?php $_smarty_tpl->_assignInScope('sectionComingSoon', false);?>
@@ -191,7 +191,7 @@ $__foreach_sectionType_14_saved = $_smarty_tpl->tpl_vars['sectionType'];
 ?>
                                         <?php }?>
                                     <?php
-$_smarty_tpl->tpl_vars['sectionType'] = $__foreach_sectionType_14_saved;
+$_smarty_tpl->tpl_vars['sectionType'] = $__foreach_sectionType_10_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     <?php $_smarty_tpl->_subTemplateRender("file:adminarea/includes/media/no-data.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-07 19:50:40
+/* Smarty version 3.1.48, created on 2025-01-03 12:47:57
   from '/var/www/html/templates/lagom2/assets/svg-icon/unlimited-pages.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67043b900677b9_80597961',
+  'unifunc' => 'content_6777dc7d72dd88_75820444',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0ddbde344790c51b4b20d736318e9845169a33d2' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/unlimited-pages.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67043b900677b9_80597961 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777dc7d72dd88_75820444 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="65" fill="none" viewBox="0 0 64 65">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M32 2.97c1.329 0 2.637.087 3.92.254a1 1 0 0 0 .258-1.983 32.292 32.292 0 0 0-8.356 0 1 1 0 1 0 .259 1.983A30.29 30.29 0 0 1 32 2.97Zm10.943.97a1 1 0 0 0 .54 1.306 29.967 29.967 0 0 1 6.78 3.922 1 1 0 1 0 1.219-1.586A31.967 31.967 0 0 0 44.249 3.4a1 1 0 0 0-1.306.54Zm13.043 9.365a1 1 0 0 0-.183 1.402 29.967 29.967 0 0 1 3.921 6.78 1 1 0 1 0 1.847-.766 31.966 31.966 0 0 0-4.183-7.232 1 1 0 0 0-1.402-.184ZM62.61 27.93a1 1 0 0 0-.863 1.12 30.288 30.288 0 0 1 0 7.84 1 1 0 1 0 1.984.259 32.298 32.298 0 0 0 0-8.357 1 1 0 0 0-1.121-.862Zm-1.58 15.983a1 1 0 0 0-1.307.54 29.967 29.967 0 0 1-3.921 6.78 1 1 0 1 0 1.585 1.22 31.966 31.966 0 0 0 4.183-7.233 1 1 0 0 0-.54-1.307ZM12.335 56.957a1 1 0 0 0 .183 1.402 31.969 31.969 0 0 0 7.232 4.183 1 1 0 0 0 .767-1.848 29.966 29.966 0 0 1-6.78-3.921 1 1 0 0 0-1.402.183Zm39.33 0a1 1 0 0 0-1.402-.184 29.966 29.966 0 0 1-6.78 3.921 1 1 0 1 0 .767 1.848 31.965 31.965 0 0 0 7.232-4.183 1 1 0 0 0 .183-1.403Zm-14.624 6.622a1 1 0 0 0-1.121-.862 30.286 30.286 0 0 1-7.84 0 1 1 0 1 0-.258 1.983 32.28 32.28 0 0 0 8.356 0 1 1 0 0 0 .863-1.12Z" clip-rule="evenodd" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36.77 2.331A31.238 31.238 0 0 0 32 1.967c-17.12 0-31 13.879-31 31C1 46.09 9.157 57.31 20.677 61.834m24.766-50.507-2.4-7.9 8.3-1.3" />

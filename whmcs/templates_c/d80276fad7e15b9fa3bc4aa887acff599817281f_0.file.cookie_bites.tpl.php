@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/cookie_bites.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146ddbf85_93102636',
+  'unifunc' => 'content_6784c20ce8ae80_69842543',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd80276fad7e15b9fa3bc4aa887acff599817281f' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/cookie_bites.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146ddbf85_93102636 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20ce8ae80_69842543 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon svg-cookie-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M32 30c-1.488 0-2.964.068-4.415.2a1 1 0 1 1-.182-1.991 50.712 50.712 0 0 1 9.194 0 1 1 0 1 1-.182 1.992A48.732 48.732 0 0 0 32 30Zm-12.4.583a1 1 0 0 1-.679 1.24c-3.024.886-5.748 2.063-8.016 3.462a1 1 0 1 1-1.05-1.702c2.444-1.508 5.338-2.752 8.504-3.679a1 1 0 0 1 1.24.679Zm24.8 0a1 1 0 0 1 1.241-.679c3.166.927 6.06 2.171 8.505 3.68a1 1 0 0 1-1.05 1.701c-2.269-1.399-4.993-2.576-8.017-3.461a1 1 0 0 1-.679-1.241ZM3 33a1 1 0 0 1 1 1v2.5a1 1 0 1 1-2 0V34a1 1 0 0 1 1-1Zm58 0a1 1 0 0 1 1 1v2.5a1 1 0 1 1-2 0V34a1 1 0 0 1 1-1ZM4.534 39.847a1 1 0 0 1 .435 1.346C4.334 42.434 4 43.73 4 45.074a7.96 7.96 0 0 0 .966 3.792 1 1 0 0 1-1.765.94 9.964 9.964 0 0 1-1.168-5.55A1.001 1.001 0 0 1 2 44v-2.5a1 1 0 0 1 1.078-.997l.11-.22a1 1 0 0 1 1.346-.436Zm54.932 0a1 1 0 0 1 1.346.435l.11.221L61 40.5a1 1 0 0 1 1 1V44a1 1 0 0 1-.033.257 9.963 9.963 0 0 1-1.167 5.55 1 1 0 0 1-1.766-.941A7.965 7.965 0 0 0 60 45.074c0-1.343-.334-2.64-.969-3.881a1 1 0 0 1 .435-1.346ZM9.635 54.81a1 1 0 0 1 1.359-.392c2.279 1.258 5.012 2.289 8.046 3.052a1 1 0 1 1-.488 1.94c-3.164-.796-6.066-1.883-8.525-3.241a1 1 0 0 1-.392-1.359Zm44.73 0a1 1 0 0 1-.392 1.359c-2.46 1.358-5.36 2.445-8.525 3.24a1 1 0 0 1-.488-1.939c3.034-.763 5.767-1.794 8.046-3.052a1 1 0 0 1 1.359.392Zm-27.801 4.947a1 1 0 0 1 1.072-.921 57.825 57.825 0 0 0 8.728 0 1 1 0 1 1 .15 1.994 59.838 59.838 0 0 1-9.029 0 1 1 0 0 1-.921-1.073Z" clip-rule="evenodd" />
     <path fill="var(--svg-icon-color-2)" d="M3 19.5v9.574C3 38.26 16.92 44 32 44s29-5.74 29-14.926V19c-5.07-5.126-18.504-6-29-6-2.205 0-6.885-9.28-9-9v10c.719.452 1 .913 1 1.593C24 16.506 20 7.5 20 8v10c.53.49 1 1.026 1 1.63 0 1.986-3.301 3.259-7.005 3.363.003.051.005.103.005.155C14 25.518 10.16 27 6 27c-.931 0-2.14-7.358-3-7.5Z" />

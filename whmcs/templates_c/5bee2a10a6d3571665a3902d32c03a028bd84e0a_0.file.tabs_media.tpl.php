@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:08:28
+/* Smarty version 3.1.48, created on 2025-01-13 06:28:14
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/ajax/tabs_media.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3ccacc296_48237283',
+  'unifunc' => 'content_6784b27eed0950_20941578',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5bee2a10a6d3571665a3902d32c03a028bd84e0a' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/ajax/tabs_media.tpl',
-      1 => 1726757106,
+      1 => 1730150160,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./../includes/media/no-data.tpl' => 1,
   ),
 ),false)) {
-function content_674fe3ccacc296_48237283 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b27eed0950_20941578 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('iconLocation', "./../../../assets/svg-icons");
 $_smarty_tpl->_assignInScope('iconsPath', "./../../../../../../templates/".((string)$_smarty_tpl->tpl_vars['template']->value->getMainName())."/assets/svg-icon");
 $_smarty_tpl->_assignInScope('ilustrationPath', "./../../../../../../templates/".((string)$_smarty_tpl->tpl_vars['template']->value->getMainName())."/assets/svg-illustrations");

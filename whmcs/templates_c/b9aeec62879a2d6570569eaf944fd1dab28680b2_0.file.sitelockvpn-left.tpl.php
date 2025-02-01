@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/sitelockvpn-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aeb30cb6_07967773',
+  'unifunc' => 'content_6784b5b6bc68c5_08713151',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b9aeec62879a2d6570569eaf944fd1dab28680b2' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/sitelockvpn-left.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aeb30cb6_07967773 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6bc68c5_08713151 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-vpn svg-vpn-left promo-slider-icon promo-slider-icon-reverse" width="377" height="324" fill="none" viewBox="0 0 377 324">
     <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M115.388 143.235V249.12L1.38775 313.737V208.075L115.388 143.235Z" />
     <path fill="var(--svg-illustration-gray-3)" fill-rule="evenodd" d="M1.38775 219.97L115.388 155.364V149.314V143.264L1.39063 207.87V219.97H1.38775Z" />

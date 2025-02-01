@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 22:35:12
+/* Smarty version 3.1.48, created on 2025-01-03 16:53:42
   from '/var/www/html/templates/lagom2/includes/sidebar/sidebar-custom.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f884a00477c2_88511543',
+  'unifunc' => 'content_67781616d99ce6_10362576',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2472cc8b33c8fec4277351e100a20eebef411864' => 
     array (
       0 => '/var/www/html/templates/lagom2/includes/sidebar/sidebar-custom.tpl',
-      1 => 1725773960,
+      1 => 1727116108,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f884a00477c2_88511543 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67781616d99ce6_10362576 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/sidebar/overwrites/sidebar-custom.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/sidebar/overwrites/sidebar-custom.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
@@ -111,11 +111,15 @@ if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)
 
                 </button>            
                 <?php } else { ?>
-                <a href="<?php echo $_SERVER['PHP_SELF'];?>
+                <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>
+">
+                    <input type="hidden" name="action" value="withdrawrequest" />
+                    <button type="submit" href="<?php echo $_SERVER['PHP_SELF'];?>
 ?action=withdrawrequest" class="btn btn-primary-faded btn-block <?php if (!$_smarty_tpl->tpl_vars['withdrawlevel']->value || $_smarty_tpl->tpl_vars['withdrawrequestsent']->value) {?>disabled" disabled="disabled"<?php }?>>
-                    <i class="ls ls-bank-note"></i> <?php echo $_smarty_tpl->tpl_vars['LANG']->value['affiliatesrequestwithdrawal'];?>
+                        <i class="ls ls-bank-note"></i> <?php echo $_smarty_tpl->tpl_vars['LANG']->value['affiliatesrequestwithdrawal'];?>
 
-                </a>
+                    </button>
+                </form>
                 <?php }?>
             </div>
         </div>

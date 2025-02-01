@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-29 14:07:03
+/* Smarty version 3.1.48, created on 2025-01-03 12:00:19
   from '/var/www/html/templates/lagom2/includes/validateuser.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f95f076b22a0_38765818',
+  'unifunc' => 'content_6777d1532d2603_64746259',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9d2b5b8de80cbdc7aefc7b1e8b4198a1b7a1ca76' => 
     array (
       0 => '/var/www/html/templates/lagom2/includes/validateuser.tpl',
-      1 => 1725773960,
+      1 => 1681745128,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f95f076b22a0_38765818 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d1532d2603_64746259 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/overwrites/validateuser.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/overwrites/validateuser.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>

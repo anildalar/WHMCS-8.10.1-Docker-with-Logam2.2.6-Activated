@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 11:01:04
+/* Smarty version 3.1.48, created on 2025-01-13 07:11:29
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/extensions/extensions.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7e1f05489c6_55863553',
+  'unifunc' => 'content_6784bca15bb3a8_57482002',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ceabc0f27d03969093e481921294930b8309f783' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/extensions/extensions.tpl',
-      1 => 1725773960,
+      1 => 1730150158,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 2,
   ),
 ),false)) {
-function content_66f7e1f05489c6_55863553 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784bca15bb3a8_57482002 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
@@ -32,27 +32,27 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
  
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_67388625566f7e1f0516220_29453615', "template-heading");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12331953776784bca1589cb2_81787801', "template-heading");
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_123247340266f7e1f0518445_06686414', "template-tabs");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17976288676784bca158bb16_75368876', "template-tabs");
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_42911952466f7e1f0519457_61389764', "template-content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9325646126784bca158cd50_20206841', "template-content");
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "adminarea/includes/layout.tpl");
 }
 /* {block "template-heading"} */
-class Block_67388625566f7e1f0516220_29453615 extends Smarty_Internal_Block
+class Block_12331953776784bca1589cb2_81787801 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'template-heading' => 
   array (
-    0 => 'Block_67388625566f7e1f0516220_29453615',
+    0 => 'Block_12331953776784bca1589cb2_81787801',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -63,12 +63,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "template-heading"} */
 /* {block "template-tabs"} */
-class Block_123247340266f7e1f0518445_06686414 extends Smarty_Internal_Block
+class Block_17976288676784bca158bb16_75368876 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'template-tabs' => 
   array (
-    0 => 'Block_123247340266f7e1f0518445_06686414',
+    0 => 'Block_17976288676784bca158bb16_75368876',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -81,12 +81,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "template-tabs"} */
 /* {block "template-content"} */
-class Block_42911952466f7e1f0519457_61389764 extends Smarty_Internal_Block
+class Block_9325646126784bca158cd50_20206841 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'template-content' => 
   array (
-    0 => 'Block_42911952466f7e1f0519457_61389764',
+    0 => 'Block_9325646126784bca158cd50_20206841',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -258,7 +258,7 @@ $_smarty_tpl->tpl_vars['extension']->do_else = false;
                                                     <?php echo $_smarty_tpl->tpl_vars['lang']->value['info']['theme_information']['incompatible_version'];?>
 
                                                 </span>
-                                                <?php $_smarty_tpl->_subTemplateRender("file:adminarea/includes/helpers/popover.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('popoverClasses'=>"notification__popover",'popoverBody'=>"<b>".((string)$_smarty_tpl->tpl_vars['extension']->value->getName())." ".((string)$_smarty_tpl->tpl_vars['extension']->value->getVersion())."</b> ".((string)$_smarty_tpl->tpl_vars['lang']->value['info']['theme_information']['incompatible_version_desc_1'])." <b>Lagom WHMCS Client Theme ".((string)$_smarty_tpl->tpl_vars['template']->value->getVersion())."</b> ".((string)$_smarty_tpl->tpl_vars['lang']->value['info']['theme_information']['incompatible_version_desc_2'])." ",'popoverFooter'=>"<a class='btn btn--secondary btn--xs' href='https://lagom.rsstudio.net/docs/extensions/common-problems.html#i-m-using-incompatible-extension-version' target='_blank'>".((string)$_smarty_tpl->tpl_vars['lang']->value['general']['learn_more'])."</a>"), 0, true);
+                                                <?php $_smarty_tpl->_subTemplateRender("file:adminarea/includes/helpers/popover.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('popoverClasses'=>"notification__popover",'popoverBody'=>"<b>".((string)$_smarty_tpl->tpl_vars['extension']->value->getName())." ".((string)$_smarty_tpl->tpl_vars['extension']->value->getVersion())."</b> ".((string)$_smarty_tpl->tpl_vars['lang']->value['info']['theme_information']['incompatible_version_desc_1'])." <b>Lagom WHMCS Client Theme ".((string)$_smarty_tpl->tpl_vars['template']->value->getVersion())."</b> ".((string)$_smarty_tpl->tpl_vars['lang']->value['info']['theme_information']['incompatible_version_desc_2'])." ",'popoverFooter'=>"<a class='btn btn--secondary btn--xs' href='https://lagom.rsstudio.net/docs/extensions/common-problems/#i-m-using-incompatible-extension-version' target='_blank'>".((string)$_smarty_tpl->tpl_vars['lang']->value['general']['learn_more'])."</a>"), 0, true);
 ?>
                                             </span>
                                         <?php }?>

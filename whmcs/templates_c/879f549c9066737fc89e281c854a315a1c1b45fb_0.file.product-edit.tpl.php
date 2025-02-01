@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-21 07:18:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:25
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/edit-item/product-edit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67666be28deab2_02751239',
+  'unifunc' => 'content_6784b199e5b520_27317853',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/modal/product/custom-price.tpl' => 1,
   ),
 ),false)) {
-function content_67666be28deab2_02751239 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b199e5b520_27317853 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div 
     class="modal modal--lg modal--media modal--media-scroll" 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/dedicatedservers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3ae9fc2b5_23836609',
+  'unifunc' => 'content_6784b5b6af8b19_20991315',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a522f6f6f89de7260d8c283741ddba9c0ab476de' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/dedicatedservers.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3ae9fc2b5_23836609 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6af8b19_20991315 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-dedicatedservers svg-dedicatedservers-left promo-slider-icon" width="596" height="515" fill="none" viewBox="0 0 596 515">
     <g>
         <rect width="80.823" height="42.955" fill="url(#dedicated-servers-modern-right-left__a)" fill-opacity=".08" transform="scale(1.22477 .70707) rotate(-45 521.92 135.589)" />

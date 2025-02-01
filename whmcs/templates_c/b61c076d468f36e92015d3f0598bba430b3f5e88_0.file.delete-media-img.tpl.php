@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:55
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:19
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/delete-media-img.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de278c3902_38016934',
+  'unifunc' => 'content_6784b193bc31a1_34492169',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b61c076d468f36e92015d3f0598bba430b3f5e88' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/other/delete-media-img.tpl',
-      1 => 1720189762,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de278c3902_38016934 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b193bc31a1_34492169 (Smarty_Internal_Template $_smarty_tpl) {
 ?>  <div class="modal" id="deleteImgModal" data-media-remove-modal>
     <div class="modal__dialog">
         <div class="modal__content">

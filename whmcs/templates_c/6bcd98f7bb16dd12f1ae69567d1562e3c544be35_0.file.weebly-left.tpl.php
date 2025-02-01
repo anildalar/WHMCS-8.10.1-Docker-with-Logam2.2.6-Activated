@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/weebly-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aeb9af05_37365603',
+  'unifunc' => 'content_6784b5b6c233a8_40073695',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6bcd98f7bb16dd12f1ae69567d1562e3c544be35' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/weebly-left.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aeb9af05_37365603 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6c233a8_40073695 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-weebly svg-weebly-left promo-slider-icon promo-slider-icon-reverse" x="0px" y="0px" viewBox="0 0 376 324">
     <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M112.999 160.64V257.539L0.00488005 323.47V226.572L112.999 160.64Z" />
     <path fill="var(--svg-illustration-gray-w)" fill-rule="evenodd" d="M11.8776 240.844L102.128 187.91C102.209 187.837 102.311 187.791 102.42 187.78C102.529 187.769 102.638 187.793 102.732 187.848C102.826 187.904 102.901 187.988 102.945 188.089C102.989 188.19 103 188.303 102.976 188.41V220.37C102.961 220.67 102.876 220.961 102.729 221.221C102.582 221.482 102.376 221.703 102.128 221.868L11.8776 274.8C11.7956 274.871 11.6939 274.914 11.5866 274.924C11.4793 274.933 11.3717 274.909 11.2786 274.854C11.1855 274.8 11.1115 274.717 11.0668 274.618C11.0221 274.519 11.0089 274.409 11.029 274.302V242.342C11.0447 242.043 11.1296 241.751 11.277 241.491C11.4244 241.231 11.6301 241.009 11.8776 240.844Z" />

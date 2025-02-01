@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:02
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:25
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/edit-item/product-group-edit.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2ee62570_96134753',
+  'unifunc' => 'content_6784b199c88d42_23244792',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cc337d8ce341359af0621804ed5de7afc2066a78' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/edit-item/product-group-edit.tpl',
-      1 => 1720189762,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/pages/includes/modal/tabs.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de2ee62570_96134753 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b199c88d42_23244792 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div 
     class="modal modal--lg modal--media modal--media-scroll" 

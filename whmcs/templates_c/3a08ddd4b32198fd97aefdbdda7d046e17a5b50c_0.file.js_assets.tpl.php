@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-18 08:53:51
+/* Smarty version 3.1.48, created on 2025-01-04 09:20:09
   from '/var/www/html/modules/addons/LagomOrderForm/templates/admin/controlers/assets/js_assets.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67628d9f55a571_62332063',
+  'unifunc' => 'content_6778fd49039084_55598868',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67628d9f55a571_62332063 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6778fd49039084_55598868 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['isDebug']->value) {?>
     <?php echo '<script'; ?>
  type="text/javascript" src="https://unpkg.com/vue@2.6.14/dist/vue.js"><?php echo '</script'; ?>

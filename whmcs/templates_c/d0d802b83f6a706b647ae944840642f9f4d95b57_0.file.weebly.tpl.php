@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:23
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:37
   from '/var/www/html/templates/lagom2/assets/svg-icon/weebly.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d14703b5f2_35960571',
+  'unifunc' => 'content_6784c20d084542_73007541',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0d802b83f6a706b647ae944840642f9f4d95b57' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/weebly.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d14703b5f2_35960571 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20d084542_73007541 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M7.036 26.496a1 1 0 0 0 .36 1.368l2.4 1.4a1 1 0 0 0 1.008-1.728l-2.4-1.4a1 1 0 0 0-1.368.36Zm7.2 4.2a1 1 0 0 0 .36 1.368l2.4 1.4a1 1 0 0 0 1.008-1.728l-2.4-1.4a1 1 0 0 0-1.368.36Zm-7.2 19.8a1 1 0 0 0 .36 1.368l2.4 1.4a1 1 0 0 0 1.008-1.728l-2.4-1.4a1 1 0 0 0-1.368.36Zm7.2 4.2a1 1 0 0 0 .36 1.368l2.4 1.4a1 1 0 0 0 1.008-1.728l-2.4-1.4a1 1 0 0 0-1.368.36ZM.497 22.636A1 1 0 0 0 0 23.5v4.2a1 1 0 1 0 2 0v-2.483l2.206 1.253a1 1 0 0 0 .988-1.74l-3.7-2.1a1 1 0 0 0-.997.006Zm20.04 11.46a1 1 0 0 0 .36 1.368L24 37.274V40.9a1 1 0 1 0 2 0v-4.2a1 1 0 0 0-.496-.864l-3.6-2.1a1 1 0 0 0-1.368.36ZM1 41.7a1 1 0 0 0-1 1v4.2a1 1 0 0 0 .506.87l3.7 2.1a1 1 0 0 0 .988-1.74L2 46.318V42.7a1 1 0 0 0-1-1Zm24 14.2a1 1 0 0 0-1 1v2.459l-2.096-1.223a1 1 0 0 0-1.008 1.728l3.6 2.1A1 1 0 0 0 26 61.1v-4.2a1 1 0 0 0-1-1Zm30.498-33.767a1 1 0 0 0-1.002.003l-24 14A1 1 0 0 0 30 37v24a1 1 0 0 0 1.504.864l24-14A1 1 0 0 0 56 47V23a1 1 0 0 0-.502-.867ZM54 24.74v21.685L32 59.259V37.574l22-12.833ZM28.505.637a1 1 0 0 0-1.01 0l-25 14.637a1 1 0 0 0 .007 1.73l25 14.363a1 1 0 0 0 .996 0l25-14.363a1 1 0 0 0 .007-1.73l-25-14.637Zm22.502 15.492L28 29.347 4.993 16.129 28 2.659l23.007 13.47Z" clip-rule="evenodd" />
     <path fill="var(--svg-icon-color-2)" fill-rule="evenodd" d="M38.402 12.01a1 1 0 0 0 .381 1.362l4.277 2.405-4.287 2.478a1 1 0 0 0 1.001 1.732l5.727-3.31A1 1 0 0 0 46 15.81v-.089a1 1 0 0 0-.51-.871l-5.726-3.222a1 1 0 0 0-1.362.382Zm-20.897-.006a1 1 0 0 0-1.364-.372l-5.637 3.22a1 1 0 0 0-.504.87v.088a1 1 0 0 0 .5.866l5.726 3.31a1 1 0 0 0 1-1.73L12.93 15.77l4.204-2.403a1 1 0 0 0 .372-1.364Z" clip-rule="evenodd" />

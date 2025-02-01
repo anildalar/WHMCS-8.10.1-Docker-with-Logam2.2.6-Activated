@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-support-headset-shield.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146be5f79_32830608',
+  'unifunc' => 'content_6784c20cd3db90_82189666',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '36d67a45b8434c68c0e3a3effbefc8b8dfa18023' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-support-headset-shield.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146be5f79_32830608 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cd3db90_82189666 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M58.626 46.1C59.426 45.1 59.926 43.9 60.026 42.7C60.026 35.5 60.026 9.6 60.026 9.6C60.026 9.2 60.026 8.9 59.726 8.7L31.426 1C31.326 1 31.126 1 31.026 1C30.926 1 30.726 1 30.626 1L2.42601 8.5C2.12601 8.6 1.92601 9 2.02601 9.3C2.02601 9.3 2.02601 35.2 2.02601 42.4C2.12601 50.8 30.726 62.9 31.026 63C31.126 63 35.926 61 41.526 58.1" />
     <path fill="var(--svg-icon-color-2)" d="M27.2859 32.0459C30.2803 35.2014 31.8054 41.2961 30.5528 45.5255C29.0129 50.7241 22.3661 51.4755 22.3214 47.3593C19.327 44.2038 18.8822 38.1581 20.1348 33.9287C21.0124 30.9638 24.3348 29.0586 27.2859 32.0459Z" />

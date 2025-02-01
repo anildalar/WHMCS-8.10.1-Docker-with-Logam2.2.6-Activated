@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-30 14:57:11
+/* Smarty version 3.1.48, created on 2025-01-08 23:30:34
   from '/var/www/html/templates/orderforms/lagom2/ordersummary.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66fabc47272d16_86197394',
+  'unifunc' => 'content_677f0a9ac3d034_91134397',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '63f7c5146e28c3bf44c2771cdd7ae54daf16e1d9' => 
     array (
       0 => '/var/www/html/templates/orderforms/lagom2/ordersummary.tpl',
-      1 => 1725455022,
+      1 => 1725473022,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66fabc47272d16_86197394 (Smarty_Internal_Template $_smarty_tpl) {
+function content_677f0a9ac3d034_91134397 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 if ($_smarty_tpl->tpl_vars['producttotals']->value) {?>
     <div class="panel-body">

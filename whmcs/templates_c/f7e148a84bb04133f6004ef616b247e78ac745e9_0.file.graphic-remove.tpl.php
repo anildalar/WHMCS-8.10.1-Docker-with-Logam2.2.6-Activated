@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:26
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/delete-item/graphic-remove.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f39abe8_59286526',
+  'unifunc' => 'content_6784b19a019af3_44279290',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f7e148a84bb04133f6004ef616b247e78ac745e9' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/delete-item/graphic-remove.tpl',
-      1 => 1720189764,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de2f39abe8_59286526 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b19a019af3_44279290 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal" id="deleteGraphicModal" data-delete-graphic-modal>
     <div class="modal__dialog">
         <div class="modal__content">

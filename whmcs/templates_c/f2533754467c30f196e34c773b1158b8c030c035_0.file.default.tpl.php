@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:38
+/* Smarty version 3.1.48, created on 2025-01-03 12:00:19
   from '/var/www/html/templates/lagom2/core/layouts/main-menu/default/default.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de1618c2c5_47745883',
+  'unifunc' => 'content_6777d1531a7ac5_32616360',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f2533754467c30f196e34c773b1158b8c030c035' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/layouts/main-menu/default/default.tpl',
-      1 => 1725773960,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de1618c2c5_47745883 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d1531a7ac5_32616360 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/core/layouts/main-menu/".((string)$_smarty_tpl->tpl_vars['RSThemes']->value['layouts']['name'])."/header.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/core/layouts/main-menu/".((string)$_smarty_tpl->tpl_vars['RSThemes']->value['layouts']['name'])."/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
@@ -80,7 +80,7 @@ if ($_smarty_tpl->tpl_vars['hiddenXl']->value) {?>hidden-xl <?php }
 $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/network-issues-notifications.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
 <div class="app-main <?php if ($_smarty_tpl->tpl_vars['isOnePageOrder']->value) {?>app-main-order<?php }?>">
-    <?php if ($_smarty_tpl->tpl_vars['pageType']->value != "website" && $_smarty_tpl->tpl_vars['activeDisplay']->value != "CMS") {?>
+    <?php if ($_smarty_tpl->tpl_vars['pageType']->value != "website") {?>
         <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/validateuser.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
         <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/verifyemail.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);

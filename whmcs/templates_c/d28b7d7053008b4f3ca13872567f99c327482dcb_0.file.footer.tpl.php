@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:52
+/* Smarty version 3.1.48, created on 2025-01-13 06:19:39
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de24775c37_27045105',
+  'unifunc' => 'content_6784b07b662287_40471834',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd28b7d7053008b4f3ca13872567f99c327482dcb' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/footer.tpl',
-      1 => 1725773960,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/modals/mismatch-system-url.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de24775c37_27045105 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b07b662287_40471834 (Smarty_Internal_Template $_smarty_tpl) {
 if ((isset($_smarty_tpl->tpl_vars['extension']->value)) && $_smarty_tpl->tpl_vars['extension']->value) {?>
     <div class="modal modal--xlg" id="emailPrev">
         <div class="modal__dialog">

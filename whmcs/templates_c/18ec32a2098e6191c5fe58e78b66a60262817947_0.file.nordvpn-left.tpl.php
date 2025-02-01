@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/nordvpn-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aea4eed9_18283370',
+  'unifunc' => 'content_6784b5b6b2edd7_67891672',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '18ec32a2098e6191c5fe58e78b66a60262817947' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/nordvpn-left.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aea4eed9_18283370 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6b2edd7_67891672 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-nordvpn svg-nordvpn-left promo-slider-icon promo-slider-icon-reverse" width="377" height="325" fill="none" viewBox="0 0 377 325">
     <g clip-path="url(#nord-vpn-modern-left-left__a)">
         <path fill="var(--svg-illustration-gray-6)" fill-rule="evenodd" d="M49.375 173.617L0.375027 201.667V255.617L49.375 227.629L49.375 173.617Z" />

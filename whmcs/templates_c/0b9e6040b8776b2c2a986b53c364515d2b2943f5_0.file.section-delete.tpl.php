@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:26
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/section/section-delete.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f754d62_21502529',
+  'unifunc' => 'content_6784b19a281401_51948528',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b9e6040b8776b2c2a986b53c364515d2b2943f5' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/section/section-delete.tpl',
-      1 => 1720189764,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de2f754d62_21502529 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b19a281401_51948528 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal modal--hero" id="modalRemoveSection" data-modal-delete-section>
     <div class="modal__dialog">
         <div class="modal__content">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-wordpress-hosting-11.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146d34229_72793092',
+  'unifunc' => 'content_6784c20cdf8f96_61641144',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aa85885b4f8d376f838e9aa36922e4668399dbd2' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-wordpress-hosting-11.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146d34229_72793092 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cdf8f96_61641144 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="65" fill="none" viewBox="0 0 64 65">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.5 27.5777L7 24.9777V33.2777C7 33.9777 6.8 34.8777 6.3 35.7777C5.81495 36.5538 5.2358 37.2357 4.56254 37.641M4.56254 37.641C4.54178 37.6535 4.52094 37.6657 4.5 37.6777M4.56254 37.641L4.5 37.6777M4.56254 37.641L12 33.2777M4.5 37.6777C3.28522 37.8518 2.69428 37.6742 2 36.2777V23.415C2 21.6063 2.94901 19.9306 4.5 19L7 17.6777M12 33.2777V20.5666C12 18.0006 9.22303 16.3961 7 17.6777M12 33.2777V57.6777L42 40.3V7.88466C42 3.26755 37.0033 0.380597 33.0033 2.68662L7 17.6777M37 11.4777L17 22.9777M37 16.4777L17 27.9777M37 21.4777L17 32.9777M37 26.4777L17 37.9777" />
     <path fill="var(--svg-icon-color-2)" d="M57.0874 33.4994C57.0872 43.0361 50.5101 54.6328 42.5115 59.4014C39.2972 61.3178 35.0322 60.7871 39.8108 63.2003C40.0164 63.3041 38.3972 63.8502 38.5815 63.9467C38.6677 63.9919 33.4172 60.9951 33.4172 60.9951C31.1355 59.8885 28.0291 56.1977 28.0293 50.768C28.0296 41.2313 34.514 29.6346 42.5126 24.866C46.0525 22.7556 49.2957 22.3362 51.8115 23.3511C52.4239 23.5529 54.7161 24.8442 54.7161 24.8442C55.6731 25.3935 57.4448 26.394 57.4448 26.394C61.149 28.6072 61.886 29.8741 57.0874 33.4994Z" />

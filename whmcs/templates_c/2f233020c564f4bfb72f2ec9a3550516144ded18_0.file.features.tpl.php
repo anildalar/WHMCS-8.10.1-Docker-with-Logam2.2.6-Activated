@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:15
+/* Smarty version 3.1.48, created on 2025-01-03 12:01:31
   from '/var/www/html/templates/lagom2/core/cms/sections/config/features/features.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de3b817c53_29973549',
+  'unifunc' => 'content_6777d19bde1b36_20852623',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2f233020c564f4bfb72f2ec9a3550516144ded18' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/config/features/features.tpl',
-      1 => 1714141152,
+      1 => 1732281842,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de3b817c53_29973549 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d19bde1b36_20852623 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 $_smarty_tpl->_assignInScope('darkIcons', false);
 if (($_smarty_tpl->tpl_vars['theme']->value == "primary" || $_smarty_tpl->tpl_vars['theme']->value == "secondary") && $_smarty_tpl->tpl_vars['features_style']->value != "boxed") {?>

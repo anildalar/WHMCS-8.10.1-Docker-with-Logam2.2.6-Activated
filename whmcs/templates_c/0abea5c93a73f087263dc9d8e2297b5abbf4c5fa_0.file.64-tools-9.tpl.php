@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-tools-9.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146c727f1_50046635',
+  'unifunc' => 'content_6784c20cd72ce8_58841664',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0abea5c93a73f087263dc9d8e2297b5abbf4c5fa' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-tools-9.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146c727f1_50046635 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cd72ce8_58841664 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M59.626 46.1C60.426 45.1 60.926 43.9 61.026 42.7C61.026 35.5 61.026 9.6 61.026 9.6C61.026 9.2 61.026 8.9 60.726 8.7L32.426 1C32.326 1 32.126 1 32.026 1C31.926 1 31.726 1 31.626 1L3.42601 8.5C3.12601 8.6 2.92601 9 3.02601 9.3C3.02601 9.3 3.02601 35.2 3.02601 42.4C3.12601 50.8 31.726 62.9 32.026 63C32.126 63 36.926 61 42.526 58.1" />
     <path fill="var(--svg-icon-color-2)" d="M39.9102 34.4551H43.2602L49.9964 45.7531H46.8064L45.0875 43.9983L43.8489 48.717L45.9896 51.9985H42.7976C42.2532 51.9985 40.8839 51.7197 39.5442 50.3058C37.5513 48.2713 36.2471 44.9089 36.0283 41.7304L30.069 35.5771L23.9318 29.5521H20.5972C19.6225 29.4519 18.5566 28.8798 17.5492 27.8513C14.8625 25.281 14.0868 21.0021 14.0071 18.7554C14.0006 18.5711 13.9987 18.4005 14.0009 18.2457L17.2032 18.2577L18.3238 19.4016L18.8952 17.259L15.2395 13.5269C15.5581 13.0189 16.5282 12.0029 17.8603 12.0029H21.1903C25.951 12.5906 27.6978 19.1439 27.9761 22.347L39.9102 34.4551Z" />

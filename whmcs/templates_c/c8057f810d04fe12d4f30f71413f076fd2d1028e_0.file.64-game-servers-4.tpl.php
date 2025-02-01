@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-game-servers-4.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d14690a175_54680767',
+  'unifunc' => 'content_6784c20cb67da4_78947677',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c8057f810d04fe12d4f30f71413f076fd2d1028e' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-game-servers-4.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d14690a175_54680767 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cb67da4_78947677 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M32 51.4286V63M32 51.4286L3 34.7143M32 51.4286L61 34.7143M32 63L61 46.2857V34.7143M32 63L3 46.2857V34.7143M3 34.7143L32 18L61 34.7143M42.3747 51.5531L37.0043 54.7674" />
     <path fill="var(--svg-icon-color-2)" fill-rule="evenodd" stroke="var(--svg-icon-color-2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M60 13C60 13 35.8327 2.72084 28.1677 7.15141C24.5606 9.27439 23.2982 11.1205 21.5848 12.1358L17.7974 14.3511L14.01 16.5664C12.2966 17.5817 4.5 16.5 4.5 16.5C4.5 16.5 4.00038 16.937 4.00038 17.5C4.00038 19.0768 4.00038 22.1628 4.00038 22.843C3.9102 28.1966 19.9616 37.6116 19.9616 37.6116C22.6669 39.3654 26.0936 39.4577 28.9793 37.8885C30.6338 36.9147 30.929 35.2916 31 33.5C31.0838 31.3856 31 29 31 28L35.9229 24.8737L40.612 22.1046C44.2191 19.9816 54.4091 22.9353 58.1063 20.72C59.3688 19.9816 60 19.1509 60 18.3201V13Z" clip-rule="evenodd" />

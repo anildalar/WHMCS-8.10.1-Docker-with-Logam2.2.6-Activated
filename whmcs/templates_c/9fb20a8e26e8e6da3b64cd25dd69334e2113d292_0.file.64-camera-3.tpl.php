@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-camera-3.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d14676dc48_88191713',
+  'unifunc' => 'content_6784c20ca65c11_18765010',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fb20a8e26e8e6da3b64cd25dd69334e2113d292' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-camera-3.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d14676dc48_88191713 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20ca65c11_18765010 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.5 3L32 1L28.5 3M48.4 10.4L42.6 7.1M59 20.6V16.6L55.5 14.6M59 35.3V28.7M55.5 49.4L59 47.4V43.4M42.6 56.9L48.4 53.6M28.5 61L32 63L35.5 61M15.6 53.6L21.4 56.9M5 43.4V47.4L8.5 49.4M5 28.7V35.3M8.5 14.6L5 16.6V20.6M21.4 7.1L15.6 10.5" />
     <path fill="var(--svg-icon-color-2)" d="M13.9978 29.9702V47.7779C13.9978 48.3257 14.1875 48.7412 14.5246 48.9319L20.6838 52.449C21.5694 52.9547 22.6937 52.713 23.2933 51.8881L49.3766 16.0035L45.8665 13.9676L42.5983 12.1189C42.27 11.9332 41.8279 11.9756 41.3658 12.2371L31.5507 17.8365L28.5798 16.1448C28.2587 15.9553 28.0447 15.8865 27.5881 16.1448L21.6185 19.5594C20.6551 20.1044 20 21.1915 20 22.304V23.2802C20 23.9975 19.6158 24.6599 18.9932 25.0161L15.7892 26.8492C14.801 27.4085 13.9978 28.829 13.9978 29.9702Z" />

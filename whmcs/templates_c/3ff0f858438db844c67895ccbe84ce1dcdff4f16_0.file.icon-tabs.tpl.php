@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:25
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/icon-tabs.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f2cbd75_70928294',
+  'unifunc' => 'content_6784b199ece2d3_76045950',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3ff0f858438db844c67895ccbe84ce1dcdff4f16' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/icon-tabs.tpl',
-      1 => 1725773960,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de2f2cbd75_70928294 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b199ece2d3_76045950 (Smarty_Internal_Template $_smarty_tpl) {
 ?><ul class="nav nav--h nav--tabs" data-icon-sets>
     <li class="nav__item is-active">
         <a class="nav__link" data-toggle="lu-tab" href="#<?php echo $_smarty_tpl->tpl_vars['type']->value;?>

@@ -12,6 +12,7 @@ add_hook('InvoicePaid', 1, function($vars) {
     $invoiceId = $vars['invoiceid'];
     $invoiceCheckName = localAPI('GetInvoice', ['invoiceid' => $invoiceId]);
     foreach ($invoiceCheckName['items']['item'] as $item) {
+        
         if (stripos($item['description'], 'Enterprise HostedPBX') !== false) {
 
             $invoiceData = Capsule::table('tblinvoices')->where('id', $invoiceId)->first();
@@ -353,6 +354,46 @@ add_hook('InvoicePaid', 1, function($vars) {
                     ->whereIn('id', $idsToDelete)
                     ->delete();
                 logActivity("Deleted extra hosting records for User ID: $userId with packageid 8. Kept record ID: {$firstRecord->id}");
+            }
+        }
+        if (stripos($item['description'], 'OceanCRM') !== false) {
+            // dd("Pyment Done And API CALL");
+            /// print($customHostingId[0]->id);
+            // $newSubDomainName = $pbxString; 
+            // $paymentIntent = $invoiceData->id; 
+            // $userInfo = Capsule::table('tblclients')->where('id', $invoiceData->userid)->first(); 
+            $apiUrl = "https://jenkins.oceanpbx.club/job/OceanCRM/build";
+            $ch = curl_init();
+            // Set the cURL options for the request
+            curl_setopt($ch, CURLOPT_URL, $apiUrl);
+            curl_setopt($ch, CURLOPT_POST, 1); // POST request
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return the response
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'Content-Type: application/json',
+                'Authorization: Basic ' . base64_encode('admin:11545aa3dbd28e2db07bdb02a22fe15a55'),
+            ]);
+
+            // Execute the request and capture the response
+            $response = curl_exec($ch);
+
+            // Handle errors
+            if (curl_errno($ch)) { 
+                $curlError = curl_error($ch);
+                echo $curlError;
+                logActivity("cURL error for Jenkins API: {$curlError}");
+            }
+
+            // Get the HTTP response code
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            logActivity("Jenkins API Response: HTTP Code - {$httpCode}, Response - {$response}");
+            curl_close($ch);
+
+            // Check the HTTP response code
+            if ($httpCode == 201) {
+                logActivity("Jenkins Deployment Successful.");
+            } else {
+                echo("Jenkins Deployment Failed:");
+                logActivity("Jenkins Deployment Failed: Response - {$response}");
             }
         }
 

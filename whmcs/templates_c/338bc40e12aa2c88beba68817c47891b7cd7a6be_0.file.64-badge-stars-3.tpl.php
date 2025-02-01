@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-badge-stars-3.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d1466ed1e7_61895279',
+  'unifunc' => 'content_6784c20ca14df4_66598250',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '338bc40e12aa2c88beba68817c47891b7cd7a6be' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-badge-stars-3.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d1466ed1e7_61895279 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20ca14df4_66598250 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="65" fill="none" viewBox="0 0 64 65">
     <path fill="var(--svg-icon-color-2)" stroke="var(--svg-icon-color-2)" stroke-linejoin="round" stroke-width="2" d="M28.0144 56.1471L25.6946 50.0427L22.8562 58.6102L20.192 57.1273L23.7806 42.8904L22.1854 42.3064L17 37.2194L17.0003 27.3436L22.1862 16.4514L30.5769 8.70316L39.2338 7L43.0869 9.06441L38.2546 52.9979L35.5245 51.4981L32.9576 42.8904L30.3196 57.4304L28.0144 56.1471Z" />
     <path fill="var(--svg-icon-color-1)" stroke="var(--svg-icon-color-1)" stroke-linejoin="round" stroke-width="2" d="M28.5482 50.5705L22.8562 58.6103L26.4067 44.1325L26.0327 44.2058L20.0048 38.3257L20.0048 28.7435L25.5181 18.3543L34.4242 10.6025L43.0868 9.06445L48.0076 14.3552L48.0076 24.4615L42.8138 34.8129L42.0221 35.9018L45.7488 46.2238L40.1683 44.0643L38.2895 52.9926L34.715 39.4696L33.9492 39.832L30.3552 57.4339L28.5482 50.5705Z" />

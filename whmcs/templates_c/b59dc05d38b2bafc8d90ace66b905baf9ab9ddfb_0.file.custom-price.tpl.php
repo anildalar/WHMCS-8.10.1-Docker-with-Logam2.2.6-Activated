@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:45:03
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:25
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/product/custom-price.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de2f14df99_66303369',
+  'unifunc' => 'content_6784b199e025c6_98781518',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b59dc05d38b2bafc8d90ace66b905baf9ab9ddfb' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/pages/includes/modal/product/custom-price.tpl',
-      1 => 1720189764,
+      1 => 1734354616,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/helpers/popover.tpl' => 6,
   ),
 ),false)) {
-function content_66f7de2f14df99_66303369 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b199e025c6_98781518 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="form-group m-b-0x is-hidden">
                 <div class="row" data-product-simple-custom-price>
             <div class="col-md-4">

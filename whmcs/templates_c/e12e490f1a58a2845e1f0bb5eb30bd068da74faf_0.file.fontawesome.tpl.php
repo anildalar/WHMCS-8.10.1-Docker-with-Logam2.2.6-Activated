@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:59:15
+/* Smarty version 3.1.48, created on 2025-01-13 06:44:58
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/ajax/fontawesome.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7e183a2bed4_52385516',
+  'unifunc' => 'content_6784b66af1c352_18787195',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e12e490f1a58a2845e1f0bb5eb30bd068da74faf' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/ajax/fontawesome.tpl',
-      1 => 1725773960,
+      1 => 1730150160,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./../includes/media/no-data.tpl' => 1,
   ),
 ),false)) {
-function content_66f7e183a2bed4_52385516 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b66af1c352_18787195 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_assignInScope('iconLocation', "./../../../assets/svg-icons");
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['icons']->value['fontAwesome'], 'fontAwesomeIcon');
 $_smarty_tpl->tpl_vars['fontAwesomeIcon']->do_else = true;

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 22:35:12
+/* Smarty version 3.1.48, created on 2025-01-03 16:53:42
   from '/var/www/html/templates/lagom2/includes/sidebar/sidebar-promo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f884a0074a05_66401347',
+  'unifunc' => 'content_67781616db6bd5_75479812',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6530e2abe93c1800ec328e51c56d4fce5e261d61' => 
     array (
       0 => '/var/www/html/templates/lagom2/includes/sidebar/sidebar-promo.tpl',
-      1 => 1725773960,
+      1 => 1681745128,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f884a0074a05_66401347 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67781616db6bd5_75479812 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/sidebar/overwrites/sidebar-promo.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/sidebar/overwrites/sidebar-promo.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>

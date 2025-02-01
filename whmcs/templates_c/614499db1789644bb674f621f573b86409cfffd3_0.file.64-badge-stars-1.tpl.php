@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-badge-stars-1.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d1466d87a6_85639732',
+  'unifunc' => 'content_6784c20ca0a5d5_66171557',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '614499db1789644bb674f621f573b86409cfffd3' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-badge-stars-1.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d1466d87a6_85639732 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20ca0a5d5_66171557 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M53.6699 18.7093C53.8104 18.129 54.4219 17.7759 54.5624 18.194L56.3362 23.4744C56.399 23.6614 56.5792 23.7085 56.7825 23.5911L62.5234 20.2763C62.978 20.0139 63.1669 20.5764 62.7992 21.0972L58.1545 27.6755C57.9901 27.9085 57.9213 28.1927 57.9841 28.3797L59.7579 33.6601C59.8984 34.0782 59.4036 34.779 59.0359 34.6828L54.3914 33.468C54.227 33.4249 54.0043 33.5535 53.8399 33.7864L49.1952 40.3647C48.8275 40.8856 48.3327 40.7561 48.4732 40.1759L50.2474 32.8468C50.3103 32.5873 50.2415 32.3825 50.077 32.3394L45.4326 31.1246C45.0649 31.0284 45.2539 30.2477 45.7084 29.9852L51.4494 26.6704C51.6527 26.5531 51.8328 26.2979 51.8956 26.0384L53.6699 18.7093Z" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.43869 31.6927C9.57917 31.1124 10.1907 30.7593 10.3312 31.1774L12.105 36.4578C12.1678 36.6448 12.348 36.6919 12.5513 36.5745L18.2922 33.2597C18.7468 32.9973 18.9357 33.5598 18.568 34.0806L13.9233 40.6589C13.7589 40.8919 13.6901 41.1761 13.7529 41.3631L15.5267 46.6435C15.6672 47.0616 15.1724 47.7624 14.8047 47.6662L10.1602 46.4514C9.99579 46.4083 9.77311 46.5369 9.60866 46.7698L4.96399 53.3481C4.59625 53.869 4.1015 53.7395 4.24197 53.1593L6.01623 45.8302C6.07905 45.5707 6.01025 45.3659 5.8458 45.3228L1.20138 44.108C0.833666 44.0118 1.02267 43.2311 1.4772 42.9686L7.21818 39.6538C7.42145 39.5365 7.60161 39.2813 7.66443 39.0218L9.43869 31.6927Z" />

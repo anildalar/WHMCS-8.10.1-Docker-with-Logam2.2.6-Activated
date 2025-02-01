@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-prepaid-incidents.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146a51608_25932822',
+  'unifunc' => 'content_6784c20cc56771_23697568',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '17900d5e5f58f9c852162d888c7f1572cf34d584' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-prepaid-incidents.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146a51608_25932822 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cc56771_23697568 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M40.0288 2.06201C56.5663 6.49321 66.3803 23.4917 61.9491 40.0291C58.5798 52.6037 47.9445 61.2911 35.7708 62.7845" stroke="#17191C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M44.5428 3.64967C43.1028 3.01513 41.596 2.48237 40.0289 2.06245C23.4915 -2.36874 6.49301 7.44531 2.06181 23.9828C-1.33516 36.6604 3.63954 49.609 13.5972 56.9591" stroke="var(--svg-icon-color-3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

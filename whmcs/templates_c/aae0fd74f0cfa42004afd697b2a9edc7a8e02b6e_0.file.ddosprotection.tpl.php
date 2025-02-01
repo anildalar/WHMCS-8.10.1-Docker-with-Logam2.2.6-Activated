@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/ddosprotection.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3ae9e59b7_78842894',
+  'unifunc' => 'content_6784b5b6aeb7a8_54874118',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'aae0fd74f0cfa42004afd697b2a9edc7a8e02b6e' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/ddosprotection.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3ae9e59b7_78842894 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6aeb7a8_54874118 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-ddosprotection svg-ddosprotection-left promo-slider-icon" width="377" height="324" fill="none" viewBox="0 0 377 324">
     <g clip-path="url(#ddos-protection-modern-right-left__a)">
         <path fill="var(--svg-illustration-gray-4)" d="M22.375 82.3897L24.4962 100.736L55.3685 121.537L58.3773 119.959V100.203L24.925 80.9399L22.375 82.3897Z" />

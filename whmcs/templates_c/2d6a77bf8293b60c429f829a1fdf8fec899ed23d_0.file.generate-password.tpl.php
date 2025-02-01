@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:38
+/* Smarty version 3.1.48, created on 2025-01-03 12:00:19
   from '/var/www/html/templates/lagom2/includes/generate-password.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de16313ec7_17821044',
+  'unifunc' => 'content_6777d153356a34_26391425',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2d6a77bf8293b60c429f829a1fdf8fec899ed23d' => 
     array (
       0 => '/var/www/html/templates/lagom2/includes/generate-password.tpl',
-      1 => 1725773960,
+      1 => 1727116108,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7de16313ec7_17821044 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d153356a34_26391425 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form action="#" id="frmGeneratePassword" class="form-horizontal">
     <div class="modal fade" id="modalGeneratePassword" style="display: none">
         <div class="modal-dialog">
@@ -38,14 +38,14 @@ function content_66f7de16313ec7_17821044 (Smarty_Internal_Template $_smarty_tpl)
 
                     </div>
                     <div class="form-group row align-items-center">
-                        <label for="generatePwLength" class="col-md-4 control-label"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['generatePassword']['pwLength'];?>
+                        <label for="inputGeneratePasswordLength" class="col-md-4 control-label"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['generatePassword']['pwLength'];?>
 </label>
                         <div class="col-md-8">
                             <input type="number" min="8" max="64" value="12" step="1" class="form-control input-inline input-inline-100" id="inputGeneratePasswordLength">
                         </div>
                     </div>
                     <div class="form-group row align-items-center">
-                        <label for="generatePwOutput" class="col-md-4 control-label"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['generatePassword']['generatedPw'];?>
+                        <label for="inputGeneratePasswordOutput" class="col-md-4 control-label"><?php echo $_smarty_tpl->tpl_vars['LANG']->value['generatePassword']['generatedPw'];?>
 </label>
                         <div class="col-md-8">
                             <input type="text" class="form-control" id="inputGeneratePasswordOutput">

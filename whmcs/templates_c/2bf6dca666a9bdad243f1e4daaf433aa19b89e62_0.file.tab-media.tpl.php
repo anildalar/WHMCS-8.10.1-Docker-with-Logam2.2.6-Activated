@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:44:55
+/* Smarty version 3.1.48, created on 2025-01-13 06:24:19
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/includes/tab-media.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7de27778317_12063835',
+  'unifunc' => 'content_6784b193ace719_80880489',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2bf6dca666a9bdad243f1e4daaf433aa19b89e62' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/cms/includes/tab-media.tpl',
-      1 => 1720189766,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/includes/media/no-data.tpl' => 1,
   ),
 ),false)) {
-function content_66f7de27778317_12063835 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b193ace719_80880489 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="tab-pane <?php if ($_GET['tab'] == 'media') {?> is-active <?php }?>" id="settings-media">
     <div class="section__header top">
         <div class="top__toolbar">

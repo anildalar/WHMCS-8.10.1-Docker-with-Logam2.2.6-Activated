@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/156-wordpress-hosting-2.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146615ca8_93307170',
+  'unifunc' => 'content_6784c20c96a472_21859684',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fc10d5cdb1e1e58090d8a3ae1247bb070e3efe4' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/156-wordpress-hosting-2.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146615ca8_93307170 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20c96a472_21859684 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?> svg-icon-animate" xmlns="http://www.w3.org/2000/svg" width="156" height="157" fill="none" viewBox="0 0 156 157">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M87.4324 23.6458L50.9896 44.47M87.4326 29.7985L50.9899 50.6227M87.4324 35.9513L50.9896 56.7755M87.4324 42.1041L50.9896 62.9283M32 31.5025C38.2856 28.4719 42.1756 34.8555 42.1756 41.8335V45.0054M32 31.5025L81.9313 2.80122C88.2169 -0.22935 95.1832 4.56544 95.1832 11.5435V64.354C95.1832 73.3268 99.1996 81.8286 106.131 87.5272L117.5 96.875L74.6267 124.375M32 31.5025V50.846L42.1756 45.0054M42.1756 45.0054V100.027C42.1756 102.449 42.7536 104.788 43.8119 106.875" />
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M105.75 127.385L90 136.385M132 106.395V116.395M137 103.395V113.395M142 100.395V110.395M147 97.395V107.395" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/game-servers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146e3ceb0_10556611',
+  'unifunc' => 'content_6784c20cedd125_88740331',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6a94354f8f77a69eb74562ee8972dbc4fa4e1c18' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/game-servers.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146e3ceb0_10556611 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cedd125_88740331 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1.2 35.6c-.1.4-.1 9.7 0 10.1 1 6 17.6 15.5 17.6 15.5 3 1.9 6.8 2 10 .3 4-2.3-1.4-8.8 2.6-11.1l5.2-3 5.2-3c4-2.3 15.3.9 19.4-1.5 1.4-.8 1.9-1.5 1.9-2.4 0-.4.2-9.2 0-10.1" />
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M30.996.436a1 1 0 0 1 1.008 0l3.813 2.225a1 1 0 1 1-1.008 1.728L31.5 2.458l-3.308 1.93a1 1 0 1 1-1.009-1.727L30.996.436Zm-10.07 7.035a1 1 0 0 1-.36 1.368l-7.624 4.45a1 1 0 0 1-1.008-1.728l7.624-4.45a1 1 0 0 1 1.368.36Zm21.148 0a1 1 0 0 1 1.367-.36l7.625 4.45a1 1 0 1 1-1.008 1.728l-7.624-4.45a1 1 0 0 1-.36-1.368Zm-36.398 8.9a1 1 0 0 1-.36 1.368L2 19.674v4.401a1 1 0 1 1-2 0V19.1a1 1 0 0 1 .496-.864l3.812-2.225a1 1 0 0 1 1.368.36Zm51.648 0a1 1 0 0 1 1.367-.36l3.813 2.225A1 1 0 0 1 63 19.1v2.975a1 1 0 1 1-2 0v-2.4l-3.316-1.936a1 1 0 0 1-.36-1.368ZM62 27.025a1 1 0 0 1 1 1V31a1 1 0 1 1-2 0v-2.975a1 1 0 0 1 1-1Zm-61 6a1 1 0 0 1 1 1V39a1 1 0 1 1-2 0v-4.975a1 1 0 0 1 1-1Z" clip-rule="evenodd" />

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-21 07:19:38
+/* Smarty version 3.1.48, created on 2025-01-03 12:01:31
   from '/var/www/html/templates/lagom2/core/cms/sections/config/banner/banner.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67666c0a4e8959_57065579',
+  'unifunc' => 'content_6777d19bd1ec32_75047633',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67666c0a4e8959_57065579 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d19bd1ec32_75047633 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/var/www/html/vendor/smarty/smarty/libs/plugins/modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 

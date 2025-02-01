@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-18 08:53:51
+/* Smarty version 3.1.48, created on 2025-01-04 09:20:09
   from '/var/www/html/modules/addons/LagomOrderForm/templates/admin/controlers/assets/css_assets.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67628d9f554288_73654233',
+  'unifunc' => 'content_6778fd490335a8_67743502',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67628d9f554288_73654233 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6778fd490335a8_67743502 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['fullAssetsURL']->value;?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-12 05:52:49
+/* Smarty version 3.1.48, created on 2025-01-13 07:11:27
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/refresh-section-cache.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_675a7a31948c08_71375745',
+  'unifunc' => 'content_6784bc9f223274_88590260',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'abe34508e92762ccead286290bccdef7582ea65e' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/refresh-section-cache.tpl',
-      1 => 1726757104,
+      1 => 1730150156,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_675a7a31948c08_71375745 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784bc9f223274_88590260 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div 
     class="modal" 
     id="refresh-section-cache" 

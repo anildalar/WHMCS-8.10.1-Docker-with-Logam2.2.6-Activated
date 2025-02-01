@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 09:33:55
+/* Smarty version 3.1.48, created on 2025-01-05 19:10:55
   from '/var/www/html/templates/lagom2/core/cms/sections/common/modals/360-monitoring-modal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67010803733723_08072623',
+  'unifunc' => 'content_677ad93fa41207_78583266',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4539bbdf2ad17e96fd22d43647291eec327c0c9b' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/common/modals/360-monitoring-modal.tpl',
-      1 => 1694186636,
+      1 => 1694183036,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67010803733723_08072623 (Smarty_Internal_Template $_smarty_tpl) {
+function content_677ad93fa41207_78583266 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal modal-results modal-lg fade" id="modalTestResults" data-cms-modal-container="body" tabindex="-1" role="dialog"
     aria-labelledby="modalTestResultsTitle" aria-hidden="true">
     <div class="modal-dialog">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/vpshosting-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aeb83d17_57904474',
+  'unifunc' => 'content_6784b5b6c06650_61796873',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '632694e2dd479d26867f3c7f3cf3544ab0d283e3' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/vpshosting-left.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aeb83d17_57904474 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6c06650_61796873 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-vpshosting-left svg-vpshosting-left-left promo-slider-icon promo-slider-icon-reverse" width="596" height="514" fill="none" viewBox="0 0 596 514">
     <g clip-path="url(#vps-hosting-modern-left-left__a)">
         <path fill="url(#vps-hosting-modern-left-left__b)" fill-opacity=".08" d="M158.969 504.455L198.971 481.384L220.468 493.789L180.487 516.869L158.969 504.455Z" />

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:37
   from '/var/www/html/templates/lagom2/assets/svg-icon/outgoing-email-filtering.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146ec72f0_98531609',
+  'unifunc' => 'content_6784c20d014e21_17745246',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d0ee2d0983c26c64c86bb3dc7e3009239ee2aef' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/outgoing-email-filtering.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146ec72f0_98531609 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20d014e21_17745246 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M36.499.283a1 1 0 0 0-1.002.003l-3.625 2.109a1 1 0 1 0 1.006 1.728L35 2.89v2.413a1 1 0 1 0 2 0V1.15a1 1 0 0 0-.501-.867Zm-10.51 6.691a1 1 0 0 0-1.367-.361l-7.25 4.218a1 1 0 1 0 1.006 1.729l7.25-4.218a1 1 0 0 0 .361-1.368ZM36 12.607a1 1 0 0 0-1 1v4.152a1 1 0 1 0 2 0v-4.152a1 1 0 0 0-1-1ZM11.49 15.41a1 1 0 0 0-1.368-.362l-3.625 2.11a1 1 0 0 0-.497.864v4.12a1 1 0 1 0 2 0v-3.545l3.128-1.82a1 1 0 0 0 .361-1.367ZM7 29.38a1 1 0 0 0-1 1v8.238a1 1 0 1 0 2 0V30.38a1 1 0 0 0-1-1Zm15.368 12.795a1 1 0 0 0-1.365-.371l-3.625 2.076a1 1 0 0 0 .994 1.736l3.625-2.076a1 1 0 0 0 .37-1.365ZM7 45.858a1 1 0 0 0-1 1v4.12a1 1 0 0 0 1.497.867l3.625-2.076a1 1 0 0 0-.994-1.736L8 49.253v-2.395a1 1 0 0 0-1-1Z" clip-rule="evenodd" />
     <path fill="var(--svg-icon-color-2)" stroke="var(--svg-icon-color-2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16 56.177 3 1.653 9-5.321V29.5l20-12V8l-3-1.65-29 16.873v32.954Z" />

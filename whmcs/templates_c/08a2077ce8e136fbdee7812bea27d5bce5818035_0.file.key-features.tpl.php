@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 19:35:55
+/* Smarty version 3.1.48, created on 2025-01-03 12:12:37
   from '/var/www/html/templates/lagom2/core/cms/sections/config/key-features/key-features.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f85a9b7f0002_05654851',
+  'unifunc' => 'content_6777d4357edad9_73284209',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '08a2077ce8e136fbdee7812bea27d5bce5818035' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/config/key-features/key-features.tpl',
-      1 => 1720186760,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f85a9b7f0002_05654851 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d4357edad9_73284209 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="site-section section-sides section-key-features section-graphic section-graphic-title-above section-graphic-<?php echo $_smarty_tpl->tpl_vars['features_graphic_type']->value;?>
  section-graphic-<?php echo $_smarty_tpl->tpl_vars['features_graphic_position']->value;?>
  section-<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>

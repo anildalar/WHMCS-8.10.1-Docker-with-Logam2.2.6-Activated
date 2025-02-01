@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-29 14:05:04
+/* Smarty version 3.1.48, created on 2025-01-03 12:04:24
   from '/var/www/html/templates/lagom2/core/cms/sections/common/package/cycle-switcher-button.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f95e9011ea39_78996107',
+  'unifunc' => 'content_6777d24875e269_83679896',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f961ff1e2ebed0f0689b892441da1780d9ac50f8' => 
     array (
       0 => '/var/www/html/templates/lagom2/core/cms/sections/common/package/cycle-switcher-button.tpl',
-      1 => 1694186636,
+      1 => 1734764845,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f95e9011ea39_78996107 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6777d24875e269_83679896 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/cycle-switcher-button.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)dirname($_smarty_tpl->source->filepath))."/overwrites/cycle-switcher-button.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>  
@@ -71,11 +71,11 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['d']->do_else = false;
 $_smarty_tpl->tpl_vars['d']->iteration++;
 $_smarty_tpl->tpl_vars['d']->last = $_smarty_tpl->tpl_vars['d']->iteration === $_smarty_tpl->tpl_vars['d']->total;
-$__foreach_d_14_saved = $_smarty_tpl->tpl_vars['d'];
+$__foreach_d_0_saved = $_smarty_tpl->tpl_vars['d'];
 ?>"<?php if ((isset($_smarty_tpl->tpl_vars['d']->value[$_smarty_tpl->tpl_vars['name']->value])) && is_array($_smarty_tpl->tpl_vars['d']->value[$_smarty_tpl->tpl_vars['name']->value])) {
 echo min($_smarty_tpl->tpl_vars['d']->value[$_smarty_tpl->tpl_vars['name']->value]);
 } else { ?>0<?php }?>"<?php if (!$_smarty_tpl->tpl_vars['d']->last) {?>,<?php }
-$_smarty_tpl->tpl_vars['d'] = $__foreach_d_14_saved;
+$_smarty_tpl->tpl_vars['d'] = $__foreach_d_0_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>]'
             <?php }?>

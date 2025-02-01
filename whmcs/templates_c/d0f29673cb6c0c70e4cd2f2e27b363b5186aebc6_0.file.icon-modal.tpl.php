@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:32:09
+/* Smarty version 3.1.48, created on 2025-01-13 06:33:06
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/modals/icon-modal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700cf590f1fc0_60737434',
+  'unifunc' => 'content_6784b3a2348109_49040434',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd0f29673cb6c0c70e4cd2f2e27b363b5186aebc6' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/menu/includes/modals/icon-modal.tpl',
-      1 => 1726757102,
+      1 => 1730150154,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:adminarea/menu/includes/components/icon-tabs.tpl' => 1,
   ),
 ),false)) {
-function content_6700cf590f1fc0_60737434 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b3a2348109_49040434 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal modal--lg modal--media" id="menuIconModal" data-modal-menu-icon>
     <div class="modal__dialog">
         <div class="modal__content">

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-whmcs-system-included-2.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146d23181_16179905',
+  'unifunc' => 'content_6784c20cde8f79_05928489',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6389094c4ccc88442413304c9169ecebed2af601' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-whmcs-system-included-2.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146d23181_16179905 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cde8f79_05928489 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="none" viewBox="0 0 65 65">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M39.4993 0.47978C39.1896 0.301249 38.808 0.301691 38.4987 0.480939L34.2487 2.94344C33.7708 3.22032 33.6079 3.83216 33.8847 4.31003C34.1616 4.7879 34.7735 4.95083 35.2513 4.67394L38 3.08134V6.22119C38 6.77348 38.4477 7.22119 39 7.22119C39.5523 7.22119 40 6.77348 40 6.22119V1.34619C40 0.98865 39.8091 0.658312 39.4993 0.47978ZM27.1153 8.23235C26.8384 7.75449 26.2265 7.59156 25.7487 7.86844L17.2487 12.7934C16.7708 13.0703 16.6079 13.6822 16.8847 14.16C17.1616 14.6379 17.7735 14.8008 18.2513 14.5239L26.7513 9.59894C27.2292 9.32206 27.3921 8.71022 27.1153 8.23235ZM10.1153 18.0824C9.83837 17.6045 9.22653 17.4416 8.74866 17.7184L4.49866 20.1809C4.19001 20.3598 4 20.6895 4 21.0462V24.8337C4 25.386 4.44772 25.8337 5 25.8337C5.55228 25.8337 6 25.386 6 24.8337V21.6225L9.75134 19.4489C10.2292 19.1721 10.3921 18.5602 10.1153 18.0824ZM5 31.4087C4.44772 31.4087 4 31.8564 4 32.4087V39.9837C4 40.536 4.44772 40.9837 5 40.9837C5.55228 40.9837 6 40.536 6 39.9837V32.4087C6 31.8564 5.55228 31.4087 5 31.4087ZM5 46.5587C4.44772 46.5587 4 47.0064 4 47.5587V51.3462C4 51.7032 4.19037 52.0332 4.49948 52.2119C4.80859 52.3906 5.18953 52.391 5.49897 52.2128L9.62396 49.8378C10.1026 49.5622 10.2672 48.9508 9.99162 48.4722C9.71605 47.9936 9.10466 47.829 8.62604 48.1046L6 49.6165V47.5587C6 47.0064 5.55228 46.5587 5 46.5587Z" clip-rule="evenodd" />
     <mask id="64-whmcs-system-included-2__a" width="64" height="65" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">

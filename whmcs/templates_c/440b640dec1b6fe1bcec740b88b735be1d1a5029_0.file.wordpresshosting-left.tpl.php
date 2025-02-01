@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-12-04 05:07:58
+/* Smarty version 3.1.48, created on 2025-01-13 06:41:58
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/wordpresshosting-left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_674fe3aebb5e53_28091141',
+  'unifunc' => 'content_6784b5b6c37475_29430823',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '440b640dec1b6fe1bcec740b88b735be1d1a5029' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/wordpresshosting-left.tpl',
-      1 => 1720186756,
+      1 => 1732281856,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_674fe3aebb5e53_28091141 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b5b6c37475_29430823 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-wordpresshosting svg-wordpresshosting-left promo-slider-icon promo-slider-icon-reverse" width="595" height="514" fill="none" viewBox="0 0 595 514">
     <g>
         <path fill="var(--svg-illustration-gray-8)" fill-rule="evenodd" d="M180 241.234V408.092L0.000167847 512V344.868L180 241.234Z" />

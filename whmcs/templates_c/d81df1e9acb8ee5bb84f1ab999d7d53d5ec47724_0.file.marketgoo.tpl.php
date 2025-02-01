@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-08 03:24:45
+/* Smarty version 3.1.48, created on 2025-01-05 23:53:07
   from '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/marketgoo.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6704a5fd601a52_17562406',
+  'unifunc' => 'content_677b1b63dcf142_00620289',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd81df1e9acb8ee5bb84f1ab999d7d53d5ec47724' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-illustrations/products/modern/marketgoo.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6704a5fd601a52_17562406 (Smarty_Internal_Template $_smarty_tpl) {
+function content_677b1b63dcf142_00620289 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-seo promo-slider-icon svg-marketgoo svg-marketgoo-left"width="376" height="324" fill="none" viewBox="0 0 376 324">
   <g clip-path="url(#seo-modern-right-left__a)">
     <path fill="var(--svg-illustration-gray-6)" d="M0 59.2258V105.626L40.5 129.826L51.8 147.326V88.8258L0 59.2258Z"/>

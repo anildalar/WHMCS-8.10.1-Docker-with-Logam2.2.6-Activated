@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/dedicated-servers.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146df9378_98394094',
+  'unifunc' => 'content_6784c20cea5a71_21833697',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b504a3767472d22d22f7b48976ec6cac433038b5' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/dedicated-servers.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146df9378_98394094 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20cea5a71_21833697 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path fill="var(--svg-icon-color-3)" fill-rule="evenodd" d="M31.5.234a1 1 0 0 1 1 0l3.875 2.237a1 1 0 1 1-1 1.732L32 2.255l-3.375 1.948a1 1 0 1 1-1-1.732L31.5.234ZM21.241 7.312a1 1 0 0 1-.366 1.366l-7.75 4.475a1 1 0 0 1-1-1.732l7.75-4.475a1 1 0 0 1 1.366.366Zm21.518 0a1 1 0 0 1 1.366-.366l7.75 4.476a1 1 0 1 1-1 1.731l-7.75-4.475a1 1 0 0 1-.366-1.366Zm-37.018 8.95a1 1 0 0 1-.366 1.366L2 19.578v4.447a1 1 0 1 1-2 0V19a1 1 0 0 1 .5-.866l3.875-2.238a1 1 0 0 1 1.366.366Zm52.518 0a1 1 0 0 1 1.366-.366l3.875 2.238A1 1 0 0 1 64 19v5.5a1 1 0 1 1-2 0v-4.923l-3.375-1.949a1 1 0 0 1-.366-1.366ZM1 33.075a1 1 0 0 1 1 1V39.1a1 1 0 1 1-2 0v-5.025a1 1 0 0 1 1-1ZM63 34.5a1 1 0 0 1 1 1V41a1 1 0 1 1-2 0v-5.5a1 1 0 0 1 1-1Z" clip-rule="evenodd" />
     <path fill="var(--svg-icon-color-2)" d="M1 32.6V45l31 17.9L63 45V32.6" />

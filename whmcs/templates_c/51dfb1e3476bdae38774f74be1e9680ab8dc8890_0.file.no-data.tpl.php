@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-28 10:58:51
+/* Smarty version 3.1.48, created on 2025-01-13 06:25:12
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/media/no-data.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66f7e16b0d5696_16682297',
+  'unifunc' => 'content_6784b1c8984e96_99225729',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '51dfb1e3476bdae38774f74be1e9680ab8dc8890' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/media/no-data.tpl',
-      1 => 1725773960,
+      1 => 1730150156,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66f7e16b0d5696_16682297 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784b1c8984e96_99225729 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="media__no-data media__no-data--full msg <?php if (!$_smarty_tpl->tpl_vars['startEmpty']->value) {?>is-hidden<?php }?> <?php if ((isset($_smarty_tpl->tpl_vars['customClass']->value))) {
 echo $_smarty_tpl->tpl_vars['customClass']->value;
 }?>" data-media-no-data>

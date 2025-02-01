@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-wordpress-hosting-9.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146d63377_46401590',
+  'unifunc' => 'content_6784c20ce2e912_15947599',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '70dc68e3f3d0b815628af3cd7a4c96101481995a' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-wordpress-hosting-9.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146d63377_46401590 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20ce2e912_15947599 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.409 7.00003L38.9939 11.3751M31.409 7.00003L15.7072 16.0869C13.9021 17.305 13 19.8794 13 21.5236V56.5994C13 57.107 13.1003 57.6146 13.4011 58.0206C14.2034 59.1372 15.6074 59.2387 16.7105 58.6297L37.2891 46.721C39.1945 45.5029 38.9939 43.4727 38.9939 41.341C38.9939 31.4606 38.9939 21.2555 38.9939 11.3751M31.409 7.00003L33.0333 15.5497L38.9939 11.3751M21.4442 42.9652L34.3809 35.7579M17.0317 45.4014L18.2351 44.6908M21.4442 37.0777L34.3809 29.8704M16.7309 39.9198L18.0345 39.2092M21.3439 31.0884L34.7821 23.6781M16.7309 33.6262L18.0345 32.9157M30.9939 6.8751L23.409 2.5L7.70721 11.0869C5.90209 12.305 5 14.8794 5 16.5236V51.5995C5 52.107 5.10029 52.6146 5.40114 53.0206C6.20342 54.1372 7.6074 54.2387 8.71053 53.6297L13 51.1474" />
     <path fill="var(--svg-icon-color-2)" d="M55.0874 32.4994C55.0872 42.0361 48.5101 53.6328 40.5115 58.4014C37.2972 60.3178 33.0322 59.7871 37.8108 62.2003C38.0164 62.3041 36.3972 62.8502 36.5815 62.9467C36.6677 62.9919 31.4172 59.9951 31.4172 59.9951C29.1355 58.8885 26.0291 55.1977 26.0293 49.768C26.0296 40.2313 32.514 28.6346 40.5126 23.866C44.0525 21.7556 47.2957 21.3362 49.8115 22.3511C50.4239 22.5529 52.7161 23.8442 52.7161 23.8442C53.6731 24.3935 55.4448 25.394 55.4448 25.394C59.149 27.6072 59.886 28.8741 55.0874 32.4994Z" />

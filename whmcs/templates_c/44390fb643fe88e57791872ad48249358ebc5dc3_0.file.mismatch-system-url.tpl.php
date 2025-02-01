@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-09-30 13:42:22
+/* Smarty version 3.1.48, created on 2025-01-13 08:45:13
   from '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/mismatch-system-url.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_66faaabee38e34_53869190',
+  'unifunc' => 'content_6784d299bf2551_23795197',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '44390fb643fe88e57791872ad48249358ebc5dc3' => 
     array (
       0 => '/var/www/html/modules/addons/RSThemes/views/adminarea/includes/modals/mismatch-system-url.tpl',
-      1 => 1726757104,
+      1 => 1730150156,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66faaabee38e34_53869190 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784d299bf2551_23795197 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="modal fade" id="modal-mismatch-system-url" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

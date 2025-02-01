@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2024-10-05 05:40:22
+/* Smarty version 3.1.48, created on 2025-01-13 07:34:36
   from '/var/www/html/templates/lagom2/assets/svg-icon/64-wordpress-hosting-8.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6700d146d5e9a5_85625954',
+  'unifunc' => 'content_6784c20ce2a334_15123695',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2db6ffb3e109ef070e92d066f3c90ebfb700fc0b' => 
     array (
       0 => '/var/www/html/templates/lagom2/assets/svg-icon/64-wordpress-hosting-8.tpl',
-      1 => 1725455020,
+      1 => 1725473020,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6700d146d5e9a5_85625954 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6784c20ce2a334_15123695 (Smarty_Internal_Template $_smarty_tpl) {
 ?><svg class="svg-icon <?php if ($_smarty_tpl->tpl_vars['onDark']->value) {?> svg-icon-on-dark <?php }?>" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 64 64">
     <path stroke="var(--svg-icon-color-3)" stroke-linecap="round" stroke-width="2" d="M24.1716 51.8789L48.0239 38.5454M20.3309 49.0019L39.0027 38.5644M16.5163 46.3033L28.4424 39.6365M16.5602 62.9572C19.0888 62.9572 21.6173 62.4349 23.539 61.3577L24.247 60.966C24.3145 60.9333 24.3819 60.9007 24.4493 60.868C24.483 60.8354 24.5167 60.8027 24.5842 60.7701L55.9045 43.4037C55.9719 43.3711 56.0056 43.3384 56.073 43.3384C56.1405 43.3058 56.1742 43.2731 56.2416 43.2405L58.8376 41.8042C62.445 39.8129 62.4787 35.2428 61.3324 33.4474C60.4221 32.207 59.2421 31.195 57.8599 30.4768C51.9262 27.1798 42.3514 27.1798 36.4515 30.4442C35.1704 31.1297 34.0578 32.0437 33.1812 33.1863C25.8653 31.2929 16.8974 31.9785 10.8963 35.3407C7.0145 37.4964 4.85098 40.3175 4.90323 43.1351C4.94355 45.3097 6.40793 47.4821 8.77231 49.3448C7.76089 49.6386 6.74947 50.063 5.83919 50.5527C0.714664 53.3926 0.714666 58.028 5.87291 60.868C8.77231 62.5002 12.7168 63.1857 16.5602 62.9572Z" />
     <path fill="var(--svg-icon-color-2)" d="M9.00663 15.5214L9.84702 15.5741V21.2695L9.01009 21.4698L9.00663 15.5214Z" />
