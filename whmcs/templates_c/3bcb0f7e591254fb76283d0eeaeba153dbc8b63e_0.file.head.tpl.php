@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-01-03 12:00:19
+/* Smarty version 3.1.48, created on 2025-02-06 04:17:08
   from '/var/www/html/templates/lagom2/includes/head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6777d15313bf04_10909244',
+  'unifunc' => 'content_67a437c452e833_40723083',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3bcb0f7e591254fb76283d0eeaeba153dbc8b63e' => 
     array (
       0 => '/var/www/html/templates/lagom2/includes/head.tpl',
-      1 => 1734764845,
+      1 => 1738815357,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6777d15313bf04_10909244 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67a437c452e833_40723083 (Smarty_Internal_Template $_smarty_tpl) {
 if (file_exists("templates/".((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/overwrites/head.tpl")) {?>
     <?php $_smarty_tpl->_subTemplateRender(((string)$_smarty_tpl->tpl_vars['template']->value)."/includes/overwrites/head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 } else { ?>
@@ -189,10 +189,7 @@ echo $_smarty_tpl->tpl_vars['mdeLocale']->value;
 ',
             whmcsBaseUrl = "<?php echo \WHMCS\Utility\Environment\WebHelper::getBaseUrl();?>
 ";
-            <?php if ($_smarty_tpl->tpl_vars['captcha']->value) {
-echo $_smarty_tpl->tpl_vars['captcha']->value->getPageJs();
-}?>
-    <?php echo '</script'; ?>
+                <?php echo '</script'; ?>
 >
     <?php if ((isset($_smarty_tpl->tpl_vars['activeDisplay']->value)) && $_smarty_tpl->tpl_vars['activeDisplay']->value == 'CMS' && $_smarty_tpl->tpl_vars['pageType']->value == "website") {?>
         <?php echo '<script'; ?>

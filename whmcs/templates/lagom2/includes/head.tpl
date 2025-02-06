@@ -88,7 +88,7 @@
             saved = '{lang|addslashes key="markdown.saved"}',
             saving = '{lang|addslashes key="markdown.saving"}',
             whmcsBaseUrl = "{\WHMCS\Utility\Environment\WebHelper::getBaseUrl()}";
-            {if $captcha}{$captcha->getPageJs()}{/if}
+            {* {if $captcha}{$captcha->getPageJs()}{/if} *}
     </script>
     {if isset($activeDisplay) && $activeDisplay == 'CMS' && $pageType == "website"}
         <script>disableInternalTabSelection = true</script>
