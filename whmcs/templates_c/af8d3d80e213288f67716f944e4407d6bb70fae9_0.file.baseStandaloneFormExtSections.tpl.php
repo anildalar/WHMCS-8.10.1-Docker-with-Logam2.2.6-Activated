@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-01-04 09:20:08
+/* Smarty version 3.1.48, created on 2025-02-06 04:23:45
   from '/var/www/html/modules/addons/LagomOrderForm/templates/admin/ui/core/default/widget/forms/baseStandaloneFormExtSections.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6778fd48efea03_77140635',
+  'unifunc' => 'content_67a439517584e0_27756454',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6778fd48efea03_77140635 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67a439517584e0_27756454 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <form id="<?php echo $_smarty_tpl->tpl_vars['rawObject']->value->getId();?>
