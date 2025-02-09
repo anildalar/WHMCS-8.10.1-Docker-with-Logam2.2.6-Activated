@@ -11,11 +11,6 @@ $db_tls_cert = '';
 $db_tls_cipher = '';
 $db_tls_key = '';
 $db_tls_verify_cert = '';
-$cc_encryption_hash = 'VPKxiqegMzYi3dKOKOyzfuh4Af8OB6q9b7M4b5huIurlxee3QLBmcnE3XVwSSH5e';
+$cc_encryption_hash = 'ezRxtE7MhlGYMfiRhshnr5I2wTV9klKGGBTPcGGaQxQqRO4eqRpFLJhKrwKJ2sJr';
 $templates_compiledir = 'templates_c';
 $mysql_charset = 'utf8';
-$smtp_debug = true;
-
-$_SERVER['HTTPS'] = 'on';
-$_SERVER['HTTP_X_FORWARDED_PROTO'] = 'https';
-$WEB_ROOT = '/';
