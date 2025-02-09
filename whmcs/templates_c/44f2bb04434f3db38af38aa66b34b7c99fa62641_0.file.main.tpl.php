@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-01-04 09:20:09
+/* Smarty version 3.1.48, created on 2025-02-06 04:23:45
   from '/var/www/html/modules/addons/LagomOrderForm/templates/admin/controlers/main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6778fd4902cf45_13949259',
+  'unifunc' => 'content_67a439518a6461_26052407',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:assets/js_assets.tpl' => 1,
   ),
 ),false)) {
-function content_6778fd4902cf45_13949259 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67a439518a6461_26052407 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:assets/css_assets.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 

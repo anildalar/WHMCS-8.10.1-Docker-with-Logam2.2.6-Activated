@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-01-04 09:20:08
+/* Smarty version 3.1.48, created on 2025-02-06 04:23:45
   from '/var/www/html/modules/addons/LagomOrderForm/templates/admin/ui/core/default/widget/forms/fields/hidden.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_6778fd48f07931_72175864',
+  'unifunc' => 'content_67a4395177f366_07300147',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6778fd48f07931_72175864 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67a4395177f366_07300147 (Smarty_Internal_Template $_smarty_tpl) {
 ?><input type="hidden" name="<?php echo $_smarty_tpl->tpl_vars['rawObject']->value->getName();?>
 " value="<?php echo $_smarty_tpl->tpl_vars['rawObject']->value->getValue();?>
 " <?php
