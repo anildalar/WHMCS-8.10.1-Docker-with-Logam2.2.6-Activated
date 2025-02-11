@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-02-06 04:25:35
+/* Smarty version 3.1.48, created on 2025-02-06 05:14:25
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/completeOrder.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67a439bf50e4c3_69538944',
+  'unifunc' => 'content_67a44531299b61_73114878',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '04b5d491f71175cee4e74e00d543a2ad866e7d9c' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/completeOrder.tpl',
-      1 => 1702664292,
+      1 => 1738818652,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67a439bf50e4c3_69538944 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67a44531299b61_73114878 (Smarty_Internal_Template $_smarty_tpl) {
 ?><mg-component-body-<?php echo strtolower($_smarty_tpl->tpl_vars['elementId']->value);?>
 
         component_id='<?php echo $_smarty_tpl->tpl_vars['elementId']->value;?>

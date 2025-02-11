@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-02-06 04:25:35
+/* Smarty version 3.1.48, created on 2025-02-06 05:14:25
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/domainRenew_components.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67a439bf4b3467_25999524',
+  'unifunc' => 'content_67a4453126f794_86950651',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6f89314803a1ddddb9f0dc2abb12ffbceba07287' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/domainRenew_components.tpl',
-      1 => 1702664292,
+      1 => 1738818652,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67a439bf4b3467_25999524 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67a4453126f794_86950651 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-one-page-domain-renew-<?php echo strtolower($_smarty_tpl->tpl_vars['elementId']->value);?>
 "

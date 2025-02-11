@@ -23,7 +23,7 @@
         {$lagomClientAlerts->header}
     {/if}
 
-    {if $captcha}{$captcha->getMarkup()|replace:'href=':'target="_blank" href='}{/if}
+    
     {$headeroutput}
 
     {if isset($RSThemes.layouts)}

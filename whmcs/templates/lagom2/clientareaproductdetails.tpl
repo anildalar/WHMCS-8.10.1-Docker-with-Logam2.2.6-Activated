@@ -310,7 +310,66 @@
    
 {/if}
 
+{if $product eq 'OceanCRM'}
+    {assign var="crmData" value=$crm_instances|json_decode:true}
 
+    {if $crmData.status eq 'none'}
+        <div style="text-align: center;margin-bottom:15px; padding: 20px; font-family: Orbitron, sans-serif; font-size: 16px; color: #ffffff; background: linear-gradient(90deg, #ff5722, #ff9800); border-radius: 12px;">
+            <strong>CRM is provisioning now, please wait some time...</strong>
+        </div>
+    {else}
+        <div style="text-align: center;  height: 44vh;">
+            <div style="background: linear-gradient(90deg, #007bff, #00c6ff); 
+                        color: white; 
+                        padding: 10px 20px; 
+                        border-radius: 12px; 
+                        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+                        text-align: left;">
+                
+                <h4 style="font-family: Orbitron, sans-serif; font-size: 20px; font-weight: bold; color: #ffeb3b; margin: 0;">
+                    CRM URL:
+                </h4>
+                
+                <a href="{$crmData.crmUrl}/admin/authentication" 
+                   target="_blank" 
+                   style="font-family: Orbitron, sans-serif; font-size: 18px; font-weight: bold; color: #ffffff; text-decoration: none;">
+                    {$crmData.crmUrl}/admin/authentication
+                </a>
+
+                <hr style="border: 1px solid white; margin: 10px 0;">
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">IP Address:</strong> {$crmData.ipAdd}
+                </p>
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">Username:</strong> admin@gmail.com
+                </p>
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">Password:</strong> Anil@789
+                    (<span style="color: #ffeb3b; font-size: 14px;">Please change your password as soon as possible.</span>)
+                </p>
+
+                <hr style="border: 1px solid white; margin: 10px 0;">
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">phpMyAdmin URL:</strong> {$crmData.pmaUrl}
+                </p>
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">phpMyAdmin User:</strong> {$crmData.pmaUser}
+                </p>
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">phpMyAdmin Password:</strong> {$crmData.pmaPass}
+                </p>
+
+            </div>
+        </div>
+    {/if}
+
+{/if}
 
 
 

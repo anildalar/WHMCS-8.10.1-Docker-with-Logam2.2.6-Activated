@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-02-06 04:25:35
+/* Smarty version 3.1.48, created on 2025-02-06 05:14:25
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/fields/domainCheckbox.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67a439bf2ef8a0_75072730',
+  'unifunc' => 'content_67a44531113bf0_88260768',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'adfb2efc6ff9c8a9ef6bf09576cd0bc0252ac9d5' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/fields/domainCheckbox.tpl',
-      1 => 1702664292,
+      1 => 1738818652,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67a439bf2ef8a0_75072730 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67a44531113bf0_88260768 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-one-page-domain-checkbox-field">
     <div class="form-group" :id="field.id" :class="{ 'has-error': isValid() == false }">

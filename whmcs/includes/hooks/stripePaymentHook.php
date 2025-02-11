@@ -357,44 +357,121 @@ add_hook('InvoicePaid', 1, function($vars) {
             }
         }
         if (stripos($item['description'], 'OceanCRM') !== false) {
-            // dd("Pyment Done And API CALL");
-            /// print($customHostingId[0]->id);
-            // $newSubDomainName = $pbxString; 
-            // $paymentIntent = $invoiceData->id; 
-            // $userInfo = Capsule::table('tblclients')->where('id', $invoiceData->userid)->first(); 
-            $apiUrl = "https://jenkins.oceanpbx.club/job/OceanCRM/build";
-            $ch = curl_init();
-            // Set the cURL options for the request
-            curl_setopt($ch, CURLOPT_URL, $apiUrl);
-            curl_setopt($ch, CURLOPT_POST, 1); // POST request
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return the response
-            curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                'Content-Type: application/json',
-                'Authorization: Basic ' . base64_encode('admin:11545aa3dbd28e2db07bdb02a22fe15a55'),
-            ]);
+            
+            $invoice = Capsule::table('tblinvoices')->where('id', $invoiceId)->first();
+            $userId = $invoice->userid;
+            $newAmount = $item['amount'];
+            $fieldId = 108;
+            $packageId = 16;
 
-            // Execute the request and capture the response
-            $response = curl_exec($ch);
+            $service = Capsule::table('tblhosting')
+                ->where('packageid', $packageId)
+                ->where('userid', $userId)
+                ->first();
 
-            // Handle errors
-            if (curl_errno($ch)) { 
-                $curlError = curl_error($ch);
-                echo $curlError;
-                logActivity("cURL error for Jenkins API: {$curlError}");
+            if (!$service) {
+                echo json_encode(['result' => 'error', 'message' => 'The specified service does not belong to the given user']);
+                exit;
             }
+            $existingRecord = Capsule::table('tblcustomfieldsvalues')
+                ->where('fieldid', $fieldId)
+                ->where('relid', $service->id)
+                ->first();
+            if ($existingRecord) {
+                $oldAmount = is_numeric($existingRecord->value) ? (float)$existingRecord->value : 0;
+                $totalAmount = $oldAmount + $newAmount;
+                Capsule::table('tblcustomfieldsvalues')
+                    ->where('fieldid', $fieldId)
+                    ->where('relid', $service->id)
+                    ->update(['value' => $totalAmount]);
 
-            // Get the HTTP response code
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            logActivity("Jenkins API Response: HTTP Code - {$httpCode}, Response - {$response}");
-            curl_close($ch);
-
-            // Check the HTTP response code
-            if ($httpCode == 201) {
-                logActivity("Jenkins Deployment Successful.");
             } else {
-                echo("Jenkins Deployment Failed:");
-                logActivity("Jenkins Deployment Failed: Response - {$response}");
+                Capsule::table('tblcustomfieldsvalues')
+                    ->insert([
+                        'fieldid' => $fieldId,
+                        'relid' => $service->id,
+                        'value' => $newAmount
+                    ]);
+
+            
+                $customField = Capsule::table('tblcustomfields')
+                    ->where('fieldname', 'OceanCRMUrl')
+                    ->where('type', 'client')
+                    ->first();
+        
+                if($customField) {
+                    preg_match('/crm(\d+)/', $customField->description, $matches);
+                    $lastCRMNumber = isset($matches[1]) ? (int)$matches[1] : 0;
+                    $newCRMNumber = $lastCRMNumber + 1;
+                    $newCRMValue = "crm{$newCRMNumber}";
+
+                    Capsule::table('tblcustomfields')
+                        ->where('fieldname', 'OceanCRMUrl')
+                        ->update(['description' => $newCRMValue]);
+
+
+                    // Define dynamic variables
+                    $jenkinsUrl = "https://new-jenkins.oceanpbx.club/job/OceanCRM/buildWithParameters";
+                    $workerName = "worker-node-crm-{$newCRMNumber}";  // Change dynamically as needed
+                    $websiteUrl = "{$newCRMValue}.oceanpbx.club";  // Change dynamically as needed
+                    $pmaUrl = "pma.{$newCRMValue}.oceanpbx.club";  // Change dynamically as needed
+
+                    // Construct full URL with parameters
+                    $apiUrl = "{$jenkinsUrl}?WORKER_NAME={$workerName}&WEBSITE_URL={$websiteUrl}&PMA_URL={$pmaUrl}&USER_ID={$userId}";
+
+                    // Initialize cURL
+                    $ch = curl_init();
+
+                    // Set cURL options
+                    curl_setopt($ch, CURLOPT_URL, $apiUrl);
+                    curl_setopt($ch, CURLOPT_POST, 1); // POST request
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return the response
+                    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                        'Content-Type: application/json',
+                        'Authorization: Basic ' . base64_encode('ziyazaga:11426dc270af523df61ebd68ba689528ed'),
+                    ]);
+
+                    $response = curl_exec($ch);
+
+                    // Handle errors
+                    if (curl_errno($ch)) { 
+                        $curlError = curl_error($ch);
+                        echo $curlError;
+                        logActivity("cURL error for Jenkins API: {$curlError}");
+                    }
+
+                    // Get the HTTP response code
+                    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                    logActivity("Jenkins API Response: HTTP Code - {$httpCode}, Response - {$response}");
+
+                    curl_close($ch);
+
+                    // Check the HTTP response code
+                    if ($httpCode == 201) {
+                        logActivity("Jenkins Deployment Successful.");
+                    } else {
+                        echo "Jenkins Deployment Failed:";
+                        logActivity("Jenkins Deployment Failed: Response - {$response}");
+                    }
+                    
+                }
+                    
             }
+            $hostingRecords = Capsule::table('tblhosting')
+                ->where('userid', $userId)
+                ->where('packageid', $packageId)
+                ->orderBy('id', 'asc')
+                ->get();
+
+            if ($hostingRecords->count() > 1) {
+                $firstRecord = $hostingRecords->shift();
+                $idsToDelete = $hostingRecords->pluck('id')->toArray();
+                Capsule::table('tblhosting')
+                    ->whereIn('id', $idsToDelete)
+                    ->delete();
+                logActivity("Deleted extra hosting records for User ID: $userId with packageid 8. Kept record ID: {$firstRecord->id}");
+            }
+
         }
 
     }
