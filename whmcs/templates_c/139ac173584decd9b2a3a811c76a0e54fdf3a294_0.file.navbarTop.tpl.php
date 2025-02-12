@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-02-11 11:48:57
+/* Smarty version 3.1.48, created on 2025-02-12 05:08:13
   from '/var/www/html/modules/servers/HetznerVps/templates/client/default/ui/core/default/appLayouts/navbarTop.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67ab392925e7d0_47559092',
+  'unifunc' => 'content_67ac2cbd081a81_98781453',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67ab392925e7d0_47559092 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67ac2cbd081a81_98781453 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div id="<?php echo $_smarty_tpl->tpl_vars['mainContainer']->value->getVueInstanceName();?>
