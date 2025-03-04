@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-02-06 04:23:45
+/* Smarty version 3.1.48, created on 2025-03-04 11:41:39
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Admin/Templates/customWidgets/sections/tileRadioButtonSection_components.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67a439517d3f76_93650043',
+  'unifunc' => 'content_67c6e6f3c61a91_21853275',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8926a5f23afb7e37bb282faadccba4bc518cd091' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Admin/Templates/customWidgets/sections/tileRadioButtonSection_components.tpl',
-      1 => 1702664292,
+      1 => 1741086853,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67a439517d3f76_93650043 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67c6e6f3c61a91_21853275 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-tile-radio-buttons-<?php echo strtolower($_smarty_tpl->tpl_vars['elementId']->value);?>
 "

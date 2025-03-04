@@ -310,7 +310,7 @@
    
 {/if}
 
-{if $product eq 'OceanCRM'}
+{if $product eq 'HostedPBX+CRM(with Dialer)'}
     {assign var="crmData" value=$crm_instances|json_decode:true}
 
     {if $crmData.status eq 'none'}
@@ -363,6 +363,38 @@
 
                 <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
                     <strong style="color: #ffeb3b;">phpMyAdmin Password:</strong> {$crmData.pmaPass}
+                </p>
+                
+                <hr style="border: 1px solid white; margin: 10px 0;">
+
+                <h4 style="font-family: Orbitron, sans-serif; font-size: 20px; font-weight: bold; color: #ffeb3b; margin: 0;">
+                    PBX Details:
+                </h4>
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">PBX URL:</strong> <a href="https://{$izpbxHostUrl}" target="_blank" style="color: #ffffff; text-decoration: none;">https://{$izpbxHostUrl}</a>
+                </p>
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">PBX User:</strong> ziya
+                </p>
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">PBX Password:</strong> oklabs
+                </p>
+
+                <hr style="border: 1px solid white; margin: 10px 0;">
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">PBX phpMyAdmin URL:</strong> <a href="https://{$izpbxPmaUrl}" target="_blank" style="color: #ffffff; text-decoration: none;">https://{$izpbxPmaUrl}</a>
+                </p>
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">PBX phpMyAdmin User:</strong> asterisk
+                </p>
+
+                <p style="font-family: Orbitron, sans-serif; font-size: 16px; margin: 5px 0;">
+                    <strong style="color: #ffeb3b;">PBX phpMyAdmin Password:</strong> PleaseCHANGEM3
                 </p>
 
             </div>

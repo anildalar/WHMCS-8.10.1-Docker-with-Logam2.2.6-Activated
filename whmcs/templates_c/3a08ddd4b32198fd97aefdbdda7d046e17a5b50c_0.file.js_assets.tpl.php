@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-02-06 04:23:45
+/* Smarty version 3.1.48, created on 2025-03-04 11:41:39
   from '/var/www/html/modules/addons/LagomOrderForm/templates/admin/controlers/assets/js_assets.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67a439518cc920_88798275',
+  'unifunc' => 'content_67c6e6f3cb8dd8_91949556',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3a08ddd4b32198fd97aefdbdda7d046e17a5b50c' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/templates/admin/controlers/assets/js_assets.tpl',
-      1 => 1702664292,
+      1 => 1741086853,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67a439518cc920_88798275 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67c6e6f3cb8dd8_91949556 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['isDebug']->value) {?>
     <?php echo '<script'; ?>
  type="text/javascript" src="https://unpkg.com/vue@2.6.14/dist/vue.js"><?php echo '</script'; ?>

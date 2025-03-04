@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-02-06 04:23:45
+/* Smarty version 3.1.48, created on 2025-03-04 11:41:39
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Admin/Templates/customWidgets/sections/tileRadioButtonSection.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67a439517cb959_10078274',
+  'unifunc' => 'content_67c6e6f3c5cca0_14139300',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0a9de356c87a5c5aaf9cbe36b1ea53ef81da8b30' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Admin/Templates/customWidgets/sections/tileRadioButtonSection.tpl',
-      1 => 1702664292,
+      1 => 1741086853,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67a439517cb959_10078274 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67c6e6f3c5cca0_14139300 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="lu-widget__content">
         <?php if ($_smarty_tpl->tpl_vars['rawObject']->value->isShowTitle()) {?> <h5> <?php if ($_smarty_tpl->tpl_vars['rawObject']->value->isRawTitle()) {
 echo $_smarty_tpl->tpl_vars['rawObject']->value->getRawTitle();
