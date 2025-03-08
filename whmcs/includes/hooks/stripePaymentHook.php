@@ -14,7 +14,6 @@ add_hook('InvoicePaid', 1, function($vars) {
     foreach ($invoiceCheckName['items']['item'] as $item) {
 
         if (stripos($item['description'], 'HostedPBX+CRM(with Dialer)') !== false) {
-            
             $invoice = Capsule::table('tblinvoices')->where('id', $invoiceId)->first();
             $userId = $invoice->userid;
             $newAmount = $item['amount'];

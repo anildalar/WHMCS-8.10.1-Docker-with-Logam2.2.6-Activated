@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-02-06 05:14:25
+/* Smarty version 3.1.48, created on 2025-03-08 12:21:55
   from '/var/www/html/modules/addons/LagomOrderForm/templates/client/default/ui/core/default/builder/container.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67a4453135ce19_34799153',
+  'unifunc' => 'content_67cc36637bbf97_44293215',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29c38489c5dc5b0cd59b1cbf7fd39f1f1e74f7fe' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/templates/client/default/ui/core/default/builder/container.tpl',
-      1 => 1738818653,
+      1 => 1741086853,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67a4453135ce19_34799153 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67cc36637bbf97_44293215 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 <div class="lu-container <?php echo $_smarty_tpl->tpl_vars['class']->value;?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.48, created on 2025-02-06 05:14:25
+/* Smarty version 3.1.48, created on 2025-03-08 12:21:55
   from '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/captcha_components.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.48',
-  'unifunc' => 'content_67a44531352391_77964675',
+  'unifunc' => 'content_67cc36637b4a86_40890098',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '64624f63d4dd08ff0bb312bc24644320a34e43b9' => 
     array (
       0 => '/var/www/html/modules/addons/LagomOrderForm/app/UI/Client/Templates/baseFormComponents/widgets/components/captcha_components.tpl',
-      1 => 1738818652,
+      1 => 1741086853,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67a44531352391_77964675 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67cc36637b4a86_40890098 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/x-template" id="t-mg-one-page-captcha-<?php echo strtolower($_smarty_tpl->tpl_vars['elementId']->value);?>
 "
