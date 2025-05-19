@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  web2:
+  lic_server:
     build: .
-    container_name: whmcs_web2
+    container_name: lic_server
     volumes:
       - ./whmcs:/var/www/html
       - ./config/php.ini:/usr/local/etc/php/php.ini
@@ -13,35 +13,33 @@ services:
     env_file:
       - .env  # Load .env file for environment variables
     networks:
-      - whmcs-network2
+      - lic_server-network2
     depends_on:
-      - db2
+      - lic_server_db
 
-  db2:
+  lic_server_db:
     image: mysql:8.0
-    container_name: whmcs_db2
-    volumes:
-      - ./db_data:/var/lib/mysql
+    container_name: lic_server_db
     env_file:
       - .env  # Load .env file for MySQL environment variables
     networks:
-      - whmcs-network2
+      - lic_server-network2
 
-  phpmyadmin2:
+  lic_server_pma:
     image: phpmyadmin/phpmyadmin
-    container_name: whmcs_phpmyadmin2
+    container_name: lic_server_pma
     env_file:
       - .env  # Load .env file for phpMyAdmin environment variables
     ports:
       - "7079:80"
     depends_on:
-      - db2
+      - lic_server_db
     networks:
-      - whmcs-network2
+      - lic_server-network2
 
 volumes:
   db_data:
 
 networks:
-  whmcs-network2:
+  lic_server-network2:
     driver: bridge

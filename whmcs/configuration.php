@@ -1,6 +1,6 @@
 <?php
 $license = '12345678';
-$db_host = 'db2';
+$db_host = 'lic_server_db';
 $db_port = '3306';
 $db_username = 'whmcs_user';
 $db_password = 'whmcs_password';
