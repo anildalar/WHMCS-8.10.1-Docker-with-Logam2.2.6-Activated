@@ -1,6 +1,4 @@
-version: '3.8'
-
 # docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --build
 services:
-  db2:
+  lic_server_db:
     image: mysql:latest
