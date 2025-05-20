@@ -2,6 +2,7 @@ services:
   lic_server:
     build: .
     container_name: lic_server
+    restart: always  # Added this line
     volumes:
       - ./whmcs:/var/www/html
       - ./config/php.ini:/usr/local/etc/php/php.ini
@@ -18,6 +19,7 @@ services:
   lic_server_db:
     image: mysql:8.0
     container_name: lic_server_db
+    restart: always  # Added this line
     env_file:
       - .env  # Load .env file for MySQL environment variables
     networks:
@@ -26,6 +28,7 @@ services:
   lic_server_pma:
     image: phpmyadmin/phpmyadmin
     container_name: lic_server_pma
+    restart: always  # Added this line
     env_file:
       - .env  # Load .env file for phpMyAdmin environment variables
     ports:
